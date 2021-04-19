@@ -17,14 +17,14 @@ tokyonight.insert = {
 }
 
 tokyonight.command = {
-  a = { bg = colors.orange, fg = colors.bg_dark },
-  b = { bg = colors.fg_gutter, fg = colors.orange },
+  a = { bg = colors.yellow, fg = colors.bg_dark },
+  b = { bg = colors.fg_gutter, fg = colors.yellow },
   c = c,
 }
 
 tokyonight.visual = {
-  a = { bg = colors.blue0, fg = colors.bg_dark },
-  b = { bg = colors.fg_gutter, fg = colors.blue0 },
+  a = { bg = colors.magenta, fg = colors.bg_dark },
+  b = { bg = colors.fg_gutter, fg = colors.magenta },
   c = c,
 }
 
