@@ -191,7 +191,7 @@ theme.plugins = {
   -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
   TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
   -- TSKeywordFunction   = { };    -- For keywords used to define a fuction.
-  -- TSLabel             = { };    -- For labels: `label:` in C and `:label:` in Lua.
+  TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
   -- TSMethod            = { };    -- For method calls and definitions.
   -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
   -- TSNone              = { };    -- TODO: docs
