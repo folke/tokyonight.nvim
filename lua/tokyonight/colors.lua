@@ -29,10 +29,13 @@ local colors = {
   teal = "#1abc9c",
   red = "#f7768e",
   red1 = "#db4b4b",
-  diff = { add = "#164846", delete = "#823c41", change = "#394b70" },
+  diff = { change = "#394b70", add = "#164846", delete = "#823c41" },
+  git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
 }
-colors.black = util.darken(colors.bg_dark, 10)
 if config.style == "night" then colors.bg = "#1a1b26" end
+util.bg = colors.bg
+colors.git.ignore = colors.dark3
+colors.black = util.darken(colors.bg, 0.7, "#000000")
 colors.border_highlight = colors.blue0
 colors.border = colors.black
 
@@ -40,7 +43,7 @@ colors.bg_popup = colors.bg_dark
 colors.bg_sidebar = colors.bg_dark
 colors.bg_statusline = colors.bg_dark
 colors.bg_float = colors.bg
-colors.bg_visual = util.darken(colors.blue0, 30)
+colors.bg_visual = util.darken(colors.blue0, 0.7)
 colors.bg_search = colors.blue0
 colors.fg_sidebar = colors.fg_dark
 
@@ -49,7 +52,6 @@ colors.warning = colors.yellow
 colors.info = colors.teal
 colors.hint = colors.info
 
-util.bg = colors.bg
 -- util.fg = colors.fg
 
 return colors

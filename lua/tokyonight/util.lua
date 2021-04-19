@@ -16,24 +16,20 @@ local function hexToRgb(hex_str)
   return { tonumber(r, 16), tonumber(g, 16), tonumber(b, 16) }
 end
 
-local function luma(color, alpha, bg)
-  bg = bg or util.bg
-
+local function blend(fg, bg, alpha)
   bg = hexToRgb(bg)
-  color = hexToRgb(color)
+  fg = hexToRgb(fg)
 
-  alpha = 1 - ((alpha or 0) / 100)
-
-  local blend = function(i)
-    return math.floor(math.min(math.max(0, (alpha * (color[i]) + ((1 - alpha) * (bg[i])))), 255) +
-                        .5)
+  local blendChannel = function(i)
+    local ret = (alpha * (fg[i]) + ((1 - alpha) * (bg[i])))
+    return math.floor(math.min(math.max(0, ret), 255) + .5)
   end
 
-  return string.format("#%02X%02X%02X", blend(1), blend(2), blend(3))
+  return string.format("#%02X%02X%02X", blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
-function util.darken(hex, amount) return luma(hex, math.abs(amount), util.bg) end
-function util.lighten(hex, amount) return luma(hex, math.abs(amount), util.fg) end
+function util.darken(hex, amount, bg) return blend(hex, bg or util.bg, math.abs(amount)) end
+function util.lighten(hex, amount, fg) return blend(hex, fg or util.fg, math.abs(amount)) end
 
 function util.highlight(group, color)
   if color.fg then util.colorsUsed[color.fg] = true end
