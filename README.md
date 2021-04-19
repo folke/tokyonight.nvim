@@ -3,6 +3,14 @@
 
 A dark Neovim theme written in Lua ported from the Visual Studio Code [TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme.
 
+## Storm
+
+![image](https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png)
+
+## Night
+
+![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
+
 ## ✨ Features
 
 + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
