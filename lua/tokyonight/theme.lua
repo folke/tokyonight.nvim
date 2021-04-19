@@ -44,8 +44,8 @@ theme.base = {
   NormalFloat = { fg = c.fg, bg = c.bg_float }, -- Normal text in floating windows.
   FloatBorder = { fg = c.border_highlight },
   Pmenu = { bg = c.bg_popup, c.fg }, -- Popup menu: normal item.
-  PmenuSel = { bg = util.darken(c.fg_gutter, 20) }, -- Popup menu: selected item.
-  PmenuSbar = { bg = util.lighten(c.bg_popup, 5) }, -- Popup menu: scrollbar.
+  PmenuSel = { bg = util.darken(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
+  PmenuSbar = { bg = util.lighten(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
   PmenuThumb = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
   Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bg = c.bg_visual, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -145,10 +145,10 @@ theme.plugins = {
   LspDiagnosticsDefaultInformation = { fg = c.info }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
   LspDiagnosticsDefaultHint = { fg = c.hint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-  LspDiagnosticsVirtualTextError = { bg = util.darken(c.error, 90), fg = c.error }, -- Used for "Error" diagnostic virtual text
-  LspDiagnosticsVirtualTextWarning = { bg = util.darken(c.warning, 90), fg = c.warning }, -- Used for "Warning" diagnostic virtual text
-  LspDiagnosticsVirtualTextInformation = { bg = util.darken(c.info, 90), fg = c.info }, -- Used for "Information" diagnostic virtual text
-  LspDiagnosticsVirtualTextHint = { bg = util.darken(c.hint, 90), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
+  LspDiagnosticsVirtualTextError = { bg = util.darken(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
+  LspDiagnosticsVirtualTextWarning = { bg = util.darken(c.warning, 0.1), fg = c.warning }, -- Used for "Warning" diagnostic virtual text
+  LspDiagnosticsVirtualTextInformation = { bg = util.darken(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
+  LspDiagnosticsVirtualTextHint = { bg = util.darken(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
   LspDiagnosticsUnderlineError = { style = "undercurl", sp = c.error }, -- Used to underline "Error" diagnostics
   LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = c.warning }, -- Used to underline "Warning" diagnostics
@@ -239,8 +239,14 @@ theme.plugins = {
 
   -- NvimTree
   NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-  NvimTreeRootFolder = { fg = c.magenta, style = "bold" },
-  NvimTreeGitDirty = { fg = c.blue },
+  NvimTreeRootFolder = { fg = c.blue, style = "bold" },
+  NvimTreeGitDirty = { fg = c.git.change },
+  NvimTreeGitNew = { fg = c.git.add },
+  NvimTreeSpecialFile = { fg = c.purple },
+  LspDiagnosticsError = { fg = c.error },
+  LspDiagnosticsWarning = { fg = c.warning },
+  LspDiagnosticsInformation = { fg = c.info },
+  LspDiagnosticsHint = { fg = c.hint },
   -- NvimTreeFolderName= { fg = c.fg_float },
 
   -- Dashboard
@@ -266,6 +272,10 @@ theme.plugins = {
   healthError = { fg = c.error },
   healthSuccess = { fg = c.green },
   healthWarning = { fg = c.warning },
+
+  -- BufferLine
+  BufferLineIndicatorSelected = { fg = c.git.change },
+  BufferLineFill = { bg = c.black },
 
 }
 
