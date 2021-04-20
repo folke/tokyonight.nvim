@@ -11,8 +11,8 @@ tokyonight.normal = {
 }
 
 tokyonight.insert = {
-  a = { bg = colors.green3, fg = colors.bg_dark },
-  b = { bg = colors.fg_gutter, fg = colors.green3 },
+  a = { bg = colors.green, fg = colors.bg_dark },
+  b = { bg = colors.fg_gutter, fg = colors.green },
   c = c,
 }
 
@@ -23,8 +23,8 @@ tokyonight.command = {
 }
 
 tokyonight.visual = {
-  a = { bg = colors.magenta, fg = colors.bg_dark },
-  b = { bg = colors.fg_gutter, fg = colors.magenta },
+  a = { bg = colors.blue0, fg = colors.fg },
+  b = { bg = colors.fg_gutter, fg = colors.fg },
   c = c,
 }
 

@@ -31,8 +31,8 @@ function util.blend(fg, bg, alpha)
   return string.format("#%02X%02X%02X", blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
-function util.darken(hex, amount, bg) return blend(hex, bg or util.bg, math.abs(amount)) end
-function util.lighten(hex, amount, fg) return blend(hex, fg or util.fg, math.abs(amount)) end
+function util.darken(hex, amount, bg) return util.blend(hex, bg or util.bg, math.abs(amount)) end
+function util.lighten(hex, amount, fg) return util.blend(hex, fg or util.fg, math.abs(amount)) end
 
 function util.highlight(group, color)
   if color.fg then util.colorsUsed[color.fg] = true end
@@ -57,6 +57,34 @@ function util.debug(colors)
       if util.colorsUsed[color] == nil then print("not used: " .. name .. " : " .. color) end
     end
   end
+end
+
+---@param config Config
+function util.autocmds(config)
+  vim.cmd [[augroup TokyoNight]]
+  vim.cmd [[  autocmd!]]
+  if config.dev then
+    vim.cmd [[  autocmd BufWritePost */lua/tokyonight/** nested colorscheme tokyonight]]
+  end
+  for _, sidebar in ipairs(config.sidebars) do
+    if sidebar == "terminal" then
+      vim.cmd [[  autocmd TermOpen * setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]]
+    else
+      vim.cmd([[  autocmd BufWinEnter ]] .. sidebar ..
+                [[ setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]])
+    end
+  end
+  vim.cmd [[augroup end]]
+end
+
+-- Simple string interpolation.
+--
+-- Example template: "${name} is ${value}"
+--
+---@param str string template string
+---@param table table key value pairs to replace in the string
+function util.template(str, table)
+  return (str:gsub("($%b{})", function(w) return table[w:sub(3, -2)] or w end))
 end
 
 function util.syntax(syntax) for group, colors in pairs(syntax) do util.highlight(group, colors) end end
@@ -107,6 +135,7 @@ function util.load(theme)
   async = vim.loop.new_async(vim.schedule_wrap(function()
     util.terminal(theme.colors)
     util.syntax(theme.plugins)
+    util.autocmds(theme.config)
     async:close()
   end))
   async:send()

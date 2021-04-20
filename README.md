@@ -70,49 +70,28 @@ require('lualine').setup {
 
 The theme comes in two styles, `storm` and a darker variant `night`.
 
-Lua:
+| Option                              | Default   | Description                                                                                                                                                     |
+| ----------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tokyonight_style                    | `"storm"` | The theme comes in two styles, `"storm"` and a darker variant `"night"`.                                                                                        |
+| tokyonight_terminal_colors          | `true`    | Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
+| tokyonight_italic_comments          | `true`    | Make comments italic                                                                                                                                            |
+| tokyonight_italic_keywords          | `true`    | Make keywords italic                                                                                                                                            |
+| tokyonight_italic_functions         | `false`   | Make functions italic                                                                                                                                           |
+| tokyonight_transparent              | `false`   | Enable this to disable setting the background color                                                                                                             |
+| tokyonight_hide_inactive_statusline | `false`   | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
+| tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["quickfix", "__vista__", "terminal"]`                                                           |
+
 
 ```lua
--- The theme comes in two styles, "storm" and a darker variant "night".
-vim.g.tokyonight_style = "storm"
-
--- Comments are italicized by default
-vim.g.tokyonight_italic_comments = true
-
--- Keywords are italicized by default
-vim.g.tokyonight_italic_keywords = true
-
--- Functions are not italicized by default
-vim.g.tokyonight_italic_functions = false
-
--- Enable this to disable setting the background color
-vim.g.tokyonight_transparent = false
-
--- Enabling this option, will hide inactive statuslines and
--- replace them with a thin border instead. Should work with
--- the standard `StatusLine` and `LuaLine`.
-vim.g.tokyonight_hide_inactive_statusline = true
+-- Example config in Lua
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_sidebars = { "quickfix", "__vista__", "terminal" }
 ```
 
-Vim Script:
 ```vim
-" The theme comes in two styles, 'storm' and a darker variant 'night'.
-let g:tokyonight_style = "storm"
-
-" Comments are italicized by default
-let g:tokyonight_italic_comments = 1
-
-" Keywords are italicized by default
-let g:tokyonight_italic_keywords = 1
-
-" Functions are not italicized by default
-let g:tokyonight_italic_functions = 0
-
-" Enable this to disable setting the background color
-let g:tokyonight_transparent = 0
-
-" Enabling this option, will hide inactive statuslines and
-" replace them with a thin border instead. Should work with
-" the standard `StatusLine` and `LuaLine`.
-let g:tokyonight_hide_inactive_statusline = 1
+" Example config in VimScript
+let g:tokyonight_style = "night"
+let g:tokyonight_italic_functions = true
+let g:tokyonight_sidebars = [ "quickfix", "__vista__", "terminal" ]
 ```
