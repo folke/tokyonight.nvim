@@ -13,6 +13,15 @@ A dark Neovim theme written in Lua ported from the Visual Studio Code [TokyoNigh
 
 ## ✨ Features
 
++ supports the latest Neovim 5.0 features like TreeSitter and LSP
++ minimal inactive statusline
++ vim terminal colors
++ darker background for sidebar-like windows
++ color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include)
++ **lualine** theme
+
+### Plugin Support
+
 + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 + [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
 + [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
@@ -24,7 +33,7 @@ A dark Neovim theme written in Lua ported from the Visual Studio Code [TokyoNigh
 + [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 + [Dashboard](https://github.com/glepnir/dashboard-nvim)
 + [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-+ a TokyNight [Lualine](https://github.com/hoob3rt/lualine.nvim) theme is included
++ [Lualine](https://github.com/hoob3rt/lualine.nvim)
 
 ## 📦 Installation
 
@@ -81,7 +90,6 @@ The theme comes in two styles, `storm` and a darker variant `night`.
 | tokyonight_hide_inactive_statusline | `false`   | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
 | tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["quickfix", "__vista__", "terminal"]`                                                           |
 
-
 ```lua
 -- Example config in Lua
 vim.g.tokyonight_style = "night"
@@ -94,4 +102,12 @@ vim.g.tokyonight_sidebars = { "quickfix", "__vista__", "terminal" }
 let g:tokyonight_style = "night"
 let g:tokyonight_italic_functions = true
 let g:tokyonight_sidebars = [ "quickfix", "__vista__", "terminal" ]
+```
+
+## 🍭 Extras
+
+Two color configs for **Kitty** can be found at [/extra](extra/). To use them, copy the color config you want to your Kitty condif directory and append the following in yout `kitty.conf`
+
+```kitty
+include other.conf
 ```
