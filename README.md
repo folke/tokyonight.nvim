@@ -69,9 +69,11 @@ To enable the `TokyoNight` theme for `Lualine`, simply specify it in your lualin
 
 ```lua
 require('lualine').setup {
-  -- ... your lualine config
-  theme = 'tokyonight'
-  -- ... your lualine config
+  options = {
+    -- ... your lualine config
+    theme = 'tokyonight'
+    -- ... your lualine config
+  }
 }
 ```
 
