@@ -4,6 +4,7 @@ local c = require("tokyonight.colors")
 
 ---@class Theme
 local theme = {}
+theme.config = config
 theme.colors = c
 
 theme.base = {
@@ -75,8 +76,8 @@ theme.base = {
   -- Uncomment and edit if you want more specific syntax highlighting.
 
   Constant = { fg = c.orange }, -- (preferred) any constant
-  String = { fg = c.green3 }, --   a string constant: "this is a string"
-  Character = { fg = c.green3 }, --  a character constant: 'c', '\n'
+  String = { fg = c.green }, --   a string constant: "this is a string"
+  Character = { fg = c.green }, --  a character constant: 'c', '\n'
   -- Number        = { }, --   a number constant: 234, 0xff
   -- Boolean       = { }, --  a boolean constant: TRUE, false
   -- Float         = { }, --    a floating point constant: 2.3e10
@@ -183,7 +184,7 @@ theme.plugins = {
   -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
   -- TSError             = { };    -- For syntax/parser errors.
   -- TSException         = { };    -- For exception related keywords.
-  TSField = { fg = c.green }, -- For fields.
+  TSField = { fg = c.green1 }, -- For fields.
   -- TSFloat             = { };    -- For floats.
   -- TSFunction          = { };    -- For function (calls and definitions).
   -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
@@ -199,7 +200,7 @@ theme.plugins = {
   TSOperator = { fg = c.blue5 }, -- For any operator: `+`, but also `->` and `*` in C.
   TSParameter = { fg = c.yellow }, -- For parameters of a function.
   -- TSParameterReference= { };    -- For references to parameters of a function.
-  TSProperty = { fg = c.green }, -- Same as `TSField`.
+  TSProperty = { fg = c.green1 }, -- Same as `TSField`.
   TSPunctDelimiter = { fg = c.blue5 }, -- For delimiters ie: `.`
   TSPunctBracket = { fg = c.fg_dark }, -- For brackets and parens.
   TSPunctSpecial = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
@@ -270,7 +271,7 @@ theme.plugins = {
 
   -- NeoVim
   healthError = { fg = c.error },
-  healthSuccess = { fg = c.green },
+  healthSuccess = { fg = c.green1 },
   healthWarning = { fg = c.warning },
 
   -- BufferLine

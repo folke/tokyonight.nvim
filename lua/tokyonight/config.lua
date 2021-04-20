@@ -15,6 +15,7 @@ config = {
   keywordStyle = opt("italic_keywords", true) and "italic" or "NONE",
   functionStyle = opt("italic_functions", false) and "italic" or "NONE",
   hideInactiveStatusline = opt("hide_inactive_statusline", false),
+  terminalColors = opt("terminal_colors", true),
 }
 
 return config

@@ -16,7 +16,10 @@ local function hexToRgb(hex_str)
   return { tonumber(r, 16), tonumber(g, 16), tonumber(b, 16) }
 end
 
-local function blend(fg, bg, alpha)
+---@param fg string foreground color
+---@param bg string background color
+---@param alpha number number between 0 and 1. 0 results in bg, 1 results in fg
+function util.blend(fg, bg, alpha)
   bg = hexToRgb(bg)
   fg = hexToRgb(fg)
 
@@ -60,22 +63,32 @@ function util.syntax(syntax) for group, colors in pairs(syntax) do util.highligh
 
 ---@param colors ColorScheme
 function util.terminal(colors)
-  vim.g.terminal_color_0 = colors.bg
-  vim.g.terminal_color_1 = colors.red
-  vim.g.terminal_color_2 = colors.green
-  vim.g.terminal_color_3 = colors.orange
-  vim.g.terminal_color_4 = colors.blue
-  vim.g.terminal_color_5 = colors.magenta
-  vim.g.terminal_color_6 = colors.cyan
-  vim.g.terminal_color_7 = colors.dark5
-  vim.g.terminal_color_8 = colors.fg_gutter
-  vim.g.terminal_color_9 = colors.red
-  vim.g.terminal_color_10 = colors.green
-  vim.g.terminal_color_11 = colors.orange
-  vim.g.terminal_color_12 = colors.blue
-  vim.g.terminal_color_13 = colors.magenta
-  vim.g.terminal_color_14 = colors.cyan
+  -- dark
+  vim.g.terminal_color_0 = colors.terminal_black
+  vim.g.terminal_color_8 = colors.terminal_black
+
+  -- light
+  vim.g.terminal_color_7 = colors.fg_dark
   vim.g.terminal_color_15 = colors.fg
+
+  -- colors
+  vim.g.terminal_color_1 = colors.red
+  vim.g.terminal_color_9 = colors.red
+
+  vim.g.terminal_color_2 = colors.green
+  vim.g.terminal_color_10 = colors.green
+
+  vim.g.terminal_color_3 = colors.yellow
+  vim.g.terminal_color_11 = colors.yellow
+
+  vim.g.terminal_color_4 = colors.blue
+  vim.g.terminal_color_12 = colors.blue
+
+  vim.g.terminal_color_5 = colors.magenta
+  vim.g.terminal_color_13 = colors.magenta
+
+  vim.g.terminal_color_6 = colors.cyan
+  vim.g.terminal_color_14 = colors.cyan
 end
 
 ---@param theme Theme
@@ -92,7 +105,7 @@ function util.load(theme)
   -- load syntax for plugins and terminal async
   local async
   async = vim.loop.new_async(vim.schedule_wrap(function()
-    -- util.terminal(theme.colors)
+    util.terminal(theme.colors)
     util.syntax(theme.plugins)
     async:close()
   end))

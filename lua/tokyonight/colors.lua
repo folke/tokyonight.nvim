@@ -8,6 +8,7 @@ local colors = {
   bg_dark = "#1f2335",
   bg = "#24283b",
   bg_highlight = "#292e42",
+  terminal_black = "#414868",
   fg = "#c0caf5",
   fg_dark = "#a9b1d6",
   fg_gutter = "#3b4261",
@@ -24,8 +25,8 @@ local colors = {
   purple = "#9d7cd8",
   orange = "#ff9e64",
   yellow = "#e0af68",
-  green3 = "#9ece6a",
-  green = "#73daca",
+  green = "#9ece6a",
+  green1 = "#73daca",
   teal = "#1abc9c",
   red = "#f7768e",
   red1 = "#db4b4b",
@@ -35,7 +36,7 @@ local colors = {
 if config.style == "night" then colors.bg = "#1a1b26" end
 util.bg = colors.bg
 colors.git.ignore = colors.dark3
-colors.black = util.darken(colors.bg, 0.7, "#000000")
+colors.black = util.darken(colors.bg, 0.8, "#000000")
 colors.border_highlight = colors.blue0
 colors.border = colors.black
 
