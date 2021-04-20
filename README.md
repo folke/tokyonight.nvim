@@ -18,6 +18,7 @@ A dark Neovim theme written in Lua ported from the Visual Studio Code [TokyoNigh
 + vim terminal colors
 + darker background for sidebar-like windows
 + color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include)
++ color configs for [Fish Shell](https://fishshell.com/)
 + **lualine** theme
 
 ### Plugin Support
@@ -106,8 +107,4 @@ let g:tokyonight_sidebars = [ "quickfix", "__vista__", "terminal" ]
 
 ## 🍭 Extras
 
-Two color configs for **Kitty** can be found at [/extra](extra/). To use them, copy the color config you want to your Kitty condif directory and append the following in yout `kitty.conf`
-
-```kitty
-include other.conf
-```
+Two color configs for **Kitty** and **Fish** can be found in [extras](extras/). To use them, refer to their respective documentation.
