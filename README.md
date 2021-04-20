@@ -106,6 +106,6 @@ let g:tokyonight_sidebars = [ "quickfix", "__vista__", "terminal" ]
 
 ## 🍭 Extras
 
-Extra color configs for **Kitty**, **Alacritty** and **Fish** can be found in [extras](extras/). To use them, refer to their respective documentation.
+Extra color configs for **Kitty**, **Alacritty**, **Fish** and **iTerm** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
