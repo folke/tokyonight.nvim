@@ -59,10 +59,19 @@ function util.debug(colors)
   end
 end
 
+--- Delete the autocmds when the theme changes to something else
+function util.onColorScheme()
+  if vim.g.colors_name ~= "tokyonight" then
+    vim.cmd [[autocmd! TokyoNight]]
+    vim.cmd [[augroup! TokyoNight]]
+  end
+end
+
 ---@param config Config
 function util.autocmds(config)
   vim.cmd [[augroup TokyoNight]]
   vim.cmd [[  autocmd!]]
+  vim.cmd [[  autocmd ColorScheme * lua require("tokyonight.util").onColorScheme()]]
   if config.dev then
     vim.cmd [[  autocmd BufWritePost */lua/tokyonight/** nested colorscheme tokyonight]]
   end
