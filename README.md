@@ -70,6 +70,8 @@ require('lualine').setup {
 
 The theme comes in two styles, `storm` and a darker variant `night`.
 
+Lua:
+
 ```lua
 -- The theme comes in two styles, "storm" and a darker variant "night".
 vim.g.tokyonight_style = "storm"
@@ -90,4 +92,27 @@ vim.g.tokyonight_transparent = false
 -- replace them with a thin border instead. Should work with
 -- the standard `StatusLine` and `LuaLine`.
 vim.g.tokyonight_hide_inactive_statusline = true
+```
+
+Vim Script:
+```vim
+" The theme comes in two styles, 'storm' and a darker variant 'night'.
+let g:tokyonight_style = "storm"
+
+" Comments are italicized by default
+let g:tokyonight_italic_comments = 1
+
+" Keywords are italicized by default
+let g:tokyonight_italic_keywords = 1
+
+" Functions are not italicized by default
+let g:tokyonight_italic_functions = 0
+
+" Enable this to disable setting the background color
+let g:tokyonight_transparent = 0
+
+" Enabling this option, will hide inactive statuslines and
+" replace them with a thin border instead. Should work with
+" the standard `StatusLine` and `LuaLine`.
+let g:tokyonight_hide_inactive_statusline = 1
 ```
