@@ -21,6 +21,8 @@ config = {
   terminalColors = opt("terminal_colors", true),
   sidebars = opt("sidebars", {}),
   dev = opt("dev", false),
+  darkFloat = opt("dark_float", true),
+  darkSidebar = opt("dark_sidebar", true),
 }
 
 return config

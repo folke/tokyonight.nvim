@@ -89,6 +89,8 @@ The theme comes in two styles, `storm` and a darker variant `night`.
 | tokyonight_transparent              | `false`   | Enable this to disable setting the background color                                                                                                             |
 | tokyonight_hide_inactive_statusline | `false`   | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
 | tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["quickfix", "__vista__", "terminal"]`                                                           |
+| tokyonight_dark_sidebar             | `true`    | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
+| tokyonight_dark_float               | `true`    | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 
 ```lua
 -- Example config in Lua
