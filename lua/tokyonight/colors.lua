@@ -59,6 +59,7 @@ function M.setup(config)
       blue = "#7aa2f7",
       cyan = "#7dcfff",
       blue1 = "#2ac3de",
+      blue2 = "#0db9d7",
       blue5 = "#89ddff",
       blue6 = "#B4F9F8",
       magenta = "#bb9af7",
@@ -96,8 +97,8 @@ function M.setup(config)
 
   colors.error = colors.red1
   colors.warning = colors.yellow
-  colors.info = colors.teal
-  colors.hint = colors.info
+  colors.info = colors.blue2
+  colors.hint = colors.teal
   return colors
 end
 
