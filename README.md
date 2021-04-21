@@ -52,6 +52,9 @@ Plug 'folke/tokyonight.nvim'
 
 [packer](https://github.com/wbthomason/packer.nvim)
 
+**Note:** It is advised to call tokyonight last in the packer plugin order,
+doing otherwise may result in the colors being overriden by other plugins
+
 ```lua
 use 'folke/tokyonight.nvim'
 ```
