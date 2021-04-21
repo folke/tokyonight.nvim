@@ -237,7 +237,7 @@ function M.setup(config)
 
     -- LspTrouble
     LspTroubleText = { fg = c.fg_dark },
-    LspTroubleCount = { fg = c.black, bg = c.purple },
+    LspTroubleCount = { fg = c.magenta, bg = c.fg_gutter },
     LspTroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
 
     -- diff
