@@ -232,6 +232,16 @@ function M.setup(config)
     -- TSLiteral           = { };    -- Literal text.
     -- TSURI               = { };    -- Any URI like a link or email.
 
+    -- diff
+    diffAdded = { fg = c.git.add },
+    diffRemoved = { fg = c.git.delete },
+    diffChanged = { fg = c.git.change },
+    diffOldFile = { fg = c.yellow },
+    diffNewFile = { fg = c.orange },
+    diffFile = { fg = c.blue },
+    diffLine = { fg = c.comment },
+    diffIndexLine = { fg = c.magenta },
+
     -- GitGutter
     GitGutterAdd = { fg = c.diff.add }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.diff.change }, -- diff mode: Changed line |diff.txt|

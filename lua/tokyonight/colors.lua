@@ -71,7 +71,7 @@ function M.setup(config)
       red = "#f7768e",
       red1 = "#db4b4b",
       diff = { change = "#394b70", add = "#164846", delete = "#823c41" },
-      git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
+      git = { change = "#6183bb", add = "#449dab", delete = "#f7768e" },
     }
     if config.style == "night" then colors.bg = "#1a1b26" end
   end
