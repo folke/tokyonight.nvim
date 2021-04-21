@@ -94,6 +94,7 @@ The theme comes in two styles, `storm` and a darker variant `night`.
 | tokyonight_italic_comments          | `true`    | Make comments italic                                                                                                                                            |
 | tokyonight_italic_keywords          | `true`    | Make keywords italic                                                                                                                                            |
 | tokyonight_italic_functions         | `false`   | Make functions italic                                                                                                                                           |
+| tokyonight_italic_variables         | `false`   | Make variables and identifiers italic                                                                                                                           |
 | tokyonight_transparent              | `false`   | Enable this to disable setting the background color                                                                                                             |
 | tokyonight_hide_inactive_statusline | `false`   | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
 | tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["quickfix", "__vista__", "terminal"]`                                                           |

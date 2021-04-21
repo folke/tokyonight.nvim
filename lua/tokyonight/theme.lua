@@ -89,7 +89,7 @@ function M.setup(config)
     -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.magenta }, -- (preferred) any variable name
+    Identifier = { fg = c.magenta, style = config.variableStyle }, -- (preferred) any variable name
     Function = { fg = c.blue, style = config.functionStyle }, -- function name (also: methods for classes)
 
     Statement = { fg = c.magenta }, -- (preferred) any statement
@@ -218,7 +218,7 @@ function M.setup(config)
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    -- TSVariable          = { };    -- Any variable name that does not have another highlight.
+    TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- TSTag               = { };    -- Tags like html tag names.
@@ -314,7 +314,7 @@ function M.setup(config)
 
     -- Sneak
     Sneak = { fg = c.bg_highlight, bg = c.magenta },
-    SneakScope = { bg = c.bg_visual }
+    SneakScope = { bg = c.bg_visual },
   }
 
   -- LuaLine
