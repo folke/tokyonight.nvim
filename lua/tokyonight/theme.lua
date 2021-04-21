@@ -198,7 +198,7 @@ function M.setup(config)
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { fg = c.purple, style = config.functionStyle }, -- For keywords used to define a fuction.
+    TSKeywordFunction = { fg = c.magenta, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
