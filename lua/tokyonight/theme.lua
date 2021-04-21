@@ -315,6 +315,12 @@ function M.setup(config)
     -- Sneak
     Sneak = { fg = c.bg_highlight, bg = c.magenta },
     SneakScope = { bg = c.bg_visual },
+
+    -- Hop
+    -- HopNextKey = { fg = c.teal },
+    -- HopNextKey1 = { fg = c.blue },
+    -- HopNextKey2 = { fg = util.lighten(c.blue, .3) },
+    HopUnmatched = { fg = c.dark3 },
   }
 
   -- LuaLine
