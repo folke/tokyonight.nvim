@@ -242,6 +242,15 @@ function M.setup(config)
     diffLine = { fg = c.comment },
     diffIndexLine = { fg = c.magenta },
 
+    -- Neogit
+    NeogitBranch = { fg = c.magenta },
+    NeogitRemote = { fg = c.purple },
+    NeogitHunkHeader = { bg = c.bg_highlight, fg = c.fg },
+    NeogitHunkHeaderHighlight = { bg = c.fg_gutter, fg = c.blue },
+    NeogitDiffContextHighlight = { bg = util.darken(c.fg_gutter, .5), fg = c.fg_dark },
+    NeogitDiffDeleteHighlight = { fg = c.git.delete, bg = c.diff.delete },
+    NeogitDiffAddHighlight = { fg = c.git.add, bg = c.diff.add },
+
     -- GitGutter
     GitGutterAdd = { fg = c.diff.add }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.diff.change }, -- diff mode: Changed line |diff.txt|

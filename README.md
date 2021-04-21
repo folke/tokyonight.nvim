@@ -34,6 +34,7 @@ A dark Neovim theme written in Lua ported from the Visual Studio Code [TokyoNigh
 + [Dashboard](https://github.com/glepnir/dashboard-nvim)
 + [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
 + [Lualine](https://github.com/hoob3rt/lualine.nvim)
++ [Neogit](https://github.com/TimUntersberger/neogit)
 
 ## ⚡️ Requirements
 
