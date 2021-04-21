@@ -235,6 +235,11 @@ function M.setup(config)
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
 
+    -- LspTrouble
+    LspTroubleText = { fg = c.fg_dark },
+    LspTroubleCount = { fg = c.black, bg = c.purple },
+    LspTroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+
     -- diff
     diffAdded = { fg = c.git.add },
     diffRemoved = { fg = c.git.delete },
