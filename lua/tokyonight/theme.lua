@@ -307,6 +307,9 @@ function M.setup(config)
     BufferLineIndicatorSelected = { fg = c.git.change },
     BufferLineFill = { bg = c.black },
 
+    -- Sneak
+    Sneak = { fg = c.bg_highlight, bg = c.magenta },
+    SneakScope = { bg = c.bg_visual }
   }
 
   -- LuaLine
