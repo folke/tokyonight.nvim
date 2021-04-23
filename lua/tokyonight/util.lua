@@ -44,15 +44,7 @@ function util.highlight(group, color)
   local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
   local sp = color.sp and "guisp=" .. color.sp or ""
 
-  local cfg = color.fg and "ctermfg=" .. util.gui2cterm(color.fg) or "ctermfg=NONE"
-  local cbg = color.bg and "ctermbg=" .. util.gui2cterm(color.bg) or "ctermbg=NONE"
-  local cstyle = color.style and "cterm=" .. color.style or "cterm=NONE"
-
   local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
-
-  if vim.g.tokyonight_cterm_colors == true or vim.g.tokyonight_cterm_colors == 1 then
-    hl = hl .. " " .. cfg .. " " .. cbg .. " " .. cstyle
-  end
 
   vim.cmd(hl)
   if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
@@ -162,39 +154,22 @@ function util.load(theme)
 
 end
 
-local xterm_colors = nil
-local xterm_color_map = {}
-
-function util.gui2cterm(color)
-  if color == "NONE" then return color end
-  if not xterm_colors then
-    xterm_colors = {}
-    for i, n in ipairs({ 47, 68, 40, 40, 40, 21 }) do
-      for _ = 1, n, 1 do table.insert(xterm_colors, i - 1) end
+---@param config Config
+---@param colors ColorScheme
+function util.color_overrides(colors, config)
+  if type(config.colors) == "table" then
+    for key, value in pairs(config.colors) do
+      if not colors[key] then error("Color " .. key .. " does not exist") end
+      if string.sub(value, 1, 1) == "#" then
+        -- hex override
+        colors[key] = value
+      else
+        -- another group
+        if not colors[value] then error("Color " .. value .. " does not exist") end
+        colors[key] = colors[value]
+      end
     end
   end
-
-  if xterm_color_map[color] then return xterm_color_map[color] end
-
-  local rgb = hexToRgb(color)
-  local r = rgb[1]
-  local g = rgb[2]
-  local b = rgb[3]
-
-  local mx = math.max(r, g, b)
-  local mn = math.min(r, g, b)
-
-  if (mx - mn) * (mx + mn) <= 6250 then
-    local c = 24 - math.floor((252 - math.floor((r + g + b) / 3)) / 10)
-    if 0 <= c and c <= 23 then
-      xterm_color_map[color] = 232 + c
-      return xterm_color_map[color]
-    end
-  end
-
-  xterm_color_map[color] = 16 + 36 * xterm_colors[r + 1] + 6 * xterm_colors[g + 1] +
-                             xterm_colors[b + 1]
-  return xterm_color_map[color]
 end
 
 return util

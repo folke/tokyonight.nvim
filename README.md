@@ -98,16 +98,19 @@ The theme comes in two styles, `storm` and a darker variant `night`.
 | tokyonight_italic_variables         | `false`   | Make variables and identifiers italic                                                                                                                           |
 | tokyonight_transparent              | `false`   | Enable this to disable setting the background color                                                                                                             |
 | tokyonight_hide_inactive_statusline | `false`   | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
-| tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                           |
+| tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
 | tokyonight_dark_sidebar             | `true`    | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
 | tokyonight_dark_float               | `true`    | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
-| tokyonight_cterm_colors             | `false`   | Enabling this, will use the `gui` colors to set `cterm` values to their nearest equivalent. Only needed when not using terminal colors                          |
+| tokyonight_colors                   | `{}`      | You can override specific color groups to use other groups or a hex color                                                                                       |
 
 ```lua
 -- Example config in Lua
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+
+-- Change the "hint" color to the "orange" color, and make the "error" color bright red
+vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 ```
 
 ```vim

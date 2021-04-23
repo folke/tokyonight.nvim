@@ -99,6 +99,8 @@ function M.setup(config)
   colors.warning = colors.yellow
   colors.info = colors.blue2
   colors.hint = colors.teal
+
+  util.color_overrides(colors, config)
   return colors
 end
 

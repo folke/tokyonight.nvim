@@ -21,6 +21,7 @@ config = {
   hideInactiveStatusline = opt("hide_inactive_statusline", false),
   terminalColors = opt("terminal_colors", true),
   sidebars = opt("sidebars", {}),
+  colors = opt("colors", {}),
   dev = opt("dev", false),
   darkFloat = opt("dark_float", true),
   darkSidebar = opt("dark_sidebar", true),
