@@ -166,6 +166,7 @@ local xterm_colors = nil
 local xterm_color_map = {}
 
 function util.gui2cterm(color)
+  if color == "NONE" then return color end
   if not xterm_colors then
     xterm_colors = {}
     for i, n in ipairs({ 47, 68, 40, 40, 40, 21 }) do
