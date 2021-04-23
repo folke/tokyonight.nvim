@@ -65,7 +65,7 @@ function M.setup(config)
     SpellLocal = { fg = c.info, style = "undercurl" }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { fg = c.hint, style = "undercurl" }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
-    StatusLineNC = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
     TabLineFill = { bg = c.black }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
@@ -123,7 +123,7 @@ function M.setup(config)
     Italic = { style = "italic" },
 
     -- ("Ignore", below, may be invisible...)
-    -- Ignore        = { }, -- (preferred) left blank, hidden  |hl-Ignore|
+    -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.error }, -- (preferred) any erroneous construct
     Todo = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
