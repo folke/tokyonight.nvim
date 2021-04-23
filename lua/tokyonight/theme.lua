@@ -277,7 +277,7 @@ function M.setup(config)
     NvimTreeRootFolder = { fg = c.blue, style = "bold" },
     NvimTreeGitDirty = { fg = c.git.change },
     NvimTreeGitNew = { fg = c.git.add },
-    NvimTreeSpecialFile = { fg = c.purple },
+    NvimTreeSpecialFile = { fg = c.purple, style = "underline" },
     LspDiagnosticsError = { fg = c.error },
     LspDiagnosticsWarning = { fg = c.warning },
     LspDiagnosticsInformation = { fg = c.info },

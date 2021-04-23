@@ -90,7 +90,7 @@ function util.autocmds(config)
     if sidebar == "terminal" then
       vim.cmd [[  autocmd TermOpen * setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]]
     else
-      vim.cmd([[  autocmd BufWinEnter ]] .. sidebar ..
+      vim.cmd([[  autocmd FileType ]] .. sidebar ..
                 [[ setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]])
     end
   end

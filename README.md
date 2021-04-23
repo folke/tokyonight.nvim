@@ -107,14 +107,14 @@ The theme comes in two styles, `storm` and a darker variant `night`.
 -- Example config in Lua
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_sidebars = { "quickfix", "__vista__", "terminal" }
+vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 ```
 
 ```vim
 " Example config in VimScript
 let g:tokyonight_style = "night"
 let g:tokyonight_italic_functions = true
-let g:tokyonight_sidebars = [ "quickfix", "__vista__", "terminal" ]
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 ```
 
 ## 🍭 Extras
