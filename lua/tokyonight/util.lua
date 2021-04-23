@@ -43,7 +43,18 @@ function util.highlight(group, color)
   local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
   local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
   local sp = color.sp and "guisp=" .. color.sp or ""
-  vim.cmd("highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp)
+
+  local cfg = color.fg and "ctermfg=" .. util.gui2cterm(color.fg) or "ctermfg=NONE"
+  local cbg = color.bg and "ctermbg=" .. util.gui2cterm(color.bg) or "ctermbg=NONE"
+  local cstyle = color.style and "cterm=" .. color.style or "cterm=NONE"
+
+  local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
+
+  if vim.g.tokyonight_cterm_colors == true or vim.g.tokyonight_cterm_colors == 1 then
+    hl = hl .. " " .. cfg .. " " .. cbg .. " " .. cstyle
+  end
+
+  vim.cmd(hl)
   if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
 end
 
@@ -149,6 +160,40 @@ function util.load(theme)
   end))
   async:send()
 
+end
+
+local xterm_colors = nil
+local xterm_color_map = {}
+
+function util.gui2cterm(color)
+  if not xterm_colors then
+    xterm_colors = {}
+    for i, n in ipairs({ 47, 68, 40, 40, 40, 21 }) do
+      for _ = 1, n, 1 do table.insert(xterm_colors, i - 1) end
+    end
+  end
+
+  if xterm_color_map[color] then return xterm_color_map[color] end
+
+  local rgb = hexToRgb(color)
+  local r = rgb[1]
+  local g = rgb[2]
+  local b = rgb[3]
+
+  local mx = math.max(r, g, b)
+  local mn = math.min(r, g, b)
+
+  if (mx - mn) * (mx + mn) <= 6250 then
+    local c = 24 - math.floor((252 - math.floor((r + g + b) / 3)) / 10)
+    if 0 <= c and c <= 23 then
+      xterm_color_map[color] = 232 + c
+      return xterm_color_map[color]
+    end
+  end
+
+  xterm_color_map[color] = 16 + 36 * xterm_colors[r + 1] + 6 * xterm_colors[g + 1] +
+                             xterm_colors[b + 1]
+  return xterm_color_map[color]
 end
 
 return util

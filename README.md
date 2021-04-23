@@ -101,6 +101,7 @@ The theme comes in two styles, `storm` and a darker variant `night`.
 | tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["quickfix", "__vista__", "terminal"]`                                                           |
 | tokyonight_dark_sidebar             | `true`    | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
 | tokyonight_dark_float               | `true`    | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
+| tokyonight_cterm_colors             | `false`   | Enabling this, will use the `gui` colors to set `cterm` values to their nearest equivalent. Only needed when not using terminal colors                          |
 
 ```lua
 -- Example config in Lua
