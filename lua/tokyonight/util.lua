@@ -40,7 +40,7 @@ function util.getDayColor(color)
   if color ~= "NONE" then
     local hsl = hsluv.hex_to_hsluv(color)
     hsl[3] = 100 - hsl[3]
-    hsl[3] = hsl[3] + (100 - hsl[3]) * .1
+    if hsl[3] < 40 then hsl[3] = hsl[3] + (100 - hsl[3]) * .3 end
     return hsluv.hsluv_to_hex(hsl)
   end
   return color
