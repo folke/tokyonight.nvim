@@ -1,7 +1,7 @@
 
 # 🏙 Tokyo Night
 
-A dark Neovim theme written in Lua ported from the Visual Studio Code [TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes extra themes for Kitty, Alacritty, iTerm and Fish.
+A dark and light Neovim theme written in Lua ported from the Visual Studio Code [TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## Storm
 
@@ -10,6 +10,8 @@ A dark Neovim theme written in Lua ported from the Visual Studio Code [TokyoNigh
 ## Night
 
 ![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
+
+## Day
 
 ## ✨ Features
 
@@ -86,11 +88,11 @@ require('lualine').setup {
 
 ## ⚙️ Configuration
 
-The theme comes in two styles, `storm` and a darker variant `night`.
+The theme comes in three styles, `storm`, a darker variant `night` and `day`.
 
 | Option                              | Default   | Description                                                                                                                                                     |
 | ----------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tokyonight_style                    | `"storm"` | The theme comes in two styles, `"storm"` and a darker variant `"night"`.                                                                                        |
+| tokyonight_style                    | `"storm"` | The theme comes in three styles, `storm`, a darker variant `night` and `day`.                                                                                   |
 | tokyonight_terminal_colors          | `true`    | Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
 | tokyonight_italic_comments          | `true`    | Make comments italic                                                                                                                                            |
 | tokyonight_italic_keywords          | `true`    | Make keywords italic                                                                                                                                            |

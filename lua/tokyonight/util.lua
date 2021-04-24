@@ -1,6 +1,7 @@
 local util = {}
 
 util.colorsUsed = {}
+util.colorCache = {}
 
 util.bg = "#000000"
 util.fg = "#ffffff"
@@ -34,15 +35,32 @@ end
 function util.darken(hex, amount, bg) return util.blend(hex, bg or util.bg, math.abs(amount)) end
 function util.lighten(hex, amount, fg) return util.blend(hex, fg or util.fg, math.abs(amount)) end
 
-function util.highlight(group, color)
+function util.getDayColor(color)
+  local hsluv = require("tokyonight.hsluv")
+  if color ~= "NONE" then
+    local hsl = hsluv.hex_to_hsluv(color)
+    hsl[3] = 100 - hsl[3]
+    hsl[3] = hsl[3] + (100 - hsl[3]) * .1
+    return hsluv.hsluv_to_hex(hsl)
+  end
+  return color
+end
+
+function util.getColor(color, config)
+  if config.style ~= "day" then return color end
+  if not util.colorCache[color] then util.colorCache[color] = util.getDayColor(color) end
+  return util.colorCache[color]
+end
+
+function util.highlight(group, color, opts)
   if color.fg then util.colorsUsed[color.fg] = true end
   if color.bg then util.colorsUsed[color.bg] = true end
   if color.sp then util.colorsUsed[color.sp] = true end
 
   local style = color.style and "gui=" .. color.style or "gui=NONE"
-  local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-  local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
-  local sp = color.sp and "guisp=" .. color.sp or ""
+  local fg = color.fg and "guifg=" .. util.getColor(color.fg, opts) or "guifg=NONE"
+  local bg = color.bg and "guibg=" .. util.getColor(color.bg, opts) or "guibg=NONE"
+  local sp = color.sp and "guisp=" .. util.getColor(color.sp, opts) or ""
 
   local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
 
@@ -99,7 +117,9 @@ function util.template(str, table)
   return (str:gsub("($%b{})", function(w) return table[w:sub(3, -2)] or w end))
 end
 
-function util.syntax(syntax) for group, colors in pairs(syntax) do util.highlight(group, colors) end end
+function util.syntax(syntax, opts)
+  for group, colors in pairs(syntax) do util.highlight(group, colors, opts) end
+end
 
 ---@param colors ColorScheme
 function util.terminal(colors)
@@ -140,13 +160,13 @@ function util.load(theme)
   vim.g.colors_name = "tokyonight"
 
   -- load base theme
-  util.syntax(theme.base)
+  util.syntax(theme.base, theme.config)
 
   -- load syntax for plugins and terminal async
   local async
   async = vim.loop.new_async(vim.schedule_wrap(function()
     util.terminal(theme.colors)
-    util.syntax(theme.plugins)
+    util.syntax(theme.plugins, theme.config)
     util.autocmds(theme.config)
     async:close()
   end))
@@ -168,6 +188,26 @@ function util.color_overrides(colors, config)
         if not colors[value] then error("Color " .. value .. " does not exist") end
         colors[key] = colors[value]
       end
+    end
+  end
+end
+
+function util.light()
+  for hl_name, hl in pairs(vim.api.nvim__get_hl_defs(0)) do
+    local def = {}
+    for key, def_key in pairs({ foreground = "fg", background = "bg", special = "sp" }) do
+      if type(hl[key]) == "number" then
+        local hex = string.format("#%06x", hl[key])
+        local color = util.getDayColor(hex)
+        table.insert(def, "gui" .. def_key .. "=" .. color)
+      end
+    end
+    if hl_name ~= "" and #def > 0 then
+      for _, style in pairs({ "bold", "italic", "underline", "undercurl" }) do
+        if hl[style] then table.insert(def, "gui=" .. style) end
+      end
+
+      vim.cmd("highlight! " .. hl_name .. " " .. table.concat(def, " "))
     end
   end
 end

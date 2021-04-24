@@ -1,4 +1,6 @@
-local colors = require("tokyonight.colors").setup()
+local config = require("tokyonight.config")
+local colors = require("tokyonight.colors").setup(config)
+local util = require("tokyonight.util")
 
 local tokyonight = {}
 
@@ -33,5 +35,14 @@ tokyonight.inactive = {
   b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
 }
+
+if config.style == "day" then
+  for _, mode in pairs(tokyonight) do
+    for _, section in pairs(mode) do
+      if section.bg then section.bg = util.getColor(section.bg, config) end
+      if section.fg then section.fg = util.getColor(section.fg, config) end
+    end
+  end
+end
 
 return tokyonight
