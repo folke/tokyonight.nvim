@@ -36,11 +36,11 @@ tokyonight.inactive = {
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
 }
 
-if config.style == "day" then
+if vim.o.background == "light" then
   for _, mode in pairs(tokyonight) do
     for _, section in pairs(mode) do
-      if section.bg then section.bg = util.getColor(section.bg, config) end
-      if section.fg then section.fg = util.getColor(section.fg, config) end
+      if section.bg then section.bg = util.getColor(section.bg) end
+      if section.fg then section.fg = util.getColor(section.fg) end
     end
   end
 end

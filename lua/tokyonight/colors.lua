@@ -42,7 +42,7 @@ function M.setup(config)
     diff = { change = "#394b70", add = "#164846", delete = "#823c41" },
     git = { change = "#6183bb", add = "#449dab", delete = "#f7768e" },
   }
-  if config.style == "night" or config.style == "day" then colors.bg = "#1a1b26" end
+  if config.style == "night" or vim.o.background == "light" then colors.bg = "#1a1b26" end
 
   colors.gitSigns = {
     add = util.brighten(colors.diff.add, .2),

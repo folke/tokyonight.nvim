@@ -27,4 +27,6 @@ config = {
   darkSidebar = opt("dark_sidebar", true),
 }
 
+if config.style == "day" then vim.o.background = "light" end
+
 return config

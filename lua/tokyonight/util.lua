@@ -45,7 +45,7 @@ function util.brighten(color, percentage)
   return hsluv.hsluv_to_hex(hsl)
 end
 
-function util.getDayColor(color)
+function util.invertColor(color)
   if color ~= "NONE" then
     if color ~= "NONE" then
       local hsl = hsluv.hex_to_hsluv(color)
@@ -57,21 +57,21 @@ function util.getDayColor(color)
   return color
 end
 
-function util.getColor(color, config)
-  if config.style ~= "day" then return color end
-  if not util.colorCache[color] then util.colorCache[color] = util.getDayColor(color) end
+function util.getColor(color)
+  if vim.o.background == "dark" then return color end
+  if not util.colorCache[color] then util.colorCache[color] = util.invertColor(color) end
   return util.colorCache[color]
 end
 
-function util.highlight(group, color, opts)
+function util.highlight(group, color)
   if color.fg then util.colorsUsed[color.fg] = true end
   if color.bg then util.colorsUsed[color.bg] = true end
   if color.sp then util.colorsUsed[color.sp] = true end
 
   local style = color.style and "gui=" .. color.style or "gui=NONE"
-  local fg = color.fg and "guifg=" .. util.getColor(color.fg, opts) or "guifg=NONE"
-  local bg = color.bg and "guibg=" .. util.getColor(color.bg, opts) or "guibg=NONE"
-  local sp = color.sp and "guisp=" .. util.getColor(color.sp, opts) or ""
+  local fg = color.fg and "guifg=" .. util.getColor(color.fg) or "guifg=NONE"
+  local bg = color.bg and "guibg=" .. util.getColor(color.bg) or "guibg=NONE"
+  local sp = color.sp and "guisp=" .. util.getColor(color.sp) or ""
 
   local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
 
@@ -128,9 +128,7 @@ function util.template(str, table)
   return (str:gsub("($%b{})", function(w) return table[w:sub(3, -2)] or w end))
 end
 
-function util.syntax(syntax, opts)
-  for group, colors in pairs(syntax) do util.highlight(group, colors, opts) end
-end
+function util.syntax(syntax) for group, colors in pairs(syntax) do util.highlight(group, colors) end end
 
 ---@param colors ColorScheme
 function util.terminal(colors)
@@ -166,18 +164,18 @@ end
 function util.load(theme)
   vim.cmd("hi clear")
   if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
-  vim.o.background = "dark"
+
   vim.o.termguicolors = true
   vim.g.colors_name = "tokyonight"
 
   -- load base theme
-  util.syntax(theme.base, theme.config)
+  util.syntax(theme.base)
 
   -- load syntax for plugins and terminal async
   local async
   async = vim.loop.new_async(vim.schedule_wrap(function()
     util.terminal(theme.colors)
-    util.syntax(theme.plugins, theme.config)
+    util.syntax(theme.plugins)
     util.autocmds(theme.config)
     async:close()
   end))
@@ -203,18 +201,19 @@ function util.color_overrides(colors, config)
   end
 end
 
-function util.light()
+function util.light(brightness)
   for hl_name, hl in pairs(vim.api.nvim__get_hl_defs(0)) do
     local def = {}
     for key, def_key in pairs({ foreground = "fg", background = "bg", special = "sp" }) do
       if type(hl[key]) == "number" then
         local hex = string.format("#%06x", hl[key])
-        local color = util.getDayColor(hex)
+        local color = util.invertColor(hex)
+        if brightness then color = util.brighten(hex, brightness) end
         table.insert(def, "gui" .. def_key .. "=" .. color)
       end
     end
     if hl_name ~= "" and #def > 0 then
-      for _, style in pairs({ "bold", "italic", "underline", "undercurl" }) do
+      for _, style in pairs({ "bold", "italic", "underline", "undercurl", "reverse" }) do
         if hl[style] then table.insert(def, "gui=" .. style) end
       end
 
