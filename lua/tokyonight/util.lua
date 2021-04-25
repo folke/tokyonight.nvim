@@ -158,6 +158,12 @@ function util.terminal(colors)
 
   vim.g.terminal_color_6 = colors.cyan
   vim.g.terminal_color_14 = colors.cyan
+
+  if vim.o.background == "light" then
+    for i = 0, 15, 1 do
+      vim.g["terminal_color_" .. i] = util.getColor(vim.g["terminal_color_" .. i])
+    end
+  end
 end
 
 ---@param theme Theme
