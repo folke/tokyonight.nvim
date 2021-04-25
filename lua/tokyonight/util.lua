@@ -1,3 +1,5 @@
+local hsluv = require("tokyonight.hsluv")
+
 local util = {}
 
 util.colorsUsed = {}
@@ -35,13 +37,22 @@ end
 function util.darken(hex, amount, bg) return util.blend(hex, bg or util.bg, math.abs(amount)) end
 function util.lighten(hex, amount, fg) return util.blend(hex, fg or util.fg, math.abs(amount)) end
 
+function util.brighten(color, percentage)
+  local hsl = hsluv.hex_to_hsluv(color)
+  local larpSpace = 100 - hsl[3]
+  if percentage < 0 then larpSpace = hsl[3] end
+  hsl[3] = hsl[3] + larpSpace * percentage
+  return hsluv.hsluv_to_hex(hsl)
+end
+
 function util.getDayColor(color)
-  local hsluv = require("tokyonight.hsluv")
   if color ~= "NONE" then
-    local hsl = hsluv.hex_to_hsluv(color)
-    hsl[3] = 100 - hsl[3]
-    if hsl[3] < 40 then hsl[3] = hsl[3] + (100 - hsl[3]) * .3 end
-    return hsluv.hsluv_to_hex(hsl)
+    if color ~= "NONE" then
+      local hsl = hsluv.hex_to_hsluv(color)
+      hsl[3] = 100 - hsl[3]
+      if hsl[3] < 40 then hsl[3] = hsl[3] + (100 - hsl[3]) * .3 end
+      return hsluv.hsluv_to_hex(hsl)
+    end
   end
   return color
 end

@@ -44,6 +44,12 @@ function M.setup(config)
   }
   if config.style == "night" or config.style == "day" then colors.bg = "#1a1b26" end
 
+  colors.gitSigns = {
+    add = util.brighten(colors.diff.add, .2),
+    change = util.brighten(colors.diff.change, .2),
+    delete = util.brighten(colors.diff.delete, .2),
+  }
+
   util.bg = colors.bg
   colors.git.ignore = colors.dark3
   colors.black = util.darken(colors.bg, 0.8, "#000000")

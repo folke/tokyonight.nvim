@@ -18,9 +18,9 @@ function M.setup(config)
     Comment = { fg = c.comment, style = config.commentStyle }, -- any comment
     ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.fg_gutter }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { style = "reverse" }, -- character under the cursor
-    lCursor = { style = "reverse" }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM = { style = "reverse" }, -- like Cursor, but used when in IME mode |CursorIM|
+    Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
+    lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = c.bg_highlight }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = c.bg_highlight }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = c.blue }, -- directory names (and other special names in listings)
@@ -260,14 +260,14 @@ function M.setup(config)
     NeogitDiffAddHighlight = { fg = c.git.add, bg = c.diff.add },
 
     -- GitGutter
-    GitGutterAdd = { fg = c.diff.add }, -- diff mode: Added line |diff.txt|
-    GitGutterChange = { fg = c.diff.change }, -- diff mode: Changed line |diff.txt|
-    GitGutterDelete = { fg = c.diff.delete }, -- diff mode: Deleted line |diff.txt|
+    GitGutterAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
+    GitGutterChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
+    GitGutterDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd = { fg = c.diff.add }, -- diff mode: Added line |diff.txt|
-    GitSignsChange = { fg = c.diff.change }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = { fg = c.diff.delete }, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
+    GitSignsChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopeBorder = { fg = c.border_highlight },
