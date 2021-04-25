@@ -88,6 +88,8 @@ require('lualine').setup {
 
 ## ⚙️ Configuration
 
+> ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme tokyonight`
+
 The theme comes in three styles, `storm`, a darker variant `night` and `day`.
 
 | Option                              | Default   | Description                                                                                                                                                     |
@@ -113,6 +115,9 @@ vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+
+-- Load the colorscheme
+vim.cmd[[colorscheme tokyonight]]
 ```
 
 ```vim
@@ -120,6 +125,9 @@ vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 let g:tokyonight_style = "night"
 let g:tokyonight_italic_functions = true
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+" Load the colorscheme
+colorscheme tokyonight
 ```
 
 ## 🍭 Extras
