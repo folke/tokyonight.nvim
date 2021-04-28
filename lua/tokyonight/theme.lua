@@ -297,7 +297,7 @@ function M.setup(config)
     WhichKeySeperator = { fg = c.comment },
     WhichKeySeparator = { fg = c.comment },
     WhichKeyFloating = { bg = c.bg_sidebar },
-    WhichKeyValue = { fg = c.fg_gutter },
+    WhichKeyValue = { fg = c.dark3 },
 
     -- LspSaga
     DiagnosticError = { fg = c.error },
