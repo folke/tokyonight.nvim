@@ -240,6 +240,10 @@ function M.setup(config)
     LspTroubleCount = { fg = c.magenta, bg = c.fg_gutter },
     LspTroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
 
+    -- Illuminate
+    illuminatedWord = { bg = c.fg_gutter },
+    illuminatedCurWord = { bg = c.fg_gutter },
+
     -- diff
     diffAdded = { fg = c.git.add },
     diffRemoved = { fg = c.git.delete },
@@ -297,7 +301,7 @@ function M.setup(config)
     WhichKeySeperator = { fg = c.comment },
     WhichKeySeparator = { fg = c.comment },
     WhichKeyFloating = { bg = c.bg_sidebar },
-    WhichKeyValue = { fg = c.dark3 },
+    WhichKeyValue = { fg = c.dark5 },
 
     -- LspSaga
     DiagnosticError = { fg = c.error },
