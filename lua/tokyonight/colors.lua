@@ -41,7 +41,7 @@ function M.setup(config)
     teal = "#1abc9c",
     red = "#f7768e",
     red1 = "#db4b4b",
-    git = { change = "#6183bb", add = "#449dab", delete = "#f7768e" },
+    git = { change = "#6183bb", add = "#449dab", delete = "#914c54", conflict = "#bb7a61" },
   }
   if config.style == "night" or vim.o.background == "light" then colors.bg = "#1a1b26" end
   util.bg = colors.bg
