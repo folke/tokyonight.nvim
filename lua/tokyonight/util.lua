@@ -133,7 +133,7 @@ function util.syntax(syntax) for group, colors in pairs(syntax) do util.highligh
 ---@param colors ColorScheme
 function util.terminal(colors)
   -- dark
-  vim.g.terminal_color_0 = colors.terminal_black
+  vim.g.terminal_color_0 = colors.black
   vim.g.terminal_color_8 = colors.terminal_black
 
   -- light

@@ -32,7 +32,7 @@ colors:
 
   # Bright colors
   bright:
-    black:   '${black}'
+    black:   '${terminal_black}'
     red:     '${red}'
     green:   '${green}'
     yellow:  '${yellow}'

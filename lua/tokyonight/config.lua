@@ -2,7 +2,7 @@
 local config
 
 -- shim vim for kitty and other generators
-vim = vim or { g = {} }
+vim = vim or { g = {}, o = {} }
 
 local function opt(key, default)
   key = "tokyonight_" .. key

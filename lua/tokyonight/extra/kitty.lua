@@ -24,7 +24,7 @@ function M.kitty(config)
   #tab_bar_background ${black}
   
   # normal
-  color0 ${terminal_black}
+  color0 ${black}
   color1 ${red}
   color2 ${green}
   color3 ${yellow}
