@@ -166,6 +166,13 @@ function util.terminal(colors)
   end
 end
 
+function util.light_colors(colors)
+  if type(colors) == "string" then return util.getColor(colors) end
+  local ret = {}
+  for key, value in pairs(colors) do ret[key] = util.light_colors(value) end
+  return ret
+end
+
 ---@param theme Theme
 function util.load(theme)
   vim.cmd("hi clear")

@@ -25,6 +25,7 @@ config = {
   dev = opt("dev", false),
   darkFloat = opt("dark_float", true),
   darkSidebar = opt("dark_sidebar", true),
+  transform_colors = false,
 }
 
 if config.style == "day" then vim.o.background = "light" end

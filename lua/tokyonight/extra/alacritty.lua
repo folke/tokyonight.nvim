@@ -4,6 +4,7 @@ local M = {}
 
 function M.alacritty(config)
   config = config or require("tokyonight.config")
+  config.transform_colors = true
   local colors = require("tokyonight.colors").setup(config)
 
   local alacrittyColors = {}

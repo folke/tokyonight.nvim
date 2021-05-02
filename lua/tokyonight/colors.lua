@@ -43,7 +43,9 @@ function M.setup(config)
     red1 = "#db4b4b",
     git = { change = "#6183bb", add = "#449dab", delete = "#914c54", conflict = "#bb7a61" },
   }
-  if config.style == "night" or vim.o.background == "light" then colors.bg = "#1a1b26" end
+  if config.style == "night" or config.style == "day" or vim.o.background == "light" then
+    colors.bg = "#1a1b26"
+  end
   util.bg = colors.bg
 
   colors.diff = {
@@ -82,6 +84,10 @@ function M.setup(config)
   colors.hint = colors.teal
 
   util.color_overrides(colors, config)
+
+  if config.transform_colors and (config.style == "day" or vim.o.background == "light") then
+    return util.light_colors(colors)
+  end
 
   return colors
 end

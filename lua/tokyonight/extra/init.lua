@@ -24,3 +24,9 @@ write(kitty.kitty(config), "kitty_tokyonight_night.conf")
 write(fish.fish(config), "fish_tokyonight_night.fish")
 write(alacritty.alacritty(config), "alacritty_tokyonight_night.yml")
 
+config.style = "day"
+
+write(kitty.kitty(config), "kitty_tokyonight_day.conf")
+write(fish.fish(config), "fish_tokyonight_day.fish")
+write(alacritty.alacritty(config), "alacritty_tokyonight_day.yml")
+
