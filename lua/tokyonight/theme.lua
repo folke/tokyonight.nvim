@@ -138,6 +138,9 @@ function M.setup(config)
     markdownH2 = { fg = c.blue, style = "bold" },
     markdownH2Delimiter = { fg = c.blue },
 
+    debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
+    debugBreakpoint = { bg = util.darken(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
+
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
