@@ -287,6 +287,7 @@ function M.setup(config)
     LspDiagnosticsWarning = { fg = c.warning },
     LspDiagnosticsInformation = { fg = c.info },
     LspDiagnosticsHint = { fg = c.hint },
+    NvimTreeIndentMarker = { fg = c.fg_gutter },
     -- NvimTreeFolderName= { fg = c.fg_float },
 
     -- Dashboard
