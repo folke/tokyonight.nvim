@@ -334,15 +334,6 @@ function M.setup(config)
     HopUnmatched = { fg = c.dark3 },
   }
 
-  -- LuaLine
-  for _, section in ipairs({ "b", "c" }) do
-    local bg = c.bg_sidebar
-    if section == "b" then bg = c.fg_gutter end
-    theme.plugins["lualine_" .. section .. "_diagnostics_error_normal"] = { fg = c.error, bg = bg }
-    theme.plugins["lualine_" .. section .. "_diagnostics_warn_normal"] = { fg = c.warning, bg = bg }
-    theme.plugins["lualine_" .. section .. "_diagnostics_info_normal"] = { fg = c.info, bg = bg }
-  end
-
   if config.hideInactiveStatusline then
     local inactive = { style = "underline", bg = c.bg, fg = c.bg, sp = c.border }
 
