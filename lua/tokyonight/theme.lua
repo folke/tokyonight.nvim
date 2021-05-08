@@ -291,6 +291,8 @@ function M.setup(config)
     LspDiagnosticsInformation = { fg = c.info },
     LspDiagnosticsHint = { fg = c.hint },
     NvimTreeIndentMarker = { fg = c.fg_gutter },
+		NvimTreeImageFile = {fg = c.fg_sidebar},
+		NvimTreeSymlink = {fg = c.blue},
     -- NvimTreeFolderName= { fg = c.fg_float },
 
     -- Dashboard
