@@ -47,12 +47,19 @@ end
 
 function util.invertColor(color)
   if color ~= "NONE" then
-    if color ~= "NONE" then
-      local hsl = hsluv.hex_to_hsluv(color)
-      hsl[3] = 100 - hsl[3]
-      if hsl[3] < 40 then hsl[3] = hsl[3] + (100 - hsl[3]) * .3 end
-      return hsluv.hsluv_to_hex(hsl)
-    end
+    local hsl = hsluv.hex_to_hsluv(color)
+    hsl[3] = 100 - hsl[3]
+    if hsl[3] < 40 then hsl[3] = hsl[3] + (100 - hsl[3]) * .3 end
+    return hsluv.hsluv_to_hex(hsl)
+  end
+  return color
+end
+
+function util.randomColor(color)
+  if color ~= "NONE" then
+    local hsl = hsluv.hex_to_hsluv(color)
+    hsl[1] = math.random(1, 360)
+    return hsluv.hsluv_to_hex(hsl)
   end
   return color
 end
@@ -63,6 +70,7 @@ function util.getColor(color)
   return util.colorCache[color]
 end
 
+-- local ns = vim.api.nvim_create_namespace("tokyonight")
 function util.highlight(group, color)
   if color.fg then util.colorsUsed[color.fg] = true end
   if color.bg then util.colorsUsed[color.bg] = true end
@@ -75,8 +83,17 @@ function util.highlight(group, color)
 
   local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
 
-  vim.cmd(hl)
-  if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
+  if color.link then
+    vim.cmd("highlight! link " .. group .. " " .. color.link)
+  else
+    -- local data = {}
+    -- if color.fg then data.foreground = color.fg end
+    -- if color.bg then data.background = color.bg end
+    -- if color.sp then data.special = color.sp end
+    -- if color.style then data[color.style] = true end
+    -- vim.api.nvim_set_hl(ns, group, data)
+    vim.cmd(hl)
+  end
 end
 
 function util.debug(colors)
@@ -180,20 +197,16 @@ function util.load(theme)
 
   vim.o.termguicolors = true
   vim.g.colors_name = "tokyonight"
-
+  -- vim.api.nvim__set_hl_ns(ns)
   -- load base theme
   util.syntax(theme.base)
 
   -- load syntax for plugins and terminal async
-  local async
-  async = vim.loop.new_async(vim.schedule_wrap(function()
+  vim.defer_fn(function()
     util.terminal(theme.colors)
     util.syntax(theme.plugins)
     util.autocmds(theme.config)
-    async:close()
-  end))
-  async:send()
-
+  end, 0)
 end
 
 ---@param config Config
@@ -222,6 +235,28 @@ function util.light(brightness)
         local hex = string.format("#%06x", hl[key])
         local color = util.invertColor(hex)
         if brightness then color = util.brighten(hex, brightness) end
+        table.insert(def, "gui" .. def_key .. "=" .. color)
+      end
+    end
+    if hl_name ~= "" and #def > 0 then
+      for _, style in pairs({ "bold", "italic", "underline", "undercurl", "reverse" }) do
+        if hl[style] then table.insert(def, "gui=" .. style) end
+      end
+
+      vim.cmd("highlight! " .. hl_name .. " " .. table.concat(def, " "))
+    end
+  end
+end
+
+function util.random()
+  local colors = {}
+  for hl_name, hl in pairs(vim.api.nvim__get_hl_defs(0)) do
+    local def = {}
+    for key, def_key in pairs({ foreground = "fg", background = "bg", special = "sp" }) do
+      if type(hl[key]) == "number" then
+        local hex = string.format("#%06x", hl[key])
+        local color = colors[hex] and colors[hex] or util.randomColor(hex)
+        colors[hex] = color
         table.insert(def, "gui" .. def_key .. "=" .. color)
       end
     end
