@@ -132,9 +132,15 @@ function M.setup(config)
     qfFileName = { fg = c.blue },
 
     htmlH1 = { fg = c.magenta, style = "bold" },
+    htmlH2 = { fg = c.blue, style = "bold" },
+
+    mkdHeading = { fg = c.orange, style = "bold" },
+    mkdCode = { bg = c.terminal_black, fg = c.fg },
+    mkdCodeDelimiter = { bg = c.terminal_black, fg = c.fg },
+    mkdCodeStart = { fg = c.teal, style = "bold" },
+    mkdCodeEnd = { fg = c.teal, style = "bold" },
     markdownH1 = { fg = c.magenta, style = "bold" },
     markdownH1Delimiter = { fg = c.magenta },
-    htmlH2 = { fg = c.blue, style = "bold" },
     markdownH2 = { fg = c.blue, style = "bold" },
     markdownH2Delimiter = { fg = c.blue },
 
@@ -291,8 +297,8 @@ function M.setup(config)
     LspDiagnosticsInformation = { fg = c.info },
     LspDiagnosticsHint = { fg = c.hint },
     NvimTreeIndentMarker = { fg = c.fg_gutter },
-		NvimTreeImageFile = {fg = c.fg_sidebar},
-		NvimTreeSymlink = {fg = c.blue},
+    NvimTreeImageFile = { fg = c.fg_sidebar },
+    NvimTreeSymlink = { fg = c.blue },
     -- NvimTreeFolderName= { fg = c.fg_float },
 
     -- Dashboard
