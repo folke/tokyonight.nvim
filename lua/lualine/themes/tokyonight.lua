@@ -39,8 +39,12 @@ tokyonight.inactive = {
 if vim.o.background == "light" then
   for _, mode in pairs(tokyonight) do
     for _, section in pairs(mode) do
-      if section.bg then section.bg = util.getColor(section.bg) end
-      if section.fg then section.fg = util.getColor(section.fg) end
+      if section.bg then
+        section.bg = util.getColor(section.bg)
+      end
+      if section.fg then
+        section.fg = util.getColor(section.fg)
+      end
     end
   end
 end

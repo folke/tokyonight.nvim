@@ -8,9 +8,14 @@ function M.fish(config)
   local colors = require("tokyonight.colors").setup(config)
 
   local fishColors = {}
-  for k, v in pairs(colors) do if type(v) == "string" then fishColors[k] = v:gsub("^#", "") end end
+  for k, v in pairs(colors) do
+    if type(v) == "string" then
+      fishColors[k] = v:gsub("^#", "")
+    end
+  end
 
-  local fish = util.template([[
+  local fish = util.template(
+    [[
     # TokyoNight Color Palette
     set -l foreground ${fg}
     set -l selection ${bg_visual}
@@ -45,10 +50,11 @@ function M.fish(config)
     set -g fish_pager_color_completion $foreground
     set -g fish_pager_color_description $comment
     
-  ]], fishColors)
+  ]],
+    fishColors
+  )
 
   return fish
 end
 
 return M
-

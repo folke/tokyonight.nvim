@@ -49,16 +49,16 @@ function M.setup(config)
   util.bg = colors.bg
 
   colors.diff = {
-    add = util.darken(colors.green2, .15),
-    delete = util.darken(colors.red1, .15),
-    change = util.darken(colors.blue7, .15),
+    add = util.darken(colors.green2, 0.15),
+    delete = util.darken(colors.red1, 0.15),
+    change = util.darken(colors.blue7, 0.15),
     text = colors.blue7,
   }
 
   colors.gitSigns = {
-    add = util.brighten(colors.diff.add, .2),
-    change = util.brighten(colors.diff.change, .2),
-    delete = util.brighten(colors.diff.delete, .2),
+    add = util.brighten(colors.diff.add, 0.2),
+    change = util.brighten(colors.diff.change, 0.2),
+    delete = util.brighten(colors.diff.delete, 0.2),
   }
 
   colors.git.ignore = colors.dark3
@@ -93,4 +93,3 @@ function M.setup(config)
 end
 
 return M
-

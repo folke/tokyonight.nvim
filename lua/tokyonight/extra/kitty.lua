@@ -7,7 +7,8 @@ function M.kitty(config)
   config.transform_colors = true
   local colors = require("tokyonight.colors").setup(config)
 
-  local kitty = util.template([[
+  local kitty = util.template(
+    [[
   # TokyoNight colors for Kitty
   
   background ${bg}
@@ -47,9 +48,10 @@ function M.kitty(config)
   # extended colors
   color16 ${orange}
   color17 ${red1}
-  ]], colors)
+  ]],
+    colors
+  )
   return kitty
 end
 
 return M
-

@@ -18,7 +18,8 @@ LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE A
 NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-]] local hsluv = {}
+]]
+local hsluv = {}
 
 local hexChars = "0123456789abcdef"
 
@@ -31,24 +32,24 @@ local length_of_ray_until_intersect = function(theta, line)
 end
 
 hsluv.get_bounds = function(l)
-  local result = {};
-  local sub2;
-  local sub1 = ((l + 16) ^ 3) / 1560896;
+  local result = {}
+  local sub2
+  local sub1 = ((l + 16) ^ 3) / 1560896
   if sub1 > hsluv.epsilon then
-    sub2 = sub1;
+    sub2 = sub1
   else
-    sub2 = l / hsluv.kappa;
+    sub2 = l / hsluv.kappa
   end
 
   for i = 1, 3 do
-    local m1 = hsluv.m[i][1];
-    local m2 = hsluv.m[i][2];
-    local m3 = hsluv.m[i][3];
+    local m1 = hsluv.m[i][1]
+    local m2 = hsluv.m[i][2]
+    local m3 = hsluv.m[i][3]
 
     for t = 0, 1 do
-      local top1 = (284517 * m1 - 94839 * m3) * sub2;
-      local top2 = (838422 * m3 + 769860 * m2 + 731718 * m1) * l * sub2 - 769860 * t * l;
-      local bottom = (632260 * m3 - 126452 * m2) * sub2 + 126452 * t;
+      local top1 = (284517 * m1 - 94839 * m3) * sub2
+      local top2 = (838422 * m3 + 769860 * m2 + 731718 * m1) * l * sub2 - 769860 * t * l
+      local bottom = (632260 * m3 - 126452 * m2) * sub2 + 126452 * t
       table.insert(result, { slope = top1 / bottom, intercept = top2 / bottom })
     end
   end
@@ -56,32 +57,38 @@ hsluv.get_bounds = function(l)
 end
 
 hsluv.max_safe_chroma_for_l = function(l)
-  local bounds = hsluv.get_bounds(l);
-  local min = 1.7976931348623157e+308;
+  local bounds = hsluv.get_bounds(l)
+  local min = 1.7976931348623157e+308
 
   for i = 1, 6 do
-    local length = distance_line_from_origin(bounds[i]);
-    if length >= 0 then min = math.min(min, length); end
+    local length = distance_line_from_origin(bounds[i])
+    if length >= 0 then
+      min = math.min(min, length)
+    end
   end
-  return min;
+  return min
 end
 
 hsluv.max_safe_chroma_for_lh = function(l, h)
-  local hrad = h / 360 * math.pi * 2;
-  local bounds = hsluv.get_bounds(l);
-  local min = 1.7976931348623157e+308;
+  local hrad = h / 360 * math.pi * 2
+  local bounds = hsluv.get_bounds(l)
+  local min = 1.7976931348623157e+308
 
   for i = 1, 6 do
-    local bound = bounds[i];
-    local length = length_of_ray_until_intersect(hrad, bound);
-    if length >= 0 then min = math.min(min, length); end
+    local bound = bounds[i]
+    local length = length_of_ray_until_intersect(hrad, bound)
+    if length >= 0 then
+      min = math.min(min, length)
+    end
   end
   return min
 end
 
 hsluv.dot_product = function(a, b)
-  local sum = 0;
-  for i = 1, 3 do sum = sum + a[i] * b[i]; end
+  local sum = 0
+  for i = 1, 3 do
+    sum = sum + a[i] * b[i]
+  end
   return sum
 end
 
@@ -110,7 +117,7 @@ hsluv.xyz_to_rgb = function(tuple)
 end
 
 hsluv.rgb_to_xyz = function(tuple)
-  local rgbl = { hsluv.to_linear(tuple[1]), hsluv.to_linear(tuple[2]), hsluv.to_linear(tuple[3]) };
+  local rgbl = { hsluv.to_linear(tuple[1]), hsluv.to_linear(tuple[2]), hsluv.to_linear(tuple[3]) }
   return {
     hsluv.dot_product(hsluv.minv[1], rgbl),
     hsluv.dot_product(hsluv.minv[2], rgbl),
@@ -135,102 +142,124 @@ hsluv.l_to_y = function(L)
 end
 
 hsluv.xyz_to_luv = function(tuple)
-  local X = tuple[1];
-  local Y = tuple[2];
-  local divider = X + 15 * Y + 3 * tuple[3];
-  local varU = 4 * X;
-  local varV = 9 * Y;
+  local X = tuple[1]
+  local Y = tuple[2]
+  local divider = X + 15 * Y + 3 * tuple[3]
+  local varU = 4 * X
+  local varV = 9 * Y
   if divider ~= 0 then
-    varU = varU / divider;
-    varV = varV / divider;
+    varU = varU / divider
+    varV = varV / divider
   else
-    varU = 0;
-    varV = 0;
+    varU = 0
+    varV = 0
   end
-  local L = hsluv.y_to_l(Y);
-  if L == 0 then return { 0, 0, 0 } end
+  local L = hsluv.y_to_l(Y)
+  if L == 0 then
+    return { 0, 0, 0 }
+  end
   return { L, 13 * L * (varU - hsluv.refU), 13 * L * (varV - hsluv.refV) }
 end
 
 hsluv.luv_to_xyz = function(tuple)
-  local L = tuple[1];
-  local U = tuple[2];
-  local V = tuple[3];
-  if L == 0 then return { 0, 0, 0 } end
-  local varU = U / (13 * L) + hsluv.refU;
-  local varV = V / (13 * L) + hsluv.refV;
-  local Y = hsluv.l_to_y(L);
-  local X = 0 - (9 * Y * varU) / ((((varU - 4) * varV) - varU * varV));
+  local L = tuple[1]
+  local U = tuple[2]
+  local V = tuple[3]
+  if L == 0 then
+    return { 0, 0, 0 }
+  end
+  local varU = U / (13 * L) + hsluv.refU
+  local varV = V / (13 * L) + hsluv.refV
+  local Y = hsluv.l_to_y(L)
+  local X = 0 - (9 * Y * varU) / (((varU - 4) * varV) - varU * varV)
   return { X, Y, (9 * Y - 15 * varV * Y - varV * X) / (3 * varV) }
 end
 
 hsluv.luv_to_lch = function(tuple)
-  local L = tuple[1];
-  local U = tuple[2];
-  local V = tuple[3];
-  local C = math.sqrt(U * U + V * V);
+  local L = tuple[1]
+  local U = tuple[2]
+  local V = tuple[3]
+  local C = math.sqrt(U * U + V * V)
   local H
   if C < 0.00000001 then
-    H = 0;
+    H = 0
   else
-    H = math.atan2(V, U) * 180.0 / 3.1415926535897932;
-    if H < 0 then H = 360 + H; end
+    H = math.atan2(V, U) * 180.0 / 3.1415926535897932
+    if H < 0 then
+      H = 360 + H
+    end
   end
   return { L, C, H }
 end
 
 hsluv.lch_to_luv = function(tuple)
-  local L = tuple[1];
-  local C = tuple[2];
-  local Hrad = tuple[3] / 360.0 * 2 * math.pi;
-  return { L, math.cos(Hrad) * C, math.sin(Hrad) * C };
+  local L = tuple[1]
+  local C = tuple[2]
+  local Hrad = tuple[3] / 360.0 * 2 * math.pi
+  return { L, math.cos(Hrad) * C, math.sin(Hrad) * C }
 end
 
 hsluv.hsluv_to_lch = function(tuple)
-  local H = tuple[1];
-  local S = tuple[2];
-  local L = tuple[3];
-  if L > 99.9999999 then return { 100, 0, H } end
-  if L < 0.00000001 then return { 0, 0, H } end
+  local H = tuple[1]
+  local S = tuple[2]
+  local L = tuple[3]
+  if L > 99.9999999 then
+    return { 100, 0, H }
+  end
+  if L < 0.00000001 then
+    return { 0, 0, H }
+  end
   return { L, hsluv.max_safe_chroma_for_lh(L, H) / 100 * S, H }
 end
 
 hsluv.lch_to_hsluv = function(tuple)
-  local L = tuple[1];
-  local C = tuple[2];
-  local H = tuple[3];
+  local L = tuple[1]
+  local C = tuple[2]
+  local H = tuple[3]
   local max_chroma = hsluv.max_safe_chroma_for_lh(L, H)
-  if L > 99.9999999 then return { H, 0, 100 } end
-  if L < 0.00000001 then return { H, 0, 0 } end
+  if L > 99.9999999 then
+    return { H, 0, 100 }
+  end
+  if L < 0.00000001 then
+    return { H, 0, 0 }
+  end
 
   return { H, C / max_chroma * 100, L }
 end
 
 hsluv.hpluv_to_lch = function(tuple)
-  local H = tuple[1];
-  local S = tuple[2];
-  local L = tuple[3];
-  if L > 99.9999999 then return { 100, 0, H } end
-  if L < 0.00000001 then return { 0, 0, H } end
+  local H = tuple[1]
+  local S = tuple[2]
+  local L = tuple[3]
+  if L > 99.9999999 then
+    return { 100, 0, H }
+  end
+  if L < 0.00000001 then
+    return { 0, 0, H }
+  end
   return { L, hsluv.max_safe_chroma_for_l(L) / 100 * S, H }
 end
 
 hsluv.lch_to_hpluv = function(tuple)
-  local L = tuple[1];
-  local C = tuple[2];
-  local H = tuple[3];
-  if L > 99.9999999 then return { H, 0, 100 } end
-  if L < 0.00000001 then return { H, 0, 0 } end
+  local L = tuple[1]
+  local C = tuple[2]
+  local H = tuple[3]
+  if L > 99.9999999 then
+    return { H, 0, 100 }
+  end
+  if L < 0.00000001 then
+    return { H, 0, 0 }
+  end
   return { H, C / hsluv.max_safe_chroma_for_l(L) * 100, L }
 end
 
 hsluv.rgb_to_hex = function(tuple)
-  local h = "#";
+  local h = "#"
   for i = 1, 3 do
-    local c = math.floor(tuple[i] * 255 + 0.5);
-    local digit2 = math.fmod(c, 16);
-    local x = (c - digit2) / 16;
-    local digit1 = math.floor(x);
+    local c = math.floor(tuple[i] * 255 + 0.5)
+    local digit2 = math.fmod(c, 16)
+    local x = (c - digit2) / 16
+    local digit1 = math.floor(x)
     h = h .. string.sub(hexChars, digit1 + 1, digit1 + 1)
     h = h .. string.sub(hexChars, digit2 + 1, digit2 + 1)
   end
@@ -241,36 +270,54 @@ hsluv.hex_to_rgb = function(hex)
   hex = string.lower(hex)
   local ret = {}
   for i = 0, 2 do
-    local char1 = string.sub(hex, i * 2 + 2, i * 2 + 2);
-    local char2 = string.sub(hex, i * 2 + 3, i * 2 + 3);
+    local char1 = string.sub(hex, i * 2 + 2, i * 2 + 2)
+    local char2 = string.sub(hex, i * 2 + 3, i * 2 + 3)
     local digit1 = string.find(hexChars, char1) - 1
     local digit2 = string.find(hexChars, char2) - 1
-    ret[i + 1] = (digit1 * 16 + digit2) / 255.0;
+    ret[i + 1] = (digit1 * 16 + digit2) / 255.0
   end
   return ret
 end
 
-hsluv.lch_to_rgb = function(tuple) return
-  hsluv.xyz_to_rgb(hsluv.luv_to_xyz(hsluv.lch_to_luv(tuple))) end
+hsluv.lch_to_rgb = function(tuple)
+  return hsluv.xyz_to_rgb(hsluv.luv_to_xyz(hsluv.lch_to_luv(tuple)))
+end
 
-hsluv.rgb_to_lch = function(tuple) return
-  hsluv.luv_to_lch(hsluv.xyz_to_luv(hsluv.rgb_to_xyz(tuple))) end
+hsluv.rgb_to_lch = function(tuple)
+  return hsluv.luv_to_lch(hsluv.xyz_to_luv(hsluv.rgb_to_xyz(tuple)))
+end
 
-hsluv.hsluv_to_rgb = function(tuple) return hsluv.lch_to_rgb(hsluv.hsluv_to_lch(tuple)) end
+hsluv.hsluv_to_rgb = function(tuple)
+  return hsluv.lch_to_rgb(hsluv.hsluv_to_lch(tuple))
+end
 
-hsluv.rgb_to_hsluv = function(tuple) return hsluv.lch_to_hsluv(hsluv.rgb_to_lch(tuple)) end
+hsluv.rgb_to_hsluv = function(tuple)
+  return hsluv.lch_to_hsluv(hsluv.rgb_to_lch(tuple))
+end
 
-hsluv.hpluv_to_rgb = function(tuple) return hsluv.lch_to_rgb(hsluv.hpluv_to_lch(tuple)) end
+hsluv.hpluv_to_rgb = function(tuple)
+  return hsluv.lch_to_rgb(hsluv.hpluv_to_lch(tuple))
+end
 
-hsluv.rgb_to_hpluv = function(tuple) return hsluv.lch_to_hpluv(hsluv.rgb_to_lch(tuple)) end
+hsluv.rgb_to_hpluv = function(tuple)
+  return hsluv.lch_to_hpluv(hsluv.rgb_to_lch(tuple))
+end
 
-hsluv.hsluv_to_hex = function(tuple) return hsluv.rgb_to_hex(hsluv.hsluv_to_rgb(tuple)) end
+hsluv.hsluv_to_hex = function(tuple)
+  return hsluv.rgb_to_hex(hsluv.hsluv_to_rgb(tuple))
+end
 
-hsluv.hpluv_to_hex = function(tuple) return hsluv.rgb_to_hex(hsluv.hpluv_to_rgb(tuple)) end
+hsluv.hpluv_to_hex = function(tuple)
+  return hsluv.rgb_to_hex(hsluv.hpluv_to_rgb(tuple))
+end
 
-hsluv.hex_to_hsluv = function(s) return hsluv.rgb_to_hsluv(hsluv.hex_to_rgb(s)) end
+hsluv.hex_to_hsluv = function(s)
+  return hsluv.rgb_to_hsluv(hsluv.hex_to_rgb(s))
+end
 
-hsluv.hex_to_hpluv = function(s) return hsluv.rgb_to_hpluv(hsluv.hex_to_rgb(s)) end
+hsluv.hex_to_hpluv = function(s)
+  return hsluv.rgb_to_hpluv(hsluv.hex_to_rgb(s))
+end
 
 hsluv.m = {
   { 3.240969941904521, -1.537383177570093, -0.498610760293 },

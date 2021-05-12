@@ -6,8 +6,12 @@ vim = vim or { g = {}, o = {} }
 
 local function opt(key, default)
   key = "tokyonight_" .. key
-  if vim.g[key] == nil then return default end
-  if vim.g[key] == 0 then return false end
+  if vim.g[key] == nil then
+    return default
+  end
+  if vim.g[key] == 0 then
+    return false
+  end
   return vim.g[key]
 end
 
@@ -28,6 +32,8 @@ config = {
   transform_colors = false,
 }
 
-if config.style == "day" then vim.o.background = "light" end
+if config.style == "day" then
+  vim.o.background = "light"
+end
 
 return config
