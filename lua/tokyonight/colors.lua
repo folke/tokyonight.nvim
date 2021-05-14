@@ -42,6 +42,7 @@ function M.setup(config)
     red = "#f7768e",
     red1 = "#db4b4b",
     git = { change = "#6183bb", add = "#449dab", delete = "#914c54", conflict = "#bb7a61" },
+    gitSigns = { add = "#164846", change = "#394b70", delete = "#823c41" },
   }
   if config.style == "night" or config.style == "day" or vim.o.background == "light" then
     colors.bg = "#1a1b26"
@@ -56,9 +57,9 @@ function M.setup(config)
   }
 
   colors.gitSigns = {
-    add = util.brighten(colors.diff.add, 0.2),
-    change = util.brighten(colors.diff.change, 0.2),
-    delete = util.brighten(colors.diff.delete, 0.2),
+    add = util.brighten(colors.gitSigns.add, 0.2),
+    change = util.brighten(colors.gitSigns.change, 0.2),
+    delete = util.brighten(colors.gitSigns.delete, 0.2),
   }
 
   colors.git.ignore = colors.dark3
