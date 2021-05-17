@@ -39,13 +39,14 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 + [Dashboard](https://github.com/glepnir/dashboard-nvim)
 + [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
 + [Lualine](https://github.com/hoob3rt/lualine.nvim)
++ [Lightline](https://github.com/itchyny/lightline.vim)
 + [Neogit](https://github.com/TimUntersberger/neogit)
 + [vim-sneak](https://github.com/justinmk/vim-sneak)
 
 ## ⚡️ Requirements
 
 + Neovim >= 0.5.0
-  
+
 ## 📦 Installation
 
 Install the theme with your preferred package manager:
@@ -86,6 +87,13 @@ require('lualine').setup {
     -- ... your lualine config
   }
 }
+```
+
+To enable the `tokyonight` colorscheme for `Lightline`:
+
+```vim
+" Vim Script
+let g:lightline = {'colorscheme': 'tokyonight'}
 ```
 
 ## ⚙️ Configuration
