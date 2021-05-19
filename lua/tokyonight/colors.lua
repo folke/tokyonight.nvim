@@ -48,6 +48,7 @@ function M.setup(config)
     colors.bg = "#1a1b26"
   end
   util.bg = colors.bg
+  util.day_brightness = config.dayBrightness
 
   colors.diff = {
     add = util.darken(colors.green2, 0.15),

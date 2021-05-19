@@ -7,6 +7,7 @@ util.colorCache = {}
 
 util.bg = "#000000"
 util.fg = "#ffffff"
+util.day_brightness = 0.3
 
 local function hexToRgb(hex_str)
   local hex = "[abcdef0-9][abcdef0-9]"
@@ -56,7 +57,7 @@ function util.invertColor(color)
     local hsl = hsluv.hex_to_hsluv(color)
     hsl[3] = 100 - hsl[3]
     if hsl[3] < 40 then
-      hsl[3] = hsl[3] + (100 - hsl[3]) * 0.3
+      hsl[3] = hsl[3] + (100 - hsl[3]) * util.day_brightness
     end
     return hsluv.hsluv_to_hex(hsl)
   end

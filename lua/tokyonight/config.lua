@@ -17,6 +17,7 @@ end
 
 config = {
   style = opt("style", "storm"),
+  dayBrightness = opt("day_brightness", 0.3),
   transparent = opt("transparent", false),
   commentStyle = opt("italic_comments", true) and "italic" or "NONE",
   keywordStyle = opt("italic_keywords", true) and "italic" or "NONE",
