@@ -134,16 +134,19 @@ function M.setup(config)
     htmlH1 = { fg = c.magenta, style = "bold" },
     htmlH2 = { fg = c.blue, style = "bold" },
 
-    mkdHeading = { fg = c.orange, style = "bold" },
-    mkdCode = { bg = c.terminal_black, fg = c.fg },
+    -- mkdHeading = { fg = c.orange, style = "bold" },
+    -- mkdCode = { bg = c.terminal_black, fg = c.fg },
     mkdCodeDelimiter = { bg = c.terminal_black, fg = c.fg },
     mkdCodeStart = { fg = c.teal, style = "bold" },
     mkdCodeEnd = { fg = c.teal, style = "bold" },
-    mkdLink = { fg = c.blue, style = "underline" },
+    -- mkdLink = { fg = c.blue, style = "underline" },
+
+    markdownHeadingDelimiter = { fg = c.orange, style = "bold" },
+    markdownCode = { fg = c.teal },
+    markdownCodeBlock = { fg = c.teal },
     markdownH1 = { fg = c.magenta, style = "bold" },
-    markdownH1Delimiter = { fg = c.magenta },
     markdownH2 = { fg = c.blue, style = "bold" },
-    markdownH2Delimiter = { fg = c.blue },
+    markdownLinkText = { fg = c.blue, style = "underline" },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = { bg = util.darken(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
