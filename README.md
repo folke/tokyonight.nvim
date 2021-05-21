@@ -21,7 +21,7 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 + minimal inactive statusline
 + vim terminal colors
 + darker background for sidebar-like windows
-+ color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include), [Alacritty](https://github.com/alacritty/alacritty) and [Fish Shell](https://fishshell.com/)
++ color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include), [Alacritty](https://github.com/alacritty/alacritty), [Fish Shell](https://fishshell.com/) and [Wezterm](https://wezfurlong.org/wezterm/)
 + **lualine** theme
 
 ### Plugin Support

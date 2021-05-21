@@ -1,0 +1,12 @@
+# Tokyo Night
+[colors]
+foreground = "#c0caf5"
+background = "#24283b"
+cursor_bg = "#DBC08A"
+cursor_border = "#DBC08A"
+cursor_fg = "#24283b"
+selection_bg = "#99a7df"
+selection_fg = "#24283b"
+
+ansi = ["#414868","#f7768e","#9ece6a","#e0af68","#7aa2f7","#9d7cd8","#1abc9c","#7982a9"]
+brights = ["#414868","#db4b4b","#73daca","#d0ce65","#89ddff","#bb9af7","#2ac3de","#a9b1d6"]
