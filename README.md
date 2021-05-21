@@ -159,6 +159,6 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🍭 Extras
 
-Extra color configs for **Kitty**, **Alacritty**, **Fish** and **iTerm** can be found in [extras](extras/). To use them, refer to their respective documentation.
+Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm** and **iTerm** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
