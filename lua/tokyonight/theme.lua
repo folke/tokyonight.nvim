@@ -308,6 +308,18 @@ function M.setup(config)
     NvimTreeSymlink = { fg = c.blue },
     -- NvimTreeFolderName= { fg = c.fg_float },
 
+		-- Fern
+		FernBranchText = {fg = c.blue},
+
+		-- glyph palette
+		GlyphPalette1 ={ fg = c.red1	},		
+		GlyphPalette2 ={ fg = c.green	},		
+		GlyphPalette3 ={ fg = c.yellow	},		
+		GlyphPalette4 ={ fg = c.blue	},		
+		GlyphPalette6 ={ fg = c.green1	},		
+		GlyphPalette7 ={ fg = c.fg	},		
+		GlyphPalette9 ={ fg = c.red	},		
+
     -- Dashboard
     DashboardShortCut = { fg = c.cyan },
     DashboardHeader = { fg = c.blue },
@@ -328,7 +340,24 @@ function M.setup(config)
     DiagnosticWarning = { fg = c.warning },
     DiagnosticInformation = { fg = c.info },
     DiagnosticHint = { fg = c.hint },
-
+	
+		LspFloatWinNormal =                     { bg = c.dark },
+		LspFloatWinBorder =                     { fg = c.border_highlight },
+		LspSagaBorderTitle =                    { fg = c.cyan },
+		LspSagaHoverBorder =                    { fg = c.blue },
+		LspSagaRenameBorder =                   { fg = c.green },
+		LspSagaDefPreviewBorder =               { fg = c.green },
+		LspSagaCodeActionBorder =               { fg = c.blue },
+		LspSagaFinderSelection =                { fg = c.bg_visual },
+		LspSagaCodeActionTitle =                { fg = c.blue1 },
+		LspSagaCodeActionContent =              { fg = c.purple },
+		LspSagaSignatureHelpBorder =            { fg = c.red },
+		ReferencesCount =                       { fg = c.purple },
+		DefinitionCount =                       { fg = c.purple },
+		DefinitionIcon =                        { fg = c.blue },
+		ReferencesIcon =                        { fg = c.blue },
+		TargetWord =                            { fg = c.cyan },
+		
     -- NeoVim
     healthError = { fg = c.error },
     healthSuccess = { fg = c.green1 },
