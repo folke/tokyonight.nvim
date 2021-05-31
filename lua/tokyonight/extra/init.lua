@@ -9,7 +9,7 @@ local function write(str, fileName)
   file:close()
 end
 
-local extras = { kitty = "conf", fish = "fish", alacritty = "yml", wezterm = "toml" }
+local extras = { kitty = "conf", fish = "fish", alacritty = "yml", wezterm = "toml", tmux = "tmux" }
 local styles = { "storm", "night", "day" }
 
 for extra, ext in pairs(extras) do
