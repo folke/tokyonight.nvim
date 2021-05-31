@@ -93,7 +93,7 @@ To enable the `tokyonight` colorscheme for `Lightline`:
 
 ```vim
 " Vim Script
-let g:lightline = {'colorscheme': 'tokyonight'}
+let g:lightline.colorscheme = 'tokyonight'
 ```
 
 ## ⚙️ Configuration
