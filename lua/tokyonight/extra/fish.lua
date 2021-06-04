@@ -2,11 +2,8 @@ local util = require("tokyonight.util")
 
 local M = {}
 
-function M.fish(config)
-  config = config or require("tokyonight.config")
-  config.transform_colors = true
-  local colors = require("tokyonight.colors").setup(config)
-
+--- @param colors ColorScheme
+function M.generate(colors)
   local fishColors = {}
   for k, v in pairs(colors) do
     if type(v) == "string" then

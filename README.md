@@ -162,3 +162,16 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm** and **iTerm** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
+
+## 🔥 Contributing
+
+Pull requests are welcome. For the `extras`, we use a simple template system that can be used to generate themes for the different styles.
+
+How to add a new extra template:
+
+1. create a file like `lua/tokyonight/extra/cool-app.lua`
+2. add the name and output file extension to the `extras` table in `lua/tokyonight/extra/init.lua`
+3. in the root directory, run `$ lua lua/tokyonight/extra/init.lua` to generate / update extra themes
+4. commit the newly created themes under `extra/`
+
+

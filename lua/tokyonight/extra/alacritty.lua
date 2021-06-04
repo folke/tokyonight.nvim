@@ -2,11 +2,8 @@ local util = require("tokyonight.util")
 
 local M = {}
 
-function M.alacritty(config)
-  config = config or require("tokyonight.config")
-  config.transform_colors = true
-  local colors = require("tokyonight.colors").setup(config)
-
+--- @param colors ColorScheme
+function M.generate(colors)
   local alacrittyColors = {}
   for k, v in pairs(colors) do
     if type(v) == "string" then

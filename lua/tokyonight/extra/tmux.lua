@@ -2,11 +2,8 @@ local util = require("tokyonight.util")
 
 local M = {}
 
-function M.tmux(config)
-  config = config or require("tokyonight.config")
-  config.transform_colors = true
-  local colors = require("tokyonight.colors").setup(config)
-
+--- @param colors ColorScheme
+function M.generate(colors)
   local tmux = util.template(
     [[
 #!/usr/bin/env bash
