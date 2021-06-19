@@ -223,22 +223,18 @@ end
 ---@param theme Theme
 function util.load(theme)
   vim.cmd("hi clear")
-  if vim.fn.exists("syntax_on") then
-    vim.cmd("syntax reset")
-  end
+  -- if vim.fn.exists("syntax_on") then
+  --   vim.cmd("syntax reset")
+  -- end
 
   vim.o.termguicolors = true
   vim.g.colors_name = "tokyonight"
   -- vim.api.nvim__set_hl_ns(ns)
   -- load base theme
   util.syntax(theme.base)
-
-  -- load syntax for plugins and terminal async
-  vim.defer_fn(function()
-    util.terminal(theme.colors)
-    util.syntax(theme.plugins)
-    util.autocmds(theme.config)
-  end, 0)
+  util.syntax(theme.plugins)
+  util.terminal(theme.colors)
+  util.autocmds(theme.config)
 end
 
 ---@param config Config
