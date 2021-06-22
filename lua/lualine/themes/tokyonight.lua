@@ -49,4 +49,10 @@ if vim.o.background == "light" then
   end
 end
 
+if vim.g.tokyonight_lualine_bold then
+  for _, mode in pairs(tokyonight) do
+    mode.a.gui = "bold"
+  end
+end
+
 return tokyonight
