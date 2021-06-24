@@ -42,6 +42,7 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 + [Lightline](https://github.com/itchyny/lightline.vim)
 + [Neogit](https://github.com/TimUntersberger/neogit)
 + [vim-sneak](https://github.com/justinmk/vim-sneak)
++ [Fern](https://github.com/lambdalisue/fern.vim)
 
 ## ⚡️ Requirements
 
