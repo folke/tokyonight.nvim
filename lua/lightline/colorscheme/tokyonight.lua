@@ -30,6 +30,13 @@ tokyonight.inactive = {
   right = {{ colors.fg_gutter, colors.bg_statusline }, {colors.dark3, colors.bg }},
 }
 
+tokyonight.tabline = {
+  left = {{ colors.dark3, colors.bg_highlight }, {colors.dark3, colors.bg }},
+  middle = {{ colors.fg_gutter, colors.bg_statusline }},
+  right = {{ colors.fg_gutter, colors.bg_statusline }, {colors.dark3, colors.bg }},
+  tabsel = {{ colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg }},
+}
+
 if vim.o.background == "light" then
   for _, mode in pairs(tokyonight) do
     for _, section in pairs(mode) do
