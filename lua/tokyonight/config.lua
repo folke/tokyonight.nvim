@@ -31,6 +31,7 @@ config = {
   darkFloat = opt("dark_float", true),
   darkSidebar = opt("dark_sidebar", true),
   transform_colors = false,
+  lualineBold = opt("lualine_bold", false),
 }
 
 if config.style == "day" then
