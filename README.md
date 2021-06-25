@@ -1,4 +1,3 @@
-
 # 🏙 Tokyo Night
 
 A dark and light Neovim theme written in Lua ported from the Visual Studio Code [TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes extra themes for Kitty, Alacritty, iTerm and Fish.
@@ -17,36 +16,36 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 
 ## ✨ Features
 
-+ supports the latest Neovim 5.0 features like TreeSitter and LSP
-+ minimal inactive statusline
-+ vim terminal colors
-+ darker background for sidebar-like windows
-+ color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include), [Alacritty](https://github.com/alacritty/alacritty) and [Fish Shell](https://fishshell.com/)
-+ **lualine** theme
+- supports the latest Neovim 5.0 features like TreeSitter and LSP
+- minimal inactive statusline
+- vim terminal colors
+- darker background for sidebar-like windows
+- color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include), [Alacritty](https://github.com/alacritty/alacritty) and [Fish Shell](https://fishshell.com/)
+- **lualine** theme
 
 ### Plugin Support
 
-+ [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-+ [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-+ [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
-+ [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
-+ [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-+ [Git Gutter](https://github.com/airblade/vim-gitgutter)
-+ [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-+ [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-+ [WhichKey](https://github.com/liuchengxu/vim-which-key)
-+ [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-+ [Dashboard](https://github.com/glepnir/dashboard-nvim)
-+ [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-+ [Lualine](https://github.com/hoob3rt/lualine.nvim)
-+ [Lightline](https://github.com/itchyny/lightline.vim)
-+ [Neogit](https://github.com/TimUntersberger/neogit)
-+ [vim-sneak](https://github.com/justinmk/vim-sneak)
-+ [Fern](https://github.com/lambdalisue/fern.vim)
+- [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
+- [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
+- [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
+- [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
+- [Git Gutter](https://github.com/airblade/vim-gitgutter)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
+- [WhichKey](https://github.com/liuchengxu/vim-which-key)
+- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Dashboard](https://github.com/glepnir/dashboard-nvim)
+- [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
+- [Lualine](https://github.com/hoob3rt/lualine.nvim)
+- [Lightline](https://github.com/itchyny/lightline.vim)
+- [Neogit](https://github.com/TimUntersberger/neogit)
+- [vim-sneak](https://github.com/justinmk/vim-sneak)
+- [Fern](https://github.com/lambdalisue/fern.vim)
 
 ## ⚡️ Requirements
 
-+ Neovim >= 0.5.0
+- Neovim >= 0.5.0
 
 ## 📦 Installation
 
@@ -105,11 +104,11 @@ The theme comes in three styles, `storm`, a darker variant `night` and `day`.
 
 The **day** style will be used if:
 
-+ `vim.g.tokyonight_style == "day"`
-+ or `vim.o.background == "light"`
+- `vim.g.tokyonight_style == "day"`
+- or `vim.o.background == "light"`
 
 | Option                              | Default   | Description                                                                                                                                                     |
-|-------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tokyonight_style                    | `"storm"` | The theme comes in three styles, `storm`, a darker variant `night` and `day`.                                                                                   |
 | tokyonight_terminal_colors          | `true`    | Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
 | tokyonight_italic_comments          | `true`    | Make comments italic                                                                                                                                            |
@@ -123,6 +122,7 @@ The **day** style will be used if:
 | tokyonight_dark_float               | `true`    | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 | tokyonight_colors                   | `{}`      | You can override specific color groups to use other groups or a hex color                                                                                       |
 | tokyonight_day_brightness           | `0.3`     | Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors                                                  |
+| tokyonight_lualine_bold             | `false`   | When `true`, section headers in the lualine theme will be bold                                                                                                  |
 
 ```lua
 -- Example config in Lua
@@ -174,5 +174,3 @@ How to add a new extra template:
 2. add the name and output file extension to the `extras` table in `lua/tokyonight/extra/init.lua`
 3. in the root directory, run `$ lua lua/tokyonight/extra/init.lua` to generate / update extra themes
 4. commit the newly created themes under `extra/`
-
-
