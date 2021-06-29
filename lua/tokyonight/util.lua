@@ -222,7 +222,10 @@ end
 
 ---@param theme Theme
 function util.load(theme)
-  vim.cmd("hi clear")
+  -- only needed to clear when not the default colorscheme
+  if vim.g.colors_name then
+    vim.cmd("hi clear")
+  end
   -- if vim.fn.exists("syntax_on") then
   --   vim.cmd("syntax reset")
   -- end
