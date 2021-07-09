@@ -374,10 +374,12 @@ function M.setup(config)
     SneakScope = { bg = c.bg_visual },
 
     -- Hop
-    -- HopNextKey = { fg = c.teal },
-    -- HopNextKey1 = { fg = c.blue },
-    -- HopNextKey2 = { fg = util.lighten(c.blue, .3) },
+    HopNextKey = { fg = c.magenta2, style = "bold" },
+    HopNextKey1 = { fg = c.blue2, style = "bold" },
+    HopNextKey2 = { fg = util.darken(c.blue2, 0.3) },
     HopUnmatched = { fg = c.dark3 },
+
+    LightspeedGreyWash = { fg = c.dark3 },
   }
 
   if config.hideInactiveStatusline then
