@@ -118,6 +118,7 @@ The **day** style will be used if:
 | tokyonight_transparent              | `false`   | Enable this to disable setting the background color                                                                                                             |
 | tokyonight_hide_inactive_statusline | `false`   | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
 | tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
+| tokyonight_transparent_sidebar      | `false`   | Sidebar like windows like `NvimTree` get a transparent background
 | tokyonight_dark_sidebar             | `true`    | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
 | tokyonight_dark_float               | `true`    | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 | tokyonight_colors                   | `{}`      | You can override specific color groups to use other groups or a hex color                                                                                       |
