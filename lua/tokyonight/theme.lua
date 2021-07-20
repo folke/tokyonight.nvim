@@ -369,6 +369,25 @@ function M.setup(config)
     BufferLineIndicatorSelected = { fg = c.git.change },
     BufferLineFill = { bg = c.black },
 
+    -- Barbar
+    BufferCurrent = { bg = c.fg_gutter, fg = c.fg },
+    BufferCurrentIndex = { bg = c.fg_gutter, fg = c.info },
+    BufferCurrentMod = { bg = c.fg_gutter, fg = c.warning },
+    BufferCurrentSign = { bg = c.fg_gutter, fg = c.info },
+    BufferCurrentTarget = { bg = c.fg_gutter, fg = c.red },
+    BufferVisible = { bg = c.bg_statusline, fg = c.fg },
+    BufferVisibleIndex = { bg = c.bg_statusline, fg = c.info },
+    BufferVisibleMod = { bg = c.bg_statusline, fg = c.warning },
+    BufferVisibleSign = { bg = c.bg_statusline, fg = c.info },
+    BufferVisibleTarget = { bg = c.bg_statusline, fg = c.red },
+    BufferInactive = { bg = c.bg_statusline, fg = c.dark5 },
+    BufferInactiveIndex = { bg = c.bg_statusline, fg = c.dark5 },
+    BufferInactiveMod = { bg = c.bg_statusline, fg = util.darken(c.warning, 0.7) },
+    BufferInactiveSign = { bg = c.bg_statusline, fg = c.border_highlight },
+    BufferInactiveTarget = { bg = c.bg_statusline, fg = c.red },
+    BufferTabpages = { bg = c.bg_statusline, fg = c.none },
+    BufferTabpage = { bg = c.bg_statusline, fg = c.border_highlight },
+
     -- Sneak
     Sneak = { fg = c.bg_highlight, bg = c.magenta },
     SneakScope = { bg = c.bg_visual },
