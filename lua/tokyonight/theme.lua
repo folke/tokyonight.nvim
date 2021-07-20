@@ -343,7 +343,7 @@ function M.setup(config)
     DiagnosticInformation = { fg = c.info },
     DiagnosticHint = { fg = c.hint },
 
-    LspFloatWinNormal = { bg = c.dark },
+    LspFloatWinNormal = { bg = c.bg_float },
     LspFloatWinBorder = { fg = c.border_highlight },
     LspSagaBorderTitle = { fg = c.cyan },
     LspSagaHoverBorder = { fg = c.blue },
