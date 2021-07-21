@@ -17,6 +17,7 @@ local extras = {
 	wezterm = "toml",
 	tmux = "tmux",
 	xresources = "Xresources",
+	xfceterm = "theme",
 }
 local styles = { "storm", "night", "day" }
 
