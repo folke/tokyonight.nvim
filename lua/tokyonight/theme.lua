@@ -405,6 +405,8 @@ function M.setup(config)
     LightspeedGreyWash = { fg = c.dark3 },
   }
 
+  theme.defer = {}
+
   if config.hideInactiveStatusline then
     local inactive = { style = "underline", bg = c.bg, fg = c.bg, sp = c.border }
 
@@ -413,7 +415,7 @@ function M.setup(config)
 
     -- LuaLine
     for _, section in ipairs({ "a", "b", "c" }) do
-      theme.plugins["lualine_" .. section .. "_inactive"] = inactive
+      theme.defer["lualine_" .. section .. "_inactive"] = inactive
     end
   end
 
