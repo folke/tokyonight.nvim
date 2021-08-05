@@ -174,6 +174,7 @@ function M.setup(config)
     LspDiagnosticsUnderlineHint = { style = "undercurl", sp = c.hint }, -- Used to underline "Hint" diagnostics
 
     LspSignatureActiveParameter = { fg = c.orange },
+    LspCodeLens = { fg = c.comment },
 
     -- LspDiagnosticsFloatingError         = { }, -- Used to color "Error" diagnostic messages in diagnostics float
     -- LspDiagnosticsFloatingWarning       = { }, -- Used to color "Warning" diagnostic messages in diagnostics float
