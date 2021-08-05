@@ -16,7 +16,7 @@ function M.setup(config)
 
   theme.base = {
     Comment = { fg = c.comment, style = config.commentStyle }, -- any comment
-    ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
+    ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark3 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
     lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -174,6 +174,7 @@ function M.setup(config)
     LspDiagnosticsUnderlineHint = { style = "undercurl", sp = c.hint }, -- Used to underline "Hint" diagnostics
 
     LspSignatureActiveParameter = { fg = c.orange },
+    LspCodeLens = { fg = c.comment },
 
     -- LspDiagnosticsFloatingError         = { }, -- Used to color "Error" diagnostic messages in diagnostics float
     -- LspDiagnosticsFloatingWarning       = { }, -- Used to color "Warning" diagnostic messages in diagnostics float
@@ -184,6 +185,9 @@ function M.setup(config)
     -- LspDiagnosticsSignWarning           = { }, -- Used for "Warning" signs in sign column
     -- LspDiagnosticsSignInformation       = { }, -- Used for "Information" signs in sign column
     -- LspDiagnosticsSignHint              = { }, -- Used for "Hint" signs in sign column
+
+    ALEErrorSign = { fg = c.error },
+    ALEWarningSign = { fg = c.warning },
   }
 
   theme.plugins = {

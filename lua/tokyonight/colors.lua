@@ -74,7 +74,7 @@ function M.setup(config)
   colors.bg_statusline = colors.bg_dark
 
   -- Sidebar and Floats are configurable
-  colors.bg_sidebar = config.darkSidebar and colors.bg_dark or colors.bg
+  colors.bg_sidebar = (config.transparentSidebar and colors.none) or config.darkSidebar and colors.bg_dark or colors.bg
   colors.bg_float = config.darkFloat and colors.bg_dark or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.7)
