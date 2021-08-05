@@ -185,6 +185,9 @@ function M.setup(config)
     -- LspDiagnosticsSignWarning           = { }, -- Used for "Warning" signs in sign column
     -- LspDiagnosticsSignInformation       = { }, -- Used for "Information" signs in sign column
     -- LspDiagnosticsSignHint              = { }, -- Used for "Hint" signs in sign column
+
+    ALEErrorSign = { fg = c.error },
+    ALEWarningSign = { fg = c.warning },
   }
 
   theme.plugins = {
