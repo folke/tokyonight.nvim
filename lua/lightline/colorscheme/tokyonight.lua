@@ -5,9 +5,9 @@ local util = require("tokyonight.util")
 local tokyonight = {}
 
 tokyonight.normal = {
-  left = {{ colors.black, colors.blue }, { colors.blue, colors.bg }},
-  middle = {{ colors.blue, colors.fg_gutter }},
-  right = {{ colors.fg_sidebar, colors.bg_statusline }, { colors.blue, colors.bg }},
+  left = {{ colors.black, colors.blue }, { colors.blue, colors.fg_gutter }},
+  middle = {{ colors.fg, colors.bg_statusline }},
+  right = {{ colors.black, colors.blue }, { colors.blue, colors.fg_gutter }},
   error = {{ colors.black, colors.error }},
   warning = {{ colors.black, colors.warning }},
 }
