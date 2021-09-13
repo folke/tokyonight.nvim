@@ -5,5 +5,6 @@
 " lua package.loaded['tokyonight.colors'] = nil
 " lua package.loaded['tokyonight.util'] = nil
 lua package.loaded['tokyonight.config'] = nil
+lua vim.o.background = "dark"
 lua vim.g.tokyonight_style = "night"
 lua require('tokyonight').colorscheme()
