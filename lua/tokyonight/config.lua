@@ -15,10 +15,12 @@ local function opt(key, default)
   return vim.g[key]
 end
 
+local transparent = opt("transparent", false)
+
 config = {
   style = opt("style", "storm"),
   dayBrightness = opt("day_brightness", 0.3),
-  transparent = opt("transparent", false),
+  transparent = transparent,
   commentStyle = opt("italic_comments", true) and "italic" or "NONE",
   keywordStyle = opt("italic_keywords", true) and "italic" or "NONE",
   functionStyle = opt("italic_functions", false) and "italic" or "NONE",
@@ -28,10 +30,10 @@ config = {
   sidebars = opt("sidebars", {}),
   colors = opt("colors", {}),
   dev = opt("dev", false),
-  darkFloat = opt("dark_float", true),
-  darkSidebar = opt("dark_sidebar", true),
-  transparentSidebar = opt("transparent_sidebar", false),
-  transparentFloat = opt("transparent_float", false),
+  darkFloat = opt("dark_float", not transparent),
+  darkSidebar = opt("dark_sidebar", not transparent),
+  transparentSidebar = opt("transparent_sidebar", transparent),
+  transparentFloat = opt("transparent_float", transparent),
   transform_colors = false,
   lualineBold = opt("lualine_bold", false),
 }
