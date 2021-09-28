@@ -32,7 +32,7 @@ function M.setup(config)
     -- TermCursor  = { }, -- cursor in a focused terminal
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.error }, -- error messages on the command line
-    VertSplit = { fg = c.border }, -- the column separating vertically split windows
+    VertSplit = { fg = c.border, bg = c.bg_sidebar }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn = { bg = c.bg, fg = c.comment }, -- 'foldcolumn'
     SignColumn = { bg = config.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
