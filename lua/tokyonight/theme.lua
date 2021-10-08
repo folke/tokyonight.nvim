@@ -408,6 +408,16 @@ function M.setup(config)
     HopUnmatched = { fg = c.dark3 },
 
     LightspeedGreyWash = { fg = c.dark3 },
+
+    -- Cmp
+    CmpDocumentation = { fg = c.fg, bg = c.bg_float },
+    CmpDocumentationBorder = { fg = c.border_highlight, bg = c.bg_float },
+    CmpItemAbbr = { fg = c.fg, bg = c.none },
+    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none },
+    CmpItemAbbrMatch = { fg = c.green1, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.green1, bg = c.none },
+    CmpItemKind = { fg = c.teal, bg = c.none },
+    CmpItemMenu = { fg = c.comment, bg = c.none },
   }
 
   theme.defer = {}
