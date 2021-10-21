@@ -158,6 +158,11 @@ function M.setup(config)
     LspReferenceRead = { bg = c.fg_gutter }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = c.fg_gutter }, -- used for highlighting "write" references
 
+    DiagnosticError = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticWarn = { fg = c.warning }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticInfo = { fg = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticHint = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+
     LspDiagnosticsDefaultError = { fg = c.error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
     LspDiagnosticsDefaultWarning = { fg = c.warning }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
     LspDiagnosticsDefaultInformation = { fg = c.info }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
@@ -403,6 +408,16 @@ function M.setup(config)
     HopUnmatched = { fg = c.dark3 },
 
     LightspeedGreyWash = { fg = c.dark3 },
+
+    -- Cmp
+    CmpDocumentation = { fg = c.fg, bg = c.bg_float },
+    CmpDocumentationBorder = { fg = c.border_highlight, bg = c.bg_float },
+    CmpItemAbbr = { fg = c.fg, bg = c.none },
+    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none },
+    CmpItemAbbrMatch = { fg = c.green1, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.green1, bg = c.none },
+    CmpItemKind = { fg = c.teal, bg = c.none },
+    CmpItemMenu = { fg = c.comment, bg = c.none },
   }
 
   theme.defer = {}
