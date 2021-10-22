@@ -173,37 +173,29 @@ function M.setup(config)
     DiagnosticUnderlineInfo = { style = "undercurl", sp = c.info }, -- Used to underline "Information" diagnostics
     DiagnosticUnderlineHint = { style = "undercurl", sp = c.hint }, -- Used to underline "Hint" diagnostics
 
-    LspDiagnosticsDefaultError = { fg = c.error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    LspDiagnosticsDefaultWarning = { fg = c.warning }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    LspDiagnosticsDefaultInformation = { fg = c.info }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    LspDiagnosticsDefaultHint = { fg = c.hint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-
-    LspDiagnosticsVirtualTextError = { bg = util.darken(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
-    LspDiagnosticsVirtualTextWarning = { bg = util.darken(c.warning, 0.1), fg = c.warning }, -- Used for "Warning" diagnostic virtual text
-    LspDiagnosticsVirtualTextInformation = { bg = util.darken(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
-    LspDiagnosticsVirtualTextHint = { bg = util.darken(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
-
-    LspDiagnosticsUnderlineError = { style = "undercurl", sp = c.error }, -- Used to underline "Error" diagnostics
-    LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = c.warning }, -- Used to underline "Warning" diagnostics
-    LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = c.info }, -- Used to underline "Information" diagnostics
-    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = c.hint }, -- Used to underline "Hint" diagnostics
-
     LspSignatureActiveParameter = { fg = c.orange },
     LspCodeLens = { fg = c.comment },
-
-    -- LspDiagnosticsFloatingError         = { }, -- Used to color "Error" diagnostic messages in diagnostics float
-    -- LspDiagnosticsFloatingWarning       = { }, -- Used to color "Warning" diagnostic messages in diagnostics float
-    -- LspDiagnosticsFloatingInformation   = { }, -- Used to color "Information" diagnostic messages in diagnostics float
-    -- LspDiagnosticsFloatingHint          = { }, -- Used to color "Hint" diagnostic messages in diagnostics float
-
-    -- LspDiagnosticsSignError             = { }, -- Used for "Error" signs in sign column
-    -- LspDiagnosticsSignWarning           = { }, -- Used for "Warning" signs in sign column
-    -- LspDiagnosticsSignInformation       = { }, -- Used for "Information" signs in sign column
-    -- LspDiagnosticsSignHint              = { }, -- Used for "Hint" signs in sign column
 
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
   }
+
+  if not vim.diagnostic then
+    local severity_map = {
+      Error = "Error",
+      Warn = "Warning",
+      Info = "Information",
+      Hint = "Hint",
+    }
+    local types = { "Default", "VirtualText", "Underline" }
+    for _, type in ipairs(types) do
+      for snew, sold in pairs(severity_map) do
+        theme.base["LspDiagnostics" .. type .. sold] = {
+          link = "Diagnostic" .. (type == "Default" and "" or type) .. snew,
+        }
+      end
+    end
+  end
 
   theme.plugins = {
 
@@ -320,10 +312,6 @@ function M.setup(config)
     NvimTreeGitNew = { fg = c.git.add },
     NvimTreeGitDeleted = { fg = c.git.delete },
     NvimTreeSpecialFile = { fg = c.purple, style = "underline" },
-    LspDiagnosticsError = { fg = c.error },
-    LspDiagnosticsWarning = { fg = c.warning },
-    LspDiagnosticsInformation = { fg = c.info },
-    LspDiagnosticsHint = { fg = c.hint },
     NvimTreeIndentMarker = { fg = c.fg_gutter },
     NvimTreeImageFile = { fg = c.fg_sidebar },
     NvimTreeSymlink = { fg = c.blue },
