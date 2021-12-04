@@ -417,17 +417,32 @@ function M.setup(config)
 
     CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
     CmpItemMenu = { fg = c.comment, bg = c.none },
+      
+    CmpItemKindKeyword = { fg = c.cyan, bg = c.none },
 
     CmpItemKindVariable = { fg = c.magenta, bg = c.none },
+    CmpItemKindConstant = { fg = c.magenta, bg = c.none },
+    CmpItemKindReference = { fg = c.magenta, bg = c.none },
+    CmpItemKindValue = { fg = c.magenta, bg = c.none },
 
     CmpItemKindFunction = { fg = c.blue, bg = c.none },
     CmpItemKindMethod = { fg = c.blue, bg = c.none },
+    CmpItemKindConstructor = { fg = c.blue, bg = c.none },
 
     CmpItemKindClass = { fg = c.orange, bg = c.none },
     CmpItemKindInterface = { fg = c.orange, bg = c.none },
+    CmpItemKindStruct = { fg = c.orange, bg = c.none },
+    CmpItemKindEvent = { fg = c.orange, bg = c.none },
+    CmpItemKindEnum = { fg = c.orange, bg = c.none },
+    CmpItemKindUnit = { fg = c.orange, bg = c.none },
+      
+    CmpItemKindModule = { fg = c.yellow, bg = c.none },
 
     CmpItemKindProperty = { fg = c.green1, bg = c.none },
     CmpItemKindField = { fg = c.green1, bg = c.none },
+    CmpItemKindTypeParameter = { fg = c.green1, bg = c.none },
+    CmpItemKindEnumMember = { fg = c.green1, bg = c.none },
+    CmpItemKindOperator = { fg = c.green1, bg = c.none },
     CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
   }
 
