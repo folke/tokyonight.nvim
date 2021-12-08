@@ -21,8 +21,8 @@ set -g status-right-length "100"
 set -g status-left-style NONE
 set -g status-right-style NONE
 
-set -g status-left "#[fg=#e9e9ed,bg=#2e7de9,bold] #S #[fg=#2e7de9,bg=#d4d6e4,nobold,nounderscore,noitalics]"
-set -g status-right "#[fg=#d4d6e4,bg=#d4d6e4,nobold,nounderscore,noitalics]#[fg=#2e7de9,bg=#d4d6e4] #{prefix_highlight} #[fg=#a8aecb,bg=#d4d6e4,nobold,nounderscore,noitalics]#[fg=#2e7de9,bg=#a8aecb] %Y-%m-%d  %I:%M %p #[fg=#2e7de9,bg=#a8aecb,nobold,nounderscore,noitalics]#[fg=#e9e9ed,bg=#2e7de9,bold] #h "
+set -g status-left "#[fg=#e9e9ed,bg=#2e7de9,bold]  #S #[fg=#2e7de9,bg=#d4d6e4,nobold,nounderscore,noitalics]"
+set -g status-right "#[fg=#d4d6e4,bg=#d4d6e4,nobold,nounderscore,noitalics]#[fg=#2e7de9,bg=#d4d6e4] #{prefix_highlight} #[fg=#a8aecb,bg=#d4d6e4,nobold,nounderscore,noitalics]#[fg=#2e7de9,bg=#a8aecb]  %Y-%m-%d   %I:%M %p #[fg=#2e7de9,bg=#a8aecb,nobold,nounderscore,noitalics]#[fg=#e9e9ed,bg=#2e7de9,bold] #h "
 
 setw -g window-status-activity-style "underscore,fg=#6172b0,bg=#d4d6e4"
 setw -g window-status-separator ""
