@@ -405,6 +405,18 @@ function M.setup(config)
     HopUnmatched = { fg = c.dark3 },
 
     LightspeedGreyWash = { fg = c.dark3 },
+    -- LightspeedCursor = { link = "Cursor" },
+    LightspeedLabel = { fg = c.magenta2, style = "bold,underline" },
+    LightspeedLabelDistant = { fg = c.green1, style = "bold,underline" },
+    LightspeedLabelDistantOverlapped = { fg = c.green2, style = "underline" },
+    LightspeedLabelOverlapped = { fg = c.magenta2, style = "underline" },
+    LightspeedMaskedChar = { fg = c.orange },
+    LightspeedOneCharMatch = { bg = c.magenta2, fg = c.fg, style = "bold" },
+    LightspeedPendingOpArea = { bg = c.magenta2, fg = c.fg },
+    LightspeedShortcut = { bg = c.magenta2, fg = c.fg, style = "bold,underline" },
+    -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
+    -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
+    LightspeedUnlabeledMatch = { fg = c.blue2, style = "bold" },
 
     -- Cmp
     CmpDocumentation = { fg = c.fg, bg = c.bg_float },
@@ -417,7 +429,7 @@ function M.setup(config)
 
     CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
     CmpItemMenu = { fg = c.comment, bg = c.none },
-      
+
     CmpItemKindKeyword = { fg = c.cyan, bg = c.none },
 
     CmpItemKindVariable = { fg = c.magenta, bg = c.none },
@@ -435,7 +447,7 @@ function M.setup(config)
     CmpItemKindEvent = { fg = c.orange, bg = c.none },
     CmpItemKindEnum = { fg = c.orange, bg = c.none },
     CmpItemKindUnit = { fg = c.orange, bg = c.none },
-      
+
     CmpItemKindModule = { fg = c.yellow, bg = c.none },
 
     CmpItemKindProperty = { fg = c.green1, bg = c.none },
