@@ -461,7 +461,7 @@ function M.setup(config)
   theme.defer = {}
 
   if config.hideInactiveStatusline then
-    local inactive = { style = "underline", bg = c.bg, fg = c.bg, sp = c.border }
+    local inactive = { style = "underline", bg = c.none, fg = c.bg, sp = c.border }
 
     -- StatusLineNC
     theme.base.StatusLineNC = inactive
