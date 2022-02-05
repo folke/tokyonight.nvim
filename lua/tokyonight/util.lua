@@ -32,7 +32,7 @@ function util.blend(fg, bg, alpha)
     return math.floor(math.min(math.max(0, ret), 255) + 0.5)
   end
 
-  return string.format("#%02X%02X%02X", blendChannel(1), blendChannel(2), blendChannel(3))
+  return string.format("#%02x%02x%02x", blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
 function util.darken(hex, amount, bg)
