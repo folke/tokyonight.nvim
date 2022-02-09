@@ -176,7 +176,7 @@ You can easily use the color palette for other plugins inside your Neovim config
 
 ```lua
 local colors = require("tokyonight.colors").setup({}) -- pass in any of the config options as explained above
-local utils = requires("tokyonight.util")
+local util = requires("tokyonight.util")
 
 aplugin.background = colors.bg_dark
 aplugin.my_error = util.brighten(colors.red1, 0.3)
