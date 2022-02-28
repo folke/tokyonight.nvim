@@ -7,8 +7,6 @@ function M.generate(colors)
   local winterm = util.template(
 [[
 {
-    // upstream: ${_upstrean_url}
-
     "name" : "${_style_name}",
 
     "cursorColor": "${fg}",
