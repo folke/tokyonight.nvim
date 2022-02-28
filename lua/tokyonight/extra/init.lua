@@ -18,6 +18,7 @@ local extras = {
 	tmux = "tmux",
 	xresources = "Xresources",
 	xfceterm = "theme",
+  windowsterminal = ".json",
 }
 -- map of style to style name
 local styles = { 
