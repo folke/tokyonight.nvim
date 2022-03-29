@@ -317,7 +317,7 @@ function M.setup(config)
     NvimTreeIndentMarker = { fg = c.fg_gutter },
     NvimTreeImageFile = { fg = c.fg_sidebar },
     NvimTreeSymlink = { fg = c.blue },
-    NvimTreeFolderIcon = { bg = c.none, fg = c.yellow }
+    NvimTreeFolderIcon = { bg = c.none, fg = c.yellow },
     -- NvimTreeFolderName= { fg = c.fg_float },
 
     -- Fern
