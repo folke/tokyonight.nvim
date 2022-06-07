@@ -30,6 +30,7 @@ config = {
   dev = opt("dev", false),
   darkFloat = opt("dark_float", true),
   darkSidebar = opt("dark_sidebar", true),
+  darkInactive = opt("dark_inactive", false),
   transparentSidebar = opt("transparent_sidebar", false),
   transform_colors = false,
   lualineBold = opt("lualine_bold", false),

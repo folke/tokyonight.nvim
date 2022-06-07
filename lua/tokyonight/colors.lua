@@ -74,9 +74,10 @@ function M.setup(config)
   colors.bg_popup = colors.bg_dark
   colors.bg_statusline = colors.bg_dark
 
-  -- Sidebar and Floats are configurable
+  -- Sidebar, Floats and Inactive Buffers are configurable
   colors.bg_sidebar = (config.transparentSidebar and colors.none) or config.darkSidebar and colors.bg_dark or colors.bg
   colors.bg_float = config.darkFloat and colors.bg_dark or colors.bg
+  colors.bg_inactive = config.darkInactive and colors.bg_dark or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.7)
   colors.bg_search = colors.blue0

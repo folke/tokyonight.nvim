@@ -121,6 +121,7 @@ The **day** style will be used if:
 | tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
 | tokyonight_transparent_sidebar      | `false`   | Sidebar like windows like `NvimTree` get a transparent background                                                                                               |
 | tokyonight_dark_sidebar             | `true`    | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
+| tokyonight_dark_inactive            | `false`   | Inactive/Unfocused buffers get a darker background                                                                                                              |
 | tokyonight_dark_float               | `true`    | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 | tokyonight_colors                   | `{}`      | You can override specific color groups to use other groups or a hex color                                                                                       |
 | tokyonight_day_brightness           | `0.3`     | Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors                                                  |
