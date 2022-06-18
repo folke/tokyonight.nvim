@@ -4,7 +4,7 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  local sh = util.template(
+  local zsh = util.template(
     [[
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=fg:${fg},bg:${bg},hl:${orange}
@@ -15,7 +15,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     colors
   )
 
-  return sh
+  return zsh
 end
 
 return M
