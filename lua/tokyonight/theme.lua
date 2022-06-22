@@ -264,6 +264,15 @@ function M.setup(config)
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
 
+    -- ts-rainbow
+    rainbowcol1 = { fg = c.dark3 },
+    rainbowcol2 = { fg = c.yellow },
+    rainbowcol3 = { fg = c.blue2 },
+    rainbowcol4 = { fg = c.orange },
+    rainbowcol5 = { fg = c.purple },
+    rainbowcol6 = { fg = c.green1 },
+    rainbowcol7 = { fg = c.red },
+      
     -- LspTrouble
     LspTroubleText = { fg = c.fg_dark },
     LspTroubleCount = { fg = c.magenta, bg = c.fg_gutter },
