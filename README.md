@@ -43,6 +43,7 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 - [vim-sneak](https://github.com/justinmk/vim-sneak)
 - [Fern](https://github.com/lambdalisue/fern.vim)
 - [Barbar](https://github.com/romgrk/barbar.nvim)
+- [Mini](https://github.com/echasnovski/mini.nvim)
 
 ## ⚡️ Requirements
 
