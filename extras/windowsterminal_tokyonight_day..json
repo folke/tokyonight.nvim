@@ -1,0 +1,26 @@
+{
+    "name" : "Tokyo Night Day",
+
+    "cursorColor": "#3760bf",
+    "selectionBackground": "#99a7df",
+
+    "background" : "#e1e2e7",
+    "foreground" : "#3760bf",
+
+    "black" : "#e9e9ed",
+    "blue" : "#2e7de9",
+    "cyan" : "#007197",
+    "green" : "#587539",
+    "purple" : "#9854f1",
+    "red" : "#f52a65",
+    "white" : "#3760bf",
+    "yellow" : "#8c6c3e",
+    "brightBlack" : "#a1a6c5",
+    "brightBlue" : "#2e7de9",
+    "brightCyan" : "#007197",
+    "brightGreen" : "#587539",
+    "brightPurple" : "#9854f1",
+    "brightRed" : "#f52a65",
+    "brightWhite" : "#3760bf",
+    "brightYellow" : "#8c6c3e"
+}
