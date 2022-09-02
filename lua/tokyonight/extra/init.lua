@@ -18,6 +18,7 @@ local extras = {
 	tmux = "tmux",
 	xresources = "Xresources",
 	xfceterm = "theme",
+	foot = "ini",
 	tilix = "json",
 }
 -- map of style to style name
