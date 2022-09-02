@@ -48,7 +48,7 @@ function M.setup(config)
     NonText = { fg = c.dark3 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = c.fg, bg = config.transparent and c.none or c.bg }, -- normal text
     NormalNC = { fg = c.fg, bg = config.transparent and c.none or c.bg }, -- normal text in non-current windows
-    NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in non-current windows
+    NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.fg, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
     Pmenu = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
@@ -272,6 +272,9 @@ function M.setup(config)
     -- Illuminate
     illuminatedWord = { bg = c.fg_gutter },
     illuminatedCurWord = { bg = c.fg_gutter },
+    IlluminatedWordText = { bg = c.fg_gutter },
+    IlluminatedWordRead = { bg = c.fg_gutter },
+    IlluminatedWordWrite = { bg = c.fg_gutter },
 
     -- diff
     diffAdded = { fg = c.git.add },
@@ -303,8 +306,8 @@ function M.setup(config)
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
-    TelescopeNormal = { fg = c.fg, bg = c.bg_float },
+    TelescopeBorder = { fg = c.border_highlight, bg = config.transparent and c.bg_float or c.none },
+    TelescopeNormal = { fg = c.fg, bg = config.transparent and c.bg_float or c.none },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
@@ -313,10 +316,12 @@ function M.setup(config)
     NvimTreeGitDirty = { fg = c.git.change },
     NvimTreeGitNew = { fg = c.git.add },
     NvimTreeGitDeleted = { fg = c.git.delete },
+    NvimTreeOpenedFile  = { bg = c.bg_highlight },
     NvimTreeSpecialFile = { fg = c.purple, style = "underline" },
     NvimTreeIndentMarker = { fg = c.fg_gutter },
     NvimTreeImageFile = { fg = c.fg_sidebar },
     NvimTreeSymlink = { fg = c.blue },
+    NvimTreeFolderIcon = { bg = c.none, fg = c.yellow },
     -- NvimTreeFolderName= { fg = c.fg_float },
 
     -- Fern
@@ -457,6 +462,57 @@ function M.setup(config)
     CmpItemKindEnumMember = { fg = c.green1, bg = c.none },
     CmpItemKindOperator = { fg = c.green1, bg = c.none },
     CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
+
+    -- Mini
+    MiniCompletionActiveParameter = { style = "underline" },
+
+    MiniCursorword = { bg = c.fg_gutter },
+    MiniCursorwordCurrent = { bg = c.fg_gutter },
+
+    MiniIndentscopeSymbol = { fg = c.blue1 },
+    MiniIndentscopePrefix = { style = "nocombine" }, -- Make it invisible
+
+    MiniJump = { fg = c.bg_highlight, bg = c.magenta },
+
+    MiniJump2dSpot = { fg = c.magenta2, style = "bold,nocombine" },
+
+    MiniStarterCurrent = { style = "nocombine" },
+    MiniStarterFooter = { fg = c.yellow, style = "italic" },
+    MiniStarterHeader = { fg = c.blue },
+    MiniStarterInactive = { fg = c.comment, style = config.commentStyle },
+    MiniStarterItem = { fg = c.fg, bg = config.transparent and c.none or c.bg },
+    MiniStarterItemBullet = { fg = c.border_highlight },
+    MiniStarterItemPrefix = { fg = c.warning },
+    MiniStarterSection = {  fg = c.blue1 },
+    MiniStarterQuery = { fg = c.info },
+
+    MiniStatuslineDevinfo = { fg = c.fg_dark, bg = c.bg_highlight },
+    MiniStatuslineFileinfo = { fg = c.fg_dark, bg = c.bg_highlight },
+    MiniStatuslineFilename = { fg = c.fg_dark, bg = c.fg_gutter },
+    MiniStatuslineInactive = { fg = c.blue, bg = c.bg_statusline },
+    MiniStatuslineModeCommand = { fg = c.black, bg = c.yellow, style = "bold" },
+    MiniStatuslineModeInsert = { fg = c.black, bg = c.green, style = "bold" },
+    MiniStatuslineModeNormal = { fg = c.black, bg = c.blue, style = "bold" },
+    MiniStatuslineModeOther = { fg = c.black, bg = c.teal, style = "bold" },
+    MiniStatuslineModeReplace = { fg = c.black, bg = c.red, style = "bold" },
+    MiniStatuslineModeVisual = { fg = c.black, bg = c.magenta, style = "bold" },
+
+    MiniSurround = { bg = c.orange, fg = c.black },
+
+    MiniTablineCurrent = { fg = c.fg, bg = c.fg_gutter },
+    MiniTablineFill = { bg = c.black },
+    MiniTablineHidden = { fg = c.dark5, bg = c.bg_statusline },
+    MiniTablineModifiedCurrent = { fg = c.warning, bg = c.fg_gutter },
+    MiniTablineModifiedHidden = { bg = c.bg_statusline, fg = util.darken(c.warning, 0.7) },
+    MiniTablineModifiedVisible = { fg = c.warning, bg = c.bg_statusline },
+    MiniTablineTabpagesection = { bg = c.bg_statusline, fg = c.none },
+    MiniTablineVisible = { fg = c.fg, bg = c.bg_statusline },
+
+    MiniTestEmphasis = { style = "bold" },
+    MiniTestFail = { fg = c.red, style = "bold"},
+    MiniTestPass = { fg = c.green, style = "bold"},
+
+    MiniTrailspace = { bg = c.red },
   }
 
   theme.defer = {}
@@ -471,6 +527,9 @@ function M.setup(config)
     for _, section in ipairs({ "a", "b", "c" }) do
       theme.defer["lualine_" .. section .. "_inactive"] = inactive
     end
+
+    -- mini.statusline
+    theme.plugins.MiniStatuslineInactive = inactive
   end
 
   return theme
