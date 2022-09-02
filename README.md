@@ -106,8 +106,8 @@ The theme comes in three styles, `storm`, a darker variant `night` and `day`.
 
 The **day** style will be used if:
 
-- `vim.g.tokyonight_style == "day"`
-- or `vim.o.background == "light"`
+- `vim.g.tokyonight_style = "day"`
+- or `vim.o.background = "light"`
 
 | Option                              | Default   | Description                                                                                                                                                     |
 | ----------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
