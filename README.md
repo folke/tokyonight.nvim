@@ -43,6 +43,7 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 - [vim-sneak](https://github.com/justinmk/vim-sneak)
 - [Fern](https://github.com/lambdalisue/fern.vim)
 - [Barbar](https://github.com/romgrk/barbar.nvim)
+- [Mini](https://github.com/echasnovski/mini.nvim)
 
 ## ⚡️ Requirements
 
@@ -105,8 +106,8 @@ The theme comes in three styles, `storm`, a darker variant `night` and `day`.
 
 The **day** style will be used if:
 
-- `vim.g.tokyonight_style == "day"`
-- or `vim.o.background == "light"`
+- `vim.g.tokyonight_style = "day"`
+- or `vim.o.background = "light"`
 
 | Option                              | Default   | Description                                                                                                                                                     |
 | ----------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -168,7 +169,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🍭 Extras
 
-Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm** and **iTerm** can be found in [extras](extras/). To use them, refer to their respective documentation.
+Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm**, **iTerm** and **foot** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
 
@@ -176,7 +177,7 @@ You can easily use the color palette for other plugins inside your Neovim config
 
 ```lua
 local colors = require("tokyonight.colors").setup({}) -- pass in any of the config options as explained above
-local util = requires("tokyonight.util")
+local util = require("tokyonight.util")
 
 aplugin.background = colors.bg_dark
 aplugin.my_error = util.brighten(colors.red1, 0.3)
