@@ -1,0 +1,26 @@
+{
+    "name": "Tokyo Night Day",
+    "comment": "",
+    "use-theme-colors": false,
+    "foreground-color": "#3760bf",
+    "background-color": "#e1e2e7",
+    "palette": [
+        "#e9e9ed",
+        "#f52a65",
+        "#587539",
+        "#8c6c3e",
+        "#2e7de9",
+        "#9854f1",
+        "#007197",
+        "#6172b0",
+        "#a1a6c5",
+        "#f52a65",
+        "#587539",
+        "#8c6c3e",
+        "#2e7de9",
+        "#9854f1",
+        "#007197",
+        "#3760bf"
+    ]
+}
+  
