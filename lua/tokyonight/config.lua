@@ -1,6 +1,3 @@
----@class Config
-local config
-
 -- shim vim for kitty and other generators
 vim = vim or { g = {}, o = {} }
 
@@ -15,7 +12,8 @@ local function opt(key, default)
   return vim.g[key]
 end
 
-config = {
+---@class Config
+local config = {
   style = opt("style", "storm"),
   dayBrightness = opt("day_brightness", 0.3),
   transparent = opt("transparent", false),
@@ -32,6 +30,7 @@ config = {
   darkSidebar = opt("dark_sidebar", true),
   transparentSidebar = opt("transparent_sidebar", false),
   transform_colors = false,
+  borderlessTelescope = opt("borderless_telescope", true),
   lualineBold = opt("lualine_bold", false),
 }
 

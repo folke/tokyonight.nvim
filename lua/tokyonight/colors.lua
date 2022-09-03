@@ -9,9 +9,7 @@ function M.setup(config)
 
   -- Color Palette
   ---@class ColorScheme
-  local colors = {}
-
-  colors = {
+  local colors = {
     none = "NONE",
     bg_dark = "#1f2335",
     bg = "#24283b",

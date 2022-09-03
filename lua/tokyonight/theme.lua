@@ -12,6 +12,7 @@ function M.setup(config)
   local theme = {}
   theme.config = config
   theme.colors = colors.setup(config)
+
   local c = theme.colors
 
   theme.base = {
