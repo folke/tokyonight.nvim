@@ -272,7 +272,7 @@ function M.setup(config)
     rainbowcol5 = { fg = c.purple },
     rainbowcol6 = { fg = c.green1 },
     rainbowcol7 = { fg = c.red },
-      
+
     -- LspTrouble
     LspTroubleText = { fg = c.fg_dark },
     LspTroubleCount = { fg = c.magenta, bg = c.fg_gutter },
@@ -325,7 +325,7 @@ function M.setup(config)
     NvimTreeGitDirty = { fg = c.git.change },
     NvimTreeGitNew = { fg = c.git.add },
     NvimTreeGitDeleted = { fg = c.git.delete },
-    NvimTreeOpenedFile  = { bg = c.bg_highlight },
+    NvimTreeOpenedFile = { bg = c.bg_highlight },
     NvimTreeSpecialFile = { fg = c.purple, style = "underline" },
     NvimTreeIndentMarker = { fg = c.fg_gutter },
     NvimTreeImageFile = { fg = c.fg_sidebar },
@@ -473,25 +473,25 @@ function M.setup(config)
     CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
 
     -- Scrollbar
-    ScrollbarHandle = { fg = c.none, bg = c.bg_highlight  },
+    ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
 
-    ScrollbarSearchHandle = { fg = c.orange, bg = c.bg_highlight  },
-    ScrollbarSearch = { fg = c.orange, bg = c.none  },
+    ScrollbarSearchHandle = { fg = c.orange, bg = c.bg_highlight },
+    ScrollbarSearch = { fg = c.orange, bg = c.none },
 
-    ScrollbarErrorHandle = { fg = c.error, bg = c.bg_highlight  },
-    ScrollbarError = { fg = c.error, bg = c.none  },
+    ScrollbarErrorHandle = { fg = c.error, bg = c.bg_highlight },
+    ScrollbarError = { fg = c.error, bg = c.none },
 
-    ScrollbarWarnHandle = { fg = c.warning, bg = c.bg_highlight  },
-    ScrollbarWarn = { fg = c.warning, bg = c.none  },
+    ScrollbarWarnHandle = { fg = c.warning, bg = c.bg_highlight },
+    ScrollbarWarn = { fg = c.warning, bg = c.none },
 
-    ScrollbarInfoHandle = { fg = c.info, bg = c.bg_highlight  },
-    ScrollbarInfo = { fg = c.info, bg = c.none  },
+    ScrollbarInfoHandle = { fg = c.info, bg = c.bg_highlight },
+    ScrollbarInfo = { fg = c.info, bg = c.none },
 
-    ScrollbarHintHandle = { fg = c.hint, bg = c.bg_highlight  },
-    ScrollbarHint = { fg = c.hint, bg = c.none  },
+    ScrollbarHintHandle = { fg = c.hint, bg = c.bg_highlight },
+    ScrollbarHint = { fg = c.hint, bg = c.none },
 
-    ScrollbarMiscHandle = { fg = c.purple, bg = c.bg_highlight  },
-    ScrollbarMisc = { fg = c.purple, bg = c.none  },
+    ScrollbarMiscHandle = { fg = c.purple, bg = c.bg_highlight },
+    ScrollbarMisc = { fg = c.purple, bg = c.none },
 
     -- Mini
     MiniCompletionActiveParameter = { style = "underline" },
@@ -513,7 +513,7 @@ function M.setup(config)
     MiniStarterItem = { fg = c.fg, bg = config.transparent and c.none or c.bg },
     MiniStarterItemBullet = { fg = c.border_highlight },
     MiniStarterItemPrefix = { fg = c.warning },
-    MiniStarterSection = {  fg = c.blue1 },
+    MiniStarterSection = { fg = c.blue1 },
     MiniStarterQuery = { fg = c.info },
 
     MiniStatuslineDevinfo = { fg = c.fg_dark, bg = c.bg_highlight },
@@ -539,8 +539,8 @@ function M.setup(config)
     MiniTablineVisible = { fg = c.fg, bg = c.bg_statusline },
 
     MiniTestEmphasis = { style = "bold" },
-    MiniTestFail = { fg = c.red, style = "bold"},
-    MiniTestPass = { fg = c.green, style = "bold"},
+    MiniTestFail = { fg = c.red, style = "bold" },
+    MiniTestPass = { fg = c.green, style = "bold" },
 
     MiniTrailspace = { bg = c.red },
   }
