@@ -30,7 +30,6 @@ local config = {
   darkSidebar = opt("dark_sidebar", true),
   transparentSidebar = opt("transparent_sidebar", false),
   transform_colors = false,
-  borderlessTelescope = opt("borderless_telescope", true),
   lualineBold = opt("lualine_bold", false),
 }
 
