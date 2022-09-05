@@ -1,12 +1,8 @@
-local hsluv = require("tokyonight.hsluv")
+local M = {}
 
-local util = {}
-
-util.colorsUsed = {}
-
-util.bg = "#000000"
-util.fg = "#ffffff"
-util.day_brightness = 0.3
+M.bg = "#000000"
+M.fg = "#ffffff"
+M.day_brightness = 0.3
 
 ---@param c  string
 local function hexToRgb(c)
@@ -29,83 +25,38 @@ function M.blend(fg, bg, alpha)
   return string.format("#%02x%02x%02x", blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
-function util.darken(hex, amount, bg)
-  return util.blend(hex, bg or util.bg, math.abs(amount))
+function M.darken(hex, amount, bg)
+  return M.blend(hex, bg or M.bg, math.abs(amount))
 end
-function util.lighten(hex, amount, fg)
-  return util.blend(hex, fg or util.fg, math.abs(amount))
-end
-
-function util.brighten(color, percentage)
-  local hsl = hsluv.hex_to_hsluv(color)
-  local larpSpace = 100 - hsl[3]
-  if percentage < 0 then
-    larpSpace = hsl[3]
-  end
-  hsl[3] = hsl[3] + larpSpace * percentage
-  return hsluv.hsluv_to_hex(hsl)
+function M.lighten(hex, amount, fg)
+  return M.blend(hex, fg or M.fg, math.abs(amount))
 end
 
-function util.invert_color(color)
+function M.invert_color(color)
+  local hsluv = require("tokyonight.hsluv")
   if color ~= "NONE" then
     local hsl = hsluv.hex_to_hsluv(color)
     hsl[3] = 100 - hsl[3]
     if hsl[3] < 40 then
-      hsl[3] = hsl[3] + (100 - hsl[3]) * util.day_brightness
+      hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
     end
     return hsluv.hsluv_to_hex(hsl)
   end
   return color
 end
 
--- local ns = vim.api.nvim_create_namespace("tokyonight")
-function util.highlight(group, color)
-  if color.fg then
-    util.colorsUsed[color.fg] = true
-  end
-  if color.bg then
-    util.colorsUsed[color.bg] = true
-  end
-  if color.sp then
-    util.colorsUsed[color.sp] = true
-  end
-
-  local style = color.style and "gui=" .. color.style or "gui=NONE"
-  local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-  local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
-  local sp = color.sp and "guisp=" .. color.sp or ""
-
-  local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
-
-  if color.link then
-    vim.cmd("highlight! link " .. group .. " " .. color.link)
-  else
-    -- local data = {}
-    -- if color.fg then data.foreground = color.fg end
-    -- if color.bg then data.background = color.bg end
-    -- if color.sp then data.special = color.sp end
-    -- if color.style then data[color.style] = true end
-    -- vim.api.nvim_set_hl(ns, group, data)
-    vim.cmd(hl)
-  end
-end
-
-function util.debug(colors)
-  colors = colors or require("tokyonight.colors")
-  -- Dump unused colors
-  for name, color in pairs(colors) do
-    if type(color) == "table" then
-      util.debug(color)
-    else
-      if util.colorsUsed[color] == nil then
-        print("not used: " .. name .. " : " .. color)
-      end
+function M.highlight(group, color)
+  local hl = { fg = color.fg, bg = color.bg, sp = color.sp, link = color.link }
+  if color.style and color.style:lower() ~= "none" then
+    for s in string.gmatch(color.style, "([^,]+)") do
+      hl[s] = true
     end
   end
+  vim.api.nvim_set_hl(0, group, hl)
 end
 
 --- Delete the autocmds when the theme changes to something else
-function util.onColorScheme()
+function M.onColorScheme()
   if vim.g.colors_name ~= "tokyonight" then
     vim.cmd([[autocmd! TokyoNight]])
     vim.cmd([[augroup! TokyoNight]])
@@ -113,7 +64,7 @@ function util.onColorScheme()
 end
 
 ---@param config Config
-function util.autocmds(config)
+function M.autocmds(config)
   vim.cmd([[augroup TokyoNight]])
   vim.cmd([[  autocmd!]])
   vim.cmd([[  autocmd ColorScheme * lua require("tokyonight.util").onColorScheme()]])
@@ -136,20 +87,20 @@ end
 --
 ---@param str string template string
 ---@param table table key value pairs to replace in the string
-function util.template(str, table)
+function M.template(str, table)
   return (str:gsub("($%b{})", function(w)
     return table[w:sub(3, -2)] or w
   end))
 end
 
-function util.syntax(syntax)
+function M.syntax(syntax)
   for group, colors in pairs(syntax) do
-    util.highlight(group, colors)
+    M.highlight(group, colors)
   end
 end
 
 ---@param colors ColorScheme
-function util.terminal(colors)
+function M.terminal(colors)
   -- dark
   vim.g.terminal_color_0 = colors.black
   vim.g.terminal_color_8 = colors.terminal_black
@@ -179,33 +130,33 @@ function util.terminal(colors)
 end
 
 ---@param colors ColorScheme
-function util.invert_colors(colors)
+function M.invert_colors(colors)
   if type(colors) == "string" then
     ---@diagnostic disable-next-line: return-type-mismatch
-    return util.invert_color(colors)
+    return M.invert_color(colors)
   end
   for key, value in pairs(colors) do
-    colors[key] = util.invert_colors(value)
+    colors[key] = M.invert_colors(value)
   end
 end
 
 ---@param hls Highlights
-function util.invert_highlights(hls)
+function M.invert_highlights(hls)
   for _, hl in pairs(hls) do
     if hl.fg then
-      hl.fg = util.invert_color(hl.fg)
+      hl.fg = M.invert_color(hl.fg)
     end
     if hl.bg then
-      hl.bg = util.invert_color(hl.bg)
+      hl.bg = M.invert_color(hl.bg)
     end
     if hl.sp then
-      hl.sp = util.invert_color(hl.sp)
+      hl.sp = M.invert_color(hl.sp)
     end
   end
 end
 
 ---@param theme Theme
-function util.load(theme)
+function M.load(theme)
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
     vim.cmd("hi clear")
@@ -215,22 +166,24 @@ function util.load(theme)
   vim.g.colors_name = "tokyonight"
   -- vim.api.nvim__set_hl_ns(ns)
   -- load base theme
-  util.syntax(theme.base)
-  util.syntax(theme.plugins)
+  M.syntax(theme.base)
+  M.syntax(theme.plugins)
+
+  -- vim.api.nvim_set_hl_ns(M.ns)
   if theme.config.terminalColors then
-    util.terminal(theme.colors)
+    M.terminal(theme.colors)
   end
 
-  util.autocmds(theme.config)
+  M.autocmds(theme.config)
 
   vim.defer_fn(function()
-    util.syntax(theme.defer)
+    M.syntax(theme.defer)
   end, 100)
 end
 
 ---@param config Config
 ---@param colors ColorScheme
-function util.color_overrides(colors, config)
+function M.color_overrides(colors, config)
   if type(config.colors) == "table" then
     for key, value in pairs(config.colors) do
       if not colors[key] then
@@ -239,7 +192,7 @@ function util.color_overrides(colors, config)
 
       -- Patch: https://github.com/ful1e5/onedark.nvim/issues/6
       if type(colors[key]) == "table" then
-        util.color_overrides(colors[key], { colors = value })
+        M.color_overrides(colors[key], { colors = value })
       else
         if value:lower() == "none" then
           -- set to none
@@ -259,4 +212,4 @@ function util.color_overrides(colors, config)
   end
 end
 
-return util
+return M
