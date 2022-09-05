@@ -411,6 +411,11 @@ function M.setup()
     HopNextKey2 = { fg = util.darken(c.blue2, 0.3) },
     HopUnmatched = { fg = c.dark3 },
 
+    LeapMatch = { bg = c.magenta2, fg = c.fg, style = "bold" },
+    LeapLabelPrimary = { fg = c.magenta2, style = "bold" },
+    LeapLabelSecondary = { fg = c.green1, style = "bold" },
+    LeapBackdrop = { fg = c.dark3 },
+
     LightspeedGreyWash = { fg = c.dark3 },
     -- LightspeedCursor = { link = "Cursor" },
     LightspeedLabel = { fg = c.magenta2, style = "bold,underline" },
