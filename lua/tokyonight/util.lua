@@ -184,17 +184,29 @@ function util.terminal(colors)
 end
 
 ---@param colors ColorScheme
----@return ColorScheme
 function util.invert_colors(colors)
   if type(colors) == "string" then
     ---@diagnostic disable-next-line: return-type-mismatch
     return util.invert_color(colors)
   end
-  local ret = {}
   for key, value in pairs(colors) do
-    ret[key] = util.invert_colors(value)
+    colors[key] = util.invert_colors(value)
   end
-  return ret
+end
+
+---@param hls Highlights
+function util.invert_highlights(hls)
+  for _, hl in pairs(hls) do
+    if hl.fg then
+      hl.fg = util.invert_color(hl.fg)
+    end
+    if hl.bg then
+      hl.bg = util.invert_color(hl.bg)
+    end
+    if hl.sp then
+      hl.sp = util.invert_color(hl.sp)
+    end
+  end
 end
 
 ---@param theme Theme
@@ -203,9 +215,6 @@ function util.load(theme)
   if vim.g.colors_name then
     vim.cmd("hi clear")
   end
-  -- if vim.fn.exists("syntax_on") then
-  --   vim.cmd("syntax reset")
-  -- end
 
   vim.o.termguicolors = true
   vim.g.colors_name = "tokyonight"

@@ -1,22 +1,31 @@
 local util = require("tokyonight.util")
 local colors = require("tokyonight.colors")
+local config = require("tokyonight.config").options
 
 local M = {}
+--
+---@class Highlight
+---@field fg string|nil
+---@field bg string|nil
+---@field sp string|nil
+---@field style string|nil
 
----@param config Config
+---@alias Highlights table<string,Highlight>
+
 ---@return Theme
-function M.setup(config)
-  config = config or require("tokyonight.config")
-
+function M.setup()
   ---@class Theme
-  local theme = {}
-  theme.config = config
-  theme.colors = colors.setup(config)
+  ---@field base Highlights
+  ---@field plugins Highlights
+  local theme = {
+    config = config,
+    colors = colors.setup(),
+  }
 
   local c = theme.colors
 
   theme.base = {
-    Comment = { fg = c.comment, style = config.commentStyle }, -- any comment
+    Comment = { fg = c.comment, style = config.styles.comments }, -- any comment
     ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
@@ -90,15 +99,15 @@ function M.setup(config)
     -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.magenta, style = config.variableStyle }, -- (preferred) any variable name
-    Function = { fg = c.blue, style = config.functionStyle }, -- function name (also: methods for classes)
+    Identifier = { fg = c.magenta, style = config.styles.variables }, -- (preferred) any variable name
+    Function = { fg = c.blue, style = config.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = c.magenta }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = { fg = c.blue5 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan, style = config.keywordStyle }, --  any other keyword
+    Keyword = { fg = c.cyan, style = config.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
@@ -227,8 +236,8 @@ function M.setup(config)
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { fg = c.magenta, style = config.functionStyle }, -- For keywords used to define a fuction.
+    TSKeyword = { fg = c.purple, style = config.styles.keywords }, -- For keywords that don't fall in previous categories.
+    TSKeywordFunction = { fg = c.magenta, style = config.styles.functions }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
@@ -248,7 +257,7 @@ function M.setup(config)
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
+    TSVariable = { style = config.styles.variables }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- TSTag               = { };    -- Tags like html tag names.
@@ -510,7 +519,7 @@ function M.setup(config)
     MiniStarterCurrent = { style = "nocombine" },
     MiniStarterFooter = { fg = c.yellow, style = "italic" },
     MiniStarterHeader = { fg = c.blue },
-    MiniStarterInactive = { fg = c.comment, style = config.commentStyle },
+    MiniStarterInactive = { fg = c.comment, style = config.styles.comments },
     MiniStarterItem = { fg = c.fg, bg = config.transparent and c.none or c.bg },
     MiniStarterItemBullet = { fg = c.border_highlight },
     MiniStarterItemPrefix = { fg = c.warning },
@@ -561,6 +570,12 @@ function M.setup(config)
 
     -- mini.statusline
     theme.plugins.MiniStatuslineInactive = inactive
+  end
+
+  if config.style == "day" or vim.o.background == "light" then
+    util.invert_colors(theme.colors)
+    util.invert_highlights(theme.base)
+    util.invert_highlights(theme.plugins)
   end
 
   return theme

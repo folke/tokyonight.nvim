@@ -1,11 +1,11 @@
 local util = require("tokyonight.util")
+local config = require("tokyonight.config").options
 
 local M = {}
 
----@param config Config
 ---@return ColorScheme
-function M.setup(config)
-  config = config or require("tokyonight.config")
+function M.setup(opts)
+  opts = opts or {}
 
   -- Color Palette
   ---@class ColorScheme
@@ -40,7 +40,7 @@ function M.setup(config)
     teal = "#1abc9c",
     red = "#f7768e",
     red1 = "#db4b4b",
-    git = { change = "#6183bb", add = "#449dab", delete = "#914c54", conflict = "#bb7a61" },
+    git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
   }
   if config.style == "night" or config.style == "day" or vim.o.background == "light" then
     colors.bg = "#1a1b26"
@@ -86,8 +86,8 @@ function M.setup(config)
 
   util.color_overrides(colors, config)
 
-  if config.style == "day" or vim.o.background == "light" then
-    return util.invert_colors(colors)
+  if opts.transform and (config.style == "day" or vim.o.background == "light") then
+    util.invert_colors(colors)
   end
 
   return colors
