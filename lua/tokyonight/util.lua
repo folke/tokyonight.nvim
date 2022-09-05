@@ -3,7 +3,6 @@ local hsluv = require("tokyonight.hsluv")
 local util = {}
 
 util.colorsUsed = {}
-util.colorCache = {}
 
 util.bg = "#000000"
 util.fg = "#ffffff"
@@ -52,7 +51,7 @@ function util.brighten(color, percentage)
   return hsluv.hsluv_to_hex(hsl)
 end
 
-function util.invertColor(color)
+function util.invert_color(color)
   if color ~= "NONE" then
     local hsl = hsluv.hex_to_hsluv(color)
     hsl[3] = 100 - hsl[3]
@@ -62,25 +61,6 @@ function util.invertColor(color)
     return hsluv.hsluv_to_hex(hsl)
   end
   return color
-end
-
-function util.randomColor(color)
-  if color ~= "NONE" then
-    local hsl = hsluv.hex_to_hsluv(color)
-    hsl[1] = math.random(1, 360)
-    return hsluv.hsluv_to_hex(hsl)
-  end
-  return color
-end
-
-function util.getColor(color)
-  if vim.o.background == "dark" then
-    return color
-  end
-  if not util.colorCache[color] then
-    util.colorCache[color] = util.invertColor(color)
-  end
-  return util.colorCache[color]
 end
 
 -- local ns = vim.api.nvim_create_namespace("tokyonight")
@@ -96,9 +76,9 @@ function util.highlight(group, color)
   end
 
   local style = color.style and "gui=" .. color.style or "gui=NONE"
-  local fg = color.fg and "guifg=" .. util.getColor(color.fg) or "guifg=NONE"
-  local bg = color.bg and "guibg=" .. util.getColor(color.bg) or "guibg=NONE"
-  local sp = color.sp and "guisp=" .. util.getColor(color.sp) or ""
+  local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
+  local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
+  local sp = color.sp and "guisp=" .. color.sp or ""
 
   local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
 
@@ -201,21 +181,18 @@ function util.terminal(colors)
 
   vim.g.terminal_color_6 = colors.cyan
   vim.g.terminal_color_14 = colors.cyan
-
-  if vim.o.background == "light" then
-    for i = 0, 15, 1 do
-      vim.g["terminal_color_" .. i] = util.getColor(vim.g["terminal_color_" .. i])
-    end
-  end
 end
 
-function util.light_colors(colors)
+---@param colors ColorScheme
+---@return ColorScheme
+function util.invert_colors(colors)
   if type(colors) == "string" then
-    return util.getColor(colors)
+    ---@diagnostic disable-next-line: return-type-mismatch
+    return util.invert_color(colors)
   end
   local ret = {}
   for key, value in pairs(colors) do
-    ret[key] = util.light_colors(value)
+    ret[key] = util.invert_colors(value)
   end
   return ret
 end
@@ -274,55 +251,6 @@ function util.color_overrides(colors, config)
           colors[key] = colors[value]
         end
       end
-    end
-  end
-end
-
-function util.light(brightness)
-  for hl_name, hl in pairs(vim.api.nvim__get_hl_defs(0)) do
-    local def = {}
-    for key, def_key in pairs({ foreground = "fg", background = "bg", special = "sp" }) do
-      if type(hl[key]) == "number" then
-        local hex = string.format("#%06x", hl[key])
-        local color = util.invertColor(hex)
-        if brightness then
-          color = util.brighten(hex, brightness)
-        end
-        table.insert(def, "gui" .. def_key .. "=" .. color)
-      end
-    end
-    if hl_name ~= "" and #def > 0 then
-      for _, style in pairs({ "bold", "italic", "underline", "undercurl", "reverse" }) do
-        if hl[style] then
-          table.insert(def, "gui=" .. style)
-        end
-      end
-
-      vim.cmd("highlight! " .. hl_name .. " " .. table.concat(def, " "))
-    end
-  end
-end
-
-function util.random()
-  local colors = {}
-  for hl_name, hl in pairs(vim.api.nvim__get_hl_defs(0)) do
-    local def = {}
-    for key, def_key in pairs({ foreground = "fg", background = "bg", special = "sp" }) do
-      if type(hl[key]) == "number" then
-        local hex = string.format("#%06x", hl[key])
-        local color = colors[hex] and colors[hex] or util.randomColor(hex)
-        colors[hex] = color
-        table.insert(def, "gui" .. def_key .. "=" .. color)
-      end
-    end
-    if hl_name ~= "" and #def > 0 then
-      for _, style in pairs({ "bold", "italic", "underline", "undercurl", "reverse" }) do
-        if hl[style] then
-          table.insert(def, "gui=" .. style)
-        end
-      end
-
-      vim.cmd("highlight! " .. hl_name .. " " .. table.concat(def, " "))
     end
   end
 end

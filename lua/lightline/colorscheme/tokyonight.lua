@@ -1,6 +1,5 @@
 local config = require("tokyonight.config")
 local colors = require("tokyonight.colors").setup(config)
-local util = require("tokyonight.util")
 
 local tokyonight = {}
 
@@ -36,16 +35,5 @@ tokyonight.tabline = {
   right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
   tabsel = { { colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg } },
 }
-
-if vim.o.background == "light" then
-  for _, mode in pairs(tokyonight) do
-    for _, section in pairs(mode) do
-      for _, subsection in pairs(section) do
-        subsection[1] = util.getColor(subsection[1])
-        subsection[2] = util.getColor(subsection[2])
-      end
-    end
-  end
-end
 
 return tokyonight

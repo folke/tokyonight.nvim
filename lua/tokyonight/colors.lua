@@ -87,8 +87,8 @@ function M.setup(config)
 
   util.color_overrides(colors, config)
 
-  if config.transform_colors and (config.style == "day" or vim.o.background == "light") then
-    return util.light_colors(colors)
+  if config.style == "day" or vim.o.background == "light" then
+    return util.invert_colors(colors)
   end
 
   return colors

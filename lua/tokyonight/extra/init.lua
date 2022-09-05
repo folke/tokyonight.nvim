@@ -33,7 +33,6 @@ for extra, ext in pairs(extras) do
   for style, style_name in pairs(styles) do
     config.style = style
     config = config or require("tokyonight.config")
-    config.transform_colors = true
     local colors = require("tokyonight.colors").setup(config)
     local fname = extra .. "_tokyonight_" .. style .. "." .. ext
     colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
