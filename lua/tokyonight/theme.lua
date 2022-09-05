@@ -464,6 +464,9 @@ function M.setup()
     CmpItemKindOperator = { fg = c.green1, bg = c.none },
     CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
 
+    IndentBlanklineChar = { fg = c.fg_gutter },
+    IndentBlanklineContextChar = { fg = c.purple },
+
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
 
