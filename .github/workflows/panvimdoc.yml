@@ -14,5 +14,5 @@ jobs:
           vimdoc: tokyonight
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Auto generate docs"
+          commit_message: "chore(docs): auto generate vimdoc"
           branch: ${{ github.head_ref }}
