@@ -148,8 +148,9 @@ require("tokyonight").setup({
 }
 ```
 
+Example for changing some settings and colors
+
 ```lua
--- Example config in Lua
 require("tokyonight").setup({
   -- use the night style
   style = "night",
@@ -164,9 +165,43 @@ require("tokyonight").setup({
     colors.error = "#ff0000"
   }
 })
+```
 
--- Load the colorscheme
-vim.cmd[[colorscheme tokyonight]]
+Example to make Telescope [borderless](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless)
+
+```lua
+require("tokyonight").setup({
+  on_highlights = function(hl, c)
+    local prompt = "#2d3149"
+    hl.TelescopeNormal = {
+      bg = c.bg_dark,
+      fg = c.fg_dark,
+    }
+    hl.TelescopeBorder = {
+      bg = c.bg_dark,
+      fg = c.bg_dark,
+    }
+    hl.TelescopePromptNormal = {
+      bg = prompt,
+    }
+    hl.TelescopePromptBorder = {
+      bg = prompt,
+      fg = prompt,
+    }
+    hl.TelescopePromptTitle = {
+      bg = prompt,
+      fg = prompt,
+    }
+    hl.TelescopePreviewTitle = {
+      bg = c.bg_dark,
+      fg = c.bg_dark,
+    }
+    hl.TelescopeResultsTitle = {
+      bg = c.bg_dark,
+      fg = c.bg_dark,
+    }
+  end,
+})
 ```
 
 ### Making `undercurls` work properly in **Tmux**
