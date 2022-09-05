@@ -1,4 +1,5 @@
 local colors = require("tokyonight.colors").setup({ transform = true })
+local config = require("tokyonight.config").options
 
 local tokyonight = {}
 
@@ -34,7 +35,7 @@ tokyonight.inactive = {
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
 }
 
-if vim.g.tokyonight_lualine_bold then
+if config.lualine_bold then
   for _, mode in pairs(tokyonight) do
     mode.a.gui = "bold"
   end

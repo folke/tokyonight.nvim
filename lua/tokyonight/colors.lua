@@ -47,7 +47,7 @@ function M.setup(opts)
     colors.bg_dark = "#16161e"
   end
   util.bg = colors.bg
-  util.day_brightness = config.dayBrightness
+  util.day_brightness = config.day_brightness
 
   colors.diff = {
     add = util.darken(colors.green2, 0.15),
@@ -72,8 +72,13 @@ function M.setup(opts)
   colors.bg_statusline = colors.bg_dark
 
   -- Sidebar and Floats are configurable
-  colors.bg_sidebar = (config.transparentSidebar and colors.none) or config.darkSidebar and colors.bg_dark or colors.bg
-  colors.bg_float = config.darkFloat and colors.bg_dark or colors.bg
+  colors.bg_sidebar = config.styles.sidebars == "transparent" and colors.none
+    or config.styles.sidebars == "dark" and colors.bg_dark
+    or colors.bg
+
+  colors.bg_float = config.styles.floats == "transparent" and colors.none
+    or config.styles.floats == "dark" and colors.bg_dark
+    or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.7)
   colors.bg_search = colors.blue0
@@ -84,8 +89,7 @@ function M.setup(opts)
   colors.info = colors.blue2
   colors.hint = colors.teal
 
-  util.color_overrides(colors, config)
-
+  config.on_colors(colors)
   if opts.transform and (config.style == "day" or vim.o.background == "light") then
     util.invert_colors(colors)
   end

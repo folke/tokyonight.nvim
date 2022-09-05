@@ -15,8 +15,7 @@ local M = {}
 function M.setup()
   local config = require("tokyonight.config").options
   ---@class Theme
-  ---@field base Highlights
-  ---@field plugins Highlights
+  ---@field highlights Highlights
   local theme = {
     config = config,
     colors = colors.setup(),
@@ -24,7 +23,9 @@ function M.setup()
 
   local c = theme.colors
 
-  theme.base = {
+  theme.highlights = {
+    Foo = { bg = c.magenta2, fg = c.magenta2 },
+
     Comment = { fg = c.comment, style = config.styles.comments }, -- any comment
     ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -43,6 +44,7 @@ function M.setup()
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.error }, -- error messages on the command line
     VertSplit = { fg = c.border }, -- the column separating vertically split windows
+    WinSeparator = { fg = c.border, style = "bold" }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn = { bg = c.bg, fg = c.comment }, -- 'foldcolumn'
     SignColumn = { bg = config.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
@@ -188,26 +190,6 @@ function M.setup()
 
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
-  }
-
-  if not vim.diagnostic then
-    local severity_map = {
-      Error = "Error",
-      Warn = "Warning",
-      Info = "Information",
-      Hint = "Hint",
-    }
-    local types = { "Default", "VirtualText", "Underline" }
-    for _, type in ipairs(types) do
-      for snew, sold in pairs(severity_map) do
-        theme.base["LspDiagnostics" .. type .. sold] = {
-          link = "Diagnostic" .. (type == "Default" and "" or type) .. snew,
-        }
-      end
-    end
-  end
-
-  theme.plugins = {
 
     -- These groups are for the neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
@@ -284,9 +266,9 @@ function M.setup()
     rainbowcol7 = { fg = c.red },
 
     -- LspTrouble
-    LspTroubleText = { fg = c.fg_dark },
-    LspTroubleCount = { fg = c.magenta, bg = c.fg_gutter },
-    LspTroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    TroubleText = { fg = c.fg_dark },
+    TroubleCount = { fg = c.magenta, bg = c.fg_gutter },
+    TroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
 
     -- Illuminate
     illuminatedWord = { bg = c.fg_gutter },
@@ -325,8 +307,8 @@ function M.setup()
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.border_highlight, bg = config.transparent and c.bg_float or c.bg },
-    TelescopeNormal = { fg = c.fg, bg = config.transparent and c.bg_float or c.bg },
+    TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
+    TelescopeNormal = { fg = c.fg, bg = c.bg_float },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
@@ -555,13 +537,30 @@ function M.setup()
     MiniTrailspace = { bg = c.red },
   }
 
+  if not vim.diagnostic then
+    local severity_map = {
+      Error = "Error",
+      Warn = "Warning",
+      Info = "Information",
+      Hint = "Hint",
+    }
+    local types = { "Default", "VirtualText", "Underline" }
+    for _, type in ipairs(types) do
+      for snew, sold in pairs(severity_map) do
+        theme.highlights["LspDiagnostics" .. type .. sold] = {
+          link = "Diagnostic" .. (type == "Default" and "" or type) .. snew,
+        }
+      end
+    end
+  end
+
   theme.defer = {}
 
-  if config.hideInactiveStatusline then
+  if config.hide_inactive_statusline then
     local inactive = { style = "underline", bg = c.none, fg = c.bg, sp = c.border }
 
     -- StatusLineNC
-    theme.base.StatusLineNC = inactive
+    theme.highlights.StatusLineNC = inactive
 
     -- LuaLine
     for _, section in ipairs({ "a", "b", "c" }) do
@@ -569,13 +568,14 @@ function M.setup()
     end
 
     -- mini.statusline
-    theme.plugins.MiniStatuslineInactive = inactive
+    theme.highlights.MiniStatuslineInactive = inactive
   end
+
+  config.on_highlights(theme.highlights, theme.colors)
 
   if config.style == "day" or vim.o.background == "light" then
     util.invert_colors(theme.colors)
-    util.invert_highlights(theme.base)
-    util.invert_highlights(theme.plugins)
+    util.invert_highlights(theme.highlights)
   end
 
   return theme
