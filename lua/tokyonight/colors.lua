@@ -1,11 +1,11 @@
 local util = require("tokyonight.util")
-local config = require("tokyonight.config").options
 
 local M = {}
 
 ---@return ColorScheme
 function M.setup(opts)
   opts = opts or {}
+  local config = require("tokyonight.config").options
 
   -- Color Palette
   ---@class ColorScheme

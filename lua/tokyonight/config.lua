@@ -1,6 +1,3 @@
--- shim vim for kitty and other generators
-vim = vim or { g = {}, o = {} }
-
 local M = {}
 
 ---@class Config
@@ -30,6 +27,10 @@ M.options = {}
 
 function M.setup(options)
   M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
+end
+
+function M.extend(options)
+  M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
 end
 
 M.setup()
