@@ -107,54 +107,66 @@ The theme comes in three styles, `storm`, a darker variant `night` and `day`.
 
 The **day** style will be used if:
 
-- `vim.g.tokyonight_style = "day"`
+- `{ style = "day"}` was passed to `setup(options)`
 - or `vim.o.background = "light"`
 
-| Option                              | Default   | Description                                                                                                                                                     |
-| ----------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tokyonight_style                    | `"storm"` | The theme comes in three styles, `storm`, a darker variant `night` and `day`.                                                                                   |
-| tokyonight_terminal_colors          | `true`    | Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
-| tokyonight_italic_comments          | `true`    | Make comments italic                                                                                                                                            |
-| tokyonight_italic_keywords          | `true`    | Make keywords italic                                                                                                                                            |
-| tokyonight_italic_functions         | `false`   | Make functions italic                                                                                                                                           |
-| tokyonight_italic_variables         | `false`   | Make variables and identifiers italic                                                                                                                           |
-| tokyonight_transparent              | `false`   | Enable this to disable setting the background color                                                                                                             |
-| tokyonight_hide_inactive_statusline | `false`   | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
-| tokyonight_sidebars                 | `{}`      | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
-| tokyonight_transparent_sidebar      | `false`   | Sidebar like windows like `NvimTree` get a transparent background                                                                                               |
-| tokyonight_dark_sidebar             | `true`    | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
-| tokyonight_dark_float               | `true`    | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
-| tokyonight_colors                   | `{}`      | You can override specific color groups to use other groups or a hex color                                                                                       |
-| tokyonight_day_brightness           | `0.3`     | Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors                                                  |
-| tokyonight_lualine_bold             | `false`   | When `true`, section headers in the lualine theme will be bold                                                                                                  |
+TokyoNight will use the default options, unless you call `setup`.
+
+```lua
+require("tokyonight").setup({
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  transparent = false, -- Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
+  styles = {
+    -- Style to be applied to different syntax groups
+    -- Value is any valid attr-list value `:help attr-list`
+    comments = "italic",
+    keywords = "italic",
+    functions = "NONE",
+    variables = "NONE",
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = "dark", -- style for sidebars, see below
+    floats = "dark", -- style for floating windows
+  },
+  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
+  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors                                                  |
+  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
+  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold                                                                                                  |
+
+  --- You can override specific color groups to use other groups or a hex color                                                                                       |
+  --- fucntion will be called with a ColorScheme table
+  ---@param colors ColorScheme
+  on_colors = function(colors) end,
+
+  --- You can override specific highlights to use other groups or a hex color                                                                                       |
+  --- fucntion will be called with a Highlights and ColorScheme table
+  ---@param highlights Highlights
+  ---@param colors ColorScheme
+  on_highlights = function(highlights, colors) end,
+}
+```
 
 ```lua
 -- Example config in Lua
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
-
--- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+require("tokyonight").setup({
+  -- use the night style
+  style = "night",
+  -- disable italic for functions
+  styles = {
+    functions = "NONE" 
+  },
+  sidebars = { "qf", "vista_kind", "terminal", "packer" },
+  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+  on_colors = function(colors) {
+    colors.hint = colors.orange
+    colors.error = "#ff0000"
+  }
+})
 
 -- Load the colorscheme
 vim.cmd[[colorscheme tokyonight]]
-```
-
-```vim
-" Example config in VimScript
-let g:tokyonight_style = "night"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-
-" Change the "hint" color to the "orange" color, and make the "error" color bright red
-let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
-
-" Load the colorscheme
-colorscheme tokyonight
 ```
 
 ### Making `undercurls` work properly in **Tmux**
@@ -177,7 +189,7 @@ Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm**, **iTerm
 You can easily use the color palette for other plugins inside your Neovim config:
 
 ```lua
-local colors = require("tokyonight.colors").setup({}) -- pass in any of the config options as explained above
+local colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
 local util = require("tokyonight.util")
 
 aplugin.background = colors.bg_dark
@@ -192,5 +204,5 @@ How to add a new extra template:
 
 1. create a file like `lua/tokyonight/extra/cool-app.lua`
 2. add the name and output file extension to the `extras` table in `lua/tokyonight/extra/init.lua`
-3. in the root directory, run `$ lua lua/tokyonight/extra/init.lua` to generate / update extra themes
+3. in Nvim, run `:lua require("tokyonight.extra").setup()` to generate / update extra themes
 4. commit the newly created themes under `extra/`

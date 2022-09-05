@@ -2,21 +2,31 @@ local util = require("tokyonight.util")
 local colors = require("tokyonight.colors")
 
 local M = {}
+--
+---@class Highlight
+---@field fg string|nil
+---@field bg string|nil
+---@field sp string|nil
+---@field style string|nil
 
----@param config Config
+---@alias Highlights table<string,Highlight>
+
 ---@return Theme
-function M.setup(config)
-  config = config or require("tokyonight.config")
-
+function M.setup()
+  local config = require("tokyonight.config").options
   ---@class Theme
-  local theme = {}
-  theme.config = config
-  theme.colors = colors.setup(config)
+  ---@field highlights Highlights
+  local theme = {
+    config = config,
+    colors = colors.setup(),
+  }
 
   local c = theme.colors
 
-  theme.base = {
-    Comment = { fg = c.comment, style = config.commentStyle }, -- any comment
+  theme.highlights = {
+    Foo = { bg = c.magenta2, fg = c.magenta2 },
+
+    Comment = { fg = c.comment, style = config.styles.comments }, -- any comment
     ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
@@ -34,6 +44,7 @@ function M.setup(config)
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.error }, -- error messages on the command line
     VertSplit = { fg = c.border }, -- the column separating vertically split windows
+    WinSeparator = { fg = c.border, style = "bold" }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn = { bg = c.bg, fg = c.comment }, -- 'foldcolumn'
     SignColumn = { bg = config.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
@@ -90,15 +101,15 @@ function M.setup(config)
     -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.magenta, style = config.variableStyle }, -- (preferred) any variable name
-    Function = { fg = c.blue, style = config.functionStyle }, -- function name (also: methods for classes)
+    Identifier = { fg = c.magenta, style = config.styles.variables }, -- (preferred) any variable name
+    Function = { fg = c.blue, style = config.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = c.magenta }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = { fg = c.blue5 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan, style = config.keywordStyle }, --  any other keyword
+    Keyword = { fg = c.cyan, style = config.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
@@ -179,26 +190,6 @@ function M.setup(config)
 
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
-  }
-
-  if not vim.diagnostic then
-    local severity_map = {
-      Error = "Error",
-      Warn = "Warning",
-      Info = "Information",
-      Hint = "Hint",
-    }
-    local types = { "Default", "VirtualText", "Underline" }
-    for _, type in ipairs(types) do
-      for snew, sold in pairs(severity_map) do
-        theme.base["LspDiagnostics" .. type .. sold] = {
-          link = "Diagnostic" .. (type == "Default" and "" or type) .. snew,
-        }
-      end
-    end
-  end
-
-  theme.plugins = {
 
     -- These groups are for the neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
@@ -227,8 +218,8 @@ function M.setup(config)
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { fg = c.magenta, style = config.functionStyle }, -- For keywords used to define a fuction.
+    TSKeyword = { fg = c.purple, style = config.styles.keywords }, -- For keywords that don't fall in previous categories.
+    TSKeywordFunction = { fg = c.magenta, style = config.styles.functions }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
@@ -248,7 +239,7 @@ function M.setup(config)
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
+    TSVariable = { style = config.styles.variables }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- TSTag               = { };    -- Tags like html tag names.
@@ -275,9 +266,9 @@ function M.setup(config)
     rainbowcol7 = { fg = c.red },
 
     -- LspTrouble
-    LspTroubleText = { fg = c.fg_dark },
-    LspTroubleCount = { fg = c.magenta, bg = c.fg_gutter },
-    LspTroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    TroubleText = { fg = c.fg_dark },
+    TroubleCount = { fg = c.magenta, bg = c.fg_gutter },
+    TroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
 
     -- Illuminate
     illuminatedWord = { bg = c.fg_gutter },
@@ -316,8 +307,8 @@ function M.setup(config)
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.border_highlight, bg = config.transparent and c.bg_float or c.bg },
-    TelescopeNormal = { fg = c.fg, bg = config.transparent and c.bg_float or c.bg },
+    TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
+    TelescopeNormal = { fg = c.fg, bg = c.bg_float },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
@@ -510,7 +501,7 @@ function M.setup(config)
     MiniStarterCurrent = { style = "nocombine" },
     MiniStarterFooter = { fg = c.yellow, style = "italic" },
     MiniStarterHeader = { fg = c.blue },
-    MiniStarterInactive = { fg = c.comment, style = config.commentStyle },
+    MiniStarterInactive = { fg = c.comment, style = config.styles.comments },
     MiniStarterItem = { fg = c.fg, bg = config.transparent and c.none or c.bg },
     MiniStarterItemBullet = { fg = c.border_highlight },
     MiniStarterItemPrefix = { fg = c.warning },
@@ -546,13 +537,30 @@ function M.setup(config)
     MiniTrailspace = { bg = c.red },
   }
 
+  if not vim.diagnostic then
+    local severity_map = {
+      Error = "Error",
+      Warn = "Warning",
+      Info = "Information",
+      Hint = "Hint",
+    }
+    local types = { "Default", "VirtualText", "Underline" }
+    for _, type in ipairs(types) do
+      for snew, sold in pairs(severity_map) do
+        theme.highlights["LspDiagnostics" .. type .. sold] = {
+          link = "Diagnostic" .. (type == "Default" and "" or type) .. snew,
+        }
+      end
+    end
+  end
+
   theme.defer = {}
 
-  if config.hideInactiveStatusline then
+  if config.hide_inactive_statusline then
     local inactive = { style = "underline", bg = c.none, fg = c.bg, sp = c.border }
 
     -- StatusLineNC
-    theme.base.StatusLineNC = inactive
+    theme.highlights.StatusLineNC = inactive
 
     -- LuaLine
     for _, section in ipairs({ "a", "b", "c" }) do
@@ -560,7 +568,14 @@ function M.setup(config)
     end
 
     -- mini.statusline
-    theme.plugins.MiniStatuslineInactive = inactive
+    theme.highlights.MiniStatuslineInactive = inactive
+  end
+
+  config.on_highlights(theme.highlights, theme.colors)
+
+  if config.style == "day" or vim.o.background == "light" then
+    util.invert_colors(theme.colors)
+    util.invert_highlights(theme.highlights)
   end
 
   return theme

@@ -2,10 +2,10 @@ local util = require("tokyonight.util")
 
 local M = {}
 
----@param config Config
 ---@return ColorScheme
-function M.setup(config)
-  config = config or require("tokyonight.config")
+function M.setup(opts)
+  opts = opts or {}
+  local config = require("tokyonight.config").options
 
   -- Color Palette
   ---@class ColorScheme
@@ -40,15 +40,14 @@ function M.setup(config)
     teal = "#1abc9c",
     red = "#f7768e",
     red1 = "#db4b4b",
-    git = { change = "#6183bb", add = "#449dab", delete = "#914c54", conflict = "#bb7a61" },
-    gitSigns = { add = "#164846", change = "#394b70", delete = "#823c41" },
+    git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
   }
   if config.style == "night" or config.style == "day" or vim.o.background == "light" then
     colors.bg = "#1a1b26"
     colors.bg_dark = "#16161e"
   end
   util.bg = colors.bg
-  util.day_brightness = config.dayBrightness
+  util.day_brightness = config.day_brightness
 
   colors.diff = {
     add = util.darken(colors.green2, 0.15),
@@ -58,9 +57,9 @@ function M.setup(config)
   }
 
   colors.gitSigns = {
-    add = util.brighten(colors.gitSigns.add, 0.2),
-    change = util.brighten(colors.gitSigns.change, 0.2),
-    delete = util.brighten(colors.gitSigns.delete, 0.2),
+    add = "#266d6a",
+    change = "#536c9e",
+    delete = "#b2555b",
   }
 
   colors.git.ignore = colors.dark3
@@ -73,8 +72,13 @@ function M.setup(config)
   colors.bg_statusline = colors.bg_dark
 
   -- Sidebar and Floats are configurable
-  colors.bg_sidebar = (config.transparentSidebar and colors.none) or config.darkSidebar and colors.bg_dark or colors.bg
-  colors.bg_float = config.darkFloat and colors.bg_dark or colors.bg
+  colors.bg_sidebar = config.styles.sidebars == "transparent" and colors.none
+    or config.styles.sidebars == "dark" and colors.bg_dark
+    or colors.bg
+
+  colors.bg_float = config.styles.floats == "transparent" and colors.none
+    or config.styles.floats == "dark" and colors.bg_dark
+    or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.7)
   colors.bg_search = colors.blue0
@@ -85,10 +89,9 @@ function M.setup(config)
   colors.info = colors.blue2
   colors.hint = colors.teal
 
-  util.color_overrides(colors, config)
-
-  if config.transform_colors and (config.style == "day" or vim.o.background == "light") then
-    return util.light_colors(colors)
+  config.on_colors(colors)
+  if opts.transform and (config.style == "day" or vim.o.background == "light") then
+    util.invert_colors(colors)
   end
 
   return colors
