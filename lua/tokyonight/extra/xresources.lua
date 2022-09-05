@@ -4,8 +4,8 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-	local xr = util.template(
-		[[
+  local xr = util.template(
+    [[
 ! TokyoNight colors for Xresources
 
 *background: ${bg}
@@ -30,9 +30,9 @@ function M.generate(colors)
 *color15: ${fg}
  
 ]],
-		colors
-	)
-	return xr
+    colors
+  )
+  return xr
 end
 
 return M
