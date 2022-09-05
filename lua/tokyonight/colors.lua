@@ -57,9 +57,9 @@ function M.setup(opts)
   }
 
   colors.gitSigns = {
-    add = util.brighten("#164846", 0.2),
-    change = util.brighten("#394b70", 0.2),
-    delete = util.brighten("#823c41", 0.2),
+    add = "#266d6a",
+    change = "#536c9e",
+    delete = "#b2555b",
   }
 
   colors.git.ignore = colors.dark3
