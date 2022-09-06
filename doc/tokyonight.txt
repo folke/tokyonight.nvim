@@ -193,7 +193,7 @@ TokyoNight will use the default options, unless you call `setup`.
       ---@param highlights Highlights
       ---@param colors ColorScheme
       on_highlights = function(highlights, colors) end,
-    }
+    })
 <
 
 
