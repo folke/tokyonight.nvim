@@ -1,4 +1,4 @@
-*tokyonight.txt*         For NVIM v0.5.0        Last change: 2022 September 06
+*tokyonight.txt*         For NVIM v0.5.0        Last change: 2022 September 07
 
 ==============================================================================
 Table of Contents                               *tokyonight-table-of-contents*
@@ -214,10 +214,10 @@ Example for changing some settings and colors
       },
       sidebars = { "qf", "vista_kind", "terminal", "packer" },
       -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-      on_colors = function(colors) {
+      on_colors = function(colors)
         colors.hint = colors.orange
         colors.error = "#ff0000"
-      }
+      end
     })
 <
 
