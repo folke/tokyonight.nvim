@@ -22,6 +22,7 @@ function M.setup()
     xfceterm = "theme",
     foot = "ini",
     tilix = "json",
+    iterm = "itermcolors",
   }
   -- map of style to style name
   local styles = {
