@@ -1,6 +1,8 @@
 # 🏙 Tokyo Night
 
-A dark and light Neovim theme written in Lua ported from the Visual Studio Code [TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes extra themes for Kitty, Alacritty, iTerm and Fish.
+A dark and light Neovim theme written in Lua ported from the Visual Studio Code
+[TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
+extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## Storm
 
@@ -20,7 +22,10 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 - minimal inactive statusline
 - vim terminal colors
 - darker background for sidebar-like windows
-- color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include), [Alacritty](https://github.com/alacritty/alacritty) and [Fish Shell](https://fishshell.com/)
+- color configs for
+  [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include),
+  [Alacritty](https://github.com/alacritty/alacritty) and
+  [Fish Shell](https://fishshell.com/)
 - **lualine** theme
 
 ### Plugin Support
@@ -85,7 +90,8 @@ colorscheme tokyonight-day
 vim.cmd[[colorscheme tokyonight]]
 ```
 
-To enable the `TokyoNight` theme for `Lualine`, simply specify it in your lualine settings:
+To enable the `TokyoNight` theme for `Lualine`, simply specify it in your
+lualine settings:
 
 ```lua
 require('lualine').setup {
@@ -106,7 +112,8 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 
 ## ⚙️ Configuration
 
-> ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme tokyonight`
+> ❗️ configuration needs to be set **BEFORE** loading the color scheme with
+> `colorscheme tokyonight`
 
 The theme comes in three styles, `storm`, a darker variant `night` and `day`.
 
@@ -173,7 +180,8 @@ require("tokyonight").setup({
 })
 ```
 
-Example to make Telescope [borderless](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless)
+Example to make Telescope
+[borderless](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless)
 
 ```lua
 require("tokyonight").setup({
@@ -212,7 +220,8 @@ require("tokyonight").setup({
 
 ### Making `undercurls` work properly in **Tmux**
 
-To have undercurls show up and in color, add the following to your **Tmux** config file:
+To have undercurls show up and in color, add the following to your **Tmux**
+config file:
 
 ```sh
 # Undercurl
@@ -223,11 +232,14 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🍭 Extras
 
-Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm**, **iTerm** and **foot** can be found in [extras](extras/). To use them, refer to their respective documentation.
+Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm**,
+**iTerm** and **foot** can be found in [extras](extras/). To use them, refer to
+their respective documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
 
-You can easily use the color palette for other plugins inside your Neovim config:
+You can easily use the color palette for other plugins inside your Neovim
+config:
 
 ```lua
 local colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
@@ -239,11 +251,14 @@ aplugin.my_error = util.brighten(colors.red1, 0.3)
 
 ## 🔥 Contributing
 
-Pull requests are welcome. For the `extras`, we use a simple template system that can be used to generate themes for the different styles.
+Pull requests are welcome. For the `extras`, we use a simple template system
+that can be used to generate themes for the different styles.
 
 How to add a new extra template:
 
 1. create a file like `lua/tokyonight/extra/cool-app.lua`
-2. add the name and output file extension to the `extras` table in `lua/tokyonight/extra/init.lua`
-3. in Nvim, run `:lua require("tokyonight.extra").setup()` to generate / update extra themes
+2. add the name and output file extension to the `extras` table in
+   `lua/tokyonight/extra/init.lua`
+3. in Nvim, run `:lua require("tokyonight.extra").setup()` to generate / update
+   extra themes
 4. commit the newly created themes under `extra/`
