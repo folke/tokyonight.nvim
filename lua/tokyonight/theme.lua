@@ -331,6 +331,7 @@ function M.setup()
 
     NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+
     -- Fern
     FernBranchText = { fg = c.blue },
 
@@ -386,7 +387,6 @@ function M.setup()
 
     -- BufferLine
     BufferLineIndicatorSelected = { fg = c.git.change },
-    BufferLineFill = { bg = c.black },
 
     -- Barbar
     BufferCurrent = { bg = c.fg_gutter, fg = c.fg },
