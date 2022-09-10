@@ -50,7 +50,10 @@ DAY                                                           *tokyonight-day*
 - minimal inactive statusline
 - vim terminal colors
 - darker background for sidebar-like windows
-- color configs for Kitty <https://sw.kovidgoyal.net/kitty/conf.html?highlight=include>, Alacritty <https://github.com/alacritty/alacritty> and Fish Shell <https://fishshell.com/>
+- color configs for
+    Kitty <https://sw.kovidgoyal.net/kitty/conf.html?highlight=include>,
+    Alacritty <https://github.com/alacritty/alacritty> and
+    Fish Shell <https://fishshell.com/>
 - **lualine** theme
 
 
@@ -306,8 +309,10 @@ How to add a new extra template:
 
 
 1. create a file like `lua/tokyonight/extra/cool-app.lua`
-2. add the name and output file extension to the `extras` table in `lua/tokyonight/extra/init.lua`
-3. in Nvim, run `:lua require("tokyonight.extra").setup()` to generate / update extra themes
+2. add the name and output file extension to the `extras` table in
+`lua/tokyonight/extra/init.lua`
+3. in Nvim, run `:lua require("tokyonight.extra").setup()` to generate / update
+extra themes
 4. commit the newly created themes under `extra/`
 
 
