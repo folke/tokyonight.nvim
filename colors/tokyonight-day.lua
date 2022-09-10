@@ -1,1 +1,1 @@
-require("tokyonight").load({ style = "day" })
+require("tokyonight")._load("day")

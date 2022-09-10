@@ -5,7 +5,7 @@ local M = {}
 ---@return ColorScheme
 function M.setup(opts)
   opts = opts or {}
-  local config = require("tokyonight.config").options
+  local config = require("tokyonight.config")
 
   -- Color Palette
   ---@class ColorScheme
@@ -42,12 +42,12 @@ function M.setup(opts)
     red1 = "#db4b4b",
     git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
   }
-  if config.style == "night" or config.style == "day" or vim.o.background == "light" then
+  if config.options.style == "night" or config.is_day() then
     colors.bg = "#1a1b26"
     colors.bg_dark = "#16161e"
   end
   util.bg = colors.bg
-  util.day_brightness = config.day_brightness
+  util.day_brightness = config.options.day_brightness
 
   colors.diff = {
     add = util.darken(colors.green2, 0.15),
@@ -72,12 +72,12 @@ function M.setup(opts)
   colors.bg_statusline = colors.bg_dark
 
   -- Sidebar and Floats are configurable
-  colors.bg_sidebar = config.styles.sidebars == "transparent" and colors.none
-    or config.styles.sidebars == "dark" and colors.bg_dark
+  colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
+    or config.options.styles.sidebars == "dark" and colors.bg_dark
     or colors.bg
 
-  colors.bg_float = config.styles.floats == "transparent" and colors.none
-    or config.styles.floats == "dark" and colors.bg_dark
+  colors.bg_float = config.options.styles.floats == "transparent" and colors.none
+    or config.options.styles.floats == "dark" and colors.bg_dark
     or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.7)
@@ -89,8 +89,8 @@ function M.setup(opts)
   colors.info = colors.blue2
   colors.hint = colors.teal
 
-  config.on_colors(colors)
-  if opts.transform and (config.style == "day" or vim.o.background == "light") then
+  config.options.on_colors(colors)
+  if opts.transform and config.is_day() then
     util.invert_colors(colors)
   end
 

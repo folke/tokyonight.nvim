@@ -1,1 +1,1 @@
-require("tokyonight").load()
+require("tokyonight")._load()

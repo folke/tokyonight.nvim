@@ -32,6 +32,7 @@ local defaults = {
   ---@param highlights Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
+  use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
 }
 
 ---@type Config
@@ -45,6 +46,10 @@ end
 ---@param options Config|nil
 function M.extend(options)
   M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
+end
+
+function M.is_day()
+  return M.options.style == "day" or M.options.use_background and vim.o.background == "light"
 end
 
 M.setup()

@@ -13,11 +13,12 @@ local M = {}
 
 ---@return Theme
 function M.setup()
-  local config = require("tokyonight.config").options
+  local config = require("tokyonight.config")
+  local options = config.options
   ---@class Theme
   ---@field highlights Highlights
   local theme = {
-    config = config,
+    config = options,
     colors = colors.setup(),
   }
 
@@ -26,7 +27,7 @@ function M.setup()
   theme.highlights = {
     Foo = { bg = c.magenta2, fg = c.magenta2 },
 
-    Comment = { fg = c.comment, style = config.styles.comments }, -- any comment
+    Comment = { fg = c.comment, style = options.styles.comments }, -- any comment
     ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
@@ -47,7 +48,7 @@ function M.setup()
     WinSeparator = { fg = c.border, style = "bold" }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn = { bg = c.bg, fg = c.comment }, -- 'foldcolumn'
-    SignColumn = { bg = config.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
+    SignColumn = { bg = options.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -58,8 +59,8 @@ function M.setup()
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
     NonText = { fg = c.dark3 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal = { fg = c.fg, bg = config.transparent and c.none or c.bg }, -- normal text
-    NormalNC = { fg = c.fg, bg = config.transparent and c.none or config.dim_inactive and c.bg_dark or c.bg }, -- normal text in non-current windows
+    Normal = { fg = c.fg, bg = options.transparent and c.none or c.bg }, -- normal text
+    NormalNC = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.bg_dark or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.fg, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
@@ -101,15 +102,15 @@ function M.setup()
     -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.magenta, style = config.styles.variables }, -- (preferred) any variable name
-    Function = { fg = c.blue, style = config.styles.functions }, -- function name (also: methods for classes)
+    Identifier = { fg = c.magenta, style = options.styles.variables }, -- (preferred) any variable name
+    Function = { fg = c.blue, style = options.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = c.magenta }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = { fg = c.blue5 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan, style = config.styles.keywords }, --  any other keyword
+    Keyword = { fg = c.cyan, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
@@ -218,8 +219,8 @@ function M.setup()
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { fg = c.purple, style = config.styles.keywords }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { fg = c.magenta, style = config.styles.functions }, -- For keywords used to define a fuction.
+    TSKeyword = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    TSKeywordFunction = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
@@ -239,7 +240,7 @@ function M.setup()
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    TSVariable = { style = config.styles.variables }, -- Any variable name that does not have another highlight.
+    TSVariable = { style = options.styles.variables }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- TSTag               = { };    -- Tags like html tag names.
@@ -509,8 +510,8 @@ function M.setup()
     MiniStarterCurrent = { style = "nocombine" },
     MiniStarterFooter = { fg = c.yellow, style = "italic" },
     MiniStarterHeader = { fg = c.blue },
-    MiniStarterInactive = { fg = c.comment, style = config.styles.comments },
-    MiniStarterItem = { fg = c.fg, bg = config.transparent and c.none or c.bg },
+    MiniStarterInactive = { fg = c.comment, style = options.styles.comments },
+    MiniStarterItem = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     MiniStarterItemBullet = { fg = c.border_highlight },
     MiniStarterItemPrefix = { fg = c.warning },
     MiniStarterSection = { fg = c.blue1 },
@@ -564,7 +565,7 @@ function M.setup()
 
   theme.defer = {}
 
-  if config.hide_inactive_statusline then
+  if options.hide_inactive_statusline then
     local inactive = { style = "underline", bg = c.none, fg = c.bg, sp = c.border }
 
     -- StatusLineNC
@@ -579,9 +580,9 @@ function M.setup()
     theme.highlights.MiniStatuslineInactive = inactive
   end
 
-  config.on_highlights(theme.highlights, theme.colors)
+  options.on_highlights(theme.highlights, theme.colors)
 
-  if config.style == "day" or vim.o.background == "light" then
+  if config.is_day() then
     util.invert_colors(theme.colors)
     util.invert_highlights(theme.highlights)
   end
