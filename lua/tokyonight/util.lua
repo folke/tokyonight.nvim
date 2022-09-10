@@ -45,9 +45,12 @@ function M.invert_color(color)
   return color
 end
 
+-- new in 0.8 something
+local has_new_group_names = vim.fn.hlexists("@comment") ~= 0
+
 ---@param group string
 function M.highlight(group, color)
-  if group:sub(1,1) == "@" and vim.fn.has("nvim-0.8") == 0 then
+  if group:sub(1, 1) == "@" and not has_new_group_names then
     return
   end
   local hl = { fg = color.fg, bg = color.bg, sp = color.sp, link = color.link }
