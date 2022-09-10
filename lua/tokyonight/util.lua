@@ -45,7 +45,11 @@ function M.invert_color(color)
   return color
 end
 
+---@param group string
 function M.highlight(group, color)
+  if group:sub(1,1) == "@" and vim.fn.has("nvim-0.8") == 0 then
+    return
+  end
   local hl = { fg = color.fg, bg = color.bg, sp = color.sp, link = color.link }
   if color.style and color.style:lower() ~= "none" then
     for s in string.gmatch(color.style, "([^,]+)") do
