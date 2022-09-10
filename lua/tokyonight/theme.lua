@@ -161,6 +161,9 @@ function M.setup()
     markdownH2 = { fg = c.blue, style = "bold" },
     markdownLinkText = { fg = c.blue, style = "underline" },
 
+    ["@punctuation.special.markdown"] = { fg = c.orange, style = "bold" },
+    ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
+
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = { bg = util.darken(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
 
