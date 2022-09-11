@@ -1,3 +1,5 @@
+local ts = require("tokyonight.treesitter")
+
 local M = {}
 
 M.bg = "#000000"
@@ -28,6 +30,7 @@ end
 function M.darken(hex, amount, bg)
   return M.blend(hex, bg or M.bg, math.abs(amount))
 end
+
 function M.lighten(hex, amount, fg)
   return M.blend(hex, fg or M.fg, math.abs(amount))
 end
@@ -45,12 +48,10 @@ function M.invert_color(color)
   return color
 end
 
--- new in 0.8 something
-local has_new_group_names = vim.fn.hlexists("@comment") ~= 0
-
 ---@param group string
 function M.highlight(group, color)
-  if group:sub(1, 1) == "@" and not has_new_group_names then
+  group = ts.get(group)
+  if not group then
     return
   end
   local hl = { fg = color.fg, bg = color.bg, sp = color.sp, link = color.link }
