@@ -1,10 +1,7 @@
 local M = {}
 
--- new in 0.8 something
-local has_new_group_names = vim.fn.hlexists("@comment") ~= 0
-
 function M.get(group)
-  if group:sub(1, 1) ~= "@" or has_new_group_names then
+  if group:sub(1, 1) ~= "@" or not vim.treesitter.highlighter.hl_map then
     return group
   end
 
