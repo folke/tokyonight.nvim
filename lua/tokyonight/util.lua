@@ -81,12 +81,14 @@ function M.autocmds(config)
   vim.cmd([[augroup TokyoNight]])
   vim.cmd([[  autocmd!]])
   vim.cmd([[  autocmd ColorScheme * lua require("tokyonight.util").onColorScheme()]])
-  for _, sidebar in ipairs(config.sidebars) do
-    if sidebar == "terminal" then
-      vim.cmd([[  autocmd TermOpen * setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]])
-    else
-      vim.cmd([[  autocmd FileType ]] .. sidebar .. [[ setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]])
-    end
+
+  vim.cmd(
+    [[  autocmd FileType ]]
+      .. table.concat(config.sidebars, ",")
+      .. [[ setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]]
+  )
+  if vim.tbl_contains(config.sidebars, "terminal") then
+    vim.cmd([[  autocmd TermOpen * setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]])
   end
   vim.cmd([[augroup end]])
 end
