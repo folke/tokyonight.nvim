@@ -161,6 +161,17 @@ require("tokyonight").setup({
 })
 ```
 
+## 🪓 Overriding Colors & Highlight Groups
+
+How the highlight groups are calculated:
+
+1. the **colors** for the style are calculated based on your config
+2. `config.on_colors(colors)` is ran, where you can override the colors
+3. the **colors** are then used to generate the highlight groups
+4. `config.on_highlights(highlights, colors)` is ran, where you can overide the highlight groups
+
+Please refer to default values for `colors` and `highlights` for the [storm](extras/lua_tokyonight_storm.lua), [night](extras/lua_tokyonight_night.lua), [day](extras/lua_tokyonight_day.lua)
+
 Example for changing some settings and colors
 
 ```lua
@@ -169,7 +180,7 @@ require("tokyonight").setup({
   style = "night",
   -- disable italic for functions
   styles = {
-    functions = "NONE" 
+    functions = {}
   },
   sidebars = { "qf", "vista_kind", "terminal", "packer" },
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red

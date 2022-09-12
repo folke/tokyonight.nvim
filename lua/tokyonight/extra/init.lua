@@ -23,6 +23,7 @@ function M.setup()
     foot = "ini",
     tilix = "json",
     iterm = "itermcolors",
+    lua = "lua",
   }
   -- map of style to style name
   local styles = {
