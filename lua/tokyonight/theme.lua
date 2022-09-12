@@ -45,7 +45,7 @@ function M.setup()
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.error }, -- error messages on the command line
     VertSplit = { fg = c.border }, -- the column separating vertically split windows
-    WinSeparator = { fg = c.border, style = "bold" }, -- the column separating vertically split windows
+    WinSeparator = { fg = c.border, bold = true }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn = { bg = c.bg, fg = c.comment }, -- 'foldcolumn'
     SignColumn = { bg = options.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
@@ -53,8 +53,8 @@ function M.setup()
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = c.dark5 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    MatchParen = { fg = c.orange, style = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg = { fg = c.fg_dark, style = "bold" }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    MatchParen = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    ModeMsg = { fg = c.fg_dark, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.fg_dark, bg = c.bg_sidebar }, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
@@ -69,20 +69,20 @@ function M.setup()
     PmenuSbar = { bg = util.lighten(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
-    QuickFixLine = { bg = c.bg_visual, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    QuickFixLine = { bg = c.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     SpecialKey = { fg = c.dark3 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    SpellBad = { sp = c.error, style = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    SpellCap = { sp = c.warning, style = "undercurl" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal = { sp = c.info, style = "undercurl" }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    SpellRare = { sp = c.hint, style = "undercurl" }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    SpellBad = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellCap = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal = { sp = c.info, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare = { sp = c.hint, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
     StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
     TabLineFill = { bg = c.black }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
-    Title = { fg = c.blue, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
+    Title = { fg = c.blue, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = c.bg_visual }, -- Visual mode selection
     VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = c.warning }, -- warning messages
@@ -131,9 +131,9 @@ function M.setup()
     -- SpecialComment= { }, -- special things inside a comment
     -- Debug         = { }, --    debugging statements
 
-    Underlined = { style = "underline" }, -- (preferred) text that stands out, HTML links
-    Bold = { style = "bold" },
-    Italic = { style = "italic" },
+    Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
+    Bold = { bold = true },
+    Italic = { italic = true },
 
     -- ("Ignore", below, may be invisible...)
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
@@ -144,24 +144,24 @@ function M.setup()
     qfLineNr = { fg = c.dark5 },
     qfFileName = { fg = c.blue },
 
-    htmlH1 = { fg = c.magenta, style = "bold" },
-    htmlH2 = { fg = c.blue, style = "bold" },
+    htmlH1 = { fg = c.magenta, bold = true },
+    htmlH2 = { fg = c.blue, bold = true },
 
-    -- mkdHeading = { fg = c.orange, style = "bold" },
+    -- mkdHeading = { fg = c.orange, bold = true },
     -- mkdCode = { bg = c.terminal_black, fg = c.fg },
     mkdCodeDelimiter = { bg = c.terminal_black, fg = c.fg },
-    mkdCodeStart = { fg = c.teal, style = "bold" },
-    mkdCodeEnd = { fg = c.teal, style = "bold" },
-    -- mkdLink = { fg = c.blue, style = "underline" },
+    mkdCodeStart = { fg = c.teal, bold = true },
+    mkdCodeEnd = { fg = c.teal, bold = true },
+    -- mkdLink = { fg = c.blue, underline = true },
 
-    markdownHeadingDelimiter = { fg = c.orange, style = "bold" },
+    markdownHeadingDelimiter = { fg = c.orange, bold = true },
     markdownCode = { fg = c.teal },
     markdownCodeBlock = { fg = c.teal },
-    markdownH1 = { fg = c.magenta, style = "bold" },
-    markdownH2 = { fg = c.blue, style = "bold" },
-    markdownLinkText = { fg = c.blue, style = "underline" },
+    markdownH1 = { fg = c.magenta, bold = true },
+    markdownH2 = { fg = c.blue, bold = true },
+    markdownLinkText = { fg = c.blue, underline = true },
 
-    ["@punctuation.special.markdown"] = { fg = c.orange, style = "bold" },
+    ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
     ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
@@ -184,10 +184,10 @@ function M.setup()
     DiagnosticVirtualTextInfo = { bg = util.darken(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
     DiagnosticVirtualTextHint = { bg = util.darken(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
-    DiagnosticUnderlineError = { style = "undercurl", sp = c.error }, -- Used to underline "Error" diagnostics
-    DiagnosticUnderlineWarn = { style = "undercurl", sp = c.warning }, -- Used to underline "Warning" diagnostics
-    DiagnosticUnderlineInfo = { style = "undercurl", sp = c.info }, -- Used to underline "Information" diagnostics
-    DiagnosticUnderlineHint = { style = "undercurl", sp = c.hint }, -- Used to underline "Hint" diagnostics
+    DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
+    DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
+    DiagnosticUnderlineInfo = { undercurl = true, sp = c.info }, -- Used to underline "Information" diagnostics
+    DiagnosticUnderlineHint = { undercurl = true, sp = c.hint }, -- Used to underline "Hint" diagnostics
 
     LspSignatureActiveParameter = { fg = c.orange },
     LspCodeLens = { fg = c.comment },
@@ -317,12 +317,12 @@ function M.setup()
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-    NvimTreeRootFolder = { fg = c.blue, style = "bold" },
+    NvimTreeRootFolder = { fg = c.blue, bold = true },
     NvimTreeGitDirty = { fg = c.git.change },
     NvimTreeGitNew = { fg = c.git.add },
     NvimTreeGitDeleted = { fg = c.git.delete },
     NvimTreeOpenedFile = { bg = c.bg_highlight },
-    NvimTreeSpecialFile = { fg = c.purple, style = "underline" },
+    NvimTreeSpecialFile = { fg = c.purple, underline = true },
     NvimTreeIndentMarker = { fg = c.fg_gutter },
     NvimTreeImageFile = { fg = c.fg_sidebar },
     NvimTreeSymlink = { fg = c.blue },
@@ -348,7 +348,7 @@ function M.setup()
     DashboardShortCut = { fg = c.cyan },
     DashboardHeader = { fg = c.blue },
     DashboardCenter = { fg = c.magenta },
-    DashboardFooter = { fg = c.yellow, style = "italic" },
+    DashboardFooter = { fg = c.yellow, italic = true },
 
     -- WhichKey
     WhichKey = { fg = c.cyan },
@@ -412,36 +412,36 @@ function M.setup()
     SneakScope = { bg = c.bg_visual },
 
     -- Hop
-    HopNextKey = { fg = c.magenta2, style = "bold" },
-    HopNextKey1 = { fg = c.blue2, style = "bold" },
+    HopNextKey = { fg = c.magenta2, bold = true },
+    HopNextKey1 = { fg = c.blue2, bold = true },
     HopNextKey2 = { fg = util.darken(c.blue2, 0.3) },
     HopUnmatched = { fg = c.dark3 },
 
-    LeapMatch = { bg = c.magenta2, fg = c.fg, style = "bold" },
-    LeapLabelPrimary = { fg = c.magenta2, style = "bold" },
-    LeapLabelSecondary = { fg = c.green1, style = "bold" },
+    LeapMatch = { bg = c.magenta2, fg = c.fg, bold = true },
+    LeapLabelPrimary = { fg = c.magenta2, bold = true },
+    LeapLabelSecondary = { fg = c.green1, bold = true },
     LeapBackdrop = { fg = c.dark3 },
 
     LightspeedGreyWash = { fg = c.dark3 },
     -- LightspeedCursor = { link = "Cursor" },
-    LightspeedLabel = { fg = c.magenta2, style = "bold,underline" },
-    LightspeedLabelDistant = { fg = c.green1, style = "bold,underline" },
-    LightspeedLabelDistantOverlapped = { fg = c.green2, style = "underline" },
-    LightspeedLabelOverlapped = { fg = c.magenta2, style = "underline" },
+    LightspeedLabel = { fg = c.magenta2, bold = true, underline = true },
+    LightspeedLabelDistant = { fg = c.green1, bold = true, underline = true },
+    LightspeedLabelDistantOverlapped = { fg = c.green2, underline = true },
+    LightspeedLabelOverlapped = { fg = c.magenta2, underline = true },
     LightspeedMaskedChar = { fg = c.orange },
-    LightspeedOneCharMatch = { bg = c.magenta2, fg = c.fg, style = "bold" },
+    LightspeedOneCharMatch = { bg = c.magenta2, fg = c.fg, bold = true },
     LightspeedPendingOpArea = { bg = c.magenta2, fg = c.fg },
-    LightspeedShortcut = { bg = c.magenta2, fg = c.fg, style = "bold,underline" },
+    LightspeedShortcut = { bg = c.magenta2, fg = c.fg, bold = true, underline = true },
     -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
     -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
-    LightspeedUnlabeledMatch = { fg = c.blue2, style = "bold" },
+    LightspeedUnlabeledMatch = { fg = c.blue2, bold = true },
 
     -- Cmp
     CmpDocumentation = { fg = c.fg, bg = c.bg_float },
     CmpDocumentationBorder = { fg = c.border_highlight, bg = c.bg_float },
 
     CmpItemAbbr = { fg = c.fg, bg = c.none },
-    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none, style = "strikethrough" },
+    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none, strikethrough = true },
     CmpItemAbbrMatch = { fg = c.blue1, bg = c.none },
     CmpItemAbbrMatchFuzzy = { fg = c.blue1, bg = c.none },
 
@@ -500,20 +500,20 @@ function M.setup()
     ScrollbarMisc = { fg = c.purple, bg = c.none },
 
     -- Mini
-    MiniCompletionActiveParameter = { style = "underline" },
+    MiniCompletionActiveParameter = { underline = true },
 
     MiniCursorword = { bg = c.fg_gutter },
     MiniCursorwordCurrent = { bg = c.fg_gutter },
 
     MiniIndentscopeSymbol = { fg = c.blue1 },
-    MiniIndentscopePrefix = { style = "nocombine" }, -- Make it invisible
+    MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
     MiniJump = { fg = c.bg_highlight, bg = c.magenta },
 
-    MiniJump2dSpot = { fg = c.magenta2, style = "bold,nocombine" },
+    MiniJump2dSpot = { fg = c.magenta2, bold = true, nocombine = true },
 
-    MiniStarterCurrent = { style = "nocombine" },
-    MiniStarterFooter = { fg = c.yellow, style = "italic" },
+    MiniStarterCurrent = { nocombine = true },
+    MiniStarterFooter = { fg = c.yellow, italic = true },
     MiniStarterHeader = { fg = c.blue },
     MiniStarterInactive = { fg = c.comment, style = options.styles.comments },
     MiniStarterItem = { fg = c.fg, bg = options.transparent and c.none or c.bg },
@@ -526,12 +526,12 @@ function M.setup()
     MiniStatuslineFileinfo = { fg = c.fg_dark, bg = c.bg_highlight },
     MiniStatuslineFilename = { fg = c.fg_dark, bg = c.fg_gutter },
     MiniStatuslineInactive = { fg = c.blue, bg = c.bg_statusline },
-    MiniStatuslineModeCommand = { fg = c.black, bg = c.yellow, style = "bold" },
-    MiniStatuslineModeInsert = { fg = c.black, bg = c.green, style = "bold" },
-    MiniStatuslineModeNormal = { fg = c.black, bg = c.blue, style = "bold" },
-    MiniStatuslineModeOther = { fg = c.black, bg = c.teal, style = "bold" },
-    MiniStatuslineModeReplace = { fg = c.black, bg = c.red, style = "bold" },
-    MiniStatuslineModeVisual = { fg = c.black, bg = c.magenta, style = "bold" },
+    MiniStatuslineModeCommand = { fg = c.black, bg = c.yellow, bold = true },
+    MiniStatuslineModeInsert = { fg = c.black, bg = c.green, bold = true },
+    MiniStatuslineModeNormal = { fg = c.black, bg = c.blue, bold = true },
+    MiniStatuslineModeOther = { fg = c.black, bg = c.teal, bold = true },
+    MiniStatuslineModeReplace = { fg = c.black, bg = c.red, bold = true },
+    MiniStatuslineModeVisual = { fg = c.black, bg = c.magenta, bold = true },
 
     MiniSurround = { bg = c.orange, fg = c.black },
 
@@ -544,9 +544,9 @@ function M.setup()
     MiniTablineTabpagesection = { bg = c.bg_statusline, fg = c.none },
     MiniTablineVisible = { fg = c.fg, bg = c.bg_statusline },
 
-    MiniTestEmphasis = { style = "bold" },
-    MiniTestFail = { fg = c.red, style = "bold" },
-    MiniTestPass = { fg = c.green, style = "bold" },
+    MiniTestEmphasis = { bold = true },
+    MiniTestFail = { fg = c.red, bold = true },
+    MiniTestPass = { fg = c.green, bold = true },
 
     MiniTrailspace = { bg = c.red },
   }
@@ -571,7 +571,7 @@ function M.setup()
   theme.defer = {}
 
   if options.hide_inactive_statusline then
-    local inactive = { style = "underline", bg = c.none, fg = c.bg, sp = c.border }
+    local inactive = { underline = true, bg = c.none, fg = c.bg, sp = c.border }
 
     -- StatusLineNC
     theme.highlights.StatusLineNC = inactive
