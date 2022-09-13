@@ -7,7 +7,7 @@ local M = {}
 ---@field fg string|nil
 ---@field bg string|nil
 ---@field sp string|nil
----@field style string|nil
+---@field style string|nil|Highlight
 
 ---@alias Highlights table<string,Highlight>
 
