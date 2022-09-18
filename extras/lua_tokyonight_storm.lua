@@ -777,7 +777,6 @@ local highlights = {
     fg = "#7aa2f7"
   },
   MsgArea = {
-    bg = "#1f2335",
     fg = "#a9b1d6"
   },
   NeoTreeNormal = {
