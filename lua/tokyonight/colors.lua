@@ -2,14 +2,8 @@ local util = require("tokyonight.util")
 
 local M = {}
 
----@return ColorScheme
-function M.setup(opts)
-  opts = opts or {}
-  local config = require("tokyonight.config")
-
-  -- Color Palette
-  ---@class ColorScheme
-  local colors = {
+M.default = function()
+  return {
     none = "NONE",
     bg_dark = "#1f2335",
     bg = "#24283b",
@@ -42,7 +36,55 @@ function M.setup(opts)
     red1 = "#db4b4b",
     git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
   }
-  if config.options.style == "night" or config.is_day() then
+end
+
+M.moon = function()
+  return {
+    none = "NONE",
+    bg_dark = "#1e2030", --
+    bg = "#222436", --
+    bg_highlight = "#2f334d", --
+    terminal_black = "#444a73", --
+    fg = "#c8d3f5", --
+    fg_dark = "#828bb8", --
+    fg_gutter = "#3b4261",
+    dark3 = "#545c7e",
+    comment = "#7a88cf", --
+    dark5 = "#737aa2",
+    blue0 = "#3d59a1",
+    blue = "#82aaff", --
+    cyan = "#86e1fc", --
+    blue1 = "#2ac3de",
+    blue2 = "#0db9d7",
+    blue5 = "#89ddff",
+    blue6 = "#b4f9f8",
+    blue7 = "#394b70",
+    magenta = "#c099ff", --
+    magenta2 = "#ff007c",
+    purple = "#c099ff", --
+    orange = "#ff966c", --
+    yellow = "#ffc777", --
+    green = "#c3e88d", --
+    green1 = "#73daca",
+    green2 = "#41a6b5",
+    teal = "#4fd6be", --
+    red = "#ff757f", --
+    red1 = "#db4b4b",
+    git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
+  }
+end
+
+---@return ColorScheme
+function M.setup(opts)
+  opts = opts or {}
+  local config = require("tokyonight.config")
+
+  -- Color Palette
+  ---@class ColorScheme
+  local colors = M.default()
+  if config.options.style == "moon" then
+    colors = vim.tbl_deep_extend("force", colors, M.moon())
+  elseif config.options.style == "night" or config.is_day() then
     colors.bg = "#1a1b26"
     colors.bg_dark = "#16161e"
   end
