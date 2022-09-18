@@ -30,6 +30,7 @@ function M.setup()
     storm = " Storm",
     night = "",
     day = " Day",
+    moon = " Moon",
   }
 
   for extra, ext in pairs(extras) do
