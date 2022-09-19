@@ -1,4 +1,4 @@
-*tokyonight.txt*         For NVIM v0.5.0        Last change: 2022 September 17
+*tokyonight.txt*         For NVIM v0.5.0        Last change: 2022 September 19
 
 ==============================================================================
 Table of Contents                               *tokyonight-table-of-contents*
@@ -6,6 +6,7 @@ Table of Contents                               *tokyonight-table-of-contents*
 1. 🏙 Tokyo Night                              |tokyonight-🏙-tokyo-night|
   - Storm                                                   |tokyonight-storm|
   - Night                                                   |tokyonight-night|
+  - Moon                                                     |tokyonight-moon|
   - Day                                                       |tokyonight-day|
   - ✨ Features                                     |tokyonight-✨-features|
   - ⚡️ Requirements                       |tokyonight-⚡️-requirements|
@@ -36,6 +37,8 @@ NIGHT                                                       *tokyonight-night*
 <img src="https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png" title="fig:"/>
 <p class="caption">image</p>
 </div>
+
+MOON                                                         *tokyonight-moon*
 
 DAY                                                           *tokyonight-day*
 
@@ -86,7 +89,7 @@ PLUGIN SUPPORT ~
 ⚡️ REQUIREMENTS                           *tokyonight-⚡️-requirements*
 
 
-- Neovim >= 0.5.0
+- Neovim >= 0.6.0
 
 
 📦 INSTALLATION                               *tokyonight-📦-installation*
@@ -119,6 +122,7 @@ Enable the colorscheme:
     colorscheme tokyonight-night
     colorscheme tokyonight-storm
     colorscheme tokyonight-day
+    colorscheme tokyonight-moon
 <
 
 
@@ -157,7 +161,8 @@ To enable the `tokyonight` colorscheme for `Lightline`:
   `colorscheme tokyonight`
 
 
-The theme comes in three styles, `storm`, a darker variant `night` and `day`.
+The theme comes in four styles, `storm`, `moon`, a darker variant `night` and
+`day`.
 
 The **day** style will be used if:
 
@@ -172,7 +177,7 @@ TokyoNight will use the default options, unless you call `setup`.
     require("tokyonight").setup({
       -- your configuration comes here
       -- or leave it empty to use the default settings
-      style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+      style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
       transparent = false, -- Enable this to disable setting the background color
       terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
       styles = {
@@ -218,8 +223,8 @@ How the highlight groups are calculated:
 
 
 Please refer to default values for `colors` and `highlights` for the storm
-<extras/lua_tokyonight_storm.lua>, night <extras/lua_tokyonight_night.lua>, day
-<extras/lua_tokyonight_day.lua>
+<extras/lua_tokyonight_storm.lua>, moon <extras/lua_tokyonight_moon.lua>, night
+<extras/lua_tokyonight_night.lua>, day <extras/lua_tokyonight_day.lua>
 
 Example for changing some settings and colors
 
