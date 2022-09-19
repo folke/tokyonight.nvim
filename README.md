@@ -12,6 +12,8 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
 
+## Moon
+
 ## Day
 
 ![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
@@ -53,7 +55,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## ⚡️ Requirements
 
-- Neovim >= 0.5.0
+- Neovim >= 0.6.0
 
 ## 📦 Installation
 
@@ -83,6 +85,7 @@ colorscheme tokyonight
 colorscheme tokyonight-night
 colorscheme tokyonight-storm
 colorscheme tokyonight-day
+colorscheme tokyonight-moon
 ```
 
 ```lua
@@ -115,7 +118,7 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with
 > `colorscheme tokyonight`
 
-The theme comes in three styles, `storm`, a darker variant `night` and `day`.
+The theme comes in four styles, `storm`, `moon`, a darker variant `night` and `day`.
 
 The **day** style will be used if:
 
@@ -128,7 +131,7 @@ TokyoNight will use the default options, unless you call `setup`.
 require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
-  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
@@ -170,7 +173,7 @@ How the highlight groups are calculated:
 3. the **colors** are then used to generate the highlight groups
 4. `config.on_highlights(highlights, colors)` is ran, where you can overide the highlight groups
 
-Please refer to default values for `colors` and `highlights` for the [storm](extras/lua_tokyonight_storm.lua), [night](extras/lua_tokyonight_night.lua), [day](extras/lua_tokyonight_day.lua)
+Please refer to default values for `colors` and `highlights` for the [storm](extras/lua_tokyonight_storm.lua), [moon](extras/lua_tokyonight_moon.lua), [night](extras/lua_tokyonight_night.lua), [day](extras/lua_tokyonight_day.lua)
 
 Example for changing some settings and colors
 
