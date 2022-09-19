@@ -104,7 +104,7 @@ local highlights = {
     fg = "#f52a65"
   },
   BufferLineIndicatorSelected = {
-    fg = "#506d9c"
+    fg = "#506d9b"
   },
   BufferTabpage = {
     bg = "#e9e9ec",
@@ -406,7 +406,7 @@ local highlights = {
     fg = "#399a96"
   },
   GitGutterChange = {
-    fg = "#6482bd"
+    fg = "#6382bd"
   },
   GitGutterDelete = {
     fg = "#c25d64"
@@ -415,7 +415,7 @@ local highlights = {
     fg = "#399a96"
   },
   GitSignsChange = {
-    fg = "#6482bd"
+    fg = "#6382bd"
   },
   GitSignsDelete = {
     fg = "#c25d64"
@@ -775,7 +775,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#aecde6",
-    fg = "#4197a4"
+    fg = "#4097a3"
   },
   NeogitDiffContextHighlight = {
     bg = "#c3c6d8",
@@ -823,10 +823,10 @@ local highlights = {
     fg = "#c47981"
   },
   NvimTreeGitDirty = {
-    fg = "#506d9c"
+    fg = "#506d9b"
   },
   NvimTreeGitNew = {
-    fg = "#4197a4"
+    fg = "#4097a3"
   },
   NvimTreeImageFile = {
     fg = "#6172b0"
@@ -1161,10 +1161,10 @@ local highlights = {
     bg = "#e9e9ec"
   },
   diffAdded = {
-    fg = "#4197a4"
+    fg = "#4097a3"
   },
   diffChanged = {
-    fg = "#506d9c"
+    fg = "#506d9b"
   },
   diffFile = {
     fg = "#2e7de9"

@@ -29,6 +29,6 @@ colors:
 
   indexed_colors:
     - { index: 16, color: '0xff966c' }
-    - { index: 17, color: '0xdb4b4b' }
+    - { index: 17, color: '0xc53b53' }
     
   
