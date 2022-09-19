@@ -2,44 +2,54 @@ local util = require("tokyonight.util")
 
 local M = {}
 
-M.default = function()
-  return {
-    none = "NONE",
-    bg_dark = "#1f2335",
-    bg = "#24283b",
-    bg_highlight = "#292e42",
-    terminal_black = "#414868",
-    fg = "#c0caf5",
-    fg_dark = "#a9b1d6",
-    fg_gutter = "#3b4261",
-    dark3 = "#545c7e",
-    comment = "#565f89",
-    dark5 = "#737aa2",
-    blue0 = "#3d59a1",
-    blue = "#7aa2f7",
-    cyan = "#7dcfff",
-    blue1 = "#2ac3de",
-    blue2 = "#0db9d7",
-    blue5 = "#89ddff",
-    blue6 = "#b4f9f8",
-    blue7 = "#394b70",
-    magenta = "#bb9af7",
-    magenta2 = "#ff007c",
-    purple = "#9d7cd8",
-    orange = "#ff9e64",
-    yellow = "#e0af68",
-    green = "#9ece6a",
-    green1 = "#73daca",
-    green2 = "#41a6b5",
-    teal = "#1abc9c",
-    red = "#f7768e",
-    red1 = "#db4b4b",
-    git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
-  }
-end
+---@class Palette
+M.default = {
+  none = "NONE",
+  bg_dark = "#1f2335",
+  bg = "#24283b",
+  bg_highlight = "#292e42",
+  terminal_black = "#414868",
+  fg = "#c0caf5",
+  fg_dark = "#a9b1d6",
+  fg_gutter = "#3b4261",
+  dark3 = "#545c7e",
+  comment = "#565f89",
+  dark5 = "#737aa2",
+  blue0 = "#3d59a1",
+  blue = "#7aa2f7",
+  cyan = "#7dcfff",
+  blue1 = "#2ac3de",
+  blue2 = "#0db9d7",
+  blue5 = "#89ddff",
+  blue6 = "#b4f9f8",
+  blue7 = "#394b70",
+  magenta = "#bb9af7",
+  magenta2 = "#ff007c",
+  purple = "#9d7cd8",
+  orange = "#ff9e64",
+  yellow = "#e0af68",
+  green = "#9ece6a",
+  green1 = "#73daca",
+  green2 = "#41a6b5",
+  teal = "#1abc9c",
+  red = "#f7768e",
+  red1 = "#db4b4b",
+  git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
+  gitSigns = {
+    add = "#266d6a",
+    change = "#536c9e",
+    delete = "#b2555b",
+  },
+}
+
+M.night = {
+  bg = "#1a1b26",
+  bg_dark = "#16161e",
+}
+M.day = M.night
 
 M.moon = function()
-  return {
+  local ret = {
     none = "NONE",
     bg_dark = "#1e2030", --
     bg = "#222436", --
@@ -51,27 +61,37 @@ M.moon = function()
     dark3 = "#545c7e",
     comment = "#7a88cf", --
     dark5 = "#737aa2",
-    blue0 = "#3d59a1",
+    blue0 = "#3e68d7", --
     blue = "#82aaff", --
     cyan = "#86e1fc", --
-    blue1 = "#2ac3de",
+    blue1 = "#65bcff", --
     blue2 = "#0db9d7",
     blue5 = "#89ddff",
-    blue6 = "#b4f9f8",
+    blue6 = "#b4f9f8", --
     blue7 = "#394b70",
-    magenta = "#c099ff", --
+    magenta = "#fca7ea", --
     magenta2 = "#ff007c",
     purple = "#c099ff", --
     orange = "#ff966c", --
     yellow = "#ffc777", --
     green = "#c3e88d", --
-    green1 = "#73daca",
+    green1 = "#4fd6be", --
     green2 = "#41a6b5",
     teal = "#4fd6be", --
     red = "#ff757f", --
-    red1 = "#db4b4b",
-    git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
+    red1 = "#c53b53", --
   }
+  ret.git = {
+    change = util.blend(ret.blue, ret.bg, "ee"),
+    add = util.blend(ret.green, ret.bg, "ee"),
+    delete = util.blend(ret.red, ret.bg, "dd"),
+  }
+  ret.gitSigns = {
+    change = util.blend(ret.blue, ret.bg, "66"),
+    add = util.blend(ret.green, ret.bg, "66"),
+    delete = util.blend(ret.red, ret.bg, "aa"),
+  }
+  return ret
 end
 
 ---@return ColorScheme
@@ -79,15 +99,15 @@ function M.setup(opts)
   opts = opts or {}
   local config = require("tokyonight.config")
 
-  -- Color Palette
-  ---@class ColorScheme
-  local colors = M.default()
-  if config.options.style == "moon" then
-    colors = vim.tbl_deep_extend("force", colors, M.moon())
-  elseif config.options.style == "night" or config.is_day() then
-    colors.bg = "#1a1b26"
-    colors.bg_dark = "#16161e"
+  local palette = M[config.options.style] or {}
+  if type(palette) == "function" then
+    palette = palette()
   end
+
+  -- Color Palette
+  ---@class ColorScheme: Palette
+  local colors = vim.tbl_deep_extend("force", M.default, palette)
+
   util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
 
@@ -96,12 +116,6 @@ function M.setup(opts)
     delete = util.darken(colors.red1, 0.15),
     change = util.darken(colors.blue7, 0.15),
     text = colors.blue7,
-  }
-
-  colors.gitSigns = {
-    add = "#266d6a",
-    change = "#536c9e",
-    delete = "#b2555b",
   }
 
   colors.git.ignore = colors.dark3
