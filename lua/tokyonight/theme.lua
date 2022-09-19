@@ -316,7 +316,7 @@ function M.setup()
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-    NvimTreeVertSplit = { fg = c.error, bg = c.error },
+    NvimTreeVertSplit = { fg = c.bg_sidebar, bg = c.bg_sidebar },
     NvimTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeRootFolder = { fg = c.blue, bold = true },
     NvimTreeGitDirty = { fg = c.git.change },
