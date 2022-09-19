@@ -40,6 +40,11 @@ NIGHT                                                       *tokyonight-night*
 
 MOON                                                         *tokyonight-moon*
 
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png" title="fig:"/>
+<p class="caption">image</p>
+</div>
+
 DAY                                                           *tokyonight-day*
 
 <div class="figure">
