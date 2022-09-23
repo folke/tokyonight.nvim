@@ -24,7 +24,7 @@ function M.generate(colors)
     set -l purple ${purple}
     set -l cyan ${cyan}
     set -l pink ${magenta}
-    
+
     # Syntax Highlighting Colors
     set -g fish_color_normal $foreground
     set -g fish_color_command $cyan
@@ -40,13 +40,14 @@ function M.generate(colors)
     set -g fish_color_operator $green
     set -g fish_color_escape $pink
     set -g fish_color_autosuggestion $comment
-    
+
     # Completion Pager Colors
     set -g fish_pager_color_progress $comment
     set -g fish_pager_color_prefix $cyan
     set -g fish_pager_color_completion $foreground
     set -g fish_pager_color_description $comment
-    
+    set -g fish_pager_color_selected_background --background=$selection
+
   ]],
     fishColors
   )
