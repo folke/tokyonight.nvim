@@ -779,6 +779,122 @@ local highlights = {
   MsgArea = {
     fg = "#828bb8"
   },
+  NavicIconsArray = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsBoolean = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsClass = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsConstant = {
+    bg = "NONE",
+    fg = "#c099ff"
+  },
+  NavicIconsConstructor = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsEnum = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsEnumMember = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NavicIconsEvent = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsField = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NavicIconsFile = {
+    bg = "NONE",
+    fg = "#c8d3f5"
+  },
+  NavicIconsFunction = {
+    bg = "NONE",
+    fg = "#82aaff"
+  },
+  NavicIconsInterface = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsKey = {
+    bg = "NONE",
+    fg = "#fca7ea"
+  },
+  NavicIconsKeyword = {
+    bg = "NONE",
+    fg = "#fca7ea"
+  },
+  NavicIconsMethod = {
+    bg = "NONE",
+    fg = "#82aaff"
+  },
+  NavicIconsModule = {
+    bg = "NONE",
+    fg = "#ffc777"
+  },
+  NavicIconsNamespace = {
+    bg = "NONE",
+    fg = "#c8d3f5"
+  },
+  NavicIconsNull = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsNumber = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsObject = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsOperator = {
+    bg = "NONE",
+    fg = "#c8d3f5"
+  },
+  NavicIconsPackage = {
+    bg = "NONE",
+    fg = "#c8d3f5"
+  },
+  NavicIconsProperty = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NavicIconsString = {
+    bg = "NONE",
+    fg = "#c3e88d"
+  },
+  NavicIconsStruct = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NavicIconsTypeParameter = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NavicIconsVariable = {
+    bg = "NONE",
+    fg = "#c099ff"
+  },
+  NavicSeparator = {
+    bg = "NONE",
+    fg = "#c8d3f5"
+  },
+  NavicText = {
+    bg = "NONE",
+    fg = "#c8d3f5"
+  },
   NeoTreeNormal = {
     bg = "#1e2030",
     fg = "#828bb8"
@@ -872,6 +988,10 @@ local highlights = {
   },
   NvimTreeSymlink = {
     fg = "#82aaff"
+  },
+  NvimTreeWinSeparator = {
+    bg = "#1e2030",
+    fg = "#1e2030"
   },
   Operator = {
     fg = "#89ddff"

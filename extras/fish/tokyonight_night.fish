@@ -9,7 +9,7 @@
     set -l purple 9d7cd8
     set -l cyan 7dcfff
     set -l pink bb9af7
-    
+
     # Syntax Highlighting Colors
     set -g fish_color_normal $foreground
     set -g fish_color_command $cyan
@@ -25,11 +25,12 @@
     set -g fish_color_operator $green
     set -g fish_color_escape $pink
     set -g fish_color_autosuggestion $comment
-    
+
     # Completion Pager Colors
     set -g fish_pager_color_progress $comment
     set -g fish_pager_color_prefix $cyan
     set -g fish_pager_color_completion $foreground
     set -g fish_pager_color_description $comment
-    
+    set -g fish_pager_color_selected_background --background=$selection
+
   

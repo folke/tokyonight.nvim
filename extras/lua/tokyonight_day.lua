@@ -104,7 +104,7 @@ local highlights = {
     fg = "#f52a65"
   },
   BufferLineIndicatorSelected = {
-    fg = "#506d9b"
+    fg = "#6183b9"
   },
   BufferTabpage = {
     bg = "#e9e9ec",
@@ -403,22 +403,22 @@ local highlights = {
     style = {}
   },
   GitGutterAdd = {
-    fg = "#399a96"
+    fg = "#266d6a"
   },
   GitGutterChange = {
-    fg = "#6382bd"
+    fg = "#526c9e"
   },
   GitGutterDelete = {
-    fg = "#c25d64"
+    fg = "#b2555b"
   },
   GitSignsAdd = {
-    fg = "#399a96"
+    fg = "#266d6a"
   },
   GitSignsChange = {
-    fg = "#6382bd"
+    fg = "#526c9e"
   },
   GitSignsDelete = {
-    fg = "#c25d64"
+    fg = "#b2555b"
   },
   GlyphPalette1 = {
     fg = "#c64343"
@@ -762,6 +762,122 @@ local highlights = {
   MsgArea = {
     fg = "#6172b0"
   },
+  NavicIconsArray = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsBoolean = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsClass = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsConstant = {
+    bg = "NONE",
+    fg = "#9854f1"
+  },
+  NavicIconsConstructor = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsEnum = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsEnumMember = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  NavicIconsEvent = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsField = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  NavicIconsFile = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  NavicIconsFunction = {
+    bg = "NONE",
+    fg = "#2e7de9"
+  },
+  NavicIconsInterface = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsKey = {
+    bg = "NONE",
+    fg = "#7847bd"
+  },
+  NavicIconsKeyword = {
+    bg = "NONE",
+    fg = "#7847bd"
+  },
+  NavicIconsMethod = {
+    bg = "NONE",
+    fg = "#2e7de9"
+  },
+  NavicIconsModule = {
+    bg = "NONE",
+    fg = "#8c6c3e"
+  },
+  NavicIconsNamespace = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  NavicIconsNull = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsNumber = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsObject = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsOperator = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  NavicIconsPackage = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  NavicIconsProperty = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  NavicIconsString = {
+    bg = "NONE",
+    fg = "#587539"
+  },
+  NavicIconsStruct = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  NavicIconsTypeParameter = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  NavicIconsVariable = {
+    bg = "NONE",
+    fg = "#9854f1"
+  },
+  NavicSeparator = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  NavicText = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
   NeoTreeNormal = {
     bg = "#e9e9ec",
     fg = "#6172b0"
@@ -775,7 +891,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#aecde6",
-    fg = "#4097a3"
+    fg = "#2c6c75"
   },
   NeogitDiffContextHighlight = {
     bg = "#c3c6d8",
@@ -783,7 +899,7 @@ local highlights = {
   },
   NeogitDiffDeleteHighlight = {
     bg = "#dfccd4",
-    fg = "#c47981"
+    fg = "#914c54"
   },
   NeogitHunkHeader = {
     bg = "#c4c8da",
@@ -820,13 +936,13 @@ local highlights = {
     fg = "#8c6c3e"
   },
   NvimTreeGitDeleted = {
-    fg = "#c47981"
+    fg = "#914c54"
   },
   NvimTreeGitDirty = {
-    fg = "#506d9b"
+    fg = "#6183b9"
   },
   NvimTreeGitNew = {
-    fg = "#4097a3"
+    fg = "#2c6c75"
   },
   NvimTreeImageFile = {
     fg = "#6172b0"
@@ -855,6 +971,10 @@ local highlights = {
   },
   NvimTreeSymlink = {
     fg = "#2e7de9"
+  },
+  NvimTreeWinSeparator = {
+    bg = "#e9e9ec",
+    fg = "#e9e9ec"
   },
   Operator = {
     fg = "#006a83"
@@ -1161,10 +1281,10 @@ local highlights = {
     bg = "#e9e9ec"
   },
   diffAdded = {
-    fg = "#4097a3"
+    fg = "#2c6c75"
   },
   diffChanged = {
-    fg = "#506d9b"
+    fg = "#6183b9"
   },
   diffFile = {
     fg = "#2e7de9"
@@ -1182,7 +1302,7 @@ local highlights = {
     fg = "#8c6c3e"
   },
   diffRemoved = {
-    fg = "#c47981"
+    fg = "#914c54"
   },
   healthError = {
     fg = "#c64343"
