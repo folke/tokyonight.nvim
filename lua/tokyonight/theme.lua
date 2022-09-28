@@ -421,6 +421,9 @@ function M.setup()
     HopNextKey2 = { fg = util.darken(c.blue2, 0.3) },
     HopUnmatched = { fg = c.dark3 },
 
+    TSNodeKey = { fg = c.magenta2, bold = true },
+    TSNodeUnmatched = { fg = c.dark3 },
+
     LeapMatch = { bg = c.magenta2, fg = c.fg, bold = true },
     LeapLabelPrimary = { fg = c.magenta2, bold = true },
     LeapLabelSecondary = { fg = c.green1, bold = true },
