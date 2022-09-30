@@ -354,6 +354,13 @@ function M.setup()
     DashboardCenter = { fg = c.magenta },
     DashboardFooter = { fg = c.yellow, italic = true },
 
+    -- Alpha
+    AlphaShortcut = { fg = c.cyan },
+    AlphaHeader = { fg = c.blue },
+    AlphaHeaderLabel = { fg = c.orange },
+    AlphaFooter = { fg = c.yellow, italic = true },
+    AlphaButtons = { fg = c.magenta },
+
     -- WhichKey
     WhichKey = { fg = c.cyan },
     WhichKeyGroup = { fg = c.blue },
