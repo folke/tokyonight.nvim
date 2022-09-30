@@ -546,7 +546,7 @@ function M.setup()
     MiniIndentscopeSymbol = { fg = c.blue1 },
     MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
-    MiniJump = { fg = c.bg_highlight, bg = c.magenta },
+    MiniJump = { bg = c.magenta2, fg = "#ffffff" },
 
     MiniJump2dSpot = { fg = c.magenta2, bold = true, nocombine = true },
 
