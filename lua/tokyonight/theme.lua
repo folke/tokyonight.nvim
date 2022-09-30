@@ -300,6 +300,25 @@ function M.setup()
     NeogitDiffDeleteHighlight = { fg = c.git.delete, bg = c.diff.delete },
     NeogitDiffAddHighlight = { fg = c.git.add, bg = c.diff.add },
 
+    -- Neotest
+    NeotestPassed = { fg = c.green },
+    NeotestRunning = { fg = c.yellow },
+    NeotestFailed = { fg = c.red },
+    NeotestSkipped = { fg = c.blue },
+    NeotestTest = { fg = c.fg_sidebar },
+    NeotestNamespace = { fg = c.green2 },
+    NeotestFocused = { fg = c.yellow },
+    NeotestFile = { fg = c.teal },
+    NeotestDir = { fg = c.blue },
+    NeotestBorder = { fg = c.blue },
+    NeotestIndent = { fg = c.fg_sidebar },
+    NeotestExpandMarker = { fg = c.fg_sidebar },
+    NeotestAdapterName = { fg = c.purple, bold = true },
+    NeotestWinSelect = { fg = c.blue },
+    NeotestMarked = { fg = c.blue },
+    NeotestTarget = { fg = c.blue },
+    --[[ NeotestUnknown = {}, ]]
+
     -- GitGutter
     GitGutterAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
