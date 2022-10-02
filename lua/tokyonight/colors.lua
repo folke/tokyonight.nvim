@@ -99,7 +99,8 @@ function M.setup(opts)
   opts = opts or {}
   local config = require("tokyonight.config")
 
-  local palette = M[config.options.style] or {}
+  local style = config.is_day() and config.options.light_style or config.options.style
+  local palette = M[style] or {}
   if type(palette) == "function" then
     palette = palette()
   end
