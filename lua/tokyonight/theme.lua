@@ -563,6 +563,10 @@ function M.setup()
     ScrollbarMiscHandle = { fg = c.purple, bg = c.bg_highlight },
     ScrollbarMisc = { fg = c.purple, bg = c.none },
 
+    -- Yanky
+    YankyPut = { link = "IncSearch" },
+    YankyYanked = { link = "IncSearch" },
+
     -- Mini
     MiniCompletionActiveParameter = { underline = true },
 
