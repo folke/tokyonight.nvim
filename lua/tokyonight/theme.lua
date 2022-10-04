@@ -444,7 +444,7 @@ function M.setup()
     -- Hop
     HopNextKey = { fg = c.magenta2, bold = true },
     HopNextKey1 = { fg = c.blue2, bold = true },
-    HopNextKey2 = { fg = util.darken(c.blue2, 0.3) },
+    HopNextKey2 = { fg = util.darken(c.blue2, 0.6) },
     HopUnmatched = { fg = c.dark3 },
 
     TSNodeKey = { fg = c.magenta2, bold = true },
