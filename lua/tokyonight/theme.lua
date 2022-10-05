@@ -567,6 +567,32 @@ function M.setup()
     YankyPut = { link = "IncSearch" },
     YankyYanked = { link = "IncSearch" },
 
+    -- Notify
+    --- Border
+    NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = c.bg_float },
+    NotifyWARNBorder  = { fg = util.darken(c.warning, 0.3), bg = c.bg_float },
+    NotifyINFOBorder  = { fg = util.darken(c.info, 0.3), bg = c.bg_float },
+    NotifyDEBUGBorder = { fg = util.darken(c.comment, 0.3), bg = c.bg_float },
+    NotifyTRACEBorder = { fg = util.darken(c.purple, 0.3), bg = c.bg_float },
+    --- Icons
+    NotifyERRORIcon   = { fg = c.error },
+    NotifyWARNIcon    = { fg = c.warning },
+    NotifyINFOIcon    = { fg = c.info },
+    NotifyDEBUGIcon   = { fg = c.comment },
+    NotifyTRACEIcon   = { fg = c.purple },
+    --- Title
+    NotifyERRORTitle  = { fg = c.error },
+    NotifyWARNTitle   = { fg = c.warning },
+    NotifyINFOTitle   = { fg = c.info },
+    NotifyDEBUGTitle  = { fg = c.comment },
+    NotifyTRACETitle  = { fg = c.purple },
+    --- Body
+    NotifyERRORBody   = { fg = c.fg, bg = c.bg_float },
+    NotifyWARNBody    = { fg = c.fg, bg = c.bg_float },
+    NotifyINFOBody    = { fg = c.fg, bg = c.bg_float },
+    NotifyDEBUGBody   = { fg = c.fg, bg = c.bg_float },
+    NotifyTRACEBody   = { fg = c.fg, bg = c.bg_float },
+
     -- Mini
     MiniCompletionActiveParameter = { underline = true },
 
