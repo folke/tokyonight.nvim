@@ -60,6 +60,22 @@ local highlights = {
   ALEWarningSign = {
     fg = "#8c6c3e"
   },
+  AlphaButtons = {
+    fg = "#9854f1"
+  },
+  AlphaFooter = {
+    fg = "#8c6c3e",
+    italic = true
+  },
+  AlphaHeader = {
+    fg = "#2e7de9"
+  },
+  AlphaHeaderLabel = {
+    fg = "#b15c00"
+  },
+  AlphaShortcut = {
+    fg = "#007197"
+  },
   Bold = {
     bold = true
   },
@@ -104,7 +120,7 @@ local highlights = {
     fg = "#f52a65"
   },
   BufferLineIndicatorSelected = {
-    fg = "#6183b9"
+    fg = "#506d9b"
   },
   BufferTabpage = {
     bg = "#e9e9ec",
@@ -403,22 +419,22 @@ local highlights = {
     style = {}
   },
   GitGutterAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitGutterChange = {
-    fg = "#526c9e"
+    fg = "#6382bd"
   },
   GitGutterDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GitSignsAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitSignsChange = {
-    fg = "#526c9e"
+    fg = "#6382bd"
   },
   GitSignsDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GlyphPalette1 = {
     fg = "#c64343"
@@ -617,8 +633,8 @@ local highlights = {
     fg = "#188092"
   },
   MiniJump = {
-    bg = "#9854f1",
-    fg = "#c4c8da"
+    bg = "#d20065",
+    fg = "#474747"
   },
   MiniJump2dSpot = {
     bold = true,
@@ -891,7 +907,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#aecde6",
-    fg = "#2c6c75"
+    fg = "#4097a3"
   },
   NeogitDiffContextHighlight = {
     bg = "#c3c6d8",
@@ -899,7 +915,7 @@ local highlights = {
   },
   NeogitDiffDeleteHighlight = {
     bg = "#dfccd4",
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NeogitHunkHeader = {
     bg = "#c4c8da",
@@ -911,6 +927,55 @@ local highlights = {
   },
   NeogitRemote = {
     fg = "#7847bd"
+  },
+  NeotestAdapterName = {
+    bold = true,
+    fg = "#7847bd"
+  },
+  NeotestBorder = {
+    fg = "#2e7de9"
+  },
+  NeotestDir = {
+    fg = "#2e7de9"
+  },
+  NeotestExpandMarker = {
+    fg = "#6172b0"
+  },
+  NeotestFailed = {
+    fg = "#f52a65"
+  },
+  NeotestFile = {
+    fg = "#118c74"
+  },
+  NeotestFocused = {
+    fg = "#8c6c3e"
+  },
+  NeotestIndent = {
+    fg = "#6172b0"
+  },
+  NeotestMarked = {
+    fg = "#2e7de9"
+  },
+  NeotestNamespace = {
+    fg = "#38919f"
+  },
+  NeotestPassed = {
+    fg = "#587539"
+  },
+  NeotestRunning = {
+    fg = "#8c6c3e"
+  },
+  NeotestSkipped = {
+    fg = "#2e7de9"
+  },
+  NeotestTarget = {
+    fg = "#2e7de9"
+  },
+  NeotestTest = {
+    fg = "#6172b0"
+  },
+  NeotestWinSelect = {
+    fg = "#2e7de9"
   },
   NonText = {
     fg = "#8990b3"
@@ -936,13 +1001,13 @@ local highlights = {
     fg = "#8c6c3e"
   },
   NvimTreeGitDeleted = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NvimTreeGitDirty = {
-    fg = "#6183b9"
+    fg = "#506d9b"
   },
   NvimTreeGitNew = {
-    fg = "#2c6c75"
+    fg = "#4097a3"
   },
   NvimTreeImageFile = {
     fg = "#6172b0"
@@ -1142,6 +1207,13 @@ local highlights = {
   TSLabel = {
     fg = "#2e7de9"
   },
+  TSNodeKey = {
+    bold = true,
+    fg = "#d20065"
+  },
+  TSNodeUnmatched = {
+    fg = "#8990b3"
+  },
   TSNote = {
     bg = "#07879d",
     fg = "#e1e2e7"
@@ -1281,10 +1353,10 @@ local highlights = {
     bg = "#e9e9ec"
   },
   diffAdded = {
-    fg = "#2c6c75"
+    fg = "#4097a3"
   },
   diffChanged = {
-    fg = "#6183b9"
+    fg = "#506d9b"
   },
   diffFile = {
     fg = "#2e7de9"
@@ -1302,7 +1374,7 @@ local highlights = {
     fg = "#8c6c3e"
   },
   diffRemoved = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   healthError = {
     fg = "#c64343"
@@ -1372,24 +1444,24 @@ local highlights = {
     fg = "#68709a"
   },
   rainbowcol1 = {
-    fg = "#8990b3"
+    fg = "#f52a65"
   },
   rainbowcol2 = {
     fg = "#8c6c3e"
   },
   rainbowcol3 = {
-    fg = "#07879d"
+    fg = "#587539"
   },
   rainbowcol4 = {
-    fg = "#b15c00"
+    fg = "#118c74"
   },
   rainbowcol5 = {
-    fg = "#7847bd"
+    fg = "#2e7de9"
   },
   rainbowcol6 = {
-    fg = "#387068"
+    fg = "#9854f1"
   },
   rainbowcol7 = {
-    fg = "#f52a65"
+    fg = "#7847bd"
   }
 }

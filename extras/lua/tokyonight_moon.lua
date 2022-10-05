@@ -77,6 +77,22 @@ local highlights = {
   ALEWarningSign = {
     fg = "#ffc777"
   },
+  AlphaButtons = {
+    fg = "#c099ff"
+  },
+  AlphaFooter = {
+    fg = "#ffc777",
+    italic = true
+  },
+  AlphaHeader = {
+    fg = "#82aaff"
+  },
+  AlphaHeaderLabel = {
+    fg = "#ff966c"
+  },
+  AlphaShortcut = {
+    fg = "#86e1fc"
+  },
   Bold = {
     bold = true
   },
@@ -634,8 +650,8 @@ local highlights = {
     fg = "#65bcff"
   },
   MiniJump = {
-    bg = "#c099ff",
-    fg = "#2f334d"
+    bg = "#ff007c",
+    fg = "#ffffff"
   },
   MiniJump2dSpot = {
     bold = true,
@@ -929,6 +945,55 @@ local highlights = {
   NeogitRemote = {
     fg = "#fca7ea"
   },
+  NeotestAdapterName = {
+    bold = true,
+    fg = "#fca7ea"
+  },
+  NeotestBorder = {
+    fg = "#82aaff"
+  },
+  NeotestDir = {
+    fg = "#82aaff"
+  },
+  NeotestExpandMarker = {
+    fg = "#828bb8"
+  },
+  NeotestFailed = {
+    fg = "#ff757f"
+  },
+  NeotestFile = {
+    fg = "#4fd6be"
+  },
+  NeotestFocused = {
+    fg = "#ffc777"
+  },
+  NeotestIndent = {
+    fg = "#828bb8"
+  },
+  NeotestMarked = {
+    fg = "#82aaff"
+  },
+  NeotestNamespace = {
+    fg = "#41a6b5"
+  },
+  NeotestPassed = {
+    fg = "#c3e88d"
+  },
+  NeotestRunning = {
+    fg = "#ffc777"
+  },
+  NeotestSkipped = {
+    fg = "#82aaff"
+  },
+  NeotestTarget = {
+    fg = "#82aaff"
+  },
+  NeotestTest = {
+    fg = "#828bb8"
+  },
+  NeotestWinSelect = {
+    fg = "#82aaff"
+  },
   NonText = {
     fg = "#545c7e"
   },
@@ -1158,6 +1223,13 @@ local highlights = {
   },
   TSLabel = {
     fg = "#82aaff"
+  },
+  TSNodeKey = {
+    bold = true,
+    fg = "#ff007c"
+  },
+  TSNodeUnmatched = {
+    fg = "#545c7e"
   },
   TSNote = {
     bg = "#0db9d7",
@@ -1389,24 +1461,24 @@ local highlights = {
     fg = "#737aa2"
   },
   rainbowcol1 = {
-    fg = "#545c7e"
+    fg = "#ff757f"
   },
   rainbowcol2 = {
     fg = "#ffc777"
   },
   rainbowcol3 = {
-    fg = "#0db9d7"
+    fg = "#c3e88d"
   },
   rainbowcol4 = {
-    fg = "#ff966c"
-  },
-  rainbowcol5 = {
-    fg = "#fca7ea"
-  },
-  rainbowcol6 = {
     fg = "#4fd6be"
   },
+  rainbowcol5 = {
+    fg = "#82aaff"
+  },
+  rainbowcol6 = {
+    fg = "#c099ff"
+  },
   rainbowcol7 = {
-    fg = "#ff757f"
+    fg = "#fca7ea"
   }
 }

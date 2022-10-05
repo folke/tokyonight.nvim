@@ -1,8 +1,9 @@
 {
+    "name": "Tokyo Night Day",
     "background": "#e1e2e7",
     "black": "#e9e9ed",
     "blue": "#2e7de9",
-    "brightBlack": "#a1a6c5",
+    "brightBlack": "#e9e9ed",
     "brightBlue": "#2e7de9",
     "brightCyan": "#007197",
     "brightGreen": "#587539",
@@ -14,10 +15,11 @@
     "cyan": "#007197",
     "foreground": "#3760bf",
     "green": "#587539",
-    "name": "Tokyo Night - Day",
     "purple": "#9854f1",
     "red": "#f52a65",
     "selectionBackground": "#3760bf",
-    "white": "#6172b0",
+    "white": "#3760bf",
     "yellow": "#8c6c3e"
 }
+
+  

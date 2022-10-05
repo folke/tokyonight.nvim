@@ -1,8 +1,9 @@
 {
-    "background": "#1a1b26",
-    "black": "#15161e",
+    "name": "Tokyo Night Storm",
+    "background": "#24283b",
+    "black": "#1d202f",
     "blue": "#7aa2f7",
-    "brightBlack": "#414868",
+    "brightBlack": "#1d202f",
     "brightBlue": "#7aa2f7",
     "brightCyan": "#7dcfff",
     "brightGreen": "#9ece6a",
@@ -14,10 +15,11 @@
     "cyan": "#7dcfff",
     "foreground": "#c0caf5",
     "green": "#9ece6a",
-    "name": "Tokyo Night - Night",
     "purple": "#bb9af7",
     "red": "#f7768e",
     "selectionBackground": "#c0caf5",
-    "white": "#a9b1d6",
+    "white": "#c0caf5",
     "yellow": "#e0af68"
 }
+
+  

@@ -34,15 +34,15 @@ local colors = {
   fg_gutter = "#3b4261",
   fg_sidebar = "#a9b1d6",
   git = {
-    add = "#2c6c75",
-    change = "#6183b9",
-    delete = "#914c54",
+    add = "#4097a3",
+    change = "#506d9b",
+    delete = "#c47981",
     ignore = "#545c7e"
   },
   gitSigns = {
-    add = "#266d6a",
-    change = "#526c9e",
-    delete = "#b2555b"
+    add = "#399a96",
+    change = "#6382bd",
+    delete = "#c25d64"
   },
   green = "#9ece6a",
   green1 = "#73daca",
@@ -76,6 +76,22 @@ local highlights = {
   },
   ALEWarningSign = {
     fg = "#e0af68"
+  },
+  AlphaButtons = {
+    fg = "#bb9af7"
+  },
+  AlphaFooter = {
+    fg = "#e0af68",
+    italic = true
+  },
+  AlphaHeader = {
+    fg = "#7aa2f7"
+  },
+  AlphaHeaderLabel = {
+    fg = "#ff9e64"
+  },
+  AlphaShortcut = {
+    fg = "#7dcfff"
   },
   Bold = {
     bold = true
@@ -121,7 +137,7 @@ local highlights = {
     fg = "#f7768e"
   },
   BufferLineIndicatorSelected = {
-    fg = "#6183b9"
+    fg = "#506d9b"
   },
   BufferTabpage = {
     bg = "#16161e",
@@ -420,22 +436,22 @@ local highlights = {
     style = {}
   },
   GitGutterAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitGutterChange = {
-    fg = "#526c9e"
+    fg = "#6382bd"
   },
   GitGutterDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GitSignsAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitSignsChange = {
-    fg = "#526c9e"
+    fg = "#6382bd"
   },
   GitSignsDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GlyphPalette1 = {
     fg = "#db4b4b"
@@ -634,8 +650,8 @@ local highlights = {
     fg = "#2ac3de"
   },
   MiniJump = {
-    bg = "#bb9af7",
-    fg = "#292e42"
+    bg = "#ff007c",
+    fg = "#ffffff"
   },
   MiniJump2dSpot = {
     bold = true,
@@ -908,7 +924,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#20303b",
-    fg = "#2c6c75"
+    fg = "#4097a3"
   },
   NeogitDiffContextHighlight = {
     bg = "#2b2f44",
@@ -916,7 +932,7 @@ local highlights = {
   },
   NeogitDiffDeleteHighlight = {
     bg = "#37222c",
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NeogitHunkHeader = {
     bg = "#292e42",
@@ -928,6 +944,55 @@ local highlights = {
   },
   NeogitRemote = {
     fg = "#9d7cd8"
+  },
+  NeotestAdapterName = {
+    bold = true,
+    fg = "#9d7cd8"
+  },
+  NeotestBorder = {
+    fg = "#7aa2f7"
+  },
+  NeotestDir = {
+    fg = "#7aa2f7"
+  },
+  NeotestExpandMarker = {
+    fg = "#a9b1d6"
+  },
+  NeotestFailed = {
+    fg = "#f7768e"
+  },
+  NeotestFile = {
+    fg = "#1abc9c"
+  },
+  NeotestFocused = {
+    fg = "#e0af68"
+  },
+  NeotestIndent = {
+    fg = "#a9b1d6"
+  },
+  NeotestMarked = {
+    fg = "#7aa2f7"
+  },
+  NeotestNamespace = {
+    fg = "#41a6b5"
+  },
+  NeotestPassed = {
+    fg = "#9ece6a"
+  },
+  NeotestRunning = {
+    fg = "#e0af68"
+  },
+  NeotestSkipped = {
+    fg = "#7aa2f7"
+  },
+  NeotestTarget = {
+    fg = "#7aa2f7"
+  },
+  NeotestTest = {
+    fg = "#a9b1d6"
+  },
+  NeotestWinSelect = {
+    fg = "#7aa2f7"
   },
   NonText = {
     fg = "#545c7e"
@@ -953,13 +1018,13 @@ local highlights = {
     fg = "#e0af68"
   },
   NvimTreeGitDeleted = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NvimTreeGitDirty = {
-    fg = "#6183b9"
+    fg = "#506d9b"
   },
   NvimTreeGitNew = {
-    fg = "#2c6c75"
+    fg = "#4097a3"
   },
   NvimTreeImageFile = {
     fg = "#a9b1d6"
@@ -1159,6 +1224,13 @@ local highlights = {
   TSLabel = {
     fg = "#7aa2f7"
   },
+  TSNodeKey = {
+    bold = true,
+    fg = "#ff007c"
+  },
+  TSNodeUnmatched = {
+    fg = "#545c7e"
+  },
   TSNote = {
     bg = "#0db9d7",
     fg = "#1a1b26"
@@ -1298,10 +1370,10 @@ local highlights = {
     bg = "#16161e"
   },
   diffAdded = {
-    fg = "#2c6c75"
+    fg = "#4097a3"
   },
   diffChanged = {
-    fg = "#6183b9"
+    fg = "#506d9b"
   },
   diffFile = {
     fg = "#7aa2f7"
@@ -1319,7 +1391,7 @@ local highlights = {
     fg = "#e0af68"
   },
   diffRemoved = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   healthError = {
     fg = "#db4b4b"
@@ -1389,24 +1461,24 @@ local highlights = {
     fg = "#737aa2"
   },
   rainbowcol1 = {
-    fg = "#545c7e"
+    fg = "#f7768e"
   },
   rainbowcol2 = {
     fg = "#e0af68"
   },
   rainbowcol3 = {
-    fg = "#0db9d7"
+    fg = "#9ece6a"
   },
   rainbowcol4 = {
-    fg = "#ff9e64"
+    fg = "#1abc9c"
   },
   rainbowcol5 = {
-    fg = "#9d7cd8"
+    fg = "#7aa2f7"
   },
   rainbowcol6 = {
-    fg = "#73daca"
+    fg = "#bb9af7"
   },
   rainbowcol7 = {
-    fg = "#f7768e"
+    fg = "#9d7cd8"
   }
 }
