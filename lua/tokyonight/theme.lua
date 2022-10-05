@@ -192,6 +192,8 @@ function M.setup()
     LspSignatureActiveParameter = { fg = c.orange },
     LspCodeLens = { fg = c.comment },
 
+    LspInfoBorder = { fg = c.border_highlight, bg = c.bg_float },
+
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
 
