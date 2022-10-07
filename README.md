@@ -22,7 +22,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## ✨ Features
 
-- supports the latest Neovim 5.0 features like TreeSitter and LSP
+- supports the latest Neovim 0.5 features like TreeSitter and LSP
 - minimal inactive statusline
 - vim terminal colors
 - darker background for sidebar-like windows
