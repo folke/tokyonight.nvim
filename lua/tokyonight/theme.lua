@@ -388,7 +388,6 @@ function M.setup()
     WhichKeyGroup = { fg = c.blue },
     WhichKeyDesc = { fg = c.magenta },
     WhichKeySeperator = { fg = c.comment },
-    WhichKeySeparator = { fg = c.comment },
     WhichKeyFloat = { bg = c.bg_sidebar },
     WhichKeyValue = { fg = c.dark5 },
 
