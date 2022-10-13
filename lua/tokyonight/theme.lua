@@ -542,8 +542,8 @@ function M.setup()
     NavicText = { fg = c.fg, bg = c.none },
     NavicSeparator = { fg = c.fg, bg = c.none },
 
-    IndentBlanklineChar = { fg = c.fg_gutter },
-    IndentBlanklineContextChar = { fg = c.purple },
+    IndentBlanklineChar = { fg = c.fg_gutter, nocombine = true },
+    IndentBlanklineContextChar = { fg = c.purple, nocombine = true },
 
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
