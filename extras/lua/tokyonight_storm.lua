@@ -490,10 +490,12 @@ local highlights = {
     fg = "#1d202f"
   },
   IndentBlanklineChar = {
-    fg = "#3b4261"
+    fg = "#3b4261",
+    nocombine = true
   },
   IndentBlanklineContextChar = {
-    fg = "#9d7cd8"
+    fg = "#9d7cd8",
+    nocombine = true
   },
   Italic = {
     italic = true
