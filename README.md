@@ -18,6 +18,12 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## Day
 
+```
+colorscheme tokyonight-storm
+set vim.o.background=light
+```
+
+
 ![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
 
 ## ✨ Features
