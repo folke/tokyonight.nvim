@@ -178,6 +178,10 @@ function M.load(theme)
   vim.o.termguicolors = true
   vim.g.colors_name = "tokyonight"
 
+  if ts.new_style() then
+    M.syntax(ts.defaults)
+  end
+
   M.syntax(theme.highlights)
 
   -- vim.api.nvim_set_hl_ns(M.ns)
