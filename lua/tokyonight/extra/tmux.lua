@@ -37,6 +37,10 @@ setw -g window-status-separator ""
 setw -g window-status-style "${none},fg=${fg_sidebar},bg=${bg_statusline}"
 setw -g window-status-format "#[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]#[default] #I  #W #F #[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]"
 setw -g window-status-current-format "#[fg=${bg_statusline},bg=${fg_gutter},nobold,nounderscore,noitalics]#[fg=${blue},bg=${fg_gutter},bold] #I  #W #F #[fg=${fg_gutter},bg=${bg_statusline},nobold,nounderscore,noitalics]"
+
+# tmux-plugins/tmux-prefix-highlight support
+set -g @prefix_highlight_output_prefix "#[fg=${yellow}]#[bg=${bg_statusline}]#[fg=${bg_statusline}]#[bg=${yellow}]"
+set -g @prefix_highlight_output_suffix ""
   ]],
     colors
   )

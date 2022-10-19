@@ -29,4 +29,7 @@ setw -g window-status-separator ""
 setw -g window-status-style "NONE,fg=#6172b0,bg=#e9e9ec"
 setw -g window-status-format "#[fg=#e9e9ec,bg=#e9e9ec,nobold,nounderscore,noitalics]#[default] #I  #W #F #[fg=#e9e9ec,bg=#e9e9ec,nobold,nounderscore,noitalics]"
 setw -g window-status-current-format "#[fg=#e9e9ec,bg=#a8aecb,nobold,nounderscore,noitalics]#[fg=#2e7de9,bg=#a8aecb,bold] #I  #W #F #[fg=#a8aecb,bg=#e9e9ec,nobold,nounderscore,noitalics]"
-  
+
+# tmux-plugins/tmux-prefix-highlight support
+set -g @prefix_highlight_output_prefix "#[fg=#8c6c3e]#[bg=#e9e9ec]#[fg=#e9e9ec]#[bg=#8c6c3e]"
+set -g @prefix_highlight_output_suffix ""
