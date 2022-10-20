@@ -29,6 +29,10 @@ inactive_tab_background ${bg_highlight}
 inactive_tab_foreground ${dark3}
 #tab_bar_background ${black}
 
+# Windows
+active_border_color ${blue}
+inactive_border_color ${bg_highlight}
+
 # normal
 color0 ${black}
 color1 ${red}
