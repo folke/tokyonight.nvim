@@ -481,8 +481,9 @@ function M.setup()
     CmpItemAbbrMatch = { fg = c.blue1, bg = c.none },
     CmpItemAbbrMatchFuzzy = { fg = c.blue1, bg = c.none },
 
-    CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
     CmpItemMenu = { fg = c.comment, bg = c.none },
+
+    CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
 
     CmpItemKindKeyword = { fg = c.cyan, bg = c.none },
 
@@ -646,6 +647,37 @@ function M.setup()
     MiniTestPass = { fg = c.green, bold = true },
 
     MiniTrailspace = { bg = c.red },
+
+    -- Noice
+
+    NoiceCompletionItemKindDefault = { fg = c.fg_dark, bg = c.none },
+
+    NoiceCompletionItemKindKeyword = { fg = c.cyan, bg = c.none },
+
+    NoiceCompletionItemKindVariable = { fg = c.magenta, bg = c.none },
+    NoiceCompletionItemKindConstant = { fg = c.magenta, bg = c.none },
+    NoiceCompletionItemKindReference = { fg = c.magenta, bg = c.none },
+    NoiceCompletionItemKindValue = { fg = c.magenta, bg = c.none },
+
+    NoiceCompletionItemKindFunction = { fg = c.blue, bg = c.none },
+    NoiceCompletionItemKindMethod = { fg = c.blue, bg = c.none },
+    NoiceCompletionItemKindConstructor = { fg = c.blue, bg = c.none },
+
+    NoiceCompletionItemKindClass = { fg = c.orange, bg = c.none },
+    NoiceCompletionItemKindInterface = { fg = c.orange, bg = c.none },
+    NoiceCompletionItemKindStruct = { fg = c.orange, bg = c.none },
+    NoiceCompletionItemKindEvent = { fg = c.orange, bg = c.none },
+    NoiceCompletionItemKindEnum = { fg = c.orange, bg = c.none },
+    NoiceCompletionItemKindUnit = { fg = c.orange, bg = c.none },
+
+    NoiceCompletionItemKindModule = { fg = c.yellow, bg = c.none },
+
+    NoiceCompletionItemKindProperty = { fg = c.green1, bg = c.none },
+    NoiceCompletionItemKindField = { fg = c.green1, bg = c.none },
+    NoiceCompletionItemKindTypeParameter = { fg = c.green1, bg = c.none },
+    NoiceCompletionItemKindEnumMember = { fg = c.green1, bg = c.none },
+    NoiceCompletionItemKindOperator = { fg = c.green1, bg = c.none },
+    NoiceCompletionItemKindSnippet = { fg = c.dark5, bg = c.none },
   }
 
   if not vim.diagnostic then
