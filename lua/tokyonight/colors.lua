@@ -135,7 +135,7 @@ function M.setup(opts)
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
     or config.options.styles.floats == "dark" and colors.bg_dark
-    or "none"
+    or "NONE"
 
   colors.bg_visual = util.darken(colors.blue0, 0.7)
   colors.bg_search = colors.blue0
