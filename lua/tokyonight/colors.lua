@@ -135,11 +135,13 @@ function M.setup(opts)
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
     or config.options.styles.floats == "dark" and colors.bg_dark
-    or "NONE"
+    or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.7)
   colors.bg_search = colors.blue0
   colors.fg_sidebar = colors.fg_dark
+  -- colors.fg_float = config.options.styles.floats == "dark" and colors.fg_dark or colors.fg
+  colors.fg_float = colors.fg_dark
 
   colors.error = colors.red1
   colors.warning = colors.yellow

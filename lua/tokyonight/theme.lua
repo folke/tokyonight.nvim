@@ -62,7 +62,7 @@ function M.setup()
     Normal = { fg = c.fg, bg = options.transparent and c.none or c.bg }, -- normal text
     NormalNC = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.bg_dark or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
-    NormalFloat = { fg = c.fg, bg = c.bg_float }, -- Normal text in floating windows.
+    NormalFloat = { fg = c.fg_float, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
     Pmenu = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
     PmenuSel = { bg = util.darken(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
