@@ -25,6 +25,7 @@ function M.setup()
     tilix = "json",
     iterm = "itermcolors",
     lua = "lua",
+    windows_terminal = "json",
   }
   -- map of style to style name
   local styles = {
