@@ -8,6 +8,6 @@ This port offers the colors needed for ST's header file.
 
 ### Usage
 
-1. Choose your tokyonight_....h theme
-2. Copy the contents of `tokyonight_....h` and replace into your st build's `config.h`.
+1. Choose your flavour.
+2. Copy the contents of `flavor.h` and replace into your st build's `config.h`.
 3. Then `make install` it in st folder.
