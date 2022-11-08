@@ -56,7 +56,7 @@ color15 ${fg}
 # extended colors
 color16 ${orange}
 color17 ${red1}
-  ]],
+]],
     colors
   )
   return kitty

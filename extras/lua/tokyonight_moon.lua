@@ -17,7 +17,7 @@ local colors = {
   blue6 = "#b4f9f8",
   blue7 = "#394b70",
   border = "#1b1d2b",
-  border_highlight = "#3e68d7",
+  border_highlight = "#589ed7",
   comment = "#7a88cf",
   cyan = "#86e1fc",
   dark3 = "#545c7e",
@@ -31,6 +31,7 @@ local colors = {
   error = "#c53b53",
   fg = "#c8d3f5",
   fg_dark = "#828bb8",
+  fg_float = "#828bb8",
   fg_gutter = "#3b4261",
   fg_sidebar = "#828bb8",
   git = {
@@ -63,19 +64,95 @@ local colors = {
 }
 
 local highlights = {
+  ["@constructor"] = {
+    fg = "#c099ff"
+  },
+  ["@field"] = {
+    fg = "#4fd6be"
+  },
+  ["@keyword"] = {
+    fg = "#fca7ea",
+    style = {
+      italic = true
+    }
+  },
+  ["@keyword.function"] = {
+    fg = "#c099ff",
+    style = {}
+  },
+  ["@label"] = {
+    fg = "#82aaff"
+  },
+  ["@operator"] = {
+    fg = "#89ddff"
+  },
+  ["@parameter"] = {
+    fg = "#ffc777"
+  },
+  ["@property"] = {
+    fg = "#4fd6be"
+  },
+  ["@punctuation.bracket"] = {
+    fg = "#828bb8"
+  },
+  ["@punctuation.delimiter"] = {
+    fg = "#89ddff"
+  },
+  ["@punctuation.special"] = {
+    fg = "#89ddff"
+  },
   ["@punctuation.special.markdown"] = {
     bold = true,
     fg = "#ff966c"
   },
+  ["@string.escape"] = {
+    fg = "#c099ff"
+  },
+  ["@string.regex"] = {
+    fg = "#b4f9f8"
+  },
+  ["@text.danger"] = {
+    bg = "#c53b53",
+    fg = "#222436"
+  },
   ["@text.literal.markdown_inline"] = {
     bg = "#444a73",
     fg = "#82aaff"
+  },
+  ["@text.reference"] = {
+    fg = "#4fd6be"
+  },
+  ["@text.warning"] = {
+    bg = "#ffc777",
+    fg = "#222436"
+  },
+  ["@variable"] = {
+    style = {}
+  },
+  ["@variable.builtin"] = {
+    fg = "#ff757f"
   },
   ALEErrorSign = {
     fg = "#c53b53"
   },
   ALEWarningSign = {
     fg = "#ffc777"
+  },
+  AlphaButtons = {
+    fg = "#c099ff"
+  },
+  AlphaFooter = {
+    fg = "#ffc777",
+    italic = true
+  },
+  AlphaHeader = {
+    fg = "#82aaff"
+  },
+  AlphaHeaderLabel = {
+    fg = "#ff966c"
+  },
+  AlphaShortcut = {
+    fg = "#86e1fc"
   },
   Bold = {
     bold = true
@@ -114,7 +191,7 @@ local highlights = {
   },
   BufferInactiveSign = {
     bg = "#1e2030",
-    fg = "#3e68d7"
+    fg = "#589ed7"
   },
   BufferInactiveTarget = {
     bg = "#1e2030",
@@ -125,7 +202,7 @@ local highlights = {
   },
   BufferTabpage = {
     bg = "#1e2030",
-    fg = "#3e68d7"
+    fg = "#589ed7"
   },
   BufferTabpages = {
     bg = "#1e2030",
@@ -160,7 +237,7 @@ local highlights = {
   },
   CmpDocumentationBorder = {
     bg = "#1e2030",
-    fg = "#3e68d7"
+    fg = "#589ed7"
   },
   CmpItemAbbr = {
     bg = "NONE",
@@ -286,6 +363,9 @@ local highlights = {
   Constant = {
     fg = "#ff966c"
   },
+  CurSearch = {
+    link = "IncSearch"
+  },
   Cursor = {
     bg = "#c8d3f5",
     fg = "#222436"
@@ -401,7 +481,7 @@ local highlights = {
   },
   FloatBorder = {
     bg = "#1e2030",
-    fg = "#3e68d7"
+    fg = "#589ed7"
   },
   FoldColumn = {
     bg = "#222436",
@@ -467,7 +547,7 @@ local highlights = {
     fg = "#0db9d7"
   },
   HopNextKey2 = {
-    fg = "#1c5166"
+    fg = "#157d97"
   },
   HopUnmatched = {
     fg = "#545c7e"
@@ -572,10 +652,14 @@ local highlights = {
     fg = "#7a88cf"
   },
   LspFloatWinBorder = {
-    fg = "#3e68d7"
+    fg = "#589ed7"
   },
   LspFloatWinNormal = {
     bg = "#1e2030"
+  },
+  LspInfoBorder = {
+    bg = "#1e2030",
+    fg = "#589ed7"
   },
   LspReferenceRead = {
     bg = "#3b4261"
@@ -614,7 +698,8 @@ local highlights = {
     fg = "#ff757f"
   },
   LspSignatureActiveParameter = {
-    fg = "#ff966c"
+    bg = "#2a3763",
+    bold = true
   },
   MatchParen = {
     bold = true,
@@ -636,8 +721,8 @@ local highlights = {
     fg = "#65bcff"
   },
   MiniJump = {
-    bg = "#c099ff",
-    fg = "#2f334d"
+    bg = "#ff007c",
+    fg = "#ffffff"
   },
   MiniJump2dSpot = {
     bold = true,
@@ -665,7 +750,7 @@ local highlights = {
     fg = "#c8d3f5"
   },
   MiniStarterItemBullet = {
-    fg = "#3e68d7"
+    fg = "#589ed7"
   },
   MiniStarterItemPrefix = {
     fg = "#ffc777"
@@ -931,6 +1016,143 @@ local highlights = {
   NeogitRemote = {
     fg = "#fca7ea"
   },
+  NeotestAdapterName = {
+    bold = true,
+    fg = "#fca7ea"
+  },
+  NeotestBorder = {
+    fg = "#82aaff"
+  },
+  NeotestDir = {
+    fg = "#82aaff"
+  },
+  NeotestExpandMarker = {
+    fg = "#828bb8"
+  },
+  NeotestFailed = {
+    fg = "#ff757f"
+  },
+  NeotestFile = {
+    fg = "#4fd6be"
+  },
+  NeotestFocused = {
+    fg = "#ffc777"
+  },
+  NeotestIndent = {
+    fg = "#828bb8"
+  },
+  NeotestMarked = {
+    fg = "#82aaff"
+  },
+  NeotestNamespace = {
+    fg = "#41a6b5"
+  },
+  NeotestPassed = {
+    fg = "#c3e88d"
+  },
+  NeotestRunning = {
+    fg = "#ffc777"
+  },
+  NeotestSkipped = {
+    fg = "#82aaff"
+  },
+  NeotestTarget = {
+    fg = "#82aaff"
+  },
+  NeotestTest = {
+    fg = "#828bb8"
+  },
+  NeotestWinSelect = {
+    fg = "#82aaff"
+  },
+  NoiceCompletionItemKindClass = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NoiceCompletionItemKindConstant = {
+    bg = "NONE",
+    fg = "#c099ff"
+  },
+  NoiceCompletionItemKindConstructor = {
+    bg = "NONE",
+    fg = "#82aaff"
+  },
+  NoiceCompletionItemKindDefault = {
+    bg = "NONE",
+    fg = "#828bb8"
+  },
+  NoiceCompletionItemKindEnum = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NoiceCompletionItemKindEnumMember = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NoiceCompletionItemKindEvent = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NoiceCompletionItemKindField = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NoiceCompletionItemKindFunction = {
+    bg = "NONE",
+    fg = "#82aaff"
+  },
+  NoiceCompletionItemKindInterface = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NoiceCompletionItemKindKeyword = {
+    bg = "NONE",
+    fg = "#86e1fc"
+  },
+  NoiceCompletionItemKindMethod = {
+    bg = "NONE",
+    fg = "#82aaff"
+  },
+  NoiceCompletionItemKindModule = {
+    bg = "NONE",
+    fg = "#ffc777"
+  },
+  NoiceCompletionItemKindOperator = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NoiceCompletionItemKindProperty = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NoiceCompletionItemKindReference = {
+    bg = "NONE",
+    fg = "#c099ff"
+  },
+  NoiceCompletionItemKindSnippet = {
+    bg = "NONE",
+    fg = "#737aa2"
+  },
+  NoiceCompletionItemKindStruct = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NoiceCompletionItemKindTypeParameter = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
+  NoiceCompletionItemKindUnit = {
+    bg = "NONE",
+    fg = "#ff966c"
+  },
+  NoiceCompletionItemKindValue = {
+    bg = "NONE",
+    fg = "#c099ff"
+  },
+  NoiceCompletionItemKindVariable = {
+    bg = "NONE",
+    fg = "#c099ff"
+  },
   NonText = {
     fg = "#545c7e"
   },
@@ -940,7 +1162,7 @@ local highlights = {
   },
   NormalFloat = {
     bg = "#1e2030",
-    fg = "#c8d3f5"
+    fg = "#828bb8"
   },
   NormalNC = {
     bg = "#222436",
@@ -949,6 +1171,76 @@ local highlights = {
   NormalSB = {
     bg = "#1e2030",
     fg = "#828bb8"
+  },
+  NotifyDEBUGBody = {
+    bg = "#222436",
+    fg = "#c8d3f5"
+  },
+  NotifyDEBUGBorder = {
+    bg = "#222436",
+    fg = "#3c4264"
+  },
+  NotifyDEBUGIcon = {
+    fg = "#7a88cf"
+  },
+  NotifyDEBUGTitle = {
+    fg = "#7a88cf"
+  },
+  NotifyERRORBody = {
+    bg = "#222436",
+    fg = "#c8d3f5"
+  },
+  NotifyERRORBorder = {
+    bg = "#222436",
+    fg = "#532b3f"
+  },
+  NotifyERRORIcon = {
+    fg = "#c53b53"
+  },
+  NotifyERRORTitle = {
+    fg = "#c53b53"
+  },
+  NotifyINFOBody = {
+    bg = "#222436",
+    fg = "#c8d3f5"
+  },
+  NotifyINFOBorder = {
+    bg = "#222436",
+    fg = "#1c5166"
+  },
+  NotifyINFOIcon = {
+    fg = "#0db9d7"
+  },
+  NotifyINFOTitle = {
+    fg = "#0db9d7"
+  },
+  NotifyTRACEBody = {
+    bg = "#222436",
+    fg = "#c8d3f5"
+  },
+  NotifyTRACEBorder = {
+    bg = "#222436",
+    fg = "#634b6c"
+  },
+  NotifyTRACEIcon = {
+    fg = "#fca7ea"
+  },
+  NotifyTRACETitle = {
+    fg = "#fca7ea"
+  },
+  NotifyWARNBody = {
+    bg = "#222436",
+    fg = "#c8d3f5"
+  },
+  NotifyWARNBorder = {
+    bg = "#222436",
+    fg = "#64554a"
+  },
+  NotifyWARNIcon = {
+    fg = "#ffc777"
+  },
+  NotifyWARNTitle = {
+    fg = "#ffc777"
   },
   NvimTreeFolderIcon = {
     bg = "NONE",
@@ -1138,68 +1430,15 @@ local highlights = {
     bg = "#ff757f",
     fg = "#1b1d2b"
   },
-  TSConstructor = {
-    fg = "#c099ff"
+  TSNodeKey = {
+    bold = true,
+    fg = "#ff007c"
   },
-  TSDanger = {
-    bg = "#c53b53",
-    fg = "#222436"
-  },
-  TSField = {
-    fg = "#4fd6be"
-  },
-  TSKeyword = {
-    fg = "#fca7ea",
-    style = {
-      italic = true
-    }
-  },
-  TSKeywordFunction = {
-    fg = "#c099ff",
-    style = {}
-  },
-  TSLabel = {
-    fg = "#82aaff"
+  TSNodeUnmatched = {
+    fg = "#545c7e"
   },
   TSNote = {
     bg = "#0db9d7",
-    fg = "#222436"
-  },
-  TSOperator = {
-    fg = "#89ddff"
-  },
-  TSParameter = {
-    fg = "#ffc777"
-  },
-  TSProperty = {
-    fg = "#4fd6be"
-  },
-  TSPunctBracket = {
-    fg = "#828bb8"
-  },
-  TSPunctDelimiter = {
-    fg = "#89ddff"
-  },
-  TSPunctSpecial = {
-    fg = "#89ddff"
-  },
-  TSStringEscape = {
-    fg = "#c099ff"
-  },
-  TSStringRegex = {
-    fg = "#b4f9f8"
-  },
-  TSTextReference = {
-    fg = "#4fd6be"
-  },
-  TSVariable = {
-    style = {}
-  },
-  TSVariableBuiltin = {
-    fg = "#ff757f"
-  },
-  TSWarning = {
-    bg = "#ffc777",
     fg = "#222436"
   },
   TabLine = {
@@ -1218,7 +1457,7 @@ local highlights = {
   },
   TelescopeBorder = {
     bg = "#1e2030",
-    fg = "#3e68d7"
+    fg = "#589ed7"
   },
   TelescopeNormal = {
     bg = "#1e2030",
@@ -1291,6 +1530,12 @@ local highlights = {
   WinSeparator = {
     bold = true,
     fg = "#1b1d2b"
+  },
+  YankyPut = {
+    link = "IncSearch"
+  },
+  YankyYanked = {
+    link = "IncSearch"
   },
   debugBreakpoint = {
     bg = "#203346",
@@ -1391,24 +1636,24 @@ local highlights = {
     fg = "#737aa2"
   },
   rainbowcol1 = {
-    fg = "#545c7e"
+    fg = "#ff757f"
   },
   rainbowcol2 = {
     fg = "#ffc777"
   },
   rainbowcol3 = {
-    fg = "#0db9d7"
+    fg = "#c3e88d"
   },
   rainbowcol4 = {
-    fg = "#ff966c"
-  },
-  rainbowcol5 = {
-    fg = "#fca7ea"
-  },
-  rainbowcol6 = {
     fg = "#4fd6be"
   },
+  rainbowcol5 = {
+    fg = "#82aaff"
+  },
+  rainbowcol6 = {
+    fg = "#c099ff"
+  },
   rainbowcol7 = {
-    fg = "#ff757f"
+    fg = "#fca7ea"
   }
 }

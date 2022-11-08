@@ -41,7 +41,7 @@ setw -g window-status-current-format "#[fg=${bg_statusline},bg=${fg_gutter},nobo
 # tmux-plugins/tmux-prefix-highlight support
 set -g @prefix_highlight_output_prefix "#[fg=${yellow}]#[bg=${bg_statusline}]#[fg=${bg_statusline}]#[bg=${yellow}]"
 set -g @prefix_highlight_output_suffix ""
-  ]],
+]],
     colors
   )
   return tmux
