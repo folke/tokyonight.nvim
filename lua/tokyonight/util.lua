@@ -101,9 +101,11 @@ end
 ---@param str string template string
 ---@param table table key value pairs to replace in the string
 function M.template(str, table)
-  return (str:gsub("($%b{})", function(w)
-    return table[w:sub(3, -2)] or w
-  end))
+  return (
+    str:gsub("($%b{})", function(w)
+      return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), ".", { plain = true }))) or w
+    end)
+  )
 end
 
 function M.syntax(syntax)
@@ -149,7 +151,7 @@ function M.invert_colors(colors)
     return M.invert_color(colors)
   end
   for key, value in pairs(colors) do
-    colors[key] = M.invert_colors(value)
+    M.invert_colors(value)
   end
 end
 

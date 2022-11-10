@@ -744,7 +744,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${git.add}</string>
+				<string>#449dab</string>
 			</dict>
 		</dict>
 		<dict>
@@ -755,7 +755,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${git.delete}</string>
+				<string>#914c54</string>
 			</dict>
 		</dict>
 		<dict>
@@ -766,7 +766,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${git.change}</string>
+				<string>#6183bb</string>
 			</dict>
 		</dict>
 		<dict>

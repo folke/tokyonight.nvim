@@ -1,49 +1,66 @@
 local colors = {
-  bg = "#e1e2e7",
-  bg_dark = "#e9e9ec",
-  bg_float = "#e9e9ec",
-  bg_highlight = "#c4c8da",
-  bg_popup = "#e9e9ec",
-  bg_search = "#7890dd",
-  bg_sidebar = "#e9e9ec",
-  bg_statusline = "#e9e9ec",
-  bg_visual = "#99a7df",
-  black = "#e9e9ed",
-  blue = "#2e7de9",
-  blue0 = "#7890dd",
-  blue1 = "#188092",
-  blue2 = "#07879d",
-  blue5 = "#006a83",
-  blue6 = "#2e5857",
-  blue7 = "#92a6d5",
-  border = "#e9e9ed",
-  border_highlight = "#2496ac",
-  comment = "#848cb5",
-  cyan = "#007197",
-  dark3 = "#8990b3",
-  dark5 = "#68709a",
-  error = "#c64343",
-  fg = "#3760bf",
-  fg_dark = "#6172b0",
-  fg_float = "#6172b0",
-  fg_gutter = "#a8aecb",
-  fg_sidebar = "#6172b0",
-  green = "#587539",
-  green1 = "#387068",
-  green2 = "#38919f",
-  hint = "#118c74",
-  info = "#07879d",
-  magenta = "#9854f1",
-  magenta2 = "#d20065",
+  bg = "#1a1b26",
+  bg_dark = "#16161e",
+  bg_float = "#16161e",
+  bg_highlight = "#292e42",
+  bg_popup = "#16161e",
+  bg_search = "#3d59a1",
+  bg_sidebar = "#16161e",
+  bg_statusline = "#16161e",
+  bg_visual = "#33467c",
+  black = "#15161e",
+  blue = "#7aa2f7",
+  blue0 = "#3d59a1",
+  blue1 = "#2ac3de",
+  blue2 = "#0db9d7",
+  blue5 = "#89ddff",
+  blue6 = "#b4f9f8",
+  blue7 = "#394b70",
+  border = "#15161e",
+  border_highlight = "#27a1b9",
+  comment = "#565f89",
+  cyan = "#7dcfff",
+  dark3 = "#545c7e",
+  dark5 = "#737aa2",
+  diff = {
+    add = "#20303b",
+    change = "#1f2231",
+    delete = "#37222c",
+    text = "#394b70"
+  },
+  error = "#db4b4b",
+  fg = "#c0caf5",
+  fg_dark = "#a9b1d6",
+  fg_float = "#a9b1d6",
+  fg_gutter = "#3b4261",
+  fg_sidebar = "#a9b1d6",
+  git = {
+    add = "#449dab",
+    change = "#6183bb",
+    delete = "#914c54",
+    ignore = "#545c7e"
+  },
+  gitSigns = {
+    add = "#266d6a",
+    change = "#536c9e",
+    delete = "#b2555b"
+  },
+  green = "#9ece6a",
+  green1 = "#73daca",
+  green2 = "#41a6b5",
+  hint = "#1abc9c",
+  info = "#0db9d7",
+  magenta = "#bb9af7",
+  magenta2 = "#ff007c",
   none = "NONE",
-  orange = "#b15c00",
-  purple = "#7847bd",
-  red = "#f52a65",
-  red1 = "#c64343",
-  teal = "#118c74",
-  terminal_black = "#a1a6c5",
-  warning = "#8c6c3e",
-  yellow = "#8c6c3e"
+  orange = "#ff9e64",
+  purple = "#9d7cd8",
+  red = "#f7768e",
+  red1 = "#db4b4b",
+  teal = "#1abc9c",
+  terminal_black = "#414868",
+  warning = "#e0af68",
+  yellow = "#e0af68"
 }
 
 local highlights = {
@@ -181,7 +198,7 @@ local highlights = {
     fg = "#f52a65"
   },
   BufferLineIndicatorSelected = {
-    fg = "#6183b9"
+    fg = "#506d9c"
   },
   BufferTabpage = {
     bg = "#e9e9ec",
@@ -483,22 +500,22 @@ local highlights = {
     style = {}
   },
   GitGutterAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitGutterChange = {
-    fg = "#526c9e"
+    fg = "#6482bd"
   },
   GitGutterDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GitSignsAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitSignsChange = {
-    fg = "#526c9e"
+    fg = "#6482bd"
   },
   GitSignsDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GlyphPalette1 = {
     fg = "#c64343"
@@ -978,7 +995,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#aecde6",
-    fg = "#2c6c75"
+    fg = "#4197a4"
   },
   NeogitDiffContextHighlight = {
     bg = "#c3c6d8",
@@ -986,7 +1003,7 @@ local highlights = {
   },
   NeogitDiffDeleteHighlight = {
     bg = "#dfccd4",
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NeogitHunkHeader = {
     bg = "#c4c8da",
@@ -1230,13 +1247,13 @@ local highlights = {
     fg = "#8c6c3e"
   },
   NvimTreeGitDeleted = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NvimTreeGitDirty = {
-    fg = "#6183b9"
+    fg = "#506d9c"
   },
   NvimTreeGitNew = {
-    fg = "#2c6c75"
+    fg = "#4197a4"
   },
   NvimTreeImageFile = {
     fg = "#6172b0"
@@ -1528,10 +1545,10 @@ local highlights = {
     bg = "#e9e9ec"
   },
   diffAdded = {
-    fg = "#2c6c75"
+    fg = "#4197a4"
   },
   diffChanged = {
-    fg = "#6183b9"
+    fg = "#506d9c"
   },
   diffFile = {
     fg = "#2e7de9"
@@ -1549,7 +1566,7 @@ local highlights = {
     fg = "#8c6c3e"
   },
   diffRemoved = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   healthError = {
     fg = "#c64343"
