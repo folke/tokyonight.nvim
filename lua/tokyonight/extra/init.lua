@@ -27,6 +27,7 @@ function M.setup()
     lua = "lua",
     sublime = "tmTheme",
     delta = "gitconfig",
+    terminator = "conf",
   }
   -- map of style to style name
   local styles = {
