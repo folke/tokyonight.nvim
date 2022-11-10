@@ -26,6 +26,7 @@ function M.setup()
     iterm = "itermcolors",
     lua = "lua",
     sublime = "tmTheme",
+    delta = "gitconfig",
   }
   -- map of style to style name
   local styles = {
