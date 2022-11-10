@@ -29,6 +29,11 @@ tokyonight.replace = {
   b = { bg = colors.fg_gutter, fg = colors.red },
 }
 
+tokyonight.terminal = {
+  a = {bg = colors.green1, fg = colors.black },
+  b = {bg = colors.fg_gutter, fg=colors.green1 },
+}
+
 tokyonight.inactive = {
   a = { bg = colors.bg_statusline, fg = colors.blue },
   b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
