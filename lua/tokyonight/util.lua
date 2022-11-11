@@ -151,8 +151,9 @@ function M.invert_colors(colors)
     return M.invert_color(colors)
   end
   for key, value in pairs(colors) do
-    M.invert_colors(value)
+    colors[key] = M.invert_colors(value)
   end
+  return colors
 end
 
 ---@param hls Highlights

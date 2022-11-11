@@ -35,15 +35,15 @@ local colors = {
   fg_gutter = "#3b4261",
   fg_sidebar = "#a9b1d6",
   git = {
-    add = "#449dab",
-    change = "#6183bb",
-    delete = "#914c54",
+    add = "#4097a3",
+    change = "#506d9b",
+    delete = "#c47981",
     ignore = "#545c7e"
   },
   gitSigns = {
-    add = "#266d6a",
-    change = "#536c9e",
-    delete = "#b2555b"
+    add = "#399a96",
+    change = "#6382bd",
+    delete = "#c25d64"
   },
   green = "#9ece6a",
   green1 = "#73daca",
@@ -198,7 +198,7 @@ local highlights = {
     fg = "#f7768e"
   },
   BufferLineIndicatorSelected = {
-    fg = "#6183bb"
+    fg = "#506d9b"
   },
   BufferTabpage = {
     bg = "#16161e",
@@ -500,22 +500,22 @@ local highlights = {
     style = {}
   },
   GitGutterAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitGutterChange = {
-    fg = "#536c9e"
+    fg = "#6382bd"
   },
   GitGutterDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GitSignsAdd = {
-    fg = "#266d6a"
+    fg = "#399a96"
   },
   GitSignsChange = {
-    fg = "#536c9e"
+    fg = "#6382bd"
   },
   GitSignsDelete = {
-    fg = "#b2555b"
+    fg = "#c25d64"
   },
   GlyphPalette1 = {
     fg = "#db4b4b"
@@ -995,7 +995,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#20303b",
-    fg = "#449dab"
+    fg = "#4097a3"
   },
   NeogitDiffContextHighlight = {
     bg = "#2b2f44",
@@ -1003,7 +1003,7 @@ local highlights = {
   },
   NeogitDiffDeleteHighlight = {
     bg = "#37222c",
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NeogitHunkHeader = {
     bg = "#292e42",
@@ -1244,16 +1244,16 @@ local highlights = {
   },
   NvimTreeFolderIcon = {
     bg = "NONE",
-    fg = "#e0af68"
+    fg = "#7aa2f7"
   },
   NvimTreeGitDeleted = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   NvimTreeGitDirty = {
-    fg = "#6183bb"
+    fg = "#506d9b"
   },
   NvimTreeGitNew = {
-    fg = "#449dab"
+    fg = "#4097a3"
   },
   NvimTreeImageFile = {
     fg = "#a9b1d6"
@@ -1545,10 +1545,10 @@ local highlights = {
     bg = "#16161e"
   },
   diffAdded = {
-    fg = "#449dab"
+    fg = "#4097a3"
   },
   diffChanged = {
-    fg = "#6183bb"
+    fg = "#506d9b"
   },
   diffFile = {
     fg = "#7aa2f7"
@@ -1566,7 +1566,7 @@ local highlights = {
     fg = "#e0af68"
   },
   diffRemoved = {
-    fg = "#914c54"
+    fg = "#c47981"
   },
   healthError = {
     fg = "#db4b4b"
