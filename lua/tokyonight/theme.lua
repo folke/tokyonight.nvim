@@ -259,6 +259,8 @@ function M.setup()
     -- TSTitle             = { };    -- Text that is part of a title.
     -- TSLiteral           = { };    -- Literal text.
     -- TSURI               = { };    -- Any URI like a link or email.
+    ["@text.diff.add"] = { link = "DiffAdd" },
+    ["@text.diff.delete"] = { link = "DiffDelete" },
 
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
