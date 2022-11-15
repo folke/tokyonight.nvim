@@ -81,6 +81,7 @@ M.moon = function()
     red = "#ff757f", --
     red1 = "#c53b53", --
   }
+  ret.comment = util.blend(ret.comment, ret.bg, "bb")
   ret.git = {
     change = util.blend(ret.blue, ret.bg, "ee"),
     add = util.blend(ret.green, ret.bg, "ee"),
@@ -141,7 +142,7 @@ function M.setup(opts)
   colors.bg_search = colors.blue0
   colors.fg_sidebar = colors.fg_dark
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.fg_dark or colors.fg
-  colors.fg_float = colors.fg_dark
+  colors.fg_float = colors.fg
 
   colors.error = colors.red1
   colors.warning = colors.yellow
