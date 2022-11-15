@@ -71,17 +71,15 @@ end
 
 --- Delete the autocmds when the theme changes to something else
 function M.onColorScheme()
-  if vim.g.colors_name ~= "tokyonight" then
-    vim.cmd([[autocmd! TokyoNight]])
-    vim.cmd([[augroup! TokyoNight]])
-  end
+  vim.cmd([[autocmd! TokyoNight]])
+  vim.cmd([[augroup! TokyoNight]])
 end
 
 ---@param config Config
 function M.autocmds(config)
   vim.cmd([[augroup TokyoNight]])
   vim.cmd([[  autocmd!]])
-  vim.cmd([[  autocmd ColorScheme * lua require("tokyonight.util").onColorScheme()]])
+  vim.cmd([[  autocmd ColorSchemePre * lua require("tokyonight.util").onColorScheme()]])
 
   vim.cmd(
     [[  autocmd FileType ]]
