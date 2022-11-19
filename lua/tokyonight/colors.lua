@@ -46,7 +46,6 @@ M.night = {
   bg = "#1a1b26",
   bg_dark = "#16161e",
 }
-M.day = M.night
 
 M.moon = function()
   local ret = {
@@ -100,7 +99,7 @@ function M.setup(opts)
   opts = opts or {}
   local config = require("tokyonight.config")
 
-  local style = config.is_day() and config.options.light_style or config.options.style
+  local style = config.options.style
   local palette = M[style] or {}
   if type(palette) == "function" then
     palette = palette()
@@ -150,7 +149,7 @@ function M.setup(opts)
   colors.hint = colors.teal
 
   config.options.on_colors(colors)
-  if opts.transform and config.is_day() then
+  if opts.transform and vim.o.background == "light" then
     util.invert_colors(colors)
   end
 

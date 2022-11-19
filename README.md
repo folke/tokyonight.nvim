@@ -18,6 +18,12 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## Day
 
+```
+colorscheme tokyonight-storm
+set vim.o.background=light
+```
+
+
 ![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
 
 ## ✨ Features
@@ -134,7 +140,6 @@ require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
   style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-  light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {

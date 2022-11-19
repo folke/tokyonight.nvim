@@ -33,7 +33,6 @@ function M.setup()
   local styles = {
     storm = " Storm",
     night = "",
-    day = " Day",
     moon = " Moon",
   }
 
