@@ -176,7 +176,7 @@ How the highlight groups are calculated:
 3. the **colors** are then used to generate the highlight groups
 4. `config.on_highlights(highlights, colors)` is ran, where you can overide the highlight groups
 
-Please refer to default values for `colors` and `highlights` for the [storm](extras/lua_tokyonight_storm.lua), [moon](extras/lua_tokyonight_moon.lua), [night](extras/lua_tokyonight_night.lua), [day](extras/lua_tokyonight_day.lua)
+Please refer to default values for `colors` and `highlights` for the [storm](extras/lua/tokyonight_storm.lua), [moon](extras/lua/tokyonight_moon.lua), [night](extras/lua/tokyonight_night.lua), [day](extras/lua/tokyonight_day.lua)
 
 Example for changing some settings and colors
 
