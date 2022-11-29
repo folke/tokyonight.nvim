@@ -1,4 +1,4 @@
-*tokyonight.txt*         For NVIM v0.5.0         Last change: 2022 November 15
+*tokyonight.txt*         For NVIM v0.5.0         Last change: 2022 November 29
 
 ==============================================================================
 Table of Contents                               *tokyonight-table-of-contents*
@@ -229,8 +229,8 @@ How the highlight groups are calculated:
 
 
 Please refer to default values for `colors` and `highlights` for the storm
-<extras/lua_tokyonight_storm.lua>, moon <extras/lua_tokyonight_moon.lua>, night
-<extras/lua_tokyonight_night.lua>, day <extras/lua_tokyonight_day.lua>
+<extras/lua/tokyonight_storm.lua>, moon <extras/lua/tokyonight_moon.lua>, night
+<extras/lua/tokyonight_night.lua>, day <extras/lua/tokyonight_day.lua>
 
 Example for changing some settings and colors
 
