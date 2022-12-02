@@ -163,6 +163,8 @@ function M.setup()
     markdownLinkText = { fg = c.blue, underline = true },
 
     ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
+    ["@text.todo.unchecked"] = { fg = c.blue }, -- For brackets and parens.
+    ["@text.todo.checked"] = { fg = c.green1 }, -- For brackets and parens.
     ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
