@@ -180,7 +180,11 @@ function M.load(theme)
   vim.g.colors_name = "tokyonight"
 
   if ts.new_style() then
-    M.syntax(ts.defaults)
+    for group, colors in pairs(ts.defaults) do
+      if not theme.highlights[group] then
+        M.highlight(group, colors)
+      end
+    end
   end
 
   M.syntax(theme.highlights)
