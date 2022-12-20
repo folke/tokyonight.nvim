@@ -172,9 +172,7 @@ end
 ---@param theme Theme
 function M.load(theme)
   -- only needed to clear when not the default colorscheme
-  if vim.g.colors_name then
-    vim.cmd("hi clear")
-  end
+  vim.cmd("hi clear")
 
   vim.o.termguicolors = true
   vim.g.colors_name = "tokyonight"
