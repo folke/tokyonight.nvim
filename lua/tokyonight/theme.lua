@@ -576,6 +576,9 @@ function M.setup()
     YankyPut = { link = "IncSearch" },
     YankyYanked = { link = "IncSearch" },
 
+    -- Lazy
+    LazyProgressDone = { bold = true, fg = c.magenta2 },
+
     -- Notify
     --- Border
     NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = options.transparent and c.none or c.bg },
