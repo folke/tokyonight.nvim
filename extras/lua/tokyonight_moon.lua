@@ -499,6 +499,15 @@ local highlights = {
     fg = "#82aaff",
     style = {}
   },
+  SignifySignAdd = {
+    fg = "#627259"
+  },
+  SignifySignChange = {
+    fg = "#485a86"
+  },
+  SignifySignDelete = {
+    fg = "#b55a67"
+  },
   GitGutterAdd = {
     fg = "#627259"
   },

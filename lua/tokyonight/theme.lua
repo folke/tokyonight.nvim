@@ -327,6 +327,11 @@ function M.setup()
     NeotestTarget = { fg = c.blue },
     --[[ NeotestUnknown = {}, ]]
 
+    -- Signify
+    SignifySignAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
+    SignifySignChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
+    SignifySignDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
+
     -- GitGutter
     GitGutterAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
