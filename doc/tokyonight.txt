@@ -1,4 +1,4 @@
-*tokyonight.txt*         For NVIM v0.5.0         Last change: 2022 December 26
+*tokyonight.txt*         For NVIM v0.5.0         Last change: 2022 December 29
 
 ==============================================================================
 Table of Contents                               *tokyonight-table-of-contents*
@@ -81,6 +81,7 @@ PLUGIN SUPPORT ~
 - Indent Blankline <https://github.com/lukas-reineke/indent-blankline.nvim>
 - Dashboard <https://github.com/glepnir/dashboard-nvim>
 - BufferLine <https://github.com/akinsho/nvim-bufferline.lua>
+- Barbecue <https://github.com/utilyre/barbecue.nvim>
 - Lualine <https://github.com/hoob3rt/lualine.nvim>
 - Lightline <https://github.com/itchyny/lightline.vim>
 - Neogit <https://github.com/TimUntersberger/neogit>
@@ -134,6 +135,17 @@ Enable the colorscheme:
 >
     -- Lua
     vim.cmd[[colorscheme tokyonight]]
+<
+
+
+To enable the `tokyonight` theme for `Barbecue`:
+
+>
+    require('barbecue').setup {
+      -- ... your barbecue config
+      theme = 'tokyonight',
+      -- ... your barbecue config
+    }
 <
 
 
