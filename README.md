@@ -46,6 +46,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Dashboard](https://github.com/glepnir/dashboard-nvim)
 - [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
+- [Barbecue](https://github.com/utilyre/barbecue.nvim)
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 - [Lightline](https://github.com/itchyny/lightline.vim)
 - [Neogit](https://github.com/TimUntersberger/neogit)
@@ -93,6 +94,16 @@ colorscheme tokyonight-moon
 ```lua
 -- Lua
 vim.cmd[[colorscheme tokyonight]]
+```
+
+To enable the `tokyonight` theme for `Barbecue`:
+
+```lua
+require('barbecue').setup {
+  -- ... your barbecue config
+  theme = 'tokyonight',
+  -- ... your barbecue config
+}
 ```
 
 To enable the `TokyoNight` theme for `Lualine`, simply specify it in your
