@@ -31,7 +31,7 @@ local M = {
   context_array = { fg = c.orange },
   context_object = { fg = c.orange },
   context_key = { fg = c.purple },
-  context_null = { fg = c.orange },
+  context_null = { fg = c.blue1 },
   context_enum_member = { fg = c.green1 },
   context_struct = { fg = c.orange },
   context_event = { fg = c.orange },
