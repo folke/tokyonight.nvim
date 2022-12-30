@@ -383,11 +383,11 @@ function M.setup()
     DashboardFooter = { fg = c.yellow, italic = true },
 
     -- Alpha
-    AlphaShortcut = { fg = c.cyan },
+    AlphaShortcut = { fg = c.orange },
     AlphaHeader = { fg = c.blue },
     AlphaHeaderLabel = { fg = c.orange },
     AlphaFooter = { fg = c.yellow, italic = true },
-    AlphaButtons = { fg = c.magenta },
+    AlphaButtons = { fg = c.cyan },
 
     -- WhichKey
     WhichKey = { fg = c.cyan },
