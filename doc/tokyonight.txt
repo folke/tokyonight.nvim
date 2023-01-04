@@ -1,4 +1,4 @@
-*tokyonight.txt*         For NVIM v0.8.0         Last change: 2022 December 30
+*tokyonight.txt*          For NVIM v0.8.0         Last change: 2023 January 04
 
 ==============================================================================
 Table of Contents                               *tokyonight-table-of-contents*
