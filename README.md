@@ -76,6 +76,22 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 use 'folke/tokyonight.nvim'
 ```
 
+[lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+{
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = { style = "moon" },
+  config = function(_, opts)
+    local tokyonight = require("tokyonight")
+    tokyonight.setup(opts)
+    tokyonight.load()
+  end,
+}
+```
+
 ## 🚀 Usage
 
 Enable the colorscheme:
