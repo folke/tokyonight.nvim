@@ -725,12 +725,11 @@ function M.setup()
     VimwikiList = { fg = c.orange, bg = c.none },
     VimwikiTag = { fg = c.green, bg = c.none },
     VimwikiMarkers = { fg = c.blue, bg = c.none },
-    VimwikiHeader1 = { fg = c.orange, bg = c.none, bold = true },
-    VimwikiHeader2 = { fg = c.red, bg = c.none, bold = true },
-    VimwikiHeader3 = { fg = c.blue, bg = c.none, bold = true },
-    VimwikiHeader4 = { fg = c.cyan, bg = c.none, bold = true },
-    VimwikiHeader5 = { fg = c.yellow, bg = c.none, bold = true },
-    VimwikiHeader6 = { fg = c.purple, bg = c.none, bold = true },
+    VimwikiHeader1 = { fg = c.red, bg = c.none, bold = true },
+    VimwikiHeader2 = { fg = c.yellow, bg = c.none, bold = true },
+    VimwikiHeader3 = { fg = c.green, bg = c.none, bold = true },
+    VimwikiHeader4 = { fg = c.teal, bg = c.none, bold = true },
+    VimwikiHeader5 = { fg = c.blue, bg = c.none, bold = true },
   }
 
   if not vim.diagnostic then
