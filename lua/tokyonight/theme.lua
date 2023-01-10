@@ -717,6 +717,20 @@ function M.setup()
     TreesitterContext = { bg = util.darken(c.fg_gutter, 0.8) },
     Hlargs = { fg = c.yellow },
     -- TreesitterContext = { bg = util.darken(c.bg_visual, 0.4) },
+
+    -- VimWiki
+    VimwikiLink = { fg = c.blue, bg = c.none },
+    VimwikiHeaderChar = { fg = c.yellow, bg = c.none },
+    VimwikiHR = { fg = c.yellow, bg = c.none },
+    VimwikiList = { fg = c.orange, bg = c.none },
+    VimwikiTag = { fg = c.green, bg = c.none },
+    VimwikiMarkers = { fg = c.blue, bg = c.none },
+    VimwikiHeader1 = { fg = c.orange, bg = c.none, bold = true },
+    VimwikiHeader2 = { fg = c.red, bg = c.none, bold = true },
+    VimwikiHeader3 = { fg = c.blue, bg = c.none, bold = true },
+    VimwikiHeader4 = { fg = c.cyan, bg = c.none, bold = true },
+    VimwikiHeader5 = { fg = c.yellow, bg = c.none, bold = true },
+    VimwikiHeader6 = { fg = c.purple, bg = c.none, bold = true },
   }
 
   if not vim.diagnostic then
