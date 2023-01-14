@@ -605,6 +605,7 @@ function M.setup()
 
     -- Lazy
     LazyProgressDone = { bold = true, fg = c.magenta2 },
+    LazyProgressTodo = { bold = true, fg = c.fg_gutter },
 
     -- Notify
     --- Border
