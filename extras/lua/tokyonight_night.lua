@@ -31,7 +31,7 @@ local colors = {
   error = "#db4b4b",
   fg = "#c0caf5",
   fg_dark = "#a9b1d6",
-  fg_float = "#a9b1d6",
+  fg_float = "#c0caf5",
   fg_gutter = "#3b4261",
   fg_sidebar = "#a9b1d6",
   git = {
@@ -115,12 +115,27 @@ local highlights = {
     bg = "#db4b4b",
     fg = "#1a1b26"
   },
+  ["@text.diff.add"] = {
+    link = "DiffAdd"
+  },
+  ["@text.diff.delete"] = {
+    link = "DiffDelete"
+  },
+  ["@text.literal.markdown"] = {
+    link = "Normal"
+  },
   ["@text.literal.markdown_inline"] = {
     bg = "#414868",
     fg = "#7aa2f7"
   },
   ["@text.reference"] = {
     fg = "#1abc9c"
+  },
+  ["@text.todo.checked"] = {
+    fg = "#73daca"
+  },
+  ["@text.todo.unchecked"] = {
+    fg = "#7aa2f7"
   },
   ["@text.warning"] = {
     bg = "#e0af68",
@@ -139,7 +154,7 @@ local highlights = {
     fg = "#e0af68"
   },
   AlphaButtons = {
-    fg = "#bb9af7"
+    fg = "#7dcfff"
   },
   AlphaFooter = {
     fg = "#e0af68",
@@ -152,14 +167,62 @@ local highlights = {
     fg = "#ff9e64"
   },
   AlphaShortcut = {
-    fg = "#7dcfff"
+    fg = "#ff9e64"
   },
   Bold = {
     bold = true
   },
+  BufferAlternate = {
+    bg = "#3b4261",
+    fg = "#c0caf5"
+  },
+  BufferAlternateERROR = {
+    bg = "#3b4261",
+    fg = "#db4b4b"
+  },
+  BufferAlternateHINT = {
+    bg = "#3b4261",
+    fg = "#1abc9c"
+  },
+  BufferAlternateINFO = {
+    bg = "#3b4261",
+    fg = "#0db9d7"
+  },
+  BufferAlternateIndex = {
+    bg = "#3b4261",
+    fg = "#0db9d7"
+  },
+  BufferAlternateMod = {
+    bg = "#3b4261",
+    fg = "#e0af68"
+  },
+  BufferAlternateSign = {
+    bg = "#3b4261",
+    fg = "#0db9d7"
+  },
+  BufferAlternateTarget = {
+    bg = "#3b4261",
+    fg = "#f7768e"
+  },
+  BufferAlternateWARN = {
+    bg = "#3b4261",
+    fg = "#e0af68"
+  },
   BufferCurrent = {
     bg = "#3b4261",
     fg = "#c0caf5"
+  },
+  BufferCurrentERROR = {
+    bg = "#3b4261",
+    fg = "#db4b4b"
+  },
+  BufferCurrentHINT = {
+    bg = "#3b4261",
+    fg = "#1abc9c"
+  },
+  BufferCurrentINFO = {
+    bg = "#3b4261",
+    fg = "#0db9d7"
   },
   BufferCurrentIndex = {
     bg = "#3b4261",
@@ -177,9 +240,25 @@ local highlights = {
     bg = "#3b4261",
     fg = "#f7768e"
   },
+  BufferCurrentWARN = {
+    bg = "#3b4261",
+    fg = "#e0af68"
+  },
   BufferInactive = {
     bg = "#16161e",
     fg = "#737aa2"
+  },
+  BufferInactiveERROR = {
+    bg = "#16161e",
+    fg = "#a13d40"
+  },
+  BufferInactiveHINT = {
+    bg = "#16161e",
+    fg = "#1a8c79"
+  },
+  BufferInactiveINFO = {
+    bg = "#16161e",
+    fg = "#118aa2"
   },
   BufferInactiveIndex = {
     bg = "#16161e",
@@ -197,12 +276,20 @@ local highlights = {
     bg = "#16161e",
     fg = "#f7768e"
   },
+  BufferInactiveWARN = {
+    bg = "#16161e",
+    fg = "#a58354"
+  },
   BufferLineIndicatorSelected = {
     fg = "#506d9b"
   },
-  BufferTabpage = {
+  BufferOffset = {
     bg = "#16161e",
-    fg = "#27a1b9"
+    fg = "#737aa2"
+  },
+  BufferTabpageFill = {
+    bg = "#16161e",
+    fg = "#737aa2"
   },
   BufferTabpages = {
     bg = "#16161e",
@@ -211,6 +298,18 @@ local highlights = {
   BufferVisible = {
     bg = "#16161e",
     fg = "#c0caf5"
+  },
+  BufferVisibleERROR = {
+    bg = "#16161e",
+    fg = "#db4b4b"
+  },
+  BufferVisibleHINT = {
+    bg = "#16161e",
+    fg = "#1abc9c"
+  },
+  BufferVisibleINFO = {
+    bg = "#16161e",
+    fg = "#0db9d7"
   },
   BufferVisibleIndex = {
     bg = "#16161e",
@@ -227,6 +326,10 @@ local highlights = {
   BufferVisibleTarget = {
     bg = "#16161e",
     fg = "#f7768e"
+  },
+  BufferVisibleWARN = {
+    bg = "#16161e",
+    fg = "#e0af68"
   },
   Character = {
     fg = "#9ece6a"
@@ -538,6 +641,9 @@ local highlights = {
   GlyphPalette9 = {
     fg = "#f7768e"
   },
+  Hlargs = {
+    fg = "#e0af68"
+  },
   HopNextKey = {
     bold = true,
     fg = "#ff007c"
@@ -585,6 +691,14 @@ local highlights = {
     style = {
       italic = true
     }
+  },
+  LazyProgressDone = {
+    bold = true,
+    fg = "#ff007c"
+  },
+  LazyProgressTodo = {
+    bold = true,
+    fg = "#3b4261"
   },
   LeapBackdrop = {
     fg = "#545c7e"
@@ -1162,7 +1276,7 @@ local highlights = {
   },
   NormalFloat = {
     bg = "#16161e",
-    fg = "#a9b1d6"
+    fg = "#c0caf5"
   },
   NormalNC = {
     bg = "#1a1b26",
@@ -1471,6 +1585,9 @@ local highlights = {
     bg = "#e0af68",
     fg = "#1a1b26"
   },
+  TreesitterContext = {
+    bg = "#343a55"
+  },
   TroubleCount = {
     bg = "#3b4261",
     fg = "#bb9af7"
@@ -1576,6 +1693,10 @@ local highlights = {
   },
   healthWarning = {
     fg = "#e0af68"
+  },
+  helpCommand = {
+    bg = "#414868",
+    fg = "#7aa2f7"
   },
   htmlH1 = {
     bold = true,
