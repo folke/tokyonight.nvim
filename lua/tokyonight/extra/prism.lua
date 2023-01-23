@@ -47,8 +47,7 @@ module.exports =  {
     {
       types: ["keyword"],
       style: {
-        color: "${magenta}",
-        fontStyle: "italic",
+        color: "${purple}",
       },
     },
     {
