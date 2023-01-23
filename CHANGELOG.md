@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/folke/tokyonight.nvim/compare/v1.0.0...v1.1.0) (2023-01-23)
+
+
+### Features
+
+* **extras:** added prism.js themes ([14ca396](https://github.com/folke/tokyonight.nvim/commit/14ca396af092674ec35b04a8da097e2b223d4de6))
+* **prism:** better colors ([7c22129](https://github.com/folke/tokyonight.nvim/commit/7c22129e3bda1aa08734a1a94a8a69193a538378))
+
+
+### Bug Fixes
+
+* **lazy:** set todo progress to fg_gutter ([655acfa](https://github.com/folke/tokyonight.nvim/commit/655acfad615af196607e29fcabd8998ade9489a5))
+* **sublime:** don't hardcode background and foreground colours in Sublime theme ([#298](https://github.com/folke/tokyonight.nvim/issues/298)) ([10730e6](https://github.com/folke/tokyonight.nvim/commit/10730e6903b1399aede2cad0b93cee4b84b25cda))
+
 ## 1.0.0 (2023-01-04)
 
 
