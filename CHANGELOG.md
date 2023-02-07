@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/folke/tokyonight.nvim/compare/v1.1.0...v1.2.0) (2023-02-07)
+
+
+### Features
+
+* **wezterm:** added tab_bar colors. only works with the retro tab bar. Fixes [#304](https://github.com/folke/tokyonight.nvim/issues/304) ([56945bd](https://github.com/folke/tokyonight.nvim/commit/56945bd0d312dc3ed84466d7a6cbfc5e44fbbb4e))
+
 ## [1.1.0](https://github.com/folke/tokyonight.nvim/compare/v1.0.0...v1.1.0) (2023-01-23)
 
 
