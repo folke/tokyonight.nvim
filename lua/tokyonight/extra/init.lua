@@ -15,7 +15,8 @@ function M.setup()
   -- map of plugin name to plugin extension
   local extras = {
     kitty = "conf",
-    fish = "theme",
+    fish = "fish",
+    fish_themes = "theme",
     alacritty = "yml",
     wezterm = "toml",
     tmux = "tmux",

@@ -1,29 +1,14 @@
-local util = require("tokyonight.util")
-
-local M = {}
-
---- @param colors ColorScheme
-function M.generate(colors)
-  local fishColors = {}
-  for k, v in pairs(colors) do
-    if type(v) == "string" then
-      fishColors[k] = v:gsub("^#", "")
-    end
-  end
-
-  local fish = util.template(
-    [[
     # TokyoNight Color Palette
-    set -l foreground ${fg}
-    set -l selection ${bg_visual}
-    set -l comment ${comment}
-    set -l red ${red}
-    set -l orange ${orange}
-    set -l yellow ${yellow}
-    set -l green ${green}
-    set -l purple ${purple}
-    set -l cyan ${cyan}
-    set -l pink ${magenta}
+    set -l foreground c8d3f5
+    set -l selection 3654a7
+    set -l comment 636da6
+    set -l red ff757f
+    set -l orange ff966c
+    set -l yellow ffc777
+    set -l green c3e88d
+    set -l purple fca7ea
+    set -l cyan 86e1fc
+    set -l pink c099ff
 
     # Syntax Highlighting Colors
     set -g fish_color_normal $foreground
@@ -48,11 +33,4 @@ function M.generate(colors)
     set -g fish_pager_color_description $comment
     set -g fish_pager_color_selected_background --background=$selection
 
-  ]],
-    fishColors
-  )
-
-  return fish
-end
-
-return M
+  
