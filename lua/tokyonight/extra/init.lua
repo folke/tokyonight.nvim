@@ -16,6 +16,7 @@ function M.setup()
   local extras = {
     kitty = "conf",
     fish = "fish",
+    fish_themes = "theme",
     alacritty = "yml",
     wezterm = "toml",
     tmux = "tmux",
