@@ -88,7 +88,7 @@ M.fallbacks = {
   ["text.note"] = "TSNote",
   ["text.warning"] = "TSWarning",
   ["text.danger"] = "TSDanger",
-  ["todo"] = "TSTodo",
+  ["text.todo"] = "TSTodo",
   ["type"] = "TSType",
   ["type.builtin"] = "TSTypeBuiltin",
   ["type.qualifier"] = "TSTypeQualifier",
@@ -351,7 +351,7 @@ M.defaults = {
     default = true,
     link = "Todo",
   },
-  ["@todo"] = {
+  ["@text.todo"] = {
     default = true,
     link = "Todo",
   },
