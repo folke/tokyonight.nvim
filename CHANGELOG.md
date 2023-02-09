@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/folke/tokyonight.nvim/compare/v1.2.0...v1.3.0) (2023-02-09)
+
+
+### Features
+
+* **extras:** add fish theme format ([#306](https://github.com/folke/tokyonight.nvim/issues/306)) ([3685c24](https://github.com/folke/tokyonight.nvim/commit/3685c241a2adaad70299989d32f67fc5c482ff3c))
+
+
+### Bug Fixes
+
+* treesitter todo keyword highlight ([#310](https://github.com/folke/tokyonight.nvim/issues/310)) ([0c21ef1](https://github.com/folke/tokyonight.nvim/commit/0c21ef11b8bbe2c6ec68a69553bee75a75e1587b))
+
 ## [1.2.0](https://github.com/folke/tokyonight.nvim/compare/v1.1.0...v1.2.0) (2023-02-07)
 
 
