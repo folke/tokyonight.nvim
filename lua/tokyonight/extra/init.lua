@@ -30,6 +30,7 @@ function M.setup()
     delta = "gitconfig",
     terminator = "conf",
     prism = "js",
+    windows_terminal = "json",
   }
   -- map of style to style name
   local styles = {
