@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/folke/tokyonight.nvim/compare/v1.3.0...v1.4.0) (2023-02-28)
+
+
+### Features
+
+* **windows_terminal:** add Windows Terminal colors ([#315](https://github.com/folke/tokyonight.nvim/issues/315)) ([85a833f](https://github.com/folke/tokyonight.nvim/commit/85a833fa637f979d5500b2451de6dae88187c7e9))
+
 ## [1.3.0](https://github.com/folke/tokyonight.nvim/compare/v1.2.0...v1.3.0) (2023-02-09)
 
 
