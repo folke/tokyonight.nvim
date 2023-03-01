@@ -39,4 +39,9 @@ local M = {
   context_type_parameter = { fg = c.green1 },
 }
 
+if config.limited_colors and vim.fn.has('gui_running') ~= 1 then
+    local termcol = require("tokyonight.termcol")
+    M = termcol.map_highlights(M)
+end
+
 return M

@@ -35,4 +35,9 @@ tokyonight.tabline = {
   tabsel = { { colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg } },
 }
 
+if config.limited_colors and vim.fn.has('gui_running') ~= 1 then
+    local termcol = require("tokyonight.termcol")
+    tokyonight = termcol.map_highlights(tokyonight)
+end
+
 return tokyonight

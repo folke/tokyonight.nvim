@@ -642,7 +642,7 @@ function M.setup()
     MiniIndentscopeSymbol = { fg = c.blue1 },
     MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
-    MiniJump = { bg = c.magenta2, fg = "#ffffff" },
+    MiniJump = { bg = c.magenta2, fg = c.white },
 
     MiniJump2dSpot = { fg = c.magenta2, bold = true, nocombine = true },
 
@@ -759,6 +759,12 @@ function M.setup()
   if config.is_day() then
     util.invert_colors(theme.colors)
     util.invert_highlights(theme.highlights)
+  end
+
+  -- must be last
+  if config.options.limited_colors and vim.fn.has('gui_running') ~= 1 then
+    local termcol = require("tokyonight.termcol")
+    theme.highlights = termcol.map_highlights(theme.highlights)
   end
 
   return theme

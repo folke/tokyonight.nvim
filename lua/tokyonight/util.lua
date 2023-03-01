@@ -29,10 +29,16 @@ function M.blend(foreground, background, alpha)
 end
 
 function M.darken(hex, amount, bg)
+  if type(hex) ~= "string" then
+      return hex
+  end
   return M.blend(hex, bg or M.bg, amount)
 end
 
 function M.lighten(hex, amount, fg)
+  if type(hex) ~= "string" then
+      return hex
+  end
   return M.blend(hex, fg or M.fg, amount)
 end
 
@@ -176,7 +182,9 @@ function M.load(theme)
     vim.cmd("hi clear")
   end
 
-  vim.o.termguicolors = true
+  if not theme.config.limited_colors or vim.fn.has('gui_running') == 1 then
+    vim.o.termguicolors = true
+  end
   vim.g.colors_name = "tokyonight"
 
   if ts.new_style() then

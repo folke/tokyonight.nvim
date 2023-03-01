@@ -46,4 +46,9 @@ if config.lualine_bold then
   end
 end
 
+if config.limited_colors and vim.fn.has('gui_running') ~= 1 then
+    local termcol = require("tokyonight.termcol")
+    tokyonight = termcol.map_highlights(tokyonight)
+end
+
 return tokyonight

@@ -80,6 +80,7 @@ M.moon = function()
     teal = "#4fd6be", --
     red = "#ff757f", --
     red1 = "#c53b53", --
+    white = "#ffffff",
   }
   ret.comment = util.blend(ret.comment, ret.bg, "bb")
   ret.git = {
@@ -152,6 +153,12 @@ function M.setup(opts)
   config.options.on_colors(colors)
   if opts.transform and config.is_day() then
     util.invert_colors(colors)
+  end
+
+  -- must be last
+  if config.options.limited_colors and vim.fn.has('gui_running') ~= 1 then
+    local termcol = require("tokyonight.termcol")
+    return termcol.map_colors(colors)
   end
 
   return colors
