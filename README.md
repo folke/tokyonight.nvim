@@ -20,6 +20,18 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
 
+## Apple terminal fixes
+
+This differs from [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) only in that it supports
+terminals which do not have true color support.  Eg:
+
+<img width="1534" alt="With changes" src="https://user-images.githubusercontent.com/2169888/222120555-009417ca-04de-46c8-b192-8b3b8020072b.png">
+
+vs
+
+<img width="1538" alt="Before changes" src="https://user-images.githubusercontent.com/2169888/222120841-ac0d91c9-4c00-4332-b4fa-6906dd220486.png">
+
+
 ## ✨ Features
 
 - supports the latest Neovim 5.0 features like TreeSitter and LSP
@@ -31,6 +43,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
   [Alacritty](https://github.com/alacritty/alacritty) and
   [Fish Shell](https://fishshell.com/)
 - **lualine** theme
+- **support for low palette terminals like Apple's Terminal.app**
 
 ### Plugin Support
 
