@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/folke/tokyonight.nvim/compare/v1.4.0...v1.5.0) (2023-03-01)
+
+
+### Features
+
+* **cmp:** added color for copilot item kind ([89ab6bc](https://github.com/folke/tokyonight.nvim/commit/89ab6bca84cead8ecf132791b50dcf3743378b18))
+
 ## [1.4.0](https://github.com/folke/tokyonight.nvim/compare/v1.3.0...v1.4.0) (2023-02-28)
 
 
