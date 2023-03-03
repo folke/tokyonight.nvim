@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/folke/tokyonight.nvim/compare/v1.5.0...v1.6.0) (2023-03-03)
+
+
+### Features
+
+* **neo-tree:** better colors for indent lines ([911618a](https://github.com/folke/tokyonight.nvim/commit/911618ad1528fa53236b2c999d3e50d176c20293))
+
 ## [1.5.0](https://github.com/folke/tokyonight.nvim/compare/v1.4.0...v1.5.0) (2023-03-01)
 
 
