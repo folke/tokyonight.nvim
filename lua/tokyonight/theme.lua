@@ -363,6 +363,7 @@ function M.setup()
 
     NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    NeoTreeDimText = { fg = c.fg_gutter },
 
     -- Fern
     FernBranchText = { fg = c.blue },
