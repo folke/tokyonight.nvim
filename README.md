@@ -40,6 +40,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 - [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
 - [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
 - [Git Gutter](https://github.com/airblade/vim-gitgutter)
+- [Signify](https://github.com/mhinz/vim-signify)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [WhichKey](https://github.com/liuchengxu/vim-which-key)
