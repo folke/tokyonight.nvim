@@ -4,7 +4,7 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  local kitty = util.template(
+  local wezterm = util.template(
     [[
 [colors]
 foreground = "${fg}"
@@ -41,10 +41,14 @@ bg_color = "${blue}"
 [colors.tab_bar.new_tab]
 fg_color = "${blue}"
 bg_color = "#191b28"
-]],
+
+[metadata]
+aliases = []
+author = "folke"
+name = "${_style_name}"]],
     colors
   )
-  return kitty
+  return wezterm
 end
 
 return M
