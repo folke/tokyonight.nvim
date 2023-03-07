@@ -251,13 +251,16 @@ function M.setup()
     ["@text.diff.add"] = { link = "DiffAdd" },
     ["@text.diff.delete"] = { link = "DiffDelete" },
 
+    ["@namespace"] = { link = "Include" },
+
     -- LSP Semantic Token Groups
-    ["@lsp.type.enum"] = { link = "Type" },
+    ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.keyword"] = { link = "@keyword" },
-    ["@lsp.type.namespace"] = { link = "PreProc" },
-    ["@lsp.type.parameter"] = { fg = c.yellow },
-    ["@lsp.type.property"] = { fg = c.green1 },
-    ["@lsp.type.variable"] = { style = options.styles.variables },
+    ["@lsp.type.interface"] = { link = "Identifier" },
+    ["@lsp.type.namespace"] = { link = "@namespace" },
+    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.property"] = { link = "@property" },
+    ["@lsp.type.variable"] = { link = "@variable" },
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
