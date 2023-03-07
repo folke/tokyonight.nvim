@@ -186,6 +186,10 @@ M.defaults = {
     default = true,
     link = "Keyword",
   },
+  ["@keyword.coroutine"] = {
+    default = true,
+    link = "@keyword",
+  },
   ["@keyword.function"] = {
     default = true,
     link = "Keyword",
@@ -228,10 +232,6 @@ M.defaults = {
   ["@parameter"] = {
     default = true,
     link = "Identifier",
-  },
-  ["@parameter.reference"] = {
-    default = true,
-    link = "@parameter",
   },
   ["@preproc"] = {
     default = true,
@@ -369,7 +369,7 @@ M.defaults = {
   },
   ["@type.qualifier"] = {
     default = true,
-    link = "Type",
+    link = "@keyword",
   },
   ["@variable.builtin"] = {
     default = true,

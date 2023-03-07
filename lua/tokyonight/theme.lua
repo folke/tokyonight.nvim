@@ -162,11 +162,6 @@ function M.setup()
     markdownH2 = { fg = c.blue, bold = true },
     markdownLinkText = { fg = c.blue, underline = true },
 
-    ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
-    ["@text.todo.unchecked"] = { fg = c.blue }, -- For brackets and parens.
-    ["@text.todo.checked"] = { fg = c.green1 }, -- For brackets and parens.
-    ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
-    ["@text.literal.markdown"] = { link = "Normal" },
     ["helpCommand"] = { bg = c.terminal_black, fg = c.blue },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
@@ -202,72 +197,72 @@ function M.setup()
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
 
-    -- These groups are for the neovim tree-sitter highlights.
+    -- These groups are for the Neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
-    -- By default, most of these groups link to an appropriate Vim group,
-    -- TSError -> Error for example, so you do not have to define these unless
-    -- you explicitly want to support Treesitter's improved syntax awareness.
 
-    -- TSAnnotation        = { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-    -- TSAttribute         = { };    -- (unstable) TODO: docs
-    -- TSBoolean           = { };    -- For booleans.
-    -- TSCharacter         = { };    -- For characters.
-    -- TSComment           = { };    -- For comment blocks.
-    TSNote = { fg = c.bg, bg = c.info },
-    ["@text.warning"] = { fg = c.bg, bg = c.warning },
-    ["@text.danger"] = { fg = c.bg, bg = c.error },
-    ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    -- TSConditional       = { };    -- For keywords related to conditionnals.
-    -- TSConstant          = { };    -- For constants
-    -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
-    -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
-    -- TSError             = { };    -- For syntax/parser errors.
-    -- TSException         = { };    -- For exception related keywords.
-    ["@field"] = { fg = c.green1 }, -- For fields.
-    -- TSFloat             = { };    -- For floats.
-    -- TSFunction          = { };    -- For function (calls and definitions).
-    -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
-    -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-    -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
-    ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
-    -- TSMethod            = { };    -- For method calls and definitions.
-    -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
-    -- TSNone              = { };    -- TODO: docs
-    -- TSNumber            = { };    -- For all numbers
+    --- Misc
+    -- TODO:
+    -- ["@comment.documentation"] = { },
     ["@operator"] = { fg = c.blue5 }, -- For any operator: `+`, but also `->` and `*` in C.
-    ["@parameter"] = { fg = c.yellow }, -- For parameters of a function.
-    -- TSParameterReference= { };    -- For references to parameters of a function.
-    ["@property"] = { fg = c.green1 }, -- Same as `TSField`.
+
+    --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.blue5 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
-    -- TSRepeat            = { };    -- For keywords related to loops.
-    -- TSString            = { };    -- For strings.
+    ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
+
+    --- Literals
+    ["@string.documentation"] = { fg = c.yellow },
     ["@string.regex"] = { fg = c.blue6 }, -- For regexes.
     ["@string.escape"] = { fg = c.magenta }, -- For escape characters within a string.
-    -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
-    -- TSType              = { };    -- For types.
-    -- TSTypeBuiltin       = { };    -- For builtin types.
+
+    --- Functions
+    ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ["@parameter"] = { fg = c.yellow }, -- For parameters of a function.
+    -- TODO:
+    -- ["@parameter.builtin"] = {}, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+
+    --- Keywords
+    ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    -- TODO:
+    -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
+    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+
+    ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
+
+    --- Types
+    ["@field"] = { fg = c.green1 }, -- For fields.
+    ["@property"] = { fg = c.green1 },
+
+    --- Identifiers
     ["@variable"] = { style = options.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
-    -- TSTag               = { };    -- Tags like html tag names.
-    -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
-    -- TSText              = { };    -- For strings considered text in a markup language.
+    --- Text
+    ["@text.literal.markdown"] = { link = "Normal" },
+    ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
     ["@text.reference"] = { fg = c.teal },
-    -- TSEmphasis          = { };    -- For text to be represented with emphasis.
-    -- TSUnderline         = { };    -- For text to be represented with an underline.
-    -- TSStrike            = { };    -- For strikethrough text.
-    -- TSTitle             = { };    -- Text that is part of a title.
-    -- TSLiteral           = { };    -- Literal text.
-    -- TSURI               = { };    -- Any URI like a link or email.
+
+    ["@text.todo.unchecked"] = { fg = c.blue }, -- For brackets and parens.
+    ["@text.todo.checked"] = { fg = c.green1 }, -- For brackets and parens.
+    ["@text.warning"] = { fg = c.bg, bg = c.warning },
+    ["@text.danger"] = { fg = c.bg, bg = c.error },
+
     ["@text.diff.add"] = { link = "DiffAdd" },
     ["@text.diff.delete"] = { link = "DiffDelete" },
 
-    -- Lua
-    -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
+    ["@namespace"] = { link = "Include" },
+
+    -- LSP Semantic Token Groups
+    ["@lsp.type.enum"] = { link = "@type" },
+    ["@lsp.type.keyword"] = { link = "@keyword" },
+    ["@lsp.type.interface"] = { link = "Identifier" },
+    ["@lsp.type.namespace"] = { link = "@namespace" },
+    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.property"] = { link = "@property" },
+    ["@lsp.type.variable"] = { link = "@variable" },
+    -- NOTE: maybe add these with distinct highlights?
+    -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
     -- ts-rainbow
     rainbowcol1 = { fg = c.red },
@@ -277,6 +272,15 @@ function M.setup()
     rainbowcol5 = { fg = c.blue },
     rainbowcol6 = { fg = c.magenta },
     rainbowcol7 = { fg = c.purple },
+
+    -- ts-rainbow2 (maintained fork)
+    TSRainbowRed = { fg = c.red },
+    TSRainbowOrange = { fg = c.orange },
+    TSRainbowYellow = { fg = c.yellow },
+    TSRainbowGreen = { fg = c.green },
+    TSRainbowBlue = { fg = c.blue },
+    TSRainbowViolet = { fg = c.purple },
+    TSRainbowCyan = { fg = c.cyan },
 
     -- LspTrouble
     TroubleText = { fg = c.fg_dark },
@@ -739,6 +743,7 @@ function M.setup()
     end
   end
 
+  ---@type table<string, table>
   theme.defer = {}
 
   if options.hide_inactive_statusline then
