@@ -229,6 +229,15 @@ function M.setup()
     ["@text.diff.add"] = { link = "DiffAdd" },
     ["@text.diff.delete"] = { link = "DiffDelete" },
 
+    -- LSP Semantic Token Groups
+    ["@lsp.type.enum"] = { link = "Type" },
+    ["@lsp.type.keyword"] = { link = "@keyword" },
+    ["@lsp.type.namespace"] = { link = "PreProc" },
+    ["@lsp.type.parameter"] = { fg = c.yellow },
+    ["@lsp.type.property"] = { fg = c.green1 },
+    ["@lsp.type.variable"] = { style = options.styles.variables },
+    -- NOTE: maybe add these with distinct highlights?
+    -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
     -- ts-rainbow
     rainbowcol1 = { fg = c.red },
@@ -700,6 +709,7 @@ function M.setup()
     end
   end
 
+  ---@type table<string, table>
   theme.defer = {}
 
   if options.hide_inactive_statusline then
