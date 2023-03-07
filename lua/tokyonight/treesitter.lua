@@ -229,10 +229,6 @@ M.defaults = {
     default = true,
     link = "Identifier",
   },
-  ["@parameter.reference"] = {
-    default = true,
-    link = "@parameter",
-  },
   ["@preproc"] = {
     default = true,
     link = "PreProc",
