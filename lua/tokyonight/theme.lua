@@ -261,6 +261,7 @@ function M.setup()
     ["@lsp.type.parameter"] = { link = "@parameter" },
     ["@lsp.type.property"] = { link = "@property" },
     ["@lsp.type.variable"] = { link = "@variable" },
+    ["@lsp.typemod.function.defaultLibrary"] = { link = "Special" },
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
