@@ -162,11 +162,6 @@ function M.setup()
     markdownH2 = { fg = c.blue, bold = true },
     markdownLinkText = { fg = c.blue, underline = true },
 
-    ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
-    ["@text.todo.unchecked"] = { fg = c.blue }, -- For brackets and parens.
-    ["@text.todo.checked"] = { fg = c.green1 }, -- For brackets and parens.
-    ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
-    ["@text.literal.markdown"] = { link = "Normal" },
     ["helpCommand"] = { bg = c.terminal_black, fg = c.blue },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
@@ -202,30 +197,57 @@ function M.setup()
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
 
-    -- These groups are for the neovim tree-sitter highlights.
+    -- These groups are for the Neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
-    -- By default, most of these groups link to an appropriate Vim group,
-    -- TSError -> Error for example, so you do not have to define these unless
-    -- you explicitly want to support Treesitter's improved syntax awareness.
 
-    ["@text.warning"] = { fg = c.bg, bg = c.warning },
-    ["@text.danger"] = { fg = c.bg, bg = c.error },
-    ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@field"] = { fg = c.green1 }, -- For fields.
-    ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
-    ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
+    --- Misc
+    -- TODO:
+    -- ["@comment.documentation"] = { },
     ["@operator"] = { fg = c.blue5 }, -- For any operator: `+`, but also `->` and `*` in C.
-    ["@parameter"] = { fg = c.yellow }, -- For parameters of a function.
+
+    --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.blue5 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
+    ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
+
+    --- Literals
+    ["@string.documentation"] = { fg = c.yellow },
     ["@string.regex"] = { fg = c.blue6 }, -- For regexes.
     ["@string.escape"] = { fg = c.magenta }, -- For escape characters within a string.
+
+    --- Functions
+    ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ["@parameter"] = { fg = c.yellow }, -- For parameters of a function.
+    -- TODO:
+    -- ["@parameter.builtin"] = {}, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+
+    --- Keywords
+    ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    -- TODO:
+    -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
+    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+
+    ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
+
+    --- Types
+    ["@field"] = { fg = c.green1 }, -- For fields.
+    ["@property"] = { fg = c.green1 },
+
+    --- Identifiers
     ["@variable"] = { style = options.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
+    --- Text
+    ["@text.literal.markdown"] = { link = "Normal" },
+    ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
     ["@text.reference"] = { fg = c.teal },
+
+    ["@text.todo.unchecked"] = { fg = c.blue }, -- For brackets and parens.
+    ["@text.todo.checked"] = { fg = c.green1 }, -- For brackets and parens.
+    ["@text.warning"] = { fg = c.bg, bg = c.warning },
+    ["@text.danger"] = { fg = c.bg, bg = c.error },
+
     ["@text.diff.add"] = { link = "DiffAdd" },
     ["@text.diff.delete"] = { link = "DiffDelete" },
 
