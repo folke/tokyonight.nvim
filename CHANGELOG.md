@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.7.0](https://github.com/folke/tokyonight.nvim/compare/v1.6.0...v1.7.0) (2023-03-07)
+
+
+### Features
+
+* add lsp hl groups from upstream, tidy up tree-sitter hls ([#330](https://github.com/folke/tokyonight.nvim/issues/330)) ([827b05e](https://github.com/folke/tokyonight.nvim/commit/827b05e12ce801f34eca1ce4af673dea035ba18d))
+* **colors:** make bg_visual a little more transarent ([d46993d](https://github.com/folke/tokyonight.nvim/commit/d46993dce84aa90ad43ab65fad6d42fb40683222))
+* **semantic_tokens:** link defaultLibrary functions to Special ([c967c2c](https://github.com/folke/tokyonight.nvim/commit/c967c2cfdbaa20f2938271b5b57bc435f09e13b6))
+* **wezterm:** Add WezTerm Metadata Entry ([#327](https://github.com/folke/tokyonight.nvim/issues/327)) ([43c5b2a](https://github.com/folke/tokyonight.nvim/commit/43c5b2ac4d3be843ddde7aee9d9b7efab6841cf9))
+
 ## [1.6.0](https://github.com/folke/tokyonight.nvim/compare/v1.5.0...v1.6.0) (2023-03-03)
 
 
