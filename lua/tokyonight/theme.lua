@@ -248,6 +248,15 @@ function M.setup()
     rainbowcol6 = { fg = c.magenta },
     rainbowcol7 = { fg = c.purple },
 
+    -- ts-rainbow2 (maintained fork)
+    TSRainbowRed = { fg = c.red },
+    TSRainbowOrange = { fg = c.orange },
+    TSRainbowYellow = { fg = c.yellow },
+    TSRainbowGreen = { fg = c.green },
+    TSRainbowBlue = { fg = c.blue },
+    TSRainbowViolet = { fg = c.purple },
+    TSRainbowCyan = { fg = c.cyan },
+
     -- LspTrouble
     TroubleText = { fg = c.fg_dark },
     TroubleCount = { fg = c.magenta, bg = c.fg_gutter },
