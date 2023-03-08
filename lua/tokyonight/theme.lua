@@ -235,7 +235,7 @@ function M.setup()
     ["@property"] = { fg = c.green1 },
 
     --- Identifiers
-    ["@variable"] = { style = options.styles.variables }, -- Any variable name that does not have another highlight.
+    ["@variable"] = { fg = c.fg, style = options.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
