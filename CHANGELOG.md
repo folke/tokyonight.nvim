@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.8.0](https://github.com/folke/tokyonight.nvim/compare/v1.7.0...v1.8.0) (2023-03-12)
+
+
+### Features
+
+* **semantic_tokens:** link method and functions with defaultLibrary modifier to [@function](https://github.com/function).builtin ([#333](https://github.com/folke/tokyonight.nvim/issues/333)) ([e051206](https://github.com/folke/tokyonight.nvim/commit/e0512063c480d9a82faa12e4d48ba92636ba8f7a))
+
+
+### Bug Fixes
+
+* **semantic_tokens:** dont use [@lsp](https://github.com/lsp).type.variable. Added builtin variable support ([3ebc29d](https://github.com/folke/tokyonight.nvim/commit/3ebc29df627c5cf70eb6acb8f0843c9ea9cf6348))
+* set proper fg for [@variable](https://github.com/variable). Fixes [#331](https://github.com/folke/tokyonight.nvim/issues/331) ([8da3aab](https://github.com/folke/tokyonight.nvim/commit/8da3aab41db35f06640ad251eab53825b8256f7d))
+
 ## [1.7.0](https://github.com/folke/tokyonight.nvim/compare/v1.6.0...v1.7.0) (2023-03-07)
 
 
