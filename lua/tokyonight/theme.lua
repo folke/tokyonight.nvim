@@ -261,7 +261,8 @@ function M.setup()
     ["@lsp.type.parameter"] = { link = "@parameter" },
     ["@lsp.type.property"] = { link = "@property" },
     ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
-    ["@lsp.typemod.function.defaultLibrary"] = { link = "Special" },
+    ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
