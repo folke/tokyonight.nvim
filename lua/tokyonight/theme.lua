@@ -254,9 +254,10 @@ function M.setup()
     ["@namespace"] = { link = "Include" },
 
     -- LSP Semantic Token Groups
+    ["@lsp.type.comment"] = { link = "@comment" },
     ["@lsp.type.enum"] = { link = "@type" },
-    ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.interface"] = { link = "Identifier" },
+    ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
     ["@lsp.type.parameter"] = { link = "@parameter" },
     ["@lsp.type.property"] = { link = "@property" },
