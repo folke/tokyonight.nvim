@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/folke/tokyonight.nvim/compare/v1.8.0...v1.9.0) (2023-03-14)
+
+
+### Features
+
+* **semantic_tokens:** link lsp comments, e.g. conditional C ifdefs that won't evaluate ([#334](https://github.com/folke/tokyonight.nvim/issues/334)) ([b233a3c](https://github.com/folke/tokyonight.nvim/commit/b233a3cab08699c73239346cd7d51a2a55c62250))
+
 ## [1.8.0](https://github.com/folke/tokyonight.nvim/compare/v1.7.0...v1.8.0) (2023-03-12)
 
 
