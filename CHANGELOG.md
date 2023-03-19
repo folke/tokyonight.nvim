@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/folke/tokyonight.nvim/compare/v1.9.0...v1.9.1) (2023-03-19)
+
+
+### Bug Fixes
+
+* **alpha:** AlphaFooter ([8be0a63](https://github.com/folke/tokyonight.nvim/commit/8be0a63987d43a4ae0fc2420fd5100fa528a92ff))
+
 ## [1.9.0](https://github.com/folke/tokyonight.nvim/compare/v1.8.0...v1.9.0) (2023-03-14)
 
 
