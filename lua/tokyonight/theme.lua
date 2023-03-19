@@ -395,7 +395,7 @@ function M.setup()
     AlphaShortcut = { fg = c.orange },
     AlphaHeader = { fg = c.blue },
     AlphaHeaderLabel = { fg = c.orange },
-    AlphaFooter = { fg = c.yellow, italic = true },
+    AlphaFooter = { fg = c.blue1 },
     AlphaButtons = { fg = c.cyan },
 
     -- WhichKey
