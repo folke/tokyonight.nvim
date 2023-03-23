@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/folke/tokyonight.nvim/compare/v1.9.1...v1.10.0) (2023-03-23)
+
+
+### Features
+
+* **lsp:** set injected highlights ([#340](https://github.com/folke/tokyonight.nvim/issues/340)) ([3b33146](https://github.com/folke/tokyonight.nvim/commit/3b331463ed4f88ff8052a054f3e898bcc1a638bd))
+
 ## [1.9.1](https://github.com/folke/tokyonight.nvim/compare/v1.9.0...v1.9.1) (2023-03-19)
 
 
