@@ -7,7 +7,7 @@ local colors = {
   bg_search = "#3d59a1",
   bg_sidebar = "#16161e",
   bg_statusline = "#16161e",
-  bg_visual = "#33467c",
+  bg_visual = "#283457",
   black = "#15161e",
   blue = "#7aa2f7",
   blue0 = "#3d59a1",
@@ -35,15 +35,15 @@ local colors = {
   fg_gutter = "#3b4261",
   fg_sidebar = "#a9b1d6",
   git = {
-    add = "#4097a3",
-    change = "#506d9b",
-    delete = "#c47981",
+    add = "#449dab",
+    change = "#6183bb",
+    delete = "#914c54",
     ignore = "#545c7e"
   },
   gitSigns = {
-    add = "#399a96",
-    change = "#6382bd",
-    delete = "#c25d64"
+    add = "#266d6a",
+    change = "#536c9e",
+    delete = "#b2555b"
   },
   green = "#9ece6a",
   green1 = "#73daca",
@@ -83,6 +83,49 @@ local highlights = {
   ["@label"] = {
     fg = "#7aa2f7"
   },
+  ["@lsp.type.comment"] = {
+    link = "@comment"
+  },
+  ["@lsp.type.enum"] = {
+    link = "@type"
+  },
+  ["@lsp.type.interface"] = {
+    link = "Identifier"
+  },
+  ["@lsp.type.keyword"] = {
+    link = "@keyword"
+  },
+  ["@lsp.type.namespace"] = {
+    link = "@namespace"
+  },
+  ["@lsp.type.parameter"] = {
+    link = "@parameter"
+  },
+  ["@lsp.type.property"] = {
+    link = "@property"
+  },
+  ["@lsp.type.variable"] = {},
+  ["@lsp.typemod.function.defaultLibrary"] = {
+    link = "@function.builtin"
+  },
+  ["@lsp.typemod.method.defaultLibrary"] = {
+    link = "@function.builtin"
+  },
+  ["@lsp.typemod.operator.injected"] = {
+    link = "@operator"
+  },
+  ["@lsp.typemod.string.injected"] = {
+    link = "@string"
+  },
+  ["@lsp.typemod.variable.defaultLibrary"] = {
+    link = "@variable.builtin"
+  },
+  ["@lsp.typemod.variable.injected"] = {
+    link = "@variable"
+  },
+  ["@namespace"] = {
+    link = "Include"
+  },
   ["@operator"] = {
     fg = "#89ddff"
   },
@@ -104,6 +147,9 @@ local highlights = {
   ["@punctuation.special.markdown"] = {
     bold = true,
     fg = "#ff9e64"
+  },
+  ["@string.documentation"] = {
+    fg = "#e0af68"
   },
   ["@string.escape"] = {
     fg = "#bb9af7"
@@ -142,6 +188,7 @@ local highlights = {
     fg = "#1a1b26"
   },
   ["@variable"] = {
+    fg = "#c0caf5",
     style = {}
   },
   ["@variable.builtin"] = {
@@ -157,8 +204,7 @@ local highlights = {
     fg = "#7dcfff"
   },
   AlphaFooter = {
-    fg = "#e0af68",
-    italic = true
+    fg = "#2ac3de"
   },
   AlphaHeader = {
     fg = "#7aa2f7"
@@ -281,7 +327,7 @@ local highlights = {
     fg = "#a58354"
   },
   BufferLineIndicatorSelected = {
-    fg = "#506d9b"
+    fg = "#6183bb"
   },
   BufferOffset = {
     bg = "#16161e",
@@ -370,6 +416,10 @@ local highlights = {
   CmpItemKindConstructor = {
     bg = "NONE",
     fg = "#7aa2f7"
+  },
+  CmpItemKindCopilot = {
+    bg = "NONE",
+    fg = "#1abc9c"
   },
   CmpItemKindDefault = {
     bg = "NONE",
@@ -603,22 +653,22 @@ local highlights = {
     style = {}
   },
   GitGutterAdd = {
-    fg = "#399a96"
+    fg = "#266d6a"
   },
   GitGutterChange = {
-    fg = "#6382bd"
+    fg = "#536c9e"
   },
   GitGutterDelete = {
-    fg = "#c25d64"
+    fg = "#b2555b"
   },
   GitSignsAdd = {
-    fg = "#399a96"
+    fg = "#266d6a"
   },
   GitSignsChange = {
-    fg = "#6382bd"
+    fg = "#536c9e"
   },
   GitSignsDelete = {
-    fg = "#c25d64"
+    fg = "#b2555b"
   },
   GlyphPalette1 = {
     fg = "#db4b4b"
@@ -800,7 +850,7 @@ local highlights = {
     fg = "#9ece6a"
   },
   LspSagaFinderSelection = {
-    fg = "#33467c"
+    fg = "#283457"
   },
   LspSagaHoverBorder = {
     fg = "#7aa2f7"
@@ -812,7 +862,7 @@ local highlights = {
     fg = "#f7768e"
   },
   LspSignatureActiveParameter = {
-    bg = "#242c48",
+    bg = "#20253a",
     bold = true
   },
   MatchParen = {
@@ -1096,6 +1146,9 @@ local highlights = {
     bg = "NONE",
     fg = "#c0caf5"
   },
+  NeoTreeDimText = {
+    fg = "#3b4261"
+  },
   NeoTreeNormal = {
     bg = "#16161e",
     fg = "#a9b1d6"
@@ -1109,7 +1162,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#20303b",
-    fg = "#4097a3"
+    fg = "#449dab"
   },
   NeogitDiffContextHighlight = {
     bg = "#2b2f44",
@@ -1117,7 +1170,7 @@ local highlights = {
   },
   NeogitDiffDeleteHighlight = {
     bg = "#37222c",
-    fg = "#c47981"
+    fg = "#914c54"
   },
   NeogitHunkHeader = {
     bg = "#292e42",
@@ -1361,13 +1414,13 @@ local highlights = {
     fg = "#7aa2f7"
   },
   NvimTreeGitDeleted = {
-    fg = "#c47981"
+    fg = "#914c54"
   },
   NvimTreeGitDirty = {
-    fg = "#506d9b"
+    fg = "#6183bb"
   },
   NvimTreeGitNew = {
-    fg = "#4097a3"
+    fg = "#449dab"
   },
   NvimTreeImageFile = {
     fg = "#a9b1d6"
@@ -1424,7 +1477,7 @@ local highlights = {
     fg = "#7aa2f7"
   },
   QuickFixLine = {
-    bg = "#33467c",
+    bg = "#283457",
     bold = true
   },
   ReferencesCount = {
@@ -1502,7 +1555,7 @@ local highlights = {
     fg = "#292e42"
   },
   SneakScope = {
-    bg = "#33467c"
+    bg = "#283457"
   },
   Special = {
     fg = "#2ac3de"
@@ -1551,9 +1604,26 @@ local highlights = {
   TSNodeUnmatched = {
     fg = "#545c7e"
   },
-  TSNote = {
-    bg = "#0db9d7",
-    fg = "#1a1b26"
+  TSRainbowBlue = {
+    fg = "#7aa2f7"
+  },
+  TSRainbowCyan = {
+    fg = "#7dcfff"
+  },
+  TSRainbowGreen = {
+    fg = "#9ece6a"
+  },
+  TSRainbowOrange = {
+    fg = "#ff9e64"
+  },
+  TSRainbowRed = {
+    fg = "#f7768e"
+  },
+  TSRainbowViolet = {
+    fg = "#9d7cd8"
+  },
+  TSRainbowYellow = {
+    fg = "#e0af68"
   },
   TabLine = {
     bg = "#16161e",
@@ -1609,10 +1679,10 @@ local highlights = {
     fg = "#15161e"
   },
   Visual = {
-    bg = "#33467c"
+    bg = "#283457"
   },
   VisualNOS = {
-    bg = "#33467c"
+    bg = "#283457"
   },
   WarningMsg = {
     fg = "#e0af68"
@@ -1642,7 +1712,7 @@ local highlights = {
     fg = "#3b4261"
   },
   WildMenu = {
-    bg = "#33467c"
+    bg = "#283457"
   },
   WinSeparator = {
     bold = true,
@@ -1662,10 +1732,10 @@ local highlights = {
     bg = "#16161e"
   },
   diffAdded = {
-    fg = "#4097a3"
+    fg = "#449dab"
   },
   diffChanged = {
-    fg = "#506d9b"
+    fg = "#6183bb"
   },
   diffFile = {
     fg = "#7aa2f7"
@@ -1683,7 +1753,7 @@ local highlights = {
     fg = "#e0af68"
   },
   diffRemoved = {
-    fg = "#c47981"
+    fg = "#914c54"
   },
   healthError = {
     fg = "#db4b4b"

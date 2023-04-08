@@ -4,7 +4,7 @@ background = "#222436"
 cursor_bg = "#c8d3f5"
 cursor_border = "#c8d3f5"
 cursor_fg = "#222436"
-selection_bg = "#3654a7"
+selection_bg = "#2d3f76"
 selection_fg = "#c8d3f5"
 
 ansi = ["#1b1d2b", "#ff757f", "#c3e88d", "#ffc777", "#82aaff", "#c099ff", "#86e1fc", "#828bb8"]
@@ -19,7 +19,7 @@ fg_color = "#82aaff"
 bg_color = "#222436"
 
 [colors.tab_bar.inactive_tab]
-bg_color = '#1e2030'
+bg_color = "#1e2030"
 fg_color = "#545c7e"
 
 [colors.tab_bar.inactive_tab_hover]
@@ -33,3 +33,8 @@ bg_color = "#82aaff"
 [colors.tab_bar.new_tab]
 fg_color = "#82aaff"
 bg_color = "#191b28"
+
+[metadata]
+aliases = []
+author = "folke"
+name = "Tokyo Night Moon"
