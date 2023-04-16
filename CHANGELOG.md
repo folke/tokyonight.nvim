@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.11.0](https://github.com/folke/tokyonight.nvim/compare/v1.10.0...v1.11.0) (2023-04-16)
+
+
+### Features
+
+* added support for LazyVim DapStoppedLine ([ef6df2f](https://github.com/folke/tokyonight.nvim/commit/ef6df2f2d34d1cdc8c5653db3d1b8d454d844858))
+* better hl for markdown literal ([e061044](https://github.com/folke/tokyonight.nvim/commit/e0610445d5d2ee089269a199f49bbfaebd1c9ced))
+
+
+### Bug Fixes
+
+* **barbar:** CurrentBackground ([#342](https://github.com/folke/tokyonight.nvim/issues/342)) ([cbed164](https://github.com/folke/tokyonight.nvim/commit/cbed164e6f280eced47de91107a87ede5fc2adcf))
+* **extras:** make generation of extras deterministic ([#344](https://github.com/folke/tokyonight.nvim/issues/344)) ([715f923](https://github.com/folke/tokyonight.nvim/commit/715f923435a9255f85dec8380fac027f37acac72))
+* updated extras ([6e0bfd6](https://github.com/folke/tokyonight.nvim/commit/6e0bfd6836e09a4c66184a33f1266e964f920299))
+
 ## [1.10.0](https://github.com/folke/tokyonight.nvim/compare/v1.9.1...v1.10.0) (2023-03-23)
 
 
