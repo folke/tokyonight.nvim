@@ -1,6 +1,6 @@
     # TokyoNight Color Palette
     set -l foreground c0caf5
-    set -l selection 364a82
+    set -l selection 2e3c64
     set -l comment 565f89
     set -l red f7768e
     set -l orange ff9e64

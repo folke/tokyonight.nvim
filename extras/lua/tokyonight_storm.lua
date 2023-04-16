@@ -7,7 +7,7 @@ local colors = {
   bg_search = "#3d59a1",
   bg_sidebar = "#1f2335",
   bg_statusline = "#1f2335",
-  bg_visual = "#364a82",
+  bg_visual = "#2e3c64",
   black = "#1d202f",
   blue = "#7aa2f7",
   blue0 = "#3d59a1",
@@ -83,6 +83,52 @@ local highlights = {
   ["@label"] = {
     fg = "#7aa2f7"
   },
+  ["@lsp.type.comment"] = {
+    link = "@comment"
+  },
+  ["@lsp.type.enum"] = {
+    link = "@type"
+  },
+  ["@lsp.type.enumMember"] = {
+    link = "@property"
+  },
+  ["@lsp.type.interface"] = {
+    link = "@type"
+  },
+  ["@lsp.type.keyword"] = {
+    link = "@keyword"
+  },
+  ["@lsp.type.namespace"] = {
+    link = "@namespace"
+  },
+  ["@lsp.type.parameter"] = {
+    link = "@parameter"
+  },
+  ["@lsp.type.property"] = {
+    link = "@property"
+  },
+  ["@lsp.type.variable"] = {},
+  ["@lsp.typemod.function.defaultLibrary"] = {
+    link = "@function.builtin"
+  },
+  ["@lsp.typemod.method.defaultLibrary"] = {
+    link = "@function.builtin"
+  },
+  ["@lsp.typemod.operator.injected"] = {
+    link = "@operator"
+  },
+  ["@lsp.typemod.string.injected"] = {
+    link = "@string"
+  },
+  ["@lsp.typemod.variable.defaultLibrary"] = {
+    link = "@variable.builtin"
+  },
+  ["@lsp.typemod.variable.injected"] = {
+    link = "@variable"
+  },
+  ["@namespace"] = {
+    link = "Include"
+  },
   ["@operator"] = {
     fg = "#89ddff"
   },
@@ -104,6 +150,9 @@ local highlights = {
   ["@punctuation.special.markdown"] = {
     bold = true,
     fg = "#ff9e64"
+  },
+  ["@string.documentation"] = {
+    fg = "#e0af68"
   },
   ["@string.escape"] = {
     fg = "#bb9af7"
@@ -142,6 +191,7 @@ local highlights = {
     fg = "#24283b"
   },
   ["@variable"] = {
+    fg = "#c0caf5",
     style = {}
   },
   ["@variable.builtin"] = {
@@ -157,8 +207,7 @@ local highlights = {
     fg = "#7dcfff"
   },
   AlphaFooter = {
-    fg = "#e0af68",
-    italic = true
+    fg = "#2ac3de"
   },
   AlphaHeader = {
     fg = "#7aa2f7"
@@ -209,76 +258,76 @@ local highlights = {
     fg = "#e0af68"
   },
   BufferCurrent = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#c0caf5"
   },
   BufferCurrentERROR = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#db4b4b"
   },
   BufferCurrentHINT = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#1abc9c"
   },
   BufferCurrentINFO = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#0db9d7"
   },
   BufferCurrentIndex = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#0db9d7"
   },
   BufferCurrentMod = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#e0af68"
   },
   BufferCurrentSign = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#0db9d7"
   },
   BufferCurrentTarget = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#f7768e"
   },
   BufferCurrentWARN = {
-    bg = "#3b4261",
+    bg = "#24283b",
     fg = "#e0af68"
   },
   BufferInactive = {
-    bg = "#1f2335",
-    fg = "#737aa2"
+    bg = "#292e42",
+    fg = "#636a8d"
   },
   BufferInactiveERROR = {
-    bg = "#1f2335",
-    fg = "#a44146"
+    bg = "#292e42",
+    fg = "#b64448"
   },
   BufferInactiveHINT = {
-    bg = "#1f2335",
-    fg = "#1d907f"
+    bg = "#292e42",
+    fg = "#1c9e89"
   },
   BufferInactiveINFO = {
-    bg = "#1f2335",
-    fg = "#148ea8"
+    bg = "#292e42",
+    fg = "#129cb8"
   },
   BufferInactiveIndex = {
-    bg = "#1f2335",
+    bg = "#292e42",
     fg = "#737aa2"
   },
   BufferInactiveMod = {
-    bg = "#1f2335",
-    fg = "#a8875b"
+    bg = "#292e42",
+    fg = "#ba945f"
   },
   BufferInactiveSign = {
-    bg = "#1f2335",
+    bg = "#292e42",
     fg = "#29a4bd"
   },
   BufferInactiveTarget = {
-    bg = "#1f2335",
+    bg = "#292e42",
     fg = "#f7768e"
   },
   BufferInactiveWARN = {
-    bg = "#1f2335",
-    fg = "#a8875b"
+    bg = "#292e42",
+    fg = "#ba945f"
   },
   BufferLineIndicatorSelected = {
     fg = "#506d9b"
@@ -288,7 +337,7 @@ local highlights = {
     fg = "#737aa2"
   },
   BufferTabpageFill = {
-    bg = "#1f2335",
+    bg = "#333749",
     fg = "#737aa2"
   },
   BufferTabpages = {
@@ -370,6 +419,10 @@ local highlights = {
   CmpItemKindConstructor = {
     bg = "NONE",
     fg = "#7aa2f7"
+  },
+  CmpItemKindCopilot = {
+    bg = "NONE",
+    fg = "#1abc9c"
   },
   CmpItemKindDefault = {
     bg = "NONE",
@@ -800,7 +853,7 @@ local highlights = {
     fg = "#9ece6a"
   },
   LspSagaFinderSelection = {
-    fg = "#364a82"
+    fg = "#2e3c64"
   },
   LspSagaHoverBorder = {
     fg = "#7aa2f7"
@@ -812,7 +865,7 @@ local highlights = {
     fg = "#f7768e"
   },
   LspSignatureActiveParameter = {
-    bg = "#2b3657",
+    bg = "#28304b",
     bold = true
   },
   MatchParen = {
@@ -1095,6 +1148,9 @@ local highlights = {
   NavicText = {
     bg = "NONE",
     fg = "#c0caf5"
+  },
+  NeoTreeDimText = {
+    fg = "#3b4261"
   },
   NeoTreeNormal = {
     bg = "#1f2335",
@@ -1424,7 +1480,7 @@ local highlights = {
     fg = "#7aa2f7"
   },
   QuickFixLine = {
-    bg = "#364a82",
+    bg = "#2e3c64",
     bold = true
   },
   ReferencesCount = {
@@ -1502,7 +1558,7 @@ local highlights = {
     fg = "#292e42"
   },
   SneakScope = {
-    bg = "#364a82"
+    bg = "#2e3c64"
   },
   Special = {
     fg = "#2ac3de"
@@ -1551,9 +1607,26 @@ local highlights = {
   TSNodeUnmatched = {
     fg = "#545c7e"
   },
-  TSNote = {
-    bg = "#0db9d7",
-    fg = "#24283b"
+  TSRainbowBlue = {
+    fg = "#7aa2f7"
+  },
+  TSRainbowCyan = {
+    fg = "#7dcfff"
+  },
+  TSRainbowGreen = {
+    fg = "#9ece6a"
+  },
+  TSRainbowOrange = {
+    fg = "#ff9e64"
+  },
+  TSRainbowRed = {
+    fg = "#f7768e"
+  },
+  TSRainbowViolet = {
+    fg = "#9d7cd8"
+  },
+  TSRainbowYellow = {
+    fg = "#e0af68"
   },
   TabLine = {
     bg = "#1f2335",
@@ -1609,10 +1682,10 @@ local highlights = {
     fg = "#1d202f"
   },
   Visual = {
-    bg = "#364a82"
+    bg = "#2e3c64"
   },
   VisualNOS = {
-    bg = "#364a82"
+    bg = "#2e3c64"
   },
   WarningMsg = {
     fg = "#e0af68"
@@ -1642,7 +1715,7 @@ local highlights = {
     fg = "#3b4261"
   },
   WildMenu = {
-    bg = "#364a82"
+    bg = "#2e3c64"
   },
   WinSeparator = {
     bold = true,

@@ -332,13 +332,13 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.8745098039215686</real>
+		<real>0.8862745098039215</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.6549019607843137</real>
+		<real>0.7490196078431373</real>
 		<key>Red Component</key>
-		<real>0.6000000000000000</real>
+		<real>0.7137254901960784</real>
 	</dict>
 </dict>
 </plist>
