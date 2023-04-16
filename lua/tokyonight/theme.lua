@@ -239,7 +239,7 @@ function M.setup()
     ["@variable.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
-    ["@text.literal.markdown"] = { link = "Normal" },
+    ["@text.literal.markdown"] = { fg = c.orange },
     ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
     ["@text.reference"] = { fg = c.teal },
 
