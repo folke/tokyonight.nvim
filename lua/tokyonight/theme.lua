@@ -197,6 +197,8 @@ function M.setup()
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
 
+    DapStoppedLine = { bg = util.darken(c.warning, 0.1) }, -- Used for "Warning" diagnostic virtual text
+
     -- These groups are for the Neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
 
