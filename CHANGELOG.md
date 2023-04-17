@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.12.0](https://github.com/folke/tokyonight.nvim/compare/v1.11.0...v1.12.0) (2023-04-17)
+
+
+### Features
+
+* improve barbar separator ([#350](https://github.com/folke/tokyonight.nvim/issues/350)) ([169b76f](https://github.com/folke/tokyonight.nvim/commit/169b76ff87cab82d8691414db9807cd1ae9e560e))
+
+
+### Bug Fixes
+
+* **lsp:** enumMember should be highlighted `[@constant](https://github.com/constant)` ([#352](https://github.com/folke/tokyonight.nvim/issues/352)) ([78bcc2f](https://github.com/folke/tokyonight.nvim/commit/78bcc2fae719134291df218f679ec2bb49c6e95f))
+
 ## [1.11.0](https://github.com/folke/tokyonight.nvim/compare/v1.10.0...v1.11.0) (2023-04-16)
 
 
