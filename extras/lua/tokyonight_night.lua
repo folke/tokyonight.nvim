@@ -90,7 +90,7 @@ local highlights = {
     link = "@type"
   },
   ["@lsp.type.enumMember"] = {
-    link = "@property"
+    link = "@constant"
   },
   ["@lsp.type.interface"] = {
     link = "@type"
