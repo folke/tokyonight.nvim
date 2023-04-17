@@ -258,7 +258,7 @@ function M.setup()
     -- LSP Semantic Token Groups
     ["@lsp.type.comment"] = { link = "@comment" },
     ["@lsp.type.enum"] = { link = "@type" },
-    ["@lsp.type.enumMember"] = { link = "@property" },
+    ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.interface"] = { link = "@type" },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
