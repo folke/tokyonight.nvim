@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.14.0](https://github.com/folke/tokyonight.nvim/compare/v1.13.0...v1.14.0) (2023-04-18)
+
+
+### Features
+
+* better Debug colors ([a1c8489](https://github.com/folke/tokyonight.nvim/commit/a1c8489cb6116d3c237be71d0a7dd96fbc982d91))
+
+
+### Bug Fixes
+
+* **semantic_tokens:** reset comment type ([#354](https://github.com/folke/tokyonight.nvim/issues/354)) ([3d2f79c](https://github.com/folke/tokyonight.nvim/commit/3d2f79cd1f3cea7520d5cc4d06c8010fe2592db8))
+
 ## [1.13.0](https://github.com/folke/tokyonight.nvim/compare/v1.12.0...v1.13.0) (2023-04-18)
 
 
