@@ -267,7 +267,7 @@ function M.setup()
     ["@lsp.type.property"] = { link = "@property" },
     ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
     ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
-    ["@lsp.typemod.type.defaultLibrary"] = { fg = util.darken(c.blue1, 0.7) },
+    ["@lsp.typemod.type.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
     ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
