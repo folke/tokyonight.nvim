@@ -257,7 +257,7 @@ function M.setup()
     ["@namespace"] = { link = "Include" },
 
     -- LSP Semantic Token Groups
-    ["@lsp.type.comment"] = { link = "@comment" },
+    ["@lsp.type.comment"] = {},
     ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.interface"] = { fg = util.lighten(c.blue1, 0.7) },
