@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.13.0](https://github.com/folke/tokyonight.nvim/compare/v1.12.0...v1.13.0) (2023-04-18)
+
+
+### Features
+
+* better style for DiagnosticUnnecessary ([6ebd358](https://github.com/folke/tokyonight.nvim/commit/6ebd35868fbdb8f5a3c5009d5d7a72ed7da2143c))
+* **semantic_tokens:** slightly different style for interfaces and default types ([3af1264](https://github.com/folke/tokyonight.nvim/commit/3af126456719cdc6c2a904cffc3cfe31ce22afb6))
+
+
+### Bug Fixes
+
+* **semantic_tokens:** slightly less difference for builtin types ([939bd8c](https://github.com/folke/tokyonight.nvim/commit/939bd8c7e149391b0cb71d3aadd75eba0fa5647f))
+
 ## [1.12.0](https://github.com/folke/tokyonight.nvim/compare/v1.11.0...v1.12.0) (2023-04-17)
 
 
