@@ -477,7 +477,7 @@ function M.setup()
     BufferVisibleMod = { bg = c.bg_statusline, fg = c.warning },
     BufferVisibleSign = { bg = c.bg_statusline, fg = c.info },
     BufferVisibleTarget = { bg = c.bg_statusline, fg = c.red },
-    BufferInactive = { bg = c.bg_highlight, fg = util.darken(c.dark5, 0.8) },
+    BufferInactive = { bg = util.darken(c.bg_highlight, 0.4), fg = util.darken(c.dark5, 0.8) },
     BufferInactiveERROR = { bg = c.bg_highlight, fg = util.darken(c.error, 0.8) },
     BufferInactiveHINT = { bg = c.bg_highlight, fg = util.darken(c.hint, 0.8) },
     -- BufferInactiveIcon = { bg = c.bg_statusline, fg = util.darken(c., 0.1) },
@@ -485,10 +485,10 @@ function M.setup()
     BufferInactiveWARN = { bg = c.bg_highlight, fg = util.darken(c.warning, 0.8) },
     BufferInactiveIndex = { bg = c.bg_highlight, fg = c.dark5 },
     BufferInactiveMod = { bg = c.bg_highlight, fg = util.darken(c.warning, 0.8) },
-    BufferInactiveSign = { bg = c.bg_highlight, fg = c.bg },
+    BufferInactiveSign = { bg = util.darken(c.bg_highlight, 0.4), fg = c.bg },
     BufferInactiveTarget = { bg = c.bg_highlight, fg = c.red },
     BufferOffset = { bg = c.bg_statusline, fg = c.dark5 },
-    BufferTabpageFill = { bg = util.lighten(c.bg, 0.93), fg = c.dark5 },
+    BufferTabpageFill = { bg = util.darken(c.bg_highlight, 0.8), fg = c.dark5 },
     BufferTabpages = { bg = c.bg_statusline, fg = c.none },
 
     -- Sneak
