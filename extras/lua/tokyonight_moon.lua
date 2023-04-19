@@ -111,6 +111,9 @@ local highlights = {
   ["@lsp.typemod.function.defaultLibrary"] = {
     link = "@function.builtin"
   },
+  ["@lsp.typemod.macro.defaultLibrary"] = {
+    link = "@function.builtin"
+  },
   ["@lsp.typemod.method.defaultLibrary"] = {
     link = "@function.builtin"
   },
