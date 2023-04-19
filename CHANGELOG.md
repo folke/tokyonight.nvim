@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/folke/tokyonight.nvim/compare/v1.14.0...v1.15.0) (2023-04-19)
+
+
+### Features
+
+* **treesitter:** darken builtin types & revert reset comment type ([#356](https://github.com/folke/tokyonight.nvim/issues/356)) ([b6f207e](https://github.com/folke/tokyonight.nvim/commit/b6f207ebf6e3de9acbbc443623ad74b65bd00d05))
+
 ## [1.14.0](https://github.com/folke/tokyonight.nvim/compare/v1.13.0...v1.14.0) (2023-04-18)
 
 
