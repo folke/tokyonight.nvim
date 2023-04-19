@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.16.0](https://github.com/folke/tokyonight.nvim/compare/v1.15.0...v1.16.0) (2023-04-19)
+
+
+### Features
+
+* Improve night barbar ([#360](https://github.com/folke/tokyonight.nvim/issues/360)) ([4a5ea8c](https://github.com/folke/tokyonight.nvim/commit/4a5ea8c5df533ca92b590c31d4a3930562a3a257))
+* **semantic_tokens:** highlight lsp.typemod.macro.defaultLibrary as `[@function](https://github.com/function).builtin` ([#358](https://github.com/folke/tokyonight.nvim/issues/358)) ([dc5b5e2](https://github.com/folke/tokyonight.nvim/commit/dc5b5e20bc232a10e833fd3e81fea149bd4a902f))
+
 ## [1.15.0](https://github.com/folke/tokyonight.nvim/compare/v1.14.0...v1.15.0) (2023-04-19)
 
 
