@@ -1,4 +1,5 @@
 local util = require("tokyonight.util")
+local config = require("tokyonight.config")
 
 local M = {}
 
@@ -8,6 +9,13 @@ function M.generate(colors)
     add = util.darken(colors.green2, 0.45),
     delete = util.darken(colors.red1, 0.45),
   }
+  if config.is_day() then
+    colors.delta = {
+      add = util.lighten(colors.green2, 0.45),
+      delete = util.lighten(colors.red1, 0.45),
+    }
+  end
+
   local delta = util.template(
     [[
 [delta]
