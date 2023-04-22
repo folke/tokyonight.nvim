@@ -149,6 +149,11 @@ function M.setup(opts)
   colors.info = colors.blue2
   colors.hint = colors.teal
 
+  colors.delta = {
+    add = util.darken(colors.green2, 0.45),
+    delete = util.darken(colors.red1, 0.45),
+  }
+
   config.options.on_colors(colors)
   if opts.transform and config.is_day() then
     util.invert_colors(colors)

@@ -4,10 +4,6 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  colors.delta = {
-    add = util.darken(colors.green2, 0.45),
-    delete = util.darken(colors.red1, 0.45),
-  }
   local delta = util.template(
     [[
 [delta]
