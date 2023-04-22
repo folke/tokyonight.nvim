@@ -30,6 +30,7 @@ jobs:
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
   tests:
     needs: extras
+    if: always()
     strategy:
       matrix:
         # os: [ubuntu-latest, windows-latest]
