@@ -4,13 +4,13 @@ local colors = {
   bg_float = "#e9e9ec",
   bg_highlight = "#c4c8da",
   bg_popup = "#e9e9ec",
-  bg_search = "#7890dd",
+  bg_search = "#788ce0",
   bg_sidebar = "#e9e9ec",
   bg_statusline = "#e9e9ec",
-  bg_visual = "#b6bfe2",
+  bg_visual = "#b6bde4",
   black = "#e9e9ed",
   blue = "#2e7de9",
-  blue0 = "#7890dd",
+  blue0 = "#788ce0",
   blue1 = "#188092",
   blue2 = "#07879d",
   blue5 = "#006a83",
@@ -872,7 +872,7 @@ local highlights = {
     fg = "#587539"
   },
   LspSagaFinderSelection = {
-    fg = "#b6bfe2"
+    fg = "#b6bde4"
   },
   LspSagaHoverBorder = {
     fg = "#2e7de9"
@@ -884,7 +884,7 @@ local highlights = {
     fg = "#f52a65"
   },
   LspSignatureActiveParameter = {
-    bg = "#d0d3e4",
+    bg = "#d0d3e5",
     bold = true
   },
   MatchParen = {
@@ -1499,7 +1499,7 @@ local highlights = {
     fg = "#2e7de9"
   },
   QuickFixLine = {
-    bg = "#b6bfe2",
+    bg = "#b6bde4",
     bold = true
   },
   ReferencesCount = {
@@ -1561,7 +1561,7 @@ local highlights = {
     fg = "#8c6c3e"
   },
   Search = {
-    bg = "#7890dd",
+    bg = "#788ce0",
     fg = "#3760bf"
   },
   SignColumn = {
@@ -1577,7 +1577,7 @@ local highlights = {
     fg = "#c4c8da"
   },
   SneakScope = {
-    bg = "#b6bfe2"
+    bg = "#b6bde4"
   },
   Special = {
     fg = "#188092"
@@ -1701,10 +1701,10 @@ local highlights = {
     fg = "#e9e9ed"
   },
   Visual = {
-    bg = "#b6bfe2"
+    bg = "#b6bde4"
   },
   VisualNOS = {
-    bg = "#b6bfe2"
+    bg = "#b6bde4"
   },
   WarningMsg = {
     fg = "#8c6c3e"
@@ -1734,7 +1734,7 @@ local highlights = {
     fg = "#a8aecb"
   },
   WildMenu = {
-    bg = "#b6bfe2"
+    bg = "#b6bde4"
   },
   WinSeparator = {
     bold = true,
