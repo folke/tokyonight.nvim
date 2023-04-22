@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.17.0](https://github.com/folke/tokyonight.nvim/compare/v1.16.0...v1.17.0) (2023-04-22)
+
+
+### Features
+
+* added extras to readme ([cca8227](https://github.com/folke/tokyonight.nvim/commit/cca8227dc4c6e0c4f5a56055b659f3c04efe496f))
+
+
+### Bug Fixes
+
+* **colors:** make extras deterministic. Fixes [#344](https://github.com/folke/tokyonight.nvim/issues/344) ([3f18207](https://github.com/folke/tokyonight.nvim/commit/3f18207ff1f1c6e68d292f4e6c804dc8eefd6b2f))
+* **delta:** move color defs to colors so it works properly with the day theme. Fixes [#362](https://github.com/folke/tokyonight.nvim/issues/362) ([d78d3de](https://github.com/folke/tokyonight.nvim/commit/d78d3de58c15c8369e920b0852be3dc81797e331))
+
 ## [1.16.0](https://github.com/folke/tokyonight.nvim/compare/v1.15.0...v1.16.0) (2023-04-19)
 
 
