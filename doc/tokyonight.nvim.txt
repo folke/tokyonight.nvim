@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*      For Neovim >= 0.8.0      Last change: 2023 April 19
+*tokyonight.nvim.txt*      For Neovim >= 0.8.0      Last change: 2023 April 22
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -314,9 +314,20 @@ that can be used to generate themes for the different styles.
 How to add a new extra template:
 
 
-1. create a file like `lua/tokyonight/extra/cool-app.lua`2. add the name and output file extension to the `extras` table in
-`lua/tokyonight/extra/init.lua`3. in Nvim, run `:lua require("tokyonight.extra").setup()` to generate / update
-extra themes4. commit the newly created themes under `extra/`
+1. create a file like `lua/tokyonight/extra/cool-app.lua`
+
+2. add the name and output file extension to the `extras` table in
+`lua/tokyonight/extra/init.lua`
+
+3. run the shell script below to generate / update extra themes
+
+>sh
+    $ nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+<
+
+4. commit the newly created themes under `extra/`
+
+
 
 ==============================================================================
 2. Links                                               *tokyonight.nvim-links*
