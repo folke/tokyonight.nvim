@@ -22,39 +22,33 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## ✨ Features
 
-- supports the latest Neovim 5.0 features like TreeSitter and LSP
-- minimal inactive statusline
-- vim terminal colors
+- supports the latest Neovim 0.9.0 features
+- terminal colors
 - darker background for sidebar-like windows
-- color configs for
-  [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include),
-  [Alacritty](https://github.com/alacritty/alacritty) and
-  [Fish Shell](https://fishshell.com/)
-- **lualine** theme
+- supports all major plugins
+- TokyoNight [extras](#-extras) for a lot of other apps
 
-### Plugin Support
+### 🍭 Extras
 
-- [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-- [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
-- [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
-- [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-- [Git Gutter](https://github.com/airblade/vim-gitgutter)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-- [WhichKey](https://github.com/liuchengxu/vim-which-key)
-- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [Dashboard](https://github.com/glepnir/dashboard-nvim)
-- [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-- [Barbecue](https://github.com/utilyre/barbecue.nvim)
-- [Lualine](https://github.com/hoob3rt/lualine.nvim)
-- [Lightline](https://github.com/itchyny/lightline.vim)
-- [Neogit](https://github.com/TimUntersberger/neogit)
-- [vim-sneak](https://github.com/justinmk/vim-sneak)
-- [Fern](https://github.com/lambdalisue/fern.vim)
-- [Barbar](https://github.com/romgrk/barbar.nvim)
-- [Scrollbar](https://github.com/petertriho/nvim-scrollbar)
-- [Mini](https://github.com/echasnovski/mini.nvim)
+<!-- extras:start -->
+- [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](tree/main/extras/alacritty))
+- [Delta](https://github.com/dandavison/delta) ([delta](tree/main/extras/delta))
+- [Fish](https://fishshell.com/docs/current/index.html) ([fish](tree/main/extras/fish))
+- [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](tree/main/extras/fish_themes))
+- [Foot](https://codeberg.org/dnkl/foot) ([foot](tree/main/extras/foot))
+- [iTerm](https://iterm2.com/) ([iterm](tree/main/extras/iterm))
+- [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](tree/main/extras/kitty))
+- [Lua Table for testing](https://www.lua.org) ([lua](tree/main/extras/lua))
+- [Prism](https://prismjs.com) ([prism](tree/main/extras/prism))
+- [Sublime Text](https://www.sublimetext.com/docs/themes) ([sublime](tree/main/extras/sublime))
+- [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](tree/main/extras/terminator))
+- [Tilix](https://github.com/gnunn1/tilix) ([tilix](tree/main/extras/tilix))
+- [Tmux](https://github.com/tmux/tmux/wiki) ([tmux](tree/main/extras/tmux))
+- [WezTerm](https://wezfurlong.org/wezterm/config/) ([wezterm](tree/main/extras/wezterm))
+- [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](tree/main/extras/windows_terminal))
+- [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](tree/main/extras/xfceterm))
+- [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](tree/main/extras/xresources))
+<!-- extras:end -->
 
 ## ⚡️ Requirements
 
