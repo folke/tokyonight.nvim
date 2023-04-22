@@ -22,6 +22,10 @@ local colors = {
   cyan = "#86e1fc",
   dark3 = "#545c7e",
   dark5 = "#737aa2",
+  delta = {
+    add = "#305f6f",
+    delete = "#6b2e43"
+  },
   diff = {
     add = "#273849",
     change = "#252a3f",
@@ -93,7 +97,7 @@ local highlights = {
     link = "@constant"
   },
   ["@lsp.type.interface"] = {
-    link = "@type"
+    fg = "#93d0ff"
   },
   ["@lsp.type.keyword"] = {
     link = "@keyword"
@@ -122,6 +126,9 @@ local highlights = {
   },
   ["@lsp.typemod.string.injected"] = {
     link = "@string"
+  },
+  ["@lsp.typemod.type.defaultLibrary"] = {
+    fg = "#589ed7"
   },
   ["@lsp.typemod.variable.defaultLibrary"] = {
     link = "@variable.builtin"
@@ -173,9 +180,6 @@ local highlights = {
   ["@text.diff.delete"] = {
     link = "DiffDelete"
   },
-  ["@text.literal.markdown"] = {
-    link = "Normal"
-  },
   ["@text.literal.markdown_inline"] = {
     bg = "#444a73",
     fg = "#82aaff"
@@ -192,6 +196,9 @@ local highlights = {
   ["@text.warning"] = {
     bg = "#ffc777",
     fg = "#222436"
+  },
+  ["@type.builtin"] = {
+    fg = "#589ed7"
   },
   ["@variable"] = {
     fg = "#c8d3f5",
@@ -286,7 +293,7 @@ local highlights = {
   },
   BufferCurrentSign = {
     bg = "#222436",
-    fg = "#0db9d7"
+    fg = "#222436"
   },
   BufferCurrentTarget = {
     bg = "#222436",
@@ -297,7 +304,7 @@ local highlights = {
     fg = "#ffc777"
   },
   BufferInactive = {
-    bg = "#2f334d",
+    bg = "#272a3f",
     fg = "#63698c"
   },
   BufferInactiveERROR = {
@@ -321,8 +328,8 @@ local highlights = {
     fg = "#d3a66a"
   },
   BufferInactiveSign = {
-    bg = "#2f334d",
-    fg = "#589ed7"
+    bg = "#272a3f",
+    fg = "#222436"
   },
   BufferInactiveTarget = {
     bg = "#2f334d",
@@ -340,7 +347,7 @@ local highlights = {
     fg = "#737aa2"
   },
   BufferTabpageFill = {
-    bg = "#313344",
+    bg = "#2c3048",
     fg = "#737aa2"
   },
   BufferTabpages = {
@@ -542,6 +549,9 @@ local highlights = {
   CursorLineNr = {
     fg = "#737aa2"
   },
+  DapStoppedLine = {
+    bg = "#38343d"
+  },
   DashboardCenter = {
     fg = "#c099ff"
   },
@@ -554,6 +564,9 @@ local highlights = {
   },
   DashboardShortCut = {
     fg = "#86e1fc"
+  },
+  Debug = {
+    fg = "#ff966c"
   },
   DefinitionCount = {
     fg = "#fca7ea"
@@ -588,6 +601,9 @@ local highlights = {
   DiagnosticUnderlineWarn = {
     sp = "#ffc777",
     undercurl = true
+  },
+  DiagnosticUnnecessary = {
+    fg = "#444a73"
   },
   DiagnosticVirtualTextError = {
     bg = "#322639",

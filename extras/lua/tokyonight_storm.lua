@@ -22,6 +22,10 @@ local colors = {
   cyan = "#7dcfff",
   dark3 = "#545c7e",
   dark5 = "#737aa2",
+  delta = {
+    add = "#316172",
+    delete = "#763842"
+  },
   diff = {
     add = "#283b4d",
     change = "#272d43",
@@ -35,15 +39,15 @@ local colors = {
   fg_gutter = "#3b4261",
   fg_sidebar = "#a9b1d6",
   git = {
-    add = "#4097a3",
-    change = "#506d9b",
-    delete = "#c47981",
+    add = "#449dab",
+    change = "#6183bb",
+    delete = "#914c54",
     ignore = "#545c7e"
   },
   gitSigns = {
-    add = "#399a96",
-    change = "#6382bd",
-    delete = "#c25d64"
+    add = "#266d6a",
+    change = "#536c9e",
+    delete = "#b2555b"
   },
   green = "#9ece6a",
   green1 = "#73daca",
@@ -93,7 +97,7 @@ local highlights = {
     link = "@constant"
   },
   ["@lsp.type.interface"] = {
-    link = "@type"
+    fg = "#6ad5e8"
   },
   ["@lsp.type.keyword"] = {
     link = "@keyword"
@@ -122,6 +126,9 @@ local highlights = {
   },
   ["@lsp.typemod.string.injected"] = {
     link = "@string"
+  },
+  ["@lsp.typemod.type.defaultLibrary"] = {
+    fg = "#29a4bd"
   },
   ["@lsp.typemod.variable.defaultLibrary"] = {
     link = "@variable.builtin"
@@ -173,9 +180,6 @@ local highlights = {
   ["@text.diff.delete"] = {
     link = "DiffDelete"
   },
-  ["@text.literal.markdown"] = {
-    link = "Normal"
-  },
   ["@text.literal.markdown_inline"] = {
     bg = "#414868",
     fg = "#7aa2f7"
@@ -192,6 +196,9 @@ local highlights = {
   ["@text.warning"] = {
     bg = "#e0af68",
     fg = "#24283b"
+  },
+  ["@type.builtin"] = {
+    fg = "#29a4bd"
   },
   ["@variable"] = {
     fg = "#c0caf5",
@@ -286,7 +293,7 @@ local highlights = {
   },
   BufferCurrentSign = {
     bg = "#24283b",
-    fg = "#0db9d7"
+    fg = "#24283b"
   },
   BufferCurrentTarget = {
     bg = "#24283b",
@@ -297,7 +304,7 @@ local highlights = {
     fg = "#e0af68"
   },
   BufferInactive = {
-    bg = "#292e42",
+    bg = "#262a3e",
     fg = "#636a8d"
   },
   BufferInactiveERROR = {
@@ -321,8 +328,8 @@ local highlights = {
     fg = "#ba945f"
   },
   BufferInactiveSign = {
-    bg = "#292e42",
-    fg = "#29a4bd"
+    bg = "#262a3e",
+    fg = "#24283b"
   },
   BufferInactiveTarget = {
     bg = "#292e42",
@@ -333,14 +340,14 @@ local highlights = {
     fg = "#ba945f"
   },
   BufferLineIndicatorSelected = {
-    fg = "#506d9b"
+    fg = "#6183bb"
   },
   BufferOffset = {
     bg = "#1f2335",
     fg = "#737aa2"
   },
   BufferTabpageFill = {
-    bg = "#333749",
+    bg = "#282d41",
     fg = "#737aa2"
   },
   BufferTabpages = {
@@ -542,6 +549,9 @@ local highlights = {
   CursorLineNr = {
     fg = "#737aa2"
   },
+  DapStoppedLine = {
+    bg = "#373640"
+  },
   DashboardCenter = {
     fg = "#bb9af7"
   },
@@ -554,6 +564,9 @@ local highlights = {
   },
   DashboardShortCut = {
     fg = "#7dcfff"
+  },
+  Debug = {
+    fg = "#ff9e64"
   },
   DefinitionCount = {
     fg = "#9d7cd8"
@@ -588,6 +601,9 @@ local highlights = {
   DiagnosticUnderlineWarn = {
     sp = "#e0af68",
     undercurl = true
+  },
+  DiagnosticUnnecessary = {
+    fg = "#414868"
   },
   DiagnosticVirtualTextError = {
     bg = "#362c3d",
@@ -659,22 +675,22 @@ local highlights = {
     style = {}
   },
   GitGutterAdd = {
-    fg = "#399a96"
+    fg = "#266d6a"
   },
   GitGutterChange = {
-    fg = "#6382bd"
+    fg = "#536c9e"
   },
   GitGutterDelete = {
-    fg = "#c25d64"
+    fg = "#b2555b"
   },
   GitSignsAdd = {
-    fg = "#399a96"
+    fg = "#266d6a"
   },
   GitSignsChange = {
-    fg = "#6382bd"
+    fg = "#536c9e"
   },
   GitSignsDelete = {
-    fg = "#c25d64"
+    fg = "#b2555b"
   },
   GlyphPalette1 = {
     fg = "#db4b4b"
@@ -1168,7 +1184,7 @@ local highlights = {
   },
   NeogitDiffAddHighlight = {
     bg = "#283b4d",
-    fg = "#4097a3"
+    fg = "#449dab"
   },
   NeogitDiffContextHighlight = {
     bg = "#30354e",
@@ -1176,7 +1192,7 @@ local highlights = {
   },
   NeogitDiffDeleteHighlight = {
     bg = "#3f2d3d",
-    fg = "#c47981"
+    fg = "#914c54"
   },
   NeogitHunkHeader = {
     bg = "#292e42",
@@ -1420,13 +1436,13 @@ local highlights = {
     fg = "#7aa2f7"
   },
   NvimTreeGitDeleted = {
-    fg = "#c47981"
+    fg = "#914c54"
   },
   NvimTreeGitDirty = {
-    fg = "#506d9b"
+    fg = "#6183bb"
   },
   NvimTreeGitNew = {
-    fg = "#4097a3"
+    fg = "#449dab"
   },
   NvimTreeImageFile = {
     fg = "#a9b1d6"
@@ -1738,10 +1754,10 @@ local highlights = {
     bg = "#1f2335"
   },
   diffAdded = {
-    fg = "#4097a3"
+    fg = "#449dab"
   },
   diffChanged = {
-    fg = "#506d9b"
+    fg = "#6183bb"
   },
   diffFile = {
     fg = "#7aa2f7"
@@ -1759,7 +1775,7 @@ local highlights = {
     fg = "#e0af68"
   },
   diffRemoved = {
-    fg = "#c47981"
+    fg = "#914c54"
   },
   healthError = {
     fg = "#db4b4b"
