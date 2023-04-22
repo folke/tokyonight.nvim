@@ -28,6 +28,7 @@ jobs:
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
   tests:
+    needs: extras
     strategy:
       matrix:
         # os: [ubuntu-latest, windows-latest]
@@ -35,9 +36,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - name: Update Git
-        shell: bash
-        run: git pull
       - name: Install Neovim
         shell: bash
         run: |
@@ -58,9 +56,6 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v3
-      - name: Update Git
-        shell: bash
-        run: git pull
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
@@ -89,9 +84,6 @@ jobs:
           release-type: simple
           package-name: tokyonight.nvim
       - uses: actions/checkout@v3
-      - name: Update Git
-        shell: bash
-        run: git pull
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
