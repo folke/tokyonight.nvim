@@ -325,7 +325,8 @@ How to add a new extra template:
     $ nvim --headless "+lua require('tokyonight.extra').setup()" +qa
 <
 
-4. commit the newly created themes under `extra/`
+4. check the newly created themes under `extra/`, but **DO NOT** commit them! They
+will be build automatically by the ci
 
 
 
