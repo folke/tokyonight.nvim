@@ -35,6 +35,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
+      - name: Update Git
+        shell: bash
+        run: git pull
       - name: Install Neovim
         shell: bash
         run: |
@@ -55,6 +58,9 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v3
+      - name: Update Git
+        shell: bash
+        run: git pull
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
@@ -83,6 +89,9 @@ jobs:
           release-type: simple
           package-name: tokyonight.nvim
       - uses: actions/checkout@v3
+      - name: Update Git
+        shell: bash
+        run: git pull
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
