@@ -287,6 +287,11 @@ How to add a new extra template:
 1. create a file like `lua/tokyonight/extra/cool-app.lua`
 2. add the name and output file extension to the `extras` table in
    `lua/tokyonight/extra/init.lua`
-3. in Nvim, run `:lua require("tokyonight.extra").setup()` to generate / update
+3. run the shell script below to generate / update
    extra themes
+
+   ```sh
+   $ nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+   ```
+
 4. commit the newly created themes under `extra/`
