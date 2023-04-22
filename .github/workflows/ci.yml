@@ -6,6 +6,7 @@ on:
 jobs:
   extras:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - name: Install Neovim
         shell: bash
