@@ -55,10 +55,7 @@ function M.docs()
   table.sort(names)
   for _, name in ipairs(names) do
     info = M.extras[name]
-    table.insert(
-      lines,
-      "- [" .. info.label .. "](" .. info.url .. ") ([" .. name .. "](tree/main/extras/" .. name .. "))"
-    )
+    table.insert(lines, "- [" .. info.label .. "](" .. info.url .. ") ([" .. name .. "](extras/" .. name .. "))")
   end
   readme = readme:gsub(pattern, "%1\n" .. table.concat(lines, "\n") .. "\n%2")
   M.write_file(file, readme)
