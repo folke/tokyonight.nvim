@@ -677,10 +677,19 @@ local highlights = {
   GitGutterAdd = {
     fg = "#266d6a"
   },
+  GitGutterAddLineNr = {
+    fg = "#266d6a"
+  },
   GitGutterChange = {
     fg = "#536c9e"
   },
+  GitGutterChangeLineNr = {
+    fg = "#536c9e"
+  },
   GitGutterDelete = {
+    fg = "#b2555b"
+  },
+  GitGutterDeleteLineNr = {
     fg = "#b2555b"
   },
   GitSignsAdd = {
