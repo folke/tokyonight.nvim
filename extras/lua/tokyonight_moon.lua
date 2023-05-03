@@ -71,6 +71,9 @@ local highlights = {
   ["@constructor"] = {
     fg = "#c099ff"
   },
+  ["@constructor.tsx"] = {
+    fg = "#65bcff"
+  },
   ["@field"] = {
     fg = "#4fd6be"
   },
@@ -169,6 +172,12 @@ local highlights = {
   },
   ["@string.regex"] = {
     fg = "#b4f9f8"
+  },
+  ["@tag.delimiter.tsx"] = {
+    fg = "#6582c3"
+  },
+  ["@tag.tsx"] = {
+    fg = "#ff757f"
   },
   ["@text.danger"] = {
     bg = "#c53b53",
