@@ -257,6 +257,11 @@ function M.setup()
 
     ["@namespace"] = { link = "Include" },
 
+    -- tsx
+    ["@tag.tsx"] = { fg = c.red },
+    ["@constructor.tsx"] = { fg = c.blue1 },
+    ["@tag.delimiter.tsx"] = { fg = util.darken(c.blue, 0.7) },
+
     -- LSP Semantic Token Groups
     ["@lsp.type.comment"] = { link = "@comment" },
     ["@lsp.type.enum"] = { link = "@type" },

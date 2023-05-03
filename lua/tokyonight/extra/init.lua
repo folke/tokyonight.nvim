@@ -54,7 +54,7 @@ function M.docs()
   local names = vim.tbl_keys(M.extras)
   table.sort(names)
   for _, name in ipairs(names) do
-    info = M.extras[name]
+    local info = M.extras[name]
     table.insert(lines, "- [" .. info.label .. "](" .. info.url .. ") ([" .. name .. "](extras/" .. name .. "))")
   end
   readme = readme:gsub(pattern, "%1\n" .. table.concat(lines, "\n") .. "\n%2")
