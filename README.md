@@ -268,7 +268,7 @@ local colors = require("tokyonight.colors").setup() -- pass in any of the config
 local util = require("tokyonight.util")
 
 aplugin.background = colors.bg_dark
-aplugin.my_error = util.brighten(colors.red1, 0.3)
+aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
 ```
 
 ## 🔥 Contributing
