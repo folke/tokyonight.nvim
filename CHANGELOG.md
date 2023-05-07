@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.18.0](https://github.com/folke/tokyonight.nvim/compare/v1.17.0...v1.18.0) (2023-05-07)
+
+
+### Features
+
+* **lsp:** add more highlights ([#374](https://github.com/folke/tokyonight.nvim/issues/374)) ([fc4b07d](https://github.com/folke/tokyonight.nvim/commit/fc4b07d1585396ee14f6d6323fd534dfd5526ebe))
+* **tsx:** better colors for tsx tags ([f10213d](https://github.com/folke/tokyonight.nvim/commit/f10213d25ed5341546a9d99ad4ff4a4612200cb5))
+
+
+### Bug Fixes
+
+* **GitGutter:** add highlight of GitGutter**LineNr ([#367](https://github.com/folke/tokyonight.nvim/issues/367)) ([606d4d9](https://github.com/folke/tokyonight.nvim/commit/606d4d9e7c3c95ae9243d652ce6c228958fb395b))
+
 ## [1.17.0](https://github.com/folke/tokyonight.nvim/compare/v1.16.0...v1.17.0) (2023-04-22)
 
 
