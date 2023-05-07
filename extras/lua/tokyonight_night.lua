@@ -99,6 +99,12 @@ local highlights = {
   ["@lsp.type.enumMember"] = {
     link = "@constant"
   },
+  ["@lsp.type.escapeSequence"] = {
+    link = "@string.escape"
+  },
+  ["@lsp.type.formatSpecifier"] = {
+    link = "@punctuation.special"
+  },
   ["@lsp.type.interface"] = {
     fg = "#6ad5e8"
   },
@@ -108,15 +114,30 @@ local highlights = {
   ["@lsp.type.namespace"] = {
     link = "@namespace"
   },
+  ["@lsp.type.operator"] = {
+    link = "@operator"
+  },
   ["@lsp.type.parameter"] = {
     link = "@parameter"
   },
   ["@lsp.type.property"] = {
     link = "@property"
   },
+  ["@lsp.type.selfKeyword"] = {
+    link = "@variable.builtin"
+  },
   ["@lsp.type.variable"] = {},
+  ["@lsp.typemod.enum.defaultLibrary"] = {
+    link = "@type.builtin"
+  },
+  ["@lsp.typemod.enumMember.defaultLibrary"] = {
+    link = "@constant.builtin"
+  },
   ["@lsp.typemod.function.defaultLibrary"] = {
     link = "@function.builtin"
+  },
+  ["@lsp.typemod.keyword.async"] = {
+    link = "@keyword.coroutine"
   },
   ["@lsp.typemod.macro.defaultLibrary"] = {
     link = "@function.builtin"
