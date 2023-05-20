@@ -263,6 +263,8 @@ function M.setup()
     ["@tag.delimiter.tsx"] = { fg = util.darken(c.blue, 0.7) },
 
     -- LSP Semantic Token Groups
+    ["@lsp.type.boolean"] = { link = "@boolean" },
+    ["@lsp.type.builtinType"] = { link = "@type.builtin" },
     ["@lsp.type.comment"] = { link = "@comment" },
     ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.enumMember"] = { link = "@constant" },
@@ -271,11 +273,16 @@ function M.setup()
     ["@lsp.type.interface"] = { fg = util.lighten(c.blue1, 0.7) },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
+    ["@lsp.type.number"] = { link = "@number" },
     ["@lsp.type.operator"] = { link = "@operator" },
     ["@lsp.type.parameter"] = { link = "@parameter" },
     ["@lsp.type.property"] = { link = "@property" },
     ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
+    ["@lsp.type.string.rust"] = { link = "@string" },
+    ["@lsp.type.typeAlias"] = { link = "@type.definition" },
+    ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = c.error },
     ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+    ["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
     ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
