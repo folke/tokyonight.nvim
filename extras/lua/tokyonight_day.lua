@@ -90,6 +90,12 @@ local highlights = {
   ["@label"] = {
     fg = "#2e7de9"
   },
+  ["@lsp.type.boolean"] = {
+    link = "@boolean"
+  },
+  ["@lsp.type.builtinType"] = {
+    link = "@type.builtin"
+  },
   ["@lsp.type.comment"] = {
     link = "@comment"
   },
@@ -114,6 +120,9 @@ local highlights = {
   ["@lsp.type.namespace"] = {
     link = "@namespace"
   },
+  ["@lsp.type.number"] = {
+    link = "@number"
+  },
   ["@lsp.type.operator"] = {
     link = "@operator"
   },
@@ -126,7 +135,20 @@ local highlights = {
   ["@lsp.type.selfKeyword"] = {
     link = "@variable.builtin"
   },
+  ["@lsp.type.string.rust"] = {
+    link = "@string"
+  },
+  ["@lsp.type.typeAlias"] = {
+    link = "@type.definition"
+  },
+  ["@lsp.type.unresolvedReference"] = {
+    sp = "#c64343",
+    undercurl = true
+  },
   ["@lsp.type.variable"] = {},
+  ["@lsp.typemod.class.defaultLibrary"] = {
+    link = "@type.builtin"
+  },
   ["@lsp.typemod.enum.defaultLibrary"] = {
     link = "@type.builtin"
   },
