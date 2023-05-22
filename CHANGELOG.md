@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/folke/tokyonight.nvim/compare/v1.18.0...v1.19.0) (2023-05-22)
+
+
+### Features
+
+* **lsp:** add more highlights ([#379](https://github.com/folke/tokyonight.nvim/issues/379)) ([3a63838](https://github.com/folke/tokyonight.nvim/commit/3a638383d2eac2cade8b0e8771709575e0b089ed))
+
 ## [1.18.0](https://github.com/folke/tokyonight.nvim/compare/v1.17.0...v1.18.0) (2023-05-07)
 
 
