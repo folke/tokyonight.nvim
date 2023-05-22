@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2023 May 07
+*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2023 May 22
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -39,7 +39,6 @@ DAY                                          *tokyonight.nvim-tokyo-night-day*
 
 FEATURES                                *tokyonight.nvim-tokyo-night-features*
 
-
 - supports the latest Neovim 0.9.0 features
 - terminal colors
 - darker background for sidebar-like windows
@@ -48,7 +47,6 @@ FEATURES                                *tokyonight.nvim-tokyo-night-features*
 
 
 EXTRAS ~
-
 
 - Alacritty <https://github.com/alacritty/alacritty> (alacritty <extras/alacritty>)
 - Delta <https://github.com/dandavison/delta> (delta <extras/delta>)
@@ -71,7 +69,6 @@ EXTRAS ~
 
 REQUIREMENTS                        *tokyonight.nvim-tokyo-night-requirements*
 
-
 - Neovim >= 0.6.0
 
 
@@ -79,16 +76,15 @@ INSTALLATION                        *tokyonight.nvim-tokyo-night-installation*
 
 Install the theme with your preferred package manager:
 
-vim-plug <https://github.com/junegunn/vim-plug>
-
->vim
-    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-<
-
-packer <https://github.com/wbthomason/packer.nvim>
+folke/lazy.nvim <https://github.com/folke/lazy.nvim>
 
 >lua
-    use 'folke/tokyonight.nvim'
+    {
+      "tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+    }
 <
 
 
@@ -153,7 +149,6 @@ The theme comes in four styles, `storm`, `moon`, a darker variant `night` and
 
 The **day** style will be used if:
 
-
 - `{ style = "day"}` was passed to `setup(options)`
 - or `vim.o.background = "light"`
 
@@ -202,8 +197,10 @@ OVERRIDING COLORS & HIGHLIGHT GROUPS*tokyonight.nvim-tokyo-night-overriding-colo
 
 How the highlight groups are calculated:
 
-
-1. the **colors** for the style are calculated based on your config2. `config.on_colors(colors)` is ran, where you can override the colors3. the **colors** are then used to generate the highlight groups4. `config.on_highlights(highlights, colors)` is ran, where you can overide the highlight groups
+1. the **colors** for the style are calculated based on your config
+2. `config.on_colors(colors)` is ran, where you can override the colors
+3. the **colors** are then used to generate the highlight groups
+4. `config.on_highlights(highlights, colors)` is ran, where you can overide the highlight groups
 
 Please refer to default values for `colors` and `highlights` for the storm
 <extras/lua/tokyonight_storm.lua>, moon <extras/lua/tokyonight_moon.lua>, night
@@ -305,17 +302,19 @@ that can be used to generate themes for the different styles.
 
 How to add a new extra template:
 
-
 1. create a file like `lua/tokyonight/extra/cool-app.lua`
+
 
 2. add the name and output file extension to the `extras` table in
 `lua/tokyonight/extra/init.lua`
+
 
 3. run the shell script below to generate / update extra themes
 
 >sh
     $ nvim --headless "+lua require('tokyonight.extra').setup()" +qa
 <
+
 
 4. check the newly created themes under `extra/`, but **DO NOT** commit them! They
 will be build automatically by the ci
