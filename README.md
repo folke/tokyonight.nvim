@@ -58,16 +58,15 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 Install the theme with your preferred package manager:
 
-[vim-plug](https://github.com/junegunn/vim-plug)
-
-```vim
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-```
-
-[packer](https://github.com/wbthomason/packer.nvim)
+[folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-use 'folke/tokyonight.nvim'
+{
+  "tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+}
 ```
 
 ## 🚀 Usage
