@@ -360,23 +360,23 @@ local highlights = {
     fg = "#7f84a4"
   },
   BufferInactiveERROR = {
-    bg = "#c4c8da",
+    bg = "#d5d7e1",
     fg = "#db5d60"
   },
   BufferInactiveHINT = {
-    bg = "#c4c8da",
+    bg = "#d5d7e1",
     fg = "#10715f"
   },
   BufferInactiveINFO = {
-    bg = "#c4c8da",
+    bg = "#d5d7e1",
     fg = "#086c80"
   },
   BufferInactiveIndex = {
-    bg = "#c4c8da",
+    bg = "#d5d7e1",
     fg = "#68709a"
   },
   BufferInactiveMod = {
-    bg = "#c4c8da",
+    bg = "#d5d7e1",
     fg = "#a48150"
   },
   BufferInactiveSign = {
@@ -384,11 +384,11 @@ local highlights = {
     fg = "#e1e2e7"
   },
   BufferInactiveTarget = {
-    bg = "#c4c8da",
+    bg = "#d5d7e1",
     fg = "#f52a65"
   },
   BufferInactiveWARN = {
-    bg = "#c4c8da",
+    bg = "#d5d7e1",
     fg = "#a48150"
   },
   BufferLineIndicatorSelected = {
