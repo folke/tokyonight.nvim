@@ -21,6 +21,7 @@ M.extras = {
   terminator = {ext = "conf", url = "https://gnome-terminator.readthedocs.io/en/latest/config.html", label = "Terminator"},
   prism = {ext = "js", url = "https://prismjs.com", label = "Prism"},
   windows_terminal = {ext = "json", url = "https://aka.ms/terminal-documentation", label = "Windows Terminal"},
+  zathura = {ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura"},
 }
 
 local function write(str, fileName)
