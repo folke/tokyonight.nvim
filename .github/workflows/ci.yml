@@ -58,6 +58,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v3
+      - run: git pull
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
