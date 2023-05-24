@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.20.0](https://github.com/folke/tokyonight.nvim/compare/v1.19.0...v1.20.0) (2023-05-24)
+
+
+### Features
+
+* **extras:** added colors for zathura ([#385](https://github.com/folke/tokyonight.nvim/issues/385)) ([e7e2280](https://github.com/folke/tokyonight.nvim/commit/e7e22807a3872a0649e41868af9efe18605d5c9d))
+
+
+### Bug Fixes
+
+* **barbar:** unify inactive tab background ([#383](https://github.com/folke/tokyonight.nvim/issues/383)) ([dca7f3a](https://github.com/folke/tokyonight.nvim/commit/dca7f3a916d70b9dc925de5cb914f364558cc921))
+
 ## [1.19.0](https://github.com/folke/tokyonight.nvim/compare/v1.18.0...v1.19.0) (2023-05-22)
 
 
