@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2023 May 22
+*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2023 May 24
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -65,6 +65,7 @@ EXTRAS ~
 - Windows Terminal <https://aka.ms/terminal-documentation> (windows_terminal <extras/windows_terminal>)
 - Xfce Terminal <https://docs.xfce.org/apps/terminal/advanced> (xfceterm <extras/xfceterm>)
 - Xresources <https://wiki.archlinux.org/title/X_resources> (xresources <extras/xresources>)
+- Zathura <https://pwmt.org/projects/zathura/> (zathura <extras/zathura>)
 
 
 REQUIREMENTS                        *tokyonight.nvim-tokyo-night-requirements*
