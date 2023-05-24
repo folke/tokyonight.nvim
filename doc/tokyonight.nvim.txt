@@ -81,7 +81,7 @@ folke/lazy.nvim <https://github.com/folke/lazy.nvim>
 
 >lua
     {
-      "tokyonight.nvim",
+      "folke/tokyonight.nvim",
       lazy = false,
       priority = 1000,
       opts = {},
