@@ -63,7 +63,7 @@ Install the theme with your preferred package manager:
 
 ```lua
 {
-  "tokyonight.nvim",
+  "folke/tokyonight.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
