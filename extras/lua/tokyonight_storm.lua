@@ -710,6 +710,10 @@ local highlights = {
     bg = "#1f2335",
     fg = "#29a4bd"
   },
+  FloatTitle = {
+    bg = "#1f2335",
+    fg = "#29a4bd"
+  },
   FoldColumn = {
     bg = "#24283b",
     fg = "#565f89"
