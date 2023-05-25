@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/folke/tokyonight.nvim/compare/v1.20.0...v1.21.0) (2023-05-25)
+
+
+### Features
+
+* added support for FloatTitle ([fb1c608](https://github.com/folke/tokyonight.nvim/commit/fb1c60812c8ba282327dff5d718167fcbcaad35b))
+
 ## [1.20.0](https://github.com/folke/tokyonight.nvim/compare/v1.19.0...v1.20.0) (2023-05-24)
 
 
