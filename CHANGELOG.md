@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.22.0](https://github.com/folke/tokyonight.nvim/compare/v1.21.0...v1.22.0) (2023-05-27)
+
+
+### Features
+
+* added support for CmpGhostText ([8909323](https://github.com/folke/tokyonight.nvim/commit/89093235d5c63f2a6fcd077c7dc1920916475c19))
+
+
+### Bug Fixes
+
+* **cmp:** better ghost text ([94db975](https://github.com/folke/tokyonight.nvim/commit/94db97565b3717f3b85d9918577c57a47f7a22e7))
+
 ## [1.21.0](https://github.com/folke/tokyonight.nvim/compare/v1.20.0...v1.21.0) (2023-05-25)
 
 
