@@ -454,7 +454,7 @@ local highlights = {
     fg = "#2496ac"
   },
   CmpGhostText = {
-    fg = "#848cb5"
+    fg = "#a1a6c5"
   },
   CmpItemAbbr = {
     bg = "NONE",
