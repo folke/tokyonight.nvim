@@ -44,7 +44,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 - [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](extras/terminator))
 - [Tilix](https://github.com/gnunn1/tilix) ([tilix](extras/tilix))
 - [Tmux](https://github.com/tmux/tmux/wiki) ([tmux](extras/tmux))
-- [WezTerm](https://wezfurlong.org/wezterm/config/) ([wezterm](extras/wezterm))
+- [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](extras/wezterm))
 - [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](extras/windows_terminal))
 - [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
 - [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](extras/xresources))
