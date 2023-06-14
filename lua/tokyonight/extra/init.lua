@@ -22,6 +22,7 @@ M.extras = {
   prism = {ext = "js", url = "https://prismjs.com", label = "Prism"},
   windows_terminal = {ext = "json", url = "https://aka.ms/terminal-documentation", label = "Windows Terminal"},
   zathura = {ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura"},
+  dunst = {ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst"},
 }
 
 local function write(str, fileName)
