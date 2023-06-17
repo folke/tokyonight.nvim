@@ -33,6 +33,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 <!-- extras:start -->
 - [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
 - [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
+- [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
 - [Fish](https://fishshell.com/docs/current/index.html) ([fish](extras/fish))
 - [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
 - [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))

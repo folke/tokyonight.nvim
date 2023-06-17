@@ -972,7 +972,8 @@ local highlights = {
     nocombine = true
   },
   MiniIndentscopeSymbol = {
-    fg = "#2ac3de"
+    fg = "#2ac3de",
+    nocombine = true
   },
   MiniJump = {
     bg = "#ff007c",
