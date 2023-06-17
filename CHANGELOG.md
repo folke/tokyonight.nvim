@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.23.0](https://github.com/folke/tokyonight.nvim/compare/v1.22.0...v1.23.0) (2023-06-17)
+
+
+### Features
+
+* **extras:** add 24h clock support to tmux ([#321](https://github.com/folke/tokyonight.nvim/issues/321)) ([a0932ac](https://github.com/folke/tokyonight.nvim/commit/a0932acea0ced2b46de9ec0d1433c8e3e58aea71))
+
+
+### Bug Fixes
+
+* **mini-indentscope:** symbol hl group nocombine ([#392](https://github.com/folke/tokyonight.nvim/issues/392)) ([1cef0bc](https://github.com/folke/tokyonight.nvim/commit/1cef0bc16c675ea47c496e13660df8f82dfe01f1))
+
 ## [1.22.0](https://github.com/folke/tokyonight.nvim/compare/v1.21.0...v1.22.0) (2023-05-27)
 
 
