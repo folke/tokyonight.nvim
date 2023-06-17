@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2023 May 30
+*tokyonight.nvim.txt*       For Neovim >= 0.8.0      Last change: 2023 June 17
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -50,6 +50,7 @@ EXTRAS ~
 
 - Alacritty <https://github.com/alacritty/alacritty> (alacritty <extras/alacritty>)
 - Delta <https://github.com/dandavison/delta> (delta <extras/delta>)
+- Dunst <https://dunst-project.org/> (dunst <extras/dunst>)
 - Fish <https://fishshell.com/docs/current/index.html> (fish <extras/fish>)
 - Fish Themes <https://fishshell.com/docs/current/interactive.html#syntax-highlighting> (fish_themes <extras/fish_themes>)
 - Foot <https://codeberg.org/dnkl/foot> (foot <extras/foot>)
