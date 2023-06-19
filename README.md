@@ -31,6 +31,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 ### 🍭 Extras
 
 <!-- extras:start -->
+
 - [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
 - [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
 - [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
@@ -54,7 +55,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## ⚡️ Requirements
 
-- Neovim >= 0.6.0
+- Neovim >= 0.7.2
 
 ## 📦 Installation
 
