@@ -532,6 +532,9 @@ function M.setup()
     LeapLabelSecondary = { fg = c.green1, bold = true },
     LeapBackdrop = { fg = c.dark3 },
 
+    FlashBackdrop = { fg = c.dark3 },
+    FlashLabel = { bg = c.magenta2, bold = true, fg = c.fg },
+
     LightspeedGreyWash = { fg = c.dark3 },
     -- LightspeedCursor = { link = "Cursor" },
     LightspeedLabel = { fg = c.magenta2, bold = true, underline = true },
