@@ -709,6 +709,14 @@ local highlights = {
   FernBranchText = {
     fg = "#2e7de9"
   },
+  FlashBackdrop = {
+    fg = "#8990b3"
+  },
+  FlashLabel = {
+    bg = "#d20065",
+    bold = true,
+    fg = "#3760bf"
+  },
   FloatBorder = {
     bg = "#e9e9ec",
     fg = "#2496ac"
@@ -727,7 +735,7 @@ local highlights = {
   },
   Foo = {
     bg = "#d20065",
-    fg = "#d20065"
+    fg = "#3760bf"
   },
   Function = {
     fg = "#2e7de9",
@@ -914,6 +922,10 @@ local highlights = {
   LspInfoBorder = {
     bg = "#e9e9ec",
     fg = "#2496ac"
+  },
+  LspInlayHint = {
+    bg = "#d9dbe5",
+    fg = "#8990b3"
   },
   LspReferenceRead = {
     bg = "#a8aecb"
