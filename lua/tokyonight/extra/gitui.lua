@@ -29,7 +29,7 @@ function M.generate(colors)
   selection_bg: ${bg_highlight}
   selection_fg: ${cyan}
   cmdbar_bg: ${bg}
-  cmdbar_extra_lines_bg: ${comment}
+  cmdbar_extra_lines_bg: ${bg}
   disabled_fg: ${comment}
   diff_line_add: ${green}
   diff_line_delete: ${red}
