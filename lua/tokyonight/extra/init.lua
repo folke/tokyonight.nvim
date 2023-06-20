@@ -23,6 +23,7 @@ M.extras = {
   windows_terminal = {ext = "json", url = "https://aka.ms/terminal-documentation", label = "Windows Terminal"},
   zathura = {ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura"},
   dunst = {ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst"},
+  gitui = {ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI"},
 }
 
 local function write(str, fileName)
