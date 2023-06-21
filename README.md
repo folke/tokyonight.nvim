@@ -37,6 +37,7 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 - [Fish](https://fishshell.com/docs/current/index.html) ([fish](extras/fish))
 - [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
 - [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))
+- [GitUI](https://github.com/extrawurst/gitui) ([gitui](extras/gitui))
 - [iTerm](https://iterm2.com/) ([iterm](extras/iterm))
 - [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](extras/kitty))
 - [Lua Table for testing](https://www.lua.org) ([lua](extras/lua))
