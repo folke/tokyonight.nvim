@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.0](https://github.com/folke/tokyonight.nvim/compare/v1.23.0...v2.0.0) (2023-06-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* use new-style autocmds
+
+### Features
+
+* added colors for flash.nvim ([74fdfa7](https://github.com/folke/tokyonight.nvim/commit/74fdfa70b7dcbaeec1824a033072c4521b708c40))
+* **extra:** add gitui theme ([#397](https://github.com/folke/tokyonight.nvim/issues/397)) ([b39627b](https://github.com/folke/tokyonight.nvim/commit/b39627bfea2ff80112694198a30641bfbf07c74d))
+* LspInlayHint ([3c3f82a](https://github.com/folke/tokyonight.nvim/commit/3c3f82acdd5b48f6090f5d57c10b464665d814c3))
+
+
+### Bug Fixes
+
+* better test group Foo ([05dfc1b](https://github.com/folke/tokyonight.nvim/commit/05dfc1bc40c709d9da67ce68a35a3dd2e3a75ce9))
+* use new-style autocmds ([ec8f2ef](https://github.com/folke/tokyonight.nvim/commit/ec8f2efe9d9e2bb570477949e9786008605eb984))
+
 ## [1.23.0](https://github.com/folke/tokyonight.nvim/compare/v1.22.0...v1.23.0) (2023-06-17)
 
 
