@@ -12,12 +12,12 @@ function M.generate(colors)
 [urgency_low]
     background = "${bg_dark}"
     foreground = "${fg}"
-	frame_color = "${fg}"
+    frame_color = "${fg}"
 
 [urgency_normal]
     background = "${bg}"
     foreground = "${fg}"
-	frame_color = "${fg}"
+    frame_color = "${fg}"
 
 [urgency_critical]
     background = "${bg_highlight}"
