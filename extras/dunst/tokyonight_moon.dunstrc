@@ -4,12 +4,12 @@
 [urgency_low]
     background = "#1e2030"
     foreground = "#c8d3f5"
-	frame_color = "#c8d3f5"
+    frame_color = "#c8d3f5"
 
 [urgency_normal]
     background = "#222436"
     foreground = "#c8d3f5"
-	frame_color = "#c8d3f5"
+    frame_color = "#c8d3f5"
 
 [urgency_critical]
     background = "#2f334d"
