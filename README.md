@@ -127,7 +127,8 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with
 > `colorscheme tokyonight`
 
-The theme comes in four styles, `storm`, `moon`, a darker variant `night` and `day`.
+The theme comes in four styles, `storm`, `moon`, a darker variant `night` and
+`day`.
 
 The **day** style will be used if:
 
@@ -181,9 +182,13 @@ How the highlight groups are calculated:
 1. the **colors** for the style are calculated based on your config
 2. `config.on_colors(colors)` is ran, where you can override the colors
 3. the **colors** are then used to generate the highlight groups
-4. `config.on_highlights(highlights, colors)` is ran, where you can overide the highlight groups
+4. `config.on_highlights(highlights, colors)` is ran, where you can overide the
+   highlight groups
 
-Please refer to default values for `colors` and `highlights` for the [storm](extras/lua/tokyonight_storm.lua), [moon](extras/lua/tokyonight_moon.lua), [night](extras/lua/tokyonight_night.lua), [day](extras/lua/tokyonight_day.lua)
+Please refer to default values for `colors` and `highlights` for the
+[storm](extras/lua/tokyonight_storm.lua),
+[moon](extras/lua/tokyonight_moon.lua),
+[night](extras/lua/tokyonight_night.lua), [day](extras/lua/tokyonight_day.lua)
 
 Example for changing some settings and colors
 
