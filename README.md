@@ -31,7 +31,8 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - terminal colors
 - darker background for sidebar-like windows
 - supports all major plugins
-- TokyoNight [extras](#-extras) for a lot of other apps
+- [TokyoNight](https://github.com/folke/tokyonight.nvim) [extras](#-extras) for
+  a lot of other apps
 
 ### 🍭 Extras
 
@@ -67,7 +68,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 
 Install the theme with your preferred package manager:
 
-[folke/lazy.nvim](https://github.com/folke/lazy.nvim)
+[folke/lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
@@ -98,8 +99,8 @@ colorscheme tokyonight-moon
 vim.cmd[[colorscheme tokyonight]]
 ```
 
-To enable the `tokyonight` theme for
-[`Barbecue`](https://github.com/utilyre/barbecue.nvim):
+To enable the [TokyoNight](https://github.com/folke/tokyonight.nvim) theme for
+[Barbecue](https://github.com/utilyre/barbecue.nvim):
 
 ```lua
 require('barbecue').setup {
@@ -109,9 +110,9 @@ require('barbecue').setup {
 }
 ```
 
-To enable the `TokyoNight` theme for
-[`Lualine`](https://github.com/nvim-lualine/lualine.nvim), simply specify it in
-your [`Lualine`](https://github.com/nvim-lualine/lualine.nvim) settings:
+To enable the [TokyoNight](https://github.com/folke/tokyonight.nvim) theme for
+[Lualine](https://github.com/nvim-lualine/lualine.nvim), simply specify it in
+your [Lualine](https://github.com/nvim-lualine/lualine.nvim) settings:
 
 ```lua
 require('lualine').setup {
@@ -123,8 +124,8 @@ require('lualine').setup {
 }
 ```
 
-To enable the `tokyonight` colorscheme for
-[`Lightline`](https://github.com/itchyny/lightline.vim):
+To enable the [TokyoNight](https://github.com/folke/tokyonight.nvim) colorscheme
+for [Lightline](https://github.com/itchyny/lightline.vim):
 
 ```vim
 " Vim Script
@@ -136,15 +137,16 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with
 > `colorscheme tokyonight`
 
-The theme comes in four styles, [`storm`](#storm), [`moon`](#moon), a darker
-variant [`night`](#night) and [`day`](#day).
+The theme comes in four styles, [storm](#storm), [moon](#moon), a darker variant
+[night](#night) and [day](#day).
 
-The [**day**](#day) style will be used if:
+The [day](#day) style will be used if:
 
 - `{ style = "day"}` was passed to `setup(options)`
 - or `vim.o.background = "light"`
 
-TokyoNight will use the default options, unless you call `setup`.
+[TokyoNight](https://github.com/folke/tokyonight.nvim) will use the default
+options, unless you call `setup`.
 
 ```lua
 require("tokyonight").setup({
@@ -188,18 +190,18 @@ require("tokyonight").setup({
 
 How the highlight groups are calculated:
 
-1. the **colors** for the style are calculated based on your config
+1. the `colors` for the style are calculated based on your config
 2. `config.on_colors(colors)` is ran, where you can override the colors
-3. the **colors** are then used to generate the highlight groups
+3. the `colors` are then used to generate the highlight groups
 4. `config.on_highlights(highlights, colors)` is ran, where you can overide the
    highlight groups
 
 Please refer to default values for `colors` and `highlights` for the
 [storm](extras/lua/tokyonight_storm.lua),
 [moon](extras/lua/tokyonight_moon.lua),
-[night](extras/lua/tokyonight_night.lua), [day](extras/lua/tokyonight_day.lua)
+[night](extras/lua/tokyonight_night.lua), [day](extras/lua/tokyonight_day.lua).
 
-Example for changing some settings and colors
+Example for changing some settings and colors:
 
 ```lua
 require("tokyonight").setup({
@@ -219,7 +221,7 @@ require("tokyonight").setup({
 ```
 
 Example to make Telescope
-[borderless](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless)
+[borderless](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless):
 
 ```lua
 require("tokyonight").setup({
@@ -256,10 +258,10 @@ require("tokyonight").setup({
 })
 ```
 
-### Making `undercurls` work properly in [**Tmux**](https://github.com/tmux/tmux)
+### Making `undercurls` work properly in [Tmux](https://github.com/tmux/tmux)
 
 To have undercurls show up and in color, add the following to your
-[**Tmux**](https://github.com/tmux/tmux) config file:
+[Tmux](https://github.com/tmux/tmux) config file:
 
 ```sh
 # Undercurl
@@ -270,12 +272,11 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🍭 Extras
 
-Extra color configs for [**Kitty**](https://sw.kovidgoyal.net/kitty/conf.html),
-[**Alacritty**](https://github.com/alacritty/alacritty),
-[**Fish**](https://www.lua.org/),
-[**WezTerm**](https://wezfurlong.org/wezterm/config/),
-[**iTerm**](https://iterm2.com/) and [**foot**](https://codeberg.org/dnkl/foot)
-can be found in [extras](extras/). To use them, refer to their respective
+Extra color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
+[Alacritty](https://github.com/alacritty/alacritty),
+[Fish](https://www.lua.org/), [WezTerm](https://wezfurlong.org/wezterm/config/),
+[iTerm](https://iterm2.com/) and [foot](https://codeberg.org/dnkl/foot) can be
+found in [extras](extras/). To use them, refer to their respective
 documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
@@ -293,8 +294,8 @@ aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 r
 
 ## 🔥 Contributing
 
-Pull requests are welcome. For the `extras`, we use a simple template system
-that can be used to generate themes for the different styles.
+Pull requests are welcome. For the [extras](#-extras), we use a simple template
+system that can be used to generate themes for the different styles.
 
 How to add a new extra template:
 
