@@ -1,8 +1,12 @@
 # 🏙 Tokyo Night
 
-A dark and light Neovim theme written in Lua ported from the Visual Studio Code
-[TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
-extra themes for Kitty, Alacritty, iTerm and Fish.
+A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
+[Lua](https://www.lua.org) ported from the [Visual Studio Code
+TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
+[extra](#-extras) themes for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
+[Alacritty](https://github.com/alacritty/alacritty),
+[iTerm](https://iterm2.com/) and
+[Fish](https://fishshell.com/docs/current/index.html).
 
 ## Storm
 
@@ -22,7 +26,8 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## ✨ Features
 
-- supports the latest Neovim 0.9.0 features
+- supports the latest [Neovim](https://github.com/neovim/neovim)
+  [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features
 - terminal colors
 - darker background for sidebar-like windows
 - supports all major plugins
@@ -55,7 +60,8 @@ extra themes for Kitty, Alacritty, iTerm and Fish.
 
 ## ⚡️ Requirements
 
-- Neovim >= 0.7.2
+- [Neovim](https://github.com/neovim/neovim) >=
+  [0.7.2](https://github.com/neovim/neovim/releases/tag/v0.7.2)
 
 ## 📦 Installation
 
@@ -92,7 +98,8 @@ colorscheme tokyonight-moon
 vim.cmd[[colorscheme tokyonight]]
 ```
 
-To enable the `tokyonight` theme for `Barbecue`:
+To enable the `tokyonight` theme for
+[`Barbecue`](https://github.com/utilyre/barbecue.nvim):
 
 ```lua
 require('barbecue').setup {
@@ -102,8 +109,9 @@ require('barbecue').setup {
 }
 ```
 
-To enable the `TokyoNight` theme for `Lualine`, simply specify it in your
-lualine settings:
+To enable the `TokyoNight` theme for
+[`Lualine`](https://github.com/nvim-lualine/lualine.nvim), simply specify it in
+your [`Lualine`](https://github.com/nvim-lualine/lualine.nvim) settings:
 
 ```lua
 require('lualine').setup {
@@ -115,7 +123,8 @@ require('lualine').setup {
 }
 ```
 
-To enable the `tokyonight` colorscheme for `Lightline`:
+To enable the `tokyonight` colorscheme for
+[`Lightline`](https://github.com/itchyny/lightline.vim):
 
 ```vim
 " Vim Script
@@ -127,10 +136,10 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with
 > `colorscheme tokyonight`
 
-The theme comes in four styles, `storm`, `moon`, a darker variant `night` and
-`day`.
+The theme comes in four styles, [`storm`](#storm), [`moon`](#moon), a darker
+variant [`night`](#night) and [`day`](#day).
 
-The **day** style will be used if:
+The [**day**](#day) style will be used if:
 
 - `{ style = "day"}` was passed to `setup(options)`
 - or `vim.o.background = "light"`
@@ -144,7 +153,7 @@ require("tokyonight").setup({
   style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -247,10 +256,10 @@ require("tokyonight").setup({
 })
 ```
 
-### Making `undercurls` work properly in **Tmux**
+### Making `undercurls` work properly in [**Tmux**](https://github.com/tmux/tmux)
 
-To have undercurls show up and in color, add the following to your **Tmux**
-config file:
+To have undercurls show up and in color, add the following to your
+[**Tmux**](https://github.com/tmux/tmux) config file:
 
 ```sh
 # Undercurl
@@ -261,14 +270,18 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🍭 Extras
 
-Extra color configs for **Kitty**, **Alacritty**, **Fish**, **WezTerm**,
-**iTerm** and **foot** can be found in [extras](extras/). To use them, refer to
-their respective documentation.
+Extra color configs for [**Kitty**](https://sw.kovidgoyal.net/kitty/conf.html),
+[**Alacritty**](https://github.com/alacritty/alacritty),
+[**Fish**](https://www.lua.org/),
+[**WezTerm**](https://wezfurlong.org/wezterm/config/),
+[**iTerm**](https://iterm2.com/) and [**foot**](https://codeberg.org/dnkl/foot)
+can be found in [extras](extras/). To use them, refer to their respective
+documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
 
-You can easily use the color palette for other plugins inside your Neovim
-config:
+You can easily use the color palette for other plugins inside your
+[Neovim](https://github.com/neovim/neovim) config:
 
 ```lua
 local colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
