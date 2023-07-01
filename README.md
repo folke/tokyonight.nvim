@@ -32,11 +32,12 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - Introduces a darker background option for sidebar-like windows.
 - Supports all major plugins.
 - Provides [TokyoNight](https://github.com/folke/tokyonight.nvim)
-  [extras](#-extras) numerous other applications.
+  [extras](#-extras) for numerous other applications.
 
 ### 🍭 Extras
 
 <!-- extras:start -->
+
 - [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
 - [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
 - [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
@@ -133,8 +134,7 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 
 ## ⚙️ Configuration
 
-> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme
-> tokyonight`.
+> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
 
 The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
 and [day](#day).
