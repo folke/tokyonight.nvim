@@ -49,7 +49,7 @@ FEATURES                                *tokyonight.nvim-tokyo-night-features*
 - Introduces a darker background option for sidebar-like windows.
 - Supports all major plugins.
 - Provides TokyoNight <https://github.com/folke/tokyonight.nvim>
-    |tokyonight.nvim-extras| numerous other applications.
+    |tokyonight.nvim-extras| for numerous other applications.
 
 
 EXTRAS ~
