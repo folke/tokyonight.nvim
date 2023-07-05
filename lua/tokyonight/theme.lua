@@ -317,6 +317,15 @@ function M.setup()
     TSRainbowViolet = { fg = c.purple },
     TSRainbowCyan = { fg = c.cyan },
 
+    -- rainbow-delimiters
+    RainbowDelimiterRed = { fg = c.red },
+    RainbowDelimiterOrange = { fg = c.orange },
+    RainbowDelimiterYellow = { fg = c.yellow },
+    RainbowDelimiterGreen = { fg = c.green },
+    RainbowDelimiterBlue = { fg = c.blue },
+    RainbowDelimiterViolet = { fg = c.purple },
+    RainbowDelimiterCyan = { fg = c.cyan },
+
     -- LspTrouble
     TroubleText = { fg = c.fg_dark },
     TroubleCount = { fg = c.magenta, bg = c.fg_gutter },

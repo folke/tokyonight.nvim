@@ -1583,6 +1583,27 @@ local highlights = {
     bg = "#283457",
     bold = true
   },
+  RainbowDelimiterBlue = {
+    fg = "#7aa2f7"
+  },
+  RainbowDelimiterCyan = {
+    fg = "#7dcfff"
+  },
+  RainbowDelimiterGreen = {
+    fg = "#9ece6a"
+  },
+  RainbowDelimiterOrange = {
+    fg = "#ff9e64"
+  },
+  RainbowDelimiterRed = {
+    fg = "#f7768e"
+  },
+  RainbowDelimiterViolet = {
+    fg = "#9d7cd8"
+  },
+  RainbowDelimiterYellow = {
+    fg = "#e0af68"
+  },
   ReferencesCount = {
     fg = "#9d7cd8"
   },
