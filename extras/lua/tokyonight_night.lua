@@ -1442,6 +1442,10 @@ local highlights = {
     bg = "#16161e",
     fg = "#a9b1d6"
   },
+  NotifyBackground = {
+    bg = "#1a1b26",
+    fg = "#c0caf5"
+  },
   NotifyDEBUGBody = {
     bg = "#1a1b26",
     fg = "#c0caf5"
