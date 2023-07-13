@@ -665,6 +665,7 @@ function M.setup()
     LazyProgressTodo = { bold = true, fg = c.fg_gutter },
 
     -- Notify
+    NotifyBackground = { fg = c.fg, bg = c.bg },
     --- Border
     NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = options.transparent and c.none or c.bg },
     NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = options.transparent and c.none or c.bg },
