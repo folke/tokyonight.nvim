@@ -24,6 +24,7 @@ M.extras = {
   zathura = {ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura"},
   dunst = {ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst"},
   gitui = {ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI"},
+  helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix"},
 }
 
 local function write(str, fileName)
@@ -66,7 +67,7 @@ end
 
 function M.setup()
   M.docs()
-  local config = require("tokyonight.config")
+  local tokyonight = require("tokyonight")
   vim.o.background = "dark"
 
   -- map of style to style name
@@ -81,7 +82,9 @@ function M.setup()
     package.loaded["tokyonight.extra." .. extra] = nil
     local plugin = require("tokyonight.extra." .. extra)
     for style, style_name in pairs(styles) do
-      config.setup({ style = style })
+      tokyonight.setup({ style = style })
+      tokyonight.load({ style = style })
+      vim.cmd.colorscheme('tokyonight-' .. style)
       local colors = require("tokyonight.colors").setup({ transform = true })
       local fname = extra .. "/tokyonight_" .. style .. "." .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
