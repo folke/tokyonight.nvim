@@ -224,8 +224,7 @@ function M.setup()
     --- Functions
     ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     ["@parameter"] = { fg = c.yellow }, -- For parameters of a function.
-    -- TODO:
-    -- ["@parameter.builtin"] = {}, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@parameter.builtin"] = { fg = "#efc890" }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
     ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
@@ -268,19 +267,24 @@ function M.setup()
     ["@lsp.type.boolean"] = { link = "@boolean" },
     ["@lsp.type.builtinType"] = { link = "@type.builtin" },
     ["@lsp.type.comment"] = { link = "@comment" },
+    ["@lsp.type.decorator"] = { link = "@attribute" },
+    ["@lsp.type.deriveHelper"] = { link = "@attribute" },
     ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
+    ["@lsp.type.generic"] = { link = "@variable" },
     ["@lsp.type.interface"] = { fg = util.lighten(c.blue1, 0.7) },
     ["@lsp.type.keyword"] = { link = "@keyword" },
+    ["@lsp.type.lifetime"] = { link = "@storageclass" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
     ["@lsp.type.number"] = { link = "@number" },
     ["@lsp.type.operator"] = { link = "@operator" },
     ["@lsp.type.parameter"] = { link = "@parameter" },
     ["@lsp.type.property"] = { link = "@property" },
     ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
-    ["@lsp.type.string.rust"] = { link = "@string" },
+    ["@lsp.type.selfTypeKeyword"] = { link = "@variable.builtin" },
+    ["@lsp.type.string"] = { link = "@string" },
     ["@lsp.type.typeAlias"] = { link = "@type.definition" },
     ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = c.error },
     ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
@@ -289,13 +293,18 @@ function M.setup()
     ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
     ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
+    ["@lsp.typemod.keyword.injected"] = { link = "@keyword" },
     ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
+    ["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.type.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
+    ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
+    ["@lsp.typemod.variable.callable"] = { link = "@function" },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
+    ["@lsp.typemod.variable.static"] = { link = "@constant" },
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
