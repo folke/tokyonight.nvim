@@ -52,7 +52,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](extras/terminator))
 - [Tilix](https://github.com/gnunn1/tilix) ([tilix](extras/tilix))
 - [Tmux](https://github.com/tmux/tmux/wiki) ([tmux](extras/tmux))
-- [WezTerm](https://wezfurlong.org/wezterm/config/) ([wezterm](extras/wezterm))
+- [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](extras/wezterm))
 - [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](extras/windows_terminal))
 - [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
 - [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](extras/xresources))
@@ -270,7 +270,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 Extra color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
 [Alacritty](https://github.com/alacritty/alacritty),
-[Fish](https://www.lua.org/), [WezTerm](https://wezfurlong.org/wezterm/config/),
+[Fish](https://www.lua.org/), [WezTerm](https://wezfurlong.org/wezterm/config/files.html),
 [iTerm](https://iterm2.com/) and [foot](https://codeberg.org/dnkl/foot) can be
 found in [extras](extras/). To use them, refer to their respective
 documentation.
