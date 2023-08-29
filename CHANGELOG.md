@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.0](https://github.com/folke/tokyonight.nvim/compare/v2.0.0...v2.1.0) (2023-08-29)
+
+
+### Features
+
+* Added rainbow-delimiter highlight groups ([#404](https://github.com/folke/tokyonight.nvim/issues/404)) ([9191b4b](https://github.com/folke/tokyonight.nvim/commit/9191b4b67499b5759f4da84ca92c9481d35e8278))
+* **notify:** added support for NotifyBackground ([99ba6de](https://github.com/folke/tokyonight.nvim/commit/99ba6de2a9c1a1a6e652fa121d01fb63c5ec8125))
+
+
+### Bug Fixes
+
+* **dunst:** make whitespace consistent ([#398](https://github.com/folke/tokyonight.nvim/issues/398)) ([c87654a](https://github.com/folke/tokyonight.nvim/commit/c87654a752477756652912ad3ab9b9b366606209))
+
 ## [2.0.0](https://github.com/folke/tokyonight.nvim/compare/v1.23.0...v2.0.0) (2023-06-21)
 
 
