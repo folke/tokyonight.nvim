@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*       For Neovim >= 0.8.0      Last change: 2023 July 13
+*tokyonight.nvim.txt*      For Neovim >= 0.8.0     Last change: 2023 August 29
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -69,7 +69,7 @@ EXTRAS ~
 - Terminator <https://gnome-terminator.readthedocs.io/en/latest/config.html> (terminator <extras/terminator>)
 - Tilix <https://github.com/gnunn1/tilix> (tilix <extras/tilix>)
 - Tmux <https://github.com/tmux/tmux/wiki> (tmux <extras/tmux>)
-- WezTerm <https://wezfurlong.org/wezterm/config/> (wezterm <extras/wezterm>)
+- WezTerm <https://wezfurlong.org/wezterm/config/files.html> (wezterm <extras/wezterm>)
 - Windows Terminal <https://aka.ms/terminal-documentation> (windows_terminal <extras/windows_terminal>)
 - Xfce Terminal <https://docs.xfce.org/apps/terminal/advanced> (xfceterm <extras/xfceterm>)
 - Xresources <https://wiki.archlinux.org/title/X_resources> (xresources <extras/xresources>)
@@ -301,9 +301,10 @@ EXTRAS                                    *tokyonight.nvim-tokyo-night-extras*
 
 Extra color configs for Kitty <https://sw.kovidgoyal.net/kitty/conf.html>,
 Alacritty <https://github.com/alacritty/alacritty>, Fish
-<https://www.lua.org/>, WezTerm <https://wezfurlong.org/wezterm/config/>, iTerm
-<https://iterm2.com/> and foot <https://codeberg.org/dnkl/foot> can be found in
-extras <extras/>. To use them, refer to their respective documentation.
+<https://www.lua.org/>, WezTerm
+<https://wezfurlong.org/wezterm/config/files.html>, iTerm <https://iterm2.com/>
+and foot <https://codeberg.org/dnkl/foot> can be found in extras <extras/>. To
+use them, refer to their respective documentation.
 
 You can easily use the color palette for other plugins inside your Neovim
 <https://github.com/neovim/neovim> configuration:
