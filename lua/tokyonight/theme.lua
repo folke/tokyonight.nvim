@@ -799,6 +799,42 @@ function M.setup()
     -- TreesitterContext = { bg = util.darken(c.bg_visual, 0.4) },
   }
 
+  -- Markdown notes highlights
+  vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
+    desc = "Highligh markdown notes.",
+    group = vim.api.nvim_create_augroup("markdown_notes_hl", { clear = true }),
+    callback = function()
+      if vim.bo.filetype == "markdown" then
+        vim.defer_fn(function()
+          -- TODO:
+          vim.cmd(":silent! highlight clear MarkdownTodo")
+          vim.cmd(":highlight MarkdownTodo guifg=" .. c.teal .. " gui=bold")
+          vim.cmd(":syntax match MarkdownTodo /\\cTODO:/")
+
+          -- NOTE:
+          vim.cmd(":silent! highlight clear MarkdownNote")
+          vim.cmd(":highlight MarkdownNote guifg=" .. c.red .. " gui=bold")
+          vim.cmd(":syntax match MarkdownNote /\\cNOTE:/")
+
+          -- SEE:
+          vim.cmd(":silent! highlight clear MarkdownSee")
+          vim.cmd(":highlight MarkdownSee guifg=" .. c.blue .. " gui=bold")
+          vim.cmd(":syntax match MarkdownSee /\\cSEE:/")
+
+          -- CHECK:
+          vim.cmd(":silent! highlight clear MarkdownCheck")
+          vim.cmd(":highlight MarkdownCheck guifg=" .. c.green .. " gui=bold")
+          vim.cmd(":syntax match MarkdownCheck /\\cCHECK:/")
+
+          -- URL:
+          vim.cmd(":silent! highlight clear MarkdownURL")
+          vim.cmd(":highlight MarkdownURL guifg=" .. c.purple .. " gui=bold")
+          vim.cmd(":syntax match MarkdownURL /\\cURL:/")
+        end, 100)
+      end
+    end,
+  })
+
   if not vim.diagnostic then
     local severity_map = {
       Error = "Error",
