@@ -808,38 +808,48 @@ function M.setup()
         vim.defer_fn(function()
           -- TASK:
           vim.cmd(":silent! highlight clear MarkdownTask")
-          vim.cmd(":highlight MarkdownTask guifg=" .. c.teal .. " gui=bold")
-          vim.cmd(":syntax match MarkdownTask /\\cTask:/")
+          vim.cmd(":highlight MarkdownTask guifg=" .. c.teal)
+          vim.cmd(":syntax match MarkdownTask /\\c\\w*Task[^:]*:/")
+
+          -- ACTION:
+          vim.cmd(":silent! highlight clear MarkdownAction")
+          vim.cmd(":highlight MarkdownAction guifg=" .. c.teal)
+          vim.cmd(":syntax match MarkdownAction /\\c\\w*Action[^:]*:/")
 
           -- TODO:
           vim.cmd(":silent! highlight clear MarkdownTodo")
-          vim.cmd(":highlight MarkdownTodo guifg=" .. c.yellow .. " gui=bold")
-          vim.cmd(":syntax match MarkdownTodo /\\cTODO:/")
+          vim.cmd(":highlight MarkdownTodo guifg=" .. c.yellow)
+          vim.cmd(":syntax match MarkdownTodo /\\c\\w*Todo[^:]*:/")
+
+          -- FOCUS:
+          vim.cmd(":silent! highlight clear MarkdownFocus")
+          vim.cmd(":highlight MarkdownFocus guifg=" .. c.yellow)
+          vim.cmd(":syntax match MarkdownFocus /\\c\\w*Focus[^:]*:/")
 
           -- NOTE:
           vim.cmd(":silent! highlight clear MarkdownNote")
-          vim.cmd(":highlight MarkdownNote guifg=" .. c.red .. " gui=bold")
-          vim.cmd(":syntax match MarkdownNote /\\cNOTE:/")
+          vim.cmd(":highlight MarkdownNote guifg=" .. c.red)
+          vim.cmd(":syntax match MarkdownNote /\\c\\w*Note[^:]*:/")
 
           -- SEE:
           vim.cmd(":silent! highlight clear MarkdownSee")
-          vim.cmd(":highlight MarkdownSee guifg=" .. c.blue .. " gui=bold")
-          vim.cmd(":syntax match MarkdownSee /\\cSEE:/")
+          vim.cmd(":highlight MarkdownSee guifg=" .. c.blue)
+          vim.cmd(":syntax match MarkdownSee /\\c\\w*See[^:]*:/")
 
           -- CHECK:
           vim.cmd(":silent! highlight clear MarkdownCheck")
-          vim.cmd(":highlight MarkdownCheck guifg=" .. c.green .. " gui=bold")
-          vim.cmd(":syntax match MarkdownCheck /\\cCHECK:/")
+          vim.cmd(":highlight MarkdownCheck guifg=" .. c.green)
+          vim.cmd(":syntax match MarkdownCheck /\\c\\w*Check[^:]*:/")
 
           -- URL:
           vim.cmd(":silent! highlight clear MarkdownURL")
-          vim.cmd(":highlight MarkdownURL guifg=" .. c.purple .. " gui=bold")
-          vim.cmd(":syntax match MarkdownURL /\\cURL:/")
+          vim.cmd(":highlight MarkdownURL guifg=" .. c.purple)
+          vim.cmd(":syntax match MarkdownURL /\\c\\w*url[^:]*:/")
 
           -- EXAMPLE:
           vim.cmd(":silent! highlight clear MarkdownExample")
-          vim.cmd(":highlight MarkdownExample guifg=" .. c.magenta .. " gui=bold")
-          vim.cmd(":syntax match MarkdownExample /\\cExample:/")
+          vim.cmd(":highlight MarkdownExample guifg=" .. c.magenta)
+          vim.cmd(":syntax match MarkdownExample /\\c\\w*Example[^:]*:/")
         end, 100)
       end
     end,
