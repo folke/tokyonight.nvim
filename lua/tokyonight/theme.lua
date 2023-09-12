@@ -299,13 +299,13 @@ function M.setup()
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
-		-- Markdown
-		["@text.title.1.markdown"] = { fg = c.red, bold = true },
-		["@text.title.2.markdown"] = { fg = c.yellow, bold = true },
-		["@text.title.3.markdown"] = { fg = c.green, bold = true},
-		["@text.title.4.markdown"] = { fg = c.teal, bold = true},
-		["@text.title.5.markdown"] = { fg = c.magenta, bold = true},
-		["@text.title.6.markdown"] = { fg = c.purple, bold = true},
+    -- Markdown
+    ["@text.title.1.markdown"] = { fg = c.blue, bold = true },
+    ["@text.title.2.markdown"] = { fg = c.yellow, bold = true },
+    ["@text.title.3.markdown"] = { fg = c.green, bold = true},
+    ["@text.title.4.markdown"] = { fg = c.teal, bold = true},
+    ["@text.title.5.markdown"] = { fg = c.magenta, bold = true},
+    ["@text.title.6.markdown"] = { fg = c.purple, bold = true},
 
     -- ts-rainbow
     rainbowcol1 = { fg = c.red },
