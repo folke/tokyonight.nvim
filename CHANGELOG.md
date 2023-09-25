@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.0](https://github.com/folke/tokyonight.nvim/compare/v2.1.0...v2.2.0) (2023-09-25)
+
+
+### Features
+
+* Add Helix extras ([#409](https://github.com/folke/tokyonight.nvim/issues/409)) ([a345a21](https://github.com/folke/tokyonight.nvim/commit/a345a21966ed7c1ff26f247d4b20a4f307bedc79))
+* **lsp, treesitter:** add more highlights ([#415](https://github.com/folke/tokyonight.nvim/issues/415)) ([1ddb45d](https://github.com/folke/tokyonight.nvim/commit/1ddb45d47f96c7e060de8a2eae0902fa70788c55))
+* **markdown:** added different colors for each headline ([#423](https://github.com/folke/tokyonight.nvim/issues/423)) ([ad7e8ff](https://github.com/folke/tokyonight.nvim/commit/ad7e8fff8dce637ec2c5aa984553b3d91dc55b37))
+
 ## [2.1.0](https://github.com/folke/tokyonight.nvim/compare/v2.0.0...v2.1.0) (2023-08-29)
 
 
