@@ -37,6 +37,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 ### 🍭 Extras
 
 <!-- extras:start -->
+
 - [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
 - [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
 - [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
@@ -301,13 +302,7 @@ How to add a new extra template:
 1. Create a file like `lua/tokyonight/extra/cool-app.lua`.
 2. Add the name and output file extension to the `extras` table in
    `lua/tokyonight/extra/init.lua`.
-3. Run the following command to generate new [extra](#-extras) themes:
-
-   ```sh
-   nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('tokyonight.extra').setup()" --cmd qa
-   ```
-
-   If you work directly on the installed plugin, you may run the following instead:
+3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
 
    ```sh
    nvim --headless "+lua require('tokyonight.extra').setup()" +qa
