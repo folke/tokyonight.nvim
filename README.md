@@ -37,6 +37,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 ### 🍭 Extras
 
 <!-- extras:start -->
+
 - [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
 - [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
 - [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
@@ -44,6 +45,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
 - [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))
 - [GitUI](https://github.com/extrawurst/gitui) ([gitui](extras/gitui))
+- [Helix](https://helix-editor.com/) ([helix](extras/helix))
 - [iTerm](https://iterm2.com/) ([iterm](extras/iterm))
 - [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](extras/kitty))
 - [Lua Table for testing](https://www.lua.org) ([lua](extras/lua))
@@ -300,7 +302,7 @@ How to add a new extra template:
 1. Create a file like `lua/tokyonight/extra/cool-app.lua`.
 2. Add the name and output file extension to the `extras` table in
    `lua/tokyonight/extra/init.lua`.
-3. Run the following command to generate new [extra](#-extras) themes:
+3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
 
    ```sh
    nvim --headless "+lua require('tokyonight.extra').setup()" +qa
