@@ -61,6 +61,7 @@ EXTRAS ~
 - Fish Themes <https://fishshell.com/docs/current/interactive.html#syntax-highlighting> (fish_themes <extras/fish_themes>)
 - Foot <https://codeberg.org/dnkl/foot> (foot <extras/foot>)
 - GitUI <https://github.com/extrawurst/gitui> (gitui <extras/gitui>)
+- Helix <https://helix-editor.com/> (helix <extras/helix>)
 - iTerm <https://iterm2.com/> (iterm <extras/iterm>)
 - Kitty <https://sw.kovidgoyal.net/kitty/conf.html> (kitty <extras/kitty>)
 - Lua Table for testing <https://www.lua.org> (lua <extras/lua>)
@@ -334,7 +335,8 @@ How to add a new extra template:
 `lua/tokyonight/extra/init.lua`.
 
 
-3. Run the following command to generate new |tokyonight.nvim-extra| themes:
+3. Run the following command to generate new |tokyonight.nvim-extra| themes from
+the tokyonight plugin directory:
 
 >sh
     nvim --headless "+lua require('tokyonight.extra').setup()" +qa
