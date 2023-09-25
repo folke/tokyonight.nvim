@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*      For Neovim >= 0.8.0     Last change: 2023 August 29
+*tokyonight.nvim.txt*    For Neovim >= 0.8.0    Last change: 2023 September 25
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -191,8 +191,8 @@ unless `setup` is explicitly called.
         floats = "dark", -- style for floating windows
       },
       sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-      day_brightness = 0.3, -- Adjusts the brightness of the colors of the Day style. Number between 0 and 1, from dull to vibrant colors
-      hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard StatusLine and LuaLine.
+      day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+      hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
       dim_inactive = false, -- dims inactive windows
       lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
     
@@ -240,7 +240,7 @@ SETTINGS AND COLOR ALTERATION DEMONSTRATION ~
       -- Change the "hint" color to the "orange" color, and make the "error" color bright red
       on_colors = function(colors)
         colors.hint = colors.orange
-        colors.error = "ff0000"
+        colors.error = "#ff0000"
       end
     })
 <
@@ -251,7 +251,7 @@ BORDERLESS TELESCOPE EXAMPLE ~
 >lua
     require("tokyonight").setup({
       on_highlights = function(hl, c)
-        local prompt = "2d3149"
+        local prompt = "#2d3149"
         hl.TelescopeNormal = {
           bg = c.bg_dark,
           fg = c.fg_dark,
@@ -290,10 +290,10 @@ To have undercurls show up and in color, add the following to your Tmux
 <https://github.com/tmux/tmux> configuration file:
 
 >sh
-     Undercurl
+    # Undercurl
     set -g default-terminal "${TERM}"
-    set -as terminal-overrides ',:Smulx=\E[4::%p1%dm'   undercurl support
-    set -as terminal-overrides ',:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'   underscore colours - needs tmux-3.0
+    set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+    set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 <
 
 
