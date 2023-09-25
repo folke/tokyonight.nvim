@@ -272,6 +272,30 @@ local highlights = {
   ["@text.reference"] = {
     fg = "#1abc9c"
   },
+  ["@text.title.1.markdown"] = {
+    bold = true,
+    fg = "#7aa2f7"
+  },
+  ["@text.title.2.markdown"] = {
+    bold = true,
+    fg = "#e0af68"
+  },
+  ["@text.title.3.markdown"] = {
+    bold = true,
+    fg = "#9ece6a"
+  },
+  ["@text.title.4.markdown"] = {
+    bold = true,
+    fg = "#1abc9c"
+  },
+  ["@text.title.5.markdown"] = {
+    bold = true,
+    fg = "#bb9af7"
+  },
+  ["@text.title.6.markdown"] = {
+    bold = true,
+    fg = "#9d7cd8"
+  },
   ["@text.todo.checked"] = {
     fg = "#73daca"
   },
