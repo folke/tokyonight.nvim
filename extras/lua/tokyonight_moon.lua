@@ -863,6 +863,14 @@ local highlights = {
   HopUnmatched = {
     fg = "#545c7e"
   },
+  IblIndent = {
+    fg = "#3b4261",
+    nocombine = true
+  },
+  IblScope = {
+    fg = "#fca7ea",
+    nocombine = true
+  },
   Identifier = {
     fg = "#c099ff",
     style = {}
