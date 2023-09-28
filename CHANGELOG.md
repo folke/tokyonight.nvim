@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/folke/tokyonight.nvim/compare/v2.2.0...v2.3.0) (2023-09-28)
+
+
+### Features
+
+* **indent-blankline:** new hl groups ([9699aa2](https://github.com/folke/tokyonight.nvim/commit/9699aa23c9832d81e4fdd43866d143e89c29349f))
+
 ## [2.2.0](https://github.com/folke/tokyonight.nvim/compare/v2.1.0...v2.2.0) (2023-09-25)
 
 
