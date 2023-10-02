@@ -1,4 +1,6 @@
 local util = require("tokyonight.util")
+local hsluv = require("tokyonight.hsluv")
+local hsl = hsluv.hsluv_to_hex
 
 local M = {}
 
@@ -6,16 +8,18 @@ local M = {}
 M.default = {
   none = "NONE",
 
-  base04 = "#00141A",
-  base03 = "#002B36",
-  base02 = "#073642",
-  base01 = "#586E75",
-  base00 = "#657B83",
-  base0 = "#839496",
-  base1 = "#93A1A1",
-  base2 = "#EEE8D5",
-  base3 = "#FDF6E3",
-  base4 = "white",
+  base04 = hsl({ 192, 100, 5 }), -- #00141A
+  base03 = hsl({ 192, 100, 11 }), -- #002B36
+  base02 = hsl({ 192, 81, 14 }), -- #073642
+  base01 = hsl({ 194, 14, 40 }), -- #586E75
+  base00 = hsl({ 196, 13, 45 }), -- #657B83
+  -- base0 = hsl({ 186, 8, 55 }), -- #839496
+  base0 = hsl({ 186, 8, 65 }),
+  -- base1 = hsl({ 180, 7, 60 }), -- #93A1A1
+  base1 = hsl({ 180, 7, 70 }),
+  base2 = hsl({ 46, 42, 88 }), -- #EEE8D5
+  base3 = hsl({ 44, 87, 94 }), -- #FDF6E3
+  base4 = hsl({ 0, 0, 100 }), -- #ffffff
   yellow = "#B58900",
   yellow100 = "#FFE999",
   yellow300 = "#FFC100",
@@ -68,15 +72,6 @@ M.default = {
   bg = "#002B36",
   bg_highlight = "#073642",
   fg = "#839496",
-
-  blue0 = "#3d59a1",
-  blue1 = "#2ac3de",
-  blue2 = "#0db9d7",
-  blue5 = "#89ddff",
-  blue6 = "#b4f9f8",
-  blue7 = "#394b70",
-  green1 = "#73daca",
-  green2 = "#41a6b5",
 }
 
 ---@return ColorScheme
@@ -98,15 +93,7 @@ function M.setup(opts)
   util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
 
-  colors.diff = {
-    add = util.darken(colors.green2, 0.15),
-    delete = util.darken(colors.red500, 0.15),
-    change = util.darken(colors.blue7, 0.15),
-    text = colors.blue7,
-  }
-
   colors.black = util.darken(colors.bg, 0.8, "#000000")
-  colors.border_highlight = util.darken(colors.blue1, 0.8)
   colors.border = colors.black
 
   -- Popups and statusline always get a dark background
@@ -122,8 +109,6 @@ function M.setup(opts)
     or config.options.styles.floats == "dark" and colors.base04
     or colors.bg
 
-  colors.bg_visual = util.darken(colors.blue0, 0.4)
-  colors.bg_search = colors.blue0
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
   colors.fg_float = colors.fg
 
@@ -131,11 +116,6 @@ function M.setup(opts)
   colors.warning = colors.yellow500
   colors.info = colors.blue500
   colors.hint = colors.cyan500
-
-  colors.delta = {
-    add = util.darken(colors.green2, 0.45),
-    delete = util.darken(colors.red500, 0.45),
-  }
 
   config.options.on_colors(colors)
   if opts.transform and config.is_day() then

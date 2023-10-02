@@ -49,8 +49,8 @@ function M.setup()
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base0 }, -- column where |signs| are displayed
     Substitute = { fg = c.base04, bg = c.red500 }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = c.base01, bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = c.base1, sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNr = { fg = c.yellow700, bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = c.orange500, sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.blue500 }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.base01 }, -- Area for messages and cmdline
@@ -191,7 +191,7 @@ function M.setup()
 
     LspSignatureActiveParameter = { bg = c.base03, bold = true },
     LspCodeLens = { fg = c.base01 },
-    LspInlayHint = { bg = util.darken(c.blue7, 0.1), fg = c.base01 },
+    LspInlayHint = { bg = c.blue500, fg = c.base01 },
 
     LspInfoBorder = { fg = c.base02, bg = c.bg_float },
 
@@ -267,7 +267,7 @@ function M.setup()
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
-    ["@lsp.type.interface"] = { fg = util.lighten(c.blue1, 0.7) },
+    ["@lsp.type.interface"] = { fg = c.blue500 },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
     ["@lsp.type.number"] = { link = "@number" },
@@ -288,7 +288,7 @@ function M.setup()
     ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
-    ["@lsp.typemod.type.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
+    ["@lsp.typemod.type.defaultLibrary"] = { fg = c.blue500 },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
     -- NOTE: maybe add these with distinct highlights?
@@ -327,11 +327,11 @@ function M.setup()
     TroubleNormal = { fg = c.base0, bg = c.base00 },
 
     -- Illuminate
-    illuminatedWord = { bg = c.base00 },
-    illuminatedCurWord = { bg = c.base00 },
-    IlluminatedWordText = { bg = c.base00 },
-    IlluminatedWordRead = { bg = c.base00 },
-    IlluminatedWordWrite = { bg = c.base00 },
+    illuminatedWord = { bg = c.violet900 },
+    illuminatedCurWord = { bg = c.violet900 },
+    IlluminatedWordText = { bg = c.violet900 },
+    IlluminatedWordRead = { bg = c.magenta900 },
+    IlluminatedWordWrite = { bg = c.magenta900 },
 
     -- diff
     diffAdded = { fg = c.green500 },
@@ -419,7 +419,7 @@ function M.setup()
     GlyphPalette2 = { fg = c.green },
     GlyphPalette3 = { fg = c.yellow },
     GlyphPalette4 = { fg = c.blue },
-    GlyphPalette6 = { fg = c.green1 },
+    GlyphPalette6 = { fg = c.cyan },
     GlyphPalette7 = { fg = c.fg },
     GlyphPalette9 = { fg = c.red },
 
@@ -433,7 +433,7 @@ function M.setup()
     AlphaShortcut = { fg = c.orange },
     AlphaHeader = { fg = c.blue },
     AlphaHeaderLabel = { fg = c.orange },
-    AlphaFooter = { fg = c.blue1 },
+    AlphaFooter = { fg = c.cyan },
     AlphaButtons = { fg = c.cyan },
 
     -- WhichKey
@@ -456,8 +456,8 @@ function M.setup()
     LspSagaRenameBorder = { fg = c.green },
     LspSagaDefPreviewBorder = { fg = c.green },
     LspSagaCodeActionBorder = { fg = c.blue },
-    LspSagaFinderSelection = { fg = c.bg_visual },
-    LspSagaCodeActionTitle = { fg = c.blue1 },
+    LspSagaFinderSelection = { fg = c.base03 },
+    LspSagaCodeActionTitle = { fg = c.cyan },
     LspSagaCodeActionContent = { fg = c.violet500 },
     LspSagaSignatureHelpBorder = { fg = c.red },
     ReferencesCount = { fg = c.violet500 },
@@ -468,7 +468,7 @@ function M.setup()
 
     -- NeoVim
     healthError = { fg = c.error },
-    healthSuccess = { fg = c.green1 },
+    healthSuccess = { fg = c.cyan },
     healthWarning = { fg = c.warning },
 
     -- BufferLine
@@ -521,12 +521,12 @@ function M.setup()
 
     -- Sneak
     Sneak = { fg = c.bg_highlight, bg = c.magenta },
-    SneakScope = { bg = c.bg_visual },
+    SneakScope = { bg = c.base03 },
 
     -- Hop
     HopNextKey = { fg = c.magenta500, bold = true },
-    HopNextKey1 = { fg = c.blue2, bold = true },
-    HopNextKey2 = { fg = util.darken(c.blue2, 0.6) },
+    HopNextKey1 = { fg = c.violet500, bold = true },
+    HopNextKey2 = { fg = c.violet700 },
     HopUnmatched = { fg = c.base01 },
 
     TSNodeKey = { fg = c.magenta500, bold = true },
@@ -534,7 +534,7 @@ function M.setup()
 
     LeapMatch = { bg = c.magenta500, fg = c.fg, bold = true },
     LeapLabelPrimary = { fg = c.magenta500, bold = true },
-    LeapLabelSecondary = { fg = c.green1, bold = true },
+    LeapLabelSecondary = { fg = c.cyan, bold = true },
     LeapBackdrop = { fg = c.base01 },
 
     FlashBackdrop = { fg = c.base01 },
@@ -543,8 +543,8 @@ function M.setup()
     LightspeedGreyWash = { fg = c.base01 },
     -- LightspeedCursor = { link = "Cursor" },
     LightspeedLabel = { fg = c.magenta500, bold = true, underline = true },
-    LightspeedLabelDistant = { fg = c.green1, bold = true, underline = true },
-    LightspeedLabelDistantOverlapped = { fg = c.green2, underline = true },
+    LightspeedLabelDistant = { fg = c.cyan, bold = true, underline = true },
+    LightspeedLabelDistantOverlapped = { fg = c.cyan500, underline = true },
     LightspeedLabelOverlapped = { fg = c.magenta500, underline = true },
     LightspeedMaskedChar = { fg = c.orange },
     LightspeedOneCharMatch = { bg = c.magenta500, fg = c.fg, bold = true },
@@ -552,7 +552,7 @@ function M.setup()
     LightspeedShortcut = { bg = c.magenta500, fg = c.fg, bold = true, underline = true },
     -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
     -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
-    LightspeedUnlabeledMatch = { fg = c.blue2, bold = true },
+    LightspeedUnlabeledMatch = { fg = c.violet500, bold = true },
 
     -- Cmp
     CmpDocumentation = { fg = c.fg, bg = c.bg_float },
@@ -561,8 +561,8 @@ function M.setup()
 
     CmpItemAbbr = { fg = c.fg, bg = c.none },
     CmpItemAbbrDeprecated = { fg = c.base01, bg = c.none, strikethrough = true },
-    CmpItemAbbrMatch = { fg = c.blue1, bg = c.none },
-    CmpItemAbbrMatchFuzzy = { fg = c.blue1, bg = c.none },
+    CmpItemAbbrMatch = { fg = c.violet500, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.violet500, bg = c.none },
 
     CmpItemMenu = { fg = c.base01, bg = c.none },
 
@@ -589,11 +589,11 @@ function M.setup()
 
     CmpItemKindModule = { fg = c.yellow, bg = c.none },
 
-    CmpItemKindProperty = { fg = c.green1, bg = c.none },
-    CmpItemKindField = { fg = c.green1, bg = c.none },
-    CmpItemKindTypeParameter = { fg = c.green1, bg = c.none },
-    CmpItemKindEnumMember = { fg = c.green1, bg = c.none },
-    CmpItemKindOperator = { fg = c.green1, bg = c.none },
+    CmpItemKindProperty = { fg = c.cyan, bg = c.none },
+    CmpItemKindField = { fg = c.cyan, bg = c.none },
+    CmpItemKindTypeParameter = { fg = c.cyan, bg = c.none },
+    CmpItemKindEnumMember = { fg = c.cyan, bg = c.none },
+    CmpItemKindOperator = { fg = c.cyan, bg = c.none },
     CmpItemKindSnippet = { fg = c.violet500, bg = c.none },
 
     -- navic
@@ -603,8 +603,8 @@ function M.setup()
     NavicIconsPackage = { fg = c.fg, bg = c.none },
     NavicIconsClass = { fg = c.orange, bg = c.none },
     NavicIconsMethod = { fg = c.blue, bg = c.none },
-    NavicIconsProperty = { fg = c.green1, bg = c.none },
-    NavicIconsField = { fg = c.green1, bg = c.none },
+    NavicIconsProperty = { fg = c.cyan, bg = c.none },
+    NavicIconsField = { fg = c.cyan, bg = c.none },
     NavicIconsConstructor = { fg = c.orange, bg = c.none },
     NavicIconsEnum = { fg = c.orange, bg = c.none },
     NavicIconsInterface = { fg = c.orange, bg = c.none },
@@ -619,11 +619,11 @@ function M.setup()
     NavicIconsKey = { fg = c.violet500, bg = c.none },
     NavicIconsKeyword = { fg = c.violet500, bg = c.none },
     NavicIconsNull = { fg = c.orange, bg = c.none },
-    NavicIconsEnumMember = { fg = c.green1, bg = c.none },
+    NavicIconsEnumMember = { fg = c.cyan, bg = c.none },
     NavicIconsStruct = { fg = c.orange, bg = c.none },
     NavicIconsEvent = { fg = c.orange, bg = c.none },
     NavicIconsOperator = { fg = c.fg, bg = c.none },
-    NavicIconsTypeParameter = { fg = c.green1, bg = c.none },
+    NavicIconsTypeParameter = { fg = c.cyan, bg = c.none },
     NavicText = { fg = c.fg, bg = c.none },
     NavicSeparator = { fg = c.fg, bg = c.none },
 
@@ -692,7 +692,7 @@ function M.setup()
     MiniCursorword = { bg = c.base01 },
     MiniCursorwordCurrent = { bg = c.base01 },
 
-    MiniIndentscopeSymbol = { fg = c.blue1, nocombine = true },
+    MiniIndentscopeSymbol = { fg = c.violet700, nocombine = true },
     MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
     MiniJump = { bg = c.magenta500, fg = c.base4 },
@@ -706,7 +706,7 @@ function M.setup()
     MiniStarterItem = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     MiniStarterItemBullet = { fg = c.base02 },
     MiniStarterItemPrefix = { fg = c.warning },
-    MiniStarterSection = { fg = c.blue1 },
+    MiniStarterSection = { fg = c.violet500 },
     MiniStarterQuery = { fg = c.info },
 
     MiniStatuslineDevinfo = { fg = c.base01, bg = c.bg_highlight },
@@ -761,16 +761,16 @@ function M.setup()
 
     NoiceCompletionItemKindModule = { fg = c.yellow, bg = c.none },
 
-    NoiceCompletionItemKindProperty = { fg = c.green1, bg = c.none },
-    NoiceCompletionItemKindField = { fg = c.green1, bg = c.none },
-    NoiceCompletionItemKindTypeParameter = { fg = c.green1, bg = c.none },
-    NoiceCompletionItemKindEnumMember = { fg = c.green1, bg = c.none },
-    NoiceCompletionItemKindOperator = { fg = c.green1, bg = c.none },
+    NoiceCompletionItemKindProperty = { fg = c.cyan, bg = c.none },
+    NoiceCompletionItemKindField = { fg = c.cyan, bg = c.none },
+    NoiceCompletionItemKindTypeParameter = { fg = c.cyan, bg = c.none },
+    NoiceCompletionItemKindEnumMember = { fg = c.cyan, bg = c.none },
+    NoiceCompletionItemKindOperator = { fg = c.cyan, bg = c.none },
     NoiceCompletionItemKindSnippet = { fg = c.violet500, bg = c.none },
 
     TreesitterContext = { bg = util.darken(c.base01, 0.8) },
     Hlargs = { fg = c.yellow },
-    -- TreesitterContext = { bg = util.darken(c.bg_visual, 0.4) },
+    -- TreesitterContext = { bg = util.darken(c.base03, 0.4) },
   }
 
   if not vim.diagnostic then
@@ -808,7 +808,7 @@ function M.setup()
     theme.highlights.MiniStatuslineInactive = inactive
   end
 
-  options.on_highlights(theme.highlights, theme.colors)
+  -- options.on_highlights(theme.highlights, theme.colors)
 
   if config.is_day() then
     util.invert_colors(theme.colors)
