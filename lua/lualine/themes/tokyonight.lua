@@ -1,5 +1,5 @@
-local colors = require("tokyonight.colors").setup({ transform = true })
-local config = require("tokyonight.config").options
+local colors = require("solarized-osaka.colors").setup({ transform = true })
+local config = require("solarized-osaka.config").options
 
 local tokyonight = {}
 
@@ -30,8 +30,8 @@ tokyonight.replace = {
 }
 
 tokyonight.terminal = {
-  a = {bg = colors.green1, fg = colors.black },
-  b = {bg = colors.fg_gutter, fg=colors.green1 },
+  a = { bg = colors.green1, fg = colors.black },
+  b = { bg = colors.fg_gutter, fg = colors.green1 },
 }
 
 tokyonight.inactive = {

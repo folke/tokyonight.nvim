@@ -145,7 +145,7 @@ The [day](#day) style is used when `{ style = "day" }` is passed to
 unless `setup` is explicitly called.
 
 ```lua
-require("tokyonight").setup({
+require("solarized-osaka").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
   style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -201,7 +201,7 @@ For default values of `colors` and `highlights`, please consult the
 ### Settings and color alteration demonstration
 
 ```lua
-require("tokyonight").setup({
+require("solarized-osaka").setup({
   -- use the night style
   style = "night",
   -- disable italic for functions
@@ -220,7 +220,7 @@ require("tokyonight").setup({
 ### [Borderless Telescope](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless) example
 
 ```lua
-require("tokyonight").setup({
+require("solarized-osaka").setup({
   on_highlights = function(hl, c)
     local prompt = "#2d3149"
     hl.TelescopeNormal = {
@@ -281,8 +281,8 @@ You can easily use the color palette for other plugins inside your
 [Neovim](https://github.com/neovim/neovim) configuration:
 
 ```lua
-local colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
-local util = require("tokyonight.util")
+local colors = require("solarized-osaka.colors").setup() -- pass in any of the config options as explained above
+local util = require("solarized-osaka.util")
 
 aplugin.background = colors.bg_dark
 aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
