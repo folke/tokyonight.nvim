@@ -77,8 +77,8 @@ function M.setup()
     SpellCap = { sp = c.violet500, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = c.cyan500, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = c.yellow500, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = { fg = c.base1, bg = c.base02, reverse = true }, -- status line of current window
-    StatusLineNC = { fg = c.base00, bg = c.base02, reverse = true }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StatusLine = { fg = c.base1, bg = c.base03 }, -- status line of current window
+    StatusLineNC = { fg = c.base0, bg = c.base04 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = c.base0, bg = c.base02, sp = c.base0 }, -- tab pages line, not active tab page label
     TabLineFill = { fg = c.base0, bg = c.base02 }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.yellow500, bg = c.bg }, -- tab pages line, active tab page label
@@ -597,38 +597,39 @@ function M.setup()
     CmpItemKindSnippet = { fg = c.violet500, bg = c.none },
 
     -- navic
-    NavicIconsFile = { fg = c.fg, bg = c.none },
-    NavicIconsModule = { fg = c.yellow, bg = c.none },
-    NavicIconsNamespace = { fg = c.fg, bg = c.none },
-    NavicIconsPackage = { fg = c.fg, bg = c.none },
-    NavicIconsClass = { fg = c.orange, bg = c.none },
-    NavicIconsMethod = { fg = c.blue, bg = c.none },
-    NavicIconsProperty = { fg = c.cyan, bg = c.none },
-    NavicIconsField = { fg = c.cyan, bg = c.none },
-    NavicIconsConstructor = { fg = c.orange, bg = c.none },
-    NavicIconsEnum = { fg = c.orange, bg = c.none },
-    NavicIconsInterface = { fg = c.orange, bg = c.none },
-    NavicIconsFunction = { fg = c.blue, bg = c.none },
-    NavicIconsVariable = { fg = c.magenta, bg = c.none },
-    NavicIconsConstant = { fg = c.magenta, bg = c.none },
-    NavicIconsString = { fg = c.green, bg = c.none },
-    NavicIconsNumber = { fg = c.orange, bg = c.none },
-    NavicIconsBoolean = { fg = c.orange, bg = c.none },
-    NavicIconsArray = { fg = c.orange, bg = c.none },
-    NavicIconsObject = { fg = c.orange, bg = c.none },
-    NavicIconsKey = { fg = c.violet500, bg = c.none },
-    NavicIconsKeyword = { fg = c.violet500, bg = c.none },
-    NavicIconsNull = { fg = c.orange, bg = c.none },
-    NavicIconsEnumMember = { fg = c.cyan, bg = c.none },
-    NavicIconsStruct = { fg = c.orange, bg = c.none },
-    NavicIconsEvent = { fg = c.orange, bg = c.none },
-    NavicIconsOperator = { fg = c.fg, bg = c.none },
-    NavicIconsTypeParameter = { fg = c.cyan, bg = c.none },
-    NavicText = { fg = c.fg, bg = c.none },
-    NavicSeparator = { fg = c.fg, bg = c.none },
+    NavicIconsFile = { fg = c.fg, bg = c.bg_statusline },
+    NavicIconsModule = { fg = c.yellow, bg = c.bg_statusline },
+    NavicIconsNamespace = { fg = c.fg, bg = c.bg_statusline },
+    NavicIconsPackage = { fg = c.fg, bg = c.bg_statusline },
+    NavicIconsClass = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsMethod = { fg = c.blue, bg = c.bg_statusline },
+    NavicIconsProperty = { fg = c.cyan, bg = c.bg_statusline },
+    NavicIconsField = { fg = c.cyan, bg = c.bg_statusline },
+    NavicIconsConstructor = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsEnum = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsInterface = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsFunction = { fg = c.blue, bg = c.bg_statusline },
+    NavicIconsVariable = { fg = c.magenta, bg = c.bg_statusline },
+    NavicIconsConstant = { fg = c.magenta, bg = c.bg_statusline },
+    NavicIconsString = { fg = c.green, bg = c.bg_statusline },
+    NavicIconsNumber = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsBoolean = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsArray = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsObject = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsKey = { fg = c.violet500, bg = c.bg_statusline },
+    NavicIconsKeyword = { fg = c.violet500, bg = c.bg_statusline },
+    NavicIconsNull = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsEnumMember = { fg = c.cyan, bg = c.bg_statusline },
+    NavicIconsStruct = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsEvent = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsOperator = { fg = c.fg, bg = c.bg_statusline },
+    NavicIconsTypeParameter = { fg = c.cyan, bg = c.bg_statusline },
+    NavicText = { fg = c.fg, bg = c.bg_statusline },
+    NavicSeparator = { fg = c.fg, bg = c.bg_statusline },
 
-    IndentBlanklineChar = { fg = c.base01, nocombine = true },
-    IndentBlanklineContextChar = { fg = c.cyan500, nocombine = true },
+    IblIndent = { fg = c.base03, nocombine = true },
+    IndentBlanklineChar = { fg = c.base03, nocombine = true },
+    IndentBlanklineContextChar = { fg = c.orange500, nocombine = true },
 
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
@@ -768,9 +769,8 @@ function M.setup()
     NoiceCompletionItemKindOperator = { fg = c.cyan, bg = c.none },
     NoiceCompletionItemKindSnippet = { fg = c.violet500, bg = c.none },
 
-    TreesitterContext = { bg = util.darken(c.base01, 0.8) },
+    TreesitterContext = { bg = c.violet900 },
     Hlargs = { fg = c.yellow },
-    -- TreesitterContext = { bg = util.darken(c.base03, 0.4) },
   }
 
   if not vim.diagnostic then
