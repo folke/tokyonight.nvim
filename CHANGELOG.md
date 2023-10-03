@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/folke/tokyonight.nvim/compare/v2.3.0...v2.3.1) (2023-10-03)
+
+
+### Bug Fixes
+
+* **treesitter:** namespace.builtin ([b6bca90](https://github.com/folke/tokyonight.nvim/commit/b6bca9028ff45dd74989c156e62a579c8b40cded))
+
 ## [2.3.0](https://github.com/folke/tokyonight.nvim/compare/v2.2.0...v2.3.0) (2023-09-28)
 
 
