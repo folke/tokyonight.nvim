@@ -215,6 +215,9 @@ local highlights = {
   ["@namespace"] = {
     link = "Include"
   },
+  ["@namespace.builtin"] = {
+    fg = "#ff757f"
+  },
   ["@operator"] = {
     fg = "#89ddff"
   },
