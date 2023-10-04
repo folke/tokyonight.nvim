@@ -63,7 +63,7 @@ Install the theme with your preferred package manager, such as
 
 ```lua
 {
-  "folke/solarized-osaka.nvim",
+  "craftzdog/solarized-osaka.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -133,7 +133,7 @@ and [day](#day).
 The [day](#day) style is used when `{ style = "day" }` is passed to
 `setup(options)` or when `vim.o.background = "light"`.
 
-[Solarized Osaka](https://github.com/folke/solarized-osaka.nvim) uses the default options,
+[Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim) uses the default options,
 unless `setup` is explicitly called.
 
 ```lua
