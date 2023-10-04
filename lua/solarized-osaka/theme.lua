@@ -148,15 +148,15 @@ function M.setup()
     htmlH2 = { fg = c.blue500, bold = true },
 
     -- mkdHeading = { fg = c.orange, bold = true },
-    -- mkdCode = { bg = c.base01, fg = c.fg },
-    mkdCodeDelimiter = { fg = c.base0, bg = c.base01 },
+    mkdCode = { bg = c.green900 },
+    mkdCodeDelimiter = { fg = c.base0, bg = c.green700 },
     mkdCodeStart = { fg = c.orange500, bold = true },
     mkdCodeEnd = { fg = c.orange500, bold = true },
     -- mkdLink = { fg = c.blue, underline = true },
 
     markdownHeadingDelimiter = { fg = c.orange500, bold = true },
-    markdownCode = { fg = c.yellow500 },
-    markdownCodeBlock = { fg = c.yellow500 },
+    markdownCode = { fg = c.yellow500, bg = c.green900 },
+    markdownCodeBlock = { fg = c.yellow500, bg = c.green900 },
     markdownH1 = { fg = c.magenta500, bold = true },
     markdownH2 = { fg = c.violet500, bold = true },
     markdownLinkText = { fg = c.blue500, underline = true },
@@ -240,9 +240,9 @@ function M.setup()
     ["@variable.builtin"] = { fg = c.orange500 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
-    -- ["@text.literal.markdown"] = { fg = c.blue },
-    ["@text.literal.markdown_inline"] = { fg = c.yellow500, bg = c.base01 },
-    ["@text.reference"] = { fg = c.cyan500 },
+    ["@text.literal.markdown"] = { fg = c.red500 },
+    ["@text.literal.markdown_inline"] = { fg = c.yellow500, bg = c.green900 },
+    ["@text.reference"] = { fg = c.blue500, underline = true },
 
     ["@text.todo.unchecked"] = { fg = c.yellow500 }, -- For brackets and parens.
     ["@text.todo.checked"] = { fg = c.green500 }, -- For brackets and parens.
