@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/folke/tokyonight.nvim/compare/v2.3.1...v2.4.0) (2023-10-04)
+
+
+### Features
+
+* **dashboard:** better highlights for dashboard.nvim ([1a0e18f](https://github.com/folke/tokyonight.nvim/commit/1a0e18fd85a07108472a1babeef6d9bc4e922703))
+
 ## [2.3.1](https://github.com/folke/tokyonight.nvim/compare/v2.3.0...v2.3.1) (2023-10-03)
 
 
