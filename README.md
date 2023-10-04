@@ -1,12 +1,6 @@
-# 🏙 Tokyo Night
+# 🏯 Solarized Osaka
 
-A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
-[Lua](https://www.lua.org) ported from the [Visual Studio Code
-TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
-[extra](#-extras) themes for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
-[Alacritty](https://github.com/alacritty/alacritty),
-[iTerm](https://iterm2.com/) and
-[Fish](https://fishshell.com/docs/current/index.html).
+One of the [Solarized](https://ethanschoonover.com/solarized/)-inspired theme for [Neovim](https://github.com/neovim/neovim) written in [Lua](https://www.lua.org).
 
 ## Storm
 
@@ -31,8 +25,6 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - Enhances terminal colors.
 - Introduces a darker background option for sidebar-like windows.
 - Supports all major plugins.
-- Provides [TokyoNight](https://github.com/folke/tokyonight.nvim)
-  [extras](#-extras) for numerous other applications.
 
 ### 🍭 Extras
 
@@ -71,7 +63,7 @@ Install the theme with your preferred package manager, such as
 
 ```lua
 {
-  "folke/tokyonight.nvim",
+  "folke/solarized-osaka.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -83,19 +75,19 @@ Install the theme with your preferred package manager, such as
 ### Vim Script
 
 ```vim
-colorscheme tokyonight
+colorscheme solarized-osaka
 
 " There are also colorschemes for the different styles.
-colorscheme tokyonight-night
-colorscheme tokyonight-storm
-colorscheme tokyonight-day
-colorscheme tokyonight-moon
+colorscheme solarized-osaka-night
+colorscheme solarized-osaka-storm
+colorscheme solarized-osaka-day
+colorscheme solarized-osaka-moon
 ```
 
 ### [Lua](https://www.lua.org)
 
 ```lua
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme solarized-osaka]]
 ```
 
 #### External Plugins
@@ -106,7 +98,7 @@ vim.cmd[[colorscheme tokyonight]]
 -- Lua
 require('barbecue').setup {
   -- ... your barbecue config
-  theme = 'tokyonight',
+  theme = 'solarized-osaka',
   -- ... your barbecue config
 }
 ```
@@ -118,7 +110,7 @@ require('barbecue').setup {
 require('lualine').setup {
   options = {
     -- ... your lualine config
-    theme = 'tokyonight'
+    theme = 'solarized-osaka'
     -- ... your lualine config
   }
 }
@@ -128,12 +120,12 @@ require('lualine').setup {
 
 ```vim
 " Vim Script
-let g:lightline = {'colorscheme': 'tokyonight'}
+let g:lightline = {'colorscheme': 'solarized-osaka'}
 ```
 
 ## ⚙️ Configuration
 
-> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
+> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme solarized-osaka`.
 
 The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
 and [day](#day).
@@ -141,7 +133,7 @@ and [day](#day).
 The [day](#day) style is used when `{ style = "day" }` is passed to
 `setup(options)` or when `vim.o.background = "light"`.
 
-[TokyoNight](https://github.com/folke/tokyonight.nvim) uses the default options,
+[Solarized Osaka](https://github.com/folke/solarized-osaka.nvim) uses the default options,
 unless `setup` is explicitly called.
 
 ```lua
@@ -193,10 +185,10 @@ How the highlight groups are calculated:
    groups.
 
 For default values of `colors` and `highlights`, please consult the
-[storm](extras/lua/tokyonight_storm.lua),
-[moon](extras/lua/tokyonight_moon.lua),
-[night](extras/lua/tokyonight_night.lua), and
-[day](extras/lua/tokyonight_day.lua) themes.
+[storm](extras/lua/solarized-osaka_storm.lua),
+[moon](extras/lua/solarized-osaka_moon.lua),
+[night](extras/lua/solarized-osaka_night.lua), and
+[day](extras/lua/solarized-osaka_day.lua) themes.
 
 ### Settings and color alteration demonstration
 
@@ -297,13 +289,13 @@ generate themes for the different styles.
 
 How to add a new extra template:
 
-1. Create a file like `lua/tokyonight/extra/cool-app.lua`.
+1. Create a file like `lua/solarized-osaka/extra/cool-app.lua`.
 2. Add the name and output file extension to the `extras` table in
-   `lua/tokyonight/extra/init.lua`.
+   `lua/solarized-osaka/extra/init.lua`.
 3. Run the following command to generate new [extra](#-extras) themes:
 
    ```sh
-   nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+   nvim --headless "+lua require('solarized-osaka.extra').setup()" +qa
    ```
 
 4. Check the newly created themes in the `extra/` directory. Please **DO NOT**

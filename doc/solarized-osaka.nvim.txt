@@ -1,55 +1,55 @@
-*tokyonight.nvim.txt*      For Neovim >= 0.8.0     Last change: 2023 August 29
+*solarized-osaka.nvim.txt*      For Neovim >= 0.8.0     Last change: 2023 August 29
 
 ==============================================================================
-Table of Contents                          *tokyonight.nvim-table-of-contents*
+Table of Contents                          *solarized-osaka.nvim-table-of-contents*
 
-1. Tokyo Night                                   |tokyonight.nvim-tokyo-night|
-  - Storm                                  |tokyonight.nvim-tokyo-night-storm|
-  - Night                                  |tokyonight.nvim-tokyo-night-night|
-  - Moon                                    |tokyonight.nvim-tokyo-night-moon|
-  - Day                                      |tokyonight.nvim-tokyo-night-day|
-  - Features                            |tokyonight.nvim-tokyo-night-features|
-  - Requirements                    |tokyonight.nvim-tokyo-night-requirements|
-  - Installation                    |tokyonight.nvim-tokyo-night-installation|
-  - Usage                                  |tokyonight.nvim-tokyo-night-usage|
-  - Configuration                  |tokyonight.nvim-tokyo-night-configuration|
-  - Overriding Colors & Highlight Groups|tokyonight.nvim-tokyo-night-overriding-colors-&-highlight-groups|
-  - Extras                                |tokyonight.nvim-tokyo-night-extras|
-  - Contributing                    |tokyonight.nvim-tokyo-night-contributing|
+1. Solarized Osaka                               |solarized-osaka.nvim-tokyo-night|
+  - Storm                                  |solarized-osaka.nvim-tokyo-night-storm|
+  - Night                                  |solarized-osaka.nvim-tokyo-night-night|
+  - Moon                                    |solarized-osaka.nvim-tokyo-night-moon|
+  - Day                                      |solarized-osaka.nvim-tokyo-night-day|
+  - Features                            |solarized-osaka.nvim-tokyo-night-features|
+  - Requirements                    |solarized-osaka.nvim-tokyo-night-requirements|
+  - Installation                    |solarized-osaka.nvim-tokyo-night-installation|
+  - Usage                                  |solarized-osaka.nvim-tokyo-night-usage|
+  - Configuration                  |solarized-osaka.nvim-tokyo-night-configuration|
+  - Overriding Colors & Highlight Groups|solarized-osaka.nvim-tokyo-night-overriding-colors-&-highlight-groups|
+  - Extras                                |solarized-osaka.nvim-tokyo-night-extras|
+  - Contributing                    |solarized-osaka.nvim-tokyo-night-contributing|
 
 ==============================================================================
-1. Tokyo Night                                   *tokyonight.nvim-tokyo-night*
+1. Solarized Osaka                               *solarized-osaka.nvim-tokyo-night*
 
 A dark and light Neovim <https://github.com/neovim/neovim> theme written in Lua
 <https://www.lua.org> ported from the Visual Studio Code TokyoNight
 <https://github.com/enkia/tokyo-night-vscode-theme> theme. Includes
-|tokyonight.nvim-extra| themes for Kitty
+|solarized-osaka.nvim-extra| themes for Kitty
 <https://sw.kovidgoyal.net/kitty/conf.html>, Alacritty
 <https://github.com/alacritty/alacritty>, iTerm <https://iterm2.com/> and Fish
 <https://fishshell.com/docs/current/index.html>.
 
 
-STORM                                      *tokyonight.nvim-tokyo-night-storm*
+STORM                                      *solarized-osaka.nvim-tokyo-night-storm*
 
 
-NIGHT                                      *tokyonight.nvim-tokyo-night-night*
+NIGHT                                      *solarized-osaka.nvim-tokyo-night-night*
 
 
-MOON                                        *tokyonight.nvim-tokyo-night-moon*
+MOON                                        *solarized-osaka.nvim-tokyo-night-moon*
 
 
-DAY                                          *tokyonight.nvim-tokyo-night-day*
+DAY                                          *solarized-osaka.nvim-tokyo-night-day*
 
 
-FEATURES                                *tokyonight.nvim-tokyo-night-features*
+FEATURES                                *solarized-osaka.nvim-tokyo-night-features*
 
 - Supports the latest Neovim <https://github.com/neovim/neovim>
     0.9.0 <https://github.com/neovim/neovim/releases/tag/v0.9.0> features.
 - Enhances terminal colors.
 - Introduces a darker background option for sidebar-like windows.
 - Supports all major plugins.
-- Provides TokyoNight <https://github.com/folke/tokyonight.nvim>
-    |tokyonight.nvim-extras| for numerous other applications.
+- Provides TokyoNight <https://github.com/craftzdog/solarized-osaka.nvim>
+    |solarized-osaka.nvim-extras| for numerous other applications.
 
 
 EXTRAS ~
@@ -76,20 +76,20 @@ EXTRAS ~
 - Zathura <https://pwmt.org/projects/zathura/> (zathura <extras/zathura>)
 
 
-REQUIREMENTS                        *tokyonight.nvim-tokyo-night-requirements*
+REQUIREMENTS                        *solarized-osaka.nvim-tokyo-night-requirements*
 
 - Neovim <https://github.com/neovim/neovim> >=
     0.7.2 <https://github.com/neovim/neovim/releases/tag/v0.7.2>
 
 
-INSTALLATION                        *tokyonight.nvim-tokyo-night-installation*
+INSTALLATION                        *solarized-osaka.nvim-tokyo-night-installation*
 
 Install the theme with your preferred package manager, such as folke/lazy.nvim
 <https://github.com/folke/lazy.nvim>
 
 >lua
     {
-      "folke/tokyonight.nvim",
+      "craftzdog/solarized-osaka.nvim",
       lazy = false,
       priority = 1000,
       opts = {},
@@ -97,26 +97,26 @@ Install the theme with your preferred package manager, such as folke/lazy.nvim
 <
 
 
-USAGE                                      *tokyonight.nvim-tokyo-night-usage*
+USAGE                                      *solarized-osaka.nvim-tokyo-night-usage*
 
 
 VIM SCRIPT ~
 
 >vim
-    colorscheme tokyonight
+    colorscheme solarized-osaka
     
     " There are also colorschemes for the different styles.
-    colorscheme tokyonight-night
-    colorscheme tokyonight-storm
-    colorscheme tokyonight-day
-    colorscheme tokyonight-moon
+    colorscheme solarized-osaka-night
+    colorscheme solarized-osaka-storm
+    colorscheme solarized-osaka-day
+    colorscheme solarized-osaka-moon
 <
 
 
 LUA ~
 
 >lua
-    vim.cmd[[colorscheme tokyonight]]
+    vim.cmd[[colorscheme solarized-osaka]]
 <
 
 
@@ -129,7 +129,7 @@ BARBECUE
     -- Lua
     require('barbecue').setup {
       -- ... your barbecue config
-      theme = 'tokyonight',
+      theme = 'solarized-osaka',
       -- ... your barbecue config
     }
 <
@@ -142,7 +142,7 @@ LUALINE
     require('lualine').setup {
       options = {
         -- ... your lualine config
-        theme = 'tokyonight'
+        theme = 'solarized-osaka'
         -- ... your lualine config
       }
     }
@@ -153,22 +153,22 @@ LIGHTLINE
 
 >vim
     " Vim Script
-    let g:lightline = {'colorscheme': 'tokyonight'}
+    let g:lightline = {'colorscheme': 'solarized-osaka'}
 <
 
 
-CONFIGURATION                      *tokyonight.nvim-tokyo-night-configuration*
+CONFIGURATION                      *solarized-osaka.nvim-tokyo-night-configuration*
 
 
   Set the configuration **BEFORE** loading the color scheme with `colorscheme
-  tokyonight`.
-The theme offers four styles: |tokyonight.nvim-storm|, |tokyonight.nvim-moon|,
-|tokyonight.nvim-night|, and |tokyonight.nvim-day|.
+  solarized-osaka`.
+The theme offers four styles: |solarized-osaka.nvim-storm|, |solarized-osaka.nvim-moon|,
+|solarized-osaka.nvim-night|, and |solarized-osaka.nvim-day|.
 
-The |tokyonight.nvim-day| style is used when `{ style = "day" }` is passed to
+The |solarized-osaka.nvim-day| style is used when `{ style = "day" }` is passed to
 `setup(options)` or when `vim.o.background = "light"`.
 
-TokyoNight <https://github.com/folke/tokyonight.nvim> uses the default options,
+TokyoNight <https://github.com/craftzdog/solarized-osaka.nvim> uses the default options,
 unless `setup` is explicitly called.
 
 >lua
@@ -210,7 +210,7 @@ unless `setup` is explicitly called.
 <
 
 
-OVERRIDING COLORS & HIGHLIGHT GROUPS*tokyonight.nvim-tokyo-night-overriding-colors-&-highlight-groups*
+OVERRIDING COLORS & HIGHLIGHT GROUPS*solarized-osaka.nvim-tokyo-night-overriding-colors-&-highlight-groups*
 
 How the highlight groups are calculated:
 
@@ -221,8 +221,8 @@ override them using `config.on_colors(colors)`.
 groups.
 
 For default values of `colors` and `highlights`, please consult the storm
-<extras/lua/tokyonight_storm.lua>, moon <extras/lua/tokyonight_moon.lua>, night
-<extras/lua/tokyonight_night.lua>, and day <extras/lua/tokyonight_day.lua>
+<extras/lua/solarized-osaka_storm.lua>, moon <extras/lua/solarized-osaka_moon.lua>, night
+<extras/lua/solarized-osaka_night.lua>, and day <extras/lua/solarized-osaka_day.lua>
 themes.
 
 
@@ -297,7 +297,7 @@ To have undercurls show up and in color, add the following to your Tmux
 <
 
 
-EXTRAS                                    *tokyonight.nvim-tokyo-night-extras*
+EXTRAS                                    *solarized-osaka.nvim-tokyo-night-extras*
 
 Extra color configs for Kitty <https://sw.kovidgoyal.net/kitty/conf.html>,
 Alacritty <https://github.com/alacritty/alacritty>, Fish
@@ -318,26 +318,26 @@ You can easily use the color palette for other plugins inside your Neovim
 <
 
 
-CONTRIBUTING                        *tokyonight.nvim-tokyo-night-contributing*
+CONTRIBUTING                        *solarized-osaka.nvim-tokyo-night-contributing*
 
 Pull requests are welcome.
 
-For the |tokyonight.nvim-extras|, we use a simple template system that can be
+For the |solarized-osaka.nvim-extras|, we use a simple template system that can be
 used to generate themes for the different styles.
 
 How to add a new extra template:
 
-1. Create a file like `lua/tokyonight/extra/cool-app.lua`.
+1. Create a file like `lua/solarized-osaka/extra/cool-app.lua`.
 
 
 2. Add the name and output file extension to the `extras` table in
-`lua/tokyonight/extra/init.lua`.
+`lua/solarized-osaka/extra/init.lua`.
 
 
-3. Run the following command to generate new |tokyonight.nvim-extra| themes:
+3. Run the following command to generate new |solarized-osaka.nvim-extra| themes:
 
 >sh
-    nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+    nvim --headless "+lua require('solarized-osaka.extra').setup()" +qa
 <
 
 
@@ -347,7 +347,7 @@ commit them, as they are already automatically built by the CI.
 
 
 ==============================================================================
-2. Links                                               *tokyonight.nvim-links*
+2. Links                                               *solarized-osaka.nvim-links*
 
 1. *image*: https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png
 2. *image*: https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png

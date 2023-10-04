@@ -1,8 +1,8 @@
 local colors = require("solarized-osaka.colors").setup({ transform = true })
 
-local tokyonight = {}
+local solarized_osaka = {}
 
-tokyonight.normal = {
+solarized_osaka.normal = {
   left = { { colors.black, colors.blue }, { colors.blue, colors.fg_gutter } },
   middle = { { colors.fg, colors.bg_statusline } },
   right = { { colors.black, colors.blue }, { colors.blue, colors.fg_gutter } },
@@ -10,29 +10,29 @@ tokyonight.normal = {
   warning = { { colors.black, colors.warning } },
 }
 
-tokyonight.insert = {
+solarized_osaka.insert = {
   left = { { colors.black, colors.green }, { colors.blue, colors.bg } },
 }
 
-tokyonight.visual = {
+solarized_osaka.visual = {
   left = { { colors.black, colors.magenta }, { colors.blue, colors.bg } },
 }
 
-tokyonight.replace = {
+solarized_osaka.replace = {
   left = { { colors.black, colors.red }, { colors.blue, colors.bg } },
 }
 
-tokyonight.inactive = {
+solarized_osaka.inactive = {
   left = { { colors.blue, colors.bg_statusline }, { colors.dark3, colors.bg } },
   middle = { { colors.fg_gutter, colors.bg_statusline } },
   right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
 }
 
-tokyonight.tabline = {
+solarized_osaka.tabline = {
   left = { { colors.dark3, colors.bg_highlight }, { colors.dark3, colors.bg } },
   middle = { { colors.fg_gutter, colors.bg_statusline } },
   right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
   tabsel = { { colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg } },
 }
 
-return tokyonight
+return solarized_osaka
