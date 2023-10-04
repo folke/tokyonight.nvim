@@ -670,12 +670,21 @@ local highlights = {
   DashboardCenter = {
     fg = "#c099ff"
   },
+  DashboardDesc = {
+    fg = "#86e1fc"
+  },
   DashboardFooter = {
-    fg = "#ffc777",
-    italic = true
+    fg = "#65bcff"
   },
   DashboardHeader = {
     fg = "#82aaff"
+  },
+  DashboardIcon = {
+    bold = true,
+    fg = "#86e1fc"
+  },
+  DashboardKey = {
+    fg = "#ff966c"
   },
   DashboardShortCut = {
     fg = "#86e1fc"
