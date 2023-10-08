@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/folke/tokyonight.nvim/compare/v2.5.0...v2.6.0) (2023-10-08)
+
+
+### Features
+
+* **cmp:** codium kind color ([19e8bf4](https://github.com/folke/tokyonight.nvim/commit/19e8bf4014d6c4e0a9db07e449860c223ed21876))
+
 ## [2.5.0](https://github.com/folke/tokyonight.nvim/compare/v2.4.0...v2.5.0) (2023-10-08)
 
 
