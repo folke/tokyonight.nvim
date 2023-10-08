@@ -604,6 +604,7 @@ function M.setup()
     CmpItemKindReference = { fg = c.magenta, bg = c.none },
     CmpItemKindValue = { fg = c.magenta, bg = c.none },
     CmpItemKindCopilot = { fg = c.teal, bg = c.none },
+    CmpItemKindCodeium = { fg = c.teal, bg = c.none },
 
     CmpItemKindFunction = { fg = c.blue, bg = c.none },
     CmpItemKindMethod = { fg = c.blue, bg = c.none },
