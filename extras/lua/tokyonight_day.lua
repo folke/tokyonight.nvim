@@ -537,6 +537,10 @@ local highlights = {
     bg = "NONE",
     fg = "#b15c00"
   },
+  CmpItemKindCodeium = {
+    bg = "NONE",
+    fg = "#118c74"
+  },
   CmpItemKindConstant = {
     bg = "NONE",
     fg = "#9854f1"
