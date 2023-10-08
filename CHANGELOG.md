@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/folke/tokyonight.nvim/compare/v2.4.0...v2.5.0) (2023-10-08)
+
+
+### Features
+
+* **dosini:** better hl ([6151fb4](https://github.com/folke/tokyonight.nvim/commit/6151fb43f30ceceac7377c7e0920fcc5c9a68967))
+
 ## [2.4.0](https://github.com/folke/tokyonight.nvim/compare/v2.3.1...v2.4.0) (2023-10-04)
 
 
