@@ -1960,6 +1960,9 @@ local highlights = {
   diffRemoved = {
     fg = "#e26a75"
   },
+  dosIniLabel = {
+    link = "@property"
+  },
   healthError = {
     fg = "#c53b53"
   },
