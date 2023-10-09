@@ -130,11 +130,24 @@ M.template = [[
 				<string>${orange}</string>
 			</dict>
 		</dict>
+    <dict>
+      <key>name</key>
+      <string>String, Symbols, Markup Heading</string>
+      <key>scope</key>
+      <string>meta.property.lua,string.unquoted.key.lua,support.other.metaproperty.lua,support.other.metaproperty.lua,constant.other.symbol, constant.other.key, markup.heading, meta.attribute-selector</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>${green1}</string>
+      </dict>
+    </dict>
 		<dict>
 			<key>name</key>
-			<string>String, Symbols, Markup Heading</string>
+			<string>String</string>
 			<key>scope</key>
-			<string>string, constant.other.symbol, constant.other.key, markup.heading, meta.attribute-selector</string>
+			<string>string</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -340,7 +353,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue1}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -540,7 +553,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue1}</string>
 			</dict>
 		</dict>
 		<dict>
