@@ -92,11 +92,24 @@
 				<string>#ff9e64</string>
 			</dict>
 		</dict>
+    <dict>
+      <key>name</key>
+      <string>String, Symbols, Markup Heading</string>
+      <key>scope</key>
+      <string>meta.property.lua,string.unquoted.key.lua,support.other.metaproperty.lua,support.other.metaproperty.lua,constant.other.symbol, constant.other.key, markup.heading, meta.attribute-selector</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#73daca</string>
+      </dict>
+    </dict>
 		<dict>
 			<key>name</key>
-			<string>String, Symbols, Markup Heading</string>
+			<string>String</string>
 			<key>scope</key>
-			<string>string, constant.other.symbol, constant.other.key, markup.heading, meta.attribute-selector</string>
+			<string>string</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -302,7 +315,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#0db9d7</string>
+				<string>#2ac3de</string>
 			</dict>
 		</dict>
 		<dict>
@@ -502,7 +515,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#0db9d7</string>
+				<string>#2ac3de</string>
 			</dict>
 		</dict>
 		<dict>
