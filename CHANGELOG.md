@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/folke/tokyonight.nvim/compare/v2.6.0...v2.7.0) (2023-10-09)
+
+
+### Features
+
+* **sublime:** better colors for delta/bat/sublime/textmate ([bf36b8f](https://github.com/folke/tokyonight.nvim/commit/bf36b8fba2578258a00e4dd61020bc3c462774bc))
+
 ## [2.6.0](https://github.com/folke/tokyonight.nvim/compare/v2.5.0...v2.6.0) (2023-10-08)
 
 
