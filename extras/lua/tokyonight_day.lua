@@ -325,6 +325,123 @@ local highlights = {
   ALEWarningSign = {
     fg = "#8c6c3e"
   },
+  AerialArrayIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialBooleanIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialClassIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialConstantIcon = {
+    bg = "NONE",
+    fg = "#9854f1"
+  },
+  AerialConstructorIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialEnumIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialEnumMemberIcon = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  AerialEventIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialFieldIcon = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  AerialFileIcon = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  AerialFunctionIcon = {
+    bg = "NONE",
+    fg = "#2e7de9"
+  },
+  AerialGuide = {
+    fg = "#a8aecb"
+  },
+  AerialInterfaceIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialKeyIcon = {
+    bg = "NONE",
+    fg = "#7847bd"
+  },
+  AerialKeywordIcon = {
+    bg = "NONE",
+    fg = "#7847bd"
+  },
+  AerialLine = {
+    link = "LspInlayHint"
+  },
+  AerialMethodIcon = {
+    bg = "NONE",
+    fg = "#2e7de9"
+  },
+  AerialModuleIcon = {
+    bg = "NONE",
+    fg = "#8c6c3e"
+  },
+  AerialNamespaceIcon = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  AerialNormal = {
+    fg = "#6172b0"
+  },
+  AerialNullIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialNumberIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialObjectIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialOperatorIcon = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  AerialPackageIcon = {
+    bg = "NONE",
+    fg = "#3760bf"
+  },
+  AerialPropertyIcon = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  AerialStringIcon = {
+    bg = "NONE",
+    fg = "#587539"
+  },
+  AerialStructIcon = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  AerialTypeParameterIcon = {
+    bg = "NONE",
+    fg = "#387068"
+  },
+  AerialVariableIcon = {
+    bg = "NONE",
+    fg = "#9854f1"
+  },
   AlphaButtons = {
     fg = "#007197"
   },
