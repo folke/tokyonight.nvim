@@ -836,6 +836,67 @@ function M.setup()
     -- TreesitterContext = { bg = util.darken(c.bg_visual, 0.4) },
   }
 
+  -- Markdown notes highlights
+  vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
+    desc = "Highligh markdown notes.",
+    group = vim.api.nvim_create_augroup("markdown_notes_hl", { clear = true }),
+    callback = function()
+      if vim.bo.filetype == "markdown" then
+        vim.defer_fn(function()
+          -- TASK:
+          vim.cmd(":silent! highlight clear MarkdownTask")
+          vim.cmd(":highlight MarkdownTask guifg=" .. c.teal)
+          vim.cmd(":syntax match MarkdownTask /\\c\\w*Task[^:]*:/")
+
+          -- ACTION:
+          vim.cmd(":silent! highlight clear MarkdownAction")
+          vim.cmd(":highlight MarkdownAction guifg=" .. c.teal)
+          vim.cmd(":syntax match MarkdownAction /\\c\\w*Action[^:]*:/")
+
+          -- TODO:
+          vim.cmd(":silent! highlight clear MarkdownTodo")
+          vim.cmd(":highlight MarkdownTodo guifg=" .. c.yellow)
+          vim.cmd(":syntax match MarkdownTodo /\\c\\w*Todo[^:]*:/")
+
+          -- BUG:
+          vim.cmd(":silent! highlight clear MarkdownBug")
+          vim.cmd(":highlight MarkdownBug guifg=" .. c.yellow)
+          vim.cmd(":syntax match MarkdownBug /\\c\\w*Bug[^:]*:/")
+
+          -- FOCUS:
+          vim.cmd(":silent! highlight clear MarkdownFocus")
+          vim.cmd(":highlight MarkdownFocus guifg=" .. c.yellow)
+          vim.cmd(":syntax match MarkdownFocus /\\c\\w*Focus[^:]*:/")
+
+          -- NOTE:
+          vim.cmd(":silent! highlight clear MarkdownNote")
+          vim.cmd(":highlight MarkdownNote guifg=" .. c.red)
+          vim.cmd(":syntax match MarkdownNote /\\c\\w*Note[^:]*:/")
+
+          -- SEE:
+          vim.cmd(":silent! highlight clear MarkdownSee")
+          vim.cmd(":highlight MarkdownSee guifg=" .. c.blue)
+          vim.cmd(":syntax match MarkdownSee /\\c\\w*See[^:]*:/")
+
+          -- CHECK:
+          vim.cmd(":silent! highlight clear MarkdownCheck")
+          vim.cmd(":highlight MarkdownCheck guifg=" .. c.green)
+          vim.cmd(":syntax match MarkdownCheck /\\c\\w*Check[^:]*:/")
+
+          -- URL:
+          vim.cmd(":silent! highlight clear MarkdownURL")
+          vim.cmd(":highlight MarkdownURL guifg=" .. c.purple)
+          vim.cmd(":syntax match MarkdownURL /\\c\\w*url[^:]*:/")
+
+          -- EXAMPLE:
+          vim.cmd(":silent! highlight clear MarkdownExample")
+          vim.cmd(":highlight MarkdownExample guifg=" .. c.magenta)
+          vim.cmd(":syntax match MarkdownExample /\\c\\w*Example[^:]*:/")
+        end, 100)
+      end
+    end,
+  })
+    
   if not vim.diagnostic then
     local severity_map = {
       Error = "Error",
