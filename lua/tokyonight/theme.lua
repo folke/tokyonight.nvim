@@ -838,7 +838,7 @@ function M.setup()
 
   -- Markdown notes highlights
   vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
-    desc = "Highligh markdown notes.",
+    desc = "Highlight markdown notes.",
     group = vim.api.nvim_create_augroup("markdown_notes_hl", { clear = true }),
     callback = function()
       if vim.bo.filetype == "markdown" then
