@@ -618,6 +618,7 @@ function M.setup()
     CmpItemKindUnit = { fg = c.orange, bg = c.none },
 
     CmpItemKindModule = { fg = c.yellow, bg = c.none },
+    CmpItemKindPackage = { fg = c.yellow, bg = c.none },
 
     CmpItemKindProperty = { fg = c.green1, bg = c.none },
     CmpItemKindField = { fg = c.green1, bg = c.none },
@@ -659,8 +660,8 @@ function M.setup()
 
     AerialFileIcon = { fg = c.fg, bg = c.none },
     AerialModuleIcon = { fg = c.yellow, bg = c.none },
-    AerialNamespaceIcon = { fg = c.fg, bg = c.none },
-    AerialPackageIcon = { fg = c.fg, bg = c.none },
+    AerialNamespaceIcon = { fg = c.cyan, bg = c.none },
+    AerialPackageIcon = { fg = c.cyan, bg = c.none },
     AerialClassIcon = { fg = c.orange, bg = c.none },
     AerialMethodIcon = { fg = c.blue, bg = c.none },
     AerialPropertyIcon = { fg = c.green1, bg = c.none },
@@ -682,9 +683,9 @@ function M.setup()
     AerialEnumMemberIcon = { fg = c.green1, bg = c.none },
     AerialStructIcon = { fg = c.orange, bg = c.none },
     AerialEventIcon = { fg = c.orange, bg = c.none },
-    AerialOperatorIcon = { fg = c.fg, bg = c.none },
+    AerialOperatorIcon = { fg = c.blue5, bg = c.none },
     AerialTypeParameterIcon = { fg = c.green1, bg = c.none },
-    AerialNormal = { fg = c.fg_sidebar },
+    AerialNormal = { fg = c.fg, bg = c.none },
     AerialGuide = { fg = c.fg_gutter },
     AerialLine = { link = "LspInlayHint" },
 
