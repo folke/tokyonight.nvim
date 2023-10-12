@@ -397,10 +397,11 @@ local highlights = {
   },
   AerialNamespaceIcon = {
     bg = "NONE",
-    fg = "#c0caf5"
+    fg = "#7dcfff"
   },
   AerialNormal = {
-    fg = "#a9b1d6"
+    bg = "NONE",
+    fg = "#c0caf5"
   },
   AerialNullIcon = {
     bg = "NONE",
@@ -416,11 +417,11 @@ local highlights = {
   },
   AerialOperatorIcon = {
     bg = "NONE",
-    fg = "#c0caf5"
+    fg = "#89ddff"
   },
   AerialPackageIcon = {
     bg = "NONE",
-    fg = "#c0caf5"
+    fg = "#7dcfff"
   },
   AerialPropertyIcon = {
     bg = "NONE",
@@ -713,6 +714,10 @@ local highlights = {
   CmpItemKindOperator = {
     bg = "NONE",
     fg = "#73daca"
+  },
+  CmpItemKindPackage = {
+    bg = "NONE",
+    fg = "#e0af68"
   },
   CmpItemKindProperty = {
     bg = "NONE",
