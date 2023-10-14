@@ -736,6 +736,10 @@ local highlights = {
     bg = "NONE",
     fg = "#ff966c"
   },
+  CmpItemKindTabNine = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
   CmpItemKindTypeParameter = {
     bg = "NONE",
     fg = "#4fd6be"
