@@ -84,11 +84,12 @@ function M.setup()
     for style, style_name in pairs(styles) do
       tokyonight.setup({ style = style })
       tokyonight.load({ style = style })
-      vim.cmd.colorscheme('tokyonight-' .. style)
+      vim.cmd.colorscheme("tokyonight-" .. style)
       local colors = require("tokyonight.colors").setup({ transform = true })
       local fname = extra .. "/tokyonight_" .. style .. "." .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
       colors["_style_name"] = "Tokyo Night" .. style_name
+      colors["_name"] = "tokyonight_" .. style
       write(plugin.generate(colors), fname)
     end
   end
