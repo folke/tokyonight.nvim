@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.8.0](https://github.com/folke/tokyonight.nvim/compare/v2.7.0...v2.8.0) (2023-10-14)
+
+
+### Features
+
+* better wezterm theme ([99e9b2c](https://github.com/folke/tokyonight.nvim/commit/99e9b2cb3afd3ce7acd95fa640258c26d6c7d9e5))
+* cmp TabNine kind color ([2947de3](https://github.com/folke/tokyonight.nvim/commit/2947de32282ec29fd8bdc4f69cf6894fb48ad92f))
+* **theme:** added aerial highlights ([06b7fc9](https://github.com/folke/tokyonight.nvim/commit/06b7fc94ee19faf8f57714251402d135c520cabc))
+
+
+### Bug Fixes
+
+* **aerial:** aerial kind colors ([8389146](https://github.com/folke/tokyonight.nvim/commit/838914625125a931817bdf585f80301555970aee))
+
 ## [2.7.0](https://github.com/folke/tokyonight.nvim/compare/v2.6.0...v2.7.0) (2023-10-09)
 
 
