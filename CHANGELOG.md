@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.9.0](https://github.com/folke/tokyonight.nvim/compare/v2.8.0...v2.9.0) (2023-10-16)
+
+
+### Features
+
+* added support for headlines.nvim ([b7df2e6](https://github.com/folke/tokyonight.nvim/commit/b7df2e60e03d31811460a1aa8b8a537daf9de6a7))
+
+
+### Bug Fixes
+
+* **headlines:** make headlines a little less pronounced ([868c050](https://github.com/folke/tokyonight.nvim/commit/868c0506bcea01d1c7b4746926dbc7236ad8f347))
+
 ## [2.8.0](https://github.com/folke/tokyonight.nvim/compare/v2.7.0...v2.8.0) (2023-10-14)
 
 
