@@ -760,6 +760,9 @@ local highlights = {
     bg = "NONE",
     fg = "#636da6"
   },
+  CodeBlock = {
+    bg = "#1e2030"
+  },
   ColorColumn = {
     bg = "#1b1d2b"
   },
@@ -988,6 +991,27 @@ local highlights = {
   },
   GlyphPalette9 = {
     fg = "#ff757f"
+  },
+  Headline = {
+    bg = "#1e2030"
+  },
+  Headline1 = {
+    bg = "#2c314a"
+  },
+  Headline2 = {
+    bg = "#38343d"
+  },
+  Headline3 = {
+    bg = "#32383f"
+  },
+  Headline4 = {
+    bg = "#273644"
+  },
+  Headline5 = {
+    bg = "#32304a"
+  },
+  Headline6 = {
+    bg = "#383148"
   },
   Hlargs = {
     fg = "#ffc777"
