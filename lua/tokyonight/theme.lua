@@ -622,7 +622,6 @@ function M.setup()
 
     -- headlines.nvim
     CodeBlock = { bg = c.bg_dark },
-    Headline = { bg = c.bg_dark },
 
     -- navic
     NavicIconsFile = { fg = c.fg, bg = c.none },
@@ -838,8 +837,9 @@ function M.setup()
 
   for i, color in ipairs(markdown_rainbow) do
     theme.highlights["@text.title." .. i .. ".markdown"] = { fg = color, bold = true }
-    theme.highlights["Headline" .. i] = { bg = util.darken(color, 0.1) }
+    theme.highlights["Headline" .. i] = { bg = util.darken(color, 0.05) }
   end
+  theme.highlights["Headline"] = { link = "Headline1" }
 
   if not vim.diagnostic then
     local severity_map = {
