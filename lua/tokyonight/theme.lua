@@ -312,14 +312,6 @@ function M.setup()
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
-    -- Markdown
-    ["@text.title.1.markdown"] = { fg = c.blue, bold = true },
-    ["@text.title.2.markdown"] = { fg = c.yellow, bold = true },
-    ["@text.title.3.markdown"] = { fg = c.green, bold = true },
-    ["@text.title.4.markdown"] = { fg = c.teal, bold = true },
-    ["@text.title.5.markdown"] = { fg = c.magenta, bold = true },
-    ["@text.title.6.markdown"] = { fg = c.purple, bold = true },
-
     -- ts-rainbow
     rainbowcol1 = { fg = c.red },
     rainbowcol2 = { fg = c.yellow },
@@ -628,6 +620,10 @@ function M.setup()
     CmpItemKindOperator = { fg = c.green1, bg = c.none },
     CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
 
+    -- headlines.nvim
+    CodeBlock = { bg = c.bg_dark },
+    Headline = { bg = c.bg_dark },
+
     -- navic
     NavicIconsFile = { fg = c.fg, bg = c.none },
     NavicIconsModule = { fg = c.yellow, bg = c.none },
@@ -837,6 +833,13 @@ function M.setup()
     Hlargs = { fg = c.yellow },
     -- TreesitterContext = { bg = util.darken(c.bg_visual, 0.4) },
   }
+
+  local markdown_rainbow = { c.blue, c.yellow, c.green, c.teal, c.magenta, c.purple }
+
+  for i, color in ipairs(markdown_rainbow) do
+    theme.highlights["@text.title." .. i .. ".markdown"] = { fg = color, bold = true }
+    theme.highlights["Headline" .. i] = { bg = util.darken(color, 0.1) }
+  end
 
   if not vim.diagnostic then
     local severity_map = {
