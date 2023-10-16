@@ -993,25 +993,25 @@ local highlights = {
     fg = "#f7768e"
   },
   Headline = {
-    bg = "#16161e"
+    link = "Headline1"
   },
   Headline1 = {
-    bg = "#24293b"
+    bg = "#1f2230"
   },
   Headline2 = {
-    bg = "#2e2a2d"
+    bg = "#242229"
   },
   Headline3 = {
-    bg = "#272d2d"
+    bg = "#212429"
   },
   Headline4 = {
-    bg = "#1a2b32"
+    bg = "#1a232c"
   },
   Headline5 = {
-    bg = "#2a283b"
+    bg = "#222130"
   },
   Headline6 = {
-    bg = "#272538"
+    bg = "#21202f"
   },
   Hlargs = {
     fg = "#e0af68"
