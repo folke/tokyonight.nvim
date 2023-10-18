@@ -271,7 +271,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 Extra color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
 [Alacritty](https://github.com/alacritty/alacritty),
-[Fish](https://www.lua.org/), [WezTerm](https://wezfurlong.org/wezterm/config/files.html),
+[Fish](https://fishshell.com/docs/current/index.html), [WezTerm](https://wezfurlong.org/wezterm/config/files.html),
 [iTerm](https://iterm2.com/) and [foot](https://codeberg.org/dnkl/foot) can be
 found in [extras](extras/). To use them, refer to their respective
 documentation.
