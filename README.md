@@ -49,12 +49,6 @@ vim.cmd[[colorscheme solarized-osaka]]
 
 > ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme solarized-osaka`.
 
-The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
-and [day](#day).
-
-The [day](#day) style is used when `{ style = "day" }` is passed to
-`setup(options)` or when `vim.o.background = "light"`.
-
 [Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim) uses the default options,
 unless `setup` is explicitly called.
 
