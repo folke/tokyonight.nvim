@@ -12,41 +12,45 @@ function M.generate(colors)
   end
 
   local alacritty = util.template(
-    [[
+    [=[
 # TokyoNight Alacritty Colors
-colors:
-  # Default colors
-  primary:
-    background: '${bg}'
-    foreground: '${fg}'
+# Default colors
+[colors.primary]
+background = '${bg}'
+foreground = '${fg}'
 
-  # Normal colors
-  normal:
-    black:   '${black}'
-    red:     '${red}'
-    green:   '${green}'
-    yellow:  '${yellow}'
-    blue:    '${blue}'
-    magenta: '${magenta}'
-    cyan:    '${cyan}'
-    white:   '${fg_dark}'
+# Normal colors
+[colors.normal]
+black = '${black}'
+red = '${red}'
+green = '${green}'
+yellow = '${yellow}'
+blue = '${blue}'
+magenta = '${magenta}'
+cyan = '${cyan}'
+white = '${fg_dark}'
 
-  # Bright colors
-  bright:
-    black:   '${terminal_black}'
-    red:     '${red}'
-    green:   '${green}'
-    yellow:  '${yellow}'
-    blue:    '${blue}'
-    magenta: '${magenta}'
-    cyan:    '${cyan}'
-    white:   '${fg}'
+# Bright colors
+[colors.bright]
+black = '${terminal_black}'
+red = '${red}'
+green = '${green}'
+yellow = '${yellow}'
+blue = '${blue}'
+magenta = '${magenta}'
+cyan = '${cyan}'
+white = '${fg}'
 
-  indexed_colors:
-    - { index: 16, color: '${orange}' }
-    - { index: 17, color: '${red1}' }
-    
-  ]],
+# Indexed Colors
+[[colors.indexed_colors]]
+index = 16
+color = '${orange}'
+
+[[colors.indexed_colors]]
+index = 17
+color = '${red1}'
+
+]=],
     alacrittyColors
   )
 
