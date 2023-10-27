@@ -4,6 +4,21 @@ One of the [Solarized](https://ethanschoonover.com/solarized/)-inspired dark the
 
 ![solarized-osaka_screenshot01](https://github.com/folke/tokyonight.nvim/assets/1332805/12d424f8-6967-482b-8357-124b06573f18)
 
+## 🎨 More Colors
+
+Ethan Schoonover originally created the [Solarized](https://en.wikipedia.org/wiki/Solarized) color scheme in 2011, featuring a set of 16 colors.
+However, this assortment of colors falls short in providing adequate variations for additional signs, alerts, tooltips, and various other UI components made available by recent Neovim plugins.
+Furthermore, the text colors in the original theme are somewhat too dark when displayed on modern, vibrant monitors.
+
+Solarized Osaka improves upon this by introducing additional colors, enriching the overall theme to ensure compatibility with newer plugins and enhancing visibility on contemporary monitors.
+The theme brightens the base colors slightly, creating a visually appealing and functional color palette.
+
+Here is what the improved color palette looks like:
+
+![Color Palette](https://github.com/craftzdog/solarized-osaka.nvim/assets/1332805/e26b00bc-8331-4b42-abd6-706dce72bcf1)
+
+[A Figma design is available here](https://www.figma.com/file/6Wp5Puqtz7hbMJgYqOOJzb/Solarized-Osaka?type=design&node-id=0%3A1&mode=design&t=vEaGptGFJOLAafmB-1).
+
 ## ✨ Features
 
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
@@ -166,4 +181,3 @@ set -g default-terminal "${TERM}"
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
-
