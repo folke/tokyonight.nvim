@@ -1,33 +1,33 @@
 name: Bug Report
 description: File a bug/issue
-title: "bug: "
+title: 'bug: '
 labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        **Before** reporting an issue, make sure to read the [documentation](https://github.com/folke/tokyonight.nvim) and search [existing issues](https://github.com/folke/tokyonight.nvim/issues). Usage questions such as ***"How do I...?"*** belong in [Discussions](https://github.com/folke/tokyonight.nvim/discussions) and will be closed.
+        **Before** reporting an issue, make sure to read the [documentation](https://github.com/folke/dullahan.nvim) and search [existing issues](https://github.com/folke/dullahan.nvim/issues). Usage questions such as ***"How do I...?"*** belong in [Discussions](https://github.com/folke/dullahan.nvim/discussions) and will be closed.
   - type: checkboxes
     attributes:
       label: Did you check docs and existing issues?
       description: Make sure you checked all of the below before submitting an issue
       options:
-        - label: I have read all the tokyonight.nvim docs
+        - label: I have read all the dullahan.nvim docs
           required: true
-        - label: I have searched the existing issues of tokyonight.nvim
+        - label: I have searched the existing issues of dullahan.nvim
           required: true
         - label: I have searched the existing issues of plugins related to this issue
           required: true
   - type: input
     attributes:
-      label: "Neovim version (nvim -v)"
-      placeholder: "0.8.0 commit db1b0ee3b30f"
+      label: 'Neovim version (nvim -v)'
+      placeholder: '0.8.0 commit db1b0ee3b30f'
     validations:
       required: true
   - type: input
     attributes:
-      label: "Operating system/version"
-      placeholder: "MacOS 11.5"
+      label: 'Operating system/version'
+      placeholder: 'MacOS 11.5'
     validations:
       required: true
   - type: textarea
@@ -74,15 +74,15 @@ body:
 
         -- install plugins
         local plugins = {
-          "folke/tokyonight.nvim",
-          "folke/tokyonight.nvim",
+          "folke/dullahan.nvim",
+          "folke/dullahan.nvim",
           -- add any other plugins here
         }
         require("lazy").setup(plugins, {
           root = root .. "/plugins",
         })
 
-        vim.cmd.colorscheme("tokyonight")
+        vim.cmd.colorscheme("dullahan")
         -- add anything else here
       render: Lua
     validations:

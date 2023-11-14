@@ -1,6 +1,6 @@
 name: Feature Request
 description: Suggest a new feature
-title: "feature: "
+title: 'feature: '
 labels: [enhancement]
 body:
   - type: checkboxes
@@ -8,7 +8,7 @@ body:
       label: Did you check the docs?
       description: Make sure you read all the docs before submitting a feature request
       options:
-        - label: I have read all the tokyonight.nvim docs
+        - label: I have read all the dullahan.nvim docs
           required: true
   - type: textarea
     validations:

@@ -20,14 +20,14 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build Extras
         run: |
-          nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('tokyonight.extra').setup()" --cmd qa
+          nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('dullahan.extra').setup()" --cmd qa
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore(build): auto-generate extras"
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          commit_message: 'chore(build): auto-generate extras'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
   tests:
     needs: extras
     if: always()
@@ -62,17 +62,17 @@ jobs:
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
-          vimdoc: tokyonight.nvim
-          version: "Neovim >= 0.8.0"
+          vimdoc: dullahan.nvim
+          version: 'Neovim >= 0.8.0'
           demojify: true
           treesitter: true
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore(build): auto-generate vimdoc"
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          commit_message: 'chore(build): auto-generate vimdoc'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
   release:
     name: release
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -85,7 +85,7 @@ jobs:
         id: release
         with:
           release-type: simple
-          package-name: tokyonight.nvim
+          package-name: dullahan.nvim
       - uses: actions/checkout@v3
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
