@@ -5,8 +5,8 @@ local dullahan = {}
 
 dullahan.normal = {
   a = { bg = colors.blue, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.blue },
-  c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
+  b = { bg = colors.fg, fg = colors.black },
+  c = { bg = colors.bg_statusline, fg = colors.fg },
 }
 
 dullahan.insert = {
@@ -30,14 +30,13 @@ dullahan.replace = {
 }
 
 dullahan.terminal = {
-  a = {bg = colors.green1, fg = colors.black },
-  b = {bg = colors.fg_gutter, fg=colors.green1 },
+  a = { bg = colors.green, fg = colors.black },
 }
 
 dullahan.inactive = {
   a = { bg = colors.bg_statusline, fg = colors.blue },
-  b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
-  c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
+  b = { bg = colors.bg_statusline, fg = colors.fg, gui = "bold" },
+  c = { bg = colors.bg_statusline, fg = colors.fg },
 }
 
 if config.lualine_bold then
