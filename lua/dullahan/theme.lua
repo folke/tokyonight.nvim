@@ -149,7 +149,7 @@ function M.setup()
 
     -- mkdHeading = { fg = c.orange, bold = true },
     mkdCode = { bg = c.green300 },
-    mkdCodeDelimiter = { fg = c.base0, bg = c.green700 },
+    mkdCodeDelimiter = { fg = c.base0, bg = c.green200 },
     mkdCodeStart = { fg = c.orange500, bold = true },
     mkdCodeEnd = { fg = c.orange500, bold = true },
     -- mkdLink = { fg = c.blue, underline = true },
@@ -214,7 +214,7 @@ function M.setup()
     --- Literals
     ["@string.documentation"] = { fg = c.cyan500 },
     ["@string.regex"] = { fg = c.cyan300 }, -- For regexes.
-    ["@string.escape"] = { fg = c.orange700 }, -- For escape characters within a string.
+    ["@string.escape"] = { fg = c.orange200 }, -- For escape characters within a string.
 
     --- Functions
     ["@constructor"] = { fg = c.orange500 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
@@ -327,11 +327,11 @@ function M.setup()
     TroubleNormal = { fg = c.base0, bg = c.base00 },
 
     -- Illuminate
-    illuminatedWord = { bg = c.violet900 },
-    illuminatedCurWord = { bg = c.violet900 },
-    IlluminatedWordText = { bg = c.violet900 },
-    IlluminatedWordRead = { bg = c.magenta900 },
-    IlluminatedWordWrite = { bg = c.magenta900 },
+    illuminatedWord = { bg = c.violet300 },
+    illuminatedCurWord = { bg = c.violet300 },
+    IlluminatedWordText = { bg = c.violet300 },
+    IlluminatedWordRead = { bg = c.magenta200 },
+    IlluminatedWordWrite = { bg = c.magenta200 },
 
     -- diff
     diffAdded = { fg = c.green500 },
@@ -526,7 +526,7 @@ function M.setup()
     -- Hop
     HopNextKey = { fg = c.magenta500, bold = true },
     HopNextKey1 = { fg = c.violet500, bold = true },
-    HopNextKey2 = { fg = c.violet700 },
+    HopNextKey2 = { fg = c.violet200 },
     HopUnmatched = { fg = c.base01 },
 
     TSNodeKey = { fg = c.magenta500, bold = true },
@@ -693,7 +693,7 @@ function M.setup()
     MiniCursorword = { bg = c.base01 },
     MiniCursorwordCurrent = { bg = c.base01 },
 
-    MiniIndentscopeSymbol = { fg = c.violet700, nocombine = true },
+    MiniIndentscopeSymbol = { fg = c.violet200, nocombine = true },
     MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
     MiniJump = { bg = c.magenta500, fg = c.base4 },
@@ -769,7 +769,7 @@ function M.setup()
     NoiceCompletionItemKindOperator = { fg = c.cyan, bg = c.none },
     NoiceCompletionItemKindSnippet = { fg = c.violet500, bg = c.none },
 
-    TreesitterContext = { bg = c.violet900 },
+    TreesitterContext = { bg = c.violet200 },
     Hlargs = { fg = c.yellow },
   }
 
