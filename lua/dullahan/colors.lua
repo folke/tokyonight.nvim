@@ -1,45 +1,75 @@
 local util = require("dullahan.util")
+local hslutil = require("dullahan.hsl")
+local hsl = hslutil.hslToHex
 
 local M = {}
 
 ---@class Palette
 M.default = {
   none = "NONE",
-  bg_dark = "#1F1F1F",
-  bg = "#1B1B1B",
-  bg_highlight = "#1D1D1D",
-  terminal_black = "#121212",
-  fg = "#FFFFFF",
-  fg_dark = "#F1F1F1",
-  fg_gutter = "#2F2F2F",
-  dark3 = "#444444",
-  comment = "#525a62",
-  dark5 = "#CCCCCC",
-  blue0 = "#2B4FFF",
-  blue = "#5C78FF",
-  cyan = "#28B9FF",
-  blue1 = "#5AC8FF",
-  blue2 = "#0DB9D7",
-  blue5 = "#89DDFF",
-  blue6 = "#B4F9F8",
-  blue7 = "#394B70",
-  magenta = "#FF5EED",
-  magenta2 = "#FF007C",
-  purple = "#5EA2FF",
-  orange = "#5EFFC3",
-  yellow = "#685AFF",
-  green = "#7129FF",
-  green1 = "#905AFF",
-  green2 = "#41A6B5",
-  teal = "#4FD6BE",
-  red = "#BA5AFF",
-  red1 = "#A52AFF",
-  git = { change = "#FFAE44", add = "#5AFF5D", delete = "#FF4444" },
-  gitSigns = {
-    add = "#58D354",
-    change = "#D38454",
-    delete = "#D35454",
-  },
+
+  base04 = hsl(0, 0, 5),
+  base03 = hsl(0, 0, 11),
+  base02 = hsl(0, 0, 7),
+  base01 = hsl(0, 0, 67),
+  base00 = hsl(0, 0, 40),
+  base0 = hsl(0, 0, 95),
+  base1 = hsl(200, 100, 58),
+  base2 = hsl(0, 0, 47),
+  base3 = hsl(0, 0, 95),
+  base4 = hsl(0, 0, 100),
+  yellow = hsl(245, 100, 68),
+  yellow100 = hsl(245, 100, 78),
+  yellow300 = hsl(245, 100, 73),
+  yellow500 = hsl(245, 100, 68),
+  yellow700 = hsl(245, 100, 63),
+  yellow900 = hsl(246, 100, 58),
+  orange = hsl(257, 100, 44),
+  orange100 = hsl(257, 100, 70),
+  orange300 = hsl(257, 94, 51),
+  orange500 = hsl(257, 100, 44),
+  orange700 = hsl(257, 81, 35),
+  orange900 = hsl(257, 80, 20),
+  red = hsl(275, 71, 52),
+  red100 = hsl(275, 100, 80),
+  red300 = hsl(275, 90, 64),
+  red500 = hsl(275, 71, 52),
+  red700 = hsl(275, 71, 42),
+  red900 = hsl(275, 71, 20),
+  magenta = hsl(331, 64, 52),
+  magenta100 = hsl(331, 100, 73),
+  magenta300 = hsl(331, 86, 64),
+  magenta500 = hsl(331, 64, 52),
+  magenta700 = hsl(331, 64, 42),
+  magenta900 = hsl(331, 65, 20),
+  violet = hsl(215, 100, 60),
+  violet100 = hsl(214, 100, 90),
+  violet300 = hsl(215, 69, 77),
+  violet500 = hsl(215, 100, 60),
+  violet700 = hsl(215, 100, 50),
+  violet900 = hsl(215, 50, 25),
+  blue = hsl(230, 69, 49),
+  blue100 = hsl(230, 100, 83),
+  blue300 = hsl(230, 90, 62),
+  blue500 = hsl(230, 69, 49),
+  blue700 = hsl(230, 70, 35),
+  blue900 = hsl(230, 69, 20),
+  cyan = hsl(200, 59, 40),
+  cyan100 = hsl(201, 100, 86),
+  cyan300 = hsl(200, 85, 55),
+  cyan500 = hsl(200, 59, 40),
+  cyan700 = hsl(207, 59, 25),
+  cyan900 = hsl(208, 58, 15),
+  green = hsl(260, 100, 30),
+  green100 = hsl(282, 100, 84),
+  green300 = hsl(268, 100, 49),
+  green500 = hsl(260, 100, 30),
+  green700 = hsl(260, 100, 20),
+  green900 = hsl(260, 100, 10),
+
+  bg = hsl(0, 0, 11),
+  bg_highlight = hsl(0, 0, 7),
+  fg = hsl(0, 0, 95),
 }
 
 ---@return ColorScheme
@@ -60,46 +90,29 @@ function M.setup(opts)
   util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
 
-  colors.diff = {
-    add = util.darken(colors.green2, 0.15),
-    delete = util.darken(colors.red1, 0.15),
-    change = util.darken(colors.blue7, 0.15),
-    text = colors.blue7,
-  }
-
-  colors.git.ignore = colors.dark3
   colors.black = util.darken(colors.bg, 0.8, "#000000")
-  colors.border_highlight = util.darken(colors.blue1, 0.8)
   colors.border = colors.black
 
   -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.bg_dark
-  colors.bg_statusline = colors.bg_dark
+  colors.bg_popup = colors.base04
+  colors.bg_statusline = colors.base03
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
-    or config.options.styles.sidebars == "dark" and colors.bg_dark
+    or config.options.styles.sidebars == "dark" and colors.base04
     or colors.bg
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
-    or config.options.styles.floats == "dark" and colors.bg_dark
+    or config.options.styles.floats == "dark" and colors.base04
     or colors.bg
 
-  colors.bg_visual = util.darken(colors.blue0, 0.4)
-  colors.bg_search = colors.blue0
-  colors.fg_sidebar = colors.fg_dark
-  -- colors.fg_float = config.options.styles.floats == "dark" and colors.fg_dark or colors.fg
+  -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
   colors.fg_float = colors.fg
 
-  colors.error = colors.red1
-  colors.warning = colors.yellow
-  colors.info = colors.blue2
-  colors.hint = colors.teal
-
-  colors.delta = {
-    add = util.darken(colors.green2, 0.45),
-    delete = util.darken(colors.red1, 0.45),
-  }
+  colors.error = colors.red500
+  colors.warning = colors.yellow500
+  colors.info = colors.blue500
+  colors.hint = colors.cyan500
 
   config.options.on_colors(colors)
   if opts.transform and config.is_white() then
