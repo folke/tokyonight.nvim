@@ -1,5 +1,5 @@
-local util = require("solarized-osaka.util")
-local colors = require("solarized-osaka.colors")
+local util = require("dullahan.util")
+local colors = require("dullahan.colors")
 
 local M = {}
 --
@@ -13,7 +13,7 @@ local M = {}
 
 ---@return Theme
 function M.setup()
-  local config = require("solarized-osaka.config")
+  local config = require("dullahan.config")
   local options = config.options
   ---@class Theme
   ---@field highlights Highlights
