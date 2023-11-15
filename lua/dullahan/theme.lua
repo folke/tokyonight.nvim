@@ -49,7 +49,7 @@ function M.setup()
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base0 }, -- column where |signs| are displayed
     Substitute = { fg = c.base04, bg = c.red500 }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = c.yellow700, bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr = { fg = c.yellow300, bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = c.orange500, sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.blue500 }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -61,14 +61,14 @@ function M.setup()
     NormalNC = { fg = c.base00, bg = options.transparent and c.none or options.dim_inactive and c.base04 or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.base01, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.base0, bg = c.bg_float }, -- Normal text in floating windows.
-    FloatBorder = { fg = c.yellow700, bg = c.bg_float },
+    FloatBorder = { fg = c.yellow300, bg = c.bg_float },
     FloatTitle = { fg = c.base2, bg = c.bg_float },
     Pmenu = { fg = c.base0, bg = c.base02 }, -- Popup menu: normal item.
     PmenuSel = { fg = c.base01, bg = c.base2, reverse = true }, -- Popup menu: selected item.
     PmenuSbar = { fg = c.base02, reverse = true }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.base0, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan500, bold = true }, -- |hit-enter| prompt and yes/no questions
-    QuickFixLine = { bg = c.blue700, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    QuickFixLine = { bg = c.blue300, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { fg = c.yellow500, reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = c.orange500, standout = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
@@ -148,15 +148,15 @@ function M.setup()
     htmlH2 = { fg = c.blue500, bold = true },
 
     -- mkdHeading = { fg = c.orange, bold = true },
-    mkdCode = { bg = c.green900 },
+    mkdCode = { bg = c.green300 },
     mkdCodeDelimiter = { fg = c.base0, bg = c.green700 },
     mkdCodeStart = { fg = c.orange500, bold = true },
     mkdCodeEnd = { fg = c.orange500, bold = true },
     -- mkdLink = { fg = c.blue, underline = true },
 
     markdownHeadingDelimiter = { fg = c.orange500, bold = true },
-    markdownCode = { fg = c.yellow500, bg = c.green900 },
-    markdownCodeBlock = { fg = c.yellow500, bg = c.green900 },
+    markdownCode = { fg = c.yellow500, bg = c.green300 },
+    markdownCodeBlock = { fg = c.yellow500, bg = c.green300 },
     markdownH1 = { fg = c.magenta500, bold = true },
     markdownH2 = { fg = c.violet500, bold = true },
     markdownLinkText = { fg = c.blue500, underline = true },
@@ -164,7 +164,7 @@ function M.setup()
     ["helpCommand"] = { fg = c.blue500, bg = c.base01 },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
-    debugBreakpoint = { fg = c.blue300, bg = c.blue700 }, -- used for breakpoint colors in terminal-debug
+    debugBreakpoint = { fg = c.blue300, bg = c.blue300 }, -- used for breakpoint colors in terminal-debug
 
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
@@ -179,10 +179,10 @@ function M.setup()
     DiagnosticHint = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticUnnecessary = { fg = c.base00 }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
-    DiagnosticVirtualTextError = { bg = c.red900, fg = c.red500 }, -- Used for "Error" diagnostic virtual text
-    DiagnosticVirtualTextWarn = { bg = c.yellow900, fg = c.yellow500 }, -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo = { bg = c.blue900, fg = c.blue500 }, -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint = { bg = c.cyan900, fg = c.cyan500 }, -- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextError = { bg = c.red200, fg = c.red500 }, -- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextWarn = { bg = c.yellow200, fg = c.yellow500 }, -- Used for "Warning" diagnostic virtual text
+    DiagnosticVirtualTextInfo = { bg = c.blue200, fg = c.blue500 }, -- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint = { bg = c.cyan200, fg = c.cyan500 }, -- Used for "Hint" diagnostic virtual text
 
     DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
@@ -195,7 +195,7 @@ function M.setup()
 
     LspInfoBorder = { fg = c.base02, bg = c.bg_float },
 
-    DapStoppedLine = { bg = c.yellow700 }, -- Used for "Warning" diagnostic virtual text
+    DapStoppedLine = { bg = c.yellow300 }, -- Used for "Warning" diagnostic virtual text
 
     -- These groups are for the Neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
@@ -241,13 +241,13 @@ function M.setup()
 
     --- Text
     ["@text.literal.markdown"] = { fg = c.red500 },
-    ["@text.literal.markdown_inline"] = { fg = c.yellow500, bg = c.green900 },
+    ["@text.literal.markdown_inline"] = { fg = c.yellow500, bg = c.green300 },
     ["@text.reference"] = { fg = c.blue500, underline = true },
 
     ["@text.todo.unchecked"] = { fg = c.yellow500 }, -- For brackets and parens.
     ["@text.todo.checked"] = { fg = c.green500 }, -- For brackets and parens.
-    ["@text.warning"] = { fg = c.yellow900, bg = c.yellow500 },
-    ["@text.danger"] = { fg = c.red900, bg = c.red500 },
+    ["@text.warning"] = { fg = c.yellow200, bg = c.yellow500 },
+    ["@text.danger"] = { fg = c.red200, bg = c.red500 },
 
     ["@text.diff.add"] = { link = "DiffAdd" },
     ["@text.diff.delete"] = { link = "DiffDelete" },
@@ -349,8 +349,8 @@ function M.setup()
     NeogitHunkHeader = { fg = c.base0, bg = c.base02 },
     NeogitHunkHeaderHighlight = { fg = c.blue500, bg = c.base00 },
     NeogitDiffContextHighlight = { fg = c.base00, bg = c.base02 },
-    NeogitDiffDeleteHighlight = { fg = c.red500, bg = c.red900 },
-    NeogitDiffAddHighlight = { fg = c.green500, bg = c.green900 },
+    NeogitDiffDeleteHighlight = { fg = c.red500, bg = c.red200 },
+    NeogitDiffAddHighlight = { fg = c.green500, bg = c.green300 },
 
     -- Neotest
     NeotestPassed = { fg = c.green500 },
