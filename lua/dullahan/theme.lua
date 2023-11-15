@@ -817,7 +817,7 @@ function M.setup()
 
   options.on_highlights(theme.highlights, theme.colors)
 
-  if config.is_day() then
+  if config.is_white() then
     util.invert_colors(theme.colors)
     util.invert_highlights(theme.highlights)
   end
