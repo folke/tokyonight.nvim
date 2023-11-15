@@ -10,7 +10,7 @@ M.default = {
 
   base04 = hsl(0, 0, 4),
   base03 = hsl(0, 0, 8),
-  base02 = hsl(0, 0, 16),
+  base02 = hsl(0, 0, 11),
   base01 = hsl(0, 0, 67),
   base00 = hsl(0, 0, 40),
   base0 = hsl(0, 0, 95),
@@ -67,7 +67,7 @@ M.default = {
   green700 = hsl(260, 100, 20),
   green900 = hsl(260, 100, 10),
 
-  bg = hsl(0, 0, 16),
+  bg = hsl(0, 0, 11),
   bg_highlight = hsl(0, 0, 8),
   fg = hsl(0, 0, 95),
 }
