@@ -12,6 +12,7 @@ Table of Contents                            *dullahan.nvim-table-of-contents*
   - Configuration                                |dullahan.nvim-configuration|
   - Overriding Colors & Highlight Groups|dullahan.nvim-overriding-colors-&-highlight-groups|
   - Contributing                                  |dullahan.nvim-contributing|
+  - Changelog                                        |dullahan.nvim-changelog|
   - License                                            |dullahan.nvim-license|
   - Credits                                            |dullahan.nvim-credits|
 
@@ -262,6 +263,11 @@ Pull requests are welcome and encouraged. For major changes, please open an
 issue first to discuss what you would like to change.
 
 
+CHANGELOG                                            *dullahan.nvim-changelog*
+
+See the CHANGELOG.md <CHANGELOG.md> file for details.
+
+
 LICENSE                                                *dullahan.nvim-license*
 
 Affero General Public License v3.0 <LICENSE> for more information.
@@ -269,8 +275,17 @@ Affero General Public License v3.0 <LICENSE> for more information.
 
 CREDITS                                                *dullahan.nvim-credits*
 
-- Folke <https://github.com/folke>
-- Takuya Matsuyama <https://github.com/craftzdog>
+
+
+
+Folke
+
+
+
+
+
+TakuyaMatsuyama
+
 
 ==============================================================================
 1. Links                                                 *dullahan.nvim-links*
