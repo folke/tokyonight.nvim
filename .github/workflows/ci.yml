@@ -2,6 +2,20 @@ name: 🔎 Continuous Integration
 on:
   push:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      os:
+        description: 'Operating system'
+        required: true
+        default: 'ubuntu-latest'
+      nvim:
+        description: 'Neovim version'
+        required: true
+        default: 'nightly'
+      branch:
+        description: 'Branch to test'
+        required: true
+        default: 'main'
 jobs:
   tests:
     name: 🥼 Tests
