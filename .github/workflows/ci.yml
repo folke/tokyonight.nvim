@@ -41,6 +41,7 @@ jobs:
           path: $HOME/nvim
   tests:
     name: 🥼 Tests
+    needs: neovim
     if: always()
     strategy:
       matrix:
@@ -145,6 +146,7 @@ jobs:
           JOB: ${{ github.job }}
           BUILD: ${{ github.run_number }}
           COMMIT: ${{ github.sha }}
+          STATUS: ${{ job.status }}
         with:
           filename: .github/ISSUE_TEMPLATE/failure_report.md
           assignees: github-actions[bot], ${{ github.actor }}
