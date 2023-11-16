@@ -3,27 +3,16 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-    inputs:
-      os:
-        description: 'Operating system'
-        required: true
-        default: 'ubuntu-latest'
-      nvim:
-        description: 'Neovim version'
-        required: true
-        default: 'nightly'
-      branch:
-        description: 'Branch to test'
-        required: true
-        default: 'main'
 jobs:
-  tests:
-    name: 🥼 Tests
+  neovim:
+    name: 📦 Neovim
     if: always()
     strategy:
       matrix:
         # os: [ubuntu-latest, windows-latest]
         os: [ubuntu-latest]
+        nvim: [stable, nightly]
+        branch: [main, dev]
     runs-on: ${{ matrix.os }}
     steps:
       - name: 🔔 Checkout
@@ -37,6 +26,35 @@ jobs:
           chmod a+x ./nvim.appimage
           ./nvim.appimage --appimage-extract
           echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
+      - name: 🌵 Cache Neovim
+        id: cache_nvim
+        uses: actions/cache@v3
+        with:
+          path: $HOME/nvim
+          key: ${{ runner.os }}-nvim-setup-${{ hashFiles('**/init.lua') }}
+          restore-keys: ${{ runner.os }}-nvim-setup-
+      - name: 🎅 Upload artifact
+        if: steps.cache_nvim.outputs.cache-hit == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: nvim-setup-artifact
+          path: $HOME/nvim
+  tests:
+    name: 🥼 Tests
+    if: always()
+    strategy:
+      matrix:
+        # os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: 🔔 Checkout
+        uses: actions/checkout@v4
+      - name: 🎁 Download cache Neovim
+        uses: actions/download-artifact@v3
+        with:
+          name: nvim-setup-artifact
+          path: $HOME/nvim
       - name: 🧪 Test
         run: |
           nvim --version
@@ -44,14 +62,13 @@ jobs:
           nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
       - name: 🌵 Cache
         id: cache_logs
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ~/.cache/nvim
             ~/.local/share/nvim/site/pack/packer
-          key: ${{ runner.os }}-dullahan.nvim-${{ hashFiles('**/init.lua') }}
-          restore-keys: |
-            ${{ runner.os }}-dullahan.nvim-${{ hashFiles('**/init.lua') }}
+          key: ${{ runner.os }}-dullahan.nvim
+          restore-keys: ${{ runner.os }}-dullahan.nvim
       - name: 🎅 Upload artifact
         if: steps.cache_logs.outputs.cache-hit == 'true'
         uses: actions/upload-artifact@v2
@@ -119,17 +136,11 @@ jobs:
     steps:
       - name: 🔔 Checkout
         uses: actions/checkout@v4
-      - name: 🎁 Download artifact
-        id: download_artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: logs
       - name: 📮 Send issue
         uses: JasonEtco/create-an-issue@v2
         id: send_issue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LOGS: ${{ steps.download_artifact.outputs.artifact_paths }}
           NOTES: ${{ job.status }}
           JOB: ${{ github.job }}
           BUILD: ${{ github.run_number }}
