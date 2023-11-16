@@ -30,15 +30,15 @@ jobs:
         id: cache_nvim
         uses: actions/cache@v3
         with:
-          path: $HOME/nvim
-          key: ${{ runner.os }}-nvim-setup-${{ hashFiles('**/init.lua') }}
-          restore-keys: ${{ runner.os }}-nvim-setup-
+          path: /tmp/nvim
+          key: ${{ runner.os }}-nvim-${{ matrix.nvim }}-${{ matrix.branch }}
+          restore-keys: ${{ runner.os }}-nvim-${{ matrix.nvim }}-${{ matrix.branch }}
       - name: 🎅 Upload artifact
-        if: steps.cache_nvim.outputs.cache-hit == 'true'
+        if: steps.cache_nvim.outputs.cache-hit == 'true' && success()
         uses: actions/upload-artifact@v3
         with:
           name: nvim-setup-artifact
-          path: $HOME/nvim
+          path: /tmp/nvim
   tests:
     name: 🥼 Tests
     needs: neovim
