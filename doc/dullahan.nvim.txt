@@ -1,96 +1,62 @@
-*dullahan.nvim.txt*     For Neovim >= 0.8.0     Last change: 2023 October 25
+*dullahan.nvim.txt*      For Neovim >= 0.8.0     Last change: 2023 November 16
 
 ==============================================================================
-Table of Contents                          *dullahan.nvim-table-of-contents*
+Table of Contents                            *dullahan.nvim-table-of-contents*
 
-1. Tokyo Night                                   |dullahan.nvim-tokyo-night|
-  - Storm                                  |dullahan.nvim-tokyo-night-storm|
-  - Night                                  |dullahan.nvim-tokyo-night-night|
-  - Moon                                    |dullahan.nvim-tokyo-night-moon|
-  - Day                                      |dullahan.nvim-tokyo-night-day|
-  - Features                            |dullahan.nvim-tokyo-night-features|
-  - Requirements                    |dullahan.nvim-tokyo-night-requirements|
-  - Installation                    |dullahan.nvim-tokyo-night-installation|
-  - Usage                                  |dullahan.nvim-tokyo-night-usage|
-  - Configuration                  |dullahan.nvim-tokyo-night-configuration|
-  - Overriding Colors & Highlight Groups|dullahan.nvim-tokyo-night-overriding-colors-&-highlight-groups|
-  - Extras                                |dullahan.nvim-tokyo-night-extras|
-  - Contributing                    |dullahan.nvim-tokyo-night-contributing|
-
-==============================================================================
-1. Tokyo Night                                   *dullahan.nvim-tokyo-night*
-
-A dark and light Neovim <https://github.com/neovim/neovim> theme written in Lua
-<https://www.lua.org> ported from the Visual Studio Code dullahan
-<https://github.com/enkia/tokyo-night-vscode-theme> theme. Includes
-|dullahan.nvim-extra| themes for Kitty
-<https://sw.kovidgoyal.net/kitty/conf.html>, Alacritty
-<https://github.com/alacritty/alacritty>, iTerm <https://iterm2.com/> and Fish
-<https://fishshell.com/docs/current/index.html>.
+  - 🎨 More Colors                          |dullahan.nvim-🎨-more-colors|
+  - 🌈 Styles                                    |dullahan.nvim-🌈-styles|
+  - ✨ Features                                  |dullahan.nvim-✨-features|
+  - ⚡️ Requirements                    |dullahan.nvim-⚡️-requirements|
+  - Installation                                  |dullahan.nvim-installation|
+  - Usage                                                |dullahan.nvim-usage|
+  - Configuration                                |dullahan.nvim-configuration|
+  - Overriding Colors & Highlight Groups|dullahan.nvim-overriding-colors-&-highlight-groups|
+  - Contributing                                  |dullahan.nvim-contributing|
+  - License                                            |dullahan.nvim-license|
+  - Credits                                            |dullahan.nvim-credits|
 
 
-STORM                                      *dullahan.nvim-tokyo-night-storm*
+🎨 MORE COLORS                              *dullahan.nvim-🎨-more-colors*
+
+Here is what the improved color palette looks like:
+
+A Figma Design is available here
+<https://www.figma.com/file/OJMsaTcWrGtquREeRBIKOi/Dullahan?type=design&node-id=0%3A1&mode=design&t=8LMYDanU2BxszUnh-1>
 
 
-NIGHT                                      *dullahan.nvim-tokyo-night-night*
+🌈 STYLES                                        *dullahan.nvim-🌈-styles*
 
 
-MOON                                        *dullahan.nvim-tokyo-night-moon*
+BLACK ~
 
 
-DAY                                          *dullahan.nvim-tokyo-night-day*
+WHITE ~
 
 
-FEATURES                                *dullahan.nvim-tokyo-night-features*
+✨ FEATURES                                      *dullahan.nvim-✨-features*
 
 - Supports the latest Neovim <https://github.com/neovim/neovim>
     0.9.0 <https://github.com/neovim/neovim/releases/tag/v0.9.0> features.
 - Enhances terminal colors.
 - Introduces a darker background option for sidebar-like windows.
 - Supports all major plugins.
-- Provides dullahan <https://github.com/folke/dullahan.nvim>
-    |dullahan.nvim-extras| for numerous other applications.
+- Provides Dullahan <https://github.com/PunGrumpy/dullahan.nvim>
 
 
-EXTRAS ~
-
-- Alacritty <https://github.com/alacritty/alacritty> (alacritty <extras/alacritty>)
-- Delta <https://github.com/dandavison/delta> (delta <extras/delta>)
-- Dunst <https://dunst-project.org/> (dunst <extras/dunst>)
-- Fish <https://fishshell.com/docs/current/index.html> (fish <extras/fish>)
-- Fish Themes <https://fishshell.com/docs/current/interactive.html#syntax-highlighting> (fish_themes <extras/fish_themes>)
-- Foot <https://codeberg.org/dnkl/foot> (foot <extras/foot>)
-- GitUI <https://github.com/extrawurst/gitui> (gitui <extras/gitui>)
-- Helix <https://helix-editor.com/> (helix <extras/helix>)
-- iTerm <https://iterm2.com/> (iterm <extras/iterm>)
-- Kitty <https://sw.kovidgoyal.net/kitty/conf.html> (kitty <extras/kitty>)
-- Lua Table for testing <https://www.lua.org> (lua <extras/lua>)
-- Prism <https://prismjs.com> (prism <extras/prism>)
-- Sublime Text <https://www.sublimetext.com/docs/themes> (sublime <extras/sublime>)
-- Terminator <https://gnome-terminator.readthedocs.io/en/latest/config.html> (terminator <extras/terminator>)
-- Tilix <https://github.com/gnunn1/tilix> (tilix <extras/tilix>)
-- Tmux <https://github.com/tmux/tmux/wiki> (tmux <extras/tmux>)
-- WezTerm <https://wezfurlong.org/wezterm/config/files.html> (wezterm <extras/wezterm>)
-- Windows Terminal <https://aka.ms/terminal-documentation> (windows_terminal <extras/windows_terminal>)
-- Xfce Terminal <https://docs.xfce.org/apps/terminal/advanced> (xfceterm <extras/xfceterm>)
-- Xresources <https://wiki.archlinux.org/title/X_resources> (xresources <extras/xresources>)
-- Zathura <https://pwmt.org/projects/zathura/> (zathura <extras/zathura>)
-
-
-REQUIREMENTS                        *dullahan.nvim-tokyo-night-requirements*
+⚡️ REQUIREMENTS                        *dullahan.nvim-⚡️-requirements*
 
 - Neovim <https://github.com/neovim/neovim> >=
     0.7.2 <https://github.com/neovim/neovim/releases/tag/v0.7.2>
 
 
-INSTALLATION                        *dullahan.nvim-tokyo-night-installation*
+INSTALLATION                                      *dullahan.nvim-installation*
 
 Install the theme with your preferred package manager, such as folke/lazy.nvim
 <https://github.com/folke/lazy.nvim>
 
 >lua
     {
-      "folke/dullahan.nvim",
+      "PunGrumpy/dullahan.nvim",
       lazy = false,
       priority = 1000,
       opts = {},
@@ -98,7 +64,7 @@ Install the theme with your preferred package manager, such as folke/lazy.nvim
 <
 
 
-USAGE                                      *dullahan.nvim-tokyo-night-usage*
+USAGE                                                    *dullahan.nvim-usage*
 
 
 VIM SCRIPT ~
@@ -107,10 +73,8 @@ VIM SCRIPT ~
     colorscheme dullahan
     
     " There are also colorschemes for the different styles.
-    colorscheme dullahan-night
-    colorscheme dullahan-storm
-    colorscheme dullahan-day
-    colorscheme dullahan-moon
+    colorscheme dullahan-black
+    colorscheme dullahan-white
 <
 
 
@@ -158,26 +122,22 @@ LIGHTLINE
 <
 
 
-CONFIGURATION                      *dullahan.nvim-tokyo-night-configuration*
+CONFIGURATION                                    *dullahan.nvim-configuration*
 
 
   Set the configuration **BEFORE** loading the color scheme with `colorscheme
   dullahan`.
-The theme offers four styles: |dullahan.nvim-storm|, |dullahan.nvim-moon|,
-|dullahan.nvim-night|, and |dullahan.nvim-day|.
+The theme offers four styles: |dullahan.nvim-black| and |dullahan.nvim-white|
 
-The |dullahan.nvim-day| style is used when `{ style = "day" }` is passed to
-`setup(options)` or when `vim.o.background = "light"`.
-
-dullahan <https://github.com/folke/dullahan.nvim> uses the default options,
+dullahan <https://github.com/PunGrumpy/dullahan.nvim> uses the default options,
 unless `setup` is explicitly called.
 
 >lua
     require("dullahan").setup({
       -- your configuration comes here
       -- or leave it empty to use the default settings
-      style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-      light_style = "day", -- The theme is used when the background is set to light
+      style = "storm", -- The theme comes in three styles, `black` (default), `gold` and `white`
+      light_style = "white", -- The theme is used when the background is set to light
       transparent = false, -- Enable this to disable setting the background color
       terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
       styles = {
@@ -211,7 +171,7 @@ unless `setup` is explicitly called.
 <
 
 
-OVERRIDING COLORS & HIGHLIGHT GROUPS*dullahan.nvim-tokyo-night-overriding-colors-&-highlight-groups*
+OVERRIDING COLORS & HIGHLIGHT GROUPS*dullahan.nvim-overriding-colors-&-highlight-groups*
 
 How the highlight groups are calculated:
 
@@ -221,18 +181,16 @@ override them using `config.on_colors(colors)`.
 3. `config.on_highlights(highlights, colors)` can be used to override highlight
 groups.
 
-For default values of `colors` and `highlights`, please consult the storm
-<extras/lua/dullahan_storm.lua>, moon <extras/lua/dullahan_moon.lua>, night
-<extras/lua/dullahan_night.lua>, and day <extras/lua/dullahan_day.lua>
-themes.
+For default values of `colors` and `highlights`, please consult the colors.lua
+<lua/dullahan/colors.lua> file.
 
 
 SETTINGS AND COLOR ALTERATION DEMONSTRATION ~
 
 >lua
     require("dullahan").setup({
-      -- use the night style
-      style = "night",
+      -- use the black style
+      style = "black",
       -- disable italic for functions
       styles = {
         functions = {}
@@ -252,7 +210,7 @@ BORDERLESS TELESCOPE EXAMPLE ~
 >lua
     require("dullahan").setup({
       on_highlights = function(hl, c)
-        local prompt = "#2d3149"
+        local prompt = "#8599ff" -- hsl(230, 100, 76)
         hl.TelescopeNormal = {
           bg = c.bg_dark,
           fg = c.fg_dark,
@@ -298,64 +256,28 @@ To have undercurls show up and in color, add the following to your Tmux
 <
 
 
-EXTRAS                                    *dullahan.nvim-tokyo-night-extras*
+CONTRIBUTING                                      *dullahan.nvim-contributing*
 
-Extra color configs for Kitty <https://sw.kovidgoyal.net/kitty/conf.html>,
-Alacritty <https://github.com/alacritty/alacritty>, Fish
-<https://fishshell.com/docs/current/index.html>, WezTerm
-<https://wezfurlong.org/wezterm/config/files.html>, iTerm <https://iterm2.com/>
-and foot <https://codeberg.org/dnkl/foot> can be found in extras <extras/>. To
-use them, refer to their respective documentation.
-
-You can easily use the color palette for other plugins inside your Neovim
-<https://github.com/neovim/neovim> configuration:
-
->lua
-    local colors = require("dullahan.colors").setup() -- pass in any of the config options as explained above
-    local util = require("dullahan.util")
-    
-    aplugin.background = colors.bg_dark
-    aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
-<
+Pull requests are welcome and encouraged. For major changes, please open an
+issue first to discuss what you would like to change.
 
 
-CONTRIBUTING                        *dullahan.nvim-tokyo-night-contributing*
+LICENSE                                                *dullahan.nvim-license*
 
-Pull requests are welcome.
-
-For the |dullahan.nvim-extras|, we use a simple template system that can be
-used to generate themes for the different styles.
-
-How to add a new extra template:
-
-1. Create a file like `lua/dullahan/extra/cool-app.lua`.
+Affero General Public License v3.0 <LICENSE> for more information.
 
 
-2. Add the name and output file extension to the `extras` table in
-`lua/dullahan/extra/init.lua`.
+CREDITS                                                *dullahan.nvim-credits*
 
-
-3. Run the following command to generate new |dullahan.nvim-extra| themes from
-the dullahan plugin directory:
-
->sh
-    nvim --headless "+lua require('dullahan.extra').setup()" +qa
-<
-
-
-4. Check the newly created themes in the `extra/` directory. Please **DO NOT**
-commit them, as they are already automatically built by the CI.
-
-
+- Folke <https://github.com/folke>
+- Takuya Matsuyama <https://github.com/craftzdog>
 
 ==============================================================================
-2. Links                                               *dullahan.nvim-links*
+1. Links                                                 *dullahan.nvim-links*
 
-1. *image*: https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png
-2. *image*: https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png
-3. *image*: https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png
-4. *image*: https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png
-5. *image*: https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png
+1. *Dullahan Improved Color Palette*: .assets/palette.svg
+2. *Dullahan Black*: .assets/preview-black.png
+3. *Dullahan White*: .assets/preview-white.png
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 
