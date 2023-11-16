@@ -55,29 +55,18 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: nvim-setup-artifact
-          path: $HOME/nvim
+          path: ${{ runner.temp }}/nvim
+      - name: 📦 Setup Neovim
+        shell: bash
+        run: |
+          mkdir -p /tmp/nvim
+          cp -r ${{ runner.temp }}/nvim/* /tmp/nvim
+          echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
       - name: 🧪 Test
         run: |
           nvim --version
           [ ! -d tests ] && exit 0
           nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
-      - name: 🌵 Cache
-        id: cache_logs
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/nvim
-            ~/.local/share/nvim/site/pack/packer
-          key: ${{ runner.os }}-dullahan.nvim
-          restore-keys: ${{ runner.os }}-dullahan.nvim
-      - name: 🎅 Upload artifact
-        if: steps.cache_logs.outputs.cache-hit == 'true'
-        uses: actions/upload-artifact@v2
-        with:
-          name: logs
-          path: |
-            ~/.cache/nvim
-            ~/.local/share/nvim/site/pack/packer
   docs:
     name: 📖 Documentation
     runs-on: ubuntu-latest
