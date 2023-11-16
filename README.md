@@ -1,67 +1,40 @@
-# 🐴 Dullahan
+<div align="center">
+  <img src=".assets/dullahan.gif" alt="Dullahan" width="64px" height="auto">
+  <h1>Dullahan</h1>
+  <p>
+    <strong>A dark and light <a href="https://github.com/neovim/neovim">Neovim</a> theme written in <a href="https://www.lua.org">Lua</a></strong> ported from the <a href="https://github.com/PunGrumpy/dullahan-vscode-theme">Visual Studio Code Dullahan</a> theme.
+  </p>
+  <img src=".assets/preview.png" alt="Dullahan Preview" width="100%" height="auto">
+</div>
 
-A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
-[Lua](https://www.lua.org) ported from the [Visual Studio Code
-Dullahan](https://github.com/PunGrumpy/dullahan-vscode-theme) theme. Includes
-[extra](#-extras) themes for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
-[Alacritty](https://github.com/alacritty/alacritty),
-[iTerm](https://iterm2.com/) and
-[Fish](https://fishshell.com/docs/current/index.html).
+## `🎨` More Colors
 
-## Storm
+Here is what the improved color palette looks like:
 
-![image](https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png)
+![Dullahan Improved Color Palette](.assets/palette.svg)
 
-## Night
+[A Figma Design is available here](https://www.figma.com/file/OJMsaTcWrGtquREeRBIKOi/Dullahan?type=design&node-id=0%3A1&mode=design&t=8LMYDanU2BxszUnh-1)
 
-![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
+## `🌈` Styles
 
-## Moon
+### Black
 
-![image](https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png)
+![Dullahan Black](.assets/preview-black.png)
 
-## Day
+### White
 
-![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
+![Dullahan White](.assets/preview-white.png)
 
-## ✨ Features
+## `✨` Features
 
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
 - Enhances terminal colors.
 - Introduces a darker background option for sidebar-like windows.
 - Supports all major plugins.
-- Provides [Dullahan](https://github.com/folke/dullahan.nvim)
-  [extras](#-extras) for numerous other applications.
+- Provides [Dullahan](https://github.com/PunGrumpy/dullahan.nvim)
 
-### 🍭 Extras
-
-<!-- extras:start -->
-
-- [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
-- [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
-- [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
-- [Fish](https://fishshell.com/docs/current/index.html) ([fish](extras/fish))
-- [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
-- [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))
-- [GitUI](https://github.com/extrawurst/gitui) ([gitui](extras/gitui))
-- [Helix](https://helix-editor.com/) ([helix](extras/helix))
-- [iTerm](https://iterm2.com/) ([iterm](extras/iterm))
-- [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](extras/kitty))
-- [Lua Table for testing](https://www.lua.org) ([lua](extras/lua))
-- [Prism](https://prismjs.com) ([prism](extras/prism))
-- [Sublime Text](https://www.sublimetext.com/docs/themes) ([sublime](extras/sublime))
-- [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](extras/terminator))
-- [Tilix](https://github.com/gnunn1/tilix) ([tilix](extras/tilix))
-- [Tmux](https://github.com/tmux/tmux/wiki) ([tmux](extras/tmux))
-- [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](extras/wezterm))
-- [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](extras/windows_terminal))
-- [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
-- [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](extras/xresources))
-- [Zathura](https://pwmt.org/projects/zathura/) ([zathura](extras/zathura))
-<!-- extras:end -->
-
-## ⚡️ Requirements
+## `⚡️` Requirements
 
 - [Neovim](https://github.com/neovim/neovim) >=
   [0.7.2](https://github.com/neovim/neovim/releases/tag/v0.7.2)
@@ -73,7 +46,7 @@ Install the theme with your preferred package manager, such as
 
 ```lua
 {
-  "folke/dullahan.nvim",
+  "PunGrumpy/dullahan.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -88,10 +61,8 @@ Install the theme with your preferred package manager, such as
 colorscheme dullahan
 
 " There are also colorschemes for the different styles.
-colorscheme dullahan-night
-colorscheme dullahan-storm
-colorscheme dullahan-day
-colorscheme dullahan-moon
+colorscheme dullahan-black
+colorscheme dullahan-white
 ```
 
 ### [Lua](https://www.lua.org)
@@ -137,21 +108,17 @@ let g:lightline = {'colorscheme': 'dullahan'}
 
 > ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme dullahan`.
 
-The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
-and [day](#day).
+The theme offers four styles: [black](#black) and [white](#white)
 
-The [day](#day) style is used when `{ style = "day" }` is passed to
-`setup(options)` or when `vim.o.background = "light"`.
-
-[dullahan](https://github.com/folke/dullahan.nvim) uses the default options,
+[dullahan](https://github.com/PunGrumpy/dullahan.nvim) uses the default options,
 unless `setup` is explicitly called.
 
 ```lua
 require("dullahan").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
-  style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-  light_style = "day", -- The theme is used when the background is set to light
+  style = "storm", -- The theme comes in three styles, `black` (default), `gold` and `white`
+  light_style = "white", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
   styles = {
@@ -190,22 +157,18 @@ How the highlight groups are calculated:
 
 1. `colors` are determined based on your configuration, with the ability to
    override them using `config.on_colors(colors)`.
-1. These `colors` are utilized to generate the highlight groups.
-1. `config.on_highlights(highlights, colors)` can be used to override highlight
+2. These `colors` are utilized to generate the highlight groups.
+3. `config.on_highlights(highlights, colors)` can be used to override highlight
    groups.
 
-For default values of `colors` and `highlights`, please consult the
-[storm](extras/lua/dullahan_storm.lua),
-[moon](extras/lua/dullahan_moon.lua),
-[night](extras/lua/dullahan_night.lua), and
-[day](extras/lua/dullahan_day.lua) themes.
+For default values of `colors` and `highlights`, please consult the [colors.lua](lua/dullahan/colors.lua) file.
 
 ### Settings and color alteration demonstration
 
 ```lua
 require("dullahan").setup({
-  -- use the night style
-  style = "night",
+  -- use the black style
+  style = "black",
   -- disable italic for functions
   styles = {
     functions = {}
@@ -224,7 +187,7 @@ require("dullahan").setup({
 ```lua
 require("dullahan").setup({
   on_highlights = function(hl, c)
-    local prompt = "#2d3149"
+    local prompt = "#8599ff" -- hsl(230, 100, 76)
     hl.TelescopeNormal = {
       bg = c.bg_dark,
       fg = c.fg_dark,
@@ -268,45 +231,16 @@ set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
 
-## 🍭 Extras
-
-Extra color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
-[Alacritty](https://github.com/alacritty/alacritty),
-[Fish](https://fishshell.com/docs/current/index.html), [WezTerm](https://wezfurlong.org/wezterm/config/files.html),
-[iTerm](https://iterm2.com/) and [foot](https://codeberg.org/dnkl/foot) can be
-found in [extras](extras/). To use them, refer to their respective
-documentation.
-
-![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
-
-You can easily use the color palette for other plugins inside your
-[Neovim](https://github.com/neovim/neovim) configuration:
-
-```lua
-local colors = require("dullahan.colors").setup() -- pass in any of the config options as explained above
-local util = require("dullahan.util")
-
-aplugin.background = colors.bg_dark
-aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
-```
-
 ## 🔥 Contributing
 
-Pull requests are welcome.
+Pull requests are welcome and encouraged. For major changes, please open an
+issue first to discuss what you would like to change.
 
-For the [extras](#-extras), we use a simple template system that can be used to
-generate themes for the different styles.
+## 📝 License
 
-How to add a new extra template:
+[Affero General Public License v3.0](LICENSE) for more information.
 
-1. Create a file like `lua/dullahan/extra/cool-app.lua`.
-2. Add the name and output file extension to the `extras` table in
-   `lua/dullahan/extra/init.lua`.
-3. Run the following command to generate new [extra](#-extras) themes from the dullahan plugin directory:
+## 🙏 Credits
 
-   ```sh
-   nvim --headless "+lua require('dullahan.extra').setup()" +qa
-   ```
-
-4. Check the newly created themes in the `extra/` directory. Please **DO NOT**
-   commit them, as they are already automatically built by the CI.
+- [Folke](https://github.com/folke)
+- [Takuya Matsuyama](https://github.com/craftzdog)

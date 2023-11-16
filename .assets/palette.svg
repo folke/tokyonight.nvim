@@ -1,0 +1,71 @@
+<svg width="1576" height="1618" viewBox="0 0 1576 1618" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1576" height="1618" fill="#1E1E1E"/>
+<g id="yellow">
+<rect id="yellow100" x="925" y="248" width="100" height="100" fill="#988FFF"/>
+<rect id="yellow300" x="786" y="248" width="100" height="100" fill="#8175FF"/>
+<rect id="yellow500" x="646" y="251" width="100" height="100" fill="#695CFF"/>
+<rect id="yellow700" x="506" y="251" width="100" height="100" fill="#5242FF"/>
+<rect id="yellow900" x="366" y="251" width="100" height="100" fill="#3B29FF"/>
+</g>
+<g id="orange">
+<rect id="orange100" x="925" y="418" width="100" height="100" fill="#B699FF"/>
+<rect id="orange300" x="786" y="418" width="100" height="100" fill="#7842FF"/>
+<rect id="orange500" x="646" y="418" width="100" height="100" fill="#6529FF"/>
+<rect id="orange700" x="506" y="418" width="100" height="100" fill="#530FFF"/>
+<rect id="orange900" x="366" y="418" width="100" height="100" fill="#4500F5"/>
+</g>
+<g id="red">
+<rect id="red100" x="925" y="585" width="100" height="100" fill="#D499FF"/>
+<rect id="red300" x="786" y="585" width="100" height="100" fill="#C370FF"/>
+<rect id="red500" x="646" y="585" width="100" height="100" fill="#BB5CFF"/>
+<rect id="red700" x="506" y="585" width="100" height="100" fill="#8C00F0"/>
+<rect id="red900" x="366" y="585" width="100" height="100" fill="#7D00D6"/>
+</g>
+<g id="magenta">
+<rect id="magenta100" x="925" y="752" width="100" height="100" fill="#FF99CA"/>
+<rect id="magenta300" x="786" y="752" width="100" height="100" fill="#FF75B8"/>
+<rect id="magenta500" x="646" y="752" width="100" height="100" fill="#FF3D9B"/>
+<rect id="magenta700" x="506" y="752" width="100" height="100" fill="#F00074"/>
+<rect id="magenta900" x="366" y="752" width="100" height="100" fill="#D60068"/>
+</g>
+<g id="violet">
+<rect id="violet100" x="925" y="919" width="100" height="100" fill="#99C3FF"/>
+<rect id="violet300" x="786" y="919" width="100" height="100" fill="#66A6FF"/>
+<rect id="violet500" x="646" y="919" width="100" height="100" fill="#3D8EFF"/>
+<rect id="violet700" x="506" y="919" width="100" height="100" fill="#006AFF"/>
+<rect id="violet900" x="366" y="919" width="100" height="100" fill="#0059D6"/>
+</g>
+<g id="blue">
+<rect id="blue100" x="926" y="1086" width="100" height="100" fill="#A3B3FF"/>
+<rect id="blue300" x="787" y="1086" width="100" height="100" fill="#8599FF"/>
+<rect id="blue500" x="646" y="1086" width="100" height="100" fill="#5C77FF"/>
+<rect id="blue700" x="506" y="1086" width="100" height="100" fill="#0028F0"/>
+<rect id="blue900" x="366" y="1086" width="100" height="100" fill="#0024D6"/>
+</g>
+<g id="cyan">
+<rect id="cyan100" x="925" y="1253" width="100" height="100" fill="#99DDFF"/>
+<rect id="cyan300" x="786" y="1253" width="100" height="100" fill="#5CC9FF"/>
+<rect id="cyan500" x="646" y="1253" width="100" height="100" fill="#3DBEFF"/>
+<rect id="cyan700" x="506" y="1253" width="100" height="100" fill="#0FAFFF"/>
+<rect id="cyan900" x="366" y="1253" width="100" height="100" fill="#00A3F5"/>
+</g>
+<g id="green">
+<rect id="green100" x="926" y="1420" width="100" height="100" fill="#E7ADFF"/>
+<rect id="green300" x="787" y="1420" width="100" height="100" fill="#DA85FF"/>
+<rect id="green500" x="646" y="1420" width="100" height="100" fill="#925CFF"/>
+<rect id="green700" x="506" y="1420" width="100" height="100" fill="#470066"/>
+<rect id="green900" x="366" y="1420" width="100" height="100" fill="#240033"/>
+</g>
+<g id="base">
+<rect id="base4" x="1346" y="84" width="100" height="100" fill="white"/>
+<rect id="base3" x="1206" y="84" width="100" height="100" fill="#C7C7C7"/>
+<rect id="base2" x="1066" y="84" width="100" height="100" fill="#787878"/>
+<rect id="base1" x="926" y="84" width="100" height="100" fill="#29B8FF"/>
+<rect id="base0" x="786" y="84" width="100" height="100" fill="#F2F2F2"/>
+<rect id="base04" x="86" y="84" width="100" height="100" fill="#0A0A0A"/>
+<rect id="base03" x="226" y="84" width="100" height="100" fill="#141414"/>
+<rect id="base02" x="366" y="84" width="100" height="100" fill="#1C1C1C"/>
+<rect id="base01" x="506" y="84" width="100" height="100" fill="#ABABAB"/>
+<rect id="base00" x="646" y="84" width="100" height="100" fill="#666666"/>
+</g>
+</svg>
