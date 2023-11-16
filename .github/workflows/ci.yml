@@ -60,12 +60,16 @@ jobs:
         shell: bash
         run: |
           mkdir -p /tmp/nvim
-          cp -r ${{ runner.temp }}/nvim/* /tmp/nvim
+          cp -r ${{ runner.temp }}/nvim/* /tmp/nvim || exit 1
+          chmod a+x /tmp/nvim/squashfs-root/usr/bin/nvim || exit 1
           echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
       - name: 🧪 Test
         run: |
           nvim --version
-          [ ! -d tests ] && exit 0
+          if [ ! -d tests ]; then
+            echo "⚠️ No tests found, skipping tests."
+            exit 0
+          fi
           nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
   docs:
     name: 📖 Documentation
