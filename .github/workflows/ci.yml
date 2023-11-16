@@ -50,7 +50,8 @@ jobs:
     steps:
       - name: 🔔 Checkout
         uses: actions/checkout@v4
-      - run: 😺 Git pull
+      - name: 😺 Git pull
+        run: git pull
       - name: 🐴 Panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
@@ -120,7 +121,7 @@ jobs:
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: 🚨 Build failed
-          content-filepath: ../ISSUE_TEMPLATE/failure_report.md
+          content-filepath: .github/ISSUE_TEMPLATE/build-failed.md
           labels: build
           assignees: ${{ github.actor }}
           token: ${{ secrets.GITHUB_TOKEN }}
