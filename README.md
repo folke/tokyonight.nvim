@@ -236,11 +236,35 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 Pull requests are welcome and encouraged. For major changes, please open an
 issue first to discuss what you would like to change.
 
+## 📖 Changelog
+
+See the [CHANGELOG.md](CHANGELOG.md) file for details.
+
 ## 📝 License
 
 [Affero General Public License v3.0](LICENSE) for more information.
 
 ## 🙏 Credits
 
-- [Folke](https://github.com/folke)
-- [Takuya Matsuyama](https://github.com/craftzdog)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/folke">
+        <img src="https://avatars.githubusercontent.com/u/292349?v=4" width="100px;" alt="Folke"/>
+        <br />
+        <sub><b>Folke</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/folke/tokyonight.nvim" title="Tokyo Night" style="text-decoration: none;">🌃</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/craftzdog">
+        <img src="https://avatars.githubusercontent.com/u/1332805?v=4" width="100px;" alt="Takuya Matsuyama"/>
+        <br />
+        <sub><b>Takuya Matsuyama</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/craftzdog/solarized-osaka.nvim" title="Solarized Osaka" style="text-decoration: none;">🌅</a>
+    </td>
+  </tr>
+</table>
