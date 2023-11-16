@@ -111,6 +111,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-dullahan.nvim-${{ hashFiles('**/init.lua') }}
       - name: 🎁 Archive
+        id: upload_artifact
         uses: actions/upload-artifact@v2
         with:
           name: logs
@@ -118,10 +119,20 @@ jobs:
             ~/.cache/nvim
             ~/.local/share/nvim/site/pack/packer
       - name: 📮 Send issue
-        uses: peter-evans/create-issue-from-file@v4
+        uses: JasonEtco/create-an-issue@v2
+        id: send_issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOGS: ${{ steps.upload_artifact.outputs.artifact_paths }}
+          NOTES: ${{ job.status }}
+          JOB: ${{ github.job }}
+          BUILD: ${{ github.run_number }}
+          COMMIT: ${{ github.sha }}
         with:
-          title: 🚨 Build failed
-          content-filepath: .github/ISSUE_TEMPLATE/failure_report.md
-          labels: build
-          assignees: ${{ github.actor }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          filename: .github/ISSUE_TEMPLATE/failure_report.md
+          assignees: github-actions[bot], ${{ github.actor }}
+          update_existing: true
+      - name: 📤 Output
+        run: |
+          echo "🐞 Issue created at ${{ steps.send_issue.outputs.url }}"
+          echo "🔢 Issue number is ${{ steps.send_issue.outputs.number }}"
