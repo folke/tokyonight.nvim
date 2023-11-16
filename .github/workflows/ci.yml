@@ -42,6 +42,24 @@ jobs:
           nvim --version
           [ ! -d tests ] && exit 0
           nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
+      - name: 🌵 Cache
+        id: cache_logs
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/nvim
+            ~/.local/share/nvim/site/pack/packer
+          key: ${{ runner.os }}-dullahan.nvim-${{ hashFiles('**/init.lua') }}
+          restore-keys: |
+            ${{ runner.os }}-dullahan.nvim-${{ hashFiles('**/init.lua') }}
+      - name: 🎅 Upload artifact
+        if: steps.cache_logs.outputs.cache-hit == 'true'
+        uses: actions/upload-artifact@v2
+        with:
+          name: logs
+          path: |
+            ~/.cache/nvim
+            ~/.local/share/nvim/site/pack/packer
   docs:
     name: 📖 Documentation
     runs-on: ubuntu-latest
@@ -101,29 +119,17 @@ jobs:
     steps:
       - name: 🔔 Checkout
         uses: actions/checkout@v4
-      - name: 🌵 Cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/nvim
-            ~/.local/share/nvim/site/pack/packer
-          key: ${{ runner.os }}-dullahan.nvim-${{ hashFiles('**/init.lua') }}
-          restore-keys: |
-            ${{ runner.os }}-dullahan.nvim-${{ hashFiles('**/init.lua') }}
-      - name: 🎁 Archive
-        id: upload_artifact
-        uses: actions/upload-artifact@v2
+      - name: 🎁 Download artifact
+        id: download_artifact
+        uses: actions/download-artifact@v2
         with:
           name: logs
-          path: |
-            ~/.cache/nvim
-            ~/.local/share/nvim/site/pack/packer
       - name: 📮 Send issue
         uses: JasonEtco/create-an-issue@v2
         id: send_issue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LOGS: ${{ steps.upload_artifact.outputs.artifact_paths }}
+          LOGS: ${{ steps.download_artifact.outputs.artifact_paths }}
           NOTES: ${{ job.status }}
           JOB: ${{ github.job }}
           BUILD: ${{ github.run_number }}
