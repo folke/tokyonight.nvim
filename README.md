@@ -4,6 +4,17 @@
   <p>
     <strong>A dark and light <a href="https://github.com/neovim/neovim">Neovim</a> theme written in <a href="https://www.lua.org">Lua</a></strong> ported from the <a href="https://github.com/PunGrumpy/dullahan-vscode-theme">Visual Studio Code Dullahan</a> theme.
   </p>
+  <p>
+    <a href="https://gituhb/PunGrumpy/dullahan.nvim/actions/workflows/ci.yml">
+      <img src="https://github.com/PunGrumpy/dullahan.nvim/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI" />
+    </a>
+    <a href="https://raw.githubusercontent.com/PunGrumpy/dullahan.nvim/main/LICENSE">
+      <img src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg" alt="License" />
+    </a>
+    <a href="https://raw.githubusercontent.com/PunGrumpy/dullahan.nvim/main/LICENSE">
+      <img src="https://img.shields.io/badge/Neovim-0.7.2+-blue.svg" alt="Neovim" />
+    </a>
+  </p>
   <img src=".assets/preview.png" alt="Dullahan Preview" width="100%" height="auto">
 </div>
 
