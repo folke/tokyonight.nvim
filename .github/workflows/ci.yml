@@ -3,30 +3,9 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-    inputs:
-      reason:
-        description: 'Reason for running workflow'
-        required: true
-        options:
-          - 'manual'
-          - 'test'
-        type: choice
-env:
-  ACTIONS_STEP_DEBUG: false
 jobs:
-  debug:
-    name: 🐛 Debug
-    runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.reason == 'test' }}
-    steps:
-      - name: 👮 Enable debug
-        run: |
-          echo "🐛 Debug mode enabled"
-        env:
-          ACTIONS_STEP_DEBUG: true
   tests:
     name: 🥼 Tests
-    needs: debug
     continue-on-error: true
     strategy:
       matrix:
