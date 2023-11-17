@@ -3,9 +3,27 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for running workflow'
+        required: true
+        options:
+          - 'manual'
+          - 'test'
+        type: choice
+env:
+  ACTIONS_STEP_DEBUG: true
 jobs:
+  debug:
+    name: 🐛 Debug
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.reason == 'test' }}
+    env:
+      ACTIONS_STEP_DEBUG: true
   tests:
     name: 🥼 Tests
+    needs: debug
+    continue-on-error: true
     strategy:
       matrix:
         # os: [ubuntu-latest, windows-latest, macos-latest]
