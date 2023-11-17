@@ -4,65 +4,23 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  neovim:
-    name: 📦 Neovim
-    if: always()
-    strategy:
-      matrix:
-        # os: [ubuntu-latest, windows-latest]
-        os: [ubuntu-latest]
-        nvim: [stable, nightly]
-        branch: [main, dev]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: 🔔 Checkout
-        uses: actions/checkout@v4
-      - name: 📦 Setup Neovim
-        shell: bash
-        run: |
-          mkdir -p /tmp/nvim
-          wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -O /tmp/nvim/nvim.appimage
-          cd /tmp/nvim
-          chmod a+x ./nvim.appimage
-          ./nvim.appimage --appimage-extract
-          echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
-      - name: 🌵 Cache Neovim
-        id: cache_nvim
-        uses: actions/cache@v3
-        with:
-          path: /tmp/nvim
-          key: ${{ runner.os }}-nvim-${{ matrix.nvim }}-${{ matrix.branch }}
-          restore-keys: ${{ runner.os }}-nvim-${{ matrix.nvim }}-${{ matrix.branch }}
-      - name: 🎅 Upload artifact
-        if: steps.cache_nvim.outputs.cache-hit == 'true' && success()
-        uses: actions/upload-artifact@v3
-        with:
-          name: nvim-setup-artifact
-          path: /tmp/nvim
   tests:
     name: 🥼 Tests
-    needs: neovim
     if: always()
     strategy:
       matrix:
-        # os: [ubuntu-latest, windows-latest]
-        os: [ubuntu-latest]
+        # os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest]
+        neovim-version: [stable, nightly]
     runs-on: ${{ matrix.os }}
     steps:
       - name: 🔔 Checkout
         uses: actions/checkout@v4
-      - name: 🎁 Download cache Neovim
-        uses: actions/download-artifact@v3
+      - name: 👾 Install Neovim
+        uses: ./.github/workflows/neovim.yml
         with:
-          name: nvim-setup-artifact
-          path: ${{ runner.temp }}/nvim
-      - name: 📦 Setup Neovim
-        shell: bash
-        run: |
-          mkdir -p /tmp/nvim
-          cp -r ${{ runner.temp }}/nvim/* /tmp/nvim || exit 1
-          chmod a+x /tmp/nvim/squashfs-root/usr/bin/nvim || exit 1
-          echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
+          os: ${{ matrix.os }}
+          version: ${{ matrix.neovim-version }}
       - name: 🧪 Test
         run: |
           nvim --version
