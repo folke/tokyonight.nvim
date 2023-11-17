@@ -1,0 +1,33 @@
+name: 🤖 Automation
+on:
+  pull_request:
+    branches: [main]
+  pull_request_target:
+    branches: [main]
+  issues:
+    types: [opened, edited, milestoned, demilestoned, closed, reopened]
+jobs:
+  label:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: 🔖 Labeler
+        uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+  greet:
+    if: ${{ github.event_name == 'issues' || github.event_name == 'pull_request' || github.event_name == 'pull_request_target' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: 🫂 Greeter
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: '## 🙏 Thanks for opening this issue! We will look into it ASAP.'
+          pr-message: '## 🙏 Thanks for opening this PR! We will look into it ASAP.'
