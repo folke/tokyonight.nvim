@@ -8,7 +8,7 @@ local subcommands = {
 
     local function set_lines(color, hex, line)
       vim.api.nvim_buf_set_lines(buf, line, (line + 1), false, {
-        color .. string.rep(".", max_length - #color) .. ' = "' .. tostring(hex),
+        color .. string.rep(".", max_length - #color) .. ' = "' .. tostring(hex) .. '"',
       })
       return line + 1
     end
