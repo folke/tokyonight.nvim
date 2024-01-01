@@ -4,13 +4,6 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  local alacrittyColors = {}
-  for k, v in pairs(colors) do
-    if type(v) == "string" then
-      alacrittyColors[k] = v:gsub("^#", "0x")
-    end
-  end
-
   local alacritty = util.template(
     [=[
 # TokyoNight Alacritty Colors
@@ -18,6 +11,10 @@ function M.generate(colors)
 [colors.primary]
 background = '${bg}'
 foreground = '${fg}'
+
+#[colors.cursor]
+#cursor = '${fg}'
+#text = '${bg}'
 
 # Normal colors
 [colors.normal]
@@ -51,7 +48,7 @@ index = 17
 color = '${red1}'
 
 ]=],
-    alacrittyColors
+    colors
   )
 
   return alacritty
