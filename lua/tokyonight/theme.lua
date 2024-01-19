@@ -91,6 +91,8 @@ function M.setup()
     WarningMsg = { fg = c.warning }, -- warning messages
     Whitespace = { fg = c.fg_gutter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
+    WinBar = { link = "StatusLine" }, -- window bar
+    WinBarNC = { link = "StatusLineNC" }, -- window bar in inactive windows
 
     -- These groups are not listed as default vim groups,
     -- but they are defacto standard group names for syntax highlighting.
