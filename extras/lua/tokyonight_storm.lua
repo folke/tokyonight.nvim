@@ -2196,6 +2196,12 @@ local highlights = {
   WildMenu = {
     bg = "#2e3c64"
   },
+  WinBar = {
+    link = "StatusLine"
+  },
+  WinBarNC = {
+    link = "StatusLineNC"
+  },
   WinSeparator = {
     bold = true,
     fg = "#1d202f"
