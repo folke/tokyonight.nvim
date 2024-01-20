@@ -145,6 +145,7 @@ function M.setup(opts)
   colors.fg_float = colors.fg
 
   colors.error = colors.red1
+  colors.todo = colors.blue
   colors.warning = colors.yellow
   colors.info = colors.blue2
   colors.hint = colors.teal
