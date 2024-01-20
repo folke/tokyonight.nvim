@@ -13,8 +13,8 @@ function M.generate(colors)
       builtin = "@type.builtin",
       enum = {
         "@lsp.type.enum",
-        variant = "@lsp.type.enumMember"
-      }
+        variant = "@lsp.type.enumMember",
+      },
     },
     -- rust: pattern matching `let Some(_) = ...`
     --                             ^^^^
@@ -23,27 +23,27 @@ function M.generate(colors)
       "Constant",
       builtin = {
         "@constant.builtin",
-        boolean = "Boolean"
+        boolean = "Boolean",
       },
       character = {
         "Character",
-        escape = "@string.escape"
+        escape = "@string.escape",
       },
       numeric = {
         "Number",
         float = "Float",
-        integer = "Number"
-      }
+        integer = "Number",
+      },
     },
     string = {
       "String",
-      regexp = "@string.regex",
+      regexp = "@string.regexp",
       special = {
         "@string.special",
         path = nil,
         url = nil,
-        symbol = nil
-      }
+        symbol = nil,
+      },
     },
     comment = {
       "@comment",
@@ -51,17 +51,17 @@ function M.generate(colors)
       block = {
         nil,
         -- not sure about that one
-        documentation = "@string.documentation"
-      }
+        documentation = "@string.documentation",
+      },
     },
     variable = {
       "@variable",
       builtin = "@variable.builtin",
-      parameter = "@parameter",
+      parameter = "@variable.parameter",
       other = {
         nil,
-        member = "@field"
-      }
+        member = "@variable.member",
+      },
     },
     label = "@label",
     keyword = {
@@ -72,16 +72,16 @@ function M.generate(colors)
         ["repeat"] = "Repeat",
         import = nil,
         ["return"] = "@keyword.return",
-        exception = "Exception"
+        exception = "Exception",
       },
       operator = "Statement",
       directive = "PreProc",
       ["function"] = "@keyword.function",
       storage = {
-        nil,           -- rust: `let`
-        type = nil,    -- rust: `struct` & `type`
-        modifier = nil -- rust: `mut`
-      }
+        nil, -- rust: `let`
+        type = nil, -- rust: `struct` & `type`
+        modifier = nil, -- rust: `mut`
+      },
     },
     operator = "Operator",
     ["function"] = {
@@ -90,12 +90,12 @@ function M.generate(colors)
       method = "@method",
       macro = "@function.macro",
       -- Defined as "preprocessor in C", so using "PreProc", not sure though
-      special = "PreProc"
+      special = "PreProc",
     },
     tag = {
       "@tag",
       -- ???
-      builtin = nil
+      builtin = nil,
     },
     namespace = "@namespace",
     special = "Special",
@@ -113,41 +113,41 @@ function M.generate(colors)
         h6 = nil,
         -- UI --
         completion = "Pmenu",
-        hover = "PmenuSel"
+        hover = "PmenuSel",
       },
       list = {
         "markdownHeadingDelimiter",
         unnumbered = nil,
         numbered = nil,
         checked = nil,
-        unchecked = nil
+        unchecked = nil,
       },
       bold = "Bold",
       italic = "Italic",
       strikethrough = {
-        'helix',
-        modifiers = { 'crossed_out' }
+        "helix",
+        modifiers = { "crossed_out" },
       },
       link = {
         "markdownLinkText",
         url = "Underlined",
         label = "markdownCode",
-        text = "markdownCode"
+        text = "markdownCode",
       },
       quote = nil,
       raw = {
         "markdownCode",
-        inline = "@text.literal.markdown_inline",
+        inline = "@markup.raw.markdown_inline",
         block = "markdownCodeBlock",
         -- UI --
         completion = nil,
-        hover = nil
+        hover = nil,
       },
       -- UI --
       normal = {
         nil,
         completion = "CmpItemMenu",
-        hover = "CmpItemKindDefault"
+        hover = "CmpItemKindDefault",
       },
     },
     diff = {
@@ -156,13 +156,13 @@ function M.generate(colors)
       minus = "diffRemoved",
       delta = {
         "diffChanged",
-        moved = "diffFile"
-      }
+        moved = "diffFile",
+      },
     },
     ui = {
       background = {
         { "helix", bg = "bg" },
-        separator = nil
+        separator = nil,
       },
       cursor = {
         "Cursor",
@@ -179,15 +179,15 @@ function M.generate(colors)
       },
       debug = {
         breakpoint = nil,
-        active = nil
+        active = nil,
       },
       gutter = {
         nil,
-        selected = nil
+        selected = nil,
       },
       highlight = {
         nil,
-        frameline = nil
+        frameline = nil,
       },
       linenr = {
         "LineNr",
@@ -198,17 +198,17 @@ function M.generate(colors)
         inactive = "StatusLineNc",
         -- Inspired from lualine
         normal = {
-          'helix',
+          "helix",
           bg = "blue",
-          fg = "black"
+          fg = "black",
         },
         insert = nil,
         select = nil,
-        separator = nil
+        separator = nil,
       },
       popup = {
         "TelescopeBorder",
-        info = nil
+        info = nil,
       },
       window = "WinSeparator",
       help = nil,
@@ -228,28 +228,28 @@ function M.generate(colors)
           parameter = nil,
           type = nil,
         },
-        wrap = nil
+        wrap = nil,
       },
       menu = {
         "Pmenu",
         selected = "PmenuSel",
         scroll = {
-          'helix',
+          "helix",
           fg = vim.api.nvim_get_hl(0, { name = "PmenuThumb" }).bg,
           bg = vim.api.nvim_get_hl(0, { name = "PmenuSbar" }).bg,
-        }
+        },
       },
       selection = {
-        { 'helix', bg = "bg_highlight" },
-        primary = nil
+        { "helix", bg = "bg_highlight" },
+        primary = nil,
       },
       cursorline = {
         primary = nil,
-        secondary = nil
+        secondary = nil,
       },
       cursorcolumn = {
         primary = nil,
-        secondary = nil
+        secondary = nil,
       },
     },
     hint = "DiagnosticHint",
@@ -261,15 +261,15 @@ function M.generate(colors)
       hint = "DiagnosticUnderlineHint",
       info = "DiagnosticUnderlineInfo",
       warning = "DiagnosticUnderlineWarn",
-      error = "DiagnosticUnderlineError"
-    }
+      error = "DiagnosticUnderlineError",
+    },
   })
 
   local config = {}
   for hx_scope, group in M.pairsByKeys(mapping) do
     -- print(hx_scope, util.dump(group))
     hx_scope = hx_scope:gsub("%.h(%d)", ".%1")
-    if hx_scope:match('%.') then
+    if hx_scope:match("%.") then
       hx_scope = '"' .. hx_scope .. '"'
     end
 
@@ -277,8 +277,8 @@ function M.generate(colors)
       goto continue
     end
 
-    if type(group) == "table" and group[1] == 'helix' then
-      table.remove(group, 1);
+    if type(group) == "table" and group[1] == "helix" then
+      table.remove(group, 1)
       table.insert(config, string.format("%s = %s", hx_scope, M.to_toml(group)))
       goto continue
     end
@@ -296,16 +296,16 @@ function M.generate(colors)
     ::continue::
   end
 
-  table.insert(config, '\n[palette]');
+  table.insert(config, "\n[palette]")
   for name, color in M.pairsByKeys(M.flatten(colors)) do
-    if name:match('%.') then
+    if name:match("%.") then
       name = '"' .. name .. '"'
     end
-    if type(color) == 'string' and not string.starts(name, '_') and name ~= 'none' then
+    if type(color) == "string" and not string.starts(name, "_") and name ~= "none" then
       table.insert(config, string.format('%s = "%s"', name, color))
     end
   end
-  return table.concat(config, '\n')
+  return table.concat(config, "\n")
 end
 
 function string.starts(String, Start)
@@ -315,15 +315,15 @@ end
 function M.flatten(t)
   local res = {}
   for k, v in pairs(t) do
-    if type(v) == 'table' then
-      if v[1] ~= 'helix' then
+    if type(v) == "table" then
+      if v[1] ~= "helix" then
         for k2, v2 in pairs(M.flatten(v)) do
           -- Special case for tables like:
           -- { type = { "@type", enum = "@type.enum" } }
           if k2 == 1 then
             res[k] = v2
           else
-            res[k .. '.' .. k2] = v2
+            res[k .. "." .. k2] = v2
           end
         end
       else
@@ -339,9 +339,11 @@ end
 -- https://www.lua.org/pil/19.3.html
 function M.pairsByKeys(t, f)
   local a = {}
-  for n in pairs(t) do table.insert(a, n) end
+  for n in pairs(t) do
+    table.insert(a, n)
+  end
   table.sort(a, f)
-  local i = 0             -- iterator variable
+  local i = 0 -- iterator variable
   local iter = function() -- iterator function
     i = i + 1
     if a[i] == nil then
@@ -369,13 +371,13 @@ function M.to_helix_config(highlight)
       end
       if mods.underline then
         style.underline = {
-          style = "line"
+          style = "line",
         }
       end
       if mods.undercurl and highlight.sp then
         style.underline = {
           color = M.to_rgb(mods.sp),
-          style = "curl"
+          style = "curl",
         }
       end
     end
@@ -405,7 +407,7 @@ end
 function M.to_toml(style)
   local buffer = {}
   M.insert_as_toml(buffer, style)
-  return table.concat(buffer, '')
+  return table.concat(buffer, "")
 end
 
 function M.insert_as_toml(buffer, x)
@@ -416,7 +418,7 @@ function M.insert_as_toml(buffer, x)
     if M.is_array(x) then
       table.insert(buffer, "[")
       for _, v in pairs(x) do
-        M.insert_as_toml(buffer, v);
+        M.insert_as_toml(buffer, v)
         table.insert(buffer, ", ")
       end
       table.remove(buffer)
@@ -424,8 +426,8 @@ function M.insert_as_toml(buffer, x)
     else
       table.insert(buffer, "{ ")
       for k, v in M.pairsByKeys(x) do
-        table.insert(buffer, string.format("%s = ", k));
-        M.insert_as_toml(buffer, v);
+        table.insert(buffer, string.format("%s = ", k))
+        M.insert_as_toml(buffer, v)
         table.insert(buffer, ", ")
       end
       table.remove(buffer)
@@ -442,7 +444,9 @@ function M.is_array(t)
   local i = 0
   for _ in pairs(t) do
     i = i + 1
-    if t[i] == nil then return false end
+    if t[i] == nil then
+      return false
+    end
   end
   return true
 end
