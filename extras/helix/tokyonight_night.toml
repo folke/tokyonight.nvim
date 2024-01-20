@@ -50,13 +50,13 @@ label = { fg = "#7aa2f7" }
 "markup.normal.hover" = { fg = "#a9b1d6" }
 "markup.raw" = { fg = "#1abc9c" }
 "markup.raw.block" = { fg = "#1abc9c" }
-"markup.raw.inline" = 
+"markup.raw.inline" = { bg = "#414868", fg = "#7aa2f7" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 namespace = { fg = "#bb9af7" }
 operator = { fg = "#89ddff" }
 special = { fg = "#2ac3de" }
 string = { fg = "#9ece6a" }
-"string.regexp" = 
+"string.regexp" = { fg = "#b4f9f8" }
 "string.special" = { fg = "#2ac3de" }
 tag = { fg = "#bb9af7" }
 type = { fg = "#2ac3de" }
@@ -84,8 +84,8 @@ type = { fg = "#2ac3de" }
 "ui.window" = { fg = "#15161e", modifiers = ["bold"] }
 variable = { fg = "#c0caf5" }
 "variable.builtin" = { fg = "#f7768e" }
-"variable.other.member" = { fg = "#bb9af7" }
-"variable.parameter" = { fg = "#bb9af7" }
+"variable.other.member" = { fg = "#73daca" }
+"variable.parameter" = { fg = "#e0af68" }
 warning = { fg = "#e0af68" }
 
 [palette]
