@@ -50,13 +50,13 @@ label = { fg = "#2e7de9" }
 "markup.normal.hover" = { fg = "#6172b0" }
 "markup.raw" = { fg = "#118c74" }
 "markup.raw.block" = { fg = "#118c74" }
-"markup.raw.inline" = { bg = "#a1a6c5", fg = "#2e7de9" }
+"markup.raw.inline" = 
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-namespace = { fg = "#007197" }
+namespace = { fg = "#9854f1" }
 operator = { fg = "#006a83" }
 special = { fg = "#188092" }
 string = { fg = "#587539" }
-"string.regexp" = { fg = "#2e5857" }
+"string.regexp" = 
 "string.special" = { fg = "#188092" }
 tag = { fg = "#9854f1" }
 type = { fg = "#188092" }
@@ -84,8 +84,8 @@ type = { fg = "#188092" }
 "ui.window" = { fg = "#e9e9ed", modifiers = ["bold"] }
 variable = { fg = "#3760bf" }
 "variable.builtin" = { fg = "#f52a65" }
-"variable.other.member" = { fg = "#387068" }
-"variable.parameter" = { fg = "#8c6c3e" }
+"variable.other.member" = { fg = "#9854f1" }
+"variable.parameter" = { fg = "#9854f1" }
 warning = { fg = "#8c6c3e" }
 
 [palette]
@@ -144,5 +144,6 @@ red = "#f52a65"
 red1 = "#c64343"
 teal = "#118c74"
 terminal_black = "#a1a6c5"
+todo = "#2e7de9"
 warning = "#8c6c3e"
 yellow = "#8c6c3e"
