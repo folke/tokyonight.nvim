@@ -25,6 +25,7 @@ M.extras = {
   dunst = {ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst"},
   gitui = {ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI"},
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix"},
+  fzf = { ext = "zsh", url = "https://github.com/junegunn/fzf", label = "Fzf"},
 }
 
 local function write(str, fileName)
