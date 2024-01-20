@@ -43,6 +43,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Fish](https://fishshell.com/docs/current/index.html) ([fish](extras/fish))
 - [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
 - [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))
+- [Fzf](https://github.com/junegunn/fzf) ([fzf](extras/fzf))
 - [GitUI](https://github.com/extrawurst/gitui) ([gitui](extras/gitui))
 - [Helix](https://helix-editor.com/) ([helix](extras/helix))
 - [iTerm](https://iterm2.com/) ([iterm](extras/iterm))
