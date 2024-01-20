@@ -16,6 +16,7 @@ selection_bg = "${bg_visual}"
 selection_fg = "${fg}"
 split = "${blue}"
 compose_cursor = "${orange}"
+scrollbar_thumb = "${bg_highlight}"
 
 ansi = ["${black}", "${red}", "${green}", "${yellow}", "${blue}", "${magenta}", "${cyan}", "${fg_dark}"]
 brights = ["${terminal_black}", "${red}", "${green}", "${yellow}", "${blue}", "${magenta}", "${cyan}", "${fg}"]
