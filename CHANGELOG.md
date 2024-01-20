@@ -1,5 +1,29 @@
 # Changelog
 
+## [3.0.0](https://github.com/folke/tokyonight.nvim/compare/v2.9.0...v3.0.0) (2024-01-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* added support for treesitter 0.9.2. Eearlier TS versions are no longer supported.
+* add treesitter default groups to theme
+* remove compat with old treesitter group names from over a year ago
+
+### Features
+
+* added support for treesitter 0.9.2. Eearlier TS versions are no longer supported. ([18d46ae](https://github.com/folke/tokyonight.nvim/commit/18d46aeca7fa62a1c2d816fd0df4bc553412bc30))
+* changed alacritty .yml to .toml ([#450](https://github.com/folke/tokyonight.nvim/issues/450)) ([ffc7505](https://github.com/folke/tokyonight.nvim/commit/ffc7505a1426ec2472c75d8e8712df611a5ef5a2))
+* **extras:** add fzf colors ([#464](https://github.com/folke/tokyonight.nvim/issues/464)) ([75c60d5](https://github.com/folke/tokyonight.nvim/commit/75c60d569481aa8ec36c857701b6c5c5aaef3340))
+* **wezterm:** add color for scrollbar ([#470](https://github.com/folke/tokyonight.nvim/issues/470)) ([5b2d7ab](https://github.com/folke/tokyonight.nvim/commit/5b2d7ab1bae530f662713820957665c87a774873))
+
+
+### Bug Fixes
+
+* add treesitter default groups to theme ([bddedb1](https://github.com/folke/tokyonight.nvim/commit/bddedb17bd5d8f47a8d8b1febea7c0b9a585e4ef))
+* **helix:** fixed helix theme with new TS groups ([2e00d06](https://github.com/folke/tokyonight.nvim/commit/2e00d06319072953b54b0316146151d31e71680c))
+* remove compat with old treesitter group names from over a year ago ([66cfdc1](https://github.com/folke/tokyonight.nvim/commit/66cfdc12b009b45c92d52d48bea30a105d7012d9))
+* **theme:** added support for WinBar and WinBarNC. Fixes [#466](https://github.com/folke/tokyonight.nvim/issues/466) ([29b7960](https://github.com/folke/tokyonight.nvim/commit/29b796021d82f1faf989a00ba8b86cfe83ace130))
+
 ## [2.9.0](https://github.com/folke/tokyonight.nvim/compare/v2.8.0...v2.9.0) (2023-10-16)
 
 
