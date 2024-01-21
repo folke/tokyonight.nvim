@@ -232,6 +232,7 @@ function M.setup()
     ["@keyword.return"] = { link = "@keyword" },
     ["@function.method"] = { link = "Function" },
     ["@function.method.call"] = { link = "@function.method" },
+    ["@namespace.builtin"] = { link = "@variable.builtin" },
     ["@none"] = {},
     ["@number"] = { link = "Number" },
     ["@keyword.directive"] = { link = "PreProc" },
