@@ -97,6 +97,9 @@ local highlights = {
   ["@comment.info"] = {
     fg = "#0db9d7"
   },
+  ["@comment.note"] = {
+    fg = "#1abc9c"
+  },
   ["@comment.todo"] = {
     fg = "#7aa2f7"
   },
