@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.1](https://github.com/folke/tokyonight.nvim/compare/v3.0.0...v3.0.1) (2024-01-21)
+
+
+### Bug Fixes
+
+* **treesitter:** consolidate notes ([ba35fbe](https://github.com/folke/tokyonight.nvim/commit/ba35fbe16ceea7e5fbe8b9a0247c06804c385538))
+* **treesitter:** defaults for [@namespace](https://github.com/namespace).builtin ([65a88b1](https://github.com/folke/tokyonight.nvim/commit/65a88b14d9c132daa678d0c5f0aa70dccdc0d6a5))
+
 ## [3.0.0](https://github.com/folke/tokyonight.nvim/compare/v2.9.0...v3.0.0) (2024-01-20)
 
 
