@@ -405,6 +405,9 @@ local highlights = {
   ["@module.builtin"] = {
     fg = "#ff757f"
   },
+  ["@namespace.builtin"] = {
+    link = "@variable.builtin"
+  },
   ["@none"] = {},
   ["@number"] = {
     link = "Number"
