@@ -427,6 +427,9 @@ local highlights = {
   ["@punctuation.delimiter"] = {
     fg = "#006a83"
   },
+  ["@punctuation.special"] = {
+    fg = "#006a83",
+  },
   ["@string"] = {
     link = "String"
   },
