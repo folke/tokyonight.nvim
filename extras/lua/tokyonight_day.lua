@@ -428,7 +428,7 @@ local highlights = {
     fg = "#006a83"
   },
   ["@punctuation.special"] = {
-    fg = "#006a83",
+    fg = "#006a83"
   },
   ["@string"] = {
     link = "String"

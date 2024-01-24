@@ -22,7 +22,7 @@ error = { fg = "#db4b4b" }
 function = { fg = "#7aa2f7" }
 "function.builtin" = { fg = "#2ac3de" }
 "function.macro" = { fg = "#7dcfff" }
-"function.method" = { fg = "#7aa2f7" }
+"function.method" = 
 "function.special" = { fg = "#7dcfff" }
 hint = { fg = "#1abc9c" }
 info = { fg = "#0db9d7" }
@@ -37,7 +37,7 @@ keyword = { fg = "#9d7cd8", modifiers = ["italic"] }
 "keyword.operator" = { fg = "#bb9af7" }
 label = { fg = "#7aa2f7" }
 "markup.bold" = { modifiers = ["bold"] }
-"markup.heading" = { fg = "#7aa2f7", modifiers = ["bold"] }
+"markup.heading" = 
 "markup.heading.completion" = { bg = "#16161e", fg = "#c0caf5" }
 "markup.heading.hover" = { bg = "#343a55" }
 "markup.italic" = { modifiers = ["italic"] }
@@ -52,7 +52,7 @@ label = { fg = "#7aa2f7" }
 "markup.raw.block" = { fg = "#1abc9c" }
 "markup.raw.inline" = { bg = "#414868", fg = "#7aa2f7" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-namespace = { fg = "#bb9af7" }
+namespace = 
 operator = { fg = "#89ddff" }
 special = { fg = "#2ac3de" }
 string = { fg = "#9ece6a" }

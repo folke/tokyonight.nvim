@@ -22,7 +22,7 @@ error = { fg = "#c53b53" }
 function = { fg = "#82aaff" }
 "function.builtin" = { fg = "#65bcff" }
 "function.macro" = { fg = "#86e1fc" }
-"function.method" = { fg = "#82aaff" }
+"function.method" = 
 "function.special" = { fg = "#86e1fc" }
 hint = { fg = "#4fd6be" }
 info = { fg = "#0db9d7" }
@@ -37,7 +37,7 @@ keyword = { fg = "#fca7ea", modifiers = ["italic"] }
 "keyword.operator" = { fg = "#c099ff" }
 label = { fg = "#82aaff" }
 "markup.bold" = { modifiers = ["bold"] }
-"markup.heading" = { fg = "#82aaff", modifiers = ["bold"] }
+"markup.heading" = 
 "markup.heading.completion" = { bg = "#1e2030", fg = "#c8d3f5" }
 "markup.heading.hover" = { bg = "#363c58" }
 "markup.italic" = { modifiers = ["italic"] }
@@ -52,7 +52,7 @@ label = { fg = "#82aaff" }
 "markup.raw.block" = { fg = "#4fd6be" }
 "markup.raw.inline" = { bg = "#444a73", fg = "#82aaff" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-namespace = { fg = "#c099ff" }
+namespace = 
 operator = { fg = "#89ddff" }
 special = { fg = "#65bcff" }
 string = { fg = "#c3e88d" }
