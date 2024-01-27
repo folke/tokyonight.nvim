@@ -1,0 +1,57 @@
+; See the official delta repository for info on setting up custom themes:
+; https://github.com/dandavison/delta/blob/main/themes.gitconfig
+[delta "tokyonight-day"]
+  light = true
+  minus-style                   = syntax "#dfccd4"
+  minus-non-emph-style          = syntax "#dfccd4"
+  minus-emph-style              = syntax "#d99ea2"
+  minus-empty-line-marker-style = syntax "#dfccd4"
+  line-numbers-minus-style      = "#c25d64"
+  plus-style                    = syntax "#aecde6"
+  plus-non-emph-style           = syntax "#aecde6"
+  plus-emph-style               = syntax "#57a7bc"
+  plus-empty-line-marker-style  = syntax "#aecde6"
+  line-numbers-plus-style       = "#399a96"
+  line-numbers-zero-style       = "#a8aecb"
+
+[delta "tokyonight-moon"]
+  dark = true
+  minus-style                   = syntax "#3a273a"
+  minus-non-emph-style          = syntax "#3a273a"
+  minus-emph-style              = syntax "#6b2e43"
+  minus-empty-line-marker-style = syntax "#3a273a"
+  line-numbers-minus-style      = "#b55a67"
+  plus-style                    = syntax "#273849"
+  plus-non-emph-style           = syntax "#273849"
+  plus-emph-style               = syntax "#305f6f"
+  plus-empty-line-marker-style  = syntax "#273849"
+  line-numbers-plus-style       = "#627259"
+  line-numbers-zero-style       = "#3b4261"
+
+[delta "tokyonight-night"]
+  dark = true
+  minus-style                   = syntax "#37222c"
+  minus-non-emph-style          = syntax "#37222c"
+  minus-emph-style              = syntax "#713137"
+  minus-empty-line-marker-style = syntax "#37222c"
+  line-numbers-minus-style      = "#b2555b"
+  plus-style                    = syntax "#20303b"
+  plus-non-emph-style           = syntax "#20303b"
+  plus-emph-style               = syntax "#2c5a66"
+  plus-empty-line-marker-style  = syntax "#20303b"
+  line-numbers-plus-style       = "#266d6a"
+  line-numbers-zero-style       = "#3b4261"
+
+[delta "tokyonight-storm"]
+  dark = true
+  minus-style                   = syntax "#3f2d3d"
+  minus-non-emph-style          = syntax "#3f2d3d"
+  minus-emph-style              = syntax "#763842"
+  minus-empty-line-marker-style = syntax "#3f2d3d"
+  line-numbers-minus-style      = "#b2555b"
+  plus-style                    = syntax "#283b4d"
+  plus-non-emph-style           = syntax "#283b4d"
+  plus-emph-style               = syntax "#316172"
+  plus-empty-line-marker-style  = syntax "#283b4d"
+  line-numbers-plus-style       = "#266d6a"
+  line-numbers-zero-style       = "#3b4261"
