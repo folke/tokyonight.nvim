@@ -1005,6 +1005,9 @@ local highlights = {
   DefinitionIcon = {
     fg = "#82aaff"
   },
+  Delimiter = {
+    link = "Special"
+  },
   DiagnosticError = {
     fg = "#c53b53"
   },
