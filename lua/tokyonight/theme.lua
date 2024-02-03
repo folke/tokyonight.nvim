@@ -863,6 +863,11 @@ function M.setup()
           vim.cmd(":highlight MarkdownBug guifg=" .. c.yellow)
           vim.cmd(":syntax match MarkdownBug /\\c\\w*Bug[^:]*:/")
 
+          -- DEPRECATED:
+          vim.cmd(":silent! highlight clear MarkdownDeprecated")
+          vim.cmd(":highlight MarkdownDeprecated guifg=" .. c.yellow)
+          vim.cmd(":syntax match MarkdownDeprecated /\\c\\w*Deprecated[^:]*:/")                
+                
           -- FOCUS:
           vim.cmd(":silent! highlight clear MarkdownFocus")
           vim.cmd(":highlight MarkdownFocus guifg=" .. c.yellow)
