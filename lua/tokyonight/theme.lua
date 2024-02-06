@@ -872,11 +872,6 @@ function M.setup()
 
   options.on_highlights(theme.highlights, theme.colors)
 
-  if config.is_day() then
-    util.invert_colors(theme.colors)
-    util.invert_highlights(theme.highlights)
-  end
-
   return theme
 end
 
