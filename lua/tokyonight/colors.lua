@@ -46,7 +46,45 @@ M.night = {
   bg = "#1a1b26",
   bg_dark = "#16161e",
 }
-M.day = M.night
+
+M.day = {
+  none = "NONE",
+  bg_dark = "#e1e1e9",
+  bg = "#ffffff", -- "#d9dae5"
+  bg_highlight = "#bdc2d6",
+  terminal_black = "#eff0f5", -- "#cdd0e0",
+  fg = "#000000", -- "#0a143f",
+  fg_dark = "#293156",
+  fg_gutter = "#c6cadc",
+  dark3 = "#545c7e",
+  comment = "#4f577d",
+  dark5 = "#5d648c",
+  blue0 = "#c9d3ed",
+  blue = "#083085",
+  cyan = "#0071b3",
+  blue1 = "#1b96ac",
+  blue2 = "#0a91a8",
+  blue5 = "#0098d6",
+  blue6 = "#0c9c9a",
+  blue7 = "#b1bdd7",
+  magenta = "#7d3df0",
+  magenta2 = "#ff007c",
+  purple = "#6135b1",
+  orange = "#cc4c00",
+  yellow = "#ad8200",
+  green = "#349900",
+  green1 = "#27956a",
+  green2 = "#32804d",
+  teal = "#14947b",
+  red = "#e20d35",
+  red1 = "#bf2626",
+  git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
+  gitSigns = {
+    add = "#266d6a",
+    change = "#536c9e",
+    delete = "#b2555b",
+  },
+}
 
 M.moon = function()
   local ret = {
@@ -111,7 +149,6 @@ function M.setup(opts)
   local colors = vim.tbl_deep_extend("force", vim.deepcopy(M.default), palette)
 
   util.bg = colors.bg
-  util.day_brightness = config.options.day_brightness
 
   colors.diff = {
     add = util.darken(colors.green2, 0.15),
@@ -156,9 +193,6 @@ function M.setup(opts)
   }
 
   config.options.on_colors(colors)
-  if opts.transform and config.is_day() then
-    util.invert_colors(colors)
-  end
 
   return colors
 end
