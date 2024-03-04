@@ -26,6 +26,7 @@ M.extras = {
   gitui = {ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI"},
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix"},
   fzf = { ext = "zsh", url = "https://github.com/junegunn/fzf", label = "Fzf"},
+  spotify_player = {ext = "toml", url = "https://github.com/aome510/spotify-player", label = "Spotify Player"},
 }
 
 local function write(str, fileName)
