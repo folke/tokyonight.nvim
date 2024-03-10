@@ -137,8 +137,8 @@ function M.setup()
     Debug = { fg = c.orange }, --    debugging statements
 
     Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
-    Bold = { bold = true },
-    Italic = { italic = true },
+    Bold = { bold = true, fg = c.fg }, -- (preferred) any bold text
+    Italic = { italic = true, fg = c.fg }, -- (preferred) any italic text
 
     -- ("Ignore", below, may be invisible...)
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
