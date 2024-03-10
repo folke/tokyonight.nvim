@@ -36,11 +36,11 @@ keyword = { fg = "#fca7ea", modifiers = ["italic"] }
 "keyword.function" = { fg = "#c099ff" }
 "keyword.operator" = { fg = "#c099ff" }
 label = { fg = "#82aaff" }
-"markup.bold" = { modifiers = ["bold"] }
+"markup.bold" = { fg = "#c8d3f5", modifiers = ["bold"] }
 "markup.heading" = 
 "markup.heading.completion" = { bg = "#1e2030", fg = "#c8d3f5" }
 "markup.heading.hover" = { bg = "#363c58" }
-"markup.italic" = { modifiers = ["italic"] }
+"markup.italic" = { fg = "#c8d3f5", modifiers = ["italic"] }
 "markup.link" = { fg = "#82aaff", underline = { style = "line" } }
 "markup.link.label" = { fg = "#4fd6be" }
 "markup.link.text" = { fg = "#4fd6be" }

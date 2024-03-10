@@ -619,7 +619,8 @@ local highlights = {
     fg = "#ff9e64"
   },
   Bold = {
-    bold = true
+    bold = true,
+    fg = "#c0caf5"
   },
   BufferAlternate = {
     bg = "#3b4261",
@@ -1240,6 +1241,7 @@ local highlights = {
     nocombine = true
   },
   Italic = {
+    fg = "#c0caf5",
     italic = true
   },
   Keyword = {
