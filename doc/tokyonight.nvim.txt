@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*      For Neovim >= 0.8.0      Last change: 2024 March 10
+*tokyonight.nvim.txt*      For Neovim >= 0.8.0      Last change: 2024 March 20
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -81,7 +81,7 @@ EXTRAS ~
 REQUIREMENTS                        *tokyonight.nvim-tokyo-night-requirements*
 
 - Neovim <https://github.com/neovim/neovim> >=
-    0.7.2 <https://github.com/neovim/neovim/releases/tag/v0.7.2>
+    0.8.0 <https://github.com/neovim/neovim/releases/tag/v0.8.0>
 
 
 INSTALLATION                        *tokyonight.nvim-tokyo-night-installation*
