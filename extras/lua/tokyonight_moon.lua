@@ -236,6 +236,9 @@ local highlights = {
   ["@lsp.type.namespace"] = {
     link = "@module"
   },
+  ["@lsp.type.namespace.python"] = {
+    link = "@variable"
+  },
   ["@lsp.type.number"] = {
     link = "@number"
   },
