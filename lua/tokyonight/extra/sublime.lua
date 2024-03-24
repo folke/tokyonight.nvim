@@ -6,6 +6,7 @@ local M = {}
 function M.generate(colors)
   colors.error_bg = util.darken(colors.error, 0.1)
   colors.warning_bg = util.darken(colors.warning, 0.1)
+  colors.info_bg = util.darken(colors.info, 0.1)
   local sublime = util.template(M.template, colors)
   return sublime
 end
@@ -171,6 +172,19 @@ M.template = [[
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Info</string>
+			<key>scope</key>
+			<string>markup.info</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>${info}</string>
+				<key>background</key>
+				<string>${info_bg}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Warning</string>
 			<key>scope</key>
 			<string>markup.warning</string>
@@ -178,8 +192,6 @@ M.template = [[
 			<dict>
 				<key>foreground</key>
 				<string>${warning}</string>
-        <key>fontStyle</key>
-        <string>bold</string>
 				<key>background</key>
 				<string>${warning_bg}</string>
 			</dict>
