@@ -131,6 +131,34 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Warning</string>
+			<key>scope</key>
+			<string>markup.warning</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#e0af68</string>
+        <key>fontStyle</key>
+        <string>bold</string>
+				<key>background</key>
+				<string>#2e2a2d</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Error</string>
+			<key>scope</key>
+			<string>markup.error</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#db4b4b</string>
+				<key>background</key>
+				<string>#2d202a</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Invalid</string>
 			<key>scope</key>
 			<string>invalid, invalid.illegal</string>
