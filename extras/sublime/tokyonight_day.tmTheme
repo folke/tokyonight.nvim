@@ -131,6 +131,19 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Info</string>
+			<key>scope</key>
+			<string>markup.info</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#07879d</string>
+				<key>background</key>
+				<string>#182632</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Warning</string>
 			<key>scope</key>
 			<string>markup.warning</string>
@@ -138,8 +151,6 @@
 			<dict>
 				<key>foreground</key>
 				<string>#8c6c3e</string>
-        <key>fontStyle</key>
-        <string>bold</string>
 				<key>background</key>
 				<string>#252328</string>
 			</dict>
