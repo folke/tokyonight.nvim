@@ -80,6 +80,22 @@ Install the theme with your preferred package manager, such as
 }
 ```
 
+[lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+{
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = { style = "moon" },
+  config = function(_, opts)
+    local tokyonight = require("tokyonight")
+    tokyonight.setup(opts)
+    tokyonight.load()
+  end,
+}
+```
+
 ## 🚀 Usage
 
 ### Vim Script
