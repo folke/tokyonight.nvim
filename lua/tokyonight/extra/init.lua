@@ -26,6 +26,7 @@ M.extras = {
   gitui = {ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI"},
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix"},
   fzf = { ext = "zsh", url = "https://github.com/junegunn/fzf", label = "Fzf"},
+  gnome_terminal = { ext = "dconf", url = "https://gitlab.gnome.org/GNOME/gnome-terminal", label = "GNOME Terminal"},
 }
 
 local function write(str, fileName)
