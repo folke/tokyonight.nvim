@@ -2302,6 +2302,14 @@ local highlights = {
     bg = "#16161e",
     fg = "#c0caf5"
   },
+  TelescopePromptBorder = {
+    bg = "#16161e",
+    fg = "#ff9e64"
+  },
+  TelescopePromptTitle = {
+    bg = "#16161e",
+    fg = "#ff9e64"
+  },
   Title = {
     bold = true,
     fg = "#7aa2f7"
