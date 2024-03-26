@@ -505,7 +505,7 @@ function M.setup()
     DashboardShortCut = { fg = c.cyan },
     DashboardHeader = { fg = c.blue },
     DashboardCenter = { fg = c.magenta },
-    DashboardFooter = { fg = c.blue1 },
+    DashboardFooter = { fg = c.blue0 },
     DashboardKey = { fg = c.orange },
     DashboardDesc = { fg = c.cyan },
     DashboardIcon = { fg = c.cyan, bold = true },
@@ -514,7 +514,7 @@ function M.setup()
     AlphaShortcut = { fg = c.orange },
     AlphaHeader = { fg = c.blue },
     AlphaHeaderLabel = { fg = c.orange },
-    AlphaFooter = { fg = c.blue1 },
+    AlphaFooter = { fg = c.blue0 },
     AlphaButtons = { fg = c.cyan },
 
     -- WhichKey
