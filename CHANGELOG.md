@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.1.0](https://github.com/folke/tokyonight.nvim/compare/v3.0.1...v3.1.0) (2024-03-28)
+
+
+### Features
+
+* **sublime:** added support for highlighting errors/warnings for sublime (bat etc) ([d088b15](https://github.com/folke/tokyonight.nvim/commit/d088b15433ee3db97fcdad615a0d4196157c4745))
+* **sublime:** highlights for info ([371220d](https://github.com/folke/tokyonight.nvim/commit/371220dfee2172fed6c216dc1dc1b4732044afcf))
+* **telescope:** prompt border in different color ([7ea04d5](https://github.com/folke/tokyonight.nvim/commit/7ea04d5c257c93d9f1c84ab770f76edc6357a13c))
+
+
+### Bug Fixes
+
+* **gitui:** wrap values in Some ([#508](https://github.com/folke/tokyonight.nvim/issues/508)) ([1372569](https://github.com/folke/tokyonight.nvim/commit/1372569c9f318305bbe90abc4af6dc9dfd5cd8a4))
+* **python:** import name from semantic tokens from basedpyright ([2983390](https://github.com/folke/tokyonight.nvim/commit/2983390e0ee59a40c02bb90df9bad860f251534a))
+* re-add `[@punctuation](https://github.com/punctuation).special` ([#484](https://github.com/folke/tokyonight.nvim/issues/484)) ([b37bc55](https://github.com/folke/tokyonight.nvim/commit/b37bc55d10fd575e9b7b713c59e07c85cb810f67))
+* **treesitter:** correctly link up delimiters again ([8c11d30](https://github.com/folke/tokyonight.nvim/commit/8c11d30a24c5ac8b719048ea4282466e9575b10f))
+* use regular fg for Bold/Italic ([710f901](https://github.com/folke/tokyonight.nvim/commit/710f901c175087c5eeaa77f91dbef4845f3a192f))
+
 ## [3.0.1](https://github.com/folke/tokyonight.nvim/compare/v3.0.0...v3.0.1) (2024-01-21)
 
 
