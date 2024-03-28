@@ -7,7 +7,7 @@ local function hex2rgb(key, value)
   local g = tonumber(hex:sub(3, 4), 16)
   local b = tonumber(hex:sub(5, 6), 16)
 
-  return string.format("Rgb(%s,%s,%s), // %s %s", r, g, b, key, value)
+  return string.format("Some(Rgb(%s,%s,%s)), // %s %s", r, g, b, key, value)
 end
 
 local M = {}
