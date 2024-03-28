@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*      For Neovim >= 0.8.0      Last change: 2024 March 26
+*tokyonight.nvim.txt*      For Neovim >= 0.8.0      Last change: 2024 March 28
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -16,6 +16,7 @@ Table of Contents                          *tokyonight.nvim-table-of-contents*
   - Overriding Colors & Highlight Groups|tokyonight.nvim-tokyo-night-overriding-colors-&-highlight-groups|
   - Extras                                |tokyonight.nvim-tokyo-night-extras|
   - Contributing                    |tokyonight.nvim-tokyo-night-contributing|
+2. Links                                               |tokyonight.nvim-links|
 
 ==============================================================================
 1. Tokyo Night                                   *tokyonight.nvim-tokyo-night*
