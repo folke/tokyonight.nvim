@@ -1495,6 +1495,15 @@ local highlights = {
   MiniCursorwordCurrent = {
     bg = "#a8aecb"
   },
+  MiniDiffSignAdd = {
+    fg = "#399a96"
+  },
+  MiniDiffSignChange = {
+    fg = "#6482bd"
+  },
+  MiniDiffSignDelete = {
+    fg = "#c25d64"
+  },
   MiniIndentscopePrefix = {
     nocombine = true
   },
