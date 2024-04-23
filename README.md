@@ -59,6 +59,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
 - [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](extras/xresources))
 - [Zathura](https://pwmt.org/projects/zathura/) ([zathura](extras/zathura))
+- [Zellij](https://zellij.dev/) ([zellij](extras/zellij))
 <!-- extras:end -->
 
 ## ⚡️ Requirements

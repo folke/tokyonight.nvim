@@ -1,0 +1,20 @@
+// Tokyonight Zellij Colors
+// Add this file to your `CONFIG_DIR/themes` directory as described here:
+// https://zellij.dev/documentation/themes#getting-zellij-to-pick-up-the-theme
+
+themes {
+    tokyonight_day {
+        fg "#3760bf"
+        bg "#e1e2e7"
+        black "#e9e9ed"
+        red "#f52a65"
+        green "#587539"
+        yellow "#8c6c3e"
+        blue "#2e7de9"
+        magenta "#9854f1"
+        cyan "#007197"
+        white "#6172b0"
+        orange "#b15c00"
+    }
+}
+
