@@ -27,6 +27,7 @@ M.extras = {
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix"},
   fzf = { ext = "zsh", url = "https://github.com/junegunn/fzf", label = "Fzf"},
   zellij = {ext = "kdl", url = "https://zellij.dev/", label = "Zellij"},
+  slack = {ext = "txt", url = "https://slack.com", label = "Slack"},
 }
 
 local function write(str, fileName)
