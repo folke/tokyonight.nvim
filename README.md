@@ -307,7 +307,7 @@ How to add a new extra template:
 3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
 
    ```sh
-   nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+   nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('tokyonight.extra').setup()" --cmd qa
    ```
 
 4. Check the newly created themes in the `extra/` directory. Please **DO NOT**
