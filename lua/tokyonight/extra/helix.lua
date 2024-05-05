@@ -87,7 +87,7 @@ function M.generate(colors)
     ["function"] = {
       "Function",
       builtin = "@function.builtin",
-      method = "@method",
+      method = "@function.method",
       macro = "@function.macro",
       -- Defined as "preprocessor in C", so using "PreProc", not sure though
       special = "PreProc",
@@ -97,12 +97,12 @@ function M.generate(colors)
       -- ???
       builtin = nil,
     },
-    namespace = "@namespace",
+    namespace = "@lsp.type.namespace",
     special = "Special",
     markup = {
       nil,
       heading = {
-        "@text.title",
+        "@markup.heading",
         marker = nil,
         -- post-processed to remove the 'h' as we already use the first element (1) as the root value.
         h1 = nil,
