@@ -973,7 +973,8 @@ local highlights = {
     bg = "#c4c8da"
   },
   CursorLineNr = {
-    fg = "#68709a"
+    bold = true,
+    fg = "#b15c00"
   },
   DapStoppedLine = {
     bg = "#d0cccf"
@@ -1321,6 +1322,12 @@ local highlights = {
     fg = "#07879d"
   },
   LineNr = {
+    fg = "#a8aecb"
+  },
+  LineNrAbove = {
+    fg = "#a8aecb"
+  },
+  LineNrBelow = {
     fg = "#a8aecb"
   },
   LspCodeLens = {
@@ -2318,6 +2325,9 @@ local highlights = {
   TelescopePromptTitle = {
     bg = "#e9e9ec",
     fg = "#b15c00"
+  },
+  TelescopeResultsComment = {
+    fg = "#8990b3"
   },
   Title = {
     bold = true,

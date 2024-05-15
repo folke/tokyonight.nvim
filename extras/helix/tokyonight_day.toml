@@ -67,7 +67,7 @@ type = { fg = "#188092" }
 "ui.cursor" = { bg = "#3760bf", fg = "#e1e2e7" }
 "ui.cursor.match" = { fg = "#b15c00", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#a8aecb" }
-"ui.linenr.select" = { fg = "#68709a" }
+"ui.linenr.select" = { fg = "#b15c00", modifiers = ["bold"] }
 "ui.menu" = { bg = "#e9e9ec", fg = "#3760bf" }
 "ui.menu.scroll" = { bg = 14211292, fg = 11054795 }
 "ui.menu.selected" = { bg = "#b3b8d1" }
