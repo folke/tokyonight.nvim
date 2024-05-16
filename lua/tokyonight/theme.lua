@@ -673,9 +673,9 @@ function M.setup()
     AerialLine = { link = "LspInlayHint" },
 
     IndentBlanklineChar = { fg = c.fg_gutter, nocombine = true },
-    IndentBlanklineContextChar = { fg = c.purple, nocombine = true },
+    IndentBlanklineContextChar = { fg = c.blue1, nocombine = true },
     IblIndent = { fg = c.fg_gutter, nocombine = true },
-    IblScope = { fg = c.purple, nocombine = true },
+    IblScope = { fg = c.blue1, nocombine = true },
 
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
