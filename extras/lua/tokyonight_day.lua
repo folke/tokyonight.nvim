@@ -1216,7 +1216,7 @@ local highlights = {
     nocombine = true
   },
   IblScope = {
-    fg = "#7847bd",
+    fg = "#188092",
     nocombine = true
   },
   Identifier = {
@@ -1241,7 +1241,7 @@ local highlights = {
     nocombine = true
   },
   IndentBlanklineContextChar = {
-    fg = "#7847bd",
+    fg = "#188092",
     nocombine = true
   },
   Italic = {
