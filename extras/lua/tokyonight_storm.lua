@@ -1244,6 +1244,14 @@ local highlights = {
     fg = "#2ac3de",
     nocombine = true
   },
+  IndentLine = {
+    fg = "#3b4261",
+    nocombine = true
+  },
+  IndentLineCurrent = {
+    fg = "#2ac3de",
+    nocombine = true
+  },
   Italic = {
     fg = "#c0caf5",
     italic = true
@@ -1776,6 +1784,12 @@ local highlights = {
   },
   NeoTreeDimText = {
     fg = "#3b4261"
+  },
+  NeoTreeGitModified = {
+    fg = "#ff9e64"
+  },
+  NeoTreeGitUntracked = {
+    fg = "#bb9af7"
   },
   NeoTreeNormal = {
     bg = "#1f2335",
