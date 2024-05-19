@@ -358,6 +358,9 @@ local highlights = {
     bold = true,
     fg = "#fca7ea"
   },
+  ["@markup.italic"] = {
+    italic = true
+  },
   ["@markup.link"] = {
     fg = "#4fd6be"
   },
