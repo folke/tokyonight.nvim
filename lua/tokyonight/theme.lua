@@ -253,6 +253,7 @@ function M.setup()
     ["@markup.math"] = { link = "Special" },
     ["@markup.strong"] = { bold = true },
     ["@markup.emphasis"] = { italic = true },
+    ["@markup.italic"] = { italic = true },
     ["@markup.strikethrough"] = { strikethrough = true },
     ["@markup.underline"] = { underline = true },
     ["@markup.heading"] = { link = "Title" },
