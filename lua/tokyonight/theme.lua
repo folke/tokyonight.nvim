@@ -657,6 +657,9 @@ function M.setup()
 
     CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
 
+    NeoTreeGitModified = { fg = c.orange },
+    NeoTreeGitUntracked = { fg = c.magenta },
+
     CmpItemKindCodeium = { fg = c.teal, bg = c.none },
     CmpItemKindCopilot = { fg = c.teal, bg = c.none },
     CmpItemKindTabNine = { fg = c.teal, bg = c.none },
