@@ -58,6 +58,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](extras/windows_terminal))
 - [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
 - [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](extras/xresources))
+- [Yazi](https://github.com/sxyazi/yazi) ([yazi](extras/yazi))
 - [Zathura](https://pwmt.org/projects/zathura/) ([zathura](extras/zathura))
 - [Zellij](https://zellij.dev/) ([zellij](extras/zellij))
 <!-- extras:end -->
