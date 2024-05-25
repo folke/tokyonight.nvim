@@ -200,7 +200,7 @@ function M.setup()
 
     LspSignatureActiveParameter = { bg = util.darken(c.bg_visual, 0.4), bold = true },
     LspCodeLens = { fg = c.comment },
-    LspInlayHint = { bg = util.darken(c.blue7, 0.1), fg = c.dark3 },
+    LspInlayHint = { bg = util.darken(c.blue7, 0.1), fg = c.dark5 },
 
     LspInfoBorder = { fg = c.border_highlight, bg = c.bg_float },
 
