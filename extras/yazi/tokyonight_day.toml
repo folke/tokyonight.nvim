@@ -10,9 +10,7 @@ preview_hovered = { bg = "#c4c8da" }
 
 # Find
 find_keyword  = { fg = "#e9e9ec", bg = "#b15c00", bold = true }
-# DiagnosticVirtualTextInfo/NoiceVirtualText bg is better 
-# than dark5 for find_position bg
-find_position = { fg = "#07879d", bg = "#68709a", bold = true }
+find_position = { fg = "#07879d", bg = "#182632", bold = true }
 
 # Marker
 marker_copied   = { fg = "#387068", bg = "#387068" }
