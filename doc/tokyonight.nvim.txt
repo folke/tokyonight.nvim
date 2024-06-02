@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2024 May 26
+*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2024 May 31
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*

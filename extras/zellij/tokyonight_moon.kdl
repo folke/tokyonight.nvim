@@ -5,7 +5,7 @@
 themes {
     tokyonight_moon {
         fg "#c8d3f5"
-        bg "#222436"
+        bg "#2f334d"
         black "#1b1d2b"
         red "#ff757f"
         green "#c3e88d"
