@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*       For Neovim >= 0.8.0       Last change: 2024 May 31
+*tokyonight.nvim.txt*       For Neovim >= 0.8.0      Last change: 2024 June 05
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -66,6 +66,7 @@ EXTRAS ~
 - Helix <https://helix-editor.com/> (helix <extras/helix>)
 - iTerm <https://iterm2.com/> (iterm <extras/iterm>)
 - Kitty <https://sw.kovidgoyal.net/kitty/conf.html> (kitty <extras/kitty>)
+- Lazygit <https://github.com/jesseduffield/lazygit> (lazygit <extras/lazygit>)
 - Lua Table for testing <https://www.lua.org> (lua <extras/lua>)
 - Prism <https://prismjs.com> (prism <extras/prism>)
 - Sublime Text <https://www.sublimetext.com/docs/themes> (sublime <extras/sublime>)
