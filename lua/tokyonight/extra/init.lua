@@ -15,6 +15,7 @@ M.extras = {
   foot = {ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot"},
   tilix = {ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix"},
   iterm = {ext = "itermcolors", url = "https://iterm2.com/", label = "iTerm"},
+  lazygit = {ext = "conf", url = "https://github.com/jesseduffield/lazygit", label = "Lazygit"},
   lua = {ext = "lua", url = "https://www.lua.org", label = "Lua Table for testing"},
   sublime = {ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text"},
   delta = {ext = "gitconfig", url = "https://github.com/dandavison/delta", label = "Delta"},
