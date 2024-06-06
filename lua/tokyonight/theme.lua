@@ -497,6 +497,10 @@ function M.setup()
     NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeDimText = { fg = c.fg_gutter },
+    NeoTreeGitModified = { fg = c.orange },
+    NeoTreeGitUntracked = { fg = c.magenta },
+    NeoTreeGitStaged = { fg = c.green1 },
+    NeoTreeFileName = { fg = c.fg_sidebar },
 
     -- Fern
     FernBranchText = { fg = c.blue },
@@ -657,9 +661,6 @@ function M.setup()
     CmpItemMenu = { fg = c.comment, bg = c.none },
 
     CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
-
-    NeoTreeGitModified = { fg = c.orange },
-    NeoTreeGitUntracked = { fg = c.magenta },
 
     CmpItemKindCodeium = { fg = c.teal, bg = c.none },
     CmpItemKindCopilot = { fg = c.teal, bg = c.none },
