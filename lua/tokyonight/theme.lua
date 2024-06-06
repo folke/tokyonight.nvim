@@ -684,6 +684,16 @@ function M.setup()
     IndentLine = { fg = c.fg_gutter, nocombine = true },
     IndentLineCurrent = { fg = c.blue1, nocombine = true },
 
+    OctoDirty = { fg = c.orange, bold = true },
+    OctoDetailsLabel = { fg = c.blue1, bold = true },
+    OctoDetailsValue = { link = "@variable.member" },
+    OctoIssueTitle = { fg = c.purple, bold = true },
+    OctoStateOpen = { link = "DiagnosticVirtualTextHint" },
+    OctoStateClosed = { link = "DiagnosticVirtualTextError" },
+    OctoStatePending = { link = "DiagnosticVirtualTextWarn" },
+    OctoStateChangesRequested = { link = "DiagnosticVirtualTextWarn" },
+    OctoStateMerged = { bg = util.darken(c.magenta, 0.1), fg = c.magenta },
+
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
 
