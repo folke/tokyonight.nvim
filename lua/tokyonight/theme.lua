@@ -215,6 +215,7 @@ function M.setup()
     ["@boolean"] = { link = "Boolean" },
     ["@character"] = { link = "Character" },
     ["@character.special"] = { link = "SpecialChar" },
+    ["@character.printf"] = { link = "SpecialChar" },
     ["@comment"] = { link = "Comment" },
     ["@keyword.conditional"] = { link = "Conditional" },
     ["@constant"] = { link = "Constant" },
