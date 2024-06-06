@@ -51,7 +51,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Lazygit](https://github.com/jesseduffield/lazygit) ([lazygit](extras/lazygit))
 - [Lua Table for testing](https://www.lua.org) ([lua](extras/lua))
 - [Prism](https://prismjs.com) ([prism](extras/prism))
-- [Sublime Text](https://www.sublimetext.com/docs/themes.html) ([sublime](extras/sublime))
+- [Sublime Text](https://www.sublimetext.com/docs/themes) ([sublime](extras/sublime))
 - [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](extras/terminator))
 - [Tilix](https://github.com/gnunn1/tilix) ([tilix](extras/tilix))
 - [Tmux](https://github.com/tmux/tmux/wiki) ([tmux](extras/tmux))
