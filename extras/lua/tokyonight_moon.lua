@@ -1788,8 +1788,14 @@ local highlights = {
   NeoTreeDimText = {
     fg = "#3b4261"
   },
+  NeoTreeFileName = {
+    fg = "#828bb8"
+  },
   NeoTreeGitModified = {
     fg = "#ff966c"
+  },
+  NeoTreeGitStaged = {
+    fg = "#4fd6be"
   },
   NeoTreeGitUntracked = {
     fg = "#c099ff"
