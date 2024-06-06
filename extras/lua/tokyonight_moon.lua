@@ -2127,6 +2127,37 @@ local highlights = {
     bg = "#1e2030",
     fg = "#1e2030"
   },
+  OctoDetailsLabel = {
+    bold = true,
+    fg = "#65bcff"
+  },
+  OctoDetailsValue = {
+    link = "@variable.member"
+  },
+  OctoDirty = {
+    bold = true,
+    fg = "#ff966c"
+  },
+  OctoIssueTitle = {
+    bold = true,
+    fg = "#fca7ea"
+  },
+  OctoStateChangesRequested = {
+    link = "DiagnosticVirtualTextWarn"
+  },
+  OctoStateClosed = {
+    link = "DiagnosticVirtualTextError"
+  },
+  OctoStateMerged = {
+    bg = "#32304a",
+    fg = "#c099ff"
+  },
+  OctoStateOpen = {
+    link = "DiagnosticVirtualTextHint"
+  },
+  OctoStatePending = {
+    link = "DiagnosticVirtualTextWarn"
+  },
   Operator = {
     fg = "#89ddff"
   },
