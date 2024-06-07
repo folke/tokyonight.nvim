@@ -2161,6 +2161,9 @@ local highlights = {
   OctoStatePending = {
     link = "DiagnosticVirtualTextWarn"
   },
+  OctoStatusColumn = {
+    fg = "#2ac3de"
+  },
   Operator = {
     fg = "#89ddff"
   },
