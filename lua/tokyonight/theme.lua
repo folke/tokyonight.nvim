@@ -686,6 +686,7 @@ function M.setup()
     IndentLineCurrent = { fg = c.blue1, nocombine = true },
 
     OctoDirty = { fg = c.orange, bold = true },
+    OctoStatusColumn = { fg = c.blue1 },
     OctoDetailsLabel = { fg = c.blue1, bold = true },
     OctoDetailsValue = { link = "@variable.member" },
     OctoIssueTitle = { fg = c.purple, bold = true },
