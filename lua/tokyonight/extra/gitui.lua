@@ -1,53 +1,36 @@
 local util = require("tokyonight.util")
 
-local function hex2rgb(key, value)
-  local hex = value:gsub("#", "")
-
-  local r = tonumber(hex:sub(1, 2), 16)
-  local g = tonumber(hex:sub(3, 4), 16)
-  local b = tonumber(hex:sub(5, 6), 16)
-
-  return string.format("Some(Rgb(%s,%s,%s)), // %s %s", r, g, b, key, value)
-end
-
 local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  local gitui_colors = {}
-  for k, v in pairs(colors) do
-    if type(v) == "string" then
-      gitui_colors[k] = hex2rgb(k, v)
-    end
-  end
-
   local gitui = util.template(
     [[
 (
-  selected_tab: ${magenta}
-  command_fg: ${comment}
-  selection_bg: ${bg_highlight}
-  selection_fg: ${cyan}
-  cmdbar_bg: ${bg}
-  cmdbar_extra_lines_bg: ${bg}
-  disabled_fg: ${comment}
-  diff_line_add: ${green}
-  diff_line_delete: ${red}
-  diff_file_added: ${green1}
-  diff_file_removed: ${red1}
-  diff_file_moved: ${magenta2}
-  diff_file_modified: ${yellow}
-  commit_hash: ${magenta}
-  commit_time: ${teal}
-  commit_author: ${green}
-  danger_fg: ${red}
-  push_gauge_bg: ${bg}
-  push_gauge_fg: ${fg}
-  tag_fg: ${magenta2}
-  branch_fg: ${yellow}
+  selected_tab: Some("${magenta}"),
+  command_fg: Some("${comment}"),
+  selection_bg: Some("${bg_highlight}"),
+  selection_fg: Some("${cyan}"),
+  cmdbar_bg: Some("${bg}"),
+  cmdbar_extra_lines_bg: Some("${bg}"),
+  disabled_fg: Some("${comment}"),
+  diff_line_add: Some("${green}"),
+  diff_line_delete: Some("${red}"),
+  diff_file_added: Some("${green1}"),
+  diff_file_removed: Some("${red1}"),
+  diff_file_moved: Some("${magenta2}"),
+  diff_file_modified: Some("${yellow}"),
+  commit_hash: Some("${magenta}"),
+  commit_time: Some("${teal}"),
+  commit_author: Some("${green}"),
+  danger_fg: Some("${red}"),
+  push_gauge_bg: Some("${bg}"),
+  push_gauge_fg: Some("${fg}"),
+  tag_fg: Some("${magenta2}"),
+  branch_fg: Some("${yellow}")
 )
 ]],
-    gitui_colors
+    colors
   )
 
   return gitui
