@@ -476,6 +476,14 @@ function M.setup()
     TelescopePromptTitle = { fg = c.orange, bg = c.bg_float },
     TelescopeResultsComment = { fg = c.dark3 },
 
+    -- FzfLua
+    FzfLuaBorder = { fg = c.border_highlight, bg = c.bg_float },
+    FzfLuaNormal = { fg = c.fg, bg = c.bg_float },
+    FzfLuaTitle = { fg = c.orange, bg = c.bg_float },
+    FzfLuaPreviewTitle = { fg = c.border_highlight, bg = c.bg_float },
+    FzfLuaResultsComment = { fg = c.dark3 },
+    FzfLuaMarker = { fg = c.magenta2 },
+
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeWinSeparator = {
