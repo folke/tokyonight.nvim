@@ -1131,6 +1131,28 @@ local highlights = {
     fg = "#7aa2f7",
     style = {}
   },
+  FzfLuaBorder = {
+    bg = "#1f2335",
+    fg = "#29a4bd"
+  },
+  FzfLuaMarker = {
+    fg = "#ff007c"
+  },
+  FzfLuaNormal = {
+    bg = "#1f2335",
+    fg = "#c0caf5"
+  },
+  FzfLuaPreviewTitle = {
+    bg = "#1f2335",
+    fg = "#29a4bd"
+  },
+  FzfLuaResultsComment = {
+    fg = "#545c7e"
+  },
+  FzfLuaTitle = {
+    bg = "#1f2335",
+    fg = "#ff9e64"
+  },
   GitGutterAdd = {
     fg = "#266d6a"
   },
