@@ -1135,8 +1135,21 @@ local highlights = {
     bg = "#1f2335",
     fg = "#29a4bd"
   },
-  FzfLuaMarker = {
+  FzfLuaColorsCursorLine = {
+    link = "Visual"
+  },
+  FzfLuaColorsPointer = {
     fg = "#ff007c"
+  },
+  FzfLuaColorsSeparator = {
+    bg = "#1f2335",
+    fg = "#ff9e64"
+  },
+  FzfLuaHeaderBind = {
+    link = "@punctuation.special"
+  },
+  FzfLuaHeaderText = {
+    link = "Title"
   },
   FzfLuaNormal = {
     bg = "#1f2335",
@@ -1145,9 +1158,6 @@ local highlights = {
   FzfLuaPreviewTitle = {
     bg = "#1f2335",
     fg = "#29a4bd"
-  },
-  FzfLuaResultsComment = {
-    fg = "#545c7e"
   },
   FzfLuaTitle = {
     bg = "#1f2335",
