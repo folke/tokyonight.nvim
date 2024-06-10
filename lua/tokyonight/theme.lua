@@ -481,8 +481,11 @@ function M.setup()
     FzfLuaNormal = { fg = c.fg, bg = c.bg_float },
     FzfLuaTitle = { fg = c.orange, bg = c.bg_float },
     FzfLuaPreviewTitle = { fg = c.border_highlight, bg = c.bg_float },
-    FzfLuaResultsComment = { fg = c.dark3 },
-    FzfLuaMarker = { fg = c.magenta2 },
+    FzfLuaHeaderBind = { link = "@punctuation.special" },
+    FzfLuaHeaderText = { link = "Title" },
+    FzfLuaColorsPointer = { fg = c.magenta2 },
+    FzfLuaColorsCursorLine = { link = "Visual" },
+    FzfLuaColorsSeparator = { fg = c.orange, bg = c.bg_float },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
