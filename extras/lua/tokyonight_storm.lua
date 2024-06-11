@@ -1135,13 +1135,16 @@ local highlights = {
     bg = "#1f2335",
     fg = "#29a4bd"
   },
-  FzfLuaColorsCursorLine = {
+  FzfLuaCursor = {
+    link = "IncSearch"
+  },
+  FzfLuaFzfCursorLine = {
     link = "Visual"
   },
-  FzfLuaColorsPointer = {
+  FzfLuaFzfPointer = {
     fg = "#ff007c"
   },
-  FzfLuaColorsSeparator = {
+  FzfLuaFzfSeparator = {
     bg = "#1f2335",
     fg = "#ff9e64"
   },
@@ -1154,6 +1157,9 @@ local highlights = {
   FzfLuaNormal = {
     bg = "#1f2335",
     fg = "#c0caf5"
+  },
+  FzfLuaPath = {
+    link = "Directory"
   },
   FzfLuaPreviewTitle = {
     bg = "#1f2335",
