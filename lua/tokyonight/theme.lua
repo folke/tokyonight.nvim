@@ -278,7 +278,7 @@ function M.setup()
     ["@punctuation.delimiter"] = { fg = c.blue5 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue5 }, -- For special symbols (e.g. `{}` in string interpolation)
-    ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
+    ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the categories before.
     ["@markup.list.markdown"] = { fg = c.orange, bold = true },
 
     --- Literals
@@ -293,7 +293,7 @@ function M.setup()
 
     --- Keywords
     ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a function.
 
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
 
