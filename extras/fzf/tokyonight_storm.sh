@@ -2,7 +2,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
   --ansi \
-  --layout=reverse \
   --border=none
   --color=bg+:#2e3c64 \
   --color=bg:#1f2335 \
