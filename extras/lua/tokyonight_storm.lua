@@ -1138,6 +1138,9 @@ local highlights = {
   FzfLuaCursor = {
     link = "IncSearch"
   },
+  FzfLuaDirPart = {
+    link = "Directory"
+  },
   FzfLuaFzfCursorLine = {
     link = "Visual"
   },
