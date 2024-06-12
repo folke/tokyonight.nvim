@@ -5,7 +5,6 @@ local M = {}
 --- @param colors ColorScheme
 function M.generate(colors)
   local links = {
-    FzfLuaFzfNormal = "FzfLuaNormal",
     FzfLuaFzfCursorLine = "CursorLine",
     FzfLuaFzfMatch = "Special",
     FzfLuaFzfBorder = "FzfLuaBorder",
@@ -22,8 +21,8 @@ function M.generate(colors)
   }
 
   local spec = {
-    ["fg"] = { "fg", "FzfLuaFzfNormal" },
-    ["bg"] = { "bg", "FzfLuaFzfNormal" },
+    ["fg"] = { "fg", "FzfLuaNormal" },
+    ["bg"] = { "bg", "FzfLuaNormal" },
     ["hl"] = { "fg", "FzfLuaFzfMatch" },
     -- ["fg+"] = { "fg", "FzfLuaFzfCursorLine" },
     ["bg+"] = { "bg", "FzfLuaFzfCursorLine" },
