@@ -1141,8 +1141,14 @@ local highlights = {
   FzfLuaDirPart = {
     link = "Directory"
   },
+  FzfLuaFilePart = {
+    link = "FzfLuaFzfNormal"
+  },
   FzfLuaFzfCursorLine = {
     link = "Visual"
+  },
+  FzfLuaFzfNormal = {
+    fg = "#c0caf5"
   },
   FzfLuaFzfPointer = {
     fg = "#ff007c"
