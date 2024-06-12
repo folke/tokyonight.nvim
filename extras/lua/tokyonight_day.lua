@@ -1139,7 +1139,7 @@ local highlights = {
     link = "IncSearch"
   },
   FzfLuaDirPart = {
-    link = "Directory"
+    fg = "#848cb5"
   },
   FzfLuaFilePart = {
     link = "FzfLuaFzfNormal"
