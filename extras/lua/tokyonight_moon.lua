@@ -82,6 +82,9 @@ local highlights = {
   ["@character"] = {
     link = "Character"
   },
+  ["@character.printf"] = {
+    link = "SpecialChar"
+  },
   ["@character.special"] = {
     link = "SpecialChar"
   },
@@ -1128,6 +1131,47 @@ local highlights = {
     fg = "#82aaff",
     style = {}
   },
+  FzfLuaBorder = {
+    bg = "#1e2030",
+    fg = "#589ed7"
+  },
+  FzfLuaCursor = {
+    link = "IncSearch"
+  },
+  FzfLuaDirPart = {
+    link = "Directory"
+  },
+  FzfLuaFzfCursorLine = {
+    link = "Visual"
+  },
+  FzfLuaFzfPointer = {
+    fg = "#ff007c"
+  },
+  FzfLuaFzfSeparator = {
+    bg = "#1e2030",
+    fg = "#ff966c"
+  },
+  FzfLuaHeaderBind = {
+    link = "@punctuation.special"
+  },
+  FzfLuaHeaderText = {
+    link = "Title"
+  },
+  FzfLuaNormal = {
+    bg = "#1e2030",
+    fg = "#c8d3f5"
+  },
+  FzfLuaPath = {
+    link = "Directory"
+  },
+  FzfLuaPreviewTitle = {
+    bg = "#1e2030",
+    fg = "#589ed7"
+  },
+  FzfLuaTitle = {
+    bg = "#1e2030",
+    fg = "#ff966c"
+  },
   GitGutterAdd = {
     fg = "#627259"
   },
@@ -1788,8 +1832,14 @@ local highlights = {
   NeoTreeDimText = {
     fg = "#3b4261"
   },
+  NeoTreeFileName = {
+    fg = "#828bb8"
+  },
   NeoTreeGitModified = {
     fg = "#ff966c"
+  },
+  NeoTreeGitStaged = {
+    fg = "#4fd6be"
   },
   NeoTreeGitUntracked = {
     fg = "#c099ff"
@@ -2120,6 +2170,40 @@ local highlights = {
   NvimTreeWinSeparator = {
     bg = "#1e2030",
     fg = "#1e2030"
+  },
+  OctoDetailsLabel = {
+    bold = true,
+    fg = "#65bcff"
+  },
+  OctoDetailsValue = {
+    link = "@variable.member"
+  },
+  OctoDirty = {
+    bold = true,
+    fg = "#ff966c"
+  },
+  OctoIssueTitle = {
+    bold = true,
+    fg = "#fca7ea"
+  },
+  OctoStateChangesRequested = {
+    link = "DiagnosticVirtualTextWarn"
+  },
+  OctoStateClosed = {
+    link = "DiagnosticVirtualTextError"
+  },
+  OctoStateMerged = {
+    bg = "#32304a",
+    fg = "#c099ff"
+  },
+  OctoStateOpen = {
+    link = "DiagnosticVirtualTextHint"
+  },
+  OctoStatePending = {
+    link = "DiagnosticVirtualTextWarn"
+  },
+  OctoStatusColumn = {
+    fg = "#65bcff"
   },
   Operator = {
     fg = "#89ddff"
