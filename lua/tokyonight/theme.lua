@@ -479,9 +479,11 @@ function M.setup()
     -- FzfLua
     FzfLuaBorder = { fg = c.border_highlight, bg = c.bg_float },
     FzfLuaNormal = { fg = c.fg, bg = c.bg_float },
+    FzfLuaFzfNormal = { fg = c.fg },
     FzfLuaTitle = { fg = c.orange, bg = c.bg_float },
     FzfLuaPreviewTitle = { fg = c.border_highlight, bg = c.bg_float },
     FzfLuaDirPart = { link = "Directory" },
+    FzfLuaFilePart = { link = "FzfLuaFzfNormal" },
     -- FzfLuaTitle = { bg = c.bg_highlight, fg = c.orange },
     -- FzfLuaPreviewTitle = { bg = c.bg_dark, fg = c.bg_dark },
     FzfLuaCursor = { link = "IncSearch" },
