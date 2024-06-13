@@ -482,13 +482,8 @@ function M.setup()
     FzfLuaFzfNormal = { fg = c.fg },
     FzfLuaTitle = { fg = c.orange, bg = c.bg_float },
     FzfLuaPreviewTitle = { fg = c.border_highlight, bg = c.bg_float },
-    -- FzfLuaDirPart = { link = "Directory" },
     FzfLuaFilePart = { link = "FzfLuaFzfNormal" },
-    -- FzfLuaDirPart = { fg = c.dark3 },
-    -- FzfLuaDirPart = { fg = c.dark5 },
-    FzfLuaDirPart = { fg = c.comment },
-    -- FzfLuaTitle = { bg = c.bg_highlight, fg = c.orange },
-    -- FzfLuaPreviewTitle = { bg = c.bg_dark, fg = c.bg_dark },
+    FzfLuaDirPart = { fg = c.dark3 },
     FzfLuaCursor = { link = "IncSearch" },
     FzfLuaHeaderBind = { link = "@punctuation.special" },
     FzfLuaHeaderText = { link = "Title" },
@@ -827,6 +822,12 @@ function M.setup()
     -- Noice
 
     NoiceCompletionItemKindDefault = { fg = c.fg_dark, bg = c.none },
+    NoiceCmdlineIconLua = { fg = c.blue1 },
+    NoiceCmdlinePopupBorderLua = { fg = c.blue1 },
+    NoiceCmdlinePopupTitleLua = { fg = c.blue1 },
+    NoiceCmdlineIconInput = { fg = c.yellow },
+    NoiceCmdlinePopupBorderInput = { fg = c.yellow },
+    NoiceCmdlinePopupTitleInput = { fg = c.yellow },
 
     TreesitterContext = { bg = util.darken(c.fg_gutter, 0.8) },
     Hlargs = { fg = c.yellow },
