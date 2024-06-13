@@ -1139,7 +1139,7 @@ local highlights = {
     link = "IncSearch"
   },
   FzfLuaDirPart = {
-    fg = "#848cb5"
+    fg = "#8990b3"
   },
   FzfLuaFilePart = {
     link = "FzfLuaFzfNormal"
@@ -1932,6 +1932,24 @@ local highlights = {
   },
   NeotestWinSelect = {
     fg = "#2e7de9"
+  },
+  NoiceCmdlineIconInput = {
+    fg = "#8c6c3e"
+  },
+  NoiceCmdlineIconLua = {
+    fg = "#188092"
+  },
+  NoiceCmdlinePopupBorderInput = {
+    fg = "#8c6c3e"
+  },
+  NoiceCmdlinePopupBorderLua = {
+    fg = "#188092"
+  },
+  NoiceCmdlinePopupTitleInput = {
+    fg = "#8c6c3e"
+  },
+  NoiceCmdlinePopupTitleLua = {
+    fg = "#188092"
   },
   NoiceCompletionItemKindArray = {
     link = "LspKindArray"
