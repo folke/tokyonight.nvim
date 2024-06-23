@@ -48,8 +48,9 @@ function M.setup()
     VertSplit = { fg = c.border }, -- the column separating vertically split windows
     WinSeparator = { fg = c.border, bold = true }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
-    FoldColumn = { bg = options.transparent and c.none or c.bg, fg = c.comment }, -- 'foldcolumn'
-    SignColumn = { bg = options.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
+    FoldColumn = { link = "LineNr" }, -- 'foldcolumn'
+    CursorLineFold = { link = "CursorLineNr" }, -- Like FoldColumn but when curosrline is on the fold column.
+    SignColumn = { link = "LineNr" }, -- column where |signs| are displayed
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -791,9 +792,9 @@ function M.setup()
     MiniStarterSection = { fg = c.blue1 },
     MiniStarterQuery = { fg = c.info },
 
-    MiniStatuslineDevinfo = { fg = c.fg_dark, bg = c.bg_highlight },
-    MiniStatuslineFileinfo = { fg = c.fg_dark, bg = c.bg_highlight },
-    MiniStatuslineFilename = { fg = c.fg_dark, bg = c.fg_gutter },
+    MiniStatuslineDevinfo = { fg = c.fg_dark, bg = c.fg_gutter },
+    MiniStatuslineFileinfo = { fg = c.fg_dark, bg = c.fg_gutter },
+    MiniStatuslineFilename = { fg = c.fg_dark, bg = c.bg_highlight },
     MiniStatuslineInactive = { fg = c.blue, bg = c.bg_statusline },
     MiniStatuslineModeCommand = { fg = c.black, bg = c.yellow, bold = true },
     MiniStatuslineModeInsert = { fg = c.black, bg = c.green, bold = true },
