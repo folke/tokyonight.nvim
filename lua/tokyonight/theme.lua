@@ -464,11 +464,6 @@ function M.setup()
     GitSignsChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
-    -- mini.diff
-    MiniDiffSignAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
-    MiniDiffSignChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
-    MiniDiffSignDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
-
     -- Telescope
     TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
     TelescopeNormal = { fg = c.fg, bg = c.bg_float },
@@ -769,17 +764,99 @@ function M.setup()
     NotifyTRACEBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
 
     -- Mini
+    MiniAnimateCursor = { reverse = true, nocombine = true },
+    MiniAnimateNormalFloat = { link = "NormalFloat" },
+
+    MiniClueBorder = { link = "FloatBorder" },
+    MiniClueDescGroup = { link = "DiagnosticFloatingWarn" },
+    MiniClueDescSingle = { link = "NormalFloat" },
+    MiniClueNextKey = { link = "DiagnosticFloatingHint" },
+    MiniClueNextKeyWithPostkeys = { link = "DiagnosticFloatingError" },
+    MiniClueSeparator = { link = "DiagnosticFloatingInfo" },
+    MiniClueTitle = { link = "FloatTitle" },
+
     MiniCompletionActiveParameter = { underline = true },
 
     MiniCursorword = { bg = c.fg_gutter },
     MiniCursorwordCurrent = { bg = c.fg_gutter },
+
+    MiniDepsChangeAdded = { link = "diffAdded" },
+    MiniDepsChangeRemoved = { link = "diffRemoved" },
+    MiniDepsHint = { link = "DiagnosticHint" },
+    MiniDepsInfo = { link = "DiagnosticInfo" },
+    MiniDepsMsgBreaking = { link = "DiagnosticWarn" },
+    MiniDepsPlaceholder = { link = "Comment" },
+    MiniDepsTitle = { link = "Title" },
+    MiniDepsTitleError = { fg = c.black, bg = c.git.delete },
+    MiniDepsTitleSame = { link = "Comment" },
+    MiniDepsTitleUpdate = { fg = c.black, bg = c.git.add },
+
+    MiniDiffSignAdd = { fg = c.gitSigns.add },
+    MiniDiffSignChange = { fg = c.gitSigns.change },
+    MiniDiffSignDelete = { fg = c.gitSigns.delete },
+    MiniDiffOverAdd = { link = "DiffAdd" },
+    MiniDiffOverChange = { link = "DiffText" },
+    MiniDiffOverContext = { link = "DiffChange" },
+    MiniDiffOverDelete = { link = "DiffDelete" },
+
+    MiniFilesBorder = { link = "FloatBorder" },
+    MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" },
+    MiniFilesCursorLine = { link = "CursorLine" },
+    MiniFilesDirectory = { link = "Directory" },
+    MiniFilesFile = { fg = c.fg_float },
+    MiniFilesNormal = { link = "NormalFloat" },
+    MiniFilesTitle = { link = "FloatTitle" },
+    MiniFilesTitleFocused = { fg = c.border_highlight, bg = c.bg_float, bold = true },
+
+    MiniHipatternsFixme = { fg = c.black, bg = c.error, bold = true },
+    MiniHipatternsHack = { fg = c.black, bg = c.warning, bold = true },
+    MiniHipatternsNote = { fg = c.black, bg = c.hint, bold = true },
+    MiniHipatternsTodo = { fg = c.black, bg = c.info, bold = true },
+
+    MiniIconsAzure = { fg = c.info },
+    MiniIconsBlue = { fg = c.blue },
+    MiniIconsCyan = { fg = c.hint },
+    MiniIconsGreen = { fg = c.green },
+    MiniIconsGrey = { fg = c.fg },
+    MiniIconsOrange = { fg = c.orange },
+    MiniIconsPurple = { fg = c.purple },
+    MiniIconsRed = { fg = c.red },
+    MiniIconsYellow = { fg = c.yellow },
 
     MiniIndentscopeSymbol = { fg = c.blue1, nocombine = true },
     MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
     MiniJump = { bg = c.magenta2, fg = "#ffffff" },
 
+    MiniJump2dDim = { link = "Comment" },
     MiniJump2dSpot = { fg = c.magenta2, bold = true, nocombine = true },
+    MiniJump2dSpotAhead = { fg = c.hint, bg = c.bg_dark, nocombine = true },
+    MiniJump2dSpotUnique = { fg = c.orange, bold = true, nocombine = true },
+
+    MiniMapNormal = { link = "NormalFloat" },
+    MiniMapSymbolCount = { link = "Special" },
+    MiniMapSymbolLine = { link = "Title" },
+    MiniMapSymbolView = { link = "Delimiter" },
+
+    MiniNotifyBorder = { link = "FloatBorder" },
+    MiniNotifyNormal = { link = "NormalFloat" },
+    MiniNotifyTitle = { link = "FloatTitle" },
+
+    MiniOperatorsExchangeFrom = { link = "IncSearch" },
+
+    MiniPickBorder = { link = "FloatBorder" },
+    MiniPickBorderBusy = { link = "DiagnosticFloatingWarn" },
+    MiniPickBorderText = { fg = c.hint, bg = c.bg_float },
+    MiniPickIconDirectory = { link = "Directory" },
+    MiniPickIconFile = { link = "MiniPickNormal" },
+    MiniPickHeader = { link = "DiagnosticFloatingHint" },
+    MiniPickMatchCurrent = { link = "CursorLine" },
+    MiniPickMatchMarked = { link = "Visual" },
+    MiniPickMatchRanges = { link = "DiagnosticFloatingHint" },
+    MiniPickNormal = { link = "NormalFloat" },
+    MiniPickPreviewLine = { link = "CursorLine" },
+    MiniPickPreviewRegion = { link = "IncSearch" },
+    MiniPickPrompt = { fg = c.info, bg = c.bg_float },
 
     MiniStarterCurrent = { nocombine = true },
     MiniStarterFooter = { fg = c.yellow, italic = true },
