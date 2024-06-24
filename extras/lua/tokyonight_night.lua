@@ -1554,6 +1554,34 @@ local highlights = {
     bold = true,
     fg = "#ff9e64"
   },
+  MiniAnimateCursor = {
+    nocombine = true,
+    reverse = true
+  },
+  MiniAnimateNormalFloat = {
+    link = "NormalFloat"
+  },
+  MiniClueBorder = {
+    link = "FloatBorder"
+  },
+  MiniClueDescGroup = {
+    link = "DiagnosticFloatingWarn"
+  },
+  MiniClueDescSingle = {
+    link = "NormalFloat"
+  },
+  MiniClueNextKey = {
+    link = "DiagnosticFloatingHint"
+  },
+  MiniClueNextKeyWithPostkeys = {
+    link = "DiagnosticFloatingError"
+  },
+  MiniClueSeparator = {
+    link = "DiagnosticFloatingInfo"
+  },
+  MiniClueTitle = {
+    link = "FloatTitle"
+  },
   MiniCompletionActiveParameter = {
     underline = true
   },
@@ -1563,6 +1591,50 @@ local highlights = {
   MiniCursorwordCurrent = {
     bg = "#3b4261"
   },
+  MiniDepsChangeAdded = {
+    link = "diffAdded"
+  },
+  MiniDepsChangeRemoved = {
+    link = "diffRemoved"
+  },
+  MiniDepsHint = {
+    link = "DiagnosticHint"
+  },
+  MiniDepsInfo = {
+    link = "DiagnosticInfo"
+  },
+  MiniDepsMsgBreaking = {
+    link = "DiagnosticWarn"
+  },
+  MiniDepsPlaceholder = {
+    link = "Comment"
+  },
+  MiniDepsTitle = {
+    link = "Title"
+  },
+  MiniDepsTitleError = {
+    bg = "#914c54",
+    fg = "#15161e"
+  },
+  MiniDepsTitleSame = {
+    link = "Comment"
+  },
+  MiniDepsTitleUpdate = {
+    bg = "#449dab",
+    fg = "#15161e"
+  },
+  MiniDiffOverAdd = {
+    link = "DiffAdd"
+  },
+  MiniDiffOverChange = {
+    link = "DiffText"
+  },
+  MiniDiffOverContext = {
+    link = "DiffChange"
+  },
+  MiniDiffOverDelete = {
+    link = "DiffDelete"
+  },
   MiniDiffSignAdd = {
     fg = "#266d6a"
   },
@@ -1571,6 +1643,79 @@ local highlights = {
   },
   MiniDiffSignDelete = {
     fg = "#b2555b"
+  },
+  MiniFilesBorder = {
+    link = "FloatBorder"
+  },
+  MiniFilesBorderModified = {
+    link = "DiagnosticFloatingWarn"
+  },
+  MiniFilesCursorLine = {
+    link = "CursorLine"
+  },
+  MiniFilesDirectory = {
+    link = "Directory"
+  },
+  MiniFilesFile = {
+    fg = "#c0caf5"
+  },
+  MiniFilesNormal = {
+    link = "NormalFloat"
+  },
+  MiniFilesTitle = {
+    link = "FloatTitle"
+  },
+  MiniFilesTitleFocused = {
+    bg = "#16161e",
+    bold = true,
+    fg = "#27a1b9"
+  },
+  MiniHipatternsFixme = {
+    bg = "#db4b4b",
+    bold = true,
+    fg = "#15161e"
+  },
+  MiniHipatternsHack = {
+    bg = "#e0af68",
+    bold = true,
+    fg = "#15161e"
+  },
+  MiniHipatternsNote = {
+    bg = "#1abc9c",
+    bold = true,
+    fg = "#15161e"
+  },
+  MiniHipatternsTodo = {
+    bg = "#0db9d7",
+    bold = true,
+    fg = "#15161e"
+  },
+  MiniIconsAzure = {
+    fg = "#0db9d7"
+  },
+  MiniIconsBlue = {
+    fg = "#7aa2f7"
+  },
+  MiniIconsCyan = {
+    fg = "#1abc9c"
+  },
+  MiniIconsGreen = {
+    fg = "#9ece6a"
+  },
+  MiniIconsGrey = {
+    fg = "#c0caf5"
+  },
+  MiniIconsOrange = {
+    fg = "#ff9e64"
+  },
+  MiniIconsPurple = {
+    fg = "#9d7cd8"
+  },
+  MiniIconsRed = {
+    fg = "#f7768e"
+  },
+  MiniIconsYellow = {
+    fg = "#e0af68"
   },
   MiniIndentscopePrefix = {
     nocombine = true
@@ -1583,10 +1728,88 @@ local highlights = {
     bg = "#ff007c",
     fg = "#ffffff"
   },
+  MiniJump2dDim = {
+    link = "Comment"
+  },
   MiniJump2dSpot = {
     bold = true,
     fg = "#ff007c",
     nocombine = true
+  },
+  MiniJump2dSpotAhead = {
+    bg = "#16161e",
+    fg = "#1abc9c",
+    nocombine = true
+  },
+  MiniJump2dSpotUnique = {
+    bold = true,
+    fg = "#ff9e64",
+    nocombine = true
+  },
+  MiniMapNormal = {
+    link = "NormalFloat"
+  },
+  MiniMapSymbolCount = {
+    link = "Special"
+  },
+  MiniMapSymbolLine = {
+    link = "Title"
+  },
+  MiniMapSymbolView = {
+    link = "Delimiter"
+  },
+  MiniNotifyBorder = {
+    link = "FloatBorder"
+  },
+  MiniNotifyNormal = {
+    link = "NormalFloat"
+  },
+  MiniNotifyTitle = {
+    link = "FloatTitle"
+  },
+  MiniOperatorsExchangeFrom = {
+    link = "IncSearch"
+  },
+  MiniPickBorder = {
+    link = "FloatBorder"
+  },
+  MiniPickBorderBusy = {
+    link = "DiagnosticFloatingWarn"
+  },
+  MiniPickBorderText = {
+    bg = "#16161e",
+    fg = "#1abc9c"
+  },
+  MiniPickHeader = {
+    link = "DiagnosticFloatingHint"
+  },
+  MiniPickIconDirectory = {
+    link = "Directory"
+  },
+  MiniPickIconFile = {
+    link = "MiniPickNormal"
+  },
+  MiniPickMatchCurrent = {
+    link = "CursorLine"
+  },
+  MiniPickMatchMarked = {
+    link = "Visual"
+  },
+  MiniPickMatchRanges = {
+    link = "DiagnosticFloatingHint"
+  },
+  MiniPickNormal = {
+    link = "NormalFloat"
+  },
+  MiniPickPreviewLine = {
+    link = "CursorLine"
+  },
+  MiniPickPreviewRegion = {
+    link = "IncSearch"
+  },
+  MiniPickPrompt = {
+    bg = "#16161e",
+    fg = "#0db9d7"
   },
   MiniStarterCurrent = {
     nocombine = true
