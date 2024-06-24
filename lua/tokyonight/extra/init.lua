@@ -29,6 +29,7 @@ M.extras = {
   yazi = {ext = "toml", url = "https://github.com/sxyazi/yazi", label = "Yazi"},
   zathura = {ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura"},
   zellij = {ext = "kdl", url = "https://zellij.dev/", label = "Zellij"},
+  slack = {ext = "txt", url = "https://slack.com", label = "Slack"},
 }
 
 local function write(str, fileName)

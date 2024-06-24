@@ -51,6 +51,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Lazygit](https://github.com/jesseduffield/lazygit) ([lazygit](extras/lazygit))
 - [Lua Table for testing](https://www.lua.org) ([lua](extras/lua))
 - [Prism](https://prismjs.com) ([prism](extras/prism))
+- [Slack](https://slack.com) ([slack](extras/slack))
 - [Sublime Text](https://www.sublimetext.com/docs/themes) ([sublime](extras/sublime))
 - [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](extras/terminator))
 - [Tilix](https://github.com/gnunn1/tilix) ([tilix](extras/tilix))
@@ -308,7 +309,7 @@ How to add a new extra template:
 3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
 
    ```sh
-   nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+   nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('tokyonight.extra').setup()" --cmd qa
    ```
 
 4. Check the newly created themes in the `extra/` directory. Please **DO NOT**
