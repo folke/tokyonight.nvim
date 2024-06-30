@@ -49,8 +49,9 @@ function M.setup()
     WinSeparator = { fg = c.border, bold = true }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn = { link = "LineNr" }, -- 'foldcolumn'
-    CursorLineFold = { link = "CursorLineNr" }, -- Like FoldColumn but when curosrline is on the fold column.
     SignColumn = { link = "LineNr" }, -- column where |signs| are displayed
+    CursorLineFold = { link = "CursorLineNr" }, -- Like FoldColumn but when curosrline is on the fold column.
+    CursorLineSign = { link = "CursorLineNr" }, -- Like SignColumn but when curosrline is on the sign column.
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
