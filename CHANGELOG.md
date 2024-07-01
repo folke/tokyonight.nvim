@@ -1,5 +1,56 @@
 # Changelog
 
+## [4.0.0](https://github.com/folke/tokyonight.nvim/compare/v3.0.1...v4.0.0) (2024-07-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* rewrite v4 ([#548](https://github.com/folke/tokyonight.nvim/issues/548))
+
+### Features
+
+* added support for indentmini ([3c19449](https://github.com/folke/tokyonight.nvim/commit/3c194496dd5b640e1aefd9492c34d04ddbb1f136))
+* added support for mini.diff ([9afae4d](https://github.com/folke/tokyonight.nvim/commit/9afae4de8d335a421ee9d2205373b1ad6c854fb2))
+* added support for octo.nvim ([894ee8b](https://github.com/folke/tokyonight.nvim/commit/894ee8bcd5e7fec999c6695cfa353a421b86424b))
+* added support for printf ([41d80ad](https://github.com/folke/tokyonight.nvim/commit/41d80ad2f813b886c1695751e89e599b57d4ed93))
+* better colors for neotree git modified / untracked ([e7ff2f0](https://github.com/folke/tokyonight.nvim/commit/e7ff2f06b0550907afc8243089fda7a478827474))
+* better fzf dir part colors ([a6ce2df](https://github.com/folke/tokyonight.nvim/commit/a6ce2df30ab10e5e213f3f6d6910ea5a5d1f17ea))
+* **extras:** add lazygit ([#537](https://github.com/folke/tokyonight.nvim/issues/537)) ([226a2f1](https://github.com/folke/tokyonight.nvim/commit/226a2f1c388f08df6f75be1bc791d3fac280119c))
+* **extras:** add yazi theme ([#521](https://github.com/folke/tokyonight.nvim/issues/521)) ([2969eb4](https://github.com/folke/tokyonight.nvim/commit/2969eb4e31c23fc0dc98d8b793df10b598aed762))
+* **extras:** edit yazi find_position bg to NoiceVirtualText bg ([#532](https://github.com/folke/tokyonight.nvim/issues/532)) ([1a9dff7](https://github.com/folke/tokyonight.nvim/commit/1a9dff7f18cd21009d0633ee81f80fea36d061ae))
+* fzf-lua ([0f9d161](https://github.com/folke/tokyonight.nvim/commit/0f9d1618f40ce276e6c6be80cfbb24aa049b4880))
+* **fzf:** better colors ([63765c3](https://github.com/folke/tokyonight.nvim/commit/63765c355954142183e3fc02a2fde2c6d8007f85))
+* **fzf:** bring fzf extra in line with fzf-lua tokyonight colorscheme ([0246217](https://github.com/folke/tokyonight.nvim/commit/024621763d91bb48f2b486df529c7aaeb8d6d355))
+* **ibl:** use blue for indent context ([db0a4d4](https://github.com/folke/tokyonight.nvim/commit/db0a4d4c5de8b76f37855f3108a9288a4df1a2cb))
+* **mini:** add new highlight groups ([#545](https://github.com/folke/tokyonight.nvim/issues/545)) ([096543e](https://github.com/folke/tokyonight.nvim/commit/096543e112744eb94947cc3c5a916fff1deea2f0))
+* new style for line nr ([aabb529](https://github.com/folke/tokyonight.nvim/commit/aabb52985c316368c482deb10e1529852f7feddd))
+* noice cmdline colors ([8f72b06](https://github.com/folke/tokyonight.nvim/commit/8f72b0600f157141b0c9bb3a9df73d75345a9341))
+* octo status column ([34b37c8](https://github.com/folke/tokyonight.nvim/commit/34b37c89afafaf4e4b9c4a2d9f1c72aad75472cb))
+* rewrite v4 ([#548](https://github.com/folke/tokyonight.nvim/issues/548)) ([766be08](https://github.com/folke/tokyonight.nvim/commit/766be08803922a5761551500c09d4be4c3366b71))
+* **sublime:** added support for highlighting errors/warnings for sublime (bat etc) ([d088b15](https://github.com/folke/tokyonight.nvim/commit/d088b15433ee3db97fcdad615a0d4196157c4745))
+* **sublime:** highlights for info ([371220d](https://github.com/folke/tokyonight.nvim/commit/371220dfee2172fed6c216dc1dc1b4732044afcf))
+* **telescope:** better hl for telescope result comments ([34a0572](https://github.com/folke/tokyonight.nvim/commit/34a05722312423e21c2c929076c4b3d212a1538a))
+* **telescope:** prompt border in different color ([7ea04d5](https://github.com/folke/tokyonight.nvim/commit/7ea04d5c257c93d9f1c84ab770f76edc6357a13c))
+
+
+### Bug Fixes
+
+* extras ([c1aa4b8](https://github.com/folke/tokyonight.nvim/commit/c1aa4b8814add70085819e5dc5c39b9ffa894cb3))
+* **extras:** correct lazygit extension ([#538](https://github.com/folke/tokyonight.nvim/issues/538)) ([9601653](https://github.com/folke/tokyonight.nvim/commit/9601653f6c98b7b83479b5098b5c7f60183bb66a))
+* fzf groups ([7aee12f](https://github.com/folke/tokyonight.nvim/commit/7aee12f6b07f5f432efb2587f3f37346f88243f7))
+* fzf-lua ([9d84e0b](https://github.com/folke/tokyonight.nvim/commit/9d84e0b3a424dc94061c57b88f365f490f6bf443))
+* **fzf-lua:** color updates ([14461b6](https://github.com/folke/tokyonight.nvim/commit/14461b678bb7fbff281254a5059a3a3013e493aa))
+* **gitui:** support color format breaking change ([#539](https://github.com/folke/tokyonight.nvim/issues/539)) ([c3a3e89](https://github.com/folke/tokyonight.nvim/commit/c3a3e892d5cf11762c1b6bf5b0dfb4ceb1e27558))
+* **gitui:** wrap values in Some ([#508](https://github.com/folke/tokyonight.nvim/issues/508)) ([1372569](https://github.com/folke/tokyonight.nvim/commit/1372569c9f318305bbe90abc4af6dc9dfd5cd8a4))
+* lualine ([0c511d7](https://github.com/folke/tokyonight.nvim/commit/0c511d7cac30407f52223b0816a8697c1fcccca6))
+* **markdown:** added [@markup](https://github.com/markup).italic ([8885b75](https://github.com/folke/tokyonight.nvim/commit/8885b75288de659c14ec9ae6782a79a2056030b9))
+* **neo-tree:** slightly better colors ([f4fdf24](https://github.com/folke/tokyonight.nvim/commit/f4fdf247c30087e31085ba797b44a671a43718c2))
+* **python:** import name from semantic tokens from basedpyright ([2983390](https://github.com/folke/tokyonight.nvim/commit/2983390e0ee59a40c02bb90df9bad860f251534a))
+* re-add `[@punctuation](https://github.com/punctuation).special` ([#484](https://github.com/folke/tokyonight.nvim/issues/484)) ([b37bc55](https://github.com/folke/tokyonight.nvim/commit/b37bc55d10fd575e9b7b713c59e07c85cb810f67))
+* **treesitter:** correctly link up delimiters again ([8c11d30](https://github.com/folke/tokyonight.nvim/commit/8c11d30a24c5ac8b719048ea4282466e9575b10f))
+* use regular fg for Bold/Italic ([710f901](https://github.com/folke/tokyonight.nvim/commit/710f901c175087c5eeaa77f91dbef4845f3a192f))
+* zellij invisible selecting text ([#535](https://github.com/folke/tokyonight.nvim/issues/535)) ([20bb1b1](https://github.com/folke/tokyonight.nvim/commit/20bb1b10cb0759b9540ca6a4eca5f38eb4cc2233))
+
 ## [3.0.1](https://github.com/folke/tokyonight.nvim/compare/v3.0.0...v3.0.1) (2024-01-21)
 
 
