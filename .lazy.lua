@@ -9,6 +9,9 @@ local function get_group(buf)
   return vim.fn.fnamemodify(fname, ":t:r")
 end
 
+---@type ColorScheme
+local colors
+
 vim.api.nvim_create_autocmd("BufWritePost", {
   group = vim.api.nvim_create_augroup("tokyonight_dev", { clear = true }),
   pattern = "lua/tokyonight/*.lua",
@@ -17,6 +20,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     local group = get_group(ev.buf)
     if group then
       cache[group] = nil
+      cache.colors = nil
       hi.update(ev.buf)
     end
     for _, style in ipairs({ "storm", "day", "night", "moon" }) do
@@ -31,7 +35,7 @@ local function load(group)
   end
   cache[group] = {}
   local opts = require("tokyonight.config").defaults
-  local colors = require("tokyonight.colors").setup(opts)
+  colors = require("tokyonight.colors").setup(opts)
   local highlights = require("tokyonight.groups").get(group, colors, opts)
   for k, v in pairs(highlights) do
     local hl = "TokyonightDev" .. k
@@ -40,6 +44,23 @@ local function load(group)
     v.style = nil
     vim.api.nvim_set_hl(0, hl, v)
     cache[group][k] = hl
+  end
+end
+
+local function color_hl(key)
+  cache.colors = cache.colors or {}
+  if cache.colors[key] then
+    return cache.colors[key]
+  end
+  colors = colors or require("tokyonight.colors").setup()
+  local keys = vim.split(key, ".", { plain = true })
+  table.remove(keys, 1)
+  local color = vim.tbl_get(colors, unpack(keys))
+  if type(color) == "string" and color:sub(1, 1) == "#" then
+    local group = "TokyonightDevColors" .. key:gsub("%.", "")
+    vim.api.nvim_set_hl(0, group, { fg = color })
+    cache.colors[key] = group
+    return group
   end
 end
 
@@ -67,6 +88,22 @@ return {
           return name and cache[name][match]
         end,
         extmark_opts = { priority = 2000 },
+      }
+
+      opts.highlighters.tokyonight_colors = {
+        pattern = {
+          "%f[%w]()c%.[%w_%.]+()%f[%W]",
+          "%f[%w]()colors%.[%w_%.]+()%f[%W]",
+        },
+        group = function(buf, match, data)
+          return color_hl(match)
+        end,
+        extmark_opts = function(buf, match, data)
+          return {
+            virt_text = { { "⬤ ", data.hl_group } },
+            virt_text_pos = "inline",
+          }
+        end,
       }
     end,
   },
