@@ -30,7 +30,7 @@ function M.setup(opts)
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "tokyonight"
+  vim.g.colors_name = "tokyonight-" .. (light and "day" or opts.style)
 
   for group, hl in pairs(groups) do
     vim.api.nvim_set_hl(0, group, hl)
