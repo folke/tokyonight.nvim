@@ -1,49 +1,66 @@
-local colors = require("tokyonight.colors").setup({ transform = true })
-local config = require("tokyonight.config").options
+local M = {}
 
-local tokyonight = {}
+---@param style? string
+function M.get(style)
+  local colors, config = require("tokyonight.colors").setup({
+    style = style,
+  })
 
-tokyonight.normal = {
-  a = { bg = colors.blue, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.blue },
-  c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
-}
+  local hl = {}
 
-tokyonight.insert = {
-  a = { bg = colors.green, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.green },
-}
+  hl.normal = {
+    a = { bg = colors.blue, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.blue },
+    c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
+  }
 
-tokyonight.command = {
-  a = { bg = colors.yellow, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.yellow },
-}
+  hl.insert = {
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.green },
+  }
 
-tokyonight.visual = {
-  a = { bg = colors.magenta, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.magenta },
-}
+  hl.command = {
+    a = { bg = colors.yellow, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.yellow },
+  }
 
-tokyonight.replace = {
-  a = { bg = colors.red, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.red },
-}
+  hl.visual = {
+    a = { bg = colors.magenta, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.magenta },
+  }
 
-tokyonight.terminal = {
-  a = {bg = colors.green1, fg = colors.black },
-  b = {bg = colors.fg_gutter, fg=colors.green1 },
-}
+  hl.replace = {
+    a = { bg = colors.red, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.red },
+  }
 
-tokyonight.inactive = {
-  a = { bg = colors.bg_statusline, fg = colors.blue },
-  b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
-  c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
-}
+  hl.terminal = {
+    a = { bg = colors.green1, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.green1 },
+  }
 
-if config.lualine_bold then
-  for _, mode in pairs(tokyonight) do
-    mode.a.gui = "bold"
+  hl.inactive = {
+    a = { bg = colors.bg_statusline, fg = colors.blue },
+    b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
+    c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
+  }
+
+  if config.lualine_bold then
+    for _, mode in pairs(hl) do
+      mode.a.gui = "bold"
+    end
   end
+  return hl
 end
 
-return tokyonight
+local default
+
+return setmetatable({}, {
+  __index = function(_, k)
+    default = default or M.get()
+    return default[k]
+  end,
+  __call = function(_, style)
+    return M.get(style)
+  end,
+})

@@ -4,22 +4,18 @@ local M = {}
 
 ---@param opts? tokyonight.Config
 function M.setup(opts)
-  opts = opts or require("tokyonight.config").options
-
-  local light = false
-  if opts.style == "day" or (opts.use_background and vim.o.background == "light") then
-    light = true
-    opts.style = opts.light_style == "day" and "night" or opts.light_style
-  end
+  opts = require("tokyonight.config").extend(opts)
+  opts.transform = false
 
   local Colors = require("tokyonight.colors")
-  local colors = Colors.setup(opts)
+  local colors
+  colors, opts = Colors.setup(opts)
   opts.on_colors(colors)
 
   local Groups = require("tokyonight.groups")
   local groups = Groups.load(colors, opts)
 
-  if light then
+  if opts.light then
     Util.invert_highlights(groups)
     Util.invert_colors(colors)
   end
@@ -30,7 +26,7 @@ function M.setup(opts)
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "tokyonight-" .. (light and "day" or opts.style)
+  vim.g.colors_name = "tokyonight-" .. (opts.light and "day" or opts.style)
 
   for group, hl in pairs(groups) do
     vim.api.nvim_set_hl(0, group, hl)
