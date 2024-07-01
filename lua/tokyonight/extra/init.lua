@@ -1,3 +1,5 @@
+local Util = require("tokyonight.util")
+
 local M = {}
 
 -- map of plugin name to plugin extension
@@ -89,7 +91,10 @@ function M.setup()
       tokyonight.setup({ style = style })
       tokyonight.load({ style = style })
       vim.cmd.colorscheme("tokyonight-" .. style)
-      local colors = require("tokyonight.colors").setup({ transform = true })
+      local colors = require("tokyonight.colors").setup()
+      if style == "day" then
+        Util.invert_colors(colors)
+      end
       local fname = extra .. "/tokyonight_" .. style .. "." .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
       colors["_style_name"] = "Tokyo Night" .. style_name
