@@ -8,28 +8,38 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 [iTerm](https://iterm2.com/) and
 [Fish](https://fishshell.com/docs/current/index.html).
 
-## Storm
-
-![image](https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png)
-
-## Night
-
-![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
-
-## Moon
-
-![image](https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png)
-
-## Day
-
-![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
+<table width="100%">
+  <tr>
+    <th>Moon</th>
+    <th>Storm</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png" />
+    </td>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png" />
+    </td>
+  </tr>
+  <tr>
+    <th>Night</th>
+    <th>Day</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png" />
+    </td>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png" />
+    </td>
+  </tr>
+</table>
 
 ## ✨ Features
 
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
-- Enhances terminal colors.
-- Introduces a darker background option for sidebar-like windows.
+- Terminal colors.
 - Supports all major plugins.
 - Provides [TokyoNight](https://github.com/folke/tokyonight.nvim)
   [extras](#-extras) for numerous other applications.
@@ -37,6 +47,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 ### 🍭 Extras
 
 <!-- extras:start -->
+
 - [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
 - [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
 - [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
@@ -85,7 +96,9 @@ Install the theme with your preferred package manager, such as
 
 ## 🚀 Usage
 
-### Vim Script
+```lua
+vim.cmd[[colorscheme tokyonight]]
+```
 
 ```vim
 colorscheme tokyonight
@@ -97,15 +110,12 @@ colorscheme tokyonight-day
 colorscheme tokyonight-moon
 ```
 
-### [Lua](https://www.lua.org)
+Some plugins need extra configuration to work with **TokyoNight**.
 
-```lua
-vim.cmd[[colorscheme tokyonight]]
-```
+<details>
+  <summary>Click here for more details</summary>
 
-#### External Plugins
-
-##### [Barbecue](https://github.com/utilyre/barbecue.nvim)
+### [Barbecue](https://github.com/utilyre/barbecue.nvim)
 
 ```lua
 -- Lua
@@ -116,7 +126,7 @@ require('barbecue').setup {
 }
 ```
 
-##### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua
 -- Lua
@@ -129,16 +139,19 @@ require('lualine').setup {
 }
 ```
 
-##### [Lightline](https://github.com/itchyny/lightline.vim)
+### [Lightline](https://github.com/itchyny/lightline.vim)
 
 ```vim
 " Vim Script
 let g:lightline = {'colorscheme': 'tokyonight'}
 ```
 
+</details>
+
 ## ⚙️ Configuration
 
-> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
+> [!IMPORTANT]
+> Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
 
 The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
 and [day](#day).
@@ -149,14 +162,15 @@ The [day](#day) style is used when `{ style = "day" }` is passed to
 [TokyoNight](https://github.com/folke/tokyonight.nvim) uses the default options,
 unless `setup` is explicitly called.
 
+<details>
+  <summary>Default Options</summary>
+
 ```lua
 require("tokyonight").setup({
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -168,9 +182,7 @@ require("tokyonight").setup({
     sidebars = "dark", -- style for sidebars, see below
     floats = "dark", -- style for floating windows
   },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
   day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
   dim_inactive = false, -- dims inactive windows
   lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 
@@ -181,11 +193,30 @@ require("tokyonight").setup({
 
   --- You can override specific highlights to use other groups or a hex color
   --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
+  ---@param highlights tokyonight.Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
+  use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
+
+  cache = true, -- When set to true, the theme will be cached for better performance
+
+  ---@type table<string, boolean|{enabled:boolean}>
+  plugins = {
+    -- enable all plugins when not using lazy.nvim
+    -- set to false to manually enable/disable plugins
+    all = package.loaded.lazy == nil,
+    -- uses your plugin manager to automatically enable needed plugins
+    -- currently only lazy.nvim is supported
+    auto = true,
+    -- add any plugins here that you want to enable
+    -- for all possible plugins, see:
+    --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
+    -- telescope = true,
+  },
 })
 ```
+
+</details>
 
 ## 🪓 Overriding Colors & Highlight Groups
 
@@ -203,7 +234,8 @@ For default values of `colors` and `highlights`, please consult the
 [night](extras/lua/tokyonight_night.lua), and
 [day](extras/lua/tokyonight_day.lua) themes.
 
-### Settings and color alteration demonstration
+<details>
+  <summary>Settings & Changing Colors</summary>
 
 ```lua
 require("tokyonight").setup({
@@ -213,7 +245,6 @@ require("tokyonight").setup({
   styles = {
     functions = {}
   },
-  sidebars = { "qf", "vista_kind", "terminal", "packer" },
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
   on_colors = function(colors)
     colors.hint = colors.orange
@@ -222,7 +253,10 @@ require("tokyonight").setup({
 })
 ```
 
-### [Borderless Telescope](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless) example
+</details>
+
+<details>
+  <summary>Borderless Telescope</summary>
 
 ```lua
 require("tokyonight").setup({
@@ -259,7 +293,10 @@ require("tokyonight").setup({
 })
 ```
 
-### Fix `undercurls` in [Tmux](https://github.com/tmux/tmux)
+</details>
+
+<details>
+  <summary>Fix <code>undercurls</code> in Tmux</summary>
 
 To have undercurls show up and in color, add the following to your
 [Tmux](https://github.com/tmux/tmux) configuration file:
@@ -270,6 +307,8 @@ set -g default-terminal "${TERM}"
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
+
+</details>
 
 ## 🍭 Extras
 
@@ -308,7 +347,7 @@ How to add a new extra template:
 3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
 
    ```sh
-   nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+   ./extras/gen
    ```
 
 4. Check the newly created themes in the `extra/` directory. Please **DO NOT**

@@ -1,1 +1,1 @@
-require("tokyonight")._load("moon")
+require("tokyonight").load({ style = "moon", use_background = false })

@@ -75,18 +75,18 @@ jobs:
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
   release:
     name: release
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' && github.repository_owner == 'folke' }}
     needs:
-      - docs
       - tests
+      - docs
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
-          release-type: simple
-          package-name: tokyonight.nvim
-      - uses: actions/checkout@v3
+          config-file: .github/release-please-config.json
+          manifest-file: .github/.release-please-manifest.json
+      - uses: actions/checkout@v4
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |

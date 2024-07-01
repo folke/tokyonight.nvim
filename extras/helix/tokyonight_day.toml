@@ -41,15 +41,15 @@ label = { fg = "#2e7de9" }
 "markup.heading.completion" = { bg = "#e9e9ec", fg = "#3760bf" }
 "markup.heading.hover" = { bg = "#b3b8d1" }
 "markup.italic" = { fg = "#3760bf", modifiers = ["italic"] }
-"markup.link" = { fg = "#2e7de9", underline = { style = "line" } }
-"markup.link.label" = { fg = "#118c74" }
-"markup.link.text" = { fg = "#118c74" }
+"markup.link" = 
+"markup.link.label" = 
+"markup.link.text" = 
 "markup.link.url" = { underline = { style = "line" } }
-"markup.list" = { fg = "#b15c00", modifiers = ["bold"] }
+"markup.list" = 
 "markup.normal.completion" = { fg = "#848cb5" }
 "markup.normal.hover" = { fg = "#6172b0" }
-"markup.raw" = { fg = "#118c74" }
-"markup.raw.block" = { fg = "#118c74" }
+"markup.raw" = 
+"markup.raw.block" = 
 "markup.raw.inline" = { bg = "#a1a6c5", fg = "#2e7de9" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 namespace = 
@@ -112,8 +112,6 @@ comment = "#848cb5"
 cyan = "#007197"
 dark3 = "#8990b3"
 dark5 = "#68709a"
-"delta.add" = "#57a7bc"
-"delta.delete" = "#d99ea2"
 "diff.add" = "#aecde6"
 "diff.change" = "#d6d8e3"
 "diff.delete" = "#dfccd4"
@@ -128,9 +126,6 @@ fg_sidebar = "#6172b0"
 "git.change" = "#506d9c"
 "git.delete" = "#c47981"
 "git.ignore" = "#8990b3"
-"gitSigns.add" = "#399a96"
-"gitSigns.change" = "#6482bd"
-"gitSigns.delete" = "#c25d64"
 green = "#587539"
 green1 = "#387068"
 green2 = "#38919f"
@@ -140,6 +135,12 @@ magenta = "#9854f1"
 magenta2 = "#d20065"
 orange = "#b15c00"
 purple = "#7847bd"
+rainbow = "#2e7de9"
+"rainbow.2" = "#8c6c3e"
+"rainbow.3" = "#587539"
+"rainbow.4" = "#118c74"
+"rainbow.5" = "#9854f1"
+"rainbow.6" = "#7847bd"
 red = "#f52a65"
 red1 = "#c64343"
 teal = "#118c74"

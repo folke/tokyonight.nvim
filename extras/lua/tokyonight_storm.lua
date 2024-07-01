@@ -23,10 +23,6 @@ local colors = {
   cyan = "#7dcfff",
   dark3 = "#545c7e",
   dark5 = "#737aa2",
-  delta = {
-    add = "#316172",
-    delete = "#763842"
-  },
   diff = {
     add = "#283b4d",
     change = "#272d43",
@@ -45,11 +41,6 @@ local colors = {
     delete = "#914c54",
     ignore = "#545c7e"
   },
-  gitSigns = {
-    add = "#266d6a",
-    change = "#536c9e",
-    delete = "#b2555b"
-  },
   green = "#9ece6a",
   green1 = "#73daca",
   green2 = "#41a6b5",
@@ -60,6 +51,7 @@ local colors = {
   none = "NONE",
   orange = "#ff9e64",
   purple = "#9d7cd8",
+  rainbow = { "#7aa2f7", "#e0af68", "#9ece6a", "#1abc9c", "#bb9af7", "#9d7cd8" },
   red = "#f7768e",
   red1 = "#db4b4b",
   teal = "#1abc9c",
@@ -153,9 +145,7 @@ local highlights = {
   },
   ["@keyword"] = {
     fg = "#9d7cd8",
-    style = {
-      italic = true
-    }
+    italic = true
   },
   ["@keyword.conditional"] = {
     link = "Conditional"
@@ -176,8 +166,7 @@ local highlights = {
     link = "Exception"
   },
   ["@keyword.function"] = {
-    fg = "#bb9af7",
-    style = {}
+    fg = "#bb9af7"
   },
   ["@keyword.import"] = {
     link = "Include"
@@ -479,8 +468,7 @@ local highlights = {
     link = "@keyword"
   },
   ["@variable"] = {
-    fg = "#c0caf5",
-    style = {}
+    fg = "#c0caf5"
   },
   ["@variable.builtin"] = {
     fg = "#f7768e"
@@ -951,9 +939,7 @@ local highlights = {
   },
   Comment = {
     fg = "#565f89",
-    style = {
-      italic = true
-    }
+    italic = true
   },
   Conceal = {
     fg = "#737aa2"
@@ -1096,9 +1082,6 @@ local highlights = {
   ErrorMsg = {
     fg = "#db4b4b"
   },
-  FernBranchText = {
-    fg = "#7aa2f7"
-  },
   FlashBackdrop = {
     fg = "#545c7e"
   },
@@ -1128,8 +1111,7 @@ local highlights = {
     fg = "#c0caf5"
   },
   Function = {
-    fg = "#7aa2f7",
-    style = {}
+    fg = "#7aa2f7"
   },
   FzfLuaBorder = {
     bg = "#1f2335",
@@ -1139,7 +1121,7 @@ local highlights = {
     link = "IncSearch"
   },
   FzfLuaDirPart = {
-    fg = "#545c7e"
+    fg = "#a9b1d6"
   },
   FzfLuaFilePart = {
     link = "FzfLuaFzfNormal"
@@ -1179,31 +1161,31 @@ local highlights = {
     fg = "#ff9e64"
   },
   GitGutterAdd = {
-    fg = "#266d6a"
+    fg = "#449dab"
   },
   GitGutterAddLineNr = {
-    fg = "#266d6a"
+    fg = "#449dab"
   },
   GitGutterChange = {
-    fg = "#536c9e"
+    fg = "#6183bb"
   },
   GitGutterChangeLineNr = {
-    fg = "#536c9e"
+    fg = "#6183bb"
   },
   GitGutterDelete = {
-    fg = "#b2555b"
+    fg = "#914c54"
   },
   GitGutterDeleteLineNr = {
-    fg = "#b2555b"
+    fg = "#914c54"
   },
   GitSignsAdd = {
-    fg = "#266d6a"
+    fg = "#449dab"
   },
   GitSignsChange = {
-    fg = "#536c9e"
+    fg = "#6183bb"
   },
   GitSignsDelete = {
-    fg = "#b2555b"
+    fg = "#914c54"
   },
   GlyphPalette1 = {
     fg = "#db4b4b"
@@ -1247,9 +1229,6 @@ local highlights = {
   Headline6 = {
     bg = "#2a2c43"
   },
-  Hlargs = {
-    fg = "#e0af68"
-  },
   HopNextKey = {
     bold = true,
     fg = "#ff007c"
@@ -1273,8 +1252,7 @@ local highlights = {
     nocombine = true
   },
   Identifier = {
-    fg = "#bb9af7",
-    style = {}
+    fg = "#bb9af7"
   },
   IlluminatedWordRead = {
     bg = "#3b4261"
@@ -1311,9 +1289,7 @@ local highlights = {
   },
   Keyword = {
     fg = "#7dcfff",
-    style = {
-      italic = true
-    }
+    italic = true
   },
   LazyProgressDone = {
     bold = true,
@@ -1338,49 +1314,6 @@ local highlights = {
     bg = "#ff007c",
     bold = true,
     fg = "#c0caf5"
-  },
-  LightspeedGreyWash = {
-    fg = "#545c7e"
-  },
-  LightspeedLabel = {
-    bold = true,
-    fg = "#ff007c",
-    underline = true
-  },
-  LightspeedLabelDistant = {
-    bold = true,
-    fg = "#73daca",
-    underline = true
-  },
-  LightspeedLabelDistantOverlapped = {
-    fg = "#41a6b5",
-    underline = true
-  },
-  LightspeedLabelOverlapped = {
-    fg = "#ff007c",
-    underline = true
-  },
-  LightspeedMaskedChar = {
-    fg = "#ff9e64"
-  },
-  LightspeedOneCharMatch = {
-    bg = "#ff007c",
-    bold = true,
-    fg = "#c0caf5"
-  },
-  LightspeedPendingOpArea = {
-    bg = "#ff007c",
-    fg = "#c0caf5"
-  },
-  LightspeedShortcut = {
-    bg = "#ff007c",
-    bold = true,
-    fg = "#c0caf5",
-    underline = true
-  },
-  LightspeedUnlabeledMatch = {
-    bold = true,
-    fg = "#0db9d7"
   },
   LineNr = {
     fg = "#3b4261"
@@ -1636,13 +1569,13 @@ local highlights = {
     link = "DiffDelete"
   },
   MiniDiffSignAdd = {
-    fg = "#266d6a"
+    fg = "#449dab"
   },
   MiniDiffSignChange = {
-    fg = "#536c9e"
+    fg = "#6183bb"
   },
   MiniDiffSignDelete = {
-    fg = "#b2555b"
+    fg = "#914c54"
   },
   MiniFilesBorder = {
     link = "FloatBorder"
@@ -1823,9 +1756,7 @@ local highlights = {
   },
   MiniStarterInactive = {
     fg = "#565f89",
-    style = {
-      italic = true
-    }
+    italic = true
   },
   MiniStarterItem = {
     bg = "#24283b",
@@ -2616,34 +2547,6 @@ local highlights = {
     bg = "#f7768e",
     fg = "#1d202f"
   },
-  TSNodeKey = {
-    bold = true,
-    fg = "#ff007c"
-  },
-  TSNodeUnmatched = {
-    fg = "#545c7e"
-  },
-  TSRainbowBlue = {
-    fg = "#7aa2f7"
-  },
-  TSRainbowCyan = {
-    fg = "#7dcfff"
-  },
-  TSRainbowGreen = {
-    fg = "#9ece6a"
-  },
-  TSRainbowOrange = {
-    fg = "#ff9e64"
-  },
-  TSRainbowRed = {
-    fg = "#f7768e"
-  },
-  TSRainbowViolet = {
-    fg = "#9d7cd8"
-  },
-  TSRainbowYellow = {
-    fg = "#e0af68"
-  },
   TabLine = {
     bg = "#1f2335",
     fg = "#3b4261"
@@ -2754,12 +2657,6 @@ local highlights = {
     bold = true,
     fg = "#1d202f"
   },
-  YankyPut = {
-    link = "IncSearch"
-  },
-  YankyYanked = {
-    link = "IncSearch"
-  },
   debugBreakpoint = {
     bg = "#22374b",
     fg = "#0db9d7"
@@ -2825,65 +2722,10 @@ local highlights = {
     bg = "#c0caf5",
     fg = "#24283b"
   },
-  markdownCode = {
-    fg = "#1abc9c"
-  },
-  markdownCodeBlock = {
-    fg = "#1abc9c"
-  },
-  markdownH1 = {
-    bold = true,
-    fg = "#bb9af7"
-  },
-  markdownH2 = {
-    bold = true,
-    fg = "#7aa2f7"
-  },
-  markdownHeadingDelimiter = {
-    bold = true,
-    fg = "#ff9e64"
-  },
-  markdownLinkText = {
-    fg = "#7aa2f7",
-    underline = true
-  },
-  mkdCodeDelimiter = {
-    bg = "#414868",
-    fg = "#c0caf5"
-  },
-  mkdCodeEnd = {
-    bold = true,
-    fg = "#1abc9c"
-  },
-  mkdCodeStart = {
-    bold = true,
-    fg = "#1abc9c"
-  },
   qfFileName = {
     fg = "#7aa2f7"
   },
   qfLineNr = {
     fg = "#737aa2"
-  },
-  rainbowcol1 = {
-    fg = "#f7768e"
-  },
-  rainbowcol2 = {
-    fg = "#e0af68"
-  },
-  rainbowcol3 = {
-    fg = "#9ece6a"
-  },
-  rainbowcol4 = {
-    fg = "#1abc9c"
-  },
-  rainbowcol5 = {
-    fg = "#7aa2f7"
-  },
-  rainbowcol6 = {
-    fg = "#bb9af7"
-  },
-  rainbowcol7 = {
-    fg = "#9d7cd8"
   }
 }
