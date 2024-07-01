@@ -1,13 +1,9 @@
-*tokyonight.nvim.txt*       For Neovim >= 0.8.0      Last change: 2024 June 24
+*tokyonight.nvim.txt*       For Neovim >= 0.8.0      Last change: 2024 July 01
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
 
 1. Tokyo Night                                   |tokyonight.nvim-tokyo-night|
-  - Storm                                  |tokyonight.nvim-tokyo-night-storm|
-  - Night                                  |tokyonight.nvim-tokyo-night-night|
-  - Moon                                    |tokyonight.nvim-tokyo-night-moon|
-  - Day                                      |tokyonight.nvim-tokyo-night-day|
   - Features                            |tokyonight.nvim-tokyo-night-features|
   - Requirements                    |tokyonight.nvim-tokyo-night-requirements|
   - Installation                    |tokyonight.nvim-tokyo-night-installation|
@@ -29,25 +25,12 @@ A dark and light Neovim <https://github.com/neovim/neovim> theme written in Lua
 <https://github.com/alacritty/alacritty>, iTerm <https://iterm2.com/> and Fish
 <https://fishshell.com/docs/current/index.html>.
 
-
-STORM                                      *tokyonight.nvim-tokyo-night-storm*
-
-
-NIGHT                                      *tokyonight.nvim-tokyo-night-night*
-
-
-MOON                                        *tokyonight.nvim-tokyo-night-moon*
-
-
-DAY                                          *tokyonight.nvim-tokyo-night-day*
-
-
+MoonStormNightDay
 FEATURES                                *tokyonight.nvim-tokyo-night-features*
 
 - Supports the latest Neovim <https://github.com/neovim/neovim>
     0.9.0 <https://github.com/neovim/neovim/releases/tag/v0.9.0> features.
-- Enhances terminal colors.
-- Introduces a darker background option for sidebar-like windows.
+- Terminal colors.
 - Supports all major plugins.
 - Provides TokyoNight <https://github.com/folke/tokyonight.nvim>
     |tokyonight.nvim-extras| for numerous other applications.
@@ -105,8 +88,9 @@ Install the theme with your preferred package manager, such as folke/lazy.nvim
 
 USAGE                                      *tokyonight.nvim-tokyo-night-usage*
 
-
-VIM SCRIPT ~
+>lua
+    vim.cmd[[colorscheme tokyonight]]
+<
 
 >vim
     colorscheme tokyonight
@@ -118,18 +102,12 @@ VIM SCRIPT ~
     colorscheme tokyonight-moon
 <
 
+Some plugins need extra configuration to work with **TokyoNight**.
 
-LUA ~
-
->lua
-    vim.cmd[[colorscheme tokyonight]]
-<
+Click here for more details ~
 
 
-EXTERNAL PLUGINS
-
-
-BARBECUE
+BARBECUE ~
 
 >lua
     -- Lua
@@ -141,7 +119,7 @@ BARBECUE
 <
 
 
-LUALINE
+LUALINE ~
 
 >lua
     -- Lua
@@ -155,7 +133,7 @@ LUALINE
 <
 
 
-LIGHTLINE
+LIGHTLINE ~
 
 >vim
     " Vim Script
@@ -166,8 +144,8 @@ LIGHTLINE
 CONFIGURATION                      *tokyonight.nvim-tokyo-night-configuration*
 
 
-  Set the configuration **BEFORE** loading the color scheme with `colorscheme
-  tokyonight`.
+  [!IMPORTANT] Set the configuration **BEFORE** loading the color scheme with
+  `colorscheme tokyonight`.
 The theme offers four styles: |tokyonight.nvim-storm|, |tokyonight.nvim-moon|,
 |tokyonight.nvim-night|, and |tokyonight.nvim-day|.
 
@@ -177,14 +155,14 @@ The |tokyonight.nvim-day| style is used when `{ style = "day" }` is passed to
 TokyoNight <https://github.com/folke/tokyonight.nvim> uses the default options,
 unless `setup` is explicitly called.
 
+Default Options ~
+
 >lua
     require("tokyonight").setup({
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+      style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
       light_style = "day", -- The theme is used when the background is set to light
       transparent = false, -- Enable this to disable setting the background color
-      terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+      terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
       styles = {
         -- Style to be applied to different syntax groups
         -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -196,9 +174,7 @@ unless `setup` is explicitly called.
         sidebars = "dark", -- style for sidebars, see below
         floats = "dark", -- style for floating windows
       },
-      sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
       day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-      hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
       dim_inactive = false, -- dims inactive windows
       lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
     
@@ -209,9 +185,26 @@ unless `setup` is explicitly called.
     
       --- You can override specific highlights to use other groups or a hex color
       --- function will be called with a Highlights and ColorScheme table
-      ---@param highlights Highlights
+      ---@param highlights tokyonight.Highlights
       ---@param colors ColorScheme
       on_highlights = function(highlights, colors) end,
+      use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
+    
+      cache = true, -- When set to true, the theme will be cached for better performance
+    
+      ---@type table<string, boolean|{enabled:boolean}>
+      plugins = {
+        -- enable all plugins when not using lazy.nvim
+        -- set to false to manually enable/disable plugins
+        all = package.loaded.lazy == nil,
+        -- uses your plugin manager to automatically enable needed plugins
+        -- currently only lazy.nvim is supported
+        auto = true,
+        -- add any plugins here that you want to enable
+        -- for all possible plugins, see:
+        --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
+        -- telescope = true,
+      },
     })
 <
 
@@ -231,8 +224,7 @@ For default values of `colors` and `highlights`, please consult the storm
 <extras/lua/tokyonight_night.lua>, and day <extras/lua/tokyonight_day.lua>
 themes.
 
-
-SETTINGS AND COLOR ALTERATION DEMONSTRATION ~
+Settings & Changing Colors ~
 
 >lua
     require("tokyonight").setup({
@@ -242,7 +234,6 @@ SETTINGS AND COLOR ALTERATION DEMONSTRATION ~
       styles = {
         functions = {}
       },
-      sidebars = { "qf", "vista_kind", "terminal", "packer" },
       -- Change the "hint" color to the "orange" color, and make the "error" color bright red
       on_colors = function(colors)
         colors.hint = colors.orange
@@ -251,8 +242,7 @@ SETTINGS AND COLOR ALTERATION DEMONSTRATION ~
     })
 <
 
-
-BORDERLESS TELESCOPE EXAMPLE ~
+Borderless Telescope ~
 
 >lua
     require("tokyonight").setup({
@@ -289,8 +279,7 @@ BORDERLESS TELESCOPE EXAMPLE ~
     })
 <
 
-
-FIX UNDERCURLS IN TMUX ~
+Fix undercurls in Tmux ~
 
 To have undercurls show up and in color, add the following to your Tmux
 <https://github.com/tmux/tmux> configuration file:
@@ -344,7 +333,7 @@ How to add a new extra template:
 the tokyonight plugin directory:
 
 >sh
-    nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+    ./extras/gen
 <
 
 
@@ -356,11 +345,7 @@ commit them, as they are already automatically built by the CI.
 ==============================================================================
 2. Links                                               *tokyonight.nvim-links*
 
-1. *image*: https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png
-2. *image*: https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png
-3. *image*: https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png
-4. *image*: https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png
-5. *image*: https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png
+1. *image*: https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 
