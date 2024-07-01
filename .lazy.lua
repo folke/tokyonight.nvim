@@ -20,7 +20,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
       hi.update(ev.buf)
     end
     for _, style in ipairs({ "storm", "day", "night", "moon" }) do
-      require("tokyonight.util").cache_write(style, {})
+      require("tokyonight.util").cache.write(style, {})
     end
   end,
 })

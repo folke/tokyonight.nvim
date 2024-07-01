@@ -124,6 +124,23 @@ function M.invert_highlights(hls)
   end
 end
 
+---@param file string
+function M.read(file)
+  local fd = assert(io.open(file, "r"))
+  ---@type string
+  local data = fd:read("*a")
+  fd:close()
+  return data
+end
+
+---@param file string
+---@param contents string
+function M.write(file, contents)
+  local fd = assert(io.open(file, "w+"))
+  fd:write(contents)
+  fd:close()
+end
+
 M.cache = {}
 
 function M.cache.file(key)
@@ -134,16 +151,10 @@ end
 function M.cache.read(key)
   ---@type boolean, tokyonight.Cache
   local ok, ret = pcall(function()
-    local f = uv.fs_open(M.cache.file(key), "r", 438)
-    if f then
-      local stat = assert(uv.fs_fstat(f))
-      local data = uv.fs_read(f, stat.size) --[[@as string?]]
-      uv.fs_close(f)
-      return data and vim.json.decode(data, { luanil = {
-        object = true,
-        array = true,
-      } })
-    end
+    return vim.json.decode(M.read(M.cache.file(key)), { luanil = {
+      object = true,
+      array = true,
+    } })
   end)
   return ok and ret or nil
 end
@@ -151,11 +162,7 @@ end
 ---@param key string
 ---@param data tokyonight.Cache
 function M.cache.write(key, data)
-  local f = vim.uv.fs_open(M.cache.file(key), "w", 438)
-  if f then
-    uv.fs_write(f, vim.json.encode(data))
-    uv.fs_close(f)
-  end
+  pcall(M.write, M.cache.file(key), vim.json.encode(data))
 end
 
 return M
