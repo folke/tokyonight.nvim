@@ -6,7 +6,7 @@ M.version = "3.0.1" -- x-release-please-version
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
@@ -41,11 +41,16 @@ M.defaults = {
 
   ---@type table<string, boolean|{enabled:boolean}>
   plugins = {
-    -- enable all plugins
-    all = false,
+    -- enable all plugins when not using lazy.nvim
+    -- set to false to manually enable/disable plugins
+    all = package.loaded.lazy == nil,
     -- uses your plugin manager to automatically enable needed plugins
     -- currently only lazy.nvim is supported
     auto = true,
+    -- add any plugins here that you want to enable
+    -- for all possible plugins, see:
+    --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
+    -- telescope = true,
   },
 }
 

@@ -4,6 +4,7 @@ local M = {}
 
 ---@param opts tokyonight.Config
 function M.setup(opts)
+  opts = opts or require("tokyonight.config").options
   ---@type Palette
   local palette = Util.mod("tokyonight.colors." .. opts.style)
 
