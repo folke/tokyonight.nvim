@@ -40,6 +40,8 @@ function M.setup(opts)
   if opts.terminal_colors then
     M.terminal(colors)
   end
+
+  return colors, groups
 end
 
 ---@param colors ColorScheme

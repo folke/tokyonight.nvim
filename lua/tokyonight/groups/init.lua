@@ -126,7 +126,7 @@ function M.load(colors, opts)
   table.sort(names)
 
   local cache_key = opts.style
-  local cache = Util.cache_read(cache_key)
+  local cache = opts.cache and Util.cache_read(cache_key)
 
   local ret = nil ---@type tokyonight.Highlights
   if cache then
@@ -147,7 +147,9 @@ function M.load(colors, opts)
       end
     end
     Util.resolve(ret)
-    Util.cache_write(cache_key, { colors = colors, groups = ret, plugins = names, version = Config.version })
+    if opts.cache then
+      Util.cache_write(cache_key, { colors = colors, groups = ret, plugins = names, version = Config.version })
+    end
   end
   opts.on_highlights(ret, colors)
 

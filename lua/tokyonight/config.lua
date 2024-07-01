@@ -37,6 +37,8 @@ M.defaults = {
   on_highlights = function(highlights, colors) end,
   use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
 
+  cache = true, -- When set to true, the theme will be cached for better performance
+
   ---@type table<string, boolean|{enabled:boolean}>
   plugins = {
     -- enable all plugins
@@ -57,7 +59,7 @@ end
 
 ---@param opts? tokyonight.Config
 function M.extend(opts)
-  return opts and vim.tbl_deep_extend("force", {}, M.options or M.defaults, opts) or M.options
+  return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
 end
 
 function M.is_day()

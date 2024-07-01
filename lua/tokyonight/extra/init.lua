@@ -1,5 +1,3 @@
-local Util = require("tokyonight.util")
-
 local M = {}
 
 -- map of plugin name to plugin extension
@@ -33,14 +31,6 @@ M.extras = {
   zellij = {ext = "kdl", url = "https://zellij.dev/", label = "Zellij"},
 }
 
-local function write(str, fileName)
-  print("[write] extra/" .. fileName)
-  vim.fn.mkdir(vim.fs.dirname("extras/" .. fileName), "p")
-  local file = io.open("extras/" .. fileName, "w")
-  file:write(str)
-  file:close()
-end
-
 function M.read_file(file)
   local fd = assert(io.open(file, "r"))
   ---@type string
@@ -50,6 +40,7 @@ function M.read_file(file)
 end
 
 function M.write_file(file, contents)
+  vim.fn.mkdir(vim.fs.dirname(file), "p")
   local fd = assert(io.open(file, "w+"))
   fd:write(contents)
   fd:close()
@@ -84,22 +75,22 @@ function M.setup()
     moon = " Moon",
   }
 
-  for extra, info in pairs(M.extras) do
-    package.loaded["tokyonight.extra." .. extra] = nil
+  ---@type string[]
+  local names = vim.tbl_keys(M.extras)
+  table.sort(names)
+
+  -- tokyonight.setup({ plugins = { all = true } })
+  for _, extra in ipairs(names) do
+    local info = M.extras[extra]
     local plugin = require("tokyonight.extra." .. extra)
     for style, style_name in pairs(styles) do
-      tokyonight.setup({ style = style })
-      tokyonight.load({ style = style })
-      vim.cmd.colorscheme("tokyonight-" .. style)
-      local colors = require("tokyonight.colors").setup()
-      if style == "day" then
-        Util.invert_colors(colors)
-      end
+      local colors = tokyonight.load({ style = style, plugins = { all = true } })
       local fname = extra .. "/tokyonight_" .. style .. "." .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
       colors["_style_name"] = "Tokyo Night" .. style_name
       colors["_name"] = "tokyonight_" .. style
-      write(plugin.generate(colors), fname)
+      print("[write] " .. fname)
+      M.write_file("extras/" .. fname, plugin.generate(colors))
     end
   end
 end
