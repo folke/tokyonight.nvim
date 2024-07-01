@@ -9,7 +9,7 @@ function M.setup(opts)
   local light = false
   if opts.style == "day" or (opts.use_background and vim.o.background == "light") then
     light = true
-    opts.style = opts.light_style == "day" and "storm" or opts.light_style
+    opts.style = opts.light_style == "day" and "night" or opts.light_style
   end
 
   local Colors = require("tokyonight.colors")

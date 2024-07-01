@@ -71,13 +71,13 @@ function M.setup()
     local info = M.extras[extra]
     local plugin = require("tokyonight.extra." .. extra)
     for style, style_name in pairs(styles) do
-      local colors = tokyonight.load({ style = style, plugins = { all = true } })
+      local colors, groups = tokyonight.load({ style = style, plugins = { all = true } })
       local fname = extra .. "/tokyonight_" .. style .. "." .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
       colors["_style_name"] = "Tokyo Night" .. style_name
       colors["_name"] = "tokyonight_" .. style
       print("[write] " .. fname)
-      Util.write("extras/" .. fname, plugin.generate(colors))
+      Util.write("extras/" .. fname, plugin.generate(colors, groups))
     end
   end
 end
