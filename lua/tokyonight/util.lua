@@ -43,6 +43,7 @@ function M.lighten(hex, amount, fg)
   return M.blend(hex, fg or M.fg, amount)
 end
 
+---@param color string
 function M.invert_color(color)
   local hsluv = require("tokyonight.hsluv")
   if color ~= "NONE" then
@@ -108,7 +109,7 @@ function M.invert_colors(colors)
   return colors
 end
 
----@param hls Highlights
+---@param hls tokyonight.Highlights
 function M.invert_highlights(hls)
   for _, hl in pairs(hls) do
     if hl.fg then
@@ -123,35 +124,36 @@ function M.invert_highlights(hls)
   end
 end
 
----@param key string
-function M.cache_read(key)
-  local cache_file = vim.fn.stdpath("cache") .. "/tokyonight-" .. key .. ".lua"
-  ---@type boolean, tokyonight.Cache
-  local ok, cache = pcall(function()
-    local f = uv.fs_open(cache_file, "r", 438)
-    if f then
-      local stat = assert(uv.fs_fstat(f))
-      local data = uv.fs_read(f, stat.size, 0) --[[@as string?]]
-      uv.fs_close(f)
-      return data and loadstring(data, "tokyonight")()
-    end
-  end)
-  return ok and cache or nil
+M.cache = {}
+
+function M.cache.file(key)
+  return vim.fn.stdpath("cache") .. "/tokyonight-" .. key .. ".json"
 end
 
 ---@param key string
----@param cache tokyonight.Cache
-function M.cache_write(key, cache)
-  local code = "return " .. vim.inspect(vim.deepcopy(cache, true))
-  local ok, chunk = pcall(loadstring, code, "tokyonight")
-  if not (ok and chunk) then
-    return
-  end
-  local cache_file = vim.fn.stdpath("cache") .. "/tokyonight-" .. key .. ".lua"
-  local f = vim.uv.fs_open(cache_file, "w", 438)
+function M.cache.read(key)
+  ---@type boolean, tokyonight.Cache
+  local ok, ret = pcall(function()
+    local f = uv.fs_open(M.cache.file(key), "r", 438)
+    if f then
+      local stat = assert(uv.fs_fstat(f))
+      local data = uv.fs_read(f, stat.size) --[[@as string?]]
+      uv.fs_close(f)
+      return data and vim.json.decode(data, { luanil = {
+        object = true,
+        array = true,
+      } })
+    end
+  end)
+  return ok and ret or nil
+end
+
+---@param key string
+---@param data tokyonight.Cache
+function M.cache.write(key, data)
+  local f = vim.uv.fs_open(M.cache.file(key), "w", 438)
   if f then
-    -- selene: allow(incorrect_standard_library_use)
-    uv.fs_write(f, string.dump(chunk, true))
+    uv.fs_write(f, vim.json.encode(data))
     uv.fs_close(f)
   end
 end
