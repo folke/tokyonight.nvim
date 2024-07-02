@@ -1,1 +1,1 @@
-return require("lualine.themes.tokyonight")("moon")
+return require("lualine.themes._tokyonight").get("moon")

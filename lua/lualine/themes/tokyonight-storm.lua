@@ -1,1 +1,1 @@
-return require("lualine.themes.tokyonight")("storm")
+return require("lualine.themes._tokyonight").get("storm")
