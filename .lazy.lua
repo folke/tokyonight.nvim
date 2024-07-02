@@ -1,4 +1,24 @@
+--# selene: allow(global_usage)
+--# selene: allow(mixed_table)
+
+local Util = require("tokyonight.util")
+
+local colors ---@type ColorScheme
 local cache = {} ---@type table<string,table<string,string>>
+local hl_groups = {} ---@type table<string,boolean>
+
+---@param hl tokyonight.Highlight|string
+local function get_hl_group(hl)
+  local group = "TokyonightDev" .. vim.inspect(hl):gsub("%W+", "_")
+  if not hl_groups[group] then
+    hl = type(hl) == "string" and { link = hl } or hl
+    hl = vim.deepcopy(hl, true)
+    Util.resolve({ foo = hl })
+    vim.api.nvim_set_hl(0, group, hl)
+    hl_groups[group] = true
+  end
+  return group
+end
 
 local function get_group(buf)
   local fname = vim.api.nvim_buf_get_name(buf or 0)
@@ -9,75 +29,44 @@ local function get_group(buf)
   return vim.fn.fnamemodify(fname, ":t:r")
 end
 
----@type ColorScheme
-local colors
+local function load(group)
+  if cache[group] then
+    return
+  end
+  cache[group] = {}
+  local opts
+  colors, opts = require("tokyonight.colors").setup(opts)
+  local highlights = require("tokyonight.groups").get(group, colors, opts)
+  for k, v in pairs(highlights) do
+    cache[group][k] = get_hl_group(v)
+  end
+end
 
 vim.api.nvim_create_autocmd("BufWritePost", {
   group = vim.api.nvim_create_augroup("tokyonight_dev", { clear = true }),
   pattern = "lua/tokyonight/*.lua",
   callback = vim.schedule_wrap(function(ev)
+    local opts = require("tokyonight.config").options
     for k in pairs(package.loaded) do
       if k:find("^tokyonight") then
         package.loaded[k] = nil
       end
     end
+    require("tokyonight").setup(opts)
+    require("tokyonight.util").cache.clear()
     vim.cmd.colorscheme(vim.g.colors_name)
+    hl_groups = {}
     local hi = require("mini.hipatterns")
     local group = get_group(ev.buf)
-    cache.colors = nil
     if group then
       cache[group] = nil
     end
     for _, buf in ipairs(hi.get_enabled_buffers()) do
       hi.update(buf)
     end
-    for _, style in ipairs({ "storm", "day", "night", "moon" }) do
-      require("tokyonight.util").cache.write(style, {})
-    end
   end),
 })
 
-local function load(group)
-  if cache[group] then
-    return
-  end
-  cache[group] = {}
-  local opts = require("tokyonight.config").options
-  colors = require("tokyonight.colors").setup(opts)
-  local highlights = require("tokyonight.groups").get(group, colors, opts)
-  for k, v in pairs(highlights) do
-    local hl = "TokyonightDev" .. k
-    v = vim.deepcopy(v)
-    v.fg = v.fg or colors.fg
-    v.style = nil
-    vim.api.nvim_set_hl(0, hl, v)
-    cache[group][k] = hl
-  end
-end
-
-local function hl(color)
-  if not (type(color) == "string" and color:sub(1, 1) == "#") then
-    return
-  end
-  cache.colors = cache.colors or {}
-  if cache.colors[color] then
-    return cache.colors[color]
-  end
-  local group = "TokyonightDevColors" .. color:sub(2):gsub("%.", "")
-  vim.api.nvim_set_hl(0, group, { fg = color })
-  cache.colors[color] = group
-  return group
-end
-
-local function color_hl(key)
-  colors = colors or require("tokyonight.colors").setup()
-  local keys = vim.split(key, ".", { plain = true })
-  table.remove(keys, 1)
-  local color = vim.tbl_get(colors, unpack(keys))
-  return hl(color)
-end
-
--- selene: allow(mixed_table)
 return {
   {
     "echasnovski/mini.hipatterns",
@@ -107,27 +96,24 @@ return {
         pattern = {
           "%f[%w]()c%.[%w_%.]+()%f[%W]",
           "%f[%w]()colors%.[%w_%.]+()%f[%W]",
+          "%f[%w]()vim%.g%.terminal_color_%d+()%f[%W]",
         },
-        group = function(buf, match, data)
-          return color_hl(match)
+        group = function(_, match)
+          local parts = vim.split(match, ".", { plain = true })
+          local t = _G --[[@as table]]
+          if parts[1]:sub(1, 1) == "c" then
+            table.remove(parts, 1)
+            colors = colors or require("tokyonight.colors").setup()
+            t = colors
+          end
+          local color = vim.tbl_get(t, unpack(parts))
+          return type(color) == "string" and get_hl_group({ fg = color })
         end,
-        extmark_opts = function(buf, match, data)
+        extmark_opts = function(_, _, data)
           return {
             virt_text = { { "⬤ ", data.hl_group } },
             virt_text_pos = "inline",
-          }
-        end,
-      }
-
-      opts.highlighters.tokyonight_terminal = {
-        pattern = "%f[%w]()vim%.g%.terminal_color_%d+()%f[%W]",
-        group = function(buf, match, data)
-          return hl(vim.tbl_get(_G, unpack(vim.split(match, ".", { plain = true }))))
-        end,
-        extmark_opts = function(buf, match, data)
-          return {
-            virt_text = { { "⬤ ", data.hl_group } },
-            virt_text_pos = "inline",
+            priority = 2000,
           }
         end,
       }

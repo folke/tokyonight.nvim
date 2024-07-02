@@ -4,6 +4,8 @@ M.bg = "#000000"
 M.fg = "#ffffff"
 M.day_brightness = 0.3
 
+local uv = vim.uv or vim.loop
+
 ---@param c  string
 local function rgb(c)
   c = string.lower(c)
@@ -133,6 +135,12 @@ end
 ---@param data tokyonight.Cache
 function M.cache.write(key, data)
   pcall(M.write, M.cache.file(key), vim.json.encode(data))
+end
+
+function M.cache.clear()
+  for _, style in ipairs({ "storm", "day", "night", "moon" }) do
+    uv.fs_unlink(M.cache.file(style))
+  end
 end
 
 return M
