@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.1.1](https://github.com/folke/tokyonight.nvim/compare/v4.1.0...v4.1.1) (2024-07-02)
+
+
+### Bug Fixes
+
+* correctly deal with background light/dark. Fixes [#554](https://github.com/folke/tokyonight.nvim/issues/554) ([0717599](https://github.com/folke/tokyonight.nvim/commit/07175991c38a5e41ffe8bdb06197a116a46370ae))
+* **lualine:** make lualine work again with just tokyonight. Fixes [#551](https://github.com/folke/tokyonight.nvim/issues/551) ([5d2fc75](https://github.com/folke/tokyonight.nvim/commit/5d2fc752264cbd9cefc668b300d4aa44ef531174))
+* **mini:** hue -&gt; icons ([5808dbe](https://github.com/folke/tokyonight.nvim/commit/5808dbed0682270f0c40ae7a1bc517ad1fbcaede))
+* **util:** bring back lighten/darken. Fixes [#556](https://github.com/folke/tokyonight.nvim/issues/556) ([72a99aa](https://github.com/folke/tokyonight.nvim/commit/72a99aa3dd93e9c1a017c7c972ea597164031ee0))
+
 ## [4.1.0](https://github.com/folke/tokyonight.nvim/compare/v4.0.0...v4.1.0) (2024-07-02)
 
 
