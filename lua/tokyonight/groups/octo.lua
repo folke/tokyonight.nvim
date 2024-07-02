@@ -12,7 +12,7 @@ function M.get(c)
     OctoIssueTitle            = { fg = c.purple, bold = true },
     OctoStateChangesRequested = { link = "DiagnosticVirtualTextWarn" },
     OctoStateClosed           = { link = "DiagnosticVirtualTextError" },
-    OctoStateMerged           = { bg = Util.darken(c.magenta, 0.1), fg = c.magenta },
+    OctoStateMerged           = { bg = Util.blend_bg(c.magenta, 0.1), fg = c.magenta },
     OctoStateOpen             = { link = "DiagnosticVirtualTextHint" },
     OctoStatePending          = { link = "DiagnosticVirtualTextWarn" },
     OctoStatusColumn          = { fg = c.blue1 },

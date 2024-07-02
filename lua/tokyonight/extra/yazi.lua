@@ -4,7 +4,7 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  colors.bg_search = util.darken(colors.info, 0.1)
+  colors.bg_search = util.blend_bg(colors.info, 0.1)
   local yazi = util.template(
     [[
 [manager]

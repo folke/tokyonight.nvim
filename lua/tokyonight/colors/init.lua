@@ -2,40 +2,41 @@ local Util = require("tokyonight.util")
 
 local M = {}
 
----@alias tokyonight.Config.colors tokyonight.Config|{transform?: boolean, light?: boolean}
-
----@param opts tokyonight.Config.colors
+---@param opts? tokyonight.Config
 function M.setup(opts)
   opts = require("tokyonight.config").extend(opts)
 
-  ---@cast opts tokyonight.Config.colors
-
-  if opts.style == "day" or (opts.use_background and vim.o.background == "light") then
-    opts.style = opts.light_style == "day" and "night" or opts.light_style
-    opts.light = true
+  if opts.use_background and vim.o.background == "light" then
+    opts.style = "day"
   end
+
+  Util.day_brightness = opts.day_brightness
 
   ---@type Palette
   local palette = vim.deepcopy(Util.mod("tokyonight.colors." .. opts.style))
+  if type(palette) == "function" then
+    palette = palette(opts) --[[@as Palette]]
+  end
 
   -- Color Palette
   ---@class ColorScheme: Palette
   local colors = palette
 
-  colors.none = "NONE"
   Util.bg = colors.bg
-  Util.day_brightness = opts.day_brightness
+  Util.fg = colors.fg
+
+  colors.none = "NONE"
 
   colors.diff = {
-    add = Util.darken(colors.green2, 0.15),
-    delete = Util.darken(colors.red1, 0.15),
-    change = Util.darken(colors.blue7, 0.15),
+    add = Util.blend_bg(colors.green2, 0.15),
+    delete = Util.blend_bg(colors.red1, 0.15),
+    change = Util.blend_bg(colors.blue7, 0.15),
     text = colors.blue7,
   }
 
   colors.git.ignore = colors.dark3
-  colors.black = Util.darken(colors.bg, 0.8, "#000000")
-  colors.border_highlight = Util.darken(colors.blue1, 0.8)
+  colors.black = Util.blend_bg(colors.bg, 0.8, "#000000")
+  colors.border_highlight = Util.blend_bg(colors.blue1, 0.8)
   colors.border = colors.black
 
   -- Popups and statusline always get a dark background
@@ -51,7 +52,7 @@ function M.setup(opts)
     or opts.styles.floats == "dark" and colors.bg_dark
     or colors.bg
 
-  colors.bg_visual = Util.darken(colors.blue0, 0.4)
+  colors.bg_visual = Util.blend_bg(colors.blue0, 0.4)
   colors.bg_search = colors.blue0
   colors.fg_sidebar = colors.fg_dark
   colors.fg_float = colors.fg
@@ -63,10 +64,6 @@ function M.setup(opts)
   colors.hint = colors.teal
 
   colors.rainbow = { colors.blue, colors.yellow, colors.green, colors.teal, colors.magenta, colors.purple }
-
-  if opts.light and opts.transform ~= false then
-    Util.invert_colors(colors)
-  end
 
   return colors, opts
 end

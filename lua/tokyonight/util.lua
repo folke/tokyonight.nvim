@@ -1,13 +1,11 @@
 local M = {}
 
-local uv = vim.uv or vim.loop
-
 M.bg = "#000000"
 M.fg = "#ffffff"
 M.day_brightness = 0.3
 
 ---@param c  string
-local function hexToRgb(c)
+local function rgb(c)
   c = string.lower(c)
   return { tonumber(c:sub(2, 3), 16), tonumber(c:sub(4, 5), 16), tonumber(c:sub(6, 7), 16) }
 end
@@ -16,16 +14,21 @@ local me = debug.getinfo(1, "S").source:sub(2)
 me = vim.fn.fnamemodify(me, ":h:h")
 
 function M.mod(modname)
-  return loadfile(me .. "/" .. modname:gsub("%.", "/") .. ".lua")()
+  if package.loaded[modname] then
+    return package.loaded[modname]
+  end
+  local ret = loadfile(me .. "/" .. modname:gsub("%.", "/") .. ".lua")()
+  package.loaded[modname] = ret
+  return ret
 end
 
 ---@param foreground string foreground color
 ---@param background string background color
 ---@param alpha number|string number between 0 and 1. 0 results in bg, 1 results in fg
-function M.blend(foreground, background, alpha)
+function M.blend(foreground, alpha, background)
   alpha = type(alpha) == "string" and (tonumber(alpha, 16) / 0xff) or alpha
-  local bg = hexToRgb(background)
-  local fg = hexToRgb(foreground)
+  local bg = rgb(background)
+  local fg = rgb(foreground)
 
   local blendChannel = function(i)
     local ret = (alpha * fg[i] + ((1 - alpha) * bg[i]))
@@ -35,38 +38,32 @@ function M.blend(foreground, background, alpha)
   return string.format("#%02x%02x%02x", blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
-function M.darken(hex, amount, bg)
-  return M.blend(hex, bg or M.bg, amount)
+function M.blend_bg(hex, amount, bg)
+  return M.blend(hex, amount, bg or M.bg)
 end
 
-function M.lighten(hex, amount, fg)
-  return M.blend(hex, fg or M.fg, amount)
+function M.blend_fg(hex, amount, fg)
+  return M.blend(hex, amount, fg or M.fg)
 end
 
----@param color string
-function M.invert_color(color)
-  local hsluv = require("tokyonight.hsluv")
-  if color ~= "NONE" then
-    local hsl = hsluv.hex_to_hsluv(color)
-    hsl[3] = 100 - hsl[3]
-    if hsl[3] < 40 then
-      hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+---@param color string|Palette
+function M.invert(color)
+  if type(color) == "table" then
+    for key, value in pairs(color) do
+      color[key] = M.invert(value)
     end
-    return hsluv.hsluv_to_hex(hsl)
+  elseif type(color) == "string" then
+    local hsluv = require("tokyonight.hsluv")
+    if color ~= "NONE" then
+      local hsl = hsluv.hex_to_hsluv(color)
+      hsl[3] = 100 - hsl[3]
+      if hsl[3] < 40 then
+        hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+      end
+      return hsluv.hsluv_to_hex(hsl)
+    end
   end
   return color
-end
-
----@param hl tokyonight.Highlight
----@param group string
-function M.highlight(group, hl)
-  if type(hl.style) == "table" then
-    for k, v in pairs(hl.style) do
-      hl[k] = v
-    end
-    hl.style = nil
-  end
-  vim.api.nvim_set_hl(0, group, hl)
 end
 
 ---@param groups tokyonight.Highlights
@@ -95,33 +92,6 @@ function M.template(str, table)
       return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), ".", { plain = true }))) or w
     end)
   )
-end
-
----@param colors ColorScheme
-function M.invert_colors(colors)
-  if type(colors) == "string" then
-    ---@diagnostic disable-next-line: return-type-mismatch
-    return M.invert_color(colors)
-  end
-  for key, value in pairs(colors) do
-    colors[key] = M.invert_colors(value)
-  end
-  return colors
-end
-
----@param hls tokyonight.Highlights
-function M.invert_highlights(hls)
-  for _, hl in pairs(hls) do
-    if hl.fg then
-      hl.fg = M.invert_color(hl.fg)
-    end
-    if hl.bg then
-      hl.bg = M.invert_color(hl.bg)
-    end
-    if hl.sp then
-      hl.sp = M.invert_color(hl.sp)
-    end
-  end
 end
 
 ---@param file string

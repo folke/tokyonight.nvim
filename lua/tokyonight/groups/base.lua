@@ -46,8 +46,8 @@ function M.get(c, opts)
     FloatBorder                 = { fg = c.border_highlight, bg = c.bg_float },
     FloatTitle                  = { fg = c.border_highlight, bg = c.bg_float },
     Pmenu                       = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
-    PmenuSel                    = { bg = Util.darken(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
-    PmenuSbar                   = { bg = Util.lighten(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
+    PmenuSel                    = { bg = Util.blend_bg(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
+    PmenuSbar                   = { bg = Util.blend_fg(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
     PmenuThumb                  = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
     Question                    = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine                = { bg = c.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -91,7 +91,7 @@ function M.get(c, opts)
     Todo                        = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Type                        = { fg = c.blue1 }, -- (preferred) int, long, char, etc.
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
-    debugBreakpoint             = { bg = Util.darken(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
+    debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
     dosIniLabel                 = { link = "@property" },
     helpCommand                 = { bg = c.terminal_black, fg = c.blue },
@@ -105,9 +105,9 @@ function M.get(c, opts)
     LspReferenceText            = { bg = c.fg_gutter }, -- used for highlighting "text" references
     LspReferenceRead            = { bg = c.fg_gutter }, -- used for highlighting "read" references
     LspReferenceWrite           = { bg = c.fg_gutter }, -- used for highlighting "write" references
-    LspSignatureActiveParameter = { bg = Util.darken(c.bg_visual, 0.4), bold = true },
+    LspSignatureActiveParameter = { bg = Util.blend_bg(c.bg_visual, 0.4), bold = true },
     LspCodeLens                 = { fg = c.comment },
-    LspInlayHint                = { bg = Util.darken(c.blue7, 0.1), fg = c.dark3 },
+    LspInlayHint                = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
     LspInfoBorder               = { fg = c.border_highlight, bg = c.bg_float },
 
     -- diagnostics
@@ -116,10 +116,10 @@ function M.get(c, opts)
     DiagnosticInfo              = { fg = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint              = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticUnnecessary       = { fg = c.terminal_black }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticVirtualTextError  = { bg = Util.darken(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
-    DiagnosticVirtualTextWarn   = { bg = Util.darken(c.warning, 0.1), fg = c.warning }, -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo   = { bg = Util.darken(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint   = { bg = Util.darken(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextError  = { bg = Util.blend_bg(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextWarn   = { bg = Util.blend_bg(c.warning, 0.1), fg = c.warning }, -- Used for "Warning" diagnostic virtual text
+    DiagnosticVirtualTextInfo   = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint   = { bg = Util.blend_bg(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
     DiagnosticUnderlineError    = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn     = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
     DiagnosticUnderlineInfo     = { undercurl = true, sp = c.info }, -- Used to underline "Information" diagnostics

@@ -34,7 +34,7 @@ local function load(group)
     return
   end
   cache[group] = {}
-  local opts = require("tokyonight.config").defaults
+  local opts = require("tokyonight.config").options
   colors = require("tokyonight.colors").setup(opts)
   local highlights = require("tokyonight.groups").get(group, colors, opts)
   for k, v in pairs(highlights) do

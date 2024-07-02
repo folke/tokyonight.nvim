@@ -6,7 +6,7 @@ local M = {}
 function M.get(c)
   -- stylua: ignore
   return {
-    TreesitterContext = { bg = Util.darken(c.fg_gutter, 0.8) },
+    TreesitterContext = { bg = Util.blend_bg(c.fg_gutter, 0.8) },
   }
 end
 

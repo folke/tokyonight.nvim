@@ -1,11 +1,8 @@
-local Util = require("tokyonight.util")
-
 local M = {}
 
 ---@param opts? tokyonight.Config
 function M.setup(opts)
   opts = require("tokyonight.config").extend(opts)
-  opts.transform = false
 
   local Colors = require("tokyonight.colors")
   local colors
@@ -15,18 +12,13 @@ function M.setup(opts)
   local Groups = require("tokyonight.groups")
   local groups = Groups.load(colors, opts)
 
-  if opts.light then
-    Util.invert_highlights(groups)
-    Util.invert_colors(colors)
-  end
-
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
     vim.cmd("hi clear")
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "tokyonight-" .. (opts.light and "day" or opts.style)
+  vim.g.colors_name = "tokyonight-" .. opts.style
 
   for group, hl in pairs(groups) do
     vim.api.nvim_set_hl(0, group, hl)

@@ -85,17 +85,17 @@ function M.get(c, opts)
     ["@tag"]                        = { link = "Label" },
     ["@tag.attribute"]              = { link = "@property" },
     ["@tag.delimiter"]              = { link = "Delimiter" },
-    ["@tag.delimiter.tsx"]          = { fg = Util.darken(c.blue, 0.7) },
+    ["@tag.delimiter.tsx"]          = { fg = Util.blend_bg(c.blue, 0.7) },
     ["@tag.tsx"]                    = { fg = c.red },
     ["@type"]                       = { link = "Type" },
-    ["@type.builtin"]               = { fg = Util.darken(c.blue1, 0.8) },
+    ["@type.builtin"]               = { fg = Util.blend_bg(c.blue1, 0.8) },
     ["@type.definition"]            = { link = "Typedef" },
     ["@type.qualifier"]             = { link = "@keyword" },
     ["@variable"]                   = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"]           = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@variable.member"]            = { fg = c.green1 }, -- For fields.
     ["@variable.parameter"]         = { fg = c.yellow }, -- For parameters of a function.
-    ["@variable.parameter.builtin"] = { fg = Util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@variable.parameter.builtin"] = { fg = Util.blend_fg(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
   }
 
   for i, color in ipairs(c.rainbow) do

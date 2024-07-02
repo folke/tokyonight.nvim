@@ -10,7 +10,7 @@ function M.get(c, opts)
     Headline  = { link = "Headline1" },
   }
   for i, color in ipairs(c.rainbow) do
-    ret["Headline" .. i] = { bg = Util.darken(color, 0.05) }
+    ret["Headline" .. i] = { bg = Util.blend_bg(color, 0.05) }
   end
   return ret
 end
