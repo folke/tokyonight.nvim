@@ -1,16 +1,23 @@
+local Util = require("tokyonight.util")
+
 local M = {}
 
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
+  local dark = Util.blend(c.bg_sidebar, 0.8, opts.style == "day" and c.blue or "#000000")
   -- stylua: ignore
   return {
-    NeoTreeNormal       = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-    NeoTreeNormalNC     = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-    NeoTreeDimText      = { fg = c.fg_gutter },
-    NeoTreeGitModified  = { fg = c.orange },
-    NeoTreeGitUntracked = { fg = c.magenta },
-    NeoTreeGitStaged    = { fg = c.green1 },
-    NeoTreeFileName     = { fg = c.fg_sidebar },
+    NeoTreeDimText             = { fg = c.fg_gutter },
+    NeoTreeFileName            = { fg = c.fg_sidebar },
+    NeoTreeGitModified         = { fg = c.orange },
+    NeoTreeGitStaged           = { fg = c.green1 },
+    NeoTreeGitUntracked        = { fg = c.magenta },
+    NeoTreeNormal              = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    NeoTreeNormalNC            = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    NeoTreeTabActive           = { fg = c.blue, bg = c.bg_dark, bold = true },
+    NeoTreeTabInactive         = { fg = c.dark3, bg = dark },
+    NeoTreeTabSeparatorActive  = { fg = c.blue, bg = c.bg_dark },
+    NeoTreeTabSeparatorInactive= { fg = c.bg, bg = dark },
   }
 end
 
