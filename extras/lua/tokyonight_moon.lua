@@ -1,5 +1,6 @@
 local colors = {
   _name = "tokyonight_moon",
+  _style = "moon",
   bg = "#222436",
   bg_dark = "#1e2030",
   bg_float = "#1e2030",

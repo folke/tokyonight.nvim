@@ -1,5 +1,6 @@
 local colors = {
   _name = "tokyonight_storm",
+  _style = "storm",
   bg = "#24283b",
   bg_dark = "#1f2335",
   bg_float = "#1f2335",
