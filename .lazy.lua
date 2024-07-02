@@ -14,6 +14,7 @@ local function get_hl_group(hl)
     hl = type(hl) == "string" and { link = hl } or hl
     hl = vim.deepcopy(hl, true)
     Util.resolve({ foo = hl })
+    hl.fg = hl.fg or colors.fg
     vim.api.nvim_set_hl(0, group, hl)
     hl_groups[group] = true
   end
@@ -44,7 +45,7 @@ end
 
 vim.api.nvim_create_autocmd("BufWritePost", {
   group = vim.api.nvim_create_augroup("tokyonight_dev", { clear = true }),
-  pattern = "lua/tokyonight/*.lua",
+  pattern = "*/lua/tokyonight/**.lua",
   callback = vim.schedule_wrap(function(ev)
     local opts = require("tokyonight.config").options
     for k in pairs(package.loaded) do
