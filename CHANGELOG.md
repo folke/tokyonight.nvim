@@ -1,5 +1,28 @@
 # Changelog
 
+## [4.1.0](https://github.com/folke/tokyonight.nvim/compare/v4.0.0...v4.1.0) (2024-07-02)
+
+
+### Features
+
+* **dev:** highlight hl_groups and colors using hipatterns ([c05b9f6](https://github.com/folke/tokyonight.nvim/commit/c05b9f60f0ab3cae1ad64976212925b1a898760a))
+* **dev:** show terminal colors ([32100f4](https://github.com/folke/tokyonight.nvim/commit/32100f4dfbffc4997d97de5412a68602ca1e217c))
+* **extras:** added vim colorschemes. Fixes [#256](https://github.com/folke/tokyonight.nvim/issues/256) ([4c89692](https://github.com/folke/tokyonight.nvim/commit/4c896923e2931bb562b17325e2095eb2de8da886))
+
+
+### Bug Fixes
+
+* **build:** add additional inputs to check if rebuild is needed ([55e29a1](https://github.com/folke/tokyonight.nvim/commit/55e29a1208946798335924917efbabb0edb21098))
+* **dev:** hipatterns not optional ([4fafe7b](https://github.com/folke/tokyonight.nvim/commit/4fafe7b5600caec7bb226a23debdcf0c8e88cee4))
+* **dev:** make autocmds work with all lua files in tokyonight ([a9851c5](https://github.com/folke/tokyonight.nvim/commit/a9851c5b44fe2fa5757080fd83e8ae4100a27c3e))
+* **extras:** day bg ([5598215](https://github.com/folke/tokyonight.nvim/commit/5598215fa06572048bc857c9c71378a5433ec070))
+* fixed day themes ([4e8e7eb](https://github.com/folke/tokyonight.nvim/commit/4e8e7ebfe906c3cd7527bf2cd11d30238961507b))
+* **helix:** fix some broken generated values ([#519](https://github.com/folke/tokyonight.nvim/issues/519)) ([972d345](https://github.com/folke/tokyonight.nvim/commit/972d345361d8e55f1ce184ca2297cf9b3af53393))
+* **neo-tree:** handle transparent sidebars. Fixes [#551](https://github.com/folke/tokyonight.nvim/issues/551) ([b085271](https://github.com/folke/tokyonight.nvim/commit/b085271cd206db38080ddc43e109b869daa14308))
+* **neo-tree:** tabs. Fixes [#513](https://github.com/folke/tokyonight.nvim/issues/513) ([d25e7b1](https://github.com/folke/tokyonight.nvim/commit/d25e7b1a6dbfbcc9103e092631b0d3f0962aab1c))
+* **terminal:** slightly brighten bright colors ([4052d57](https://github.com/folke/tokyonight.nvim/commit/4052d57beb10affdaf8fe9ffa31c80fa17f6963d))
+* **xfceterm:** colorscheme name fix ([#520](https://github.com/folke/tokyonight.nvim/issues/520)) ([7b7cfeb](https://github.com/folke/tokyonight.nvim/commit/7b7cfeb5df9c09c2f5807b81e21274ba404ed1a3))
+
 ## [4.0.0](https://github.com/folke/tokyonight.nvim/compare/v3.0.1...v4.0.0) (2024-07-01)
 
 
