@@ -1,3 +1,5 @@
+local Util = require("tokyonight.util")
+
 local M = {}
 
 ---@param opts? tokyonight.Config
@@ -44,22 +46,22 @@ function M.terminal(colors)
 
   -- colors
   vim.g.terminal_color_1 = colors.red
-  vim.g.terminal_color_9 = colors.red
+  vim.g.terminal_color_9 = Util.blend_fg(colors.red, 0.5)
 
   vim.g.terminal_color_2 = colors.green
-  vim.g.terminal_color_10 = colors.green
+  vim.g.terminal_color_10 = Util.blend_fg(colors.green, 0.5)
 
   vim.g.terminal_color_3 = colors.yellow
-  vim.g.terminal_color_11 = colors.yellow
+  vim.g.terminal_color_11 = Util.blend_fg(colors.yellow, 0.5)
 
   vim.g.terminal_color_4 = colors.blue
-  vim.g.terminal_color_12 = colors.blue
+  vim.g.terminal_color_12 = Util.blend_fg(colors.blue, 0.5)
 
   vim.g.terminal_color_5 = colors.magenta
-  vim.g.terminal_color_13 = colors.magenta
+  vim.g.terminal_color_18 = Util.blend_fg(colors.magenta, 0.5)
 
   vim.g.terminal_color_6 = colors.cyan
-  vim.g.terminal_color_14 = colors.cyan
+  vim.g.terminal_color_14 = Util.blend_fg(colors.cyan, 0.5)
 end
 
 return M
