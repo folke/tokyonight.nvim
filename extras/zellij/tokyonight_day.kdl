@@ -6,7 +6,7 @@ themes {
     tokyonight_day {
         fg "#3760bf"
         bg "#c4c8da"
-        black "#e9e9ed"
+        black "#b4b5b9"
         red "#f52a65"
         green "#587539"
         yellow "#8c6c3e"

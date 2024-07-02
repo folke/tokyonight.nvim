@@ -139,7 +139,7 @@
 				<key>foreground</key>
 				<string>#07879d</string>
 				<key>background</key>
-				<string>#182632</string>
+				<string>#cbd9e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -152,7 +152,7 @@
 				<key>foreground</key>
 				<string>#8c6c3e</string>
 				<key>background</key>
-				<string>#252328</string>
+				<string>#d9d6d6</string>
 			</dict>
 		</dict>
 		<dict>
@@ -165,7 +165,7 @@
 				<key>foreground</key>
 				<string>#c64343</string>
 				<key>background</key>
-				<string>#2b1f29</string>
+				<string>#ded2d7</string>
 			</dict>
 		</dict>
 		<dict>

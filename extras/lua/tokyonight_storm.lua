@@ -217,7 +217,7 @@ local highlights = {
     link = "@variable"
   },
   ["@lsp.type.interface"] = {
-    fg = "#6ad5e8"
+    fg = "#57c5e5"
   },
   ["@lsp.type.keyword"] = {
     link = "@keyword"
@@ -480,7 +480,7 @@ local highlights = {
     fg = "#e0af68"
   },
   ["@variable.parameter.builtin"] = {
-    fg = "#e6bf86"
+    fg = "#dab484"
   },
   ALEErrorSign = {
     fg = "#db4b4b"
@@ -2391,7 +2391,7 @@ local highlights = {
     fg = "#c0caf5"
   },
   PmenuSbar = {
-    bg = "#2a2e3f"
+    bg = "#272b3f"
   },
   PmenuSel = {
     bg = "#363d59"

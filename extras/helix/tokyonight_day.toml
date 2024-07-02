@@ -38,7 +38,7 @@ keyword = { fg = "#7847bd", modifiers = ["italic"] }
 label = { fg = "#2e7de9" }
 "markup.bold" = { fg = "#3760bf", modifiers = ["bold"] }
 "markup.heading" = { fg = "#2e7de9", modifiers = ["bold"] }
-"markup.heading.completion" = { bg = "#e9e9ec", fg = "#3760bf" }
+"markup.heading.completion" = { bg = "#d0d5e3", fg = "#3760bf" }
 "markup.heading.hover" = { bg = "#b3b8d1" }
 "markup.italic" = { fg = "#3760bf", modifiers = ["italic"] }
 "markup.link" = 
@@ -60,7 +60,7 @@ string = { fg = "#587539" }
 "string.special" = { fg = "#188092" }
 tag = { fg = "#9854f1" }
 type = { fg = "#188092" }
-"type.builtin" = { fg = "#2496ac" }
+"type.builtin" = { fg = "#4094a3" }
 "type.enum" = { fg = "#188092" }
 "type.enum.variant" = { fg = "#b15c00" }
 "ui.background" = { bg = "bg" }
@@ -68,20 +68,20 @@ type = { fg = "#188092" }
 "ui.cursor.match" = { fg = "#b15c00", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#a8aecb" }
 "ui.linenr.select" = { fg = "#b15c00", modifiers = ["bold"] }
-"ui.menu" = { bg = "#e9e9ec", fg = "#3760bf" }
-"ui.menu.scroll" = { bg = 14211292, fg = 11054795 }
+"ui.menu" = { bg = "#d0d5e3", fg = "#3760bf" }
+"ui.menu.scroll" = { bg = 13160417, fg = 11054795 }
 "ui.menu.selected" = { bg = "#b3b8d1" }
-"ui.popup" = { bg = "#e9e9ec", fg = "#2496ac" }
+"ui.popup" = { bg = "#d0d5e3", fg = "#4094a3" }
 "ui.selection" = { bg = "bg_highlight" }
-"ui.statusline" = { bg = "#e9e9ec", fg = "#6172b0" }
-"ui.statusline.inactive" = { bg = "#e9e9ec", fg = "#a8aecb" }
+"ui.statusline" = { bg = "#d0d5e3", fg = "#6172b0" }
+"ui.statusline.inactive" = { bg = "#d0d5e3", fg = "#a8aecb" }
 "ui.statusline.normal" = { bg = "blue", fg = "black" }
 "ui.text" = { bg = "#e1e2e7", fg = "#3760bf" }
-"ui.text.focus" = { bg = "#b6bfe2" }
+"ui.text.focus" = { bg = "#b7c1e3" }
 "ui.text.inactive" = { fg = "#848cb5", modifiers = ["italic"] }
-"ui.text.info" = { bg = "#e9e9ec", fg = "#3760bf" }
-"ui.virtual.inlay-hint" = { bg = "#acd7eb", fg = "#118c74" }
-"ui.window" = { fg = "#e9e9ed", modifiers = ["bold"] }
+"ui.text.info" = { bg = "#d0d5e3", fg = "#3760bf" }
+"ui.virtual.inlay-hint" = { bg = "#ccd9dc", fg = "#118c74" }
+"ui.window" = { fg = "#b4b5b9", modifiers = ["bold"] }
 variable = { fg = "#3760bf" }
 "variable.builtin" = { fg = "#f52a65" }
 "variable.other.member" = { fg = "#387068" }
@@ -90,15 +90,15 @@ warning = { fg = "#8c6c3e" }
 
 [palette]
 bg = "#e1e2e7"
-bg_dark = "#e9e9ec"
-bg_float = "#e9e9ec"
+bg_dark = "#d0d5e3"
+bg_float = "#d0d5e3"
 bg_highlight = "#c4c8da"
-bg_popup = "#e9e9ec"
+bg_popup = "#d0d5e3"
 bg_search = "#7890dd"
-bg_sidebar = "#e9e9ec"
-bg_statusline = "#e9e9ec"
-bg_visual = "#b6bfe2"
-black = "#e9e9ed"
+bg_sidebar = "#d0d5e3"
+bg_statusline = "#d0d5e3"
+bg_visual = "#b7c1e3"
+black = "#b4b5b9"
 blue = "#2e7de9"
 blue0 = "#7890dd"
 blue1 = "#188092"
@@ -106,15 +106,15 @@ blue2 = "#07879d"
 blue5 = "#006a83"
 blue6 = "#2e5857"
 blue7 = "#92a6d5"
-border = "#e9e9ed"
-border_highlight = "#2496ac"
+border = "#b4b5b9"
+border_highlight = "#4094a3"
 comment = "#848cb5"
 cyan = "#007197"
 dark3 = "#8990b3"
 dark5 = "#68709a"
-"diff.add" = "#aecde6"
-"diff.change" = "#d6d8e3"
-"diff.delete" = "#dfccd4"
+"diff.add" = "#c8d6dc"
+"diff.change" = "#d5d9e4"
+"diff.delete" = "#ddcace"
 "diff.text" = "#92a6d5"
 error = "#c64343"
 fg = "#3760bf"
