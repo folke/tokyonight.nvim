@@ -4,7 +4,8 @@ local M = {}
 
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
-  local dark = Util.blend(c.bg_sidebar, 0.8, opts.style == "day" and c.blue or "#000000")
+  local dark = opts.styles.sidebars == "transparent" and c.none
+    or Util.blend(c.bg_sidebar, 0.8, opts.style == "day" and c.blue or "#000000")
   -- stylua: ignore
   return {
     NeoTreeDimText             = { fg = c.fg_gutter },
