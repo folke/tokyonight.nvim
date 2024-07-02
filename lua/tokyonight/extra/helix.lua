@@ -138,7 +138,7 @@ function M.generate(colors)
       raw = {
         "@markup.raw",
         inline = "@markup.raw.markdown_inline",
-        block = "nil",
+        block = nil,
         -- UI --
         completion = nil,
         hover = nil,
