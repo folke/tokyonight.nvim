@@ -56,6 +56,7 @@ EXTRAS ~
 - Terminator <https://gnome-terminator.readthedocs.io/en/latest/config.html> (terminator <extras/terminator>)
 - Tilix <https://github.com/gnunn1/tilix> (tilix <extras/tilix>)
 - Tmux <https://github.com/tmux/tmux/wiki> (tmux <extras/tmux>)
+- Vim <https://vimhelp.org/> (vim <extras/vim>)
 - WezTerm <https://wezfurlong.org/wezterm/config/files.html> (wezterm <extras/wezterm>)
 - Windows Terminal <https://aka.ms/terminal-documentation> (windows_terminal <extras/windows_terminal>)
 - Xfce Terminal <https://docs.xfce.org/apps/terminal/advanced> (xfceterm <extras/xfceterm>)
