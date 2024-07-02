@@ -6,8 +6,8 @@ function M.get(c, opts)
   return {
     DefinitionCount            = { fg = c.purple },
     DefinitionIcon             = { fg = c.blue },
-    DiagnosticInformation      = { link = "DiagnosticInfo" },
-    DiagnosticWarning          = { link = "DiagnosticWarn" },
+    DiagnosticInformation      = "DiagnosticInfo",
+    DiagnosticWarning          = "DiagnosticWarn",
     LspFloatWinBorder          = { fg = c.border_highlight },
     LspFloatWinNormal          = { bg = c.bg_float },
     LspSagaBorderTitle         = { fg = c.cyan },

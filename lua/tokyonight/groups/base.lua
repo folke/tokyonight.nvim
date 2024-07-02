@@ -53,7 +53,7 @@ function M.get(c, opts)
     QuickFixLine                = { bg = c.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search                      = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch                   = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    CurSearch                   = { link = "IncSearch" },
+    CurSearch                   =  "IncSearch",
     SpecialKey                  = { fg = c.dark3 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad                    = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap                    = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -70,14 +70,14 @@ function M.get(c, opts)
     WarningMsg                  = { fg = c.warning }, -- warning messages
     Whitespace                  = { fg = c.fg_gutter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu                    = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
-    WinBar                      = { link = "StatusLine" }, -- window bar
-    WinBarNC                    = { link = "StatusLineNC" }, -- window bar in inactive windows
+    WinBar                      = "StatusLine" , -- window bar
+    WinBarNC                    = "StatusLineNC", -- window bar in inactive windows
 
     Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
     Character                   = { fg = c.green }, --  a character constant: 'c', '\n'
     Constant                    = { fg = c.orange }, -- (preferred) any constant
     Debug                       = { fg = c.orange }, --    debugging statements
-    Delimiter                   = { link = "Special" }, --  character that needs attention
+    Delimiter                   =  "Special", --  character that needs attention
     Error                       = { fg = c.error }, -- (preferred) any erroneous construct
     Function                    = { fg = c.blue, style = opts.styles.functions }, -- function name (also: methods for classes)
     Identifier                  = { fg = c.magenta, style = opts.styles.variables }, -- (preferred) any variable name
@@ -93,7 +93,7 @@ function M.get(c, opts)
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
     debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
-    dosIniLabel                 = { link = "@property" },
+    dosIniLabel                 = "@property",
     helpCommand                 = { bg = c.terminal_black, fg = c.blue },
     htmlH1                      = { fg = c.magenta, bold = true },
     htmlH2                      = { fg = c.blue, bold = true },

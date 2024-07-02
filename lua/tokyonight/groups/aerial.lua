@@ -6,7 +6,7 @@ function M.get(c, opts)
   local ret = {
     AerialNormal = { fg = c.fg, bg = c.none },
     AerialGuide  = { fg = c.fg_gutter },
-    AerialLine   = { link = "LspInlayHint" },
+    AerialLine   = "LspInlayHint",
   }
   require("tokyonight.groups.kinds").kinds(ret, "Aerial%sIcon")
   return ret

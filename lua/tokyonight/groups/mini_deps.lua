@@ -4,15 +4,15 @@ local M = {}
 function M.get(c)
   -- stylua: ignore
   return {
-    MiniDepsChangeAdded   = { link = "diffAdded" },
-    MiniDepsChangeRemoved = { link = "diffRemoved" },
-    MiniDepsHint          = { link = "DiagnosticHint" },
-    MiniDepsInfo          = { link = "DiagnosticInfo" },
-    MiniDepsMsgBreaking   = { link = "DiagnosticWarn" },
-    MiniDepsPlaceholder   = { link = "Comment" },
-    MiniDepsTitle         = { link = "Title" },
+    MiniDepsChangeAdded   = "diffAdded",
+    MiniDepsChangeRemoved = "diffRemoved",
+    MiniDepsHint          = "DiagnosticHint",
+    MiniDepsInfo          = "DiagnosticInfo",
+    MiniDepsMsgBreaking   = "DiagnosticWarn",
+    MiniDepsPlaceholder   = "Comment",
+    MiniDepsTitle         = "Title",
     MiniDepsTitleError    = { fg = c.black, bg = c.git.delete },
-    MiniDepsTitleSame     = { link = "Comment" },
+    MiniDepsTitleSame     = "Comment",
     MiniDepsTitleUpdate   = { fg = c.black, bg = c.git.add },
   }
 end

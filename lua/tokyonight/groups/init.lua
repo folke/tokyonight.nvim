@@ -128,15 +128,14 @@ function M.load(colors, opts)
   local cache_key = opts.style
   local cache = opts.cache and Util.cache.read(cache_key)
 
-  local ret = nil ---@type tokyonight.Highlights
-  if cache then
-    local expect = { colors = colors, plugins = names, version = Config.version }
-    local used = { colors = cache.colors, plugins = cache.plugins, version = cache.version }
+  local inputs = {
+    colors = colors,
+    plugins = names,
+    version = Config.version,
+    opts = { styles = opts.styles, sim_inactive = opts.dim_inactive },
+  }
 
-    if vim.deep_equal(expect, used) then
-      ret = cache.groups
-    end
-  end
+  local ret = cache and vim.deep_equal(inputs, cache.inputs) and cache.groups
 
   if not ret then
     ret = {}
@@ -148,7 +147,7 @@ function M.load(colors, opts)
     end
     Util.resolve(ret)
     if opts.cache then
-      Util.cache.write(cache_key, { colors = colors, groups = ret, plugins = names, version = Config.version })
+      Util.cache.write(cache_key, { groups = ret, inputs = inputs })
     end
   end
   opts.on_highlights(ret, colors)

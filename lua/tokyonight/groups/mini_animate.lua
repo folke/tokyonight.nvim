@@ -5,7 +5,7 @@ function M.get(c)
   -- stylua: ignore
   return {
     MiniAnimateCursor      = { reverse = true, nocombine = true },
-    MiniAnimateNormalFloat = { link = "NormalFloat" },
+    MiniAnimateNormalFloat = "NormalFloat",
   }
 end
 

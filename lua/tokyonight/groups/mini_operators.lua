@@ -4,7 +4,7 @@ local M = {}
 function M.get(c)
   -- stylua: ignore
   return {
-    MiniOperatorsExchangeFrom = { link = "IncSearch" },
+    MiniOperatorsExchangeFrom = "IncSearch",
   }
 end
 

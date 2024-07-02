@@ -45,9 +45,9 @@ function M.kinds(hl, pattern)
   for kind, link in pairs(kinds) do
     local base = "LspKind" .. kind
     if pattern then
-      hl[pattern:format(kind)] = { link = base }
+      hl[pattern:format(kind)] = base
     else
-      hl[base] = { link = link }
+      hl[base] = link
     end
   end
   return hl

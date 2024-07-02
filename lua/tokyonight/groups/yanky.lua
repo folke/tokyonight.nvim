@@ -4,8 +4,8 @@ local M = {}
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    YankyPut    = { link = "IncSearch" },
-    YankyYanked = { link = "IncSearch" },
+    YankyPut    = "IncSearch",
+    YankyYanked = "IncSearch",
   }
 end
 
