@@ -67,10 +67,6 @@ function M.extend(opts)
   return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
 end
 
-function M.is_day()
-  return M.options.style == "day" or M.options.use_background and vim.o.background == "light"
-end
-
 setmetatable(M, {
   __index = function(_, k)
     if k == "options" then

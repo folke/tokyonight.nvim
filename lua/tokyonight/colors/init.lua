@@ -6,10 +6,6 @@ local M = {}
 function M.setup(opts)
   opts = require("tokyonight.config").extend(opts)
 
-  if opts.use_background and vim.o.background == "light" then
-    opts.style = "day"
-  end
-
   Util.day_brightness = opts.day_brightness
 
   ---@type Palette
