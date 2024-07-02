@@ -43,10 +43,12 @@ end
 function M.blend_bg(hex, amount, bg)
   return M.blend(hex, amount, bg or M.bg)
 end
+M.darken = M.blend_bg
 
 function M.blend_fg(hex, amount, fg)
   return M.blend(hex, amount, fg or M.fg)
 end
+M.lighten = M.blend_fg
 
 ---@param color string|Palette
 function M.invert(color)
