@@ -108,6 +108,7 @@ end
 ---@param file string
 ---@param contents string
 function M.write(file, contents)
+  vim.fn.mkdir(vim.fn.fnamemodify(file, ":h"), "p")
   local fd = assert(io.open(file, "w+"))
   fd:write(contents)
   fd:close()

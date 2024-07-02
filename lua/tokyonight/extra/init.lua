@@ -3,7 +3,7 @@ local Util = require("tokyonight.util")
 local M = {}
 
 -- map of plugin name to plugin extension
---- @type table<string, {ext:string, url:string, label:string}>
+--- @type table<string, {ext:string, url:string, label:string, subdir?: string, sep?:string}>
 -- stylua: ignore
 M.extras = {
   alacritty        = { ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
@@ -29,6 +29,7 @@ M.extras = {
   xfceterm         = { ext = "theme", url = "https://docs.xfce.org/apps/terminal/advanced", label = "Xfce Terminal" },
   xresources       = { ext = "Xresources", url = "https://wiki.archlinux.org/title/X_resources", label = "Xresources" },
   yazi             = { ext = "toml", url = "https://github.com/sxyazi/yazi", label = "Yazi" },
+  vim              = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },
   zathura          = { ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura" },
   zellij           = { ext = "kdl", url = "https://zellij.dev/", label = "Zellij" },
 }
@@ -71,13 +72,20 @@ function M.setup()
     local info = M.extras[extra]
     local plugin = require("tokyonight.extra." .. extra)
     for style, style_name in pairs(styles) do
-      local colors, groups = tokyonight.load({ style = style, plugins = { all = true } })
-      local fname = extra .. "/tokyonight_" .. style .. "." .. info.ext
+      local colors, groups, opts = tokyonight.load({ style = style, plugins = { all = true } })
+      local fname = extra
+        .. (info.subdir and "/" .. info.subdir .. "/" or "")
+        .. "/tokyonight"
+        .. (info.sep or "_")
+        .. style
+        .. "."
+        .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
       colors["_style_name"] = "Tokyo Night" .. style_name
       colors["_name"] = "tokyonight_" .. style
+      colors["_style"] = style
       print("[write] " .. fname)
-      Util.write("extras/" .. fname, plugin.generate(colors, groups))
+      Util.write("extras/" .. fname, plugin.generate(colors, groups, opts))
     end
   end
 end
