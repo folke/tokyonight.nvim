@@ -71,7 +71,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 return {
   {
     "echasnovski/mini.hipatterns",
-    optional = true,
     opts = function(_, opts)
       opts.highlighters = opts.highlighters or {}
       opts.highlighters.tokyonight = {
