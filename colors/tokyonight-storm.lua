@@ -1,1 +1,1 @@
-require("tokyonight").load({ style = "storm", use_background = false })
+require("tokyonight").load({ style = "storm" })

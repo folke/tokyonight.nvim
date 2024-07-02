@@ -47,6 +47,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 ### 🍭 Extras
 
 <!-- extras:start -->
+
 - [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
 - [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
 - [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
@@ -196,7 +197,6 @@ require("tokyonight").setup({
   ---@param highlights tokyonight.Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
-  use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
 
   cache = true, -- When set to true, the theme will be cached for better performance
 
