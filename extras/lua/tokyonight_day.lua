@@ -1450,6 +1450,23 @@ local highlights = {
     bg = "#d0d5e3",
     fg = "#6172b0"
   },
+  NeoTreeTabActive = {
+    bg = "#d0d5e3",
+    bold = true,
+    fg = "#2e7de9"
+  },
+  NeoTreeTabInactive = {
+    bg = "#b0c3e4",
+    fg = "#8990b3"
+  },
+  NeoTreeTabSeparatorActive = {
+    bg = "#d0d5e3",
+    fg = "#2e7de9"
+  },
+  NeoTreeTabSeparatorInactive = {
+    bg = "#b0c3e4",
+    fg = "#e1e2e7"
+  },
   NeogitBranch = {
     fg = "#9854f1"
   },
