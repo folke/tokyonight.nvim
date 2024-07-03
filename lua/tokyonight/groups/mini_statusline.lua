@@ -4,9 +4,9 @@ local M = {}
 function M.get(c)
   -- stylua: ignore
   return {
-    MiniStatuslineDevinfo     = { fg = c.fg_dark, bg = c.bg_highlight },
-    MiniStatuslineFileinfo    = { fg = c.fg_dark, bg = c.bg_highlight },
-    MiniStatuslineFilename    = { fg = c.fg_dark, bg = c.fg_gutter },
+    MiniStatuslineDevinfo     = { fg = c.fg_dark, bg = c.fg_gutter },
+    MiniStatuslineFileinfo    = { fg = c.fg_dark, bg = c.fg_gutter },
+    MiniStatuslineFilename    = { fg = c.fg_dark, bg = c.bg_highlight },
     MiniStatuslineInactive    = { fg = c.blue, bg = c.bg_statusline },
     MiniStatuslineModeCommand = { fg = c.black, bg = c.yellow, bold = true },
     MiniStatuslineModeInsert  = { fg = c.black, bg = c.green, bold = true },
