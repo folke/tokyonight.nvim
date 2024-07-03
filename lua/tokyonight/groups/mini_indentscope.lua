@@ -1,6 +1,6 @@
 local M = {}
 
-M.url = "https://github.com/echasnovski/mini.indent"
+M.url = "https://github.com/echasnovski/mini.indentscope"
 
 ---@type tokyonight.HighlightsFn
 function M.get(c)
