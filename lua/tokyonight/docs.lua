@@ -62,7 +62,6 @@ function M.update()
     config = config,
     extras = { content = M.extras() },
     plugins = { content = M.plugins() },
-    plugins_count = { content = tostring(#vim.tbl_values(Groups.plugins)) },
   })
 end
 
