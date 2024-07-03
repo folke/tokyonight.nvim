@@ -81,7 +81,7 @@ end
 
 ---@param colors ColorScheme
 ---@param opts tokyonight.Config
-function M.load(colors, opts)
+function M.setup(colors, opts)
   local groups = {
     base = true,
     kinds = true,

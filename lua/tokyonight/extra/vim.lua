@@ -17,7 +17,7 @@ function M.generate(colors, groups, opts)
       opts.plugins[n] = true
     end
   end
-  groups = Groups.load(colors, opts)
+  groups = Groups.setup(colors, opts)
   local lines = {
     ([[
 let g:colors_name = "tokyonight-%s"

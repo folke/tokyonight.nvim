@@ -61,6 +61,8 @@ function M.setup(opts)
 
   colors.rainbow = { colors.blue, colors.yellow, colors.green, colors.teal, colors.magenta, colors.purple }
 
+  opts.on_colors(colors)
+
   return colors, opts
 end
 
