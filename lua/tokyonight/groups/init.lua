@@ -61,16 +61,21 @@ M.plugins = {
   ["vim-illuminate"]                = "illuminate",
   ["vim-sneak"]                     = "sneak",
   ["which-key.nvim"]                = "which-key",
+  ["yanky.nvim"]                    = "yanky"
 }
 
 local me = debug.getinfo(1, "S").source:sub(2)
 me = vim.fn.fnamemodify(me, ":h")
 
+function M.get_group(name)
+  ---@type {get: tokyonight.HighlightsFn, url: string}
+  return Util.mod("tokyonight.groups." .. name)
+end
+
 ---@param colors ColorScheme
 ---@param opts tokyonight.Config
 function M.get(name, colors, opts)
-  ---@type {get: tokyonight.HighlightsFn}
-  local mod = Util.mod("tokyonight.groups." .. name)
+  local mod = M.get_group(name)
   return mod.get(colors, opts)
 end
 

@@ -2031,6 +2031,8 @@ local highlights = {
     bold = true,
     fg = "#15161e"
   },
+  YankyPut = "Search",
+  YankyYanked = "IncSearch",
   debugBreakpoint = {
     bg = "#192b38",
     fg = "#0db9d7"

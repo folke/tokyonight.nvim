@@ -2,6 +2,8 @@ local Util = require("tokyonight.util")
 
 local M = {}
 
+M.url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
   local dark = opts.styles.sidebars == "transparent" and c.none
