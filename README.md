@@ -49,65 +49,65 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 
 <!-- plugins:start -->
 
-| Plugin                                                                                | Source                                                               |
-| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [aerial.nvim](https://github.com/stevearc/aerial.nvim)                                | [`aerial`](lua/tokyonight/groups/aerial.lua)                         |
-| [ale](https://github.com/dense-analysis/ale)                                          | [`ale`](lua/tokyonight/groups/ale.lua)                               |
-| [alpha-nvim](https://github.com/goolord/alpha-nvim)                                   | [`alpha`](lua/tokyonight/groups/alpha.lua)                           |
-| [barbar.nvim](https://github.com/romgrk/barbar.nvim)                                  | [`barbar`](lua/tokyonight/groups/barbar.lua)                         |
-| [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)                         | [`bufferline`](lua/tokyonight/groups/bufferline.lua)                 |
-| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)                                       | [`cmp`](lua/tokyonight/groups/cmp.lua)                               |
-| [nvim-dap](https://github.com/mfussenegger/nvim-dap)                                  | [`dap`](lua/tokyonight/groups/dap.lua)                               |
-| [dashboard-nvim](https://github.com/glepnir/dashboard-nvim)                           | [`dashboard`](lua/tokyonight/groups/dashboard.lua)                   |
-| [flash.nvim](https://github.com/folke/flash.nvim)                                     | [`flash`](lua/tokyonight/groups/flash.lua)                           |
-| [fzf-lua](https://github.com/ibhagwan/fzf-lua)                                        | [`fzf`](lua/tokyonight/groups/fzf.lua)                               |
-| [vim-gitgutter](https://github.com/airblade/vim-gitgutter)                            | [`gitgutter`](lua/tokyonight/groups/gitgutter.lua)                   |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)                           | [`gitsigns`](lua/tokyonight/groups/gitsigns.lua)                     |
-| [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)                 | [`glyph-palette`](lua/tokyonight/groups/glyph-palette.lua)           |
-| [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)                     | [`headlines`](lua/tokyonight/groups/headlines.lua)                   |
-| [hop.nvim](https://github.com/phaazon/hop.nvim)                                       | [`hop`](lua/tokyonight/groups/hop.lua)                               |
-| [vim-illuminate](https://github.com/RRethy/vim-illuminate)                            | [`illuminate`](lua/tokyonight/groups/illuminate.lua)                 |
-| [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)       | [`indent-blankline`](lua/tokyonight/groups/indent-blankline.lua)     |
-| [lazy.nvim](https://github.com/folke/lazy.nvim)                                       | [`lazy`](lua/tokyonight/groups/lazy.lua)                             |
-| [leap.nvim](https://github.com/ggandor/leap.nvim)                                     | [`leap`](lua/tokyonight/groups/leap.lua)                             |
-| [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)                               | [`lspsaga`](lua/tokyonight/groups/lspsaga.lua)                       |
-| [mini.animate](https://github.com/echasnovski/mini.animate)                           | [`mini_animate`](lua/tokyonight/groups/mini_animate.lua)             |
-| [mini.clue](https://github.com/echasnovski/mini.clue)                                 | [`mini_clue`](lua/tokyonight/groups/mini_clue.lua)                   |
-| [mini.completion](https://github.com/echasnovski/mini.completion)                     | [`mini_completion`](lua/tokyonight/groups/mini_completion.lua)       |
-| [mini.cursorword](https://github.com/echasnovski/mini.cursorword)                     | [`mini_cursorword`](lua/tokyonight/groups/mini_cursorword.lua)       |
-| [mini.deps](https://github.com/echasnovski/mini.deps)                                 | [`mini_deps`](lua/tokyonight/groups/mini_deps.lua)                   |
-| [mini.diff](https://github.com/echasnovski/mini.diff)                                 | [`mini_diff`](lua/tokyonight/groups/mini_diff.lua)                   |
-| [mini.files](https://github.com/echasnovski/mini.files)                               | [`mini_files`](lua/tokyonight/groups/mini_files.lua)                 |
-| [mini.hipatterns](https://github.com/echasnovski/mini.hipatterns)                     | [`mini_hipatterns`](lua/tokyonight/groups/mini_hipatterns.lua)       |
-| [mini.icons](https://github.com/echasnovski/mini.icons)                               | [`mini_icons`](lua/tokyonight/groups/mini_icons.lua)                 |
-| [mini.indentscope](https://github.com/echasnovski/mini.indentscope)                   | [`mini_indentscope`](lua/tokyonight/groups/mini_indentscope.lua)     |
-| [mini.jump](https://github.com/echasnovski/mini.jump)                                 | [`mini_jump`](lua/tokyonight/groups/mini_jump.lua)                   |
-| [mini.map](https://github.com/echasnovski/mini.map)                                   | [`mini_map`](lua/tokyonight/groups/mini_map.lua)                     |
-| [mini.notify](https://github.com/echasnovski/mini.notify)                             | [`mini_notify`](lua/tokyonight/groups/mini_notify.lua)               |
-| [mini.operators](https://github.com/echasnovski/mini.operators)                       | [`mini_operators`](lua/tokyonight/groups/mini_operators.lua)         |
-| [mini.pick](https://github.com/echasnovski/mini.pick)                                 | [`mini_pick`](lua/tokyonight/groups/mini_pick.lua)                   |
-| [mini.starter](https://github.com/echasnovski/mini.starter)                           | [`mini_starter`](lua/tokyonight/groups/mini_starter.lua)             |
-| [mini.statusline](https://github.com/echasnovski/mini.statusline)                     | [`mini_statusline`](lua/tokyonight/groups/mini_statusline.lua)       |
-| [mini.surround](https://github.com/echasnovski/mini.surround)                         | [`mini_surround`](lua/tokyonight/groups/mini_surround.lua)           |
-| [mini.tabline](https://github.com/echasnovski/mini.tabline)                           | [`mini_tabline`](lua/tokyonight/groups/mini_tabline.lua)             |
-| [mini.test](https://github.com/echasnovski/mini.test)                                 | [`mini_test`](lua/tokyonight/groups/mini_test.lua)                   |
-| [mini.trailspace](https://github.com/echasnovski/mini.trailspace)                     | [`mini_trailspace`](lua/tokyonight/groups/mini_trailspace.lua)       |
-| [nvim-navic](https://github.com/SmiteshP/nvim-navic)                                  | [`navic`](lua/tokyonight/groups/navic.lua)                           |
-| [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)                       | [`neo-tree`](lua/tokyonight/groups/neo-tree.lua)                     |
-| [neogit](https://github.com/TimUntersberger/neogit)                                   | [`neogit`](lua/tokyonight/groups/neogit.lua)                         |
-| [neotest](https://github.com/nvim-neotest/neotest)                                    | [`neotest`](lua/tokyonight/groups/neotest.lua)                       |
-| [noice.nvim](https://github.com/folke/noice.nvim)                                     | [`noice`](lua/tokyonight/groups/noice.lua)                           |
-| [nvim-notify](https://github.com/rcarriga/nvim-notify)                                | [`notify`](lua/tokyonight/groups/notify.lua)                         |
-| [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)                          | [`nvim-tree`](lua/tokyonight/groups/nvim-tree.lua)                   |
-| [octo.nvim](https://github.com/pwntester/octo.nvim)                                   | [`octo`](lua/tokyonight/groups/octo.lua)                             |
-| [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)         | [`rainbow`](lua/tokyonight/groups/rainbow.lua)                       |
-| [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)                        | [`scrollbar`](lua/tokyonight/groups/scrollbar.lua)                   |
-| [vim-sneak](https://github.com/justinmk/vim-sneak)                                    | [`sneak`](lua/tokyonight/groups/sneak.lua)                           |
-| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)                    | [`telescope`](lua/tokyonight/groups/telescope.lua)                   |
+| Plugin | Source |
+| --- | --- |
+| [aerial.nvim](https://github.com/stevearc/aerial.nvim) | [`aerial`](lua/tokyonight/groups/aerial.lua) |
+| [ale](https://github.com/dense-analysis/ale) | [`ale`](lua/tokyonight/groups/ale.lua) |
+| [alpha-nvim](https://github.com/goolord/alpha-nvim) | [`alpha`](lua/tokyonight/groups/alpha.lua) |
+| [barbar.nvim](https://github.com/romgrk/barbar.nvim) | [`barbar`](lua/tokyonight/groups/barbar.lua) |
+| [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | [`bufferline`](lua/tokyonight/groups/bufferline.lua) |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | [`cmp`](lua/tokyonight/groups/cmp.lua) |
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap) | [`dap`](lua/tokyonight/groups/dap.lua) |
+| [dashboard-nvim](https://github.com/glepnir/dashboard-nvim) | [`dashboard`](lua/tokyonight/groups/dashboard.lua) |
+| [flash.nvim](https://github.com/folke/flash.nvim) | [`flash`](lua/tokyonight/groups/flash.lua) |
+| [fzf-lua](https://github.com/ibhagwan/fzf-lua) | [`fzf`](lua/tokyonight/groups/fzf.lua) |
+| [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | [`gitgutter`](lua/tokyonight/groups/gitgutter.lua) |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | [`gitsigns`](lua/tokyonight/groups/gitsigns.lua) |
+| [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim) | [`glyph-palette`](lua/tokyonight/groups/glyph-palette.lua) |
+| [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim) | [`headlines`](lua/tokyonight/groups/headlines.lua) |
+| [hop.nvim](https://github.com/phaazon/hop.nvim) | [`hop`](lua/tokyonight/groups/hop.lua) |
+| [vim-illuminate](https://github.com/RRethy/vim-illuminate) | [`illuminate`](lua/tokyonight/groups/illuminate.lua) |
+| [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | [`indent-blankline`](lua/tokyonight/groups/indent-blankline.lua) |
+| [lazy.nvim](https://github.com/folke/lazy.nvim) | [`lazy`](lua/tokyonight/groups/lazy.lua) |
+| [leap.nvim](https://github.com/ggandor/leap.nvim) | [`leap`](lua/tokyonight/groups/leap.lua) |
+| [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim) | [`lspsaga`](lua/tokyonight/groups/lspsaga.lua) |
+| [mini.animate](https://github.com/echasnovski/mini.animate) | [`mini_animate`](lua/tokyonight/groups/mini_animate.lua) |
+| [mini.clue](https://github.com/echasnovski/mini.clue) | [`mini_clue`](lua/tokyonight/groups/mini_clue.lua) |
+| [mini.completion](https://github.com/echasnovski/mini.completion) | [`mini_completion`](lua/tokyonight/groups/mini_completion.lua) |
+| [mini.cursorword](https://github.com/echasnovski/mini.cursorword) | [`mini_cursorword`](lua/tokyonight/groups/mini_cursorword.lua) |
+| [mini.deps](https://github.com/echasnovski/mini.deps) | [`mini_deps`](lua/tokyonight/groups/mini_deps.lua) |
+| [mini.diff](https://github.com/echasnovski/mini.diff) | [`mini_diff`](lua/tokyonight/groups/mini_diff.lua) |
+| [mini.files](https://github.com/echasnovski/mini.files) | [`mini_files`](lua/tokyonight/groups/mini_files.lua) |
+| [mini.hipatterns](https://github.com/echasnovski/mini.hipatterns) | [`mini_hipatterns`](lua/tokyonight/groups/mini_hipatterns.lua) |
+| [mini.icons](https://github.com/echasnovski/mini.icons) | [`mini_icons`](lua/tokyonight/groups/mini_icons.lua) |
+| [mini.indentscope](https://github.com/echasnovski/mini.indentscope) | [`mini_indentscope`](lua/tokyonight/groups/mini_indentscope.lua) |
+| [mini.jump](https://github.com/echasnovski/mini.jump) | [`mini_jump`](lua/tokyonight/groups/mini_jump.lua) |
+| [mini.map](https://github.com/echasnovski/mini.map) | [`mini_map`](lua/tokyonight/groups/mini_map.lua) |
+| [mini.notify](https://github.com/echasnovski/mini.notify) | [`mini_notify`](lua/tokyonight/groups/mini_notify.lua) |
+| [mini.operators](https://github.com/echasnovski/mini.operators) | [`mini_operators`](lua/tokyonight/groups/mini_operators.lua) |
+| [mini.pick](https://github.com/echasnovski/mini.pick) | [`mini_pick`](lua/tokyonight/groups/mini_pick.lua) |
+| [mini.starter](https://github.com/echasnovski/mini.starter) | [`mini_starter`](lua/tokyonight/groups/mini_starter.lua) |
+| [mini.statusline](https://github.com/echasnovski/mini.statusline) | [`mini_statusline`](lua/tokyonight/groups/mini_statusline.lua) |
+| [mini.surround](https://github.com/echasnovski/mini.surround) | [`mini_surround`](lua/tokyonight/groups/mini_surround.lua) |
+| [mini.tabline](https://github.com/echasnovski/mini.tabline) | [`mini_tabline`](lua/tokyonight/groups/mini_tabline.lua) |
+| [mini.test](https://github.com/echasnovski/mini.test) | [`mini_test`](lua/tokyonight/groups/mini_test.lua) |
+| [mini.trailspace](https://github.com/echasnovski/mini.trailspace) | [`mini_trailspace`](lua/tokyonight/groups/mini_trailspace.lua) |
+| [nvim-navic](https://github.com/SmiteshP/nvim-navic) | [`navic`](lua/tokyonight/groups/navic.lua) |
+| [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) | [`neo-tree`](lua/tokyonight/groups/neo-tree.lua) |
+| [neogit](https://github.com/TimUntersberger/neogit) | [`neogit`](lua/tokyonight/groups/neogit.lua) |
+| [neotest](https://github.com/nvim-neotest/neotest) | [`neotest`](lua/tokyonight/groups/neotest.lua) |
+| [noice.nvim](https://github.com/folke/noice.nvim) | [`noice`](lua/tokyonight/groups/noice.lua) |
+| [nvim-notify](https://github.com/rcarriga/nvim-notify) | [`notify`](lua/tokyonight/groups/notify.lua) |
+| [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) | [`nvim-tree`](lua/tokyonight/groups/nvim-tree.lua) |
+| [octo.nvim](https://github.com/pwntester/octo.nvim) | [`octo`](lua/tokyonight/groups/octo.lua) |
+| [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim) | [`rainbow`](lua/tokyonight/groups/rainbow.lua) |
+| [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar) | [`scrollbar`](lua/tokyonight/groups/scrollbar.lua) |
+| [vim-sneak](https://github.com/justinmk/vim-sneak) | [`sneak`](lua/tokyonight/groups/sneak.lua) |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | [`telescope`](lua/tokyonight/groups/telescope.lua) |
 | [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) | [`treesitter-context`](lua/tokyonight/groups/treesitter-context.lua) |
-| [trouble.nvim](https://github.com/folke/trouble.nvim)                                 | [`trouble`](lua/tokyonight/groups/trouble.lua)                       |
-| [which-key.nvim](https://github.com/folke/which-key.nvim)                             | [`which-key`](lua/tokyonight/groups/which-key.lua)                   |
-| [yanky.nvim](https://github.com/gbprod/yanky.nvim)                                    | [`yanky`](lua/tokyonight/groups/yanky.lua)                           |
+| [trouble.nvim](https://github.com/folke/trouble.nvim) | [`trouble`](lua/tokyonight/groups/trouble.lua) |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | [`which-key`](lua/tokyonight/groups/which-key.lua) |
+| [yanky.nvim](https://github.com/gbprod/yanky.nvim) | [`yanky`](lua/tokyonight/groups/yanky.lua) |
 
 <!-- plugins:end -->
 
@@ -118,34 +118,34 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 
 <!-- extras:start -->
 
-| Tool                                                                                   | Extra                                              |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| [Alacritty](https://github.com/alacritty/alacritty)                                    | [extras/alacritty](extras/alacritty)               |
-| [Delta](https://github.com/dandavison/delta)                                           | [extras/delta](extras/delta)                       |
-| [Dunst](https://dunst-project.org/)                                                    | [extras/dunst](extras/dunst)                       |
-| [Fish](https://fishshell.com/docs/current/index.html)                                  | [extras/fish](extras/fish)                         |
-| [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) | [extras/fish_themes](extras/fish_themes)           |
-| [Foot](https://codeberg.org/dnkl/foot)                                                 | [extras/foot](extras/foot)                         |
-| [Fzf](https://github.com/junegunn/fzf)                                                 | [extras/fzf](extras/fzf)                           |
-| [GitUI](https://github.com/extrawurst/gitui)                                           | [extras/gitui](extras/gitui)                       |
-| [Helix](https://helix-editor.com/)                                                     | [extras/helix](extras/helix)                       |
-| [iTerm](https://iterm2.com/)                                                           | [extras/iterm](extras/iterm)                       |
-| [Kitty](https://sw.kovidgoyal.net/kitty/conf.html)                                     | [extras/kitty](extras/kitty)                       |
-| [Lazygit](https://github.com/jesseduffield/lazygit)                                    | [extras/lazygit](extras/lazygit)                   |
-| [Lua Table for testing](https://www.lua.org)                                           | [extras/lua](extras/lua)                           |
-| [Prism](https://prismjs.com)                                                           | [extras/prism](extras/prism)                       |
-| [Sublime Text](https://www.sublimetext.com/docs/themes)                                | [extras/sublime](extras/sublime)                   |
-| [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html)            | [extras/terminator](extras/terminator)             |
-| [Tilix](https://github.com/gnunn1/tilix)                                               | [extras/tilix](extras/tilix)                       |
-| [Tmux](https://github.com/tmux/tmux/wiki)                                              | [extras/tmux](extras/tmux)                         |
-| [Vim](https://vimhelp.org/)                                                            | [extras/vim](extras/vim)                           |
-| [WezTerm](https://wezfurlong.org/wezterm/config/files.html)                            | [extras/wezterm](extras/wezterm)                   |
-| [Windows Terminal](https://aka.ms/terminal-documentation)                              | [extras/windows_terminal](extras/windows_terminal) |
-| [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced)                          | [extras/xfceterm](extras/xfceterm)                 |
-| [Xresources](https://wiki.archlinux.org/title/X_resources)                             | [extras/xresources](extras/xresources)             |
-| [Yazi](https://github.com/sxyazi/yazi)                                                 | [extras/yazi](extras/yazi)                         |
-| [Zathura](https://pwmt.org/projects/zathura/)                                          | [extras/zathura](extras/zathura)                   |
-| [Zellij](https://zellij.dev/)                                                          | [extras/zellij](extras/zellij)                     |
+| Tool | Extra |
+| --- | --- |
+| [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](extras/alacritty) |
+| [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
+| [Dunst](https://dunst-project.org/) | [extras/dunst](extras/dunst) |
+| [Fish](https://fishshell.com/docs/current/index.html) | [extras/fish](extras/fish) |
+| [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) | [extras/fish_themes](extras/fish_themes) |
+| [Foot](https://codeberg.org/dnkl/foot) | [extras/foot](extras/foot) |
+| [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](extras/fzf) |
+| [GitUI](https://github.com/extrawurst/gitui) | [extras/gitui](extras/gitui) |
+| [Helix](https://helix-editor.com/) | [extras/helix](extras/helix) |
+| [iTerm](https://iterm2.com/) | [extras/iterm](extras/iterm) |
+| [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty) |
+| [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](extras/lazygit) |
+| [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
+| [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
+| [Sublime Text](https://www.sublimetext.com/docs/themes) | [extras/sublime](extras/sublime) |
+| [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) | [extras/terminator](extras/terminator) |
+| [Tilix](https://github.com/gnunn1/tilix) | [extras/tilix](extras/tilix) |
+| [Tmux](https://github.com/tmux/tmux/wiki) | [extras/tmux](extras/tmux) |
+| [Vim](https://vimhelp.org/) | [extras/vim](extras/vim) |
+| [WezTerm](https://wezfurlong.org/wezterm/config/files.html) | [extras/wezterm](extras/wezterm) |
+| [Windows Terminal](https://aka.ms/terminal-documentation) | [extras/windows_terminal](extras/windows_terminal) |
+| [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) | [extras/xfceterm](extras/xfceterm) |
+| [Xresources](https://wiki.archlinux.org/title/X_resources) | [extras/xresources](extras/xresources) |
+| [Yazi](https://github.com/sxyazi/yazi) | [extras/yazi](extras/yazi) |
+| [Zathura](https://pwmt.org/projects/zathura/) | [extras/zathura](extras/zathura) |
+| [Zellij](https://zellij.dev/) | [extras/zellij](extras/zellij) |
 
 <!-- extras:end -->
 

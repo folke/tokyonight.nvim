@@ -35,36 +35,182 @@ FEATURES                                *tokyonight.nvim-tokyo-night-features*
 - Provides TokyoNight <https://github.com/folke/tokyonight.nvim>
     |tokyonight.nvim-extras| for numerous other applications.
 
+Supported Plugins ~
 
-EXTRAS ~
+  -----------------------------------------------------------------------
+  Plugin                              Source
+  ----------------------------------- -----------------------------------
+  aerial.nvim                         aerial
 
-- Alacritty <https://github.com/alacritty/alacritty> (alacritty <extras/alacritty>)
-- Delta <https://github.com/dandavison/delta> (delta <extras/delta>)
-- Dunst <https://dunst-project.org/> (dunst <extras/dunst>)
-- Fish <https://fishshell.com/docs/current/index.html> (fish <extras/fish>)
-- Fish Themes <https://fishshell.com/docs/current/interactive.html#syntax-highlighting> (fish_themes <extras/fish_themes>)
-- Foot <https://codeberg.org/dnkl/foot> (foot <extras/foot>)
-- Fzf <https://github.com/junegunn/fzf> (fzf <extras/fzf>)
-- GitUI <https://github.com/extrawurst/gitui> (gitui <extras/gitui>)
-- Helix <https://helix-editor.com/> (helix <extras/helix>)
-- iTerm <https://iterm2.com/> (iterm <extras/iterm>)
-- Kitty <https://sw.kovidgoyal.net/kitty/conf.html> (kitty <extras/kitty>)
-- Lazygit <https://github.com/jesseduffield/lazygit> (lazygit <extras/lazygit>)
-- Lua Table for testing <https://www.lua.org> (lua <extras/lua>)
-- Prism <https://prismjs.com> (prism <extras/prism>)
-- Sublime Text <https://www.sublimetext.com/docs/themes> (sublime <extras/sublime>)
-- Terminator <https://gnome-terminator.readthedocs.io/en/latest/config.html> (terminator <extras/terminator>)
-- Tilix <https://github.com/gnunn1/tilix> (tilix <extras/tilix>)
-- Tmux <https://github.com/tmux/tmux/wiki> (tmux <extras/tmux>)
-- Vim <https://vimhelp.org/> (vim <extras/vim>)
-- WezTerm <https://wezfurlong.org/wezterm/config/files.html> (wezterm <extras/wezterm>)
-- Windows Terminal <https://aka.ms/terminal-documentation> (windows_terminal <extras/windows_terminal>)
-- Xfce Terminal <https://docs.xfce.org/apps/terminal/advanced> (xfceterm <extras/xfceterm>)
-- Xresources <https://wiki.archlinux.org/title/X_resources> (xresources <extras/xresources>)
-- Yazi <https://github.com/sxyazi/yazi> (yazi <extras/yazi>)
-- Zathura <https://pwmt.org/projects/zathura/> (zathura <extras/zathura>)
-- Zellij <https://zellij.dev/> (zellij <extras/zellij>)
+  ale                                 ale
 
+  alpha-nvim                          alpha
+
+  barbar.nvim                         barbar
+
+  bufferline.nvim                     bufferline
+
+  nvim-cmp                            cmp
+
+  nvim-dap                            dap
+
+  dashboard-nvim                      dashboard
+
+  flash.nvim                          flash
+
+  fzf-lua                             fzf
+
+  vim-gitgutter                       gitgutter
+
+  gitsigns.nvim                       gitsigns
+
+  glyph-palette.vim                   glyph-palette
+
+  headlines.nvim                      headlines
+
+  hop.nvim                            hop
+
+  vim-illuminate                      illuminate
+
+  indent-blankline.nvim               indent-blankline
+
+  lazy.nvim                           lazy
+
+  leap.nvim                           leap
+
+  lspsaga.nvim                        lspsaga
+
+  mini.animate                        mini_animate
+
+  mini.clue                           mini_clue
+
+  mini.completion                     mini_completion
+
+  mini.cursorword                     mini_cursorword
+
+  mini.deps                           mini_deps
+
+  mini.diff                           mini_diff
+
+  mini.files                          mini_files
+
+  mini.hipatterns                     mini_hipatterns
+
+  mini.icons                          mini_icons
+
+  mini.indentscope                    mini_indentscope
+
+  mini.jump                           mini_jump
+
+  mini.map                            mini_map
+
+  mini.notify                         mini_notify
+
+  mini.operators                      mini_operators
+
+  mini.pick                           mini_pick
+
+  mini.starter                        mini_starter
+
+  mini.statusline                     mini_statusline
+
+  mini.surround                       mini_surround
+
+  mini.tabline                        mini_tabline
+
+  mini.test                           mini_test
+
+  mini.trailspace                     mini_trailspace
+
+  nvim-navic                          navic
+
+  neo-tree.nvim                       neo-tree
+
+  neogit                              neogit
+
+  neotest                             neotest
+
+  noice.nvim                          noice
+
+  nvim-notify                         notify
+
+  nvim-tree.lua                       nvim-tree
+
+  octo.nvim                           octo
+
+  rainbow-delimiters.nvim             rainbow
+
+  nvim-scrollbar                      scrollbar
+
+  vim-sneak                           sneak
+
+  telescope.nvim                      telescope
+
+  nvim-treesitter-context             treesitter-context
+
+  trouble.nvim                        trouble
+
+  which-key.nvim                      which-key
+
+  yanky.nvim                          yanky
+  -----------------------------------------------------------------------
+Extras ~
+
+  -----------------------------------------------------------------------
+  Tool                                Extra
+  ----------------------------------- -----------------------------------
+  Alacritty                           extras/alacritty
+
+  Delta                               extras/delta
+
+  Dunst                               extras/dunst
+
+  Fish                                extras/fish
+
+  Fish Themes                         extras/fish_themes
+
+  Foot                                extras/foot
+
+  Fzf                                 extras/fzf
+
+  GitUI                               extras/gitui
+
+  Helix                               extras/helix
+
+  iTerm                               extras/iterm
+
+  Kitty                               extras/kitty
+
+  Lazygit                             extras/lazygit
+
+  Lua Table for testing               extras/lua
+
+  Prism                               extras/prism
+
+  Sublime Text                        extras/sublime
+
+  Terminator                          extras/terminator
+
+  Tilix                               extras/tilix
+
+  Tmux                                extras/tmux
+
+  Vim                                 extras/vim
+
+  WezTerm                             extras/wezterm
+
+  Windows Terminal                    extras/windows_terminal
+
+  Xfce Terminal                       extras/xfceterm
+
+  Xresources                          extras/xresources
+
+  Yazi                                extras/yazi
+
+  Zathura                             extras/zathura
+
+  Zellij                              extras/zellij
+  -----------------------------------------------------------------------
 
 REQUIREMENTS                        *tokyonight.nvim-tokyo-night-requirements*
 
@@ -159,7 +305,10 @@ unless `setup` is explicitly called.
 Default Options ~
 
 >lua
-    require("tokyonight").setup({
+    ---@class tokyonight.Config
+    ---@field on_colors fun(colors: ColorScheme)
+    ---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
+    M.defaults = {
       style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
       light_style = "day", -- The theme is used when the background is set to light
       transparent = false, -- Enable this to disable setting the background color
@@ -205,7 +354,7 @@ Default Options ~
         --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
         -- telescope = true,
       },
-    })
+    }
 <
 
 
