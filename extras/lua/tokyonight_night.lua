@@ -1183,7 +1183,7 @@ local highlights = {
     fg = "#9ece6a"
   },
   MiniIconsGrey = {
-    fg = "#565f89"
+    fg = "#c0caf5"
   },
   MiniIconsOrange = {
     fg = "#ff9e64"

@@ -42,7 +42,31 @@ hi FoldColumn guibg=#e1e2e7 guifg=#848cb5
 hi Folded guifg=#2e7de9 guibg=#a8aecb
 hi Foo guibg=#d20065 guifg=#3760bf
 hi Function guifg=#2e7de9 guibg=NONE
+hi FzfLuaBorder guifg=#4094a3 guibg=#d0d5e3
+hi FzfLuaDirPart guifg=#6172b0 guibg=NONE
+hi FzfLuaFzfNormal guifg=#3760bf guibg=NONE
+hi FzfLuaFzfPointer guifg=#d20065 guibg=NONE
+hi FzfLuaFzfSeparator guifg=#b15c00 guibg=#d0d5e3
+hi FzfLuaNormal guifg=#3760bf guibg=#d0d5e3
+hi FzfLuaPreviewTitle guifg=#4094a3 guibg=#d0d5e3
+hi FzfLuaTitle guifg=#b15c00 guibg=#d0d5e3
+hi GitGutterAdd guifg=#4197a4 guibg=NONE
+hi GitGutterAddLineNr guifg=#4197a4 guibg=NONE
+hi GitGutterChange guifg=#506d9c guibg=NONE
+hi GitGutterChangeLineNr guifg=#506d9c guibg=NONE
+hi GitGutterDelete guifg=#c47981 guibg=NONE
+hi GitGutterDeleteLineNr guifg=#c47981 guibg=NONE
+hi GlyphPalette1 guifg=#c64343 guibg=NONE
+hi GlyphPalette2 guifg=#587539 guibg=NONE
+hi GlyphPalette3 guifg=#8c6c3e guibg=NONE
+hi GlyphPalette4 guifg=#2e7de9 guibg=NONE
+hi GlyphPalette6 guifg=#387068 guibg=NONE
+hi GlyphPalette7 guifg=#3760bf guibg=NONE
+hi GlyphPalette9 guifg=#f52a65 guibg=NONE
 hi Identifier guifg=#9854f1 guibg=NONE
+hi IlluminatedWordRead guibg=#a8aecb
+hi IlluminatedWordText guibg=#a8aecb
+hi IlluminatedWordWrite guibg=#a8aecb
 hi IncSearch guibg=#b15c00 guifg=#b4b5b9
 hi Italic guifg=#3760bf gui=italic guibg=NONE
 hi Keyword guifg=#007197 gui=italic guibg=NONE
@@ -57,6 +81,70 @@ hi LspReferenceText guibg=#a8aecb
 hi LspReferenceWrite guibg=#a8aecb
 hi LspSignatureActiveParameter guibg=#d0d5e5 gui=bold
 hi MatchParen guifg=#b15c00 gui=bold guibg=NONE
+hi MiniAnimateCursor gui=nocombine guibg=NONE
+hi MiniCompletionActiveParameter gui=underline guibg=NONE
+hi MiniCursorword guibg=#a8aecb
+hi MiniCursorwordCurrent guibg=#a8aecb
+hi MiniDepsTitleError guifg=#b4b5b9 guibg=#c47981
+hi MiniDepsTitleUpdate guifg=#b4b5b9 guibg=#4197a4
+hi MiniDiffSignAdd guifg=#4197a4 guibg=NONE
+hi MiniDiffSignChange guifg=#506d9c guibg=NONE
+hi MiniDiffSignDelete guifg=#c47981 guibg=NONE
+hi MiniFilesFile guifg=#3760bf guibg=NONE
+hi MiniFilesTitleFocused guifg=#4094a3 guibg=#d0d5e3 gui=bold
+hi MiniHipatternsFixme guifg=#b4b5b9 guibg=#c64343 gui=bold
+hi MiniHipatternsHack guifg=#b4b5b9 guibg=#8c6c3e gui=bold
+hi MiniHipatternsNote guifg=#b4b5b9 guibg=#118c74 gui=bold
+hi MiniHipatternsTodo guifg=#b4b5b9 guibg=#07879d gui=bold
+hi MiniIconsAzure guifg=#07879d guibg=NONE
+hi MiniIconsBlue guifg=#2e7de9 guibg=NONE
+hi MiniIconsCyan guifg=#118c74 guibg=NONE
+hi MiniIconsGreen guifg=#587539 guibg=NONE
+hi MiniIconsGrey guifg=#3760bf guibg=NONE
+hi MiniIconsOrange guifg=#b15c00 guibg=NONE
+hi MiniIconsPurple guifg=#7847bd guibg=NONE
+hi MiniIconsRed guifg=#f52a65 guibg=NONE
+hi MiniIconsYellow guifg=#8c6c3e guibg=NONE
+hi MiniIndentscopePrefix gui=nocombine guibg=NONE
+hi MiniIndentscopeSymbol guifg=#188092 gui=nocombine guibg=NONE
+hi MiniJump guibg=#d20065 guifg=#ffffff
+hi MiniJump2dSpot guifg=#d20065 gui=bold,nocombine guibg=NONE
+hi MiniJump2dSpotAhead guifg=#118c74 guibg=#d0d5e3 gui=nocombine
+hi MiniJump2dSpotUnique guifg=#b15c00 gui=bold,nocombine guibg=NONE
+hi MiniPickBorderText guifg=#118c74 guibg=#d0d5e3
+hi MiniPickPrompt guifg=#07879d guibg=#d0d5e3
+hi MiniStarterCurrent gui=nocombine guibg=NONE
+hi MiniStarterFooter guifg=#8c6c3e gui=italic guibg=NONE
+hi MiniStarterHeader guifg=#2e7de9 guibg=NONE
+hi MiniStarterInactive guifg=#848cb5 gui=italic guibg=NONE
+hi MiniStarterItem guifg=#3760bf guibg=#e1e2e7
+hi MiniStarterItemBullet guifg=#4094a3 guibg=NONE
+hi MiniStarterItemPrefix guifg=#8c6c3e guibg=NONE
+hi MiniStarterQuery guifg=#07879d guibg=NONE
+hi MiniStarterSection guifg=#188092 guibg=NONE
+hi MiniStatuslineDevinfo guifg=#6172b0 guibg=#a8aecb
+hi MiniStatuslineFileinfo guifg=#6172b0 guibg=#a8aecb
+hi MiniStatuslineFilename guifg=#6172b0 guibg=#c4c8da
+hi MiniStatuslineInactive guifg=#2e7de9 guibg=#d0d5e3
+hi MiniStatuslineModeCommand guifg=#b4b5b9 guibg=#8c6c3e gui=bold
+hi MiniStatuslineModeInsert guifg=#b4b5b9 guibg=#587539 gui=bold
+hi MiniStatuslineModeNormal guifg=#b4b5b9 guibg=#2e7de9 gui=bold
+hi MiniStatuslineModeOther guifg=#b4b5b9 guibg=#118c74 gui=bold
+hi MiniStatuslineModeReplace guifg=#b4b5b9 guibg=#f52a65 gui=bold
+hi MiniStatuslineModeVisual guifg=#b4b5b9 guibg=#9854f1 gui=bold
+hi MiniSurround guibg=#b15c00 guifg=#b4b5b9
+hi MiniTablineCurrent guifg=#3760bf guibg=#a8aecb
+hi MiniTablineFill guibg=#b4b5b9
+hi MiniTablineHidden guifg=#68709a guibg=#d0d5e3
+hi MiniTablineModifiedCurrent guifg=#8c6c3e guibg=#a8aecb
+hi MiniTablineModifiedHidden guibg=#d0d5e3 guifg=#a68f71
+hi MiniTablineModifiedVisible guifg=#8c6c3e guibg=#d0d5e3
+hi MiniTablineTabpagesection guibg=#d0d5e3 guifg=NONE
+hi MiniTablineVisible guifg=#3760bf guibg=#d0d5e3
+hi MiniTestEmphasis gui=bold guibg=NONE
+hi MiniTestFail guifg=#f52a65 gui=bold guibg=NONE
+hi MiniTestPass guifg=#587539 gui=bold guibg=NONE
+hi MiniTrailspace guibg=#f52a65
 hi ModeMsg guifg=#6172b0 gui=bold guibg=NONE
 hi MoreMsg guifg=#2e7de9 guibg=NONE
 hi MsgArea guifg=#6172b0 guibg=NONE
@@ -99,6 +187,8 @@ hi QuickFixLine guibg=#b7c1e3 gui=bold
 hi Search guibg=#7890dd guifg=#3760bf
 hi SignColumn guibg=#e1e2e7 guifg=#a8aecb
 hi SignColumnSB guibg=#d0d5e3 guifg=#a8aecb
+hi Sneak guifg=#c4c8da guibg=#9854f1
+hi SneakScope guibg=#b7c1e3
 hi Special guifg=#188092 guibg=NONE
 hi SpecialKey guifg=#8990b3 guibg=NONE
 hi SpellBad guisp=#c64343 gui=undercurl guibg=NONE
@@ -140,15 +230,58 @@ hi healthWarning guifg=#8c6c3e guibg=NONE
 hi helpCommand guibg=#a1a6c5 guifg=#2e7de9
 hi htmlH1 guifg=#9854f1 gui=bold guibg=NONE
 hi htmlH2 guifg=#2e7de9 gui=bold guibg=NONE
+hi illuminatedCurWord guibg=#a8aecb
+hi illuminatedWord guibg=#a8aecb
 hi lCursor guifg=#e1e2e7 guibg=#3760bf
 hi qfFileName guifg=#2e7de9 guibg=NONE
 hi qfLineNr guifg=#68709a guibg=NONE
 hi! link CurSearch IncSearch
 hi! link Delimiter Special
+hi! link FzfLuaCursor IncSearch
+hi! link FzfLuaFilePart FzfLuaFzfNormal
+hi! link FzfLuaFzfCursorLine Visual
+hi! link FzfLuaHeaderText Title
+hi! link FzfLuaPath Directory
 hi! link LspKindColor Special
 hi! link LspKindEvent Special
 hi! link LspKindFile Normal
 hi! link LspKindFolder Directory
 hi! link LspKindSnippet Conceal
+hi! link MiniAnimateNormalFloat NormalFloat
+hi! link MiniClueBorder FloatBorder
+hi! link MiniClueDescSingle NormalFloat
+hi! link MiniClueTitle FloatTitle
+hi! link MiniDepsChangeAdded diffAdded
+hi! link MiniDepsChangeRemoved diffRemoved
+hi! link MiniDepsHint DiagnosticHint
+hi! link MiniDepsInfo DiagnosticInfo
+hi! link MiniDepsMsgBreaking DiagnosticWarn
+hi! link MiniDepsPlaceholder Comment
+hi! link MiniDepsTitle Title
+hi! link MiniDepsTitleSame Comment
+hi! link MiniDiffOverAdd DiffAdd
+hi! link MiniDiffOverChange DiffText
+hi! link MiniDiffOverContext DiffChange
+hi! link MiniDiffOverDelete DiffDelete
+hi! link MiniFilesBorder FloatBorder
+hi! link MiniFilesCursorLine CursorLine
+hi! link MiniFilesDirectory Directory
+hi! link MiniFilesNormal NormalFloat
+hi! link MiniFilesTitle FloatTitle
+hi! link MiniJump2dDim Comment
+hi! link MiniMapNormal NormalFloat
+hi! link MiniMapSymbolCount Special
+hi! link MiniMapSymbolLine Title
+hi! link MiniNotifyBorder FloatBorder
+hi! link MiniNotifyNormal NormalFloat
+hi! link MiniNotifyTitle FloatTitle
+hi! link MiniOperatorsExchangeFrom IncSearch
+hi! link MiniPickBorder FloatBorder
+hi! link MiniPickIconDirectory Directory
+hi! link MiniPickMatchCurrent CursorLine
+hi! link MiniPickMatchMarked Visual
+hi! link MiniPickNormal NormalFloat
+hi! link MiniPickPreviewLine CursorLine
+hi! link MiniPickPreviewRegion IncSearch
 hi! link WinBar StatusLine
 hi! link WinBarNC StatusLineNC
