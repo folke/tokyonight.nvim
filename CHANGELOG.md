@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.1.2](https://github.com/folke/tokyonight.nvim/compare/v4.1.1...v4.1.2) (2024-07-03)
+
+
+### Bug Fixes
+
+* fixup ([8c0d9e3](https://github.com/folke/tokyonight.nvim/commit/8c0d9e315f3e992d2eb356525902e042a9eb4eb9))
+* **helix:** fix markup broken generated values ([#560](https://github.com/folke/tokyonight.nvim/issues/560)) ([8ba07a0](https://github.com/folke/tokyonight.nvim/commit/8ba07a059fec7a533c73ae9cee2ffb7e04716757))
+* **mini-satusline:** reverse colors of devinfo and fileinfo with filename to make the colors look like lualine for mini.statusline ([#564](https://github.com/folke/tokyonight.nvim/issues/564)) ([29e9fce](https://github.com/folke/tokyonight.nvim/commit/29e9fce3184c534936897dfae537e9aa10c280b1))
+* **mini:** indent =&gt; indentscope ([a30eddd](https://github.com/folke/tokyonight.nvim/commit/a30edddce44fce4018316b5c4ca6c5ae9bc3215f))
+* release-please ([a5c56a5](https://github.com/folke/tokyonight.nvim/commit/a5c56a502bc7e05c8abe46b3ad36fd6ac0ff0057))
+* respect vim.o.background. Fixes [#565](https://github.com/folke/tokyonight.nvim/issues/565) ([a96bfa0](https://github.com/folke/tokyonight.nvim/commit/a96bfa0c04aac61ed731e85e487d18ba38864bc4))
+
 ## [4.1.1](https://github.com/folke/tokyonight.nvim/compare/v4.1.0...v4.1.1) (2024-07-02)
 
 
