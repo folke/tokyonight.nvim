@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/kyazdani42/nvim-tree.lua"
+
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
   -- stylua: ignore

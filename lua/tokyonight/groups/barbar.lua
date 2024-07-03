@@ -2,6 +2,8 @@ local Util = require("tokyonight.util")
 
 local M = {}
 
+M.url = "https://github.com/romgrk/barbar.nvim"
+
 ---@type tokyonight.HighlightsFn
 function M.get(c)
   -- stylua: ignore

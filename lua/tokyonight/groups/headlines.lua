@@ -2,6 +2,8 @@ local Util = require("tokyonight.util")
 
 local M = {}
 
+M.url = "https://github.com/lukas-reineke/headlines.nvim"
+
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
   -- stylua: ignore

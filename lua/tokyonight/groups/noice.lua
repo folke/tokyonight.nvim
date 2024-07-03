@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/folke/noice.nvim"
+
 ---@type tokyonight.HighlightsFn
 function M.get(c)
   -- stylua: ignore
