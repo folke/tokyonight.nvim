@@ -23,4 +23,11 @@ describe("group is valid", function()
       end)
     end
   end
+
+  for _, name in pairs(Groups.plugins) do
+    it(name .. " exists", function()
+      local ok = pcall(Groups.get_group, name)
+      assert(ok, name)
+    end)
+  end
 end)

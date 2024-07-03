@@ -59,6 +59,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: git pull
+      - name: Install Neovim
+        shell: bash
+        run: |
+          mkdir -p /tmp/nvim
+          wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -O /tmp/nvim/nvim.appimage
+          cd /tmp/nvim
+          chmod a+x ./nvim.appimage
+          ./nvim.appimage --appimage-extract
+          echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
+      - name: Generate docs
+        run: |
+          nvim --version
+          nvim -l tests/docs.lua
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:

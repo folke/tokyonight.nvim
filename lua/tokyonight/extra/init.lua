@@ -34,24 +34,7 @@ M.extras = {
   zellij           = { ext = "kdl", url = "https://zellij.dev/", label = "Zellij" },
 }
 
-function M.docs()
-  local file = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h:h:h:h") .. "/README.md"
-  local tag = "extras"
-  local pattern = "(<%!%-%- " .. tag .. ":start %-%->).*(<%!%-%- " .. tag .. ":end %-%->)"
-  local readme = Util.read(file)
-  local lines = {}
-  local names = vim.tbl_keys(M.extras)
-  table.sort(names)
-  for _, name in ipairs(names) do
-    local info = M.extras[name]
-    table.insert(lines, "- [" .. info.label .. "](" .. info.url .. ") ([" .. name .. "](extras/" .. name .. "))")
-  end
-  readme = readme:gsub(pattern, "%1\n" .. table.concat(lines, "\n") .. "\n%2")
-  Util.write(file, readme)
-end
-
 function M.setup()
-  M.docs()
   local tokyonight = require("tokyonight")
   vim.o.background = "dark"
 
