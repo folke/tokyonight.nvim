@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.1.3](https://github.com/folke/tokyonight.nvim/compare/v4.1.2...v4.1.3) (2024-07-03)
+
+
+### Bug Fixes
+
+* **groups:** fixed enabling/disabling plugins. Closes [#562](https://github.com/folke/tokyonight.nvim/issues/562) ([2b453ba](https://github.com/folke/tokyonight.nvim/commit/2b453ba508796836bc00ac84cc677753bd004226))
+* **mini.icons:** grey back to fg ([8f92c4e](https://github.com/folke/tokyonight.nvim/commit/8f92c4e4c2eb573cb05c21b57a4c52c398f38674))
+* **mini.icons:** use comment color as grey ([c756243](https://github.com/folke/tokyonight.nvim/commit/c75624326a19402bc342e24b443eede33d6fe6e6))
+
 ## [4.1.2](https://github.com/folke/tokyonight.nvim/compare/v4.1.1...v4.1.2) (2024-07-03)
 
 
