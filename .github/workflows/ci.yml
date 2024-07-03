@@ -17,7 +17,7 @@ jobs:
           chmod a+x ./nvim.appimage
           ./nvim.appimage --appimage-extract
           echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build Extras
         run: |
           nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('tokyonight.extra').setup()" --cmd qa
@@ -37,7 +37,7 @@ jobs:
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install Neovim
         shell: bash
         run: |
@@ -57,7 +57,7 @@ jobs:
     needs: tests
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: git pull
       - name: Install Neovim
         shell: bash
