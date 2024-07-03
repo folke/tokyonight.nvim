@@ -15,21 +15,12 @@ end
 ---@param t string[][]
 function M.table(t)
   local header = table.remove(t, 1)
-  local lines = {}
-  local rows = math.ceil(#t / 2) * 2
-  lines[#lines + 1] = '<table width="100%"><tr style="border: none"><td style="border: none">\n\n'
+  local lines = {} ---@type string[]
   lines[#lines + 1] = M.row(header)
   lines[#lines + 1] = M.row({ "---", "---" })
-  -- align items top to bottom, then left to right
-  for i = 1, rows do
-    lines[#lines + 1] = M.row(t[i] or { "", "" })
-    if i == rows / 2 then
-      lines[#lines + 1] = '\n\n</td><td style="border: none">\n\n'
-      lines[#lines + 1] = M.row(header)
-      lines[#lines + 1] = M.row({ "---", "---" })
-    end
+  for _, row in ipairs(t) do
+    lines[#lines + 1] = M.row(row)
   end
-  lines[#lines + 1] = "\n\n</td></tr></table>"
   return table.concat(lines, "\n")
 end
 
@@ -71,6 +62,7 @@ function M.update()
     config = config,
     extras = { content = M.extras() },
     plugins = { content = M.plugins() },
+    plugins_count = { content = tostring(#vim.tbl_values(Groups.plugins)) },
   })
 end
 
