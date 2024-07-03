@@ -10,8 +10,6 @@ function M.get(c, opts)
     IndentBlanklineContextChar = { fg = c.blue1, nocombine = true },
     IblIndent                  = { fg = c.fg_gutter, nocombine = true },
     IblScope                   = { fg = c.blue1, nocombine = true },
-    IndentLine                 = { fg = c.fg_gutter, nocombine = true },
-    IndentLineCurrent          = { fg = c.blue1, nocombine = true },
   }
 end
 
