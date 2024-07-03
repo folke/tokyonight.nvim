@@ -41,15 +41,14 @@ label = { fg = "#82aaff" }
 "markup.heading.completion" = { bg = "#1e2030", fg = "#c8d3f5" }
 "markup.heading.hover" = { bg = "#363c58" }
 "markup.italic" = { fg = "#c8d3f5", modifiers = ["italic"] }
-"markup.link" = 
-"markup.link.label" = 
-"markup.link.text" = 
+"markup.link" = { fg = "#4fd6be" }
+"markup.link.label" = { fg = "#65bcff" }
+"markup.link.text" = { fg = "#4fd6be" }
 "markup.link.url" = { underline = { style = "line" } }
-"markup.list" = 
+"markup.list" = { fg = "#89ddff" }
 "markup.normal.completion" = { fg = "#636da6" }
 "markup.normal.hover" = { fg = "#828bb8" }
-"markup.raw" = 
-"markup.raw.block" = 
+"markup.raw" = { fg = "#c3e88d" }
 "markup.raw.inline" = { bg = "#444a73", fg = "#82aaff" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 namespace = { fg = "#86e1fc" }
