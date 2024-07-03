@@ -116,7 +116,7 @@ function M.generate(colors)
         hover = "PmenuSel",
       },
       list = {
-        "markdownHeadingDelimiter",
+        "@markup.list",
         unnumbered = nil,
         numbered = nil,
         checked = nil,
@@ -129,16 +129,16 @@ function M.generate(colors)
         modifiers = { "crossed_out" },
       },
       link = {
-        "markdownLinkText",
-        url = "Underlined",
-        label = "markdownCode",
-        text = "markdownCode",
+        "@markup.link",
+        url = "@markup.link.url",
+        label = "@markup.link.label",
+        text = "@markup.link",
       },
       quote = nil,
       raw = {
-        "markdownCode",
+        "@markup.raw",
         inline = "@markup.raw.markdown_inline",
-        block = "markdownCodeBlock",
+        block = nil,
         -- UI --
         completion = nil,
         hover = nil,
