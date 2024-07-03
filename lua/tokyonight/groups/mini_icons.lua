@@ -8,7 +8,7 @@ function M.get(c)
   return {
     MiniIconsAzure  = { fg = c.info },
     MiniIconsBlue   = { fg = c.blue },
-    MiniIconsCyan   = { fg = c.hint },
+    MiniIconsCyan   = { fg = c.teal },
     MiniIconsGreen  = { fg = c.green },
     MiniIconsGrey   = { fg = c.fg },
     MiniIconsOrange = { fg = c.orange },
