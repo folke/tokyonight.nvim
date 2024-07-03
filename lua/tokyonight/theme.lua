@@ -6,12 +6,8 @@ local M = {}
 function M.setup(opts)
   opts = require("tokyonight.config").extend(opts)
 
-  LazyVim.track("colors")
   local colors = require("tokyonight.colors").setup(opts)
-  LazyVim.track()
-  LazyVim.track("groups")
   local groups = require("tokyonight.groups").setup(colors, opts)
-  LazyVim.track()
 
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
