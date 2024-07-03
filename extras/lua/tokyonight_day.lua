@@ -1282,15 +1282,15 @@ local highlights = {
     fg = "#188092"
   },
   MiniStatuslineDevinfo = {
-    bg = "#c4c8da",
+    bg = "#a8aecb",
     fg = "#6172b0"
   },
   MiniStatuslineFileinfo = {
-    bg = "#c4c8da",
+    bg = "#a8aecb",
     fg = "#6172b0"
   },
   MiniStatuslineFilename = {
-    bg = "#a8aecb",
+    bg = "#c4c8da",
     fg = "#6172b0"
   },
   MiniStatuslineInactive = {
