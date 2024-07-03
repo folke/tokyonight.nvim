@@ -1,1 +1,4 @@
-std="lua51+vim"
+std="vim"
+
+[lints]
+mixed_table="allow"
