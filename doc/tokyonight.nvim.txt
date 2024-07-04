@@ -152,6 +152,8 @@ Supported Plugins ~
 
   trouble.nvim                        trouble
 
+  headlines.nvim                      vimwiki
+
   which-key.nvim                      which-key
 
   yanky.nvim                          yanky
