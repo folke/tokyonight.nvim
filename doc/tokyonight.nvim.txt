@@ -189,6 +189,8 @@ Extras ~
 
   Prism                               extras/prism
 
+  Slack                               extras/slack
+
   Sublime Text                        extras/sublime
 
   Terminator                          extras/terminator
