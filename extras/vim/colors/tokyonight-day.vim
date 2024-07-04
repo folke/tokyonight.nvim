@@ -91,11 +91,11 @@ hi MiniDiffSignAdd guifg=#4197a4 guibg=NONE
 hi MiniDiffSignChange guifg=#506d9c guibg=NONE
 hi MiniDiffSignDelete guifg=#c47981 guibg=NONE
 hi MiniFilesFile guifg=#3760bf guibg=NONE
-hi MiniFilesTitleFocused guifg=#4094a3 guibg=#d0d5e3 gui=bold
-hi MiniHipatternsFixme guifg=#b4b5b9 guibg=#c64343 gui=bold
-hi MiniHipatternsHack guifg=#b4b5b9 guibg=#8c6c3e gui=bold
-hi MiniHipatternsNote guifg=#b4b5b9 guibg=#118c74 gui=bold
-hi MiniHipatternsTodo guifg=#b4b5b9 guibg=#07879d gui=bold
+hi MiniFilesTitleFocused guibg=#d0d5e3 guifg=#4094a3 gui=bold
+hi MiniHipatternsFixme guibg=#c64343 guifg=#b4b5b9 gui=bold
+hi MiniHipatternsHack guibg=#8c6c3e guifg=#b4b5b9 gui=bold
+hi MiniHipatternsNote guibg=#118c74 guifg=#b4b5b9 gui=bold
+hi MiniHipatternsTodo guibg=#07879d guifg=#b4b5b9 gui=bold
 hi MiniIconsAzure guifg=#07879d guibg=NONE
 hi MiniIconsBlue guifg=#2e7de9 guibg=NONE
 hi MiniIconsCyan guifg=#118c74 guibg=NONE
@@ -109,7 +109,7 @@ hi MiniIndentscopePrefix gui=nocombine guibg=NONE
 hi MiniIndentscopeSymbol guifg=#188092 gui=nocombine guibg=NONE
 hi MiniJump guibg=#d20065 guifg=#ffffff
 hi MiniJump2dSpot guifg=#d20065 gui=bold,nocombine guibg=NONE
-hi MiniJump2dSpotAhead guifg=#118c74 guibg=#d0d5e3 gui=nocombine
+hi MiniJump2dSpotAhead guibg=#d0d5e3 guifg=#118c74 gui=nocombine
 hi MiniJump2dSpotUnique guifg=#b15c00 gui=bold,nocombine guibg=NONE
 hi MiniPickBorderText guifg=#118c74 guibg=#d0d5e3
 hi MiniPickPrompt guifg=#07879d guibg=#d0d5e3
@@ -126,12 +126,12 @@ hi MiniStatuslineDevinfo guifg=#6172b0 guibg=#a8aecb
 hi MiniStatuslineFileinfo guifg=#6172b0 guibg=#a8aecb
 hi MiniStatuslineFilename guifg=#6172b0 guibg=#c4c8da
 hi MiniStatuslineInactive guifg=#2e7de9 guibg=#d0d5e3
-hi MiniStatuslineModeCommand guifg=#b4b5b9 guibg=#8c6c3e gui=bold
-hi MiniStatuslineModeInsert guifg=#b4b5b9 guibg=#587539 gui=bold
-hi MiniStatuslineModeNormal guifg=#b4b5b9 guibg=#2e7de9 gui=bold
-hi MiniStatuslineModeOther guifg=#b4b5b9 guibg=#118c74 gui=bold
-hi MiniStatuslineModeReplace guifg=#b4b5b9 guibg=#f52a65 gui=bold
-hi MiniStatuslineModeVisual guifg=#b4b5b9 guibg=#9854f1 gui=bold
+hi MiniStatuslineModeCommand guibg=#8c6c3e guifg=#b4b5b9 gui=bold
+hi MiniStatuslineModeInsert guibg=#587539 guifg=#b4b5b9 gui=bold
+hi MiniStatuslineModeNormal guibg=#2e7de9 guifg=#b4b5b9 gui=bold
+hi MiniStatuslineModeOther guibg=#118c74 guifg=#b4b5b9 gui=bold
+hi MiniStatuslineModeReplace guibg=#f52a65 guifg=#b4b5b9 gui=bold
+hi MiniStatuslineModeVisual guibg=#9854f1 guifg=#b4b5b9 gui=bold
 hi MiniSurround guibg=#b15c00 guifg=#b4b5b9
 hi MiniTablineCurrent guifg=#3760bf guibg=#a8aecb
 hi MiniTablineFill guibg=#b4b5b9
