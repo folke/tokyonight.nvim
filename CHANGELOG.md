@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.3.0](https://github.com/folke/tokyonight.nvim/compare/v4.2.0...v4.3.0) (2024-07-04)
+
+
+### Features
+
+* added vimwiki support. Closes [#297](https://github.com/folke/tokyonight.nvim/issues/297) ([8850021](https://github.com/folke/tokyonight.nvim/commit/8850021bed1d8595581a5903fd03acacf0d12af5))
+* **extra:** add aerc mail client theme ([#502](https://github.com/folke/tokyonight.nvim/issues/502)) ([fe0a7a0](https://github.com/folke/tokyonight.nvim/commit/fe0a7a03d29c3b93efa9bdebba3d33fc2e7cc813))
+* **extras:** add GNOME terminal ([#489](https://github.com/folke/tokyonight.nvim/issues/489)) ([8605183](https://github.com/folke/tokyonight.nvim/commit/8605183ab4c3cf3aeca7fac0db5f39d7c46cd865))
+
+
+### Bug Fixes
+
+* **vim:** sort attriutes ([0ded111](https://github.com/folke/tokyonight.nvim/commit/0ded111741c6b3e02bc913639fba6f87aed0a911))
+
 ## [4.2.0](https://github.com/folke/tokyonight.nvim/compare/v4.1.3...v4.2.0) (2024-07-04)
 
 
