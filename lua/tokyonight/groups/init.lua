@@ -112,8 +112,9 @@ function M.setup(colors, opts)
   end
 
   -- manually enable/disable plugins
-  for _, group in pairs(M.plugins) do
+  for plugin, group in pairs(M.plugins) do
     local use = opts.plugins[group]
+    use = use == nil and opts.plugins[plugin] or use
     if use ~= nil then
       if type(use) == "table" then
         use = use.enabled
@@ -152,7 +153,7 @@ function M.setup(colors, opts)
   end
   opts.on_highlights(ret, colors)
 
-  return ret
+  return ret, groups
 end
 
 return M
