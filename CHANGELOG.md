@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.2.0](https://github.com/folke/tokyonight.nvim/compare/v4.1.3...v4.2.0) (2024-07-04)
+
+
+### Features
+
+* **extras:** add Slack Theme ([#518](https://github.com/folke/tokyonight.nvim/issues/518)) ([a4ba234](https://github.com/folke/tokyonight.nvim/commit/a4ba234877d2d36a4e3e3c4cc1528ec272ba163b))
+* **extras:** add spotify_player colors ([#498](https://github.com/folke/tokyonight.nvim/issues/498)) ([6c11436](https://github.com/folke/tokyonight.nvim/commit/6c114363ac2b7f72392675c17fa78b1ee7fd7acf))
+
+
+### Bug Fixes
+
+* **dev:** refactored to make it easier to use for other colorschemes ([9652b3c](https://github.com/folke/tokyonight.nvim/commit/9652b3ce9e97116fa0fb202059ff9e4d318761d5))
+* **groups:** allow plugin name or group name. Fixes [#562](https://github.com/folke/tokyonight.nvim/issues/562) ([12d8137](https://github.com/folke/tokyonight.nvim/commit/12d813726b2785a3dc3000b1263fc13b90556d13))
+* **indentmini:** add hl group for indentmini plugin ([#570](https://github.com/folke/tokyonight.nvim/issues/570)) ([6a7cd4d](https://github.com/folke/tokyonight.nvim/commit/6a7cd4d97fca90af08f05d0b293cfd77dda3c647))
+
 ## [4.1.3](https://github.com/folke/tokyonight.nvim/compare/v4.1.2...v4.1.3) (2024-07-03)
 
 
