@@ -191,6 +191,8 @@ Extras ~
 
   Slack                               extras/slack
 
+  Spotify Player                      extras/spotify_player
+
   Sublime Text                        extras/sublime
 
   Terminator                          extras/terminator

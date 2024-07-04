@@ -136,6 +136,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
 | [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
 | [Slack](https://slack.com) | [extras/slack](extras/slack) |
+| [Spotify Player](https://github.com/aome510/spotify-player) | [extras/spotify_player](extras/spotify_player) |
 | [Sublime Text](https://www.sublimetext.com/docs/themes) | [extras/sublime](extras/sublime) |
 | [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) | [extras/terminator](extras/terminator) |
 | [Tilix](https://github.com/gnunn1/tilix) | [extras/tilix](extras/tilix) |
