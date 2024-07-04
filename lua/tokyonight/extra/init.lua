@@ -22,6 +22,7 @@ M.extras = {
   prism            = { ext = "js", url = "https://prismjs.com", label = "Prism" },
   slack            = {ext = "txt", url = "https://slack.com", label = "Slack"},
   sublime          = { ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text" },
+  spotify_player   = {ext = "toml", url = "https://github.com/aome510/spotify-player", label = "Spotify Player"},
   terminator       = { ext = "conf", url = "https://gnome-terminator.readthedocs.io/en/latest/config.html", label = "Terminator" },
   tilix            = { ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix" },
   tmux             = { ext = "tmux", url = "https://github.com/tmux/tmux/wiki", label = "Tmux" },
