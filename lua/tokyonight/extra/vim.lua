@@ -79,6 +79,7 @@ hi clear
         if not hl.bg then
           props[#props + 1] = "guibg=NONE"
         end
+        table.sort(props)
         used[name] = true
         lines[#lines + 1] = ("hi %s %s"):format(name, table.concat(props, " "))
       else
