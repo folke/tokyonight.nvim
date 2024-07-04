@@ -1,6 +1,5 @@
 local Docs = require("lazy.docs")
 local Groups = require("tokyonight.groups")
-local Util = require("tokyonight.util")
 
 local M = {}
 
@@ -66,5 +65,6 @@ function M.update()
 end
 
 M.update()
+print("Docs updated")
 
 return M

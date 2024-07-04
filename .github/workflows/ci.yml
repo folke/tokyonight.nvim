@@ -71,7 +71,7 @@ jobs:
       - name: Generate docs
         run: |
           nvim --version
-          nvim -l tests/docs.lua
+          nvim -u tests/minit.lua -l lua/tokyonight/docs.lua
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
