@@ -208,6 +208,18 @@ hi Todo guibg=#ffc777 guifg=#222436
 hi Type guibg=NONE guifg=#65bcff
 hi Underlined gui=underline guibg=NONE
 hi VertSplit guibg=NONE guifg=#1b1d2b
+hi VimwikiHR guibg=NONE guifg=#ffc777
+hi VimwikiHeaderChar guibg=NONE guifg=#ffc777
+hi VimwikiHeaer1 gui=bold guibg=NONE guifg=#82aaff
+hi VimwikiHeaer2 gui=bold guibg=NONE guifg=#ffc777
+hi VimwikiHeaer3 gui=bold guibg=NONE guifg=#c3e88d
+hi VimwikiHeaer4 gui=bold guibg=NONE guifg=#4fd6be
+hi VimwikiHeaer5 gui=bold guibg=NONE guifg=#c099ff
+hi VimwikiHeaer6 gui=bold guibg=NONE guifg=#fca7ea
+hi VimwikiLink guibg=NONE guifg=#82aaff
+hi VimwikiList guibg=NONE guifg=#ff966c
+hi VimwikiMarkers guibg=NONE guifg=#82aaff
+hi VimwikiTag guibg=NONE guifg=#c3e88d
 hi Visual guibg=#2d3f76
 hi VisualNOS guibg=#2d3f76
 hi WarningMsg guibg=NONE guifg=#ffc777

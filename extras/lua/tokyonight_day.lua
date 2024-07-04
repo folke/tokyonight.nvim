@@ -1989,6 +1989,60 @@ local highlights = {
   VertSplit = {
     fg = "#b4b5b9"
   },
+  VimwikiHR = {
+    bg = "NONE",
+    fg = "#8c6c3e"
+  },
+  VimwikiHeaderChar = {
+    bg = "NONE",
+    fg = "#8c6c3e"
+  },
+  VimwikiHeaer1 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#2e7de9"
+  },
+  VimwikiHeaer2 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#8c6c3e"
+  },
+  VimwikiHeaer3 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#587539"
+  },
+  VimwikiHeaer4 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#118c74"
+  },
+  VimwikiHeaer5 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#9854f1"
+  },
+  VimwikiHeaer6 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#7847bd"
+  },
+  VimwikiLink = {
+    bg = "NONE",
+    fg = "#2e7de9"
+  },
+  VimwikiList = {
+    bg = "NONE",
+    fg = "#b15c00"
+  },
+  VimwikiMarkers = {
+    bg = "NONE",
+    fg = "#2e7de9"
+  },
+  VimwikiTag = {
+    bg = "NONE",
+    fg = "#587539"
+  },
   Visual = {
     bg = "#b7c1e3"
   },
