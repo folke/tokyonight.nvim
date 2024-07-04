@@ -129,6 +129,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Foot](https://codeberg.org/dnkl/foot) | [extras/foot](extras/foot) |
 | [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](extras/fzf) |
 | [GitUI](https://github.com/extrawurst/gitui) | [extras/gitui](extras/gitui) |
+| [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal) | [extras/gnome_terminal](extras/gnome_terminal) |
 | [Helix](https://helix-editor.com/) | [extras/helix](extras/helix) |
 | [iTerm](https://iterm2.com/) | [extras/iterm](extras/iterm) |
 | [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty) |

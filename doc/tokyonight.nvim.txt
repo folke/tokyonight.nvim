@@ -177,6 +177,8 @@ Extras ~
 
   GitUI                               extras/gitui
 
+  GNOME Terminal                      extras/gnome_terminal
+
   Helix                               extras/helix
 
   iTerm                               extras/iterm
