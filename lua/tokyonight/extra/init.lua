@@ -14,6 +14,7 @@ M.extras = {
   foot             = { ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot" },
   fzf              = { ext = "sh", url = "https://github.com/junegunn/fzf", label = "Fzf" },
   gitui            = { ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI" },
+  gnome_terminal   = { ext = "dconf", url = "https://gitlab.gnome.org/GNOME/gnome-terminal", label = "GNOME Terminal"},
   helix            = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
   iterm            = { ext = "itermcolors", url = "https://iterm2.com/", label = "iTerm" },
   kitty            = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
