@@ -87,7 +87,7 @@ function M.generate(colors)
     ["function"] = {
       "Function",
       builtin = "@function.builtin",
-      method = "@method",
+      method = "@function.method",
       macro = "@function.macro",
       -- Defined as "preprocessor in C", so using "PreProc", not sure though
       special = "PreProc",
@@ -97,12 +97,12 @@ function M.generate(colors)
       -- ???
       builtin = nil,
     },
-    namespace = "@namespace",
+    namespace = "@lsp.type.namespace",
     special = "Special",
     markup = {
       nil,
       heading = {
-        "@text.title",
+        "@markup.heading",
         marker = nil,
         -- post-processed to remove the 'h' as we already use the first element (1) as the root value.
         h1 = nil,
@@ -116,7 +116,7 @@ function M.generate(colors)
         hover = "PmenuSel",
       },
       list = {
-        "markdownHeadingDelimiter",
+        "@markup.list",
         unnumbered = nil,
         numbered = nil,
         checked = nil,
@@ -129,16 +129,16 @@ function M.generate(colors)
         modifiers = { "crossed_out" },
       },
       link = {
-        "markdownLinkText",
-        url = "Underlined",
-        label = "markdownCode",
-        text = "markdownCode",
+        "@markup.link",
+        url = "@markup.link.url",
+        label = "@markup.link.label",
+        text = "@markup.link",
       },
       quote = nil,
       raw = {
-        "markdownCode",
+        "@markup.raw",
         inline = "@markup.raw.markdown_inline",
-        block = "markdownCodeBlock",
+        block = nil,
         -- UI --
         completion = nil,
         hover = nil,

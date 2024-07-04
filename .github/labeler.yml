@@ -1,0 +1,28 @@
+core:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "lua/tokyonight/**"
+          - all-globs-to-all-files:
+              - "!lua/tokyonight/groups/**"
+              - "!lua/tokyonight/colors/**"
+              - "!lua/tokyonight/extra/**"
+
+extras:
+  - changed-files:
+      - any-glob-to-any-file: "lua/tokyonight/extra/**"
+
+groups:
+  - changed-files:
+      - any-glob-to-any-file: "lua/tokyonight/groups/**"
+
+base:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "lua/tokyonight/groups/base.lua"
+          - "lua/tokyonight/groups/kinds.lua"
+          - "lua/tokyonight/groups/treesitter.lua"
+          - "lua/tokyonight/groups/semantic_tokens.lua"
+
+colors:
+  - changed-files:
+      - any-glob-to-any-file: "lua/tokyonight/colors/**"

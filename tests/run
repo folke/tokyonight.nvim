@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nvim -l ./tests/minit.lua --busted tests --output utfTerminal
