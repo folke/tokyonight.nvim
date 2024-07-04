@@ -122,6 +122,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 
 | Tool | Extra |
 | --- | --- |
+| [Aerc](https://git.sr.ht/~rjarry/aerc/) | [extras/aerc](extras/aerc) |
 | [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](extras/alacritty) |
 | [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
 | [Dunst](https://dunst-project.org/) | [extras/dunst](extras/dunst) |
