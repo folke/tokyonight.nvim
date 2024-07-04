@@ -20,6 +20,7 @@ M.extras = {
   lazygit          = { ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "Lazygit" },
   lua              = { ext = "lua", url = "https://www.lua.org", label = "Lua Table for testing" },
   prism            = { ext = "js", url = "https://prismjs.com", label = "Prism" },
+  slack            = {ext = "txt", url = "https://slack.com", label = "Slack"},
   sublime          = { ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text" },
   terminator       = { ext = "conf", url = "https://gnome-terminator.readthedocs.io/en/latest/config.html", label = "Terminator" },
   tilix            = { ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix" },
