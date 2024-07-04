@@ -131,6 +131,45 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Info</string>
+			<key>scope</key>
+			<string>markup.info</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#0db9d7</string>
+				<key>background</key>
+				<string>#22374b</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Warning</string>
+			<key>scope</key>
+			<string>markup.warning</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#e0af68</string>
+				<key>background</key>
+				<string>#373640</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Error</string>
+			<key>scope</key>
+			<string>markup.error</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#db4b4b</string>
+				<key>background</key>
+				<string>#362c3d</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Invalid</string>
 			<key>scope</key>
 			<string>invalid, invalid.illegal</string>
@@ -740,7 +779,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>CSS psuedo selectors</string>
+			<string>CSS pseudo selectors</string>
 			<key>scope</key>
 			<string>entity.other.attribute-name.pseudo-class, entity.other.attribute-name.pseudo-element, entity.other.attribute-name.placeholder, meta.property-list meta.property-value</string>
 			<key>settings</key>
