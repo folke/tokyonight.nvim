@@ -4,7 +4,8 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  local windows_terminal = util.template([[
+  local windows_terminal = util.template(
+    [[
 # Add the following object to your Windows Terminal configuration
 # https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#creating-your-own-color-scheme
 {

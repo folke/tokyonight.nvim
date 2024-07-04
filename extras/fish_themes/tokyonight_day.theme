@@ -10,8 +10,8 @@
     fish_color_error f52a65
     fish_color_param 7847bd
     fish_color_comment 848cb5
-    fish_color_selection --background=b6bfe2
-    fish_color_search_match --background=b6bfe2
+    fish_color_selection --background=b7c1e3
+    fish_color_search_match --background=b7c1e3
     fish_color_operator 587539
     fish_color_escape 9854f1
     fish_color_autosuggestion 848cb5
@@ -21,5 +21,5 @@
     fish_pager_color_prefix 007197
     fish_pager_color_completion 3760bf
     fish_pager_color_description 848cb5
-    fish_pager_color_selected_background --background=b6bfe2
+    fish_pager_color_selected_background --background=b7c1e3
   

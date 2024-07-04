@@ -8,60 +8,149 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 [iTerm](https://iterm2.com/) and
 [Fish](https://fishshell.com/docs/current/index.html).
 
-## Storm
-
-![image](https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png)
-
-## Night
-
-![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
-
-## Moon
-
-![image](https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png)
-
-## Day
-
-![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
+<table width="100%">
+  <tr>
+    <th>Moon</th>
+    <th>Storm</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png" />
+    </td>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png" />
+    </td>
+  </tr>
+  <tr>
+    <th>Night</th>
+    <th>Day</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png" />
+    </td>
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png" />
+    </td>
+  </tr>
+</table>
 
 ## ✨ Features
 
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
-- Enhances terminal colors.
-- Introduces a darker background option for sidebar-like windows.
+- Terminal colors.
 - Supports all major plugins.
 - Provides [TokyoNight](https://github.com/folke/tokyonight.nvim)
   [extras](#-extras) for numerous other applications.
 
-### 🍭 Extras
+<details>
+<summary>🎨 Supported Plugins</summary>
+
+<!-- plugins:start -->
+
+| Plugin | Source |
+| --- | --- |
+| [aerial.nvim](https://github.com/stevearc/aerial.nvim) | [`aerial`](lua/tokyonight/groups/aerial.lua) |
+| [ale](https://github.com/dense-analysis/ale) | [`ale`](lua/tokyonight/groups/ale.lua) |
+| [alpha-nvim](https://github.com/goolord/alpha-nvim) | [`alpha`](lua/tokyonight/groups/alpha.lua) |
+| [barbar.nvim](https://github.com/romgrk/barbar.nvim) | [`barbar`](lua/tokyonight/groups/barbar.lua) |
+| [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | [`bufferline`](lua/tokyonight/groups/bufferline.lua) |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | [`cmp`](lua/tokyonight/groups/cmp.lua) |
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap) | [`dap`](lua/tokyonight/groups/dap.lua) |
+| [dashboard-nvim](https://github.com/glepnir/dashboard-nvim) | [`dashboard`](lua/tokyonight/groups/dashboard.lua) |
+| [flash.nvim](https://github.com/folke/flash.nvim) | [`flash`](lua/tokyonight/groups/flash.lua) |
+| [fzf-lua](https://github.com/ibhagwan/fzf-lua) | [`fzf`](lua/tokyonight/groups/fzf.lua) |
+| [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | [`gitgutter`](lua/tokyonight/groups/gitgutter.lua) |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | [`gitsigns`](lua/tokyonight/groups/gitsigns.lua) |
+| [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim) | [`glyph-palette`](lua/tokyonight/groups/glyph-palette.lua) |
+| [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim) | [`headlines`](lua/tokyonight/groups/headlines.lua) |
+| [hop.nvim](https://github.com/phaazon/hop.nvim) | [`hop`](lua/tokyonight/groups/hop.lua) |
+| [vim-illuminate](https://github.com/RRethy/vim-illuminate) | [`illuminate`](lua/tokyonight/groups/illuminate.lua) |
+| [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | [`indent-blankline`](lua/tokyonight/groups/indent-blankline.lua) |
+| [indentmini.nvim](https://github.com/nvimdev/indentmini.nvim) | [`indentmini`](lua/tokyonight/groups/indentmini.lua) |
+| [lazy.nvim](https://github.com/folke/lazy.nvim) | [`lazy`](lua/tokyonight/groups/lazy.lua) |
+| [leap.nvim](https://github.com/ggandor/leap.nvim) | [`leap`](lua/tokyonight/groups/leap.lua) |
+| [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim) | [`lspsaga`](lua/tokyonight/groups/lspsaga.lua) |
+| [mini.animate](https://github.com/echasnovski/mini.animate) | [`mini_animate`](lua/tokyonight/groups/mini_animate.lua) |
+| [mini.clue](https://github.com/echasnovski/mini.clue) | [`mini_clue`](lua/tokyonight/groups/mini_clue.lua) |
+| [mini.completion](https://github.com/echasnovski/mini.completion) | [`mini_completion`](lua/tokyonight/groups/mini_completion.lua) |
+| [mini.cursorword](https://github.com/echasnovski/mini.cursorword) | [`mini_cursorword`](lua/tokyonight/groups/mini_cursorword.lua) |
+| [mini.deps](https://github.com/echasnovski/mini.deps) | [`mini_deps`](lua/tokyonight/groups/mini_deps.lua) |
+| [mini.diff](https://github.com/echasnovski/mini.diff) | [`mini_diff`](lua/tokyonight/groups/mini_diff.lua) |
+| [mini.files](https://github.com/echasnovski/mini.files) | [`mini_files`](lua/tokyonight/groups/mini_files.lua) |
+| [mini.hipatterns](https://github.com/echasnovski/mini.hipatterns) | [`mini_hipatterns`](lua/tokyonight/groups/mini_hipatterns.lua) |
+| [mini.icons](https://github.com/echasnovski/mini.icons) | [`mini_icons`](lua/tokyonight/groups/mini_icons.lua) |
+| [mini.indentscope](https://github.com/echasnovski/mini.indentscope) | [`mini_indentscope`](lua/tokyonight/groups/mini_indentscope.lua) |
+| [mini.jump](https://github.com/echasnovski/mini.jump) | [`mini_jump`](lua/tokyonight/groups/mini_jump.lua) |
+| [mini.map](https://github.com/echasnovski/mini.map) | [`mini_map`](lua/tokyonight/groups/mini_map.lua) |
+| [mini.notify](https://github.com/echasnovski/mini.notify) | [`mini_notify`](lua/tokyonight/groups/mini_notify.lua) |
+| [mini.operators](https://github.com/echasnovski/mini.operators) | [`mini_operators`](lua/tokyonight/groups/mini_operators.lua) |
+| [mini.pick](https://github.com/echasnovski/mini.pick) | [`mini_pick`](lua/tokyonight/groups/mini_pick.lua) |
+| [mini.starter](https://github.com/echasnovski/mini.starter) | [`mini_starter`](lua/tokyonight/groups/mini_starter.lua) |
+| [mini.statusline](https://github.com/echasnovski/mini.statusline) | [`mini_statusline`](lua/tokyonight/groups/mini_statusline.lua) |
+| [mini.surround](https://github.com/echasnovski/mini.surround) | [`mini_surround`](lua/tokyonight/groups/mini_surround.lua) |
+| [mini.tabline](https://github.com/echasnovski/mini.tabline) | [`mini_tabline`](lua/tokyonight/groups/mini_tabline.lua) |
+| [mini.test](https://github.com/echasnovski/mini.test) | [`mini_test`](lua/tokyonight/groups/mini_test.lua) |
+| [mini.trailspace](https://github.com/echasnovski/mini.trailspace) | [`mini_trailspace`](lua/tokyonight/groups/mini_trailspace.lua) |
+| [nvim-navic](https://github.com/SmiteshP/nvim-navic) | [`navic`](lua/tokyonight/groups/navic.lua) |
+| [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) | [`neo-tree`](lua/tokyonight/groups/neo-tree.lua) |
+| [neogit](https://github.com/TimUntersberger/neogit) | [`neogit`](lua/tokyonight/groups/neogit.lua) |
+| [neotest](https://github.com/nvim-neotest/neotest) | [`neotest`](lua/tokyonight/groups/neotest.lua) |
+| [noice.nvim](https://github.com/folke/noice.nvim) | [`noice`](lua/tokyonight/groups/noice.lua) |
+| [nvim-notify](https://github.com/rcarriga/nvim-notify) | [`notify`](lua/tokyonight/groups/notify.lua) |
+| [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) | [`nvim-tree`](lua/tokyonight/groups/nvim-tree.lua) |
+| [octo.nvim](https://github.com/pwntester/octo.nvim) | [`octo`](lua/tokyonight/groups/octo.lua) |
+| [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim) | [`rainbow`](lua/tokyonight/groups/rainbow.lua) |
+| [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar) | [`scrollbar`](lua/tokyonight/groups/scrollbar.lua) |
+| [vim-sneak](https://github.com/justinmk/vim-sneak) | [`sneak`](lua/tokyonight/groups/sneak.lua) |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | [`telescope`](lua/tokyonight/groups/telescope.lua) |
+| [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) | [`treesitter-context`](lua/tokyonight/groups/treesitter-context.lua) |
+| [trouble.nvim](https://github.com/folke/trouble.nvim) | [`trouble`](lua/tokyonight/groups/trouble.lua) |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | [`which-key`](lua/tokyonight/groups/which-key.lua) |
+| [yanky.nvim](https://github.com/gbprod/yanky.nvim) | [`yanky`](lua/tokyonight/groups/yanky.lua) |
+
+<!-- plugins:end -->
+
+</details>
+
+<details>
+<summary>🍭 Extras</summary>
 
 <!-- extras:start -->
-- [Alacritty](https://github.com/alacritty/alacritty) ([alacritty](extras/alacritty))
-- [Delta](https://github.com/dandavison/delta) ([delta](extras/delta))
-- [Dunst](https://dunst-project.org/) ([dunst](extras/dunst))
-- [Fish](https://fishshell.com/docs/current/index.html) ([fish](extras/fish))
-- [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
-- [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))
-- [Fzf](https://github.com/junegunn/fzf) ([fzf](extras/fzf))
-- [GitUI](https://github.com/extrawurst/gitui) ([gitui](extras/gitui))
-- [Helix](https://helix-editor.com/) ([helix](extras/helix))
-- [iTerm](https://iterm2.com/) ([iterm](extras/iterm))
-- [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](extras/kitty))
-- [Lua Table for testing](https://www.lua.org) ([lua](extras/lua))
-- [Prism](https://prismjs.com) ([prism](extras/prism))
-- [Slack](https://slack.com) ([slack](extras/slack))
-- [Sublime Text](https://www.sublimetext.com/docs/themes) ([sublime](extras/sublime))
-- [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](extras/terminator))
-- [Tilix](https://github.com/gnunn1/tilix) ([tilix](extras/tilix))
-- [Tmux](https://github.com/tmux/tmux/wiki) ([tmux](extras/tmux))
-- [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](extras/wezterm))
-- [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](extras/windows_terminal))
-- [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
-- [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](extras/xresources))
-- [Zathura](https://pwmt.org/projects/zathura/) ([zathura](extras/zathura))
-- [Zellij](https://zellij.dev/) ([zellij](extras/zellij))
+
+| Tool | Extra |
+| --- | --- |
+| [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](extras/alacritty) |
+| [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
+| [Dunst](https://dunst-project.org/) | [extras/dunst](extras/dunst) |
+| [Fish](https://fishshell.com/docs/current/index.html) | [extras/fish](extras/fish) |
+| [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) | [extras/fish_themes](extras/fish_themes) |
+| [Foot](https://codeberg.org/dnkl/foot) | [extras/foot](extras/foot) |
+| [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](extras/fzf) |
+| [GitUI](https://github.com/extrawurst/gitui) | [extras/gitui](extras/gitui) |
+| [Helix](https://helix-editor.com/) | [extras/helix](extras/helix) |
+| [iTerm](https://iterm2.com/) | [extras/iterm](extras/iterm) |
+| [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty) |
+| [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](extras/lazygit) |
+| [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
+| [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
+| [Sublime Text](https://www.sublimetext.com/docs/themes) | [extras/sublime](extras/sublime) |
+| [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) | [extras/terminator](extras/terminator) |
+| [Tilix](https://github.com/gnunn1/tilix) | [extras/tilix](extras/tilix) |
+| [Tmux](https://github.com/tmux/tmux/wiki) | [extras/tmux](extras/tmux) |
+| [Vim](https://vimhelp.org/) | [extras/vim](extras/vim) |
+| [WezTerm](https://wezfurlong.org/wezterm/config/files.html) | [extras/wezterm](extras/wezterm) |
+| [Windows Terminal](https://aka.ms/terminal-documentation) | [extras/windows_terminal](extras/windows_terminal) |
+| [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) | [extras/xfceterm](extras/xfceterm) |
+| [Xresources](https://wiki.archlinux.org/title/X_resources) | [extras/xresources](extras/xresources) |
+| [Yazi](https://github.com/sxyazi/yazi) | [extras/yazi](extras/yazi) |
+| [Zathura](https://pwmt.org/projects/zathura/) | [extras/zathura](extras/zathura) |
+| [Zellij](https://zellij.dev/) | [extras/zellij](extras/zellij) |
+
 <!-- extras:end -->
+
+</details>
 
 ## ⚡️ Requirements
 
@@ -84,7 +173,9 @@ Install the theme with your preferred package manager, such as
 
 ## 🚀 Usage
 
-### Vim Script
+```lua
+vim.cmd[[colorscheme tokyonight]]
+```
 
 ```vim
 colorscheme tokyonight
@@ -96,15 +187,12 @@ colorscheme tokyonight-day
 colorscheme tokyonight-moon
 ```
 
-### [Lua](https://www.lua.org)
+Some plugins need extra configuration to work with **TokyoNight**.
 
-```lua
-vim.cmd[[colorscheme tokyonight]]
-```
+<details>
+  <summary>Click here for more details</summary>
 
-#### External Plugins
-
-##### [Barbecue](https://github.com/utilyre/barbecue.nvim)
+### [Barbecue](https://github.com/utilyre/barbecue.nvim)
 
 ```lua
 -- Lua
@@ -115,7 +203,7 @@ require('barbecue').setup {
 }
 ```
 
-##### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua
 -- Lua
@@ -128,16 +216,19 @@ require('lualine').setup {
 }
 ```
 
-##### [Lightline](https://github.com/itchyny/lightline.vim)
+### [Lightline](https://github.com/itchyny/lightline.vim)
 
 ```vim
 " Vim Script
 let g:lightline = {'colorscheme': 'tokyonight'}
 ```
 
+</details>
+
 ## ⚙️ Configuration
 
-> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
+> [!IMPORTANT]
+> Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
 
 The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
 and [day](#day).
@@ -148,14 +239,20 @@ The [day](#day) style is used when `{ style = "day" }` is passed to
 [TokyoNight](https://github.com/folke/tokyonight.nvim) uses the default options,
 unless `setup` is explicitly called.
 
+<details>
+  <summary>Default Options</summary>
+
+<!-- config:start -->
+
 ```lua
-require("tokyonight").setup({
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+---@class tokyonight.Config
+---@field on_colors fun(colors: ColorScheme)
+---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
+M.defaults = {
+  style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -167,9 +264,7 @@ require("tokyonight").setup({
     sidebars = "dark", -- style for sidebars, see below
     floats = "dark", -- style for floating windows
   },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
   day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
   dim_inactive = false, -- dims inactive windows
   lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 
@@ -180,11 +275,31 @@ require("tokyonight").setup({
 
   --- You can override specific highlights to use other groups or a hex color
   --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
+  ---@param highlights tokyonight.Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
-})
+
+  cache = true, -- When set to true, the theme will be cached for better performance
+
+  ---@type table<string, boolean|{enabled:boolean}>
+  plugins = {
+    -- enable all plugins when not using lazy.nvim
+    -- set to false to manually enable/disable plugins
+    all = package.loaded.lazy == nil,
+    -- uses your plugin manager to automatically enable needed plugins
+    -- currently only lazy.nvim is supported
+    auto = true,
+    -- add any plugins here that you want to enable
+    -- for all possible plugins, see:
+    --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
+    -- telescope = true,
+  },
+}
 ```
+
+<!-- config:end -->
+
+</details>
 
 ## 🪓 Overriding Colors & Highlight Groups
 
@@ -202,7 +317,8 @@ For default values of `colors` and `highlights`, please consult the
 [night](extras/lua/tokyonight_night.lua), and
 [day](extras/lua/tokyonight_day.lua) themes.
 
-### Settings and color alteration demonstration
+<details>
+  <summary>Settings & Changing Colors</summary>
 
 ```lua
 require("tokyonight").setup({
@@ -212,7 +328,6 @@ require("tokyonight").setup({
   styles = {
     functions = {}
   },
-  sidebars = { "qf", "vista_kind", "terminal", "packer" },
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
   on_colors = function(colors)
     colors.hint = colors.orange
@@ -221,7 +336,10 @@ require("tokyonight").setup({
 })
 ```
 
-### [Borderless Telescope](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless) example
+</details>
+
+<details>
+  <summary>Borderless Telescope</summary>
 
 ```lua
 require("tokyonight").setup({
@@ -258,7 +376,10 @@ require("tokyonight").setup({
 })
 ```
 
-### Fix `undercurls` in [Tmux](https://github.com/tmux/tmux)
+</details>
+
+<details>
+  <summary>Fix <code>undercurls</code> in Tmux</summary>
 
 To have undercurls show up and in color, add the following to your
 [Tmux](https://github.com/tmux/tmux) configuration file:
@@ -269,6 +390,8 @@ set -g default-terminal "${TERM}"
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
+
+</details>
 
 ## 🍭 Extras
 
@@ -307,7 +430,7 @@ How to add a new extra template:
 3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
 
    ```sh
-   nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('tokyonight.extra').setup()" --cmd qa
+   ./extras/gen
    ```
 
 4. Check the newly created themes in the `extra/` directory. Please **DO NOT**

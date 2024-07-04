@@ -4,9 +4,9 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  colors.error_bg = util.darken(colors.error, 0.1)
-  colors.warning_bg = util.darken(colors.warning, 0.1)
-  colors.info_bg = util.darken(colors.info, 0.1)
+  colors.error_bg = util.blend_bg(colors.error, 0.1)
+  colors.warning_bg = util.blend_bg(colors.warning, 0.1)
+  colors.info_bg = util.blend_bg(colors.info, 0.1)
   local sublime = util.template(M.template, colors)
   return sublime
 end
@@ -820,7 +820,7 @@ M.template = [[
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>CSS psuedo selectors</string>
+			<string>CSS pseudo selectors</string>
 			<key>scope</key>
 			<string>entity.other.attribute-name.pseudo-class, entity.other.attribute-name.pseudo-element, entity.other.attribute-name.placeholder, meta.property-list meta.property-value</string>
 			<key>settings</key>

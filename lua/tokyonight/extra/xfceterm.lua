@@ -7,7 +7,7 @@ function M.generate(colors)
   local xfceterm = util.template(
     [[
 [Scheme]
-Name=TokyoNight Colors
+Name="${_name}"
 ColorBackground=${bg}
 ColorForeground=${fg}
 
