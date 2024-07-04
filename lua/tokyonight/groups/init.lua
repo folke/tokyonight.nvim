@@ -17,6 +17,7 @@ M.plugins = {
   ["headlines.nvim"]                = "headlines",
   ["hop.nvim"]                      = "hop",
   ["indent-blankline.nvim"]         = "indent-blankline",
+  ["indentmini.nvim"]               = "indentmini",
   ["lazy.nvim"]                     = "lazy",
   ["leap.nvim"]                     = "leap",
   ["lspsaga.nvim"]                  = "lspsaga",
