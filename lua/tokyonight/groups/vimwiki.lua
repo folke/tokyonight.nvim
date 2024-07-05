@@ -1,6 +1,6 @@
 local M = {}
 
-M.url = "https://github.com/lukas-reineke/headlines.nvim"
+M.url = "https://github.com/vimwiki/vimwiki"
 
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
@@ -14,7 +14,7 @@ function M.get(c, opts)
     VimwikiMarkers = { fg = c.blue, bg = c.none },
   }
   for i, color in ipairs(c.rainbow) do
-    ret["VimwikiHeaer" .. i] = { fg = color, bg = c.none, bold = true }
+    ret["VimwikiHeader" .. i] = { fg = color, bg = c.none, bold = true }
   end
   return ret
 end
