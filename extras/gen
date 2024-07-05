@@ -1,3 +1,0 @@
-#!/bin/env bash
-
-nvim -u NONE -E -R --headless --cmd "set rtp^=." --cmd "packloadall" --cmd "lua require('tokyonight.extra').setup()" --cmd qa
