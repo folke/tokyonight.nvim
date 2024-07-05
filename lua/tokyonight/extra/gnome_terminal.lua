@@ -3,22 +3,22 @@ local util = require("tokyonight.util")
 local M = {}
 
 function M.generate(colors)
-    local gnome_colors = {}
-    for k, v in pairs(colors) do
-        local is_color = type(v) == "string" and v:find("^#[%x]") ~= nil
-        if is_color then
-            local hex = v:gsub("^#", "")
-            local r = tonumber(hex:sub(1, 2), 16)
-            local g = tonumber(hex:sub(3, 4), 16)
-            local b = tonumber(hex:sub(5, 6), 16)
-            gnome_colors[k] = string.format("rgb(%d, %d, %d)", r, g, b)
-        else
-            gnome_colors[k] = v
-        end
+  local gnome_colors = {}
+  for k, v in pairs(colors) do
+    local is_color = type(v) == "string" and v:find("^#[%x]") ~= nil
+    if is_color then
+      local hex = v:gsub("^#", "")
+      local r = tonumber(hex:sub(1, 2), 16)
+      local g = tonumber(hex:sub(3, 4), 16)
+      local b = tonumber(hex:sub(5, 6), 16)
+      gnome_colors[k] = string.format("rgb(%d, %d, %d)", r, g, b)
+    else
+      gnome_colors[k] = v
     end
+  end
 
-    local gnome_terminal = util.template(
-        [[
+  local gnome_terminal = util.template(
+    [[
 # Import this theme as follows:
 # 1. Create a new profile for GNOME Terminal
 # 2. Copy the UUID of the new profile (bottom right corner of the preferences window)
@@ -38,9 +38,9 @@ palette=['${terminal_black}', '${red}', '${green}', '${yellow}', '${blue}', '${m
 use-theme-colors=false
 visible-name='${_style_name}'
 ]],
-        gnome_colors
-    )
-    return gnome_terminal
+    gnome_colors
+  )
+  return gnome_terminal
 end
 
 return M
