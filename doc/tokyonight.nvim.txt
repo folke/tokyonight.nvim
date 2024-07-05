@@ -494,7 +494,7 @@ How to add a new extra template:
 the tokyonight plugin directory:
 
 >sh
-    ./extras/gen
+    ./scripts/build
 <
 
 
