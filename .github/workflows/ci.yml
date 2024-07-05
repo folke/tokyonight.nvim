@@ -12,3 +12,4 @@ jobs:
     with:
       plugin: tokyonight.nvim
       repo: folke/tokyonight.nvim
+      tests: true
