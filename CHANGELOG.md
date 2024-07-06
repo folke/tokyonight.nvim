@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.3.1](https://github.com/folke/tokyonight.nvim/compare/v4.3.0...v4.3.1) (2024-07-06)
+
+
+### Bug Fixes
+
+* **leap:** use `LeapLabel` ([#582](https://github.com/folke/tokyonight.nvim/issues/582)) ([9460bc9](https://github.com/folke/tokyonight.nvim/commit/9460bc9bf570b1811a6bf24232be8a9439330d0e))
+* **vimwiki:** `VimwikiHeader` highlights and URL metadata ([#575](https://github.com/folke/tokyonight.nvim/issues/575)) ([d8e570f](https://github.com/folke/tokyonight.nvim/commit/d8e570fc1b693a8a0d4ea4d0cb5a33596fcb2871))
+
 ## [4.3.0](https://github.com/folke/tokyonight.nvim/compare/v4.2.0...v4.3.0) (2024-07-04)
 
 
