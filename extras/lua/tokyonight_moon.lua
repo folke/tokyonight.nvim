@@ -1989,39 +1989,39 @@ local highlights = {
     bg = "NONE",
     fg = "#ffc777"
   },
-  VimwikiHeaderChar = {
-    bg = "NONE",
-    fg = "#ffc777"
-  },
-  VimwikiHeaer1 = {
+  VimwikiHeader1 = {
     bg = "NONE",
     bold = true,
     fg = "#82aaff"
   },
-  VimwikiHeaer2 = {
+  VimwikiHeader2 = {
     bg = "NONE",
     bold = true,
     fg = "#ffc777"
   },
-  VimwikiHeaer3 = {
+  VimwikiHeader3 = {
     bg = "NONE",
     bold = true,
     fg = "#c3e88d"
   },
-  VimwikiHeaer4 = {
+  VimwikiHeader4 = {
     bg = "NONE",
     bold = true,
     fg = "#4fd6be"
   },
-  VimwikiHeaer5 = {
+  VimwikiHeader5 = {
     bg = "NONE",
     bold = true,
     fg = "#c099ff"
   },
-  VimwikiHeaer6 = {
+  VimwikiHeader6 = {
     bg = "NONE",
     bold = true,
     fg = "#fca7ea"
+  },
+  VimwikiHeaderChar = {
+    bg = "NONE",
+    fg = "#ffc777"
   },
   VimwikiLink = {
     bg = "NONE",

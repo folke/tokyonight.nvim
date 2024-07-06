@@ -209,13 +209,13 @@ hi Type guibg=NONE guifg=#2ac3de
 hi Underlined gui=underline guibg=NONE
 hi VertSplit guibg=NONE guifg=#1d202f
 hi VimwikiHR guibg=NONE guifg=#e0af68
+hi VimwikiHeader1 gui=bold guibg=NONE guifg=#7aa2f7
+hi VimwikiHeader2 gui=bold guibg=NONE guifg=#e0af68
+hi VimwikiHeader3 gui=bold guibg=NONE guifg=#9ece6a
+hi VimwikiHeader4 gui=bold guibg=NONE guifg=#1abc9c
+hi VimwikiHeader5 gui=bold guibg=NONE guifg=#bb9af7
+hi VimwikiHeader6 gui=bold guibg=NONE guifg=#9d7cd8
 hi VimwikiHeaderChar guibg=NONE guifg=#e0af68
-hi VimwikiHeaer1 gui=bold guibg=NONE guifg=#7aa2f7
-hi VimwikiHeaer2 gui=bold guibg=NONE guifg=#e0af68
-hi VimwikiHeaer3 gui=bold guibg=NONE guifg=#9ece6a
-hi VimwikiHeaer4 gui=bold guibg=NONE guifg=#1abc9c
-hi VimwikiHeaer5 gui=bold guibg=NONE guifg=#bb9af7
-hi VimwikiHeaer6 gui=bold guibg=NONE guifg=#9d7cd8
 hi VimwikiLink guibg=NONE guifg=#7aa2f7
 hi VimwikiList guibg=NONE guifg=#ff9e64
 hi VimwikiMarkers guibg=NONE guifg=#7aa2f7
