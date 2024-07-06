@@ -969,13 +969,9 @@ local highlights = {
   LeapBackdrop = {
     fg = "#545c7e"
   },
-  LeapLabelPrimary = {
+  LeapLabel = {
     bold = true,
     fg = "#ff007c"
-  },
-  LeapLabelSecondary = {
-    bold = true,
-    fg = "#73daca"
   },
   LeapMatch = {
     bg = "#ff007c",
