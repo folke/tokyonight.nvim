@@ -57,6 +57,7 @@ body:
       label: Repro
       description: Minimal `init.lua` to reproduce this issue. Save as `repro.lua` and run with `nvim -u repro.lua`
       value: |
+        -- DO NOT change the paths and don't remove the colorscheme
         local root = vim.fn.fnamemodify("./.repro", ":p")
 
         -- set stdpaths to use .repro
@@ -73,10 +74,8 @@ body:
 
         -- install plugins
         local plugins = {
-          {
-            "folke/tokyonight.nvim",
-            opts = {},
-          }
+          "folke/tokyonight.nvim",
+          -- add any other plugins here
         }
         require("lazy").setup(plugins, {
           root = root .. "/plugins",
