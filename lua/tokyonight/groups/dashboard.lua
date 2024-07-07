@@ -1,18 +1,27 @@
 local M = {}
 
-M.url = "https://github.com/glepnir/dashboard-nvim"
+M.url = "https://github.com/nvimdev/dashboard-nvim"
 
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    DashboardShortCut = { fg = c.cyan },
+    -- General
     DashboardHeader   = { fg = c.blue },
-    DashboardCenter   = { fg = c.magenta },
     DashboardFooter   = { fg = c.blue1 },
-    DashboardKey      = { fg = c.orange },
+    -- Hyper theme
+    Dashboardprojecttitle = { fg = c.cyan }
+    Dashboardprojecttitleicon = { fg = c.orange }
+    Dashboardprojecticon = { fg = c.yellow }
+    Dashboardmrutitle = { fg = c.cyan }
+    Dashboardmruicon = { fg = c.purple }
+    Dashboardfiles = { fg = c.blue }
+    Dashboardshortcuticon = { fg = c.magenta }
+    -- Doome theme
     DashboardDesc     = { fg = c.cyan },
+    DashboardKey      = { fg = c.orange },
     DashboardIcon     = { fg = c.cyan, bold = true },
+    DashboardShortCut = { fg = c.cyan },
   }
 end
 
