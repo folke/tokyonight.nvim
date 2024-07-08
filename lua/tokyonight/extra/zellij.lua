@@ -14,7 +14,9 @@ themes {
     ${_name} {
         fg "${fg}"
         bg "${bg_highlight}"
-        black "${black}"
+        // Black should match the terminal background color
+        // This ensures the top and bottom bars are transparent
+        black "${bg}"
         red "${red}"
         green "${green}"
         yellow "${yellow}"
