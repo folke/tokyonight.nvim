@@ -6,7 +6,9 @@ themes {
     tokyonight_moon {
         fg "#c8d3f5"
         bg "#2f334d"
-        black "#1b1d2b"
+        // Black should match the terminal background color
+        // This ensures the top and bottom bars are transparent
+        black "#222436"
         red "#ff757f"
         green "#c3e88d"
         yellow "#ffc777"

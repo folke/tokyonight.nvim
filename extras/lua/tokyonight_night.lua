@@ -658,11 +658,11 @@ local highlights = {
   DapStoppedLine = {
     bg = "#2e2a2d"
   },
-  DashboardCenter = {
-    fg = "#bb9af7"
-  },
   DashboardDesc = {
     fg = "#7dcfff"
+  },
+  DashboardFiles = {
+    fg = "#7aa2f7"
   },
   DashboardFooter = {
     fg = "#2ac3de"
@@ -677,8 +677,26 @@ local highlights = {
   DashboardKey = {
     fg = "#ff9e64"
   },
+  DashboardMruIcon = {
+    fg = "#9d7cd8"
+  },
+  DashboardMruTitle = {
+    fg = "#7dcfff"
+  },
+  DashboardProjectIcon = {
+    fg = "#e0af68"
+  },
+  DashboardProjectTitle = {
+    fg = "#7dcfff"
+  },
+  DashboardProjectTitleIcon = {
+    fg = "#ff9e64"
+  },
   DashboardShortCut = {
     fg = "#7dcfff"
+  },
+  DashboardShortCutIcon = {
+    fg = "#bb9af7"
   },
   Debug = {
     fg = "#ff9e64"
