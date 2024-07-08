@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.4.0](https://github.com/folke/tokyonight.nvim/compare/v4.3.1...v4.4.0) (2024-07-08)
+
+
+### Features
+
+* **dashboard:** add dashboard hyper theme ([#585](https://github.com/folke/tokyonight.nvim/issues/585)) ([4ef411d](https://github.com/folke/tokyonight.nvim/commit/4ef411d791969dbeb290c790cd4da6c21acfaa89))
+* **fish:** add `fish_color_option` ([#586](https://github.com/folke/tokyonight.nvim/issues/586)) ([a03f84e](https://github.com/folke/tokyonight.nvim/commit/a03f84ece2608fcebb18575b7de19f46c82c0bcd))
+* **zellij:** make top and bottom bars transparent ([#587](https://github.com/folke/tokyonight.nvim/issues/587)) ([ca9f7b8](https://github.com/folke/tokyonight.nvim/commit/ca9f7b82a73cd5ab44f662add0cadae2ec55b345))
+
 ## [4.3.1](https://github.com/folke/tokyonight.nvim/compare/v4.3.0...v4.3.1) (2024-07-06)
 
 
