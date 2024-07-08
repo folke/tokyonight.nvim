@@ -32,6 +32,7 @@ function M.generate(colors)
     set -g fish_color_quote $yellow
     set -g fish_color_redirection $foreground
     set -g fish_color_end $orange
+    set -g fish_color_option $orange
     set -g fish_color_error $red
     set -g fish_color_param $purple
     set -g fish_color_comment $comment
