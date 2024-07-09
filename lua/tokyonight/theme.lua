@@ -23,9 +23,7 @@ function M.setup(opts)
   end
 
   if opts.terminal_colors then
-    vim.schedule(function()
-      M.terminal(colors)
-    end)
+    M.terminal(colors)
   end
 
   return colors, groups, opts
