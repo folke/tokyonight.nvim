@@ -22,7 +22,7 @@ function M.generate(colors)
     fish_color_quote ${yellow}
     fish_color_redirection ${fg}
     fish_color_end ${orange}
-    fish_color_option ${orange}
+    fish_color_option ${magenta}
     fish_color_error ${red}
     fish_color_param ${purple}
     fish_color_comment ${comment}

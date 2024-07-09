@@ -7,7 +7,7 @@
     fish_color_quote ffc777
     fish_color_redirection c8d3f5
     fish_color_end ff966c
-    fish_color_option ff966c
+    fish_color_option c099ff
     fish_color_error ff757f
     fish_color_param fca7ea
     fish_color_comment 636da6
