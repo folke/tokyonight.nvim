@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.5.0](https://github.com/folke/tokyonight.nvim/compare/v4.4.0...v4.5.0) (2024-07-13)
+
+
+### Features
+
+* helpExample (checkhealth) ([7f41b0e](https://github.com/folke/tokyonight.nvim/commit/7f41b0e085e2f080d3074ac63956761349bde137))
+
+
+### Bug Fixes
+
+* **fish:** use magenta for option color ([78cc1ae](https://github.com/folke/tokyonight.nvim/commit/78cc1ae48a26990dd028f4098892a5d6c041e194))
+* **nvim-tree:** corrected plugin name. Fixes [#593](https://github.com/folke/tokyonight.nvim/issues/593) ([66a272b](https://github.com/folke/tokyonight.nvim/commit/66a272ba6cf93bf303c4b7a91b100ca0dd3ec7bd))
+* **theme:** apply terminal colors right away. Fixes [#591](https://github.com/folke/tokyonight.nvim/issues/591) ([70c6334](https://github.com/folke/tokyonight.nvim/commit/70c6334812654bf36d107f69a9b46d4c1dff08c2))
+* **treesitter:** make jsx tags the same as tsx. Closes [#597](https://github.com/folke/tokyonight.nvim/issues/597) ([468866d](https://github.com/folke/tokyonight.nvim/commit/468866de6db4f5a4e758b1445785d4c99d6230bc))
+
 ## [4.4.0](https://github.com/folke/tokyonight.nvim/compare/v4.3.1...v4.4.0) (2024-07-08)
 
 
