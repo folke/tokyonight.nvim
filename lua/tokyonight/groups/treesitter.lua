@@ -87,6 +87,7 @@ function M.get(c, opts)
     ["@tag.delimiter"]              = "Delimiter",
     ["@tag.delimiter.tsx"]          = { fg = Util.blend_bg(c.blue, 0.7) },
     ["@tag.tsx"]                    = { fg = c.red },
+    ["@tag.javascript"]             = { fg = c.red },
     ["@type"]                       = "Type",
     ["@type.builtin"]               = { fg = Util.blend_bg(c.blue1, 0.8) },
     ["@type.definition"]            = "Typedef",
