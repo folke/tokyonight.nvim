@@ -2075,11 +2075,11 @@ local highlights = {
   WhichKeyDesc = {
     fg = "#c099ff"
   },
-  WhichKeyFloat = {
-    bg = "#1e2030"
-  },
   WhichKeyGroup = {
     fg = "#82aaff"
+  },
+  WhichKeyNormal = {
+    bg = "#1e2030"
   },
   WhichKeySeparator = {
     fg = "#636da6"
