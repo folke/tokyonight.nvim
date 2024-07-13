@@ -2,14 +2,20 @@ local Util = require("tokyonight.util")
 
 local M = {}
 
+---@type table<string, Palette|fun(opts:tokyonight.Config):Palette>
+M.styles = setmetatable({}, {
+  __index = function(_, style)
+    return vim.deepcopy(Util.mod("tokyonight.colors." .. style))
+  end,
+})
+
 ---@param opts? tokyonight.Config
 function M.setup(opts)
   opts = require("tokyonight.config").extend(opts)
 
   Util.day_brightness = opts.day_brightness
 
-  ---@type Palette
-  local palette = vim.deepcopy(Util.mod("tokyonight.colors." .. opts.style))
+  local palette = M.styles[opts.style]
   if type(palette) == "function" then
     palette = palette(opts) --[[@as Palette]]
   end
