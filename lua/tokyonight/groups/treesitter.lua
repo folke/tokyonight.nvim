@@ -84,6 +84,7 @@ function M.get(c, opts)
     ["@string.regexp"]              = { fg = c.blue6 }, -- For regexes.
     ["@tag"]                        = "Label",
     ["@tag.attribute"]              = "@property",
+    ["@tag.builtin"]                = "Label", -- XML-style tag names (e.g. HTML5 tags)
     ["@tag.delimiter"]              = "Delimiter",
     ["@tag.delimiter.tsx"]          = { fg = Util.blend_bg(c.blue, 0.7) },
     ["@tag.tsx"]                    = { fg = c.red },
