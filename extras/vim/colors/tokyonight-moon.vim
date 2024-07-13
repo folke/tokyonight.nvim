@@ -240,6 +240,7 @@ hi healthError guibg=NONE guifg=#c53b53
 hi healthSuccess guibg=NONE guifg=#4fd6be
 hi healthWarning guibg=NONE guifg=#ffc777
 hi helpCommand guibg=#444a73 guifg=#82aaff
+hi helpExample guibg=NONE guifg=#636da6
 hi htmlH1 gui=bold guibg=NONE guifg=#c099ff
 hi htmlH2 gui=bold guibg=NONE guifg=#82aaff
 hi illuminatedCurWord guibg=#3b4261

@@ -285,6 +285,9 @@ local highlights = {
   ["@tag.delimiter.tsx"] = {
     fg = "#649be8"
   },
+  ["@tag.javascript"] = {
+    fg = "#f52a65"
+  },
   ["@tag.tsx"] = {
     fg = "#f52a65"
   },
@@ -2145,6 +2148,9 @@ local highlights = {
   helpCommand = {
     bg = "#a1a6c5",
     fg = "#2e7de9"
+  },
+  helpExample = {
+    fg = "#848cb5"
   },
   htmlH1 = {
     bold = true,
