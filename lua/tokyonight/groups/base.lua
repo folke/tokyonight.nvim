@@ -139,6 +139,7 @@ function M.get(c, opts)
     diffFile                    = { fg = c.blue },
     diffLine                    = { fg = c.comment },
     diffIndexLine               = { fg = c.magenta },
+    helpExample                 = { fg = c.comment },
   }
 end
 
