@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.6.0](https://github.com/folke/tokyonight.nvim/compare/v4.5.0...v4.6.0) (2024-07-15)
+
+
+### Features
+
+* allow adding custom palettes. Fixes [#595](https://github.com/folke/tokyonight.nvim/issues/595) ([fd2afb6](https://github.com/folke/tokyonight.nvim/commit/fd2afb632ec341ebadcca82326f74af5b2d0855b))
+
+
+### Bug Fixes
+
+* **which-key:** WhichKeyNormal ([b0a0512](https://github.com/folke/tokyonight.nvim/commit/b0a051251d2ff2ebe9dbacbe2c829106ebee68b3))
+
 ## [4.5.0](https://github.com/folke/tokyonight.nvim/compare/v4.4.0...v4.5.0) (2024-07-13)
 
 
