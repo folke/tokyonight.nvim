@@ -14,6 +14,7 @@ M.plugins = {
   ["flash.nvim"]                    = "flash",
   ["fzf-lua"]                       = "fzf",
   ["gitsigns.nvim"]                 = "gitsigns",
+  ["grug-far.nvim"]                 = "grug-far",
   ["headlines.nvim"]                = "headlines",
   ["hop.nvim"]                      = "hop",
   ["indent-blankline.nvim"]         = "indent-blankline",
