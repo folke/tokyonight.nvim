@@ -64,6 +64,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | [`gitgutter`](lua/tokyonight/groups/gitgutter.lua) |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | [`gitsigns`](lua/tokyonight/groups/gitsigns.lua) |
 | [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim) | [`glyph-palette`](lua/tokyonight/groups/glyph-palette.lua) |
+| [grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim) | [`grug-far`](lua/tokyonight/groups/grug-far.lua) |
 | [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim) | [`headlines`](lua/tokyonight/groups/headlines.lua) |
 | [hop.nvim](https://github.com/phaazon/hop.nvim) | [`hop`](lua/tokyonight/groups/hop.lua) |
 | [vim-illuminate](https://github.com/RRethy/vim-illuminate) | [`illuminate`](lua/tokyonight/groups/illuminate.lua) |
