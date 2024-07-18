@@ -213,6 +213,8 @@ Extras ~
 
   Vim                                 extras/vim
 
+  Vimium                              extras/vimium
+
   WezTerm                             extras/wezterm
 
   Windows Terminal                    extras/windows_terminal
