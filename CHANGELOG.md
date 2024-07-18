@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.7.0](https://github.com/folke/tokyonight.nvim/compare/v4.6.0...v4.7.0) (2024-07-18)
+
+
+### Features
+
+* added support for grug-far.nvim ([5e337dd](https://github.com/folke/tokyonight.nvim/commit/5e337ddb8f957953b6efb9a224fd74038bd2228c))
+* **extras:** add process-compose extra ([#606](https://github.com/folke/tokyonight.nvim/issues/606)) ([0804670](https://github.com/folke/tokyonight.nvim/commit/08046705ba488f903e7ef3e823ccacc5775e1483))
+* **extras:** add Vimium theme ([#607](https://github.com/folke/tokyonight.nvim/issues/607)) ([2603e00](https://github.com/folke/tokyonight.nvim/commit/2603e006ebdc4df5dc80f38d45fcb01fd4af06fe))
+
 ## [4.6.0](https://github.com/folke/tokyonight.nvim/compare/v4.5.0...v4.6.0) (2024-07-15)
 
 
