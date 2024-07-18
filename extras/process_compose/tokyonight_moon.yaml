@@ -1,0 +1,36 @@
+style:
+  name: tokyonight_moon
+  body:
+    fgColor: '#c8d3f5'
+    bgColor: '#1e2030'
+    secondaryTextColor: '#828bb8'
+    tertiaryTextColor: '${fg_visual}'
+    borderColor: '#3b4261'
+  stat_table:
+    keyFgColor: '#ffc777'
+    valueFgColor: '#c8d3f5'
+    logoColor: '#ffc777'
+  proc_table:
+    fgColor: '#82aaff'
+    fgWarning: '#ffc777'
+    fgPending: '#545c7e'
+    fgCompleted: '#c3e88d'
+    fgError: '#c53b53'
+    headerFgColor: '#c8d3f5'
+  help:
+    fgColor: '#65bcff'
+    keyColor: '#c8d3f5'
+    hlColor: '#c3e88d'
+    categoryFgColor: '#89ddff'
+  dialog:
+    fgColor: '#65bcff'
+    bgColor: '#1b1d2b'
+    contrastBgColor: '#222436'
+    attentionBgColor: '#c53b53'
+    buttonFgColor: '#1b1d2b'
+    buttonBgColor: '#2f334d'
+    buttonFocusFgColor: '#1b1d2b'
+    buttonFocusBgColor: '#82aaff'
+    labelFgColor: '#ffc777'
+    fieldFgColor: '#1b1d2b'
+    fieldBgColor: '#394b70'

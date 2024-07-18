@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*           For Neovim           Last change: 2024 July 15
+*tokyonight.nvim.txt*           For Neovim           Last change: 2024 July 18
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -65,6 +65,8 @@ Supported Plugins ~
   gitsigns.nvim                       gitsigns
 
   glyph-palette.vim                   glyph-palette
+
+  grug-far.nvim                       grug-far
 
   headlines.nvim                      headlines
 
@@ -194,6 +196,8 @@ Extras ~
   Lua Table for testing               extras/lua
 
   Prism                               extras/prism
+
+  process-compose                     extras/process_compose
 
   Slack                               extras/slack
 

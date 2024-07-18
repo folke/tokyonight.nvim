@@ -1,0 +1,36 @@
+style:
+  name: tokyonight_storm
+  body:
+    fgColor: '#c0caf5'
+    bgColor: '#1f2335'
+    secondaryTextColor: '#a9b1d6'
+    tertiaryTextColor: '${fg_visual}'
+    borderColor: '#3b4261'
+  stat_table:
+    keyFgColor: '#e0af68'
+    valueFgColor: '#c0caf5'
+    logoColor: '#e0af68'
+  proc_table:
+    fgColor: '#7aa2f7'
+    fgWarning: '#e0af68'
+    fgPending: '#545c7e'
+    fgCompleted: '#9ece6a'
+    fgError: '#db4b4b'
+    headerFgColor: '#c0caf5'
+  help:
+    fgColor: '#2ac3de'
+    keyColor: '#c0caf5'
+    hlColor: '#9ece6a'
+    categoryFgColor: '#89ddff'
+  dialog:
+    fgColor: '#2ac3de'
+    bgColor: '#1d202f'
+    contrastBgColor: '#24283b'
+    attentionBgColor: '#db4b4b'
+    buttonFgColor: '#1d202f'
+    buttonBgColor: '#292e42'
+    buttonFocusFgColor: '#1d202f'
+    buttonFocusBgColor: '#7aa2f7'
+    labelFgColor: '#e0af68'
+    fieldFgColor: '#1d202f'
+    fieldBgColor: '#394b70'

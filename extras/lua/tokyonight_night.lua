@@ -898,6 +898,31 @@ local highlights = {
   GlyphPalette9 = {
     fg = "#f7768e"
   },
+  GrugFarHelpHeader = {
+    fg = "#565f89"
+  },
+  GrugFarHelpHeaderKey = {
+    fg = "#7dcfff"
+  },
+  GrugFarInputLabel = {
+    fg = "#2ac3de"
+  },
+  GrugFarInputPlaceholder = {
+    fg = "#545c7e"
+  },
+  GrugFarResultsChangeIndicator = {
+    fg = "#6183bb"
+  },
+  GrugFarResultsHeader = {
+    fg = "#ff9e64"
+  },
+  GrugFarResultsMatch = {
+    bg = "#f7768e",
+    fg = "#15161e"
+  },
+  GrugFarResultsStats = {
+    fg = "#7aa2f7"
+  },
   Headline = "Headline1",
   Headline1 = {
     bg = "#1f2230"
