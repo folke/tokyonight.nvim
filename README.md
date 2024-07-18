@@ -139,6 +139,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](extras/lazygit) |
 | [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
 | [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
+| [process-compose](https://f1bonacc1.github.io/process-compose/) | [extras/process_compose](extras/process_compose) |
 | [Slack](https://slack.com) | [extras/slack](extras/slack) |
 | [Spotify Player](https://github.com/aome510/spotify-player) | [extras/spotify_player](extras/spotify_player) |
 | [Sublime Text](https://www.sublimetext.com/docs/themes) | [extras/sublime](extras/sublime) |

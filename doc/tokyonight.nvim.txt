@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*           For Neovim           Last change: 2024 July 17
+*tokyonight.nvim.txt*           For Neovim           Last change: 2024 July 18
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -196,6 +196,8 @@ Extras ~
   Lua Table for testing               extras/lua
 
   Prism                               extras/prism
+
+  process-compose                     extras/process_compose
 
   Slack                               extras/slack
 
