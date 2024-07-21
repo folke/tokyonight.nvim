@@ -13,6 +13,7 @@ M.extras = {
   fish             = { ext = "fish", url = "https://fishshell.com/docs/current/index.html", label = "Fish" },
   fish_themes      = { ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting", label = "Fish Themes" },
   foot             = { ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot" },
+  fuzzel           = { ext = "ini", url = "https://codeberg.org/dnkl/fuzzel", label = "Fuzzel" },
   fzf              = { ext = "sh", url = "https://github.com/junegunn/fzf", label = "Fzf" },
   gitui            = { ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI" },
   gnome_terminal   = { ext = "dconf", url = "https://gitlab.gnome.org/GNOME/gnome-terminal", label = "GNOME Terminal" },
