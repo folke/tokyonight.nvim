@@ -130,6 +130,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Fish](https://fishshell.com/docs/current/index.html) | [extras/fish](extras/fish) |
 | [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) | [extras/fish_themes](extras/fish_themes) |
 | [Foot](https://codeberg.org/dnkl/foot) | [extras/foot](extras/foot) |
+| [Fuzzel](https://codeberg.org/dnkl/fuzzel) | [extras/fuzzel](extras/fuzzel) |
 | [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](extras/fzf) |
 | [GitUI](https://github.com/extrawurst/gitui) | [extras/gitui](extras/gitui) |
 | [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal) | [extras/gnome_terminal](extras/gnome_terminal) |
