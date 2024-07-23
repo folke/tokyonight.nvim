@@ -916,6 +916,12 @@ local highlights = {
   GrugFarResultsHeader = {
     fg = "#ff966c"
   },
+  GrugFarResultsLineColumn = {
+    fg = "#545c7e"
+  },
+  GrugFarResultsLineNo = {
+    fg = "#545c7e"
+  },
   GrugFarResultsMatch = {
     bg = "#ff757f",
     fg = "#1b1d2b"
@@ -1855,6 +1861,63 @@ local highlights = {
   },
   ReferencesIcon = {
     fg = "#82aaff"
+  },
+  RenderMarkdownBullet = {
+    fg = "#ff966c"
+  },
+  RenderMarkdownCode = {
+    bg = "#1e2030"
+  },
+  RenderMarkdownDash = {
+    fg = "#ff966c"
+  },
+  RenderMarkdownH1Bg = {
+    bg = "#2c314a"
+  },
+  RenderMarkdownH1Fg = {
+    bold = true,
+    fg = "#82aaff"
+  },
+  RenderMarkdownH2Bg = {
+    bg = "#38343d"
+  },
+  RenderMarkdownH2Fg = {
+    bold = true,
+    fg = "#ffc777"
+  },
+  RenderMarkdownH3Bg = {
+    bg = "#32383f"
+  },
+  RenderMarkdownH3Fg = {
+    bold = true,
+    fg = "#c3e88d"
+  },
+  RenderMarkdownH4Bg = {
+    bg = "#273644"
+  },
+  RenderMarkdownH4Fg = {
+    bold = true,
+    fg = "#4fd6be"
+  },
+  RenderMarkdownH5Bg = {
+    bg = "#32304a"
+  },
+  RenderMarkdownH5Fg = {
+    bold = true,
+    fg = "#c099ff"
+  },
+  RenderMarkdownH6Bg = {
+    bg = "#383148"
+  },
+  RenderMarkdownH6Fg = {
+    bold = true,
+    fg = "#fca7ea"
+  },
+  RenderMarkdownTableHead = {
+    fg = "#ff757f"
+  },
+  RenderMarkdownTableRow = {
+    fg = "#ff966c"
   },
   ScrollbarError = {
     bg = "NONE",
