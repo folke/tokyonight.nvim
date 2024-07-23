@@ -84,7 +84,7 @@ Supported Plugins ~
 
   lspsaga.nvim                        lspsaga
 
-  markview.nvim                       markdown
+  markdown.nvim                       markdown
 
   mini.animate                        mini_animate
 
