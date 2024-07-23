@@ -1868,6 +1868,7 @@ local highlights = {
   RenderMarkdownCode = {
     bg = "#16161e"
   },
+  RenderMarkdownCodeInline = "@markup.raw.markdown_inline",
   RenderMarkdownDash = {
     fg = "#ff9e64"
   },
