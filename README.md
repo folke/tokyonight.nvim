@@ -73,6 +73,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | [`lazy`](lua/tokyonight/groups/lazy.lua) |
 | [leap.nvim](https://github.com/ggandor/leap.nvim) | [`leap`](lua/tokyonight/groups/leap.lua) |
 | [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim) | [`lspsaga`](lua/tokyonight/groups/lspsaga.lua) |
+| [markview.nvim](https://github.com/OXY2DEV/markview.nvim) | [`markdown`](lua/tokyonight/groups/markdown.lua) |
 | [mini.animate](https://github.com/echasnovski/mini.animate) | [`mini_animate`](lua/tokyonight/groups/mini_animate.lua) |
 | [mini.clue](https://github.com/echasnovski/mini.clue) | [`mini_clue`](lua/tokyonight/groups/mini_clue.lua) |
 | [mini.completion](https://github.com/echasnovski/mini.completion) | [`mini_completion`](lua/tokyonight/groups/mini_completion.lua) |
