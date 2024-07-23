@@ -12,6 +12,8 @@ function M.get(c, opts)
     GrugFarInputPlaceholder       = { fg = c.dark3 },
     GrugFarResultsChangeIndicator = { fg = c.git.change },
     GrugFarResultsHeader          = { fg = c.orange },
+    GrugFarResultsLineColumn      = { fg = c.dark3 },
+    GrugFarResultsLineNo          = { fg = c.dark3 },
     GrugFarResultsMatch           = { fg = c.black, bg = c.red },
     GrugFarResultsStats           = { fg = c.blue },
   }
