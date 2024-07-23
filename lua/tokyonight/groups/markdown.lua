@@ -2,7 +2,7 @@ local Util = require("tokyonight.util")
 
 local M = {}
 
-M.url = "https://github.com/OXY2DEV/markview.nvim"
+M.url = "https://github.com/MeanderingProgrammer/markdown.nvim"
 
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
