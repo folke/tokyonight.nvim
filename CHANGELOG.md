@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.8.0](https://github.com/folke/tokyonight.nvim/compare/v4.7.0...v4.8.0) (2024-07-23)
+
+
+### Features
+
+* added support for markdown.nvim ([71429c9](https://github.com/folke/tokyonight.nvim/commit/71429c97b7aeafecf333fa825a85eadb21426146))
+* **extras:** add fuzzel theme ([#611](https://github.com/folke/tokyonight.nvim/issues/611)) ([7cd2a7e](https://github.com/folke/tokyonight.nvim/commit/7cd2a7e690515f695c396c4c765270259ef7b1f4))
+* grug-far ([8fb4f4d](https://github.com/folke/tokyonight.nvim/commit/8fb4f4d8c3f0b5a0c6e0d5bd192e6747b880abaa))
+* inline code style for markdown.nvim ([65017b9](https://github.com/folke/tokyonight.nvim/commit/65017b9929491e908a589d63910f2569528855dd))
+
+
+### Bug Fixes
+
+* **markdown.nvim:** link ([420cb9b](https://github.com/folke/tokyonight.nvim/commit/420cb9b777d319adf132ffe505414a0b38b432ff))
+
 ## [4.7.0](https://github.com/folke/tokyonight.nvim/compare/v4.6.0...v4.7.0) (2024-07-18)
 
 
