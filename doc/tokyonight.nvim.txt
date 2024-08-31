@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*           For Neovim           Last change: 2024 July 24
+*tokyonight.nvim.txt*          For Neovim          Last change: 2024 August 31
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -84,8 +84,6 @@ Supported Plugins ~
 
   lspsaga.nvim                        lspsaga
 
-  markdown.nvim                       markdown
-
   mini.animate                        mini_animate
 
   mini.clue                           mini_clue
@@ -145,6 +143,8 @@ Supported Plugins ~
   octo.nvim                           octo
 
   rainbow-delimiters.nvim             rainbow
+
+  render-markdown.nvim                render-markdown
 
   nvim-scrollbar                      scrollbar
 
