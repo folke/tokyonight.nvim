@@ -1403,7 +1403,7 @@ local highlights = {
     fg = "#ffc777"
   },
   MiniTablineTabpagesection = {
-    bg = "#1e2030",
+    bg = "#3b4261",
     fg = "NONE"
   },
   MiniTablineVisible = {
