@@ -27,13 +27,13 @@ function M.get(c, opts)
     WinSeparator                = { fg = c.border, bold = true }, -- the column separating vertically split windows
     Folded                      = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn                  = { fg = c.comment }, -- 'foldcolumn'
+    CursorLineFold              = { fg = c.orange, bold = true }, -- Like FoldColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
     SignColumn                  = { fg = c.fg_gutter }, -- column where |signs| are displayed
+    CursorLineSign              = { fg = c.orange, bold = true }, -- Like SignColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
     SignColumnSB                = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr                      = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr                = { fg = c.orange, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    CursorLineFold              = "CursorLineNr", -- Like FoldColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
-    CursorLineSign              = "CursorLineNr", -- Like SignColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
     LineNrAbove                 = { fg = c.fg_gutter },
     LineNrBelow                 = { fg = c.fg_gutter },
     MatchParen                  = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
