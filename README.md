@@ -395,16 +395,16 @@ require("tokyonight").setup({
 require("tokyonight").setup({
   on_highlights = function(hl, c)
     hl.FzfLuaBorder = {
-      bg = c.bg,
-      fg = c.bg,
+      bg = c.bg_float,
+      fg = c.bg_float,
     }
     hl.FzfLuaFzfBorder = {
-      bg = c.bg,
+      bg = c.bg_float,
       fg = c.border_highlight,
     }
     hl.FzfLuaFzfGutter = {
-      bg = c.bg,
-      fg = c.bg,
+      bg = c.bg_float,
+      fg = c.bg_float,
     }
   end,
 })
