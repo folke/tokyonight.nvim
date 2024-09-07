@@ -26,8 +26,10 @@ function M.get(c, opts)
     VertSplit                   = { fg = c.border }, -- the column separating vertically split windows
     WinSeparator                = { fg = c.border, bold = true }, -- the column separating vertically split windows
     Folded                      = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
-    FoldColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.comment }, -- 'foldcolumn'
-    SignColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
+    FoldColumn                  = { fg = c.comment }, -- 'foldcolumn'
+    CursorLineFold              = "CursorLineNr", -- Like FoldColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
+    SignColumn                  = { fg = c.fg_gutter }, -- column where |signs| are displayed
+    CursorLineSign              = "CursorLineNr", -- Like SignColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
     SignColumnSB                = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr                      = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
