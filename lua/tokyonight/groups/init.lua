@@ -137,7 +137,7 @@ function M.setup(colors, opts)
     colors = colors,
     plugins = names,
     version = Config.version,
-    opts = { styles = opts.styles, dim_inactive = opts.dim_inactive },
+    opts = { transparent = opts.transparent, styles = opts.styles, dim_inactive = opts.dim_inactive },
   }
 
   local ret = cache and vim.deep_equal(inputs, cache.inputs) and cache.groups

@@ -610,6 +610,10 @@ local highlights = {
   CmpItemKindSnippet = "LspKindSnippet",
   CmpItemKindString = "LspKindString",
   CmpItemKindStruct = "LspKindStruct",
+  CmpItemKindSupermaven = {
+    bg = "NONE",
+    fg = "#4fd6be"
+  },
   CmpItemKindTabNine = {
     bg = "NONE",
     fg = "#4fd6be"
