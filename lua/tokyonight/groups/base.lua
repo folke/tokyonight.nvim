@@ -24,7 +24,7 @@ function M.get(c, opts)
     EndOfBuffer                 = { fg = c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg                    = { fg = c.error }, -- error messages on the command line
     VertSplit                   = { fg = c.border }, -- the column separating vertically split windows
-    WinSeparator                = { fg = c.border, bold = true }, -- the column separating vertically split windows
+    WinSeparator                = { fg = opts.dim_inactive and c.fg_gutter or c.border, bg = opts.dim_inactive and c.bg_dark or c.none, bold = true }, -- the column separating vertically split windows
     Folded                      = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn                  = { fg = c.comment }, -- 'foldcolumn'
     CursorLineFold              = { fg = c.orange, bold = true }, -- Like FoldColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
