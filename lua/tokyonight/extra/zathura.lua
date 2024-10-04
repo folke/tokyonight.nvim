@@ -52,8 +52,8 @@ set render-loading-bg "#${fg}"
 # Recolor mode settings
 # <C-r> to switch modes
 #
-set recolor-lightcolor "${bg}"
-set recolor-darkcolor "${fg}"
+set recolor-lightcolor "#${bg}"
+set recolor-darkcolor "#${fg}"
 ]], -- TODO: Trim the first character from the color strings,
     -- and then convert hex codes to decimal.
     -- rgba uses an entirely different format that uses decimal instead of hex.
