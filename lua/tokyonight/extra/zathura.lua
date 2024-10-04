@@ -4,6 +4,14 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
+  local zathuraColors = {}
+  -- Borrow code from fish template
+  for k, v in pairs(colors) do
+    if type(v) == "string" then
+      zathuraColors[k] = v:gsub("^#", "")
+    end
+  end
+
   local zathura = util.template(
     [[
 # Tokyonight color theme for Zathura
@@ -48,7 +56,7 @@ set recolor-darkcolor "${fg}"
     -- and then convert hex codes to decimal.
     -- rgba uses an entirely different format that uses decimal instead of hex.
     -- This is probably going to be harder than I thought...
-    colors
+    zathuraColors
   )
   return zathura
 end
