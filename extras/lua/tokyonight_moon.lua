@@ -1820,6 +1820,14 @@ local highlights = {
     bg = "#1e2030",
     fg = "#c8d3f5"
   },
+  PmenuMatch = {
+    bg = "#1e2030",
+    fg = "#65bcff"
+  },
+  PmenuMatchSel = {
+    bg = "#363c58",
+    fg = "#65bcff"
+  },
   PmenuSbar = {
     bg = "#27293a"
   },
