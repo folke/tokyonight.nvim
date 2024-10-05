@@ -2,10 +2,10 @@ local util = require("tokyonight.util")
 
 local M = {}
 
---- @param colors ColorScheme
-function M.generate(colors)
+--- @param pColors ColorScheme
+function M.generate(pColors)
   local zathuraColors = {}
-  for k, v in pairs(colors) do
+  for k, v in pairs(pColors) do
     if k == "yellow" or k == "green" then
       zathuraColors[k .. "DecimalR"] = tonumber(v:sub(2, 3), 16)
       zathuraColors[k .. "DecimalG"] = tonumber(v:sub(4, 5), 16)
