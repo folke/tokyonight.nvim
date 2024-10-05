@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.9.0](https://github.com/folke/tokyonight.nvim/compare/v4.8.0...v4.9.0) (2024-10-04)
+
+
+### Features
+
+* **supermaven:** add support for supermaven-nvim ([#633](https://github.com/folke/tokyonight.nvim/issues/633)) ([9699675](https://github.com/folke/tokyonight.nvim/commit/9699675f988ad5a2df21b7875362af6d15d0f53c))
+
+
+### Bug Fixes
+
+* **groups:** changing the transparent option now correctly invalidates the cache ([#632](https://github.com/folke/tokyonight.nvim/issues/632)) ([f31be07](https://github.com/folke/tokyonight.nvim/commit/f31be0765a8df4ed400394436064c55f73dde8ac))
+* **mini_tabline:** make MiniTablineTabpagesection more visible ([#621](https://github.com/folke/tokyonight.nvim/issues/621)) ([b329f4f](https://github.com/folke/tokyonight.nvim/commit/b329f4f4c656c781d85e961c57c951cec179e2c9))
+* **terminal:** assign magenta to correct terminal color ([#640](https://github.com/folke/tokyonight.nvim/issues/640)) ([cc0e0e2](https://github.com/folke/tokyonight.nvim/commit/cc0e0e28a491074c6e70b837c745f002299c58ec))
+* **tmux:** use 24h format ([#624](https://github.com/folke/tokyonight.nvim/issues/624)) ([65837cc](https://github.com/folke/tokyonight.nvim/commit/65837ccb61ed0f05de0417d50d27ec01a2aef2fd))
+* **zathura:** highlight transparency ([#638](https://github.com/folke/tokyonight.nvim/issues/638)) ([b6d01e7](https://github.com/folke/tokyonight.nvim/commit/b6d01e7bf413d1656c114245bd1cd76b44e1b07d))
+
 ## [4.8.0](https://github.com/folke/tokyonight.nvim/compare/v4.7.0...v4.8.0) (2024-07-23)
 
 
