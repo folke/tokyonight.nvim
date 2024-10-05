@@ -53,10 +53,7 @@ set render-loading-bg "${fg}"
 #
 set recolor-lightcolor "${bg}"
 set recolor-darkcolor "${fg}"
-]], -- TODO: Trim the first character from the color strings,
-    -- and then convert hex codes to decimal.
-    -- rgba uses an entirely different format that uses decimal instead of hex.
-    -- This is probably going to be harder than I thought...
+]],
     zathuraColors
   )
   return zathura
