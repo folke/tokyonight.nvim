@@ -6,7 +6,7 @@ local M = {}
 function M.generate(colors)
   local zathuraColors = {}
   for k, v in pairs(colors) do
-    if k == ("yellow" or "green") then
+    if k == "yellow" or k == "green" then
       zathuraColors[k .. "DecimalR"] = tostring(tonumber(string.sub(v, 2, 3), 16))
       zathuraColors[k .. "DecimalG"] = tostring(tonumber(string.sub(v, 4, 5), 16))
       zathuraColors[k .. "DecimalB"] = tostring(tonumber(string.sub(v, 5, 7), 16))
