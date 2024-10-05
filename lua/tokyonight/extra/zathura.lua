@@ -11,6 +11,7 @@ function M.generate(colors)
       zathuraColors[k .. "DecimalG"] = tostring(tonumber(string.sub(v, 4, 5), 16))
       zathuraColors[k .. "DecimalB"] = tostring(tonumber(string.sub(v, 5, 7), 16))
     end
+    zathuraColors[k] = v
   end
   local zathura = util.template(
     [[
