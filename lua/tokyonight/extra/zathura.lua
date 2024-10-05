@@ -7,9 +7,9 @@ function M.generate(colors)
   local zathuraColors = {}
   for k, v in pairs(colors) do
     if k == "yellow" or k == "green" then
-      zathuraColors[k .. "DecimalR"] = tostring(tonumber(v:sub(2, 3), 16))
-      zathuraColors[k .. "DecimalG"] = tostring(tonumber(v:sub(4, 5), 16))
-      zathuraColors[k .. "DecimalB"] = tostring(tonumber(v:sub(6, 7), 16))
+      zathuraColors[k .. "DecimalR"] = tonumber(v:sub(2, 3), 16)
+      zathuraColors[k .. "DecimalG"] = tonumber(v:sub(4, 5), 16)
+      zathuraColors[k .. "DecimalB"] = tonumber(v:sub(6, 7), 16)
     end
     zathuraColors[k] = v
   end
