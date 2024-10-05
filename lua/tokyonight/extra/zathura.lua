@@ -4,6 +4,14 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
+  local zathuraColors = {}
+  for k, v in pairs(colors) do
+    if k == ("yellow" or "green") then
+      zathuraColors[k .. "DecimalR"] = tostring(tonumber(string.sub(v, 2, 3), 16))
+      zathuraColors[k .. "DecimalG"] = tostring(tonumber(string.sub(v, 4, 5), 16))
+      zathuraColors[k .. "DecimalB"] = tostring(tonumber(string.sub(v, 5, 7), 16))
+    end
+  end
   local zathura = util.template(
     [[
 # Tokyonight color theme for Zathura
@@ -31,8 +39,8 @@ set inputbar-bg "${bg}"
 set inputbar-fg "${fg}"
 set statusbar-bg "${bg}"
 set statusbar-fg "${fg}"
-set highlight-color "rgba(${yellow}, 0.5)"
-set highlight-active-color "rgba(${green}, 0.5)"
+set highlight-color "rgba(${yellowDecimalR}, ${yellowDecimalG}, ${yellowDecimalB}, 0.5)"
+set highlight-active-color "rgba(${greenDecimalR}, ${greenDecimalG}, ${greenDecimalB}, 0.5)"
 set default-bg "${bg}"
 set default-fg "${fg}"
 set render-loading true
@@ -48,7 +56,7 @@ set recolor-darkcolor "${fg}"
     -- and then convert hex codes to decimal.
     -- rgba uses an entirely different format that uses decimal instead of hex.
     -- This is probably going to be harder than I thought...
-    colors
+    zathuraColors
   )
   return zathura
 end
