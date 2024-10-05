@@ -5,17 +5,17 @@ local M = {}
 --- @param pColors ColorScheme
 function M.generate(pColors)
   local zathuraColors = {}
-  for k, v in pairs(pColors) do
-    if k == "yellow" or k == "green" then
+  for pColorsK, pColorsV in pairs(pColors) do
+    if pColorsK == "yellow" or pColorsK == "green" then
       local colorNames = { "R", "G", "B" }
       -- Start at 2 to skip #
       local hexIndex = 2
       for i = 1, #colorNames do
-        zathuraColors[k .. "Decimal" .. colorNames[i]] = tonumber(v:sub(hexIndex, hexIndex + 1), 16)
+        zathuraColors[pColorsK .. "Decimal" .. colorNames[i]] = tonumber(pColorsV:sub(hexIndex, hexIndex + 1), 16)
         hexIndex = hexIndex + 1
       end
     end
-    zathuraColors[k] = v
+    zathuraColors[pColorsK] = pColorsV
   end
   local zathura = util.template(
     [[
