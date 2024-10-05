@@ -12,7 +12,7 @@ function M.generate(pColors)
       local hexIndex = 2
       for i = 1, #colorNames do
         zathuraColors[pColorsK .. "Decimal" .. colorNames[i]] = tonumber(pColorsV:sub(hexIndex, hexIndex + 1), 16)
-        hexIndex = hexIndex + 1
+        hexIndex = hexIndex + 2
       end
     end
     zathuraColors[pColorsK] = pColorsV
