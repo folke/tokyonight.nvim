@@ -6,7 +6,21 @@ local M = {}
 function M.generate(pColors)
   local zathuraColors = {}
   for pColorsK, pColorsV in pairs(pColors) do
-    if pColorsK == "yellow" or pColorsK == "green" then
+    -- Add any color names we need to convert from hex to decimal
+    local decimalColors = { "yellow", "green" }
+    -- Return true if a table contains a value
+    ---@param tab table Table to search in
+    ---@param val any Value to locate in table
+    -- NOTE: Should this be put in util.lua?
+    local function contains(tab, val)
+      for _, value in ipairs(tab) do
+        if value == val then
+          return true
+        end
+      end
+      return false
+    end
+    if contains(decimalColors, pColorsK) then
       local colorNames = { "R", "G", "B" }
       -- Start at 2 to skip #
       local hexIndex = 2
