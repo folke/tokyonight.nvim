@@ -9,8 +9,7 @@ function M.generate(colors)
     if k == "yellow" or k == "green" then
       zathuraColors[k .. "DecimalR"] = tostring(tonumber(string.sub(v, 2, 3), 16))
       zathuraColors[k .. "DecimalG"] = tostring(tonumber(string.sub(v, 4, 5), 16))
-      -- FIX: Blue decimal color does not output correctly
-      zathuraColors[k .. "DecimalB"] = tostring(tonumber(string.sub(v, 5, 7), 16))
+      zathuraColors[k .. "DecimalB"] = tostring(tonumber(string.sub(v, 6, 7), 16))
     end
     zathuraColors[k] = v
   end
