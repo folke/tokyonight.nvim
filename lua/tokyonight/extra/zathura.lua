@@ -24,11 +24,13 @@ function M.generate(pColors)
       local colorNames = { "R", "G", "B" }
       -- Start at 2 to skip #
       local hexIndex = 2
+      -- Inserts values into table in form of {color}Decimal{R,G,B}
       for i = 1, #colorNames do
         zathuraColors[pColorsK .. "Decimal" .. colorNames[i]] = tonumber(pColorsV:sub(hexIndex, hexIndex + 1), 16)
         hexIndex = hexIndex + 2
       end
     end
+    -- Add other colors into table normally
     zathuraColors[pColorsK] = pColorsV
   end
   local zathura = util.template(
