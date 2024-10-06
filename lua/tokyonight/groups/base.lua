@@ -48,7 +48,9 @@ function M.get(c, opts)
     FloatBorder                 = { fg = c.border_highlight, bg = c.bg_float },
     FloatTitle                  = { fg = c.border_highlight, bg = c.bg_float },
     Pmenu                       = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
+    PmenuMatch                  = { bg = c.bg_popup, fg = c.blue1 }, -- Popup menu: Matched text in normal item.
     PmenuSel                    = { bg = Util.blend_bg(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
+    PmenuMatchSel               = { bg = Util.blend_bg(c.fg_gutter, 0.8), fg = c.blue1 }, -- Popup menu: Matched text in selected item.
     PmenuSbar                   = { bg = Util.blend_fg(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
     PmenuThumb                  = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
     Question                    = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions

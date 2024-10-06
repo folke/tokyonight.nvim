@@ -178,6 +178,8 @@ hi NormalNC guibg=#1a1b26 guifg=#c0caf5
 hi NormalSB guibg=#16161e guifg=#a9b1d6
 hi Operator guibg=NONE guifg=#89ddff
 hi Pmenu guibg=#16161e guifg=#c0caf5
+hi PmenuMatch guibg=#16161e guifg=#2ac3de
+hi PmenuMatchSel guibg=#343a55 guifg=#2ac3de
 hi PmenuSbar guibg=#1f1f29
 hi PmenuSel guibg=#343a55
 hi PmenuThumb guibg=#3b4261
