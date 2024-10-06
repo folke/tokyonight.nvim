@@ -11,7 +11,6 @@ function M.generate(pColors)
     -- Return true if a table contains a value
     ---@param tab table Table to search in
     ---@param val any Value to locate in table
-    -- NOTE: Should this be put in util.lua?
     local function contains(tab, val)
       for _, value in ipairs(tab) do
         if value == val then
