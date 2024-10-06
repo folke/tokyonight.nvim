@@ -2,12 +2,12 @@ local util = require("tokyonight.util")
 
 local M = {}
 
---- @param pColors ColorScheme
-function M.generate(pColors)
+--- @param colors ColorScheme
+function M.generate(colors)
   local zathuraColors = {}
-  for pColorsK, pColorsV in pairs(pColors) do
+  for colorsK, colorsV in pairs(colors) do
     -- Add any color names we need to convert from hex to decimal
-    local decimalColors = { "yellow", "green" }
+    local convertColors = { "yellow", "green" }
     -- Return true if a table contains a value
     ---@param tab table Table to search in
     ---@param val any Value to locate in table
@@ -19,20 +19,20 @@ function M.generate(pColors)
       end
       return false
     end
-    if contains(decimalColors, pColorsK) then
+    if contains(convertColors, colorsK) then
       local colorNames = { "R", "G", "B" }
       -- Start at 2 to skip #
       local hexIndex = 2
       -- Inserts values into table in form of {color}Decimal{R,G,B}
       for i = 1, #colorNames do
-        local zColorsK = pColorsK .. "Decimal" .. colorNames[i]
-        local zColorsV = tonumber(pColorsV:sub(hexIndex, hexIndex + 1), 16)
-        zathuraColors[zColorsK] = zColorsV
+        local zathuraColorsK = colorsK .. "Decimal" .. colorNames[i]
+        local zathuraColorsV = tonumber(colorsV:sub(hexIndex, hexIndex + 1), 16)
+        zathuraColors[zathuraColorsK] = zathuraColorsV
         hexIndex = hexIndex + 2
       end
     end
     -- Add other colors into table normally
-    zathuraColors[pColorsK] = pColorsV
+    zathuraColors[colorsK] = colorsV
   end
   local zathura = util.template(
     [[
