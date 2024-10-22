@@ -2185,9 +2185,6 @@ local highlights = {
   WhichKeySeparator = {
     fg = "#636da6"
   },
-  WhichKeySeperator = {
-    fg = "#636da6"
-  },
   WhichKeyValue = {
     fg = "#737aa2"
   },
