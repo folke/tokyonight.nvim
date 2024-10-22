@@ -67,6 +67,27 @@ function M.setup(opts)
 
   colors.rainbow = { colors.blue, colors.yellow, colors.green, colors.teal, colors.magenta, colors.purple }
 
+  -- stylua: ignore
+  --- @class TerminalColors
+  colors.terminal = {
+    black          = colors.black,
+    black_bright   = colors.terminal_black,
+    red            = colors.red,
+    red_bright     = Util.brighten(colors.red),
+    green          = colors.green,
+    green_bright   = Util.brighten(colors.green),
+    yellow         = colors.yellow,
+    yellow_bright  = Util.brighten(colors.yellow),
+    blue           = colors.blue,
+    blue_bright    = Util.brighten(colors.blue),
+    magenta        = colors.magenta,
+    magenta_bright = Util.brighten(colors.magenta),
+    cyan           = colors.cyan,
+    cyan_bright    = Util.brighten(colors.cyan),
+    white          = colors.fg_dark,
+    white_bright   = colors.fg,
+  }
+
   opts.on_colors(colors)
 
   return colors, opts
