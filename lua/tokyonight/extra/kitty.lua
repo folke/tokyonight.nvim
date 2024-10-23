@@ -34,24 +34,24 @@ active_border_color ${blue}
 inactive_border_color ${bg_highlight}
 
 # normal
-color0 ${black}
-color1 ${red}
-color2 ${green}
-color3 ${yellow}
-color4 ${blue}
-color5 ${magenta}
-color6 ${cyan}
-color7 ${fg_dark}
+color0 ${terminal.black}
+color1 ${terminal.red}
+color2 ${terminal.green}
+color3 ${terminal.yellow}
+color4 ${terminal.blue}
+color5 ${terminal.magenta}
+color6 ${terminal.cyan}
+color7 ${terminal.white}
 
 # bright
-color8 ${terminal_black}
-color9 ${red}
-color10 ${green}
-color11 ${yellow}
-color12 ${blue}
-color13 ${magenta}
-color14 ${cyan}
-color15 ${fg}
+color8  ${terminal.black_bright}
+color9  ${terminal.red_bright}
+color10 ${terminal.green_bright}
+color11 ${terminal.yellow_bright}
+color12 ${terminal.blue_bright}
+color13 ${terminal.magenta_bright}
+color14 ${terminal.cyan_bright}
+color15 ${terminal.white_bright}
 
 # extended colors
 color16 ${orange}

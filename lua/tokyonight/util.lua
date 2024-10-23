@@ -70,6 +70,27 @@ function M.invert(color)
   return color
 end
 
+---@param color string  -- The hex color string to be adjusted
+---@param lightness_amount number? -- The amount to increase lightness by (optional, default: 0.1)
+---@param saturation_amount number? -- The amount to increase saturation by (optional, default: 0.15)
+function M.brighten(color, lightness_amount, saturation_amount)
+  lightness_amount = lightness_amount or 0.05
+  saturation_amount = saturation_amount or 0.2
+  local hsluv = require("tokyonight.hsluv")
+
+  -- Convert the hex color to HSLuv
+  local hsl = hsluv.hex_to_hsluv(color)
+
+  -- Increase lightness slightly
+  hsl[3] = math.min(hsl[3] + (lightness_amount * 100), 100)
+
+  -- Increase saturation a bit more to make the color more vivid
+  hsl[2] = math.min(hsl[2] + (saturation_amount * 100), 100)
+
+  -- Convert the HSLuv back to hex and return
+  return hsluv.hsluv_to_hex(hsl)
+end
+
 ---@param groups tokyonight.Highlights
 ---@return table<string, vim.api.keyset.highlight>
 function M.resolve(groups)

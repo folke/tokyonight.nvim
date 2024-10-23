@@ -32,31 +32,31 @@ end
 ---@param colors ColorScheme
 function M.terminal(colors)
   -- dark
-  vim.g.terminal_color_0 = colors.black
-  vim.g.terminal_color_8 = colors.terminal_black
+  vim.g.terminal_color_0 = colors.terminal.black
+  vim.g.terminal_color_8 = colors.terminal.black_bright
 
   -- light
-  vim.g.terminal_color_7 = colors.fg_dark
-  vim.g.terminal_color_15 = colors.fg
+  vim.g.terminal_color_7 = colors.terminal.white
+  vim.g.terminal_color_15 = colors.terminal.white_bright
 
   -- colors
-  vim.g.terminal_color_1 = colors.red
-  vim.g.terminal_color_9 = Util.blend_fg(colors.red, 0.5)
+  vim.g.terminal_color_1 = colors.terminal.red
+  vim.g.terminal_color_9 = colors.terminal.red_bright
 
-  vim.g.terminal_color_2 = colors.green
-  vim.g.terminal_color_10 = Util.blend_fg(colors.green, 0.5)
+  vim.g.terminal_color_2 = colors.terminal.green
+  vim.g.terminal_color_10 = colors.terminal.green_bright
 
-  vim.g.terminal_color_3 = colors.yellow
-  vim.g.terminal_color_11 = Util.blend_fg(colors.yellow, 0.5)
+  vim.g.terminal_color_3 = colors.terminal.yellow
+  vim.g.terminal_color_11 = colors.terminal.yellow_bright
 
-  vim.g.terminal_color_4 = colors.blue
-  vim.g.terminal_color_12 = Util.blend_fg(colors.blue, 0.5)
+  vim.g.terminal_color_4 = colors.terminal.blue
+  vim.g.terminal_color_12 = colors.terminal.blue_bright
 
-  vim.g.terminal_color_5 = colors.magenta
-  vim.g.terminal_color_13 = Util.blend_fg(colors.magenta, 0.5)
+  vim.g.terminal_color_5 = colors.terminal.magenta
+  vim.g.terminal_color_13 = colors.terminal.magenta_bright
 
-  vim.g.terminal_color_6 = colors.cyan
-  vim.g.terminal_color_14 = Util.blend_fg(colors.cyan, 0.5)
+  vim.g.terminal_color_6 = colors.terminal.cyan
+  vim.g.terminal_color_14 = colors.terminal.cyan_bright
 end
 
 return M
