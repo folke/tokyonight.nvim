@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*          For Neovim         Last change: 2024 October 04
+*tokyonight.nvim.txt*          For Neovim         Last change: 2024 October 23
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -185,6 +185,8 @@ Extras ~
 
   Fzf                                 extras/fzf
 
+  Ghostty                             extras/ghostty
+
   GitUI                               extras/gitui
 
   GNOME Terminal                      extras/gnome_terminal
@@ -210,6 +212,8 @@ Extras ~
   Sublime Text                        extras/sublime
 
   Terminator                          extras/terminator
+
+  Termux                              extras/termux
 
   Tilix                               extras/tilix
 
@@ -459,7 +463,7 @@ To have undercurls show up and in color, add the following to your Tmux
     # Undercurl
     set -g default-terminal "${TERM}"
     set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
-    set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+    set -as terminal-overrides ',*:Setulc=\E[58::2::::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 <
 
 

@@ -15,6 +15,7 @@ M.extras = {
   foot             = { ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot" },
   fuzzel           = { ext = "ini", url = "https://codeberg.org/dnkl/fuzzel", label = "Fuzzel" },
   fzf              = { ext = "sh", url = "https://github.com/junegunn/fzf", label = "Fzf" },
+  ghostty          = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
   gitui            = { ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI" },
   gnome_terminal   = { ext = "dconf", url = "https://gitlab.gnome.org/GNOME/gnome-terminal", label = "GNOME Terminal" },
   helix            = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
@@ -28,6 +29,7 @@ M.extras = {
   sublime          = { ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text" },
   spotify_player   = { ext = "toml", url = "https://github.com/aome510/spotify-player", label = "Spotify Player" },
   terminator       = { ext = "conf", url = "https://gnome-terminator.readthedocs.io/en/latest/config.html", label = "Terminator" },
+  termux           = { ext = "properties", url = "https://termux.dev/", label = "Termux" },
   tilix            = { ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix" },
   tmux             = { ext = "tmux", url = "https://github.com/tmux/tmux/wiki", label = "Tmux" },
   wezterm          = { ext = "toml", url = "https://wezfurlong.org/wezterm/config/files.html", label = "WezTerm" },
@@ -70,6 +72,7 @@ function M.setup()
         .. style
         .. "."
         .. info.ext
+      fname = string.gsub(fname, "%.$", "") -- remove trailing dot when no extension
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
       colors["_style_name"] = "Tokyo Night" .. style_name
       colors["_name"] = "tokyonight_" .. style

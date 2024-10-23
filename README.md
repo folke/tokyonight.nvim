@@ -133,6 +133,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Foot](https://codeberg.org/dnkl/foot) | [extras/foot](extras/foot) |
 | [Fuzzel](https://codeberg.org/dnkl/fuzzel) | [extras/fuzzel](extras/fuzzel) |
 | [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](extras/fzf) |
+| [Ghostty](https://github.com/ghostty-org/ghostty) | [extras/ghostty](extras/ghostty) |
 | [GitUI](https://github.com/extrawurst/gitui) | [extras/gitui](extras/gitui) |
 | [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal) | [extras/gnome_terminal](extras/gnome_terminal) |
 | [Helix](https://helix-editor.com/) | [extras/helix](extras/helix) |
@@ -146,6 +147,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Spotify Player](https://github.com/aome510/spotify-player) | [extras/spotify_player](extras/spotify_player) |
 | [Sublime Text](https://www.sublimetext.com/docs/themes) | [extras/sublime](extras/sublime) |
 | [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) | [extras/terminator](extras/terminator) |
+| [Termux](https://termux.dev/) | [extras/termux](extras/termux) |
 | [Tilix](https://github.com/gnunn1/tilix) | [extras/tilix](extras/tilix) |
 | [Tmux](https://github.com/tmux/tmux/wiki) | [extras/tmux](extras/tmux) |
 | [Vim](https://vimhelp.org/) | [extras/vim](extras/vim) |
@@ -422,7 +424,7 @@ To have undercurls show up and in color, add the following to your
 # Undercurl
 set -g default-terminal "${TERM}"
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
-set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+set -as terminal-overrides ',*:Setulc=\E[58::2::::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
 
 </details>
