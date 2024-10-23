@@ -3,6 +3,6 @@ and set the theme to the absolute path of the theme file.
 
 Example:
 
-```config
+```ini
 theme = "/home/folke/projects/tokyonight.nvim/extras/ghostty/tokyonight_night"
 ```
