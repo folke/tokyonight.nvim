@@ -213,6 +213,8 @@ Extras ~
 
   Terminator                          extras/terminator
 
+  Termux                              extras/termux
+
   Tilix                               extras/tilix
 
   Tmux                                extras/tmux
