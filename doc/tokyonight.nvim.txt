@@ -185,6 +185,8 @@ Extras ~
 
   Fzf                                 extras/fzf
 
+  Ghostty                             extras/ghostty
+
   GitUI                               extras/gitui
 
   GNOME Terminal                      extras/gnome_terminal
