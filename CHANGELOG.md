@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.1](https://github.com/folke/tokyonight.nvim/compare/v4.9.0...v4.9.1) (2024-10-24)
+
+
+### Bug Fixes
+
+* **termux:** update termux theme to use the new terminal colors ([#651](https://github.com/folke/tokyonight.nvim/issues/651)) ([57d8ae6](https://github.com/folke/tokyonight.nvim/commit/57d8ae6d46f330ebd223d9f9e5b790dad0254b7d))
+
 ## [4.9.0](https://github.com/folke/tokyonight.nvim/compare/v4.8.0...v4.9.0) (2024-10-23)
 
 
