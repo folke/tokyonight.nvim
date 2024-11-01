@@ -55,6 +55,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [ale](https://github.com/dense-analysis/ale) | [`ale`](lua/tokyonight/groups/ale.lua) |
 | [alpha-nvim](https://github.com/goolord/alpha-nvim) | [`alpha`](lua/tokyonight/groups/alpha.lua) |
 | [barbar.nvim](https://github.com/romgrk/barbar.nvim) | [`barbar`](lua/tokyonight/groups/barbar.lua) |
+| [blink.cmp](https://github.com/Saghen/blink.cmp) | [`blink`](lua/tokyonight/groups/blink.lua) |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | [`bufferline`](lua/tokyonight/groups/bufferline.lua) |
 | [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | [`cmp`](lua/tokyonight/groups/cmp.lua) |
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | [`dap`](lua/tokyonight/groups/dap.lua) |
