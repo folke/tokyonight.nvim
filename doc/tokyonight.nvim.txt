@@ -54,6 +54,8 @@ Supported Plugins ~
 
   nvim-cmp                            cmp
 
+  copilot.lua                         copilot
+
   nvim-dap                            dap
 
   dashboard-nvim                      dashboard

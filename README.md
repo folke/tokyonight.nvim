@@ -58,6 +58,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [blink.cmp](https://github.com/Saghen/blink.cmp) | [`blink`](lua/tokyonight/groups/blink.lua) |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | [`bufferline`](lua/tokyonight/groups/bufferline.lua) |
 | [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | [`cmp`](lua/tokyonight/groups/cmp.lua) |
+| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | [`copilot`](lua/tokyonight/groups/copilot.lua) |
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | [`dap`](lua/tokyonight/groups/dap.lua) |
 | [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) | [`dashboard`](lua/tokyonight/groups/dashboard.lua) |
 | [flash.nvim](https://github.com/folke/flash.nvim) | [`flash`](lua/tokyonight/groups/flash.lua) |
