@@ -3,6 +3,17 @@ hi clear
   
 hi ALEErrorSign guibg=NONE guifg=#c53b53
 hi ALEWarningSign guibg=NONE guifg=#ffc777
+hi BlinkCmpDoc guibg=#1e2030 guifg=#c8d3f5
+hi BlinkCmpDocBorder guibg=#1e2030 guifg=#589ed7
+hi BlinkCmpGhostText guibg=NONE guifg=#444a73
+hi BlinkCmpKindCodeium guibg=NONE guifg=#4fd6be
+hi BlinkCmpKindCopilot guibg=NONE guifg=#4fd6be
+hi BlinkCmpKindDefault guibg=NONE guifg=#828bb8
+hi BlinkCmpKindSupermaven guibg=NONE guifg=#4fd6be
+hi BlinkCmpKindTabNine guibg=NONE guifg=#4fd6be
+hi BlinkCmpLabel guibg=NONE guifg=#c8d3f5
+hi BlinkCmpLabelDeprecated gui=strikethrough guibg=NONE guifg=#3b4261
+hi BlinkCmpLabelMatch guibg=NONE guifg=#65bcff
 hi Bold gui=bold guibg=NONE guifg=#c8d3f5
 hi Character guibg=NONE guifg=#c3e88d
 hi ColorColumn guibg=#1b1d2b
