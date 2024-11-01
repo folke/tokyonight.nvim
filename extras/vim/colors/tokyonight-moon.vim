@@ -20,6 +20,8 @@ hi ColorColumn guibg=#1b1d2b
 hi Comment gui=italic guibg=NONE guifg=#636da6
 hi Conceal guibg=NONE guifg=#737aa2
 hi Constant guibg=NONE guifg=#ff966c
+hi CopilotAnnotation guibg=NONE guifg=#444a73
+hi CopilotSuggestion guibg=NONE guifg=#444a73
 hi Cursor guibg=#c8d3f5 guifg=#222436
 hi CursorColumn guibg=#2f334d
 hi CursorIM guibg=#c8d3f5 guifg=#222436

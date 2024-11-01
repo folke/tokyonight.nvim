@@ -739,6 +739,12 @@ local highlights = {
   Constant = {
     fg = "#ff9e64"
   },
+  CopilotAnnotation = {
+    fg = "#414868"
+  },
+  CopilotSuggestion = {
+    fg = "#414868"
+  },
   CurSearch = "IncSearch",
   Cursor = {
     bg = "#c0caf5",
