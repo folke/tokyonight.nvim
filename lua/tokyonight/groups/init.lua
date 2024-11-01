@@ -11,6 +11,7 @@ M.plugins = {
   ["barbar.nvim"]                   = "barbar",
   ["blink.cmp"]                     = "blink",
   ["bufferline.nvim"]               = "bufferline",
+  ["copilot.lua"]                   = "copilot",
   ["dashboard-nvim"]                = "dashboard",
   ["flash.nvim"]                    = "flash",
   ["fzf-lua"]                       = "fzf",
