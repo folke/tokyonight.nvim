@@ -393,6 +393,84 @@ local highlights = {
   AlphaShortcut = {
     fg = "#ff9e64"
   },
+  BlinkCmpDoc = {
+    bg = "#16161e",
+    fg = "#c0caf5"
+  },
+  BlinkCmpDocBorder = {
+    bg = "#16161e",
+    fg = "#27a1b9"
+  },
+  BlinkCmpGhostText = {
+    fg = "#414868"
+  },
+  BlinkCmpKindArray = "LspKindArray",
+  BlinkCmpKindBoolean = "LspKindBoolean",
+  BlinkCmpKindClass = "LspKindClass",
+  BlinkCmpKindCodeium = {
+    bg = "NONE",
+    fg = "#1abc9c"
+  },
+  BlinkCmpKindColor = "LspKindColor",
+  BlinkCmpKindConstant = "LspKindConstant",
+  BlinkCmpKindConstructor = "LspKindConstructor",
+  BlinkCmpKindCopilot = {
+    bg = "NONE",
+    fg = "#1abc9c"
+  },
+  BlinkCmpKindDefault = {
+    bg = "NONE",
+    fg = "#a9b1d6"
+  },
+  BlinkCmpKindEnum = "LspKindEnum",
+  BlinkCmpKindEnumMember = "LspKindEnumMember",
+  BlinkCmpKindEvent = "LspKindEvent",
+  BlinkCmpKindField = "LspKindField",
+  BlinkCmpKindFile = "LspKindFile",
+  BlinkCmpKindFolder = "LspKindFolder",
+  BlinkCmpKindFunction = "LspKindFunction",
+  BlinkCmpKindInterface = "LspKindInterface",
+  BlinkCmpKindKey = "LspKindKey",
+  BlinkCmpKindKeyword = "LspKindKeyword",
+  BlinkCmpKindMethod = "LspKindMethod",
+  BlinkCmpKindModule = "LspKindModule",
+  BlinkCmpKindNamespace = "LspKindNamespace",
+  BlinkCmpKindNull = "LspKindNull",
+  BlinkCmpKindNumber = "LspKindNumber",
+  BlinkCmpKindObject = "LspKindObject",
+  BlinkCmpKindOperator = "LspKindOperator",
+  BlinkCmpKindPackage = "LspKindPackage",
+  BlinkCmpKindProperty = "LspKindProperty",
+  BlinkCmpKindReference = "LspKindReference",
+  BlinkCmpKindSnippet = "LspKindSnippet",
+  BlinkCmpKindString = "LspKindString",
+  BlinkCmpKindStruct = "LspKindStruct",
+  BlinkCmpKindSupermaven = {
+    bg = "NONE",
+    fg = "#1abc9c"
+  },
+  BlinkCmpKindTabNine = {
+    bg = "NONE",
+    fg = "#1abc9c"
+  },
+  BlinkCmpKindText = "LspKindText",
+  BlinkCmpKindTypeParameter = "LspKindTypeParameter",
+  BlinkCmpKindUnit = "LspKindUnit",
+  BlinkCmpKindValue = "LspKindValue",
+  BlinkCmpKindVariable = "LspKindVariable",
+  BlinkCmpLabel = {
+    bg = "NONE",
+    fg = "#c0caf5"
+  },
+  BlinkCmpLabelDeprecated = {
+    bg = "NONE",
+    fg = "#3b4261",
+    strikethrough = true
+  },
+  BlinkCmpLabelMatch = {
+    bg = "NONE",
+    fg = "#2ac3de"
+  },
   Bold = {
     bold = true,
     fg = "#c0caf5"
@@ -660,6 +738,12 @@ local highlights = {
   },
   Constant = {
     fg = "#ff9e64"
+  },
+  CopilotAnnotation = {
+    fg = "#414868"
+  },
+  CopilotSuggestion = {
+    fg = "#414868"
   },
   CurSearch = "IncSearch",
   Cursor = {

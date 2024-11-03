@@ -3,12 +3,25 @@ hi clear
   
 hi ALEErrorSign guibg=NONE guifg=#c64343
 hi ALEWarningSign guibg=NONE guifg=#8c6c3e
+hi BlinkCmpDoc guibg=#d0d5e3 guifg=#3760bf
+hi BlinkCmpDocBorder guibg=#d0d5e3 guifg=#4094a3
+hi BlinkCmpGhostText guibg=NONE guifg=#a1a6c5
+hi BlinkCmpKindCodeium guibg=NONE guifg=#118c74
+hi BlinkCmpKindCopilot guibg=NONE guifg=#118c74
+hi BlinkCmpKindDefault guibg=NONE guifg=#6172b0
+hi BlinkCmpKindSupermaven guibg=NONE guifg=#118c74
+hi BlinkCmpKindTabNine guibg=NONE guifg=#118c74
+hi BlinkCmpLabel guibg=NONE guifg=#3760bf
+hi BlinkCmpLabelDeprecated gui=strikethrough guibg=NONE guifg=#a8aecb
+hi BlinkCmpLabelMatch guibg=NONE guifg=#188092
 hi Bold gui=bold guibg=NONE guifg=#3760bf
 hi Character guibg=NONE guifg=#587539
 hi ColorColumn guibg=#b4b5b9
 hi Comment gui=italic guibg=NONE guifg=#848cb5
 hi Conceal guibg=NONE guifg=#68709a
 hi Constant guibg=NONE guifg=#b15c00
+hi CopilotAnnotation guibg=NONE guifg=#a1a6c5
+hi CopilotSuggestion guibg=NONE guifg=#a1a6c5
 hi Cursor guibg=#3760bf guifg=#e1e2e7
 hi CursorColumn guibg=#c4c8da
 hi CursorIM guibg=#3760bf guifg=#e1e2e7
