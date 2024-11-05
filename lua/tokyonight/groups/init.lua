@@ -59,6 +59,7 @@ M.plugins = {
   ["octo.nvim"]                     = "octo",
   ["rainbow-delimiters.nvim"]       = "rainbow",
   ["render-markdown.nvim"]          = "render-markdown",
+  ["snacks.nvim"]                   = "snacks",
   ["telescope.nvim"]                = "telescope",
   ["trouble.nvim"]                  = "trouble",
   ["vim-gitgutter"]                 = "gitgutter",
