@@ -2098,6 +2098,76 @@ local highlights = {
     bg = "#d0d5e3",
     fg = "#a8aecb"
   },
+  SnacksNotifierBorderDebug = {
+    bg = "#e1e2e7",
+    fg = "#bcc0d3"
+  },
+  SnacksNotifierBorderError = {
+    bg = "#e1e2e7",
+    fg = "#d6a2a5"
+  },
+  SnacksNotifierBorderInfo = {
+    bg = "#e1e2e7",
+    fg = "#8abec9"
+  },
+  SnacksNotifierBorderTrace = {
+    bg = "#e1e2e7",
+    fg = "#b7a4d6"
+  },
+  SnacksNotifierBorderWarn = {
+    bg = "#e1e2e7",
+    fg = "#bfb3a3"
+  },
+  SnacksNotifierDebug = {
+    bg = "#e1e2e7",
+    fg = "#3760bf"
+  },
+  SnacksNotifierError = {
+    bg = "#e1e2e7",
+    fg = "#3760bf"
+  },
+  SnacksNotifierIconDebug = {
+    fg = "#848cb5"
+  },
+  SnacksNotifierIconError = {
+    fg = "#c64343"
+  },
+  SnacksNotifierIconInfo = {
+    fg = "#07879d"
+  },
+  SnacksNotifierIconTrace = {
+    fg = "#7847bd"
+  },
+  SnacksNotifierIconWarn = {
+    fg = "#8c6c3e"
+  },
+  SnacksNotifierInfo = {
+    bg = "#e1e2e7",
+    fg = "#3760bf"
+  },
+  SnacksNotifierTitleDebug = {
+    fg = "#848cb5"
+  },
+  SnacksNotifierTitleError = {
+    fg = "#c64343"
+  },
+  SnacksNotifierTitleInfo = {
+    fg = "#07879d"
+  },
+  SnacksNotifierTitleTrace = {
+    fg = "#7847bd"
+  },
+  SnacksNotifierTitleWarn = {
+    fg = "#8c6c3e"
+  },
+  SnacksNotifierTrace = {
+    bg = "#e1e2e7",
+    fg = "#3760bf"
+  },
+  SnacksNotifierWarn = {
+    bg = "#e1e2e7",
+    fg = "#3760bf"
+  },
   Sneak = {
     bg = "#9854f1",
     fg = "#c4c8da"
