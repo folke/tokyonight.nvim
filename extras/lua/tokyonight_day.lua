@@ -287,6 +287,9 @@ local highlights = {
   ["@punctuation.special"] = {
     fg = "#006a83"
   },
+  ["@punctuation.special.markdown"] = {
+    fg = "#b15c00"
+  },
   ["@string"] = "String",
   ["@string.documentation"] = {
     fg = "#8c6c3e"
@@ -725,6 +728,9 @@ local highlights = {
   },
   CodeBlock = {
     bg = "#d0d5e3"
+  },
+  CodeiumSuggestion = {
+    fg = "#a1a6c5"
   },
   ColorColumn = {
     bg = "#b4b5b9"
@@ -2214,6 +2220,9 @@ local highlights = {
   Substitute = {
     bg = "#f52a65",
     fg = "#b4b5b9"
+  },
+  SupermavenSuggestion = {
+    fg = "#a1a6c5"
   },
   TabLine = {
     bg = "#d0d5e3",
