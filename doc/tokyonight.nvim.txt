@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*         For Neovim         Last change: 2024 November 05
+*tokyonight.nvim.txt*         For Neovim         Last change: 2024 November 13
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -53,6 +53,8 @@ Supported Plugins ~
   bufferline.nvim                     bufferline
 
   nvim-cmp                            cmp
+
+  codeium.nvim                        codeium
 
   copilot.lua                         copilot
 
@@ -155,6 +157,8 @@ Supported Plugins ~
   nvim-notify                         snacks
 
   vim-sneak                           sneak
+
+  supermaven-nvim                     supermaven
 
   telescope.nvim                      telescope
 
