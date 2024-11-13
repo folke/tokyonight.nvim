@@ -78,6 +78,7 @@ function M.get(c, opts)
     ["@punctuation.bracket"]        = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.delimiter"]      = { fg = c.blue5 }, -- For delimiters ie: `.`
     ["@punctuation.special"]        = { fg = c.blue5 }, -- For special symbols (e.g. `{}` in string interpolation)
+    ["@punctuation.special.markdown"] = { fg = c.orange }, -- For special symbols (e.g. `{}` in string interpolation)
     ["@string"]                     = "String",
     ["@string.documentation"]       = { fg = c.yellow },
     ["@string.escape"]              = { fg = c.magenta }, -- For escape characters within a string.
