@@ -786,7 +786,6 @@ local highlights = {
     fg = "#2e7de9"
   },
   DashboardIcon = {
-    bold = true,
     fg = "#007197"
   },
   DashboardKey = {
@@ -2103,6 +2102,27 @@ local highlights = {
   SignColumnSB = {
     bg = "#d0d5e3",
     fg = "#a8aecb"
+  },
+  SnacksDashboardDesc = {
+    fg = "#007197"
+  },
+  SnacksDashboardDir = {
+    fg = "#8990b3"
+  },
+  SnacksDashboardFooter = {
+    fg = "#188092"
+  },
+  SnacksDashboardHeader = {
+    fg = "#2e7de9"
+  },
+  SnacksDashboardIcon = {
+    fg = "#188092"
+  },
+  SnacksDashboardKey = {
+    fg = "#b15c00"
+  },
+  SnacksDashboardSpecial = {
+    fg = "#7847bd"
   },
   SnacksNotifierBorderDebug = {
     bg = "#e1e2e7",
