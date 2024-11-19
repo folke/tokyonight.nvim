@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*         For Neovim         Last change: 2024 November 13
+*tokyonight.nvim.txt*         For Neovim         Last change: 2024 November 19
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -154,7 +154,7 @@ Supported Plugins ~
 
   nvim-scrollbar                      scrollbar
 
-  nvim-notify                         snacks
+  snacks.nvim                         snacks
 
   vim-sneak                           sneak
 
