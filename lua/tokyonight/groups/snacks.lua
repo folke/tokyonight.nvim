@@ -2,7 +2,7 @@ local Util = require("tokyonight.util")
 
 local M = {}
 
-M.url = "https://github.com/rcarriga/nvim-notify"
+M.url = "https://github.com/folke/snacks.nvim"
 
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
@@ -28,6 +28,14 @@ function M.get(c, opts)
     SnacksNotifierBorderWarn  = { fg = Util.blend_bg(c.warning, 0.4), bg = opts.transparent and c.none or c.bg },
     SnacksNotifierIconWarn    = { fg = c.warning },
     SnacksNotifierTitleWarn   = { fg = c.warning },
+    -- Dashboard
+    SnacksDashboardDesc       = { fg = c.cyan },
+    SnacksDashboardFooter     = { fg = c.blue1 },
+    SnacksDashboardHeader     = { fg = c.blue },
+    SnacksDashboardIcon       = { fg = c.blue1 },
+    SnacksDashboardKey        = { fg = c.orange },
+    SnacksDashboardSpecial    = { fg = c.purple },
+    SnacksDashboardDir        = { fg = c.dark3 },
   }
 end
 

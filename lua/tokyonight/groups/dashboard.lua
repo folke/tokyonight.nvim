@@ -20,7 +20,7 @@ function M.get(c, opts)
     -- Doome theme
     DashboardDesc             = { fg = c.cyan },
     DashboardKey              = { fg = c.orange },
-    DashboardIcon             = { fg = c.cyan, bold = true },
+    DashboardIcon             = { fg = c.cyan },
     DashboardShortCut         = { fg = c.cyan },
   }
 end
