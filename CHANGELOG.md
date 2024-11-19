@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.10.0](https://github.com/folke/tokyonight.nvim/compare/v4.9.0...v4.10.0) (2024-11-19)
+
+
+### Features
+
+* added support for blink.cmp ([34d2ae8](https://github.com/folke/tokyonight.nvim/commit/34d2ae829362c5ed947dac59dec265b95b4e6675))
+* added support for snacks.nvim ([ae19966](https://github.com/folke/tokyonight.nvim/commit/ae1996619b465e424c3bbc0854c7db8a9d26d57f))
+* added support for supermaven & codeium ([38d01f7](https://github.com/folke/tokyonight.nvim/commit/38d01f75d64c2862216cd4271aa7576b9dd20da8))
+* copilot ghost text ([04d33f5](https://github.com/folke/tokyonight.nvim/commit/04d33f5555b7fd297096fe93073fba9bdcd2a3fe))
+* **snacks:** dashboard styles ([5749102](https://github.com/folke/tokyonight.nvim/commit/5749102c210eb9915423b658af83f03986d16999))
+
+
+### Bug Fixes
+
+* **termux:** update termux theme to use the new terminal colors ([#651](https://github.com/folke/tokyonight.nvim/issues/651)) ([57d8ae6](https://github.com/folke/tokyonight.nvim/commit/57d8ae6d46f330ebd223d9f9e5b790dad0254b7d))
+
 ## [4.9.0](https://github.com/folke/tokyonight.nvim/compare/v4.8.0...v4.9.0) (2024-10-23)
 
 
