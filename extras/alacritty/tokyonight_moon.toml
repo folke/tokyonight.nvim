@@ -1,4 +1,9 @@
+# -----------------------------------------------------------------------------
 # TokyoNight Alacritty Colors
+# Theme: Tokyo Night Moon
+# Upstream: https://github.com/folke/tokyonight.nvim/raw/main/extras/alacritty/tokyonight_moon.toml
+# -----------------------------------------------------------------------------
+
 # Default colors
 [colors.primary]
 background = '#222436'
@@ -22,12 +27,12 @@ white = '#828bb8'
 # Bright colors
 [colors.bright]
 black = '#444a73'
-red = '#ff757f'
-green = '#c3e88d'
-yellow = '#ffc777'
-blue = '#82aaff'
-magenta = '#c099ff'
-cyan = '#86e1fc'
+red = '#ff8d94'
+green = '#c7fb6d'
+yellow = '#ffd8ab'
+blue = '#9ab8ff'
+magenta = '#caabff'
+cyan = '#b2ebff'
 white = '#c8d3f5'
 
 # Indexed Colors
