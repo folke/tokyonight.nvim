@@ -36,6 +36,13 @@ function M.get(c, opts)
     SnacksDashboardKey        = { fg = c.orange },
     SnacksDashboardSpecial    = { fg = c.purple },
     SnacksDashboardDir        = { fg = c.dark3 },
+    -- Profiler
+    SnacksProfilerIconInfo    = { bg = Util.blend_bg(c.blue1, 0.3), fg = c.blue1 },
+    SnacksProfilerBadgeInfo   = { bg = Util.blend_bg(c.blue1, 0.1), fg = c.blue1 },
+    SnacksScratchKey = "SnacksProfilerIconInfo",
+    SnacksScratchDesc = "SnacksProfilerBadgeInfo",
+    SnacksProfilerIconTrace   = { bg = Util.blend_bg(c.blue7, 0.3), fg = c.dark3 },
+    SnacksProfilerBadgeTrace  = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
   }
 end
 
