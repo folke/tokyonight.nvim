@@ -2194,6 +2194,24 @@ local highlights = {
     bg = "#e1e2e7",
     fg = "#3760bf"
   },
+  SnacksProfilerBadgeInfo = {
+    bg = "#cdd8df",
+    fg = "#188092"
+  },
+  SnacksProfilerBadgeTrace = {
+    bg = "#d9dce5",
+    fg = "#8990b3"
+  },
+  SnacksProfilerIconInfo = {
+    bg = "#a5c5ce",
+    fg = "#188092"
+  },
+  SnacksProfilerIconTrace = {
+    bg = "#c9d0e2",
+    fg = "#8990b3"
+  },
+  SnacksScratchDesc = "SnacksProfilerBadgeInfo",
+  SnacksScratchKey = "SnacksProfilerIconInfo",
   Sneak = {
     bg = "#9854f1",
     fg = "#c4c8da"
