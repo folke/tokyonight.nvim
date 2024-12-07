@@ -65,7 +65,16 @@ function M.setup(opts)
   colors.info = colors.blue2
   colors.hint = colors.teal
 
-  colors.rainbow = { colors.blue, colors.yellow, colors.green, colors.teal, colors.magenta, colors.purple }
+  colors.rainbow = {
+    colors.blue,
+    colors.yellow,
+    colors.green,
+    colors.teal,
+    colors.magenta,
+    colors.purple,
+    colors.orange,
+    colors.red,
+  }
 
   -- stylua: ignore
   --- @class TerminalColors
