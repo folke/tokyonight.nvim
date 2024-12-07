@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.11.0](https://github.com/folke/tokyonight.nvim/compare/v4.10.0...v4.11.0) (2024-12-07)
+
+
+### Features
+
+* better rainbow colors ([17ec71c](https://github.com/folke/tokyonight.nvim/commit/17ec71ccd96e9c5d69f3e299b5490ac8b5f00fc8))
+* **snacks:** hl groups for upcoming plugins ([f0c4046](https://github.com/folke/tokyonight.nvim/commit/f0c40463db98a74c846ff39226f6f6d6b4731f46))
+* **snacks:** profiler hl groups ([3cc1488](https://github.com/folke/tokyonight.nvim/commit/3cc148893b211cbd4dc36b55353a6a9d4623bf66))
+
+
+### Bug Fixes
+
+* **alacritty:** update alacritty theme to use the new terminal colors ([#656](https://github.com/folke/tokyonight.nvim/issues/656)) ([cc18688](https://github.com/folke/tokyonight.nvim/commit/cc186889842b455bfb9282e551613dfb9f1e3299)), closes [#648](https://github.com/folke/tokyonight.nvim/issues/648)
+
 ## [4.10.0](https://github.com/folke/tokyonight.nvim/compare/v4.9.0...v4.10.0) (2024-11-19)
 
 
