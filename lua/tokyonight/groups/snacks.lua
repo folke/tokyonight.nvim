@@ -7,7 +7,7 @@ M.url = "https://github.com/folke/snacks.nvim"
 ---@type tokyonight.HighlightsFn
 function M.get(c, opts)
   -- stylua: ignore
-  return {
+  local ret = {
     SnacksNotifierDebug       = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
     SnacksNotifierBorderDebug = { fg = Util.blend_bg(c.comment, 0.4), bg = opts.transparent and c.none or c.bg },
     SnacksNotifierIconDebug   = { fg = c.comment },
@@ -39,11 +39,17 @@ function M.get(c, opts)
     -- Profiler
     SnacksProfilerIconInfo    = { bg = Util.blend_bg(c.blue1, 0.3), fg = c.blue1 },
     SnacksProfilerBadgeInfo   = { bg = Util.blend_bg(c.blue1, 0.1), fg = c.blue1 },
-    SnacksScratchKey = "SnacksProfilerIconInfo",
-    SnacksScratchDesc = "SnacksProfilerBadgeInfo",
+    SnacksScratchKey          = "SnacksProfilerIconInfo",
+    SnacksScratchDesc         = "SnacksProfilerBadgeInfo",
     SnacksProfilerIconTrace   = { bg = Util.blend_bg(c.blue7, 0.3), fg = c.dark3 },
     SnacksProfilerBadgeTrace  = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
+    SnacksIndent              = { fg = c.fg_gutter, nocombine = true },
+    SnacksIndentScope         = { fg = c.blue1, nocombine = true },
   }
+  for i, color in ipairs(c.rainbow) do
+    ret["SnacksIndent" .. i] = { fg = color, nocombine = true }
+  end
+  return ret
 end
 
 return M
