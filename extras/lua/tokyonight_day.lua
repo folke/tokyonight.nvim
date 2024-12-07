@@ -52,7 +52,7 @@ local colors = {
   none = "NONE",
   orange = "#b15c00",
   purple = "#7847bd",
-  rainbow = { "#2e7de9", "#8c6c3e", "#587539", "#118c74", "#9854f1", "#7847bd" },
+  rainbow = { "#2e7de9", "#8c6c3e", "#587539", "#118c74", "#9854f1", "#7847bd", "#b15c00", "#f52a65" },
   red = "#f52a65",
   red1 = "#c64343",
   teal = "#118c74",
@@ -226,6 +226,14 @@ local highlights = {
   ["@markup.heading.6.markdown"] = {
     bold = true,
     fg = "#7847bd"
+  },
+  ["@markup.heading.7.markdown"] = {
+    bold = true,
+    fg = "#b15c00"
+  },
+  ["@markup.heading.8.markdown"] = {
+    bold = true,
+    fg = "#f52a65"
   },
   ["@markup.italic"] = {
     italic = true
@@ -1058,6 +1066,12 @@ local highlights = {
   },
   Headline6 = {
     bg = "#dcdae5"
+  },
+  Headline7 = {
+    bg = "#dfdbdb"
+  },
+  Headline8 = {
+    bg = "#e2d9e1"
   },
   HopNextKey = {
     bold = true,
@@ -2033,6 +2047,20 @@ local highlights = {
     bold = true,
     fg = "#7847bd"
   },
+  RenderMarkdownH7Bg = {
+    bg = "#dcd5d0"
+  },
+  RenderMarkdownH7Fg = {
+    bold = true,
+    fg = "#b15c00"
+  },
+  RenderMarkdownH8Bg = {
+    bg = "#e3d0da"
+  },
+  RenderMarkdownH8Fg = {
+    bold = true,
+    fg = "#f52a65"
+  },
   RenderMarkdownTableHead = {
     fg = "#f52a65"
   },
@@ -2123,6 +2151,46 @@ local highlights = {
   },
   SnacksDashboardSpecial = {
     fg = "#7847bd"
+  },
+  SnacksIndent = {
+    fg = "#a8aecb",
+    nocombine = true
+  },
+  SnacksIndent1 = {
+    fg = "#2e7de9",
+    nocombine = true
+  },
+  SnacksIndent2 = {
+    fg = "#8c6c3e",
+    nocombine = true
+  },
+  SnacksIndent3 = {
+    fg = "#587539",
+    nocombine = true
+  },
+  SnacksIndent4 = {
+    fg = "#118c74",
+    nocombine = true
+  },
+  SnacksIndent5 = {
+    fg = "#9854f1",
+    nocombine = true
+  },
+  SnacksIndent6 = {
+    fg = "#7847bd",
+    nocombine = true
+  },
+  SnacksIndent7 = {
+    fg = "#b15c00",
+    nocombine = true
+  },
+  SnacksIndent8 = {
+    fg = "#f52a65",
+    nocombine = true
+  },
+  SnacksIndentScope = {
+    fg = "#188092",
+    nocombine = true
   },
   SnacksNotifierBorderDebug = {
     bg = "#e1e2e7",
@@ -2359,6 +2427,16 @@ local highlights = {
     bg = "NONE",
     bold = true,
     fg = "#7847bd"
+  },
+  VimwikiHeader7 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#b15c00"
+  },
+  VimwikiHeader8 = {
+    bg = "NONE",
+    bold = true,
+    fg = "#f52a65"
   },
   VimwikiHeaderChar = {
     bg = "NONE",

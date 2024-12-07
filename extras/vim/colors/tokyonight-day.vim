@@ -230,6 +230,8 @@ hi VimwikiHeader3 gui=bold guibg=NONE guifg=#587539
 hi VimwikiHeader4 gui=bold guibg=NONE guifg=#118c74
 hi VimwikiHeader5 gui=bold guibg=NONE guifg=#9854f1
 hi VimwikiHeader6 gui=bold guibg=NONE guifg=#7847bd
+hi VimwikiHeader7 gui=bold guibg=NONE guifg=#b15c00
+hi VimwikiHeader8 gui=bold guibg=NONE guifg=#f52a65
 hi VimwikiHeaderChar guibg=NONE guifg=#8c6c3e
 hi VimwikiLink guibg=NONE guifg=#2e7de9
 hi VimwikiList guibg=NONE guifg=#b15c00
