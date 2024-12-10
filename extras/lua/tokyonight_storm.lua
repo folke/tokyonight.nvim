@@ -2192,6 +2192,15 @@ local highlights = {
     fg = "#2ac3de",
     nocombine = true
   },
+  SnacksInputBorder = {
+    fg = "#e0af68"
+  },
+  SnacksInputIcon = {
+    fg = "#2ac3de"
+  },
+  SnacksInputTitle = {
+    fg = "#e0af68"
+  },
   SnacksNotifierBorderDebug = {
     bg = "#24283b",
     fg = "#383e5a"
@@ -2280,6 +2289,9 @@ local highlights = {
   },
   SnacksScratchDesc = "SnacksProfilerBadgeInfo",
   SnacksScratchKey = "SnacksProfilerIconInfo",
+  SnacksZenIcon = {
+    fg = "#9d7cd8"
+  },
   Sneak = {
     bg = "#bb9af7",
     fg = "#292e42"
