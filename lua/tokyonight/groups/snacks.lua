@@ -45,6 +45,10 @@ function M.get(c, opts)
     SnacksProfilerBadgeTrace  = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
     SnacksIndent              = { fg = c.fg_gutter, nocombine = true },
     SnacksIndentScope         = { fg = c.blue1, nocombine = true },
+    SnacksZenIcon             = { fg = c.purple },
+    SnacksInputIcon           = { fg = c.blue1 },
+    SnacksInputBorder         = { fg = c.yellow },
+    SnacksInputTitle          = { fg = c.yellow },
   }
   for i, color in ipairs(c.rainbow) do
     ret["SnacksIndent" .. i] = { fg = color, nocombine = true }
