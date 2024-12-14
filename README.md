@@ -397,6 +397,30 @@ require("tokyonight").setup({
 </details>
 
 <details>
+  <summary>Borderless Fzf-Lua</summary>
+
+```lua
+require("tokyonight").setup({
+  on_highlights = function(hl, c)
+    hl.FzfLuaBorder = {
+      bg = c.bg_float,
+      fg = c.bg_float,
+    }
+    hl.FzfLuaFzfBorder = {
+      bg = c.bg_float,
+      fg = c.border_highlight,
+    }
+    hl.FzfLuaFzfGutter = {
+      bg = c.bg_float,
+      fg = c.bg_float,
+    }
+  end,
+})
+```
+
+</details>
+
+<details>
   <summary>Fix <code>undercurls</code> in Tmux</summary>
 
 To have undercurls show up and in color, add the following to your
