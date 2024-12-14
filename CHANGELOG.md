@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.12.0](https://github.com/folke/tokyonight.nvim/compare/v4.11.0...v4.12.0) (2024-12-14)
+
+
+### Features
+
+* **extra:** add (better-)discord theme ([#662](https://github.com/folke/tokyonight.nvim/issues/662)) ([9578c6f](https://github.com/folke/tokyonight.nvim/commit/9578c6fe68af1db513914a2a01bea5585f3027db))
+
 ## [4.11.0](https://github.com/folke/tokyonight.nvim/compare/v4.10.0...v4.11.0) (2024-12-10)
 
 
