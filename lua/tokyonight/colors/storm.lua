@@ -2,6 +2,7 @@
 local ret = {
   bg = "#24283b",
   bg_dark = "#1f2335",
+  bg_dark1 = "#1b1e2d",
   bg_highlight = "#292e42",
   blue = "#7aa2f7",
   blue0 = "#3d59a1",
