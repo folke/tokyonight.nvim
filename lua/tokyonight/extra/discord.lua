@@ -162,7 +162,7 @@ function M.generate(colors)
   --background-message-highlight: ${blue}14;
   --background-message-highlight-hover: ${blue}0F;
   --channels-default: ${fg_dark};
-  --channel-icon: ${magenta};
+  --channel-icon: ${blue}99;
   --channel-text-area-placeholder: ${dark3}7F;
   --channeltextarea-background: ${bg_dark};
   --activity-card-background: ${bg_highlight};
