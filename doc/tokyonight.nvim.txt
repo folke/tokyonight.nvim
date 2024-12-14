@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*         For Neovim         Last change: 2024 December 10
+*tokyonight.nvim.txt*         For Neovim         Last change: 2024 December 14
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -182,6 +182,8 @@ Extras ~
   Alacritty                           extras/alacritty
 
   Delta                               extras/delta
+
+  (Better-)Discord                    extras/discord
 
   Dunst                               extras/dunst
 

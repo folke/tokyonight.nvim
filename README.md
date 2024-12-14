@@ -132,6 +132,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Aerc](https://git.sr.ht/~rjarry/aerc/) | [extras/aerc](extras/aerc) |
 | [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](extras/alacritty) |
 | [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
+| [(Better-)Discord](https://betterdiscord.app/) | [extras/discord](extras/discord) |
 | [Dunst](https://dunst-project.org/) | [extras/dunst](extras/dunst) |
 | [Fish](https://fishshell.com/docs/current/index.html) | [extras/fish](extras/fish) |
 | [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) | [extras/fish_themes](extras/fish_themes) |
