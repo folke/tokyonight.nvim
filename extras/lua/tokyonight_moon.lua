@@ -3,6 +3,7 @@ local colors = {
   _style = "moon",
   bg = "#222436",
   bg_dark = "#1e2030",
+  bg_dark1 = "#191B29",
   bg_float = "#1e2030",
   bg_highlight = "#2f334d",
   bg_popup = "#1e2030",

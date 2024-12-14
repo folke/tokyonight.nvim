@@ -3,6 +3,7 @@ local colors = {
   _style = "day",
   bg = "#e1e2e7",
   bg_dark = "#d0d5e3",
+  bg_dark1 = "#c1c9df",
   bg_float = "#d0d5e3",
   bg_highlight = "#c4c8da",
   bg_popup = "#d0d5e3",

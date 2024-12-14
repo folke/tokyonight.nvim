@@ -1,0 +1,519 @@
+.theme-light,
+.theme-dark {
+  --header-primary: #c8d3f5;
+  --header-secondary: #828bb8;
+  --text-normal: #c8d3f5;
+  --text-muted: #828bb8;
+  --text-link: #82aaff;
+  --text-link-low-saturation: #89ddff;
+  --text-positive: #4fd6be;
+  --text-warning: #ffc777;
+  --text-danger: #ff757f;
+  --text-brand: #82aaff;
+  --background-primary: #222436;
+  --bg-base-primary: #222436;
+  --background-secondary: #1e2030;
+  --background-secondary-alt: #1e2030;
+  --background-tertiary: #191B29;
+  --background-accent: #3e68d7;
+  --background-floating: #1e2030;
+  --background-nested-floating: #1e2030;
+  --background-mobile-primary: #222436;
+  --background-mobile-secondary: #1e2030;
+  --bg-base-secondary: #1e2030;
+  --bg-surface-raised: #1e2030;
+  --home-background: #222436;
+  --chat-background: #222436;
+  --chat-border: #2f334d;
+  --chat-input-container-background: #222436;
+  --background-modifier-hover: #545c7e26;
+  --background-modifier-selected: #545c7e32;
+  --background-modifier-accent: #545c7e42;
+  --background-modifier-active: #545c7e2B;
+  --info-positive-background: #c3e88d26;
+  --info-positive-foreground: #4fd6be;
+  --info-positive-text: #c8d3f5;
+  --brand-500: #3e68d7;
+  --brand-560: #82aaff;
+  --info-warning-background: #ffc77726;
+  --info-warning-foreground: #ffc777;
+  --info-warning-text: #c8d3f5;
+  --info-danger-background:#ff757f26;
+  --info-danger-foreground: #ff757f;
+  --info-danger-text: #c8d3f5;
+  --info-help-background: #89ddff26;
+  --info-help-foreground: #0db9d7;
+  --info-help-text: #c8d3f5;
+  --status-positive-background: #4fd6be;
+  --status-positive-text: #222436;
+  --status-warning-background: #ffc777;
+  --status-warning-text: #222436;
+  --status-danger-background: #ff757f;
+  --status-danger-text: #222436;
+  --status-danger: #ff757f;
+  --status-positive: #4fd6be;
+  --status-warning: #ffc777;
+  --status-yellow-400: #ffc777;
+  --status-green-600: #4fd6be;
+  --primary-dark-600: #222436;
+  --status-yellow-560: #ffc777;
+  --status-red-500: #ff757f;
+  --status-red-530: #ff757f;
+  --status-yellow-500: #ffc777;
+  --black-500: #2f334d;
+  --green-360: #4fd6be;
+  --yellow-360: #ffc777;
+  --yellow-300: #ffc777;
+  --red-400: #ff757f;
+  --primary-100: #737aa2;
+  --primary-300: #737aa2;
+  --primary-400: #737aa2;
+  --primary-dark-700: #2f334d;
+  --primary-800: #2f334d;
+  --status-green-560: #4fd6be;
+  --white-400: #c8d3f5;
+  --white-500: #c8d3f5;
+  --guild-boosting-pink: #c099ff;
+  --premium-perk-yellow: #ffc777;
+  --premium-perk-purple: #fca7ea;
+  --premium-perk-dark-blue: #82aaff;
+  --premium-perk-light-blue: #65bcff;
+  --premium-perk-blue: #82aaff;
+  --premium-perk-green: #4fd6be;
+  --premium-perk-pink: ${pink};
+  --premium-perk-orange: #ff966c;
+  --status-green-400: #4fd6be;
+  --button-danger-background: #c53b53;
+  --button-danger-background-hover: #ff757f;
+  --button-danger-background-active: #89ddff;
+  --button-danger-background-disabled: #ff757f;
+  --button-positive-background: #4fd6be;
+  --button-positive-background-hover: #4fd6be;
+  --button-positive-background-active: #41a6b5;
+  --button-positive-background-disabled: #4fd6be;
+  --button-secondary-background: #545c7e;
+  --button-secondary-background-hover: #3b4261;
+  --button-secondary-background-active: #3b4261;
+  --button-secondary-background-disabled: #737aa2;
+  --button-outline-danger-text: #c8d3f5;
+  --button-outline-danger-border: #c53b53;
+  --button-outline-danger-background: transparent;
+  --button-outline-danger-background-hover: #ff757f;
+  --button-outline-danger-text-hover: #222436;
+  --button-outline-danger-border-hover: #ff757f;
+  --button-outline-danger-background-active: #c53b53;
+  --button-outline-danger-text-active: #222436;
+  --button-outline-danger-border-active: #c53b53;
+  --button-outline-positive-text: #c8d3f5;
+  --button-outline-positive-border: #4fd6be;
+  --button-outline-positive-background: transparent;
+  --button-outline-positive-background-hover: #c3e88d;
+  --button-outline-positive-text-hover: #222436;
+  --button-outline-positive-border-hover: #c3e88d;
+  --button-outline-positive-background-active: #4fd6be;
+  --button-outline-positive-text-active: #222436;
+  --button-outline-positive-border-active: #c3e88d;
+  --button-outline-brand-text: #c8d3f5;
+  --button-outline-brand-border: #82aaff;
+  --button-outline-brand-background: transparent;
+  --button-outline-brand-background-hover: #65bcff;
+  --button-outline-brand-text-hover: #222436;
+  --button-outline-brand-border-hover: #65bcff;
+  --button-outline-brand-background-active: #82aaff;
+  --button-outline-brand-text-active: #222436;
+  --button-outline-brand-border-active: #65bcff;
+  --button-outline-primary-text: #c8d3f5;
+  --button-outline-primary-border: #545c7e;
+  --button-outline-primary-background: transparent;
+  --button-outline-primary-background-hover: #545c7e;
+  --button-outline-primary-text-hover: #222436;
+  --button-outline-primary-border-hover: #545c7e;
+  --button-outline-primary-background-active: #545c7e;
+  --button-outline-primary-text-active: #222436;
+  --button-outline-primary-border-active: #545c7e;
+  --modal-background: #222436;
+  --modal-footer-background: #2f334d;
+  --scrollbar-thin-thumb: #82aaff;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #82aaff;
+  --scrollbar-auto-track: #2f334d;
+  --scrollbar-auto-scrollbar-color-thumb: #82aaff;
+  --scrollbar-auto-scrollbar-color-track: #2f334d;
+  --input-background: #2f334d;
+  --input-placeholder-text: #737aa2;
+  --logo-primary: #c8d3f5;
+  --control-brand-foreground: #82aaff;
+  --control-brand-foreground-new: #82aaff;
+  --mention-foreground: #82aaff;
+  --mention-background: #444a73;
+  --background-mentioned: #ffc77719;
+  --background-mentioned-hover: #ffc77714;
+  --background-message-hover: #1e20303F;
+  --background-message-automod: #c099ff0C;
+  --background-message-automod-hover: #c099ff19;
+  --background-message-highlight: #82aaff14;
+  --background-message-highlight-hover: #82aaff0F;
+  --channels-default: #828bb8;
+  --channel-icon: #82aaff99;
+  --channel-text-area-placeholder: #545c7e7F;
+  --channeltextarea-background: #1e2030;
+  --activity-card-background: #2f334d;
+  --textbox-markdown-syntax: #c8d3f5;
+  --spoiler-revealed-background: #2f334d;
+  --spoiler-hidden-background: #636da6;
+  --android-navigation-bar-background: #2f334d;
+  --android-ripple: #1b1d2b4C;
+  --bg-mod-faint: #1e2030;
+  --bg-mod-subtle: #444a73;
+  --focus-primary: #82aaff;
+  --interactive-normal: #c8d3f5;
+  --interactive-muted: #545c7e4C;
+  --interactive-hover: #c8d3f5;
+  --interactive-active: #c8d3f5;
+  --search-popout-option-non-text-color: #828bb8;
+  --__spoiler-background-color--hidden: #394b70;
+  --__spoiler-warning-background-color: #fca7ea;
+}
+
+div[class*="autocomplete_"] {
+    background-color: #1e2030 !important;
+}
+
+div[class*="autocomplete_"]
+div[class*="categoryHeader"] {
+    background-color: #1e2030 !important;
+}
+
+rect[mask="url(#svg-mask-status-online)"] {
+    fill: #41a6b5;
+}
+
+rect[mask="url(#svg-mask-status-idle)"] {
+    fill: #ffc777;
+}
+
+rect[mask="url(#svg-mask-status-dnd)"] {
+    fill: #c53b53;
+}
+
+rect[mask="url(#svg-mask-status-offline)"] {
+    fill: #737aa2;
+}
+
+/* hljs */
+/* stolen from https://github.com/x6r/dracula/blob/main/addons/hljs-styling.scss :D */
+:root {
+  /* ---- Default Colors -- */
+  --background: var(--background-secondary);
+  --text-default: #828bb8;
+  --color-1: #ff757f;
+  --color-2: #ff966c;
+  --color-3: #ffc777;
+  --color-4: #c3e88d;
+  --color-5: #4fd6be;
+  --color-6: #b4f9f8;
+  --color-7: #0db9d7;
+  --color-8: #86e1fc;
+  --color-9: #82aaff;
+  --color-10: #c099ff;
+  --color-11: #c8d3f5;
+  /* ---- HLJS Default -- */
+  --hljs-attribute: var(--color-7);
+  --hljs-nomarkup: var(--color-8);
+  --hljs-variable: var(--color-11);
+  --hljs-meta: var(--color-8);
+  --hljs-meta-string: var(--color-4);
+  --hljs-meta-keyword: var(--hljs-meta);
+  --hljs-literal: var(--color-2);
+  --hljs-section: var(--color-9);
+  --hljs-number: var(--color-2);
+  --hljs-name: var(--color-4);
+  --hljs-selector-tag: var(--color-4);
+  --hljs-selector-class: var(--color-9);
+  --hljs-selector-attr: var(--color-7);
+  --hljs-selector-pseudo: var(--color-7);
+  --hljs-selector-id: var(--hljs-selector-class);
+  --hljs-keyword: var(--color-10);
+  --hljs-built_in: var(--color-3);
+  --hljs-title: var(--color-9);
+  --hljs-link: var(--color-5);
+  --hljs-bullet: var(--color-10);
+  --hljs-symbol: var(--color-1);
+  --hljs-addition: var(--color-1);
+  --hljs-deletion: var(--color-5);
+  --hljs-attr: var(--color-2);
+  --hljs-punctuation: var(--text-default);
+  --hljs-regexp: var(--color-6);
+  --hljs-type: var(--color-10);
+  --hljs-operator: var(--color-10);
+  --hljs-rest_arg: var(--text-default);
+  --hljs-template-variable: var(--color-11);
+  /* ---- HLJS Specific -- */
+  /* --> Params */
+  --hljs-params: var(--text-default);
+  --hljs-params-attr: var(--hljs-params);
+  /* --> Comment */
+  --hljs-comment: #636da6;
+  --hljs-comment-doctag: var(--hljs-comment);
+  /* --> String */
+  --hljs-string: var(--color-4);
+  --hljs-string-subst: var(--color-5);
+  --hljs-string-template-variable: var(--color-2);
+  /* --> Tag */
+  --hljs-tag: var(--color-7);
+  --hljs-tag-name: var(--color-10);
+  --hljs-tag-attr: var(--color-5);
+  /* --> Function */
+  --hljs-function: var(--text-default);
+  --hljs-function-keyword: var(--hljs-keyword);
+  --hljs-function-title: var(--hljs-title);
+  --hljs-function-params: var(--hljs-params);
+  --hljs-function-literal: var(--hljs-literal);
+  --hljs-function-operator: var(--hljs-operator);
+  /* --> Class */
+  --hljs-class: var(--text-default);
+  --hljs-class-keyword: var(--color-6);
+  --hljs-class-title: var(--color-7);
+}
+
+#app-mount .hljs {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", var(--font-code),
+    monospace;
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+#app-mount .codeLine-3a3dbd {
+  color: var(--text-default);
+}
+
+#app-mount .hljs-comment {
+  color: var(--hljs-comment);
+}
+
+#app-mount .hljs-attribute {
+  color: var(--hljs-attribute);
+}
+
+#app-mount .hljs-nomarkup {
+  color: var(--hljs-nomarkup);
+}
+
+#app-mount .hljs-variable {
+  color: var(--hljs-variable);
+}
+
+#app-mount .hljs-meta {
+  color: var(--hljs-meta);
+}
+
+#app-mount .hljs-meta-string {
+  color: var(--hljs-meta-string);
+}
+
+#app-mount .hljs-meta-keyword {
+  color: var(--hljs-meta-keyword);
+}
+
+#app-mount .hljs-literal {
+  color: var(--hljs-literal);
+}
+
+#app-mount .hljs-string {
+  color: var(--hljs-string);
+}
+
+#app-mount .hljs-section {
+  color: var(--hljs-section);
+}
+
+#app-mount .hljs-number {
+  color: var(--hljs-number);
+}
+
+#app-mount .hljs-tag {
+  color: var(--hljs-tag);
+}
+
+#app-mount .hljs-name {
+  color: var(--hljs-name);
+}
+
+#app-mount .hljs-selector-tag {
+  color: var(--hljs-selector-tag);
+}
+
+#app-mount .hljs-selector-class {
+  color: var(--hljs-selector-class);
+}
+
+#app-mount .hljs-selector-attr {
+  color: var(--hljs-selector-attr);
+}
+
+#app-mount .hljs-selector-pseudo {
+  color: var(--hljs-selector-pseudo);
+}
+
+#app-mount :not(.hljs-function) > .hljs-keyword {
+  color: var(--color10);
+  font-style: italic;
+}
+
+#app-mount .hljs-function {
+  color: var(--hljs-function);
+}
+
+#app-mount .hljs-built_in {
+  color: var(--hljsbuilt_in);
+}
+
+#app-mount .hljs-title {
+  color: var(--hljs-title);
+}
+
+#app-mount .hljs-link {
+  color: var(--hljs-link);
+}
+
+#app-mount .hljs-bullet {
+  color: var(--hljs-bullet);
+}
+
+#app-mount .hljs-symbol {
+  color: var(--hljs-symbol);
+}
+
+#app-mount .hljs-addition {
+  color: var(--hljs-addition);
+}
+
+#app-mount .hljs-deletion {
+  color: var(--hljs-deletion);
+}
+
+#app-mount .hljs-attr {
+  color: var(--hljs-attr);
+}
+
+#app-mount .hljs-punctuation {
+  color: var(--hljs-punctuation);
+}
+
+#app-mount .hljs-regexp {
+  color: var(--hljs-regexp);
+}
+
+#app-mount .hljs-type {
+  color: var(--hljs-type);
+}
+
+#app-mount .hljs-selector-id {
+  color: var(--hljs-selector-id);
+}
+
+#app-mount .hljs-params {
+  color: var(--hljs-params);
+}
+
+#app-mount .hljs-operator {
+  color: var(--hljs-operator);
+}
+
+#app-mount .hljs-rest_arg {
+  color: var(--hljs-rest_arg);
+}
+
+#app-mount .hljs-template-variable {
+  color: var(--hljs-template-variable);
+}
+
+#app-mount .hljs-comment .hljs-doctag {
+  color: var(--hljs-comment-doctag);
+}
+
+#app-mount .hljs-params .hljs-attr {
+  color: var(--hljs-params-attr);
+}
+
+#app-mount .hljs-string .hljs-subst {
+  color: var(--hljs-string-subst);
+}
+
+#app-mount .hljs-string .hljs-template-variable {
+  color: var(--hljs-string-template-variable);
+}
+
+#app-mount .hljs-tag .hljs-name {
+  color: var(--hljs-tag-name);
+}
+
+#app-mount .hljs-tag .hljs-attr {
+  color: var(--hljs-tag-attr);
+}
+
+#app-mount .hljs-function .hljs-keyword {
+  color: var(--hljs-function-keyword);
+}
+
+#app-mount .hljs-function .hljs-title {
+  color: var(--hljs-function-title);
+}
+
+#app-mount .hljs-function .hljs-literal {
+  color: var(--hljs-function-literal);
+}
+
+#app-mount .hljs-function .hljs-params {
+  color: var(--hljs-function-params);
+}
+
+#app-mount .hljs-function .hljs-operator {
+  color: var(--hljs-function-operator);
+}
+
+#app-mount .hljs-class .hljs-keyword {
+  color: var(--hljs-class-keyword);
+}
+
+#app-mount .hljs-class .hljs-title {
+  color: var(--hljs-class-title);
+}
+
+/* Haskell Specific Syntax */
+#app-mount .hs .hljs-type {
+  color: var(--color-7);
+}
+
+/* Lua Specific Syntax */
+#app-mount .lua .hljs-built_in {
+  color: var(--color-7);
+}
+
+/* Clang Specific Syntax */
+#app-mount .c .hljs-keyword {
+  color: var(--color-7);
+}
+#app-mount .c .hljs-built_in {
+  color: var(--color-9);
+}
+#app-mount .c > .hljs-keyword {
+  color: var(--color-10);
+}
+
+/* CSS Specific Syntax */
+#app-mount .css .hljs-built_in {
+  color: var(--color-5);
+}
+
+/* Rust Specific Syntax */
+#app-mount .rust .hljs-built_in {
+  color: var(--color-7);
+}
+
+/* PHP Specific Syntax */
+#app-mount .php .hljs-variable {
+  color: var(--color-10);
+}

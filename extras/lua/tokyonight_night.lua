@@ -3,6 +3,7 @@ local colors = {
   _style = "night",
   bg = "#1a1b26",
   bg_dark = "#16161e",
+  bg_dark1 = "#0C0E14",
   bg_float = "#16161e",
   bg_highlight = "#292e42",
   bg_popup = "#16161e",
