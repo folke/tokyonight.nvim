@@ -30,6 +30,7 @@ function M.generate(colors)
   --background-mobile-secondary: ${bg_dark};
   --bg-base-secondary: ${bg_dark};
   --bg-surface-raised: ${bg_dark};
+  --bg-mod-faint: ${bg_dark1};
   --home-background: ${bg};
   --chat-background: ${bg};
   --chat-border: ${bg_highlight};
@@ -74,13 +75,14 @@ function M.generate(colors)
   --yellow-300: ${warning};
   --red-400: ${red};
   --primary-100: ${dark5};
-  --primary-300: ${dark5};
+  --primary-300: ${dark3};
   --primary-400: ${dark5};
+  --primary-500: ${fg_gutter};
+  --white-500: ${fg};
   --primary-dark-700: ${bg_highlight};
   --primary-800: ${bg_highlight};
   --status-green-560: ${hint};
   --white-400: ${fg};
-  --white-500: ${fg};
   --guild-boosting-pink: ${magenta};
   --premium-perk-yellow: ${warning};
   --premium-perk-purple: ${purple};
@@ -147,7 +149,7 @@ function M.generate(colors)
   --scrollbar-auto-track: ${bg_highlight};
   --scrollbar-auto-scrollbar-color-thumb: ${blue};
   --scrollbar-auto-scrollbar-color-track: ${bg_highlight};
-  --input-background: ${bg_highlight};
+  --input-background: ${bg_dark}cf;
   --input-placeholder-text: ${dark5};
   --logo-primary: ${fg};
   --control-brand-foreground: ${blue};
@@ -171,7 +173,6 @@ function M.generate(colors)
   --spoiler-hidden-background: ${comment};
   --android-navigation-bar-background: ${bg_highlight};
   --android-ripple: ${black}4C;
-  --bg-mod-faint: ${bg_dark};
   --bg-mod-subtle: ${terminal_black};
   --focus-primary: ${blue};
   --interactive-normal: ${fg};
