@@ -1,8 +1,12 @@
-To use any of these themes in Ghostty, just clone the tokyonight repo
-and set the theme to the absolute path of the theme file.
+Create ` ~/.config/ghostty/themes`
+and download theme file into `themes` directory.
+Then in `~/.config/ghostty/config` chose the theme.
 
 Example:
 
 ```ini
-theme = "/home/folke/projects/tokyonight.nvim/extras/ghostty/tokyonight_night"
+theme = "tokyonight_night"
 ```
+
+For full list of installed themes:
+`ghostty +list-themes`
