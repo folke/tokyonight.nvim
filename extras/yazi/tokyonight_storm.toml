@@ -31,15 +31,21 @@ count_selected = { fg = "#c0caf5", bg = "#3d59a1" }
 border_symbol = "│"
 border_style  = { fg = "#29a4bd" }
 
+# Mode
+[mode]
+normal_main = { fg = "#1f2335", bg = "#7aa2f7", bold = true }
+normal_alt  = { fg = "#7aa2f7", bg = "#1f2335", bold = true }
+
+select_main = { fg = "#1f2335", bg = "#bb9af7", bold = true }
+select_alt  = { fg = "#bb9af7", bg = "#1f2335", bold = true }
+
+unset_main  = { fg = "#1f2335", bg = "#9d7cd8", bold = true }
+unset_alt   = { fg = "#9d7cd8", bg = "#1f2335", bold = true }
+
 [status]
 separator_open  = ""
 separator_close = ""
 separator_style = { fg = "#3b4261", bg = "#3b4261" }
-
-# Mode
-mode_normal = { fg = "#1f2335", bg = "#7aa2f7", bold = true }
-mode_select = { fg = "#1f2335", bg = "#bb9af7", bold = true }
-mode_unset  = { fg = "#1f2335", bg = "#9d7cd8", bold = true }
 
 # Progress
 progress_label  = { fg = "#a9b1d6", bold = true }
@@ -47,11 +53,11 @@ progress_normal = { fg = "#24283b" }
 progress_error  = { fg = "#f7768e" }
 
 # Permissions
-permissions_t = { fg = "#7aa2f7" }
-permissions_r = { fg = "#e0af68" }
-permissions_w = { fg = "#f7768e" }
-permissions_x = { fg = "#9ece6a" }
-permissions_s = { fg = "#414868" }
+perm_type  = { fg = "#7aa2f7" }
+perm_read  = { fg = "#e0af68" }
+perm_write = { fg = "#f7768e" }
+perm_exec  = { fg = "#9ece6a" }
+perm_sep   = { fg = "#414868" }
 
 [select]
 border   = { fg = "#29a4bd" }
