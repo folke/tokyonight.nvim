@@ -9,7 +9,7 @@ function M.generate(colors)
     [[
 [manager]
 # NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
-# highlight = "path/to/tmTheme"
+# syntect_theme = "path/to/tmTheme"
 
 cwd = { fg = "${fg_dark}", italic = true }
 
@@ -36,19 +36,25 @@ tab_width    = 1
 count_copied   = { fg = "${fg}", bg = "${green2}" }
 count_cut      = { fg = "${fg}", bg = "${red1}" }
 count_selected = { fg = "${fg}", bg = "${blue0}" }
+
 # Border
 border_symbol = "│"
 border_style  = { fg = "${border_highlight}" }
 
-[status]
-separator_open  = ""
-separator_close = ""
-separator_style = { fg = "${fg_gutter}", bg = "${fg_gutter}" }
+[mode]
+normal_main = { fg = "${black}", bg = "${blue}", bold = true }
+normal_alt  = { fg = "${blue}", bg = "${fg_gutter}" }
 
-# Mode
-mode_normal = { fg = "${bg_dark}", bg = "${blue}", bold = true }
-mode_select = { fg = "${bg_dark}", bg = "${magenta}", bold = true }
-mode_unset  = { fg = "${bg_dark}", bg = "${purple}", bold = true }
+select_main = { fg = "${black}", bg = "${magenta}", bold = true }
+select_alt  = { fg = "${magenta}", bg = "${fg_gutter}" }
+
+unset_main  = { fg = "${black}", bg = "${purple}", bold = true }
+unset_alt   = { fg = "${purple}", bg = "${fg_gutter}" }
+
+[status]
+separator_open    = ""
+separator_close   = ""
+# separator_style = { fg = "${fg_gutter}", bg = "${fg_gutter}" }
 
 # Progress
 progress_label  = { fg = "${fg_dark}", bold = true }
@@ -56,13 +62,13 @@ progress_normal = { fg = "${bg}" }
 progress_error  = { fg = "${red}" }
 
 # Permissions
-permissions_t = { fg = "${blue}" }
-permissions_r = { fg = "${yellow}" }
-permissions_w = { fg = "${red}" }
-permissions_x = { fg = "${green}" }
-permissions_s = { fg = "${terminal_black}" }
+perm_type  = { fg = "${blue}" }
+perm_read  = { fg = "${yellow}" }
+perm_write = { fg = "${red}" }
+perm_exec  = { fg = "${green}" }
+perm_sep   = { fg = "${terminal_black}" }
 
-[select]
+[pick]
 border   = { fg = "${border_highlight}" }
 active   = { fg = "${fg}",  bg = "${bg_visual}" }
 inactive = { fg = "${fg}" }
@@ -70,7 +76,7 @@ inactive = { fg = "${fg}" }
 # Input
 [input]
 border   = { fg = "${blue2}" }
-title    = {}
+title    = { fg = "${blue2}" }
 value    = { fg = "${purple}" }
 selected = { bg = "${bg_visual}" }
 
@@ -80,33 +86,56 @@ border   = { fg = "${blue2}" }
 active   = { fg = "${fg}", bg = "${bg_visual}" }
 inactive = { fg = "${fg}" }
 
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
 # Tasks
 [tasks]
 border  = { fg = "${border_highlight}" }
-title   = {}
+title   = { fg = "${border_highlight}" }
 hovered = { fg = "${fg}", bg="${bg_visual}" }
 
 # Which
 [which]
-cols = 3
+cols            = 3
 mask            = { bg = "${bg_dark}" }
 cand            = { fg = "${cyan}" }
 rest            = { fg = "${blue}" }
 desc            = { fg = "${magenta}" }
-separator       = "  "
+separator       = " ➜ "
 separator_style = { fg = "${comment}" }
+
+# Confirm
+[confirm]
+border  = { fg = "${blue2}" }
+title   = { fg = "${border_highlight}" }
+content = {}
+list    = {}
+btn_yes = { bg = "${bg_visual}" }
+btn_no  = {}
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# Spot
+[spot]
+border  = { fg = "${border_highlight}" }
+title   = { fg = "${border_highlight}" }
 
 # Notify
 [notify]
-title_info  = { fg = "${blue2}" }
-title_warn  = { fg = "${yellow}" }
-title_error = { fg = "${red}" }
+title_info  = { fg = "${info}" }
+title_warn  = { fg = "${warning}" }
+title_error = { fg = "${error}" }
+
+icon_error = ""
+icon_warn = ""
+icon_info = ""
 
 # Help
 [help]
 on      = { fg = "${green}" }
 run     = { fg = "${magenta}" }
-hovered = { bg = "${bg_visual}" }
+hovered = { bg = "${bg_highlight}" }
 footer  = { fg = "${fg}", bg = "${bg}" }
 
 [filetype]
