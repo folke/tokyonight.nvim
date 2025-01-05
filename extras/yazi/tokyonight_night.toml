@@ -1,6 +1,6 @@
 [manager]
 # NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
-# highlight = "path/to/tmTheme"
+# syntect_theme = "path/to/tmTheme"
 
 cwd = { fg = "#a9b1d6", italic = true }
 
@@ -27,19 +27,25 @@ tab_width    = 1
 count_copied   = { fg = "#c0caf5", bg = "#41a6b5" }
 count_cut      = { fg = "#c0caf5", bg = "#db4b4b" }
 count_selected = { fg = "#c0caf5", bg = "#3d59a1" }
+
 # Border
 border_symbol = "│"
 border_style  = { fg = "#27a1b9" }
 
-[status]
-separator_open  = ""
-separator_close = ""
-separator_style = { fg = "#3b4261", bg = "#3b4261" }
+[mode]
+normal_main = { fg = "#15161e", bg = "#7aa2f7", bold = true }
+normal_alt  = { fg = "#7aa2f7", bg = "#3b4261" }
 
-# Mode
-mode_normal = { fg = "#16161e", bg = "#7aa2f7", bold = true }
-mode_select = { fg = "#16161e", bg = "#bb9af7", bold = true }
-mode_unset  = { fg = "#16161e", bg = "#9d7cd8", bold = true }
+select_main = { fg = "#15161e", bg = "#bb9af7", bold = true }
+select_alt  = { fg = "#bb9af7", bg = "#3b4261" }
+
+unset_main  = { fg = "#15161e", bg = "#9d7cd8", bold = true }
+unset_alt   = { fg = "#9d7cd8", bg = "#3b4261" }
+
+[status]
+separator_open    = ""
+separator_close   = ""
+# separator_style = { fg = "#3b4261", bg = "#3b4261" }
 
 # Progress
 progress_label  = { fg = "#a9b1d6", bold = true }
@@ -47,13 +53,13 @@ progress_normal = { fg = "#1a1b26" }
 progress_error  = { fg = "#f7768e" }
 
 # Permissions
-permissions_t = { fg = "#7aa2f7" }
-permissions_r = { fg = "#e0af68" }
-permissions_w = { fg = "#f7768e" }
-permissions_x = { fg = "#9ece6a" }
-permissions_s = { fg = "#414868" }
+perm_type  = { fg = "#7aa2f7" }
+perm_read  = { fg = "#e0af68" }
+perm_write = { fg = "#f7768e" }
+perm_exec  = { fg = "#9ece6a" }
+perm_sep   = { fg = "#414868" }
 
-[select]
+[pick]
 border   = { fg = "#27a1b9" }
 active   = { fg = "#c0caf5",  bg = "#283457" }
 inactive = { fg = "#c0caf5" }
@@ -61,7 +67,7 @@ inactive = { fg = "#c0caf5" }
 # Input
 [input]
 border   = { fg = "#0db9d7" }
-title    = {}
+title    = { fg = "#0db9d7" }
 value    = { fg = "#9d7cd8" }
 selected = { bg = "#283457" }
 
@@ -71,33 +77,56 @@ border   = { fg = "#0db9d7" }
 active   = { fg = "#c0caf5", bg = "#283457" }
 inactive = { fg = "#c0caf5" }
 
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
 # Tasks
 [tasks]
 border  = { fg = "#27a1b9" }
-title   = {}
+title   = { fg = "#27a1b9" }
 hovered = { fg = "#c0caf5", bg="#283457" }
 
 # Which
 [which]
-cols = 3
+cols            = 3
 mask            = { bg = "#16161e" }
 cand            = { fg = "#7dcfff" }
 rest            = { fg = "#7aa2f7" }
 desc            = { fg = "#bb9af7" }
-separator       = "  "
+separator       = " ➜ "
 separator_style = { fg = "#565f89" }
+
+# Confirm
+[confirm]
+border  = { fg = "#0db9d7" }
+title   = { fg = "#27a1b9" }
+content = {}
+list    = {}
+btn_yes = { bg = "#283457" }
+btn_no  = {}
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# Spot
+[spot]
+border  = { fg = "#27a1b9" }
+title   = { fg = "#27a1b9" }
 
 # Notify
 [notify]
 title_info  = { fg = "#0db9d7" }
 title_warn  = { fg = "#e0af68" }
-title_error = { fg = "#f7768e" }
+title_error = { fg = "#db4b4b" }
+
+icon_error = ""
+icon_warn = ""
+icon_info = ""
 
 # Help
 [help]
 on      = { fg = "#9ece6a" }
 run     = { fg = "#bb9af7" }
-hovered = { bg = "#283457" }
+hovered = { bg = "#292e42" }
 footer  = { fg = "#c0caf5", bg = "#1a1b26" }
 
 [filetype]
