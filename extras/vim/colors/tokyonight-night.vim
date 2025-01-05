@@ -14,6 +14,10 @@ hi BlinkCmpKindTabNine guibg=NONE guifg=#1abc9c
 hi BlinkCmpLabel guibg=NONE guifg=#c0caf5
 hi BlinkCmpLabelDeprecated gui=strikethrough guibg=NONE guifg=#3b4261
 hi BlinkCmpLabelMatch guibg=NONE guifg=#2ac3de
+hi BlinkCmpMenu guibg=#16161e guifg=#c0caf5
+hi BlinkCmpMenuBorder guibg=#16161e guifg=#27a1b9
+hi BlinkCmpSignatureHelp guibg=#16161e guifg=#c0caf5
+hi BlinkCmpSignatureHelpBorder guibg=#16161e guifg=#27a1b9
 hi Bold gui=bold guibg=NONE guifg=#c0caf5
 hi Character guibg=NONE guifg=#9ece6a
 hi ColorColumn guibg=#15161e

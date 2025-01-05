@@ -483,6 +483,22 @@ local highlights = {
     bg = "NONE",
     fg = "#2ac3de"
   },
+  BlinkCmpMenu = {
+    bg = "#16161e",
+    fg = "#c0caf5"
+  },
+  BlinkCmpMenuBorder = {
+    bg = "#16161e",
+    fg = "#27a1b9"
+  },
+  BlinkCmpSignatureHelp = {
+    bg = "#16161e",
+    fg = "#c0caf5"
+  },
+  BlinkCmpSignatureHelpBorder = {
+    bg = "#16161e",
+    fg = "#27a1b9"
+  },
   Bold = {
     bold = true,
     fg = "#c0caf5"
