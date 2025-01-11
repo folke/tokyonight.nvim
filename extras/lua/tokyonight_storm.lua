@@ -2288,6 +2288,21 @@ local highlights = {
     bg = "#24283b",
     fg = "#c0caf5"
   },
+  SnacksPickerBoxTitle = {
+    bg = "#1f2335",
+    fg = "#ff9e64"
+  },
+  SnacksPickerInputBorder = {
+    bg = "#1f2335",
+    fg = "#ff9e64"
+  },
+  SnacksPickerInputTitle = {
+    bg = "#1f2335",
+    fg = "#ff9e64"
+  },
+  SnacksPickerSelected = {
+    fg = "#ff007c"
+  },
   SnacksProfilerBadgeInfo = {
     bg = "#25384b",
     fg = "#2ac3de"
