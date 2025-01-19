@@ -54,6 +54,7 @@ function M.get(c, opts)
     SnacksPickerInputTitle         = { fg = c.orange, bg = c.bg_float },
     SnacksPickerBoxTitle         = { fg = c.orange, bg = c.bg_float },
     SnacksPickerSelected    = { fg = c.magenta2},
+    SnacksPickerFlag         = "SnacksProfilerBadgeInfo",
   }
   for i, color in ipairs(c.rainbow) do
     ret["SnacksIndent" .. i] = { fg = color, nocombine = true }
