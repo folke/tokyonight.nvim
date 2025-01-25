@@ -24,10 +24,12 @@ function M.get(c, opts)
     EndOfBuffer                 = { fg = c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg                    = { fg = c.error }, -- error messages on the command line
     VertSplit                   = { fg = c.border }, -- the column separating vertically split windows
-    WinSeparator                = { fg = c.border, bold = true }, -- the column separating vertically split windows
+    WinSeparator                = { fg = opts.dim_inactive and c.fg_gutter or c.border, bg = opts.dim_inactive and c.bg_dark or c.none, bold = true }, -- the column separating vertically split windows
     Folded                      = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
-    FoldColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.comment }, -- 'foldcolumn'
-    SignColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
+    FoldColumn                  = { fg = c.comment }, -- 'foldcolumn'
+    CursorLineFold              = { fg = c.orange, bold = true }, -- Like FoldColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
+    SignColumn                  = { fg = c.fg_gutter }, -- column where |signs| are displayed
+    CursorLineSign              = { fg = c.orange, bold = true }, -- Like SignColumn when 'cursorline' or 'relativenumber' is set for the cursor line.
     SignColumnSB                = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr                      = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
