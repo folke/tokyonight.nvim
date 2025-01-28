@@ -2292,6 +2292,12 @@ local highlights = {
     bg = "#1e2030",
     fg = "#ff966c"
   },
+  SnacksPickerEditWin = {
+    bg = "#ff007c",
+    bold = true,
+    fg = "#c8d3f5"
+  },
+  SnacksPickerFlag = "SnacksProfilerBadgeInfo",
   SnacksPickerInputBorder = {
     bg = "#1e2030",
     fg = "#ff966c"
