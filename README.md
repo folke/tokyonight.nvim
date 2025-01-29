@@ -147,6 +147,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty) |
 | [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](extras/lazygit) |
 | [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
+| [Posting](https://posting.sh/) | [extras/posting](extras/posting) |
 | [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | [extras/process_compose](extras/process_compose) |
 | [Slack](https://slack.com) | [extras/slack](extras/slack) |

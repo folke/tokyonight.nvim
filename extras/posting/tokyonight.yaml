@@ -1,0 +1,15 @@
+###
+# NOTE: Please add your user defined theme file path to posting.yaml
+#
+# theme_directory: /home/username/.config/posting/themes
+###
+
+name: tokyonight
+primary: "#86e1fc"
+secondary: "#ff757f" # method selector, some minor labels
+accent: "#4fd6be" # header text, scrollbars, cursors, focus highlights
+surface: "#16161e" # surface colors
+background: "#0C0E14" # background colors
+error: "#db4b4b" # error messages
+success: "#9fe044" # success messages
+warning: "#faba4a" # warning messages
