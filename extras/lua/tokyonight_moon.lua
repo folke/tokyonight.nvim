@@ -2302,6 +2302,11 @@ local highlights = {
     fg = "#ff966c"
   },
   SnacksPickerPickWin = {
+    bg = "#3e68d7",
+    bold = true,
+    fg = "#c8d3f5"
+  },
+  SnacksPickerPickWinCurrent = {
     bg = "#ff007c",
     bold = true,
     fg = "#c8d3f5"
