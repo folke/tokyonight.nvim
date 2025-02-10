@@ -54,7 +54,7 @@ function M.get(c, opts)
     SnacksPickerInputTitle         = { fg = c.orange, bg = c.bg_float },
     SnacksPickerBoxTitle         = { fg = c.orange, bg = c.bg_float },
     SnacksPickerSelected    = { fg = c.magenta2},
-    SnacksPickerFlag         = "SnacksProfilerBadgeInfo",
+    SnacksPickerToggle         = "SnacksProfilerBadgeInfo",
     SnacksPickerPickWinCurrent   = { fg = c.fg, bg = c.magenta2, bold = true },
     SnacksPickerPickWin   = { fg = c.fg, bg = c.bg_search, bold = true },
   }

@@ -133,11 +133,11 @@ function M.get(c, opts)
     healthWarning               = { fg = c.warning },
 
     -- diff (not needed anymore?)
-    diffAdded                   = { fg = c.git.add },
-    diffRemoved                 = { fg = c.git.delete },
-    diffChanged                 = { fg = c.git.change },
-    diffOldFile                 = { fg = c.yellow },
-    diffNewFile                 = { fg = c.orange },
+    diffAdded                   = { bg = c.diff.add, fg = c.git.add },
+    diffRemoved                 = { bg = c.diff.delete, fg = c.git.delete },
+    diffChanged                 = { bg = c.diff.change, fg = c.git.change },
+    diffOldFile                 = { fg = c.blue1, bg=c.diff.delete },
+    diffNewFile                 = { fg = c.blue1, bg=c.diff.add },
     diffFile                    = { fg = c.blue },
     diffLine                    = { fg = c.comment },
     diffIndexLine               = { fg = c.magenta },
