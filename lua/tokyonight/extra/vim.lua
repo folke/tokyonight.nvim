@@ -20,8 +20,8 @@ function M.generate(colors, groups, opts)
   groups = Groups.setup(colors, opts)
   local lines = {
     ([[
-let g:colors_name = "tokyonight-%s"
 hi clear
+let g:colors_name = "tokyonight-%s"
   ]]):format(colors._style),
   }
 
