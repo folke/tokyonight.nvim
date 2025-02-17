@@ -14,10 +14,10 @@ constructor = { fg = "#65bcff" }
 "diagnostic.hint" = { underline = { style = "curl" } }
 "diagnostic.info" = { underline = { style = "curl" } }
 "diagnostic.warning" = { underline = { style = "curl" } }
-"diff.delta" = { fg = "#7ca1f2" }
+"diff.delta" = { bg = "#252a3f", fg = "#7ca1f2" }
 "diff.delta.moved" = { fg = "#82aaff" }
-"diff.minus" = { fg = "#e26a75" }
-"diff.plus" = { fg = "#b8db87" }
+"diff.minus" = { bg = "#3a273a", fg = "#e26a75" }
+"diff.plus" = { bg = "#273849", fg = "#b8db87" }
 error = { fg = "#c53b53" }
 function = { fg = "#82aaff" }
 "function.builtin" = { fg = "#65bcff" }
