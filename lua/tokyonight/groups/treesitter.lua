@@ -67,7 +67,7 @@ function M.get(c, opts)
     ["@markup.strikethrough"]       = { strikethrough = true },
     ["@markup.strong"]              = { bold = true },
     ["@markup.underline"]           = { underline = true },
-    ["@module"]                     = "Include",
+    ["@module"]                     = "Directory",
     ["@module.builtin"]             = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@namespace.builtin"]          = "@variable.builtin",
     ["@none"]                       = {},
