@@ -273,7 +273,7 @@ local highlights = {
   ["@markup.underline"] = {
     underline = true
   },
-  ["@module"] = "Include",
+  ["@module"] = "Directory",
   ["@module.builtin"] = {
     fg = "#ff757f"
   },
