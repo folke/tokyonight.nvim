@@ -4,7 +4,8 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  colors.bg_search = util.blend_bg(colors.info, 0.1)
+  colors.search_bg = util.blend_bg(colors.info, 0.1)
+  colors.pmenusel = util.blend_bg(colors.fg_gutter, 0.8)
   local yazi = util.template(
     [[
 [mgr]
@@ -19,10 +20,10 @@ preview_hovered = { bg = "${bg_highlight}" }
 
 # Find
 find_keyword  = { fg = "${bg_dark}", bg = "${orange}", bold = true }
-find_position = { fg = "${blue2}", bg = "${bg_search}", bold = true }
+find_position = { fg = "${info}", bg = "${search_bg}", bold = true }
 
 # Marker
-marker_copied   = { fg = "${green1}", bg = "${green1}" }
+marker_copied   = { fg = "${green}", bg = "${green}" }
 marker_cut      = { fg = "${red}", bg = "${red}" }
 marker_marked   = { fg = "${magenta}", bg = "${magenta}" }
 marker_selected = { fg = "${blue}", bg = "${blue}" }
@@ -33,9 +34,9 @@ tab_inactive = { fg = "${fg_gutter}", bg = "${bg}" }
 tab_width    = 1
 
 # Count
-count_copied   = { fg = "${fg}", bg = "${green2}" }
-count_cut      = { fg = "${fg}", bg = "${red1}" }
-count_selected = { fg = "${fg}", bg = "${blue0}" }
+count_copied   = { fg = "${bg_dark}", bg = "${green}" }
+count_cut      = { fg = "${bg_dark}", bg = "${red}" }
+count_selected = { fg = "${bg_dark}", bg = "${blue}" }
 
 # Border
 border_symbol = "│"
@@ -52,14 +53,14 @@ unset_main  = { fg = "${black}", bg = "${purple}", bold = true }
 unset_alt   = { fg = "${purple}", bg = "${fg_gutter}" }
 
 [status]
-separator_open    = ""
-separator_close   = ""
-# separator_style = { fg = "${fg_gutter}", bg = "${fg_gutter}" }
+overall   = { fg = "${fg}", bg = "${bg_dark}" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
 # Progress
-progress_label  = { fg = "${fg_dark}", bold = true }
-progress_normal = { fg = "${bg}" }
-progress_error  = { fg = "${red}" }
+progress_label  = { fg = "${fg}", bold = true }
+progress_normal = { fg = "${blue0}", bg = "${bg_highlight}" }
+progress_error  = { fg = "${red1}", bg = "${bg_highlight}" }
 
 # Permissions
 perm_type  = { fg = "${blue}" }
@@ -81,20 +82,20 @@ value    = { fg = "${purple}" }
 selected = { bg = "${bg_visual}" }
 
 # Completion
-[completion]
+[cmp]
 border   = { fg = "${blue2}" }
-active   = { fg = "${fg}", bg = "${bg_visual}" }
+active   = { fg = "${fg}", bg = "${pmenusel}" }
 inactive = { fg = "${fg}" }
 
 icon_file    = ""
-icon_folder  = ""
+icon_folder  = ""
 icon_command = ""
 
 # Tasks
 [tasks]
 border  = { fg = "${border_highlight}" }
 title   = { fg = "${border_highlight}" }
-hovered = { fg = "${fg}", bg="${bg_visual}" }
+hovered = { fg = "${fg}", bg = "${bg_visual}" }
 
 # Which
 [which]
@@ -162,7 +163,8 @@ rules = [
 	{ name = "*", is = "exec"  , fg = "${green}" },
 
 	# Fallback
-	{ name = "*/", fg = "${blue}" }
+	{ name = "*/", fg = "${blue}" },
+	{ name = "*", fg = "${fg}" }
 ]
     ]],
     colors
