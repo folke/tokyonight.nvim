@@ -52,9 +52,9 @@ unset_main  = { fg = "${black}", bg = "${purple}", bold = true }
 unset_alt   = { fg = "${purple}", bg = "${fg_gutter}" }
 
 [status]
-separator_open    = ""
-separator_close   = ""
-# separator_style = { fg = "${fg_gutter}", bg = "${fg_gutter}" }
+overall   = { fg = "${fg}", bg = "${bg_dark}" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
 # Progress
 progress_label  = { fg = "${fg_dark}", bold = true }
