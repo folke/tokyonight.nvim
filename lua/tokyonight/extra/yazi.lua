@@ -162,8 +162,11 @@ rules = [
 	{ name = "*", is = "exec"  , fg = "${green}" },
 
 	# Fallback
-	{ name = "*/", fg = "${blue}" }
+	{ name = "*/", fg = "${blue}" },
+	{ name = "*", fg = "${fg_sidebar}" }
 ]
+
+# TODO: add filetype colors based on mini.icon
     ]],
     colors
   )
