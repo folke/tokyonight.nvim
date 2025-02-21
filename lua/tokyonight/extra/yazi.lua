@@ -57,9 +57,9 @@ sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
 # Progress
-progress_label  = { fg = "${fg_dark}", bold = true }
-progress_normal = { fg = "${bg}" }
-progress_error  = { fg = "${red}" }
+progress_label  = { fg = "${fg}", bold = true }
+progress_normal = { fg = "${blue0}", bg = "${bg_highlight}" }
+progress_error  = { fg = "${red1}", bg = "${bg_highlight}" }
 
 # Permissions
 perm_type  = { fg = "${blue}" }
@@ -94,7 +94,7 @@ icon_command = ""
 [tasks]
 border  = { fg = "${border_highlight}" }
 title   = { fg = "${border_highlight}" }
-hovered = { fg = "${fg}", bg="${bg_visual}" }
+hovered = { fg = "${fg}", bg = "${bg_visual}" }
 
 # Which
 [which]
