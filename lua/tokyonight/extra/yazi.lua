@@ -22,7 +22,7 @@ find_keyword  = { fg = "${bg_dark}", bg = "${orange}", bold = true }
 find_position = { fg = "${blue2}", bg = "${bg_search}", bold = true }
 
 # Marker
-marker_copied   = { fg = "${green1}", bg = "${green1}" }
+marker_copied   = { fg = "${green}", bg = "${green}" }
 marker_cut      = { fg = "${red}", bg = "${red}" }
 marker_marked   = { fg = "${magenta}", bg = "${magenta}" }
 marker_selected = { fg = "${blue}", bg = "${blue}" }
@@ -33,9 +33,9 @@ tab_inactive = { fg = "${fg_gutter}", bg = "${bg}" }
 tab_width    = 1
 
 # Count
-count_copied   = { fg = "${fg}", bg = "${green2}" }
-count_cut      = { fg = "${fg}", bg = "${red1}" }
-count_selected = { fg = "${fg}", bg = "${blue0}" }
+count_copied   = { fg = "${bg_dark}", bg = "${green}" }
+count_cut      = { fg = "${bg_dark}", bg = "${red}" }
+count_selected = { fg = "${bg_dark}", bg = "${blue}" }
 
 # Border
 border_symbol = "│"
