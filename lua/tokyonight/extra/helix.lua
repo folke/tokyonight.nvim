@@ -78,8 +78,8 @@ function M.generate(colors)
       directive = "PreProc",
       ["function"] = "@keyword.function",
       storage = {
-        nil, -- rust: `let`
-        type = nil, -- rust: `struct` & `type`
+        nil,            -- rust: `let`
+        type = nil,     -- rust: `struct` & `type`
         modifier = nil, -- rust: `mut`
       },
     },
@@ -163,6 +163,14 @@ function M.generate(colors)
       background = {
         { "helix", bg = "bg" },
         separator = nil,
+      },
+      bufferline = {
+        nil,
+        active = {
+          "helix",
+          fg = "fg",
+          bg = "bg_visual",
+        },
       },
       cursor = {
         "Cursor",
@@ -343,7 +351,7 @@ function M.pairsByKeys(t, f)
     table.insert(a, n)
   end
   table.sort(a, f)
-  local i = 0 -- iterator variable
+  local i = 0             -- iterator variable
   local iter = function() -- iterator function
     i = i + 1
     if a[i] == nil then
