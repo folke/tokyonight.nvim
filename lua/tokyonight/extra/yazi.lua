@@ -81,13 +81,13 @@ value    = { fg = "${purple}" }
 selected = { bg = "${bg_visual}" }
 
 # Completion
-[completion]
+[cmp]
 border   = { fg = "${blue2}" }
 active   = { fg = "${fg}", bg = "${bg_visual}" }
 inactive = { fg = "${fg}" }
 
 icon_file    = ""
-icon_folder  = ""
+icon_folder  = ""
 icon_command = ""
 
 # Tasks
