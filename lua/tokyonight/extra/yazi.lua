@@ -165,8 +165,6 @@ rules = [
 	{ name = "*/", fg = "${blue}" },
 	{ name = "*", fg = "${fg_sidebar}" }
 ]
-
-# TODO: add filetype colors based on mini.icon
     ]],
     colors
   )
