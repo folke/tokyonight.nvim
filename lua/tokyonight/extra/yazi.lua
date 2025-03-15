@@ -5,6 +5,7 @@ local M = {}
 --- @param colors ColorScheme
 function M.generate(colors)
   colors.bg_search = util.blend_bg(colors.info, 0.1)
+  colors.pmenusel = util.blend_bg(colors.fg_gutter, 0.8)
   local yazi = util.template(
     [[
 [manager]
@@ -83,7 +84,7 @@ selected = { bg = "${bg_visual}" }
 # Completion
 [cmp]
 border   = { fg = "${blue2}" }
-active   = { fg = "${fg}", bg = "${bg_visual}" }
+active   = { fg = "${fg}", bg = "${pmenusel}" }
 inactive = { fg = "${fg}" }
 
 icon_file    = ""
@@ -163,7 +164,7 @@ rules = [
 
 	# Fallback
 	{ name = "*/", fg = "${blue}" },
-	{ name = "*", fg = "${fg_sidebar}" }
+	{ name = "*", fg = "${fg}" }
 ]
     ]],
     colors
