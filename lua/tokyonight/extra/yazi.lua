@@ -4,7 +4,7 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  colors.bg_search = util.blend_bg(colors.info, 0.1)
+  colors.search_bg = util.blend_bg(colors.info, 0.1)
   colors.pmenusel = util.blend_bg(colors.fg_gutter, 0.8)
   local yazi = util.template(
     [[
@@ -20,7 +20,7 @@ preview_hovered = { bg = "${bg_highlight}" }
 
 # Find
 find_keyword  = { fg = "${bg_dark}", bg = "${orange}", bold = true }
-find_position = { fg = "${blue2}", bg = "${bg_search}", bold = true }
+find_position = { fg = "${info}", bg = "${search_bg}", bold = true }
 
 # Marker
 marker_copied   = { fg = "${green}", bg = "${green}" }
