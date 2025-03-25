@@ -30,7 +30,7 @@ The Tokyo Night theme as Tailwind CSS theme color variables. Compatible with ver
 
 Demos for each theme are available on Tailwind CSS's web playground:
 
-- [tokyonight_day](https://play.tailwindcss.com/kHihIJmxtf?layout=horizontal)
-- [tokyonight_moon](https://play.tailwindcss.com/8yI7iYjuFj?layout=horizontal)
-- [tokyonight_night](https://play.tailwindcss.com/GXUSIgFMHC?layout=horizontal)
-- [tokyonight_storm](https://play.tailwindcss.com/CRqAdhUScT?layout=horizontal)
+- [tokyonight_day](https://play.tailwindcss.com/kHihIJmxtf)
+- [tokyonight_moon](https://play.tailwindcss.com/8yI7iYjuFj)
+- [tokyonight_night](https://play.tailwindcss.com/L91QMbz7XU)
+- [tokyonight_storm](https://play.tailwindcss.com/9mZNmRRIVQ)
