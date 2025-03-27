@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+CURRENT_DIR=$(pwd)
+TEMP_DIR=$(mktemp -d) || exit 1
+
+cleanup() {
+  rm -rf "$TEMP_DIR"
+}
+
+trap cleanup EXIT
+
+for json_file in *.json; do
+  base_name=$(basename "$json_file" .json)
+  cp "$json_file" "$TEMP_DIR/settings.json"
+  (cd "$TEMP_DIR" && zip -q "$CURRENT_DIR/${base_name}.zip" settings.json)
+done
