@@ -4,10 +4,7 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  colors = vim.deepcopy(colors)
-  colors._name = string.gsub(colors._name, "_", "-")
-
-  local tailwind_theme = util.template(
+  local tailwindv4 = util.template(
     [[
 @theme inline {
   --color-tokyonight-${_style}-bg: oklch(from ${bg} l c h);
@@ -82,7 +79,7 @@ function M.generate(colors)
     colors
   )
 
-  return tailwind_theme
+  return tailwindv4
 end
 
 return M
