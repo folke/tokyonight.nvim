@@ -70,9 +70,9 @@ function M.generate(colors)
   for i = 1, #colors.rainbow do
     local color_name = rainbow[i]
     local color_hex = colors.rainbow[i]
-    local variant_fname = "vivaldi/" .. colors._name .. "_" .. color_name:lower() .. ".json"
-    print("[write] " .. variant_fname)
-    util.write("extras/" .. variant_fname, generate_theme(colors, color_hex, color_name))
+    local variant_fname = colors._name .. "_" .. color_name:lower() .. ".json"
+    print("[write] vivaldi/" .. variant_fname)
+    util.write("extras/vivaldi/" .. variant_fname, generate_theme(colors, color_hex, color_name))
   end
 
   -- return the first rainbow color (blue) as the default
