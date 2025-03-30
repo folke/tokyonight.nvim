@@ -11,11 +11,12 @@ local M = {}
 function M.get_tokens(colors, opts)
   -- Table is nested for easier import generation:
   --   - Top-level keys (e.g., "Keyword", "Name") are the base token modules used for Python imports.
-  --   - Inner keys (e.g., "Keyword", "Keyword.Constant") are the full Pygments token names mapping to their style definitions.
-  --     The base token style (e.g., for "Keyword") is defined under the key matching the top-level key.
+  --   - Inner keys (e.g., "Keyword", "Keyword.Constant") are the full Pygments token names mapping to
+  --     their style definitions. The base token style (e.g., for "Keyword") is defined under the key
+  --     matching the top-level key.
   --
-  -- All standard tokens are defined, even if the styles are empty and will fall back to the
-  -- base default token styles.
+  -- All standard tokens are defined, even if the styles are empty and will fall back to the base
+  -- default token styles.
   --
   -- Reference
   --   - Docs: https://pygments.org/docs/tokens/
