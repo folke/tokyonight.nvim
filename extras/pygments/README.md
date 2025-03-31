@@ -4,25 +4,40 @@ The Tokyo Night theme collection defined as `Style` classes for the [Pygments](h
 
 ## Installation
 
-This directory is a Python package and can be installed directly using pip or uv. This will register the TokyoNight styles with Pygments via its plugin system.
+This directory is a Python package and can be installed directly using pip or uv. This will register the styles with Pygments via its plugin system.
 
 Choose one of the following installation methods:
 
 **Using pip:**
 
 ```bash
-pip install "git+https://github.com/folke/tokyonight.nvim.git#subdirectory=extras/pygments"
+pip install git+https://github.com/folke/tokyonight.nvim.git@main#subdirectory=extras/pygments
 ```
 
 **Using uv:**
 
 ```bash
-# Install directly
-uv pip install "git+https://github.com/folke/tokyonight.nvim.git#subdirectory=extras/pygments"
-
-# Or, add to your project with uv
-uv add pygments-tokyonight --git "https://github.com/folke/tokyonight.nvim.git" --subdirectory "extras/pygments"
+uv add git+https://github.com/folke/tokyonight.nvim.git@main#subdirectory=extras/pygments
 ```
+
+> [!NOTE]
+>
+> A quick breakdown of the URL structure used for VCS installation using Python installer:
+>
+> ```bash
+> git+https://github.com/folke/tokyonight.nvim.git@main#subdirectory=extras/pygments
+>                                                 ^^^^^
+> ```
+>
+> The `@main` part specifies the git branch to install from. You can change `main` to a specific tag or commit hash if needed.
+>
+> ```bash
+> git+https://github.com/folke/tokyonight.nvim.git@main#subdirectory=extras/pygments
+>                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> ```
+>
+> The `#subdirectory=extras/pygments` part tells the installer to treat the `extras/pygments` directory within the repository as the package root. This part is specific to this installation and should generally not be changed.
+>
 
 ## Usage
 
