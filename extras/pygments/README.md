@@ -2,14 +2,43 @@
 
 The Tokyo Night theme collection defined as `Style` classes for the [Pygments](https://pygments.org) syntax highlighter.
 
+## Installation
+
+This directory is a Python package and can be installed directly using pip or uv. This will register the TokyoNight styles with Pygments via its plugin system.
+
+Choose one of the following installation methods:
+
+**Using pip:**
+
+```bash
+pip install "git+https://github.com/folke/tokyonight.nvim.git#subdirectory=extras/pygments"
+```
+
+**Using uv:**
+
+```bash
+# Install directly
+uv pip install "git+https://github.com/folke/tokyonight.nvim.git#subdirectory=extras/pygments"
+
+# Or, add to your project with uv
+uv add pygments-tokyonight --git "https://github.com/folke/tokyonight.nvim.git" --subdirectory "extras/pygments"
+```
+
 ## Usage
 
-Pygments loads custom styles through its [plugin system](https://pygments.org/docs/plugins/) using Python package `entry_points`.
+Once installed, the following styles will be available to Pygments:
 
-1. Select a generated style file from this directory (e.g., `tokyonight_moon.py`).
-2. Follow the Pygments documentation on [developing styles](https://pygments.org/docs/styledevelopment/) and using [plugins](https://pygments.org/docs/plugins/) to make the style class available to Pygments by installing it within a Python package.
-3. Once installed and registered via entry points under a chosen name (e.g., `tokyonight_moon`), you can use it with Pygments tools:
+*   `tokyonight` (maps to `tokyonight-night`)
+*   `tokyonight-day`
+*   `tokyonight-moon`
+*   `tokyonight-storm`
 
-   ```bash
-   pygmentize -S tokyonight_moon -f terminal256 your_file.ext
-   ```
+You can use them with Pygments tools like `pygmentize`:
+
+```bash
+# Example using the moon style
+pygmentize -S tokyonight-moon -f terminal256 your_file.ext
+
+# Example using the default night style
+pygmentize -S tokyonight -f terminal256 your_file.ext
+```
