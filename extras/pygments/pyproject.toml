@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pygments-tokyonight"
+version = "0.0.1"
+dependencies = ["pygments"]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.entry-points."pygments.styles"]
+tokyonight = "tokyonight_night:TokyoNight"
+tokyonight-day = "tokyonight_day:TokyoNightDay"
+tokyonight-moon = "tokyonight_moon:TokyoNightMoon"
+tokyonight-storm= "tokyonight_storm:TokyoNightStorm"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
