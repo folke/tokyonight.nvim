@@ -198,6 +198,15 @@ class ${_class_name}(Style):
     }
 ]], colors)
 
+  local pyproject_path = "extras/pygments/pyproject.toml"
+  local pyproject_toml = util.read(pyproject_path)
+  pyproject_toml = string.gsub(
+    pyproject_toml,
+    'version%s*=%s*"[^"]*"',
+    string.format('version = "%s"', require("tokyonight.config").version)
+  )
+  util.write(pyproject_path, pyproject_toml)
+
   return pygments
 end
 
