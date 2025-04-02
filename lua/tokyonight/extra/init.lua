@@ -11,6 +11,7 @@ M.extras = {
   delta            = { ext = "gitconfig", url = "https://github.com/dandavison/delta", label = "Delta" },
   discord          = { ext = "css", url ="https://betterdiscord.app/", label = "(Better-)Discord"},
   dunst            = { ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst" },
+  eza              = { ext = "yml", url = "https://eza.rocks", label = "eza" },
   fish             = { ext = "fish", url = "https://fishshell.com/docs/current/index.html", label = "Fish" },
   fish_themes      = { ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting", label = "Fish Themes" },
   foot             = { ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot" },
