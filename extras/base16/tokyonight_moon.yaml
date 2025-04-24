@@ -1,0 +1,21 @@
+system: "base16"
+name: "Tokyo Night Moon"
+author: "folke"
+variant: "dark"
+palette:
+  base00: "#222436" # ----
+  base01: "#2f334d" # ---
+  base02: "#3b4261" # --
+  base03: "#636da6" # -
+  base04: "#828bb8" # +
+  base05: "#c8d3f5" # ++
+  base06: "#89ddff" # +++
+  base07: "#b4f9f8" # ++++
+  base08: "#ff757f" # red
+  base09: "#ff966c" # orange
+  base0A: "#ffc777" # yellow
+  base0B: "#c3e88d" # green
+  base0C: "#86e1fc" # cyan
+  base0D: "#82aaff" # blue
+  base0E: "#fca7ea" # purple
+  base0F: "#c099ff" # magenta
