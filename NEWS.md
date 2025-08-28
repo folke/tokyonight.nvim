@@ -12,7 +12,7 @@ based on the plugins you have installed.
 By default `opts.plugins.all = true` for users not using `lazy.nvim`, which will enable all plugins.
 Set it to `false` to manually enable/disable plugins.
 
-- Loading of your customized `toyonight` theme is automatically cached.
+- Loading of your customized `tokyonight` theme is automatically cached.
   **TN** was already quite fast, but now it's even faster (around 2ms on my machine with all lazy plugins enabled).
 - The `day` style has been updated and fixed
 - removed the option `opts.hide_inactive_statusline`
