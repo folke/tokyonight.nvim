@@ -1,5 +1,5 @@
-let g:colors_name = "tokyonight-day"
 hi clear
+let g:colors_name = "tokyonight-day"
   
 hi ALEErrorSign guibg=NONE guifg=#c64343
 hi ALEWarningSign guibg=NONE guifg=#8c6c3e
@@ -249,14 +249,14 @@ hi WildMenu guibg=#b7c1e3
 hi WinSeparator gui=bold guibg=NONE guifg=#b4b5b9
 hi debugBreakpoint guibg=#cbd9e0 guifg=#07879d
 hi debugPC guibg=#d0d5e3
-hi diffAdded guibg=NONE guifg=#4197a4
-hi diffChanged guibg=NONE guifg=#506d9c
+hi diffAdded guibg=#c8d6dc guifg=#4197a4
+hi diffChanged guibg=#d5d9e4 guifg=#506d9c
 hi diffFile guibg=NONE guifg=#2e7de9
 hi diffIndexLine guibg=NONE guifg=#9854f1
 hi diffLine guibg=NONE guifg=#848cb5
-hi diffNewFile guibg=NONE guifg=#b15c00
-hi diffOldFile guibg=NONE guifg=#8c6c3e
-hi diffRemoved guibg=NONE guifg=#c47981
+hi diffNewFile guibg=#c8d6dc guifg=#188092
+hi diffOldFile guibg=#ddcace guifg=#188092
+hi diffRemoved guibg=#ddcace guifg=#c47981
 hi healthError guibg=NONE guifg=#c64343
 hi healthSuccess guibg=NONE guifg=#387068
 hi healthWarning guibg=NONE guifg=#8c6c3e

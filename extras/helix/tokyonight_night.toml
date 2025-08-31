@@ -14,10 +14,10 @@ constructor = { fg = "#2ac3de" }
 "diagnostic.hint" = { underline = { style = "curl" } }
 "diagnostic.info" = { underline = { style = "curl" } }
 "diagnostic.warning" = { underline = { style = "curl" } }
-"diff.delta" = { fg = "#6183bb" }
+"diff.delta" = { bg = "#1f2231", fg = "#6183bb" }
 "diff.delta.moved" = { fg = "#7aa2f7" }
-"diff.minus" = { fg = "#914c54" }
-"diff.plus" = { fg = "#449dab" }
+"diff.minus" = { bg = "#37222c", fg = "#914c54" }
+"diff.plus" = { bg = "#20303b", fg = "#449dab" }
 error = { fg = "#db4b4b" }
 function = { fg = "#7aa2f7" }
 "function.builtin" = { fg = "#2ac3de" }
@@ -51,7 +51,7 @@ label = { fg = "#7aa2f7" }
 "markup.raw" = { fg = "#9ece6a" }
 "markup.raw.inline" = { bg = "#414868", fg = "#7aa2f7" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-namespace = { fg = "#7dcfff" }
+namespace = { fg = "#7aa2f7" }
 operator = { fg = "#89ddff" }
 special = { fg = "#2ac3de" }
 string = { fg = "#9ece6a" }

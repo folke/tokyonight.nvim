@@ -273,7 +273,7 @@ local highlights = {
   ["@markup.underline"] = {
     underline = true
   },
-  ["@module"] = "Include",
+  ["@module"] = "Directory",
   ["@module.builtin"] = {
     fg = "#f7768e"
   },
@@ -2292,7 +2292,6 @@ local highlights = {
     bg = "#1f2335",
     fg = "#ff9e64"
   },
-  SnacksPickerFlag = "SnacksProfilerBadgeInfo",
   SnacksPickerInputBorder = {
     bg = "#1f2335",
     fg = "#ff9e64"
@@ -2314,6 +2313,7 @@ local highlights = {
   SnacksPickerSelected = {
     fg = "#ff007c"
   },
+  SnacksPickerToggle = "SnacksProfilerBadgeInfo",
   SnacksProfilerBadgeInfo = {
     bg = "#25384b",
     fg = "#2ac3de"
@@ -2562,9 +2562,11 @@ local highlights = {
     bg = "#1f2335"
   },
   diffAdded = {
+    bg = "#283b4d",
     fg = "#449dab"
   },
   diffChanged = {
+    bg = "#272d43",
     fg = "#6183bb"
   },
   diffFile = {
@@ -2577,12 +2579,15 @@ local highlights = {
     fg = "#565f89"
   },
   diffNewFile = {
-    fg = "#ff9e64"
+    bg = "#283b4d",
+    fg = "#2ac3de"
   },
   diffOldFile = {
-    fg = "#e0af68"
+    bg = "#3f2d3d",
+    fg = "#2ac3de"
   },
   diffRemoved = {
+    bg = "#3f2d3d",
     fg = "#914c54"
   },
   dosIniLabel = "@property",
