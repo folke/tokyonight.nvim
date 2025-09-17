@@ -4,11 +4,11 @@
 
 ### About
 
-A Tokyonight theme for `eza`, a modern replacement for `ls`.
+The Tokyonight themes for `eza`, a modern replacement for `ls`.
 
 ### Usage
 
-1. Copy to `~/.config/eza/theme.yml`
+1. Copy the theme `.yml` file `~/.config/eza/theme.yml`
 
 Note: on MacOS, `eza` will look for the theme file in `~/Library/Application Support/eza` by default. That directory can be overridden by setting `EZA_CONFIG_DIR`.
 
