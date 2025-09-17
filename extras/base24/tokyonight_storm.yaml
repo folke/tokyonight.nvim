@@ -1,0 +1,29 @@
+system: "base16"
+name: "Tokyo Night Storm"
+author: "folke"
+variant: "dark"
+palette:
+  base00: "#24283b" # ----
+  base01: "#292e42" # ---
+  base02: "#3b4261" # --
+  base03: "#565f89" # -
+  base04: "#a9b1d6" # +
+  base05: "#c0caf5" # ++
+  base06: "#89ddff" # +++
+  base07: "#b4f9f8" # ++++
+  base08: "#f7768e" # red
+  base09: "#ff9e64" # orange
+  base0A: "#e0af68" # yellow
+  base0B: "#9ece6a" # green
+  base0C: "#7dcfff" # cyan
+  base0D: "#7aa2f7" # blue
+  base0E: "#9d7cd8" # purple
+  base0F: "#bb9af7" # magenta
+  base10: "#1f2335" # darker background
+  base11: "#1b1e2d" # darkest background
+  base12: "#ff899d" # bright red
+  base13: "#faba4a" # bright yellow
+  base14: "#9fe044" # bright green
+  base15: "#a4daff" # bright cyan
+  base16: "#8db0ff" # bright blue
+  base17: "#c7a9ff" # bright purple
