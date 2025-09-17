@@ -51,7 +51,7 @@ label = { fg = "#7aa2f7" }
 "markup.raw" = { fg = "#9ece6a" }
 "markup.raw.inline" = { bg = "#414868", fg = "#7aa2f7" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-namespace = { fg = "#7aa2f7" }
+namespace = { fg = "#7dcfff" }
 operator = { fg = "#89ddff" }
 special = { fg = "#2ac3de" }
 string = { fg = "#9ece6a" }
