@@ -30,6 +30,7 @@ function M.generate(colors)
   --background-mobile-secondary: ${bg_dark};
   --bg-base-secondary: ${bg_dark};
   --bg-surface-raised: ${bg_dark};
+  --bg-mod-faint: ${bg_dark1};
   --home-background: ${bg};
   --chat-background: ${bg};
   --chat-border: ${bg_highlight};
@@ -74,13 +75,14 @@ function M.generate(colors)
   --yellow-300: ${warning};
   --red-400: ${red};
   --primary-100: ${dark5};
-  --primary-300: ${dark5};
+  --primary-300: ${dark3};
   --primary-400: ${dark5};
+  --primary-500: ${fg_gutter};
+  --white-500: ${fg};
   --primary-dark-700: ${bg_highlight};
   --primary-800: ${bg_highlight};
   --status-green-560: ${hint};
   --white-400: ${fg};
-  --white-500: ${fg};
   --guild-boosting-pink: ${magenta};
   --premium-perk-yellow: ${warning};
   --premium-perk-purple: ${purple};
@@ -147,7 +149,7 @@ function M.generate(colors)
   --scrollbar-auto-track: ${bg_highlight};
   --scrollbar-auto-scrollbar-color-thumb: ${blue};
   --scrollbar-auto-scrollbar-color-track: ${bg_highlight};
-  --input-background: ${bg_highlight};
+  --input-background: ${bg_dark}cf;
   --input-placeholder-text: ${dark5};
   --logo-primary: ${fg};
   --control-brand-foreground: ${blue};
@@ -171,7 +173,6 @@ function M.generate(colors)
   --spoiler-hidden-background: ${comment};
   --android-navigation-bar-background: ${bg_highlight};
   --android-ripple: ${black}4C;
-  --bg-mod-faint: ${bg_dark};
   --bg-mod-subtle: ${terminal_black};
   --focus-primary: ${blue};
   --interactive-normal: ${fg};
@@ -192,20 +193,63 @@ div[class*="categoryHeader"] {
     background-color: ${bg_float} !important;
 }
 
-rect[mask="url(#svg-mask-status-online)"] {
-    fill: ${green2};
+rect[fill="#23a55a"],
+#account-status-picker--online foreignObject > div[class^="status__"],
+rect[fill="#299f5b"],
+foreignObject[mask="url(#svg-mask-status-online)"] > div,
+div[class^="dotOnline"],
+i[class^="statusOnline"],
+div[style*="background-color: rgb(35, 165, 90)"] {
+  fill: ${green2} !important;
+  background-color: ${green2} !important;
+}
+svg[fill="#23a55a"],
+rect[fill="rgba(35, 165, 90, 1)"],
+rect[fill="rgba(41, 159, 91, 1)"] {
+  fill: ${green2} !important;
 }
 
-rect[mask="url(#svg-mask-status-idle)"] {
-    fill: ${yellow};
+rect[fill="#f0b232"],
+#account-status-picker--idle foreignObject > div[class^="status__"],
+rect[fill="#e6ae3c"],
+foreignObject[mask="url(#svg-mask-status-idle)"] > div {
+  fill: ${yellow} !important;
+  background-color: ${yellow} !important;
+}
+svg[fill="#f0b232"],
+rect[fill="rgba(240, 178, 50, 1)"],
+rect[fill="rgba(230, 174, 60, 1)"] {
+  fill: ${yellow} !important;
 }
 
-rect[mask="url(#svg-mask-status-dnd)"] {
-    fill: ${red1};
+rect[fill="#f23f43"],
+#account-status-picker--dnd foreignObject > div[class^="status__"],
+rect[fill="#ea474b"],
+foreignObject[mask="url(#svg-mask-status-dnd)"] > div {
+  fill: ${red} !important;
+  background-color: #ed8796 !important;
+}
+svg[fill="#f23f43"],
+rect[fill="rgba(242, 63, 67, 1)"],
+rect[fill="rgba(230, 174, 60, 1)"] {
+  fill: ${red} !important;
 }
 
-rect[mask="url(#svg-mask-status-offline)"] {
-    fill: ${dark5};
+rect[fill="#82858f"],
+rect[fill="#80848e"],
+#account-status-picker--invisible foreignObject > div[class^="status__"],
+foreignObject[mask="url(#svg-mask-status-offline)"] > div,
+foreignObject[mask="url(#svg-mask-status-offline)"] > rect,
+div[class^="dotOffline"],
+i[class^="statusOffline"] {
+  fill: ${dark5} !important;
+  background-color: ${dark5} !important;
+}
+svg[fill="#82858f"],
+svg[fill="#80848e"],
+rect[fill="rgba(130, 133, 143, 1)"],
+rect[fill="rgba(128, 132, 142, 1)"] {
+  fill: ${dark5} !important;
 }
 
 /* hljs */
