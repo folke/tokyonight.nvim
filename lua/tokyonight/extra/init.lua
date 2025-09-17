@@ -29,6 +29,7 @@ M.extras = {
   slack            = { ext = "txt", url = "https://slack.com", label = "Slack" },
   sublime          = { ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text" },
   spotify_player   = { ext = "toml", url = "https://github.com/aome510/spotify-player", label = "Spotify Player" },
+  tailwindv4       = { ext = "css", url = "https://tailwindcss.com", label = "Tailwind CSS (v4)" },
   terminator       = { ext = "conf", url = "https://gnome-terminator.readthedocs.io/en/latest/config.html", label = "Terminator" },
   termux           = { ext = "properties", url = "https://termux.dev/", label = "Termux" },
   tilix            = { ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix" },
