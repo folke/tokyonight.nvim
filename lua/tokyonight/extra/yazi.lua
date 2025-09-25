@@ -7,7 +7,7 @@ function M.generate(colors)
   colors.bg_search = util.blend_bg(colors.info, 0.1)
   local yazi = util.template(
     [[
-[manager]
+[mgr]
 # NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
 # syntect_theme = "path/to/tmTheme"
 
