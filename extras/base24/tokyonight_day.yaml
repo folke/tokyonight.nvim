@@ -1,0 +1,29 @@
+system: "base16"
+name: "Tokyo Night Day"
+author: "folke"
+variant: "light"
+palette:
+  base00: "#e1e2e7" # ----
+  base01: "#c4c8da" # ---
+  base02: "#a8aecb" # --
+  base03: "#848cb5" # -
+  base04: "#6172b0" # +
+  base05: "#3760bf" # ++
+  base06: "#006a83" # +++
+  base07: "#2e5857" # ++++
+  base08: "#f52a65" # red
+  base09: "#b15c00" # orange
+  base0A: "#8c6c3e" # yellow
+  base0B: "#587539" # green
+  base0C: "#007197" # cyan
+  base0D: "#2e7de9" # blue
+  base0E: "#7847bd" # purple
+  base0F: "#9854f1" # magenta
+  base10: "#d0d5e3" # darker background
+  base11: "#c1c9df" # darkest background
+  base12: "#ff4774" # bright red
+  base13: "#a27629" # bright yellow
+  base14: "#5c8524" # bright green
+  base15: "#007ea8" # bright cyan
+  base16: "#358aff" # bright blue
+  base17: "#a463ff" # bright purple
