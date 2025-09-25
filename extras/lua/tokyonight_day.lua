@@ -764,6 +764,9 @@ local highlights = {
     fg = "#848cb5",
     italic = true
   },
+  ComplHint = {
+    fg = "#a1a6c5"
+  },
   Conceal = {
     fg = "#68709a"
   },

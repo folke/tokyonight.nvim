@@ -22,6 +22,7 @@ hi Bold gui=bold guibg=NONE guifg=#c0caf5
 hi Character guibg=NONE guifg=#9ece6a
 hi ColorColumn guibg=#1d202f
 hi Comment gui=italic guibg=NONE guifg=#565f89
+hi ComplHint guibg=NONE guifg=#414868
 hi Conceal guibg=NONE guifg=#737aa2
 hi Constant guibg=NONE guifg=#ff9e64
 hi CopilotAnnotation guibg=NONE guifg=#414868
