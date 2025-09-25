@@ -22,6 +22,7 @@ M.extras = {
   helix            = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
   iterm            = { ext = "itermcolors", url = "https://iterm2.com/", label = "iTerm" },
   kitty            = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
+  konsole          = { ext = "colorscheme", url = "https://konsole.kde.org/", label = "Konsole" },
   lazygit          = { ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "Lazygit" },
   lua              = { ext = "lua", url = "https://www.lua.org", label = "Lua Table for testing" },
   prism            = { ext = "js", url = "https://prismjs.com", label = "Prism" },
