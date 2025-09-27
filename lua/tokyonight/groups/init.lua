@@ -60,6 +60,7 @@ M.plugins = {
   ["octo.nvim"]                     = "octo",
   ["rainbow-delimiters.nvim"]       = "rainbow",
   ["render-markdown.nvim"]          = "render-markdown",
+  ["sidekick.nvim"]                 = "sidekick",
   ["snacks.nvim"]                   = "snacks",
   ["supermaven-nvim"]               = "supermaven", 
   ["telescope.nvim"]                = "telescope",
