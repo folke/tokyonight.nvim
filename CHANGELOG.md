@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.13.0](https://github.com/folke/tokyonight.nvim/compare/v4.12.0...v4.13.0) (2025-09-27)
+
+
+### Features
+
+* **base:** added support for `vim.lsp.inline_completion` ([620bd82](https://github.com/folke/tokyonight.nvim/commit/620bd82b3b61af12111b771e0a56242b84c6f030))
+* **plugins:** added support for sidekick.nvim ([954bfab](https://github.com/folke/tokyonight.nvim/commit/954bfab64ec64e90e65f7f632b47f961eb740d77))
+
 ## [4.12.0](https://github.com/folke/tokyonight.nvim/compare/v4.11.0...v4.12.0) (2025-09-17)
 
 
