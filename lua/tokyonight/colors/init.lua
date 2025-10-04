@@ -30,8 +30,8 @@ function M.setup(opts)
   colors.none = "NONE"
 
   colors.diff = {
-    add = Util.blend_bg(colors.green2, 0.15),
-    delete = Util.blend_bg(colors.red1, 0.15),
+    add = Util.blend_bg(colors.green2, 0.25),
+    delete = Util.blend_bg(colors.red1, 0.25),
     change = Util.blend_bg(colors.blue7, 0.15),
     text = colors.blue7,
   }

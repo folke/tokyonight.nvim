@@ -26,9 +26,9 @@ local colors = {
   dark3 = "#8990b3",
   dark5 = "#68709a",
   diff = {
-    add = "#c8d6dc",
+    add = "#b7ced5",
     change = "#d5d9e4",
-    delete = "#ddcace",
+    delete = "#dababe",
     text = "#92a6d5"
   },
   error = "#c64343",
@@ -273,7 +273,7 @@ local highlights = {
   ["@markup.underline"] = {
     underline = true
   },
-  ["@module"] = "Directory",
+  ["@module"] = "Include",
   ["@module.builtin"] = {
     fg = "#f52a65"
   },
@@ -764,6 +764,9 @@ local highlights = {
     fg = "#848cb5",
     italic = true
   },
+  ComplHint = {
+    fg = "#a1a6c5"
+  },
   Conceal = {
     fg = "#68709a"
   },
@@ -897,13 +900,13 @@ local highlights = {
   },
   DiagnosticWarning = "DiagnosticWarn",
   DiffAdd = {
-    bg = "#c8d6dc"
+    bg = "#b7ced5"
   },
   DiffChange = {
     bg = "#d5d9e4"
   },
   DiffDelete = {
-    bg = "#ddcace"
+    bg = "#dababe"
   },
   DiffText = {
     bg = "#92a6d5"
@@ -1662,7 +1665,7 @@ local highlights = {
     fg = "#9854f1"
   },
   NeogitDiffAddHighlight = {
-    bg = "#c8d6dc",
+    bg = "#b7ced5",
     fg = "#4197a4"
   },
   NeogitDiffContextHighlight = {
@@ -1670,7 +1673,7 @@ local highlights = {
     fg = "#6172b0"
   },
   NeogitDiffDeleteHighlight = {
-    bg = "#ddcace",
+    bg = "#dababe",
     fg = "#c47981"
   },
   NeogitHunkHeader = {
@@ -2140,6 +2143,18 @@ local highlights = {
     bg = "#7890dd",
     fg = "#3760bf"
   },
+  SidekickDiffAdd = "DiffAdd",
+  SidekickDiffContext = "DiffChange",
+  SidekickDiffDelete = "DiffDelete",
+  SidekickSignAdd = {
+    fg = "#4197a4"
+  },
+  SidekickSignChange = {
+    fg = "#506d9c"
+  },
+  SidekickSignDelete = {
+    fg = "#c47981"
+  },
   SignColumn = {
     bg = "#e1e2e7",
     fg = "#a8aecb"
@@ -2562,7 +2577,7 @@ local highlights = {
     bg = "#d0d5e3"
   },
   diffAdded = {
-    bg = "#c8d6dc",
+    bg = "#b7ced5",
     fg = "#4197a4"
   },
   diffChanged = {
@@ -2579,15 +2594,15 @@ local highlights = {
     fg = "#848cb5"
   },
   diffNewFile = {
-    bg = "#c8d6dc",
+    bg = "#b7ced5",
     fg = "#188092"
   },
   diffOldFile = {
-    bg = "#ddcace",
+    bg = "#dababe",
     fg = "#188092"
   },
   diffRemoved = {
-    bg = "#ddcace",
+    bg = "#dababe",
     fg = "#c47981"
   },
   dosIniLabel = "@property",

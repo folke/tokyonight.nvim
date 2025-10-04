@@ -111,6 +111,7 @@ function M.get(c, opts)
     LspCodeLens                 = { fg = c.comment },
     LspInlayHint                = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
     LspInfoBorder               = { fg = c.border_highlight, bg = c.bg_float },
+    ComplHint                   = { fg = c.terminal_black },
 
     -- diagnostics
     DiagnosticError             = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default

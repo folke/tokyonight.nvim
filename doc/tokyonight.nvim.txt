@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*         For Neovim         Last change: 2025 February 18
+*tokyonight.nvim.txt*         For Neovim        Last change: 2025 September 27
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -154,6 +154,8 @@ Supported Plugins ~
 
   nvim-scrollbar                      scrollbar
 
+  sidekick.nvim                       sidekick
+
   snacks.nvim                         snacks
 
   vim-sneak                           sneak
@@ -259,7 +261,7 @@ REQUIREMENTS                        *tokyonight.nvim-tokyo-night-requirements*
 INSTALLATION                        *tokyonight.nvim-tokyo-night-installation*
 
 Install the theme with your preferred package manager, such as folke/lazy.nvim
-<https://github.com/folke/lazy.nvim>
+<https://github.com/folke/lazy.nvim>:
 
 >lua
     {

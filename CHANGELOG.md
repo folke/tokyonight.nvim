@@ -1,5 +1,35 @@
 # Changelog
 
+## [4.13.0](https://github.com/folke/tokyonight.nvim/compare/v4.12.0...v4.13.0) (2025-09-27)
+
+
+### Features
+
+* **base:** added support for `vim.lsp.inline_completion` ([620bd82](https://github.com/folke/tokyonight.nvim/commit/620bd82b3b61af12111b771e0a56242b84c6f030))
+* **plugins:** added support for sidekick.nvim ([954bfab](https://github.com/folke/tokyonight.nvim/commit/954bfab64ec64e90e65f7f632b47f961eb740d77))
+
+## [4.12.0](https://github.com/folke/tokyonight.nvim/compare/v4.11.0...v4.12.0) (2025-09-17)
+
+
+### Features
+
+* **extra:** add (better-)discord theme ([#662](https://github.com/folke/tokyonight.nvim/issues/662)) ([9578c6f](https://github.com/folke/tokyonight.nvim/commit/9578c6fe68af1db513914a2a01bea5585f3027db))
+* **extras:** update for yazi 0.4 ([#671](https://github.com/folke/tokyonight.nvim/issues/671)) ([eaa64ed](https://github.com/folke/tokyonight.nvim/commit/eaa64ed7c87febca7d596c65e0afad8d15bdd34a))
+* **git:** better `git` highlights ([ea54d9e](https://github.com/folke/tokyonight.nvim/commit/ea54d9e450ab2463028be94c6020544887f149a0))
+* **snacks:** added hl groups for pick win current ([13fffc2](https://github.com/folke/tokyonight.nvim/commit/13fffc28242a655cff6acf7bea822d26610ac055))
+* **snacks:** flags ([c3ab53c](https://github.com/folke/tokyonight.nvim/commit/c3ab53c3f544e4a04f2a05d43451fd9bedff51b4))
+* **snacks:** support for `edit_win` ([55f4cf1](https://github.com/folke/tokyonight.nvim/commit/55f4cf1224c18babec8e4a0048d4e96580e5ef21))
+* **snacks:** tmp hl groups for testing snacks picker ([6d39d13](https://github.com/folke/tokyonight.nvim/commit/6d39d135439575c95390b95a3042b0c54ef36020))
+
+
+### Bug Fixes
+
+* **blink:** blink highlight group additions ([#666](https://github.com/folke/tokyonight.nvim/issues/666)) ([22b701b](https://github.com/folke/tokyonight.nvim/commit/22b701b36672b4e489eb3003fa439d11d7464b7b))
+* **extra fzf:** shell escaping ([#678](https://github.com/folke/tokyonight.nvim/issues/678)) ([717bd56](https://github.com/folke/tokyonight.nvim/commit/717bd5662b79d7c0727867530118983dd2feb0ec))
+* **snacks:** EditWin =&gt; PickWin ([0db7089](https://github.com/folke/tokyonight.nvim/commit/0db70891ba33562f8658d43665a81fab40082c60))
+* **treesitter:** import module color ([#674](https://github.com/folke/tokyonight.nvim/issues/674)) ([0c68bc3](https://github.com/folke/tokyonight.nvim/commit/0c68bc3876897613110a2f71340f2dc760c9c761))
+* **vim:** colors_name. Closes [#686](https://github.com/folke/tokyonight.nvim/issues/686) ([ce13047](https://github.com/folke/tokyonight.nvim/commit/ce13047edeb4b8e163090975624506f2857e2ece))
+
 ## [4.11.0](https://github.com/folke/tokyonight.nvim/compare/v4.10.0...v4.11.0) (2024-12-10)
 
 
