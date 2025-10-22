@@ -39,8 +39,8 @@ function M.get(c, opts)
     -- Profiler
     SnacksProfilerIconInfo    = { bg = Util.blend_bg(c.blue1, 0.3), fg = c.blue1 },
     SnacksProfilerBadgeInfo   = { bg = Util.blend_bg(c.blue1, 0.1), fg = c.blue1 },
-    SnacksScratchKey          = "SnacksProfilerIconInfo",
-    SnacksScratchDesc         = "SnacksProfilerBadgeInfo",
+    SnacksFooterKey          = "SnacksProfilerIconInfo",
+    SnacksFooterDesc         = "SnacksProfilerBadgeInfo",
     SnacksProfilerIconTrace   = { bg = Util.blend_bg(c.blue7, 0.3), fg = c.dark3 },
     SnacksProfilerBadgeTrace  = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
     SnacksIndent              = { fg = c.fg_gutter, nocombine = true },
