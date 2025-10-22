@@ -2184,6 +2184,8 @@ local highlights = {
   SnacksDashboardSpecial = {
     fg = "#7847bd"
   },
+  SnacksFooterDesc = "SnacksProfilerBadgeInfo",
+  SnacksFooterKey = "SnacksProfilerIconInfo",
   SnacksIndent = {
     fg = "#a8aecb",
     nocombine = true
@@ -2345,8 +2347,6 @@ local highlights = {
     bg = "#c9d0e2",
     fg = "#8990b3"
   },
-  SnacksScratchDesc = "SnacksProfilerBadgeInfo",
-  SnacksScratchKey = "SnacksProfilerIconInfo",
   SnacksZenIcon = {
     fg = "#7847bd"
   },
