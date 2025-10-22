@@ -153,6 +153,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Slack](https://slack.com) | [extras/slack](extras/slack) |
 | [Spotify Player](https://github.com/aome510/spotify-player) | [extras/spotify_player](extras/spotify_player) |
 | [Sublime Text](https://www.sublimetext.com/docs/themes) | [extras/sublime](extras/sublime) |
+| [Tailwind CSS (v4)](https://tailwindcss.com) | [extras/tailwindv4](extras/tailwindv4) |
 | [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) | [extras/terminator](extras/terminator) |
 | [Termux](https://termux.dev/) | [extras/termux](extras/termux) |
 | [Tilix](https://github.com/gnunn1/tilix) | [extras/tilix](extras/tilix) |
