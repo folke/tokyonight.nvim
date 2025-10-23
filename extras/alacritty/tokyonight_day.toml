@@ -9,10 +9,6 @@
 background = '#e1e2e7'
 foreground = '#3760bf'
 
-#[colors.cursor]
-#cursor = '#3760bf'
-#text = '#e1e2e7'
-
 # Normal colors
 [colors.normal]
 black = '#b4b5b9'
@@ -34,13 +30,3 @@ blue = '#358aff'
 magenta = '#a463ff'
 cyan = '#007ea8'
 white = '#3760bf'
-
-# Indexed Colors
-[[colors.indexed_colors]]
-index = 16
-color = '#b15c00'
-
-[[colors.indexed_colors]]
-index = 17
-color = '#c64343'
-
