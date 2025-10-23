@@ -7,6 +7,7 @@ local M = {}
 -- stylua: ignore
 M.extras = {
   aerc             = { ext = "ini", url = "https://git.sr.ht/~rjarry/aerc/", label = "Aerc" },
+  aider            = { ext = "yml", url = "https://aider.chat", label = "Aider" },
   alacritty        = { ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
   btop             = { ext = "theme", url = "https://github.com/aristocratos/btop", label = "Btop++" },
   delta            = { ext = "gitconfig", url = "https://github.com/dandavison/delta", label = "Delta" },
