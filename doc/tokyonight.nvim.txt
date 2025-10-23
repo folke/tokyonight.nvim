@@ -191,6 +191,8 @@ Extras ~
 
   Dunst                               extras/dunst
 
+  eza                                 extras/eza
+
   Fish                                extras/fish
 
   Fish Themes                         extras/fish_themes

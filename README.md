@@ -136,6 +136,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
 | [(Better-)Discord](https://betterdiscord.app/) | [extras/discord](extras/discord) |
 | [Dunst](https://dunst-project.org/) | [extras/dunst](extras/dunst) |
+| [eza](https://eza.rocks) | [extras/eza](extras/eza) |
 | [Fish](https://fishshell.com/docs/current/index.html) | [extras/fish](extras/fish) |
 | [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) | [extras/fish_themes](extras/fish_themes) |
 | [Foot](https://codeberg.org/dnkl/foot) | [extras/foot](extras/foot) |
