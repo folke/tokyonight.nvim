@@ -167,6 +167,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Tmux](https://github.com/tmux/tmux/wiki) | [extras/tmux](extras/tmux) |
 | [Vim](https://vimhelp.org/) | [extras/vim](extras/vim) |
 | [Vimium](https://vimium.github.io/) | [extras/vimium](extras/vimium) |
+| [Vivaldi](https://vivaldi.com) | [extras/vivaldi](extras/vivaldi) |
 | [WezTerm](https://wezfurlong.org/wezterm/config/files.html) | [extras/wezterm](extras/wezterm) |
 | [Windows Terminal](https://aka.ms/terminal-documentation) | [extras/windows_terminal](extras/windows_terminal) |
 | [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) | [extras/xfceterm](extras/xfceterm) |
