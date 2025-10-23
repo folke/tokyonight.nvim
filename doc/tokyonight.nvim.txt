@@ -213,6 +213,8 @@ Extras ~
 
   Helix                               extras/helix
 
+  iSH                                 extras/ish
+
   iTerm                               extras/iterm
 
   Kitty                               extras/kitty
@@ -228,6 +230,8 @@ Extras ~
   Prism                               extras/prism
 
   process-compose                     extras/process_compose
+
+  QTerminal                           extras/qterminal
 
   Slack                               extras/slack
 
