@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.14.1](https://github.com/folke/tokyonight.nvim/compare/v4.14.0...v4.14.1) (2025-10-23)
+
+
+### Bug Fixes
+
+* **eza:** fix missing closing quote in group_other foreground color ([a773606](https://github.com/folke/tokyonight.nvim/commit/a7736062bb16731fe0b9b9257f869c50cb17bb1b))
+* **eza:** fix yaml theme ([#745](https://github.com/folke/tokyonight.nvim/issues/745)) ([2391241](https://github.com/folke/tokyonight.nvim/commit/2391241ded13d86cce3855dc4514c56b6e55b829))
+
 ## [4.14.0](https://github.com/folke/tokyonight.nvim/compare/v4.13.0...v4.14.0) (2025-10-23)
 
 
