@@ -47,7 +47,7 @@ users:
   user_other: { foreground: "#2ac3de" }
   group_yours: { foreground: "#89ddff" }
   group_root: { foreground: "#bb9af7" }
-  group_other: { foreground: "#c0caf5" }
+  group_other: { foreground: "#c0caf5 }
 
 links:
   normal: { foreground: "#89ddff" }
