@@ -17,10 +17,6 @@ function M.generate(colors)
 background = '${bg}'
 foreground = '${fg}'
 
-#[colors.cursor]
-#cursor = '${fg}'
-#text = '${bg}'
-
 # Normal colors
 [colors.normal]
 black = '${terminal.black}'
@@ -42,16 +38,6 @@ blue = '${terminal.blue_bright}'
 magenta = '${terminal.magenta_bright}'
 cyan = '${terminal.cyan_bright}'
 white = '${terminal.white_bright}'
-
-# Indexed Colors
-[[colors.indexed_colors]]
-index = 16
-color = '${orange}'
-
-[[colors.indexed_colors]]
-index = 17
-color = '${red1}'
-
 ]=],
     colors
   )
