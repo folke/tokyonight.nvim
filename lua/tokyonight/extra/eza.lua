@@ -54,7 +54,7 @@ users:
   user_other: { foreground: "${blue1}" }
   group_yours: { foreground: "${blue5}" }
   group_root: { foreground: "${magenta}" }
-  group_other: { foreground: "${fg} }
+  group_other: { foreground: "${fg}" }
 
 links:
   normal: { foreground: "${blue5}" }
