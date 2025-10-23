@@ -132,6 +132,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | --- | --- |
 | [Aerc](https://git.sr.ht/~rjarry/aerc/) | [extras/aerc](extras/aerc) |
 | [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](extras/alacritty) |
+| [Btop++](https://github.com/aristocratos/btop) | [extras/btop](extras/btop) |
 | [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
 | [(Better-)Discord](https://betterdiscord.app/) | [extras/discord](extras/discord) |
 | [Dunst](https://dunst-project.org/) | [extras/dunst](extras/dunst) |
@@ -146,8 +147,10 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Helix](https://helix-editor.com/) | [extras/helix](extras/helix) |
 | [iTerm](https://iterm2.com/) | [extras/iterm](extras/iterm) |
 | [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty) |
+| [Konsole](https://konsole.kde.org/) | [extras/konsole](extras/konsole) |
 | [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](extras/lazygit) |
 | [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
+| [opencode](https://github.com/sst/opencode) | [extras/opencode](extras/opencode) |
 | [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | [extras/process_compose](extras/process_compose) |
 | [Slack](https://slack.com) | [extras/slack](extras/slack) |
