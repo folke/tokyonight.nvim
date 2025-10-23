@@ -4,14 +4,8 @@ local M = {}
 
 function M.rgb(c)
   c = string.lower(c)
-  return string.format(
-    "%d,%d,%d",
-    tonumber(c:sub(2, 3), 16),
-    tonumber(c:sub(4, 5), 16),
-    tonumber(c:sub(6, 7), 16)
-  )
+  return string.format("%d,%d,%d", tonumber(c:sub(2, 3), 16), tonumber(c:sub(4, 5), 16), tonumber(c:sub(6, 7), 16))
 end
-
 
 function M.convert_colors(colors)
   local converted = {}
