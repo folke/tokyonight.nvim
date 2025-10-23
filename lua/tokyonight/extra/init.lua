@@ -31,6 +31,7 @@ M.extras = {
   opencode         = { ext = "json", url = "https://github.com/sst/opencode", label = "opencode" },
   prism            = { ext = "js", url = "https://prismjs.com", label = "Prism" },
   process_compose  = { ext = "yaml", url = "https://f1bonacc1.github.io/process-compose/", label = "process-compose" },
+  qterminal        = { ext = "colorscheme", url = "https://github.com/lxqt/qterminal", label = "QTerminal" },
   slack            = { ext = "txt", url = "https://slack.com", label = "Slack" },
   sublime          = { ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text" },
   spotify_player   = { ext = "toml", url = "https://github.com/aome510/spotify-player", label = "Spotify Player" },
