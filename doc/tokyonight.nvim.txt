@@ -181,6 +181,8 @@ Extras ~
   ----------------------------------- -----------------------------------
   Aerc                                extras/aerc
 
+  Aider                               extras/aider
+
   Alacritty                           extras/alacritty
 
   Btop++                              extras/btop

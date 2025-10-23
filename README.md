@@ -131,6 +131,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | Tool | Extra |
 | --- | --- |
 | [Aerc](https://git.sr.ht/~rjarry/aerc/) | [extras/aerc](extras/aerc) |
+| [Aider](https://aider.chat) | [extras/aider](extras/aider) |
 | [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](extras/alacritty) |
 | [Btop++](https://github.com/aristocratos/btop) | [extras/btop](extras/btop) |
 | [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
