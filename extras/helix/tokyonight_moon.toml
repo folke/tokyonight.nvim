@@ -16,8 +16,8 @@ constructor = { fg = "#65bcff" }
 "diagnostic.warning" = { underline = { style = "curl" } }
 "diff.delta" = { bg = "#252a3f", fg = "#7ca1f2" }
 "diff.delta.moved" = { fg = "#82aaff" }
-"diff.minus" = { bg = "#3a273a", fg = "#e26a75" }
-"diff.plus" = { bg = "#273849", fg = "#b8db87" }
+"diff.minus" = { bg = "#4b2a3d", fg = "#e26a75" }
+"diff.plus" = { bg = "#2a4556", fg = "#b8db87" }
 error = { fg = "#c53b53" }
 function = { fg = "#82aaff" }
 "function.builtin" = { fg = "#65bcff" }
@@ -51,7 +51,7 @@ label = { fg = "#82aaff" }
 "markup.raw" = { fg = "#c3e88d" }
 "markup.raw.inline" = { bg = "#444a73", fg = "#82aaff" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-namespace = { fg = "#82aaff" }
+namespace = { fg = "#86e1fc" }
 operator = { fg = "#89ddff" }
 special = { fg = "#65bcff" }
 string = { fg = "#c3e88d" }
@@ -63,6 +63,7 @@ type = { fg = "#65bcff" }
 "type.enum" = { fg = "#65bcff" }
 "type.enum.variant" = { fg = "#ff966c" }
 "ui.background" = { bg = "bg" }
+"ui.bufferline.active" = { bg = "bg_visual", fg = "fg" }
 "ui.cursor" = { bg = "#c8d3f5", fg = "#222436" }
 "ui.cursor.match" = { fg = "#ff966c", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#3b4261" }
@@ -112,9 +113,9 @@ comment = "#636da6"
 cyan = "#86e1fc"
 dark3 = "#545c7e"
 dark5 = "#737aa2"
-"diff.add" = "#273849"
+"diff.add" = "#2a4556"
 "diff.change" = "#252a3f"
-"diff.delete" = "#3a273a"
+"diff.delete" = "#4b2a3d"
 "diff.text" = "#394b70"
 error = "#c53b53"
 fg = "#c8d3f5"

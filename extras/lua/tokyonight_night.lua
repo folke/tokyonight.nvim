@@ -26,9 +26,9 @@ local colors = {
   dark3 = "#545c7e",
   dark5 = "#737aa2",
   diff = {
-    add = "#20303b",
+    add = "#243e4a",
     change = "#1f2231",
-    delete = "#37222c",
+    delete = "#4a272f",
     text = "#394b70"
   },
   error = "#db4b4b",
@@ -273,7 +273,7 @@ local highlights = {
   ["@markup.underline"] = {
     underline = true
   },
-  ["@module"] = "Directory",
+  ["@module"] = "Include",
   ["@module.builtin"] = {
     fg = "#f7768e"
   },
@@ -764,6 +764,9 @@ local highlights = {
     fg = "#565f89",
     italic = true
   },
+  ComplHint = {
+    fg = "#414868"
+  },
   Conceal = {
     fg = "#737aa2"
   },
@@ -897,13 +900,13 @@ local highlights = {
   },
   DiagnosticWarning = "DiagnosticWarn",
   DiffAdd = {
-    bg = "#20303b"
+    bg = "#243e4a"
   },
   DiffChange = {
     bg = "#1f2231"
   },
   DiffDelete = {
-    bg = "#37222c"
+    bg = "#4a272f"
   },
   DiffText = {
     bg = "#394b70"
@@ -1662,7 +1665,7 @@ local highlights = {
     fg = "#bb9af7"
   },
   NeogitDiffAddHighlight = {
-    bg = "#20303b",
+    bg = "#243e4a",
     fg = "#449dab"
   },
   NeogitDiffContextHighlight = {
@@ -1670,7 +1673,7 @@ local highlights = {
     fg = "#a9b1d6"
   },
   NeogitDiffDeleteHighlight = {
-    bg = "#37222c",
+    bg = "#4a272f",
     fg = "#914c54"
   },
   NeogitHunkHeader = {
@@ -2140,6 +2143,18 @@ local highlights = {
     bg = "#3d59a1",
     fg = "#c0caf5"
   },
+  SidekickDiffAdd = "DiffAdd",
+  SidekickDiffContext = "DiffChange",
+  SidekickDiffDelete = "DiffDelete",
+  SidekickSignAdd = {
+    fg = "#449dab"
+  },
+  SidekickSignChange = {
+    fg = "#6183bb"
+  },
+  SidekickSignDelete = {
+    fg = "#914c54"
+  },
   SignColumn = {
     bg = "#1a1b26",
     fg = "#3b4261"
@@ -2169,6 +2184,8 @@ local highlights = {
   SnacksDashboardSpecial = {
     fg = "#9d7cd8"
   },
+  SnacksFooterDesc = "SnacksProfilerBadgeInfo",
+  SnacksFooterKey = "SnacksProfilerIconInfo",
   SnacksIndent = {
     fg = "#3b4261",
     nocombine = true
@@ -2330,8 +2347,6 @@ local highlights = {
     bg = "#23293c",
     fg = "#545c7e"
   },
-  SnacksScratchDesc = "SnacksProfilerBadgeInfo",
-  SnacksScratchKey = "SnacksProfilerIconInfo",
   SnacksZenIcon = {
     fg = "#9d7cd8"
   },
@@ -2562,7 +2577,7 @@ local highlights = {
     bg = "#16161e"
   },
   diffAdded = {
-    bg = "#20303b",
+    bg = "#243e4a",
     fg = "#449dab"
   },
   diffChanged = {
@@ -2579,15 +2594,15 @@ local highlights = {
     fg = "#565f89"
   },
   diffNewFile = {
-    bg = "#20303b",
+    bg = "#243e4a",
     fg = "#2ac3de"
   },
   diffOldFile = {
-    bg = "#37222c",
+    bg = "#4a272f",
     fg = "#2ac3de"
   },
   diffRemoved = {
-    bg = "#37222c",
+    bg = "#4a272f",
     fg = "#914c54"
   },
   dosIniLabel = "@property",

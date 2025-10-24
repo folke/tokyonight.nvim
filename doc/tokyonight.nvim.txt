@@ -1,4 +1,4 @@
-*tokyonight.nvim.txt*         For Neovim         Last change: 2025 February 18
+*tokyonight.nvim.txt*          For Neovim         Last change: 2025 October 23
 
 ==============================================================================
 Table of Contents                          *tokyonight.nvim-table-of-contents*
@@ -154,6 +154,8 @@ Supported Plugins ~
 
   nvim-scrollbar                      scrollbar
 
+  sidekick.nvim                       sidekick
+
   snacks.nvim                         snacks
 
   vim-sneak                           sneak
@@ -179,13 +181,19 @@ Extras ~
   ----------------------------------- -----------------------------------
   Aerc                                extras/aerc
 
+  Aider                               extras/aider
+
   Alacritty                           extras/alacritty
+
+  Btop++                              extras/btop
 
   Delta                               extras/delta
 
   (Better-)Discord                    extras/discord
 
   Dunst                               extras/dunst
+
+  eza                                 extras/eza
 
   Fish                                extras/fish
 
@@ -205,23 +213,33 @@ Extras ~
 
   Helix                               extras/helix
 
+  iSH                                 extras/ish
+
   iTerm                               extras/iterm
 
   Kitty                               extras/kitty
+
+  Konsole                             extras/konsole
 
   Lazygit                             extras/lazygit
 
   Lua Table for testing               extras/lua
 
+  opencode                            extras/opencode
+
   Prism                               extras/prism
 
   process-compose                     extras/process_compose
+
+  QTerminal                           extras/qterminal
 
   Slack                               extras/slack
 
   Spotify Player                      extras/spotify_player
 
   Sublime Text                        extras/sublime
+
+  Tailwind CSS (v4)                   extras/tailwindv4
 
   Terminator                          extras/terminator
 
@@ -234,6 +252,8 @@ Extras ~
   Vim                                 extras/vim
 
   Vimium                              extras/vimium
+
+  Vivaldi                             extras/vivaldi
 
   WezTerm                             extras/wezterm
 
@@ -259,7 +279,7 @@ REQUIREMENTS                        *tokyonight.nvim-tokyo-night-requirements*
 INSTALLATION                        *tokyonight.nvim-tokyo-night-installation*
 
 Install the theme with your preferred package manager, such as folke/lazy.nvim
-<https://github.com/folke/lazy.nvim>
+<https://github.com/folke/lazy.nvim>:
 
 >lua
     {

@@ -22,6 +22,7 @@ hi Bold gui=bold guibg=NONE guifg=#c0caf5
 hi Character guibg=NONE guifg=#9ece6a
 hi ColorColumn guibg=#15161e
 hi Comment gui=italic guibg=NONE guifg=#565f89
+hi ComplHint guibg=NONE guifg=#414868
 hi Conceal guibg=NONE guifg=#737aa2
 hi Constant guibg=NONE guifg=#ff9e64
 hi CopilotAnnotation guibg=NONE guifg=#414868
@@ -45,9 +46,9 @@ hi DiagnosticVirtualTextHint guibg=#1a2b32 guifg=#1abc9c
 hi DiagnosticVirtualTextInfo guibg=#192b38 guifg=#0db9d7
 hi DiagnosticVirtualTextWarn guibg=#2e2a2d guifg=#e0af68
 hi DiagnosticWarn guibg=NONE guifg=#e0af68
-hi DiffAdd guibg=#20303b
+hi DiffAdd guibg=#243e4a
 hi DiffChange guibg=#1f2231
-hi DiffDelete guibg=#37222c
+hi DiffDelete guibg=#4a272f
 hi DiffText guibg=#394b70
 hi Directory guibg=NONE guifg=#7aa2f7
 hi EndOfBuffer guibg=NONE guifg=#1a1b26
@@ -166,9 +167,9 @@ hi ModeMsg gui=bold guibg=NONE guifg=#a9b1d6
 hi MoreMsg guibg=NONE guifg=#7aa2f7
 hi MsgArea guibg=NONE guifg=#a9b1d6
 hi NeogitBranch guibg=NONE guifg=#bb9af7
-hi NeogitDiffAddHighlight guibg=#20303b guifg=#449dab
+hi NeogitDiffAddHighlight guibg=#243e4a guifg=#449dab
 hi NeogitDiffContextHighlight guibg=#2b2f44 guifg=#a9b1d6
-hi NeogitDiffDeleteHighlight guibg=#37222c guifg=#914c54
+hi NeogitDiffDeleteHighlight guibg=#4a272f guifg=#914c54
 hi NeogitHunkHeader guibg=#292e42 guifg=#c0caf5
 hi NeogitHunkHeaderHighlight guibg=#3b4261 guifg=#7aa2f7
 hi NeogitRemote guibg=NONE guifg=#9d7cd8
@@ -249,14 +250,14 @@ hi WildMenu guibg=#283457
 hi WinSeparator gui=bold guibg=NONE guifg=#15161e
 hi debugBreakpoint guibg=#192b38 guifg=#0db9d7
 hi debugPC guibg=#16161e
-hi diffAdded guibg=#20303b guifg=#449dab
+hi diffAdded guibg=#243e4a guifg=#449dab
 hi diffChanged guibg=#1f2231 guifg=#6183bb
 hi diffFile guibg=NONE guifg=#7aa2f7
 hi diffIndexLine guibg=NONE guifg=#bb9af7
 hi diffLine guibg=NONE guifg=#565f89
-hi diffNewFile guibg=#20303b guifg=#2ac3de
-hi diffOldFile guibg=#37222c guifg=#2ac3de
-hi diffRemoved guibg=#37222c guifg=#914c54
+hi diffNewFile guibg=#243e4a guifg=#2ac3de
+hi diffOldFile guibg=#4a272f guifg=#2ac3de
+hi diffRemoved guibg=#4a272f guifg=#914c54
 hi healthError guibg=NONE guifg=#db4b4b
 hi healthSuccess guibg=NONE guifg=#73daca
 hi healthWarning guibg=NONE guifg=#e0af68

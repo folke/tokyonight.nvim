@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 # NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
 # syntect_theme = "path/to/tmTheme"
 

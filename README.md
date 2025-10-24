@@ -108,6 +108,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim) | [`rainbow`](lua/tokyonight/groups/rainbow.lua) |
 | [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | [`render-markdown`](lua/tokyonight/groups/render-markdown.lua) |
 | [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar) | [`scrollbar`](lua/tokyonight/groups/scrollbar.lua) |
+| [sidekick.nvim](https://github.com/folke/sidekick.nvim) | [`sidekick`](lua/tokyonight/groups/sidekick.lua) |
 | [snacks.nvim](https://github.com/folke/snacks.nvim) | [`snacks`](lua/tokyonight/groups/snacks.lua) |
 | [vim-sneak](https://github.com/justinmk/vim-sneak) | [`sneak`](lua/tokyonight/groups/sneak.lua) |
 | [supermaven-nvim](https://github.com/supermaven-inc/supermaven-nvim) | [`supermaven`](lua/tokyonight/groups/supermaven.lua) |
@@ -130,10 +131,13 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | Tool | Extra |
 | --- | --- |
 | [Aerc](https://git.sr.ht/~rjarry/aerc/) | [extras/aerc](extras/aerc) |
+| [Aider](https://aider.chat) | [extras/aider](extras/aider) |
 | [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](extras/alacritty) |
+| [Btop++](https://github.com/aristocratos/btop) | [extras/btop](extras/btop) |
 | [Delta](https://github.com/dandavison/delta) | [extras/delta](extras/delta) |
 | [(Better-)Discord](https://betterdiscord.app/) | [extras/discord](extras/discord) |
 | [Dunst](https://dunst-project.org/) | [extras/dunst](extras/dunst) |
+| [eza](https://eza.rocks) | [extras/eza](extras/eza) |
 | [Fish](https://fishshell.com/docs/current/index.html) | [extras/fish](extras/fish) |
 | [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) | [extras/fish_themes](extras/fish_themes) |
 | [Foot](https://codeberg.org/dnkl/foot) | [extras/foot](extras/foot) |
@@ -143,21 +147,27 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [GitUI](https://github.com/extrawurst/gitui) | [extras/gitui](extras/gitui) |
 | [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal) | [extras/gnome_terminal](extras/gnome_terminal) |
 | [Helix](https://helix-editor.com/) | [extras/helix](extras/helix) |
+| [iSH ](https://ish.app) | [extras/ish](extras/ish) |
 | [iTerm](https://iterm2.com/) | [extras/iterm](extras/iterm) |
 | [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty) |
+| [Konsole](https://konsole.kde.org/) | [extras/konsole](extras/konsole) |
 | [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](extras/lazygit) |
 | [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
+| [opencode](https://github.com/sst/opencode) | [extras/opencode](extras/opencode) |
 | [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | [extras/process_compose](extras/process_compose) |
+| [QTerminal](https://github.com/lxqt/qterminal) | [extras/qterminal](extras/qterminal) |
 | [Slack](https://slack.com) | [extras/slack](extras/slack) |
 | [Spotify Player](https://github.com/aome510/spotify-player) | [extras/spotify_player](extras/spotify_player) |
 | [Sublime Text](https://www.sublimetext.com/docs/themes) | [extras/sublime](extras/sublime) |
+| [Tailwind CSS (v4)](https://tailwindcss.com) | [extras/tailwindv4](extras/tailwindv4) |
 | [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) | [extras/terminator](extras/terminator) |
 | [Termux](https://termux.dev/) | [extras/termux](extras/termux) |
 | [Tilix](https://github.com/gnunn1/tilix) | [extras/tilix](extras/tilix) |
 | [Tmux](https://github.com/tmux/tmux/wiki) | [extras/tmux](extras/tmux) |
 | [Vim](https://vimhelp.org/) | [extras/vim](extras/vim) |
 | [Vimium](https://vimium.github.io/) | [extras/vimium](extras/vimium) |
+| [Vivaldi](https://vivaldi.com) | [extras/vivaldi](extras/vivaldi) |
 | [WezTerm](https://wezfurlong.org/wezterm/config/files.html) | [extras/wezterm](extras/wezterm) |
 | [Windows Terminal](https://aka.ms/terminal-documentation) | [extras/windows_terminal](extras/windows_terminal) |
 | [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) | [extras/xfceterm](extras/xfceterm) |

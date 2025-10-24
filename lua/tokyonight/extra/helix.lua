@@ -164,6 +164,14 @@ function M.generate(colors)
         { "helix", bg = "bg" },
         separator = nil,
       },
+      bufferline = {
+        nil,
+        active = {
+          "helix",
+          fg = "fg",
+          bg = "bg_visual",
+        },
+      },
       cursor = {
         "Cursor",
         normal = nil,

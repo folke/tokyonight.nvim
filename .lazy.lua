@@ -52,7 +52,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 return {
   {
-    "echasnovski/mini.hipatterns",
+    "nvim-mini/mini.hipatterns",
     opts = function(_, opts)
       local hi = require("mini.hipatterns")
 
