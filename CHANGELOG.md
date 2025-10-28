@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.14.2](https://github.com/folke/tokyonight.nvim/compare/v4.14.1...v4.14.2) (2025-10-28)
+
+
+### Bug Fixes
+
+* **barbar:** add highlight groups for gitsigns ([#727](https://github.com/folke/tokyonight.nvim/issues/727)) ([490f6c0](https://github.com/folke/tokyonight.nvim/commit/490f6c00aef7f154d19afb07d7e2e1a58770f253))
+
 ## [4.14.1](https://github.com/folke/tokyonight.nvim/compare/v4.14.0...v4.14.1) (2025-10-23)
 
 
