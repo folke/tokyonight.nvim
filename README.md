@@ -407,6 +407,30 @@ require("tokyonight").setup({
 </details>
 
 <details>
+  <summary>Create a Modified Style</summary>
+
+To modify a style before all of the `colors` and `highlights` are generated
+from the corresponding color palette, you can use the following:
+
+```lua
+local styles = require('tokyonight.colors').styles
+
+-- change the colors for your new palette here
+---@type Palette
+local modified_colors = {
+    bg = '#1e1e1e',
+    fg = '...',
+    ...,
+}
+-- save as `custom` style (by extending the `storm` style)
+styles.custom = vim.tbl_extend('force', styles.storm --[[@as Palette]], modified_colors)
+
+require('tokyonight').load(opts) -- load custom style (be sure to have opts.style = 'custom')
+```
+
+</details>
+
+<details>
   <summary>Fix <code>undercurls</code> in Tmux</summary>
 
 To have undercurls show up and in color, add the following to your
