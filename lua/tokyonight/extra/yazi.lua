@@ -9,7 +9,7 @@ function M.generate(colors)
   local yazi = util.template(
     [[
 [mgr]
-# NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
+# NOTE: can be combined with tmTheme (sublime colorshceme file) for preview code highlight
 # syntect_theme = "path/to/tmTheme"
 
 cwd = { fg = "${fg_dark}", italic = true }
@@ -28,11 +28,6 @@ marker_cut      = { fg = "${red}", bg = "${red}" }
 marker_marked   = { fg = "${magenta}", bg = "${magenta}" }
 marker_selected = { fg = "${blue}", bg = "${blue}" }
 
-# Tab
-tab_active   = { fg = "${fg}", bg = "${bg_highlight}" }
-tab_inactive = { fg = "${fg_gutter}", bg = "${bg}" }
-tab_width    = 1
-
 # Count
 count_copied   = { fg = "${bg_dark}", bg = "${green}" }
 count_cut      = { fg = "${bg_dark}", bg = "${red}" }
@@ -41,6 +36,11 @@ count_selected = { fg = "${bg_dark}", bg = "${blue}" }
 # Border
 border_symbol = "│"
 border_style  = { fg = "${border_highlight}" }
+
+# Tab
+[tabs]
+active   = { fg = "${black}", bg = "${blue}" }
+inactive = { fg = "${blue}", bg = "${fg_gutter}" }
 
 [mode]
 normal_main = { fg = "${black}", bg = "${blue}", bold = true }
@@ -136,6 +136,7 @@ icon_info = ""
 [help]
 on      = { fg = "${green}" }
 run     = { fg = "${magenta}" }
+desc    = { fg = "${cyan}" }
 hovered = { bg = "${bg_highlight}" }
 footer  = { fg = "${fg}", bg = "${bg}" }
 
