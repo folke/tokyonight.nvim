@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.15.0](https://github.com/folke/tokyonight.nvim/compare/v4.14.1...v4.15.0) (2025-11-05)
+
+
+### Features
+
+* **extra:** update yazi theme for yazi new release ([#687](https://github.com/folke/tokyonight.nvim/issues/687)) ([047ace2](https://github.com/folke/tokyonight.nvim/commit/047ace2f6a15600c0784ba16f93b74767f5a5629))
+* **snacks:** better diff header for gh ([b13cfc1](https://github.com/folke/tokyonight.nvim/commit/b13cfc1286d2aa8bda6ce137b79e857d5a3d5739))
+* **treesitter:** heading background color ([7c6edb1](https://github.com/folke/tokyonight.nvim/commit/7c6edb14226a10b47816c2cd3f2615e689136207))
+
+
+### Bug Fixes
+
+* **barbar:** add highlight groups for gitsigns ([#727](https://github.com/folke/tokyonight.nvim/issues/727)) ([490f6c0](https://github.com/folke/tokyonight.nvim/commit/490f6c00aef7f154d19afb07d7e2e1a58770f253))
+* **extras.ish:** fix filename. Closes [#750](https://github.com/folke/tokyonight.nvim/issues/750) ([4c4c48b](https://github.com/folke/tokyonight.nvim/commit/4c4c48b93d50648fc40c3fca46420ea0b6d9abfb))
+* **extras.opencode:** made opencode gen idempotent ([5da1b76](https://github.com/folke/tokyonight.nvim/commit/5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd))
+* **extras.vivaldi:** remove variants (that's not a thing), make uuid deterministic and rebuild all ([f83306f](https://github.com/folke/tokyonight.nvim/commit/f83306ffc8404d5a192b7234fde0cba632b461cd))
+
 ## [4.14.1](https://github.com/folke/tokyonight.nvim/compare/v4.14.0...v4.14.1) (2025-10-23)
 
 
