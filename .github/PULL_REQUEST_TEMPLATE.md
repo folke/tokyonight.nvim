@@ -14,3 +14,6 @@
 
 <!-- Add screenshots of the changes if applicable. -->
 
+## Checklist
+
+- [ ] I've read the [CONTRIBUTING](https://github.com/LazyVim/LazyVim/blob/main/CONTRIBUTING.md) guidelines.
