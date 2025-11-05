@@ -24,7 +24,7 @@ M.extras = {
   gnome_terminal   = { ext = "dconf", url = "https://gitlab.gnome.org/GNOME/gnome-terminal", label = "GNOME Terminal" },
   helix            = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
   iterm            = { ext = "itermcolors", url = "https://iterm2.com/", label = "iTerm" },
-  ish              = { ext = "json", url = "https://ish.app", label = "iSH "},
+  iSH              = { ext = "json", url = "https://ish.app", label = "iSH "},
   kitty            = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
   konsole          = { ext = "colorscheme", url = "https://konsole.kde.org/", label = "Konsole" },
   lazygit          = { ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "Lazygit" },
