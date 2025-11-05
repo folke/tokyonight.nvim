@@ -92,5 +92,6 @@ function M.setup()
     end
   end
 end
+M.setup()
 
 return M
