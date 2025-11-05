@@ -54,7 +54,7 @@ M.extras = {
 }
 
 function M.setup()
-  local tokyonight = require("tokyonight")
+  local tokyonight = require("tokyonight.theme")
   vim.o.background = "dark"
 
   -- map of style to style name
@@ -74,7 +74,7 @@ function M.setup()
     local info = M.extras[extra]
     local plugin = require("tokyonight.extra." .. extra)
     for style, style_name in pairs(styles) do
-      local colors, groups, opts = tokyonight.load({ style = style, plugins = { all = true } })
+      local colors, groups, opts = tokyonight.setup({ style = style, plugins = { all = true } })
       local fname = extra
         .. (info.subdir and "/" .. info.subdir .. "/" or "")
         .. "/tokyonight"
