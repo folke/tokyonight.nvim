@@ -1,6 +1,6 @@
 # Tokyo Night for Vivaldi Browser
 
-The Tokyo Night theme collection for Vivaldi browser. Includes day, moon, night, and storm variants, each with 8 highlight color options (blue, yellow, green, teal, purple, magenta, orange, and red). Defaults to blue.
+The Tokyo Night theme collection for Vivaldi browser. Includes day, moon, night, and storm variants.
 
 ## Usage
 

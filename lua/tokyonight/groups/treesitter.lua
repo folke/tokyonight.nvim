@@ -101,7 +101,7 @@ function M.get(c, opts)
   }
 
   for i, color in ipairs(c.rainbow) do
-    ret["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true }
+    ret["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true, bg = Util.blend_bg(color, 0.1) }
   end
   return ret
 end

@@ -2,29 +2,36 @@ local util = require("tokyonight.util")
 
 local M = {}
 
+--- Generate deterministic UUID from theme name
+--- @param theme_name string
 --- @return string UUID
-local function generate_uuid()
-  local seed = tonumber(tostring(os.clock()):reverse():sub(1, 9))
-  math.randomseed(seed)
-  return string.gsub("xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx", "[xy]", function(c)
-    local v = (c == "x") and math.random(0, 0xf) or math.random(8, 0xb)
-    return string.format("%x", v)
-  end)
-end
----
---- @param colors ColorScheme
---- @param color_hex string
---- @param color_name string|nil
---- @return string JSON
-local function generate_theme(colors, color_hex, color_name)
-  local colors = vim.deepcopy(colors)
-  colors._id = generate_uuid()
-
-  if color_name then
-    colors._style_name = colors._style_name .. " (" .. color_name .. ")"
+local function generate_uuid(theme_name)
+  -- Simple hash function to generate deterministic UUID
+  local hash = 0
+  for i = 1, #theme_name do
+    hash = (hash * 31 + string.byte(theme_name, i)) % 0xFFFFFFFF
   end
 
-  return util.template([[
+  -- Generate UUID v4 format from hash
+  local uuid = string.format(
+    "%08x-%04x-4%03x-%04x-%012x",
+    hash % 0xFFFFFFFF,
+    bit.rshift(hash, 16) % 0xFFFF,
+    hash % 0xFFF,
+    0x8000 + (hash % 0x3FFF),
+    hash % 0xFFFFFFFFFFFF
+  )
+  return uuid
+end
+
+--- @param colors ColorScheme
+--- @return string
+function M.generate(colors)
+  colors = vim.deepcopy(colors)
+  colors._id = generate_uuid(colors._style_name)
+
+  return util.template(
+    [[
 {
    "accentFromPage": false,
    "accentOnWindow": true,
@@ -36,7 +43,7 @@ local function generate_theme(colors, color_hex, color_name)
    "colorAccentBg": "${bg_highlight}",
    "colorBg": "${bg}",
    "colorFg": "${fg}",
-   "colorHighlightBg": "]] .. color_hex .. [[",
+   "colorHighlightBg": "${blue}",
    "colorWindowBg": "${black}",
    "contrast": 0,
    "dimBlurred": false,
@@ -50,33 +57,9 @@ local function generate_theme(colors, color_hex, color_name)
    "transparencyTabs": false,
    "url": "https://github.com/folke/tokyonight.nvim",
    "version": 1
-}]], colors)
-end
-
---- @param colors ColorScheme
---- @return string
-function M.generate(colors)
-  local rainbow = {
-    "Blue",
-    "Yellow",
-    "Green",
-    "Teal",
-    "Purple",
-    "Magenta",
-    "Orange",
-    "Red",
-  }
-
-  for i = 1, #colors.rainbow do
-    local color_name = rainbow[i]
-    local color_hex = colors.rainbow[i]
-    local variant_fname = colors._name .. "_" .. color_name:lower() .. ".json"
-    print("[write] vivaldi/" .. variant_fname)
-    util.write("extras/vivaldi/" .. variant_fname, generate_theme(colors, color_hex, color_name))
-  end
-
-  -- return the first rainbow color (blue) as the default
-  return generate_theme(colors, colors.rainbow[1])
+}]],
+    colors
+  )
 end
 
 return M

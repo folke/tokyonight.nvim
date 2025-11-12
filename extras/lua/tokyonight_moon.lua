@@ -205,34 +205,42 @@ local highlights = {
   ["@markup.environment.name"] = "Type",
   ["@markup.heading"] = "Title",
   ["@markup.heading.1.markdown"] = {
+    bg = "#2c314a",
     bold = true,
     fg = "#82aaff"
   },
   ["@markup.heading.2.markdown"] = {
+    bg = "#38343d",
     bold = true,
     fg = "#ffc777"
   },
   ["@markup.heading.3.markdown"] = {
+    bg = "#32383f",
     bold = true,
     fg = "#c3e88d"
   },
   ["@markup.heading.4.markdown"] = {
+    bg = "#273644",
     bold = true,
     fg = "#4fd6be"
   },
   ["@markup.heading.5.markdown"] = {
+    bg = "#32304a",
     bold = true,
     fg = "#c099ff"
   },
   ["@markup.heading.6.markdown"] = {
+    bg = "#383148",
     bold = true,
     fg = "#fca7ea"
   },
   ["@markup.heading.7.markdown"] = {
+    bg = "#382f3b",
     bold = true,
     fg = "#ff966c"
   },
   ["@markup.heading.8.markdown"] = {
+    bg = "#382c3d",
     bold = true,
     fg = "#ff757f"
   },
@@ -507,6 +515,18 @@ local highlights = {
     bg = "#3b4261",
     fg = "#c8d3f5"
   },
+  BufferAlternateADDED = {
+    bg = "#3b4261",
+    fg = "#b8db87"
+  },
+  BufferAlternateCHANGED = {
+    bg = "#3b4261",
+    fg = "#7ca1f2"
+  },
+  BufferAlternateDELETED = {
+    bg = "#3b4261",
+    fg = "#e26a75"
+  },
   BufferAlternateERROR = {
     bg = "#3b4261",
     fg = "#c53b53"
@@ -543,6 +563,18 @@ local highlights = {
     bg = "#222436",
     fg = "#c8d3f5"
   },
+  BufferCurrentADDED = {
+    bg = "#222436",
+    fg = "#b8db87"
+  },
+  BufferCurrentCHANGED = {
+    bg = "#222436",
+    fg = "#7ca1f2"
+  },
+  BufferCurrentDELETED = {
+    bg = "#222436",
+    fg = "#e26a75"
+  },
   BufferCurrentERROR = {
     bg = "#222436",
     fg = "#c53b53"
@@ -578,6 +610,18 @@ local highlights = {
   BufferInactive = {
     bg = "#272a3f",
     fg = "#63698c"
+  },
+  BufferInactiveADDED = {
+    bg = "#272a3f",
+    fg = "#9ab677"
+  },
+  BufferInactiveCHANGED = {
+    bg = "#272a3f",
+    fg = "#6a88cc"
+  },
+  BufferInactiveDELETED = {
+    bg = "#272a3f",
+    fg = "#bc5c68"
   },
   BufferInactiveERROR = {
     bg = "#272a3f",
@@ -629,6 +673,18 @@ local highlights = {
   BufferVisible = {
     bg = "#1e2030",
     fg = "#c8d3f5"
+  },
+  BufferVisibleADDED = {
+    bg = "#1e2030",
+    fg = "#b8db87"
+  },
+  BufferVisibleCHANGED = {
+    bg = "#1e2030",
+    fg = "#7ca1f2"
+  },
+  BufferVisibleDELETED = {
+    bg = "#1e2030",
+    fg = "#e26a75"
   },
   BufferVisibleERROR = {
     bg = "#1e2030",
@@ -2186,6 +2242,14 @@ local highlights = {
   },
   SnacksFooterDesc = "SnacksProfilerBadgeInfo",
   SnacksFooterKey = "SnacksProfilerIconInfo",
+  SnacksGhDiffHeader = {
+    bg = "#29334a",
+    fg = "#65bcff"
+  },
+  SnacksGhLabel = {
+    bold = true,
+    fg = "#65bcff"
+  },
   SnacksIndent = {
     fg = "#3b4261",
     nocombine = true

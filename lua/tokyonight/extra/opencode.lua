@@ -7,7 +7,10 @@ local M = {}
 local function generate_defs(colors)
   local defs = {}
 
-  for key, value in pairs(colors) do
+  local keys = vim.tbl_keys(colors)
+  table.sort(keys)
+  for _, key in ipairs(keys) do
+    local value = colors[key]
     -- Skip keys that start with underscore (metadata) and "none"
     if not key:match("^_") and key ~= "none" then
       if type(value) == "string" then

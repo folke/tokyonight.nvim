@@ -39,8 +39,8 @@ function M.get(c, opts)
     -- Profiler
     SnacksProfilerIconInfo    = { bg = Util.blend_bg(c.blue1, 0.3), fg = c.blue1 },
     SnacksProfilerBadgeInfo   = { bg = Util.blend_bg(c.blue1, 0.1), fg = c.blue1 },
-    SnacksFooterKey          = "SnacksProfilerIconInfo",
-    SnacksFooterDesc         = "SnacksProfilerBadgeInfo",
+    SnacksFooterKey           = "SnacksProfilerIconInfo",
+    SnacksFooterDesc          = "SnacksProfilerBadgeInfo",
     SnacksProfilerIconTrace   = { bg = Util.blend_bg(c.blue7, 0.3), fg = c.dark3 },
     SnacksProfilerBadgeTrace  = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
     SnacksIndent              = { fg = c.fg_gutter, nocombine = true },
@@ -51,12 +51,14 @@ function M.get(c, opts)
     SnacksInputTitle          = { fg = c.yellow },
     -- Picker
     SnacksPickerInputBorder   = { fg = c.orange, bg = c.bg_float },
-    SnacksPickerInputTitle         = { fg = c.orange, bg = c.bg_float },
-    SnacksPickerBoxTitle         = { fg = c.orange, bg = c.bg_float },
-    SnacksPickerSelected    = { fg = c.magenta2},
-    SnacksPickerToggle         = "SnacksProfilerBadgeInfo",
-    SnacksPickerPickWinCurrent   = { fg = c.fg, bg = c.magenta2, bold = true },
-    SnacksPickerPickWin   = { fg = c.fg, bg = c.bg_search, bold = true },
+    SnacksPickerInputTitle    = { fg = c.orange, bg = c.bg_float },
+    SnacksPickerBoxTitle      = { fg = c.orange, bg = c.bg_float },
+    SnacksPickerSelected      = { fg = c.magenta2},
+    SnacksPickerToggle        = "SnacksProfilerBadgeInfo",
+    SnacksPickerPickWinCurrent= { fg = c.fg, bg = c.magenta2, bold = true },
+    SnacksPickerPickWin       = { fg = c.fg, bg = c.bg_search, bold = true },
+    SnacksGhLabel             = { fg = c.blue1, bold = true },
+    SnacksGhDiffHeader        = { bg = Util.blend_bg(c.blue1, 0.1), fg = c.blue1 }
   }
   for i, color in ipairs(c.rainbow) do
     ret["SnacksIndent" .. i] = { fg = color, nocombine = true }

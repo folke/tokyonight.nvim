@@ -1,5 +1,3 @@
-local Util = require("tokyonight.util")
-
 local M = {}
 
 ---@param opts? tokyonight.Config

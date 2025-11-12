@@ -445,21 +445,4 @@ aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 r
 
 ## 🔥 Contributing
 
-Pull requests are welcome.
-
-For the [extras](#-extras), we use a simple template system that can be used to
-generate themes for the different styles.
-
-How to add a new extra template:
-
-1. Create a file like `lua/tokyonight/extra/cool-app.lua`.
-2. Add the name and output file extension to the `extras` table in
-   `lua/tokyonight/extra/init.lua`.
-3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
-
-   ```sh
-   ./scripts/build
-   ```
-
-4. Check the newly created themes in the `extra/` directory. Please **DO NOT**
-   commit them, as they are already automatically built by the CI.
+Pull requests are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new extras and general contribution guidelines.
