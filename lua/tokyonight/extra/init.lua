@@ -43,6 +43,7 @@ M.extras = {
   tmux             = { ext = "tmux", url = "https://github.com/tmux/tmux/wiki", label = "Tmux" },
   wezterm          = { ext = "toml", url = "https://wezfurlong.org/wezterm/config/files.html", label = "WezTerm" },
   windows_terminal = { ext = "json", url = "https://aka.ms/terminal-documentation", label = "Windows Terminal" },
+  xcode            = { ext = "xccolortheme", url = "https://developer.apple.com/xcode/", label = "Xcode" },
   xfceterm         = { ext = "theme", url = "https://docs.xfce.org/apps/terminal/advanced", label = "Xfce Terminal" },
   xresources       = { ext = "Xresources", url = "https://wiki.archlinux.org/title/X_resources", label = "Xresources" },
   yazi             = { ext = "toml", url = "https://github.com/sxyazi/yazi", label = "Yazi" },
