@@ -5,7 +5,8 @@ local M = {}
 --- @param colors ColorScheme
 --- @return string
 function M.generate(colors)
-  return util.template([[
+  return util.template(
+    [[
 {
   "name": "${_style_name}",
   "type": "custom",
@@ -46,7 +47,9 @@ function M.generate(colors)
   "DarkGray": "${bg_dark}",
   "GradientColors": ["${blue}", "${magenta}", "${cyan}"]
 }
-]], colors)
+]],
+    colors
+  )
 end
 
 return M
