@@ -1,0 +1,40 @@
+{
+  "name": "Tokyo Night Moon",
+  "type": "custom",
+  "text": {
+    "primary": "#c8d3f5",
+    "secondary": "#828bb8",
+    "response": "#c8d3f5"
+  },
+  "background": {
+    "primary": "#222436",
+    "diff": {
+      "added": "#2a4556",
+      "removed": "#4b2a3d"
+    }
+  },
+  "border": {
+    "default": "#2f334d",
+    "focused": "#82aaff"
+  },
+  "ui": {
+    "comment": "#636da6",
+    "symbol": "#828bb8",
+    "gradient": ["#82aaff", "#c099ff", "#86e1fc"]
+  },
+  "Background": "#222436",
+  "Foreground": "#c8d3f5",
+  "LightBlue": "#65bcff",
+  "AccentBlue": "#c099ff",
+  "AccentPurple": "#fca7ea",
+  "AccentCyan": "#86e1fc",
+  "AccentGreen": "#ff966c",
+  "AccentYellow": "#c3e88d",
+  "AccentRed": "#ff757f",
+  "DiffAdded": "#2a4556",
+  "DiffRemoved": "#4b2a3d",
+  "Comment": "#636da6",
+  "Gray": "#828bb8",
+  "DarkGray": "#1e2030",
+  "GradientColors": ["#82aaff", "#c099ff", "#86e1fc"]
+}
