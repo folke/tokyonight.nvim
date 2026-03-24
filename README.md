@@ -154,6 +154,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 | [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](extras/lazygit) |
 | [Lua Table for testing](https://www.lua.org) | [extras/lua](extras/lua) |
 | [opencode](https://github.com/sst/opencode) | [extras/opencode](extras/opencode) |
+| [pi](https://github.com/badlogic/pi-mono) | [extras/pi](extras/pi) |
 | [Prism](https://prismjs.com) | [extras/prism](extras/prism) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | [extras/process_compose](extras/process_compose) |
 | [QTerminal](https://github.com/lxqt/qterminal) | [extras/qterminal](extras/qterminal) |
