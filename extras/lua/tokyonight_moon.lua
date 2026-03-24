@@ -2240,6 +2240,10 @@ local highlights = {
   SnacksDashboardSpecial = {
     fg = "#fca7ea"
   },
+  SnacksDiffLabel = {
+    bold = true,
+    fg = "#65bcff"
+  },
   SnacksFooterDesc = "SnacksProfilerBadgeInfo",
   SnacksFooterKey = "SnacksProfilerIconInfo",
   SnacksGhDiffHeader = {
