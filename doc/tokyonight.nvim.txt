@@ -205,6 +205,8 @@ Extras ~
 
   Fzf                                 extras/fzf
 
+  Gemini CLI                          extras/gemini_cli
+
   Ghostty                             extras/ghostty
 
   GitUI                               extras/gitui
