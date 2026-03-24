@@ -31,6 +31,7 @@ M.extras = {
   lazygit          = { ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "Lazygit" },
   lua              = { ext = "lua", url = "https://www.lua.org", label = "Lua Table for testing" },
   opencode         = { ext = "json", url = "https://github.com/sst/opencode", label = "opencode" },
+  pi               = { ext = "json", url = "https://github.com/badlogic/pi-mono", label = "pi" },
   prism            = { ext = "js", url = "https://prismjs.com", label = "Prism" },
   process_compose  = { ext = "yaml", url = "https://f1bonacc1.github.io/process-compose/", label = "process-compose" },
   qterminal        = { ext = "colorscheme", url = "https://github.com/lxqt/qterminal", label = "QTerminal" },

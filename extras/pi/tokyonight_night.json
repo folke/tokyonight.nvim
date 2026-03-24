@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/badlogic/pi-mono/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "Tokyo Night",
+  "colors": {
+    "accent": "#7aa2f7",
+    "border": "#27a1b9",
+    "borderAccent": "#7dcfff",
+    "borderMuted": "#15161e",
+    "success": "#73daca",
+    "error": "#db4b4b",
+    "warning": "#e0af68",
+    "muted": "#a9b1d6",
+    "dim": "#737aa2",
+    "text": "",
+    "thinkingText": "#565f89",
+
+    "selectedBg": "#283457",
+    "userMessageBg": "#16161e",
+    "userMessageText": "",
+    "customMessageBg": "#16161e",
+    "customMessageText": "",
+    "customMessageLabel": "#9d7cd8",
+    "toolPendingBg": "#292e42",
+    "toolSuccessBg": "#292e42",
+    "toolErrorBg": "#241d28",
+    "toolTitle": "",
+    "toolOutput": "#a9b1d6",
+
+    "mdHeading": "#7aa2f7",
+    "mdLink": "#1abc9c",
+    "mdLinkUrl": "#565f89",
+    "mdCode": "#7aa2f7",
+    "mdCodeBlock": "#16161e",
+    "mdCodeBlockBorder": "#565f89",
+    "mdQuote": "#565f89",
+    "mdQuoteBorder": "#565f89",
+    "mdHr": "#ff9e64",
+    "mdListBullet": "#ff9e64",
+
+    "toolDiffAdded": "#243e4a",
+    "toolDiffRemoved": "#4a272f",
+    "toolDiffContext": "#394b70",
+
+    "syntaxComment": "#565f89",
+    "syntaxKeyword": "#9d7cd8",
+    "syntaxFunction": "#7aa2f7",
+    "syntaxVariable": "#c0caf5",
+    "syntaxString": "#9ece6a",
+    "syntaxNumber": "#ff9e64",
+    "syntaxType": "#2ac3de",
+    "syntaxOperator": "#89ddff",
+    "syntaxPunctuation": "#89ddff",
+
+    "thinkingOff": "#545c7e",
+    "thinkingMinimal": "#737aa2",
+    "thinkingLow": "#394b70",
+    "thinkingMedium": "#7aa2f7",
+    "thinkingHigh": "#bb9af7",
+    "thinkingXhigh": "#9d7cd8",
+
+    "bashMode": "#ff9e64"
+  }
+}
