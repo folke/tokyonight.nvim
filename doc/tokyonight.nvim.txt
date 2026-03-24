@@ -227,6 +227,8 @@ Extras ~
 
   opencode                            extras/opencode
 
+  pi                                  extras/pi
+
   Prism                               extras/prism
 
   process-compose                     extras/process_compose
