@@ -58,6 +58,7 @@ function M.get(c, opts)
     SnacksPickerPickWinCurrent= { fg = c.fg, bg = c.magenta2, bold = true },
     SnacksPickerPickWin       = { fg = c.fg, bg = c.bg_search, bold = true },
     SnacksGhLabel             = { fg = c.blue1, bold = true },
+    SnacksDiffLabel           = { fg = c.blue1, bold = true },
     SnacksGhDiffHeader        = { bg = Util.blend_bg(c.blue1, 0.1), fg = c.blue1 }
   }
   for i, color in ipairs(c.rainbow) do
