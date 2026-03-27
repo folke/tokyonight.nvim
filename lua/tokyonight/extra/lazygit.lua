@@ -21,6 +21,8 @@ gui:
       - "${blue}"
     selectedLineBgColor:
       - "${bg_visual}"
+    inactiveViewSelectedLineBgColor:
+      - "${bg_visual}"
     cherryPickedCommitFgColor:
       - "${blue}"
     cherryPickedCommitBgColor:
