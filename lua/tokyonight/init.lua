@@ -11,7 +11,7 @@ function M.load(opts)
   local style_bg = opts.style == "day" and "light" or "dark"
 
   if bg ~= style_bg then
-    if vim.g.colors_name == "tokyonight-" .. opts.style then
+    if vim.g.colors_name == nil or vim.g.colors_name == "tokyonight-" .. opts.style then
       opts.style = bg == "light" and (M.styles.light or "day") or (M.styles.dark or "moon")
     else
       vim.o.background = style_bg
