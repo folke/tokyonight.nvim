@@ -5,6 +5,9 @@ local M = {}
 --- @param colors ColorScheme
 function M.generate(colors)
   colors.tool_error_bg = util.blend_bg(colors.error, 0.05)
+  colors.tool_diff_added = util.blend_bg(colors.green2, 0.8)
+  colors.tool_diff_removed = util.blend_bg(colors.red1, 0.65)
+  colors.tool_diff_context = util.blend_fg(colors.blue7, 0.3)
   local pi = util.template(
     [[{
   "$schema": "https://raw.githubusercontent.com/badlogic/pi-mono/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
@@ -45,9 +48,9 @@ function M.generate(colors)
     "mdHr": "${orange}",
     "mdListBullet": "${orange}",
 
-    "toolDiffAdded": "${diff.add}",
-    "toolDiffRemoved": "${diff.delete}",
-    "toolDiffContext": "${diff.text}",
+    "toolDiffAdded": "${tool_diff_added}",
+    "toolDiffRemoved": "${tool_diff_removed}",
+    "toolDiffContext": "${tool_diff_context}",
 
     "syntaxComment": "${comment}",
     "syntaxKeyword": "${purple}",
