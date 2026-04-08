@@ -16,7 +16,7 @@ For more details on custom theme configuration, see the [official documentation]
 
 ## Styles
 
-- **tokyonight_storm.json**: Tokyo Night Storm (Dark)
-- **tokyonight_moon.json**: Tokyo Night Moon (Dark)
-- **tokyonight_night.json**: Tokyo Night (Dark)
-- **tokyonight_day.json**: Tokyo Night Day (Light)
+- **tokyonight_storm.toml**: Tokyo Night Storm (Dark)
+- **tokyonight_moon.toml**: Tokyo Night Moon (Dark)
+- **tokyonight_night.toml**: Tokyo Night (Dark)
+- **tokyonight_day.toml**: Tokyo Night Day (Light)
