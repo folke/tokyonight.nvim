@@ -331,6 +331,48 @@ M.defaults = {
 
 </details>
 
+## 🎨 Colors
+#### tokyonight-night and tokyonight-storm
+| Color | Use |
+| ---------- | ------------------------------------------------------------ |
+| `#f7768e` | This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red |
+| `#ff9e64` | Number and Boolean constants, Language support constants |
+| `#e0af68` | Function parameters, Regex character sets, Terminal Yellow |
+| `#cfc9c2` | Parameters inside functions (semantic highlighting only) |
+| `#9ece6a` | Strings, CSS class names |
+| `#73daca` | Object literal keys, Markdown links, Terminal Green |
+| `#b4f9f8` | Regex literal strings |
+| `#2ac3de` | Language support functions, CSS HTML elements |
+| `#7dcfff` | Object properties, Regex quantifiers and flags, Markdown headings, Terminal Cyan, Markdown code, Import/export keywords |
+| `#7aa2f7` | Function names, CSS property names, Terminal Blue |
+| `#bb9af7` | Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta |
+| `#c0caf5` | Variables, Class names, Terminal White |
+| `#a9b1d6` | Editor Foreground |
+| `#9aa5ce` | Markdown Text, HTML Text |
+| `#565f89` | Comments |
+| `#414868` | Terminal Black |
+| `#24283b` | Editor Background (Storm) |
+| `#1a1b26` | Editor Background (Night) |
+
+#### tokyonight-day
+| Color | Use |
+| ---------- | ------------------------------------------------------------ |
+| `#8c4351` | This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red |
+| `#965027` | Number and Boolean constants, Language support constants |
+| `#8f5e15` | Function parameters, Regex character sets, Terminal Yellow |
+| `#634f30` | Parameters inside functions (semantic highlighting only) |
+| `#385f0d` | Strings, CSS class names |
+| `#33635c` | Object literal keys, Markdown links, Regex literal strings, Terminal Green |
+| `#006c86` | Language support functions, CSS HTML elements |
+| `#0f4b6e` | Object properties, Regex quantifiers and flags, Terminal Cyan, Markdown code, Import/export keywords |
+| `#2959aa` | Function names, CSS property names, Markdown Headings, Terminal Blue |
+| `#5a3e8e` | Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta |
+| `#343b58` | Editor Foreground, Variables, Class names, Terminal White |
+| `#40434f` | Markdown Text, HTML Text |
+| `#343B58` | Terminal Black |
+| `#6c6e75` | Comments |
+| `#e6e7ed` | Editor Background |
+
 ## 🪓 Overriding Colors & Highlight Groups
 
 How the highlight groups are calculated:
