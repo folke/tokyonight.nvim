@@ -8,7 +8,7 @@ function M.generate(colors)
   colors.pmenusel = util.blend_bg(colors.fg_gutter, 0.8)
   local yazi = util.template(
     [[
-"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+#:schema = "https://yazi-rs.github.io/schemas/theme.json"
 [app]
 overall = { bg = "${bg_dark}"}
 
