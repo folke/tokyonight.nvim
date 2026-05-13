@@ -1,0 +1,23 @@
+{
+  "_note": "Tokyo Night Storm",
+  "theme": {
+    "name": "tokyonight_storm",
+    "dark": true,
+    "primary": "#c0caf5",
+    "secondary": "#a9b1d6",
+    "accent": "#7aa2f7",
+    "warning": "#e0af68",
+    "error": "#db4b4b",
+    "success": "#9ece6a",
+    "foreground": "#c0caf5",
+    "background": "#24283b",
+    "surface": "#1f2335",
+    "panel": "#292e42",
+    "variables": {
+      "border": "#3d59a1",
+      "input-selection-background": "#2e3c64",
+      "mode-normal-color": "#e0af68",
+      "mode-insert-color": "#9ece6a"
+    }
+  }
+}

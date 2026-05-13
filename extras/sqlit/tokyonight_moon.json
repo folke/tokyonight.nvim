@@ -1,0 +1,23 @@
+{
+  "_note": "Tokyo Night Moon",
+  "theme": {
+    "name": "tokyonight_moon",
+    "dark": true,
+    "primary": "#c8d3f5",
+    "secondary": "#828bb8",
+    "accent": "#82aaff",
+    "warning": "#ffc777",
+    "error": "#c53b53",
+    "success": "#c3e88d",
+    "foreground": "#c8d3f5",
+    "background": "#222436",
+    "surface": "#1e2030",
+    "panel": "#2f334d",
+    "variables": {
+      "border": "#3e68d7",
+      "input-selection-background": "#2d3f76",
+      "mode-normal-color": "#ffc777",
+      "mode-insert-color": "#c3e88d"
+    }
+  }
+}
