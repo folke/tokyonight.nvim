@@ -10,6 +10,7 @@ M.extras = {
   aider            = { ext = "yml", url = "https://aider.chat", label = "Aider" },
   alacritty        = { ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
   btop             = { ext = "theme", url = "https://github.com/aristocratos/btop", label = "Btop++" },
+  claude_code      = { ext = "json", url = "https://github.com/anthropics/claude-code", label = "Claude Code" },
   delta            = { ext = "gitconfig", url = "https://github.com/dandavison/delta", label = "Delta" },
   discord          = { ext = "css", url ="https://betterdiscord.app/", label = "(Better-)Discord"},
   dunst            = { ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst" },
