@@ -1,0 +1,23 @@
+{
+  "_note": "Tokyo Night Day",
+  "theme": {
+    "name": "tokyonight_day",
+    "dark": true,
+    "primary": "#3760bf",
+    "secondary": "#6172b0",
+    "accent": "#2e7de9",
+    "warning": "#8c6c3e",
+    "error": "#c64343",
+    "success": "#587539",
+    "foreground": "#3760bf",
+    "background": "#e1e2e7",
+    "surface": "#d0d5e3",
+    "panel": "#c4c8da",
+    "variables": {
+      "border": "#7890dd",
+      "input-selection-background": "#b7c1e3",
+      "mode-normal-color": "#8c6c3e",
+      "mode-insert-color": "#587539"
+    }
+  }
+}
