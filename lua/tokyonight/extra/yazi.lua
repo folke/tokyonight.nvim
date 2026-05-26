@@ -160,12 +160,12 @@ rules = [
 	# { mime = "inode/x-empty", fg = "${red}" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "${red}" },
-	{ name = "*", is = "exec"  , fg = "${green}" },
+	{ url = "*", is = "orphan", bg = "${red}" },
+	{ url = "*", is = "exec"  , fg = "${green}" },
 
 	# Fallback
-	{ name = "*/", fg = "${blue}" },
-	{ name = "*", fg = "${fg}" }
+	{ url = "*/", fg = "${blue}" },
+	{ url = "*", fg = "${fg}" }
 ]
     ]],
     colors
