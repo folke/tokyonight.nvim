@@ -1,39 +1,12 @@
-# 🏙 Tokyo Night
+# 🔥 Tokyo Fire
 
-A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
-[Lua](https://www.lua.org) ported from the [Visual Studio Code
-TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
+A warm, fire-themed [Neovim](https://github.com/neovim/neovim) theme written in
+[Lua](https://www.lua.org), based on
+[TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme). Includes
 [extra](#-extras) themes for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
 [Alacritty](https://github.com/alacritty/alacritty),
 [iTerm](https://iterm2.com/) and
 [Fish](https://fishshell.com/docs/current/index.html).
-
-<table width="100%">
-  <tr>
-    <th>Moon</th>
-    <th>Storm</th>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png" />
-    </td>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png" />
-    </td>
-  </tr>
-  <tr>
-    <th>Night</th>
-    <th>Day</th>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png" />
-    </td>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png" />
-    </td>
-  </tr>
-</table>
 
 ## ✨ Features
 
@@ -41,7 +14,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
 - Terminal colors.
 - Supports all major plugins.
-- Provides [TokyoNight](https://github.com/folke/tokyonight.nvim)
+- Provides [TokyoFire](https://github.com/folke/tokyonight.nvim)
   [extras](#-extras) for numerous other applications.
 
 <details>
@@ -194,7 +167,7 @@ Install the theme with your preferred package manager, such as
 
 ```lua
 {
-  "folke/tokyonight.nvim",
+  "tokyofire.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -210,16 +183,11 @@ vim.cmd[[colorscheme tokyonight]]
 ```vim
 colorscheme tokyonight
 
-" There are also colorschemes for the different styles.
-colorscheme tokyonight-night
-colorscheme tokyonight-storm
-colorscheme tokyonight-day
-colorscheme tokyonight-moon
+" Or directly use the fire style:
 colorscheme tokyonight-fire
-colorscheme tokyonight-softpaper
 ```
 
-Some plugins need extra configuration to work with **TokyoNight**.
+Some plugins need extra configuration to work with **TokyoFire**.
 
 <details>
   <summary>Click here for more details</summary>
@@ -262,13 +230,7 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 > [!IMPORTANT]
 > Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
 
-The theme offers six styles: [storm](#storm), [moon](#moon), [night](#night),
-[day](#day), [fire](#fire), and [softpaper](#softpaper).
-
-The [day](#day) style is used when `{ style = "day" }` is passed to
-`setup(options)` or when `vim.o.background = "light"`.
-
-[TokyoNight](https://github.com/folke/tokyonight.nvim) uses the default options,
+[TokyoFire](https://github.com/folke/tokyonight.nvim) uses the default options,
 unless `setup` is explicitly called.
 
 <details>
@@ -281,8 +243,7 @@ unless `setup` is explicitly called.
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "moon", -- The theme comes in six styles, `storm`, a darker variant `night`, `day`, `fire`, and `softpaper`
-  light_style = "day", -- The theme is used when the background is set to light
+  style = "fire", -- The Tokyo Fire theme style
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
@@ -296,7 +257,6 @@ M.defaults = {
     sidebars = "dark", -- style for sidebars, see below
     floats = "dark", -- style for floating windows
   },
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
   dim_inactive = false, -- dims inactive windows
   lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 
@@ -306,7 +266,7 @@ M.defaults = {
   on_colors = function(colors) end,
 
   --- You can override specific highlights to use other groups or a hex color
-  --- function will be called with a Highlights and ColorScheme table
+  --- function will be called with the Highlights and ColorScheme table
   ---@param highlights tokyonight.Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
@@ -323,7 +283,7 @@ M.defaults = {
     auto = true,
     -- add any plugins here that you want to enable
     -- for all possible plugins, see:
-    --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
+    --   * https://github.com/tokyofire.nvim/tree/main/lua/tokyonight/groups
     -- telescope = true,
   },
 }
@@ -344,18 +304,15 @@ How the highlight groups are calculated:
    groups.
 
 For default values of `colors` and `highlights`, please consult the
-[storm](extras/lua/tokyonight_storm.lua),
-[moon](extras/lua/tokyonight_moon.lua),
-[night](extras/lua/tokyonight_night.lua), and
-[day](extras/lua/tokyonight_day.lua) themes.
+[fire](extras/lua/tokyonight_fire.lua) theme.
 
 <details>
   <summary>Settings & Changing Colors</summary>
 
 ```lua
 require("tokyonight").setup({
-  -- use the night style
-  style = "night",
+  -- use the fire style
+  style = "fire",
   -- disable italic for functions
   styles = {
     functions = {}
@@ -433,8 +390,6 @@ Extra color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
 [iTerm](https://iterm2.com/) and [foot](https://codeberg.org/dnkl/foot) can be
 found in [extras](extras/). To use them, refer to their respective
 documentation.
-
-![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
 
 You can easily use the color palette for other plugins inside your
 [Neovim](https://github.com/neovim/neovim) configuration:

@@ -6,8 +6,7 @@ M.version = "4.14.1" -- x-release-please-version
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "moon", -- The theme comes in six styles, `storm`, a darker variant `night`, `day`, `fire`, and `softpaper`
-  light_style = "day", -- The theme is used when the background is set to light
+  style = "fire", -- The Tokyo Fire theme style
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
@@ -21,7 +20,6 @@ M.defaults = {
     sidebars = "dark", -- style for sidebars, see below
     floats = "dark", -- style for floating windows
   },
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
   dim_inactive = false, -- dims inactive windows
   lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 
@@ -48,7 +46,7 @@ M.defaults = {
     auto = true,
     -- add any plugins here that you want to enable
     -- for all possible plugins, see:
-    --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
+    --   * https://github.com/tokyofire.nvim/tree/main/lua/tokyonight/groups
     -- telescope = true,
   },
 }

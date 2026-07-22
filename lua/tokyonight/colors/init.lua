@@ -13,8 +13,6 @@ M.styles = setmetatable({}, {
 function M.setup(opts)
   opts = require("tokyonight.config").extend(opts)
 
-  Util.day_brightness = opts.day_brightness
-
   local palette = M.styles[opts.style]
   if type(palette) == "function" then
     palette = palette(opts) --[[@as Palette]]

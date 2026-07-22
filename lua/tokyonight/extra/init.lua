@@ -61,12 +61,7 @@ function M.setup()
 
   -- map of style to style name
   local styles = {
-    storm = " Storm",
-    night = "",
-    day = " Day",
-    moon = " Moon",
     fire = " Fire",
-    softpaper = " Softpaper",
   }
 
   ---@type string[]
