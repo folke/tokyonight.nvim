@@ -13,15 +13,10 @@ function M.generate(colors)
 
   local foot = util.template(
     [[
-[cursor]
-color=${fg} ${bg_visual}
-
-[colors]
+[colors-dark]
+cursor=${bg_visual} ${fg}
 foreground=${fg}
 background=${bg}
-selection-foreground=${fg}
-selection-background=${bg_visual}
-urls=${green1}
 
 regular0=${black}
 regular1=${red}
@@ -42,7 +37,12 @@ bright6=${cyan}
 bright7=${fg}
 
 16=${orange}
-17=${red1}]],
+17=${red1}
+
+selection-foreground=${fg}
+selection-background=${bg_visual}
+urls=${green1}
+]],
     footColors
   )
 
