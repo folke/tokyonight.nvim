@@ -366,7 +366,7 @@ rect[mask="url(#svg-mask-status-offline)"] {
 }
 
 #app-mount :not(.hljs-function) > .hljs-keyword {
-  color: var(--color10);
+  color: var(--color-10);
   font-style: italic;
 }
 
